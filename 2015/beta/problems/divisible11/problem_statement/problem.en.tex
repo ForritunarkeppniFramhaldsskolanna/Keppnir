@@ -1,0 +1,33 @@
+\problemname{Deilanleg með 11}
+
+\illustration{.4}{alice}{}
+
+Lewis Carroll er þekktastur fyrir að hafa skrifað bókina um Lísu í undralandi.
+Færri vita að hann var líka stærðfræðingur, og hafði mjög gaman af allskonar
+stærðfræðiþrautum.
+
+Til dæmis fann hann upp á eftirfarandi reikniriti til að athuga hvort að
+heiltala $n$ sé deilanleg með $11$:
+
+\begin{enumerate}
+    \item Á meðan $n \geq 10$:
+        \begin{enumerate}
+            \item Látum $d$ vera aftasta tölustafinn í $n$
+            \item Fjarlægjum aftasta tölustafinn úr $n$
+            \item Drögum $d$ frá $n$
+        \end{enumerate}
+    \item Upphaflega talan var deilanleg með 11 ef núverandi $n$ er $0$
+\end{enumerate}
+
+Skrifið forrit sem les inn heiltölu $n$, og framkvæmir
+þetta reiknirit til að athuga hvort talan sé deilanleg með $11$. Forritið á að
+skrifa út gildið á $n$ í hverri ítrun af reikniritinu.
+
+\section*{Inntak}
+Inntak inniheldur eina heiltölu $1 \leq n\leq 10^{100}$.
+
+\section*{Úttak}
+Úttak á að innihalda gildið á $n$ í hverri ítrun af reikniritinu. Að lokum á að
+skrifa út eina línu sem er \texttt{Talan $n$ er deilanleg med 11.} eða
+\texttt{Talan $n$ er ekki deilanleg med 11.} eftir því sem við á.
+

@@ -1,0 +1,78 @@
+\problemname{Tískulegar Kýr}
+
+\illustration{.5}{cow}{}
+
+Þegar Jón bóndi frétti að kýr með tvo bletti væru í tísku keypti hann heila
+hjörð af tveggja-bletta kúm. En eins og gengur og gerist er tískan fljót að
+breytast, og eru nú kýr með einn blett í tísku.
+
+Jón bóndi vill gera hjörðina sína tískulegri og ákveður að mála hverja kú
+þannig að blettirnir tveir sameinist og verði að einum. Skinn kúar er táknað
+með $N$ sinnum $M$ ($1 \leq N, M \leq 50$) fylki af
+bókstöfum eins og:
+
+\begin{verbatim}
+................
+..XXXX....XXX...
+...XXXX....XX...
+.XXXX......XXX..
+........XXXXX...
+.........XXX....
+\end{verbatim}
+
+Hér táknar `X' hluta af bletti. Tvö `X' eru í sama
+bletti ef þau eru hlið við hlið lóðrétt eða lárétt (á ská er ekki tekið með),
+þannig að skýringarmyndin að ofan inniheldur tvo bletti. Allar kýr í hjörð Jóns
+bónda eru með nákvæmlega tvo bletti.
+
+Jón bóndi vill nota eins litla málningu og mögulegt er til að sameina tvo
+bletti í einn. í dæminu að ofan getur hann gert það með því að mála aðeins þrjú
+`X' í viðbót (nýju bókstafirnir eru táknaðir með `*' að
+neðan til að gera þá einfaldari að sjá).
+
+\begin{verbatim}
+................
+..XXXX....XXX...
+...XXXX*...XX...
+.XXXX..**..XXX..
+........XXXXX...
+.........XXX....
+\end{verbatim}
+
+Vinsamlegast hjálpaðu Jóni bónda að finna minnsta fjölda nýrra `X'a
+sem hann þarf að mála til að sameina blettina tvo í einn stóran blett.
+
+\section*{Inntak}
+Fyrsta lína inniheldur tvær heiltölur, $N$ og $M$, aðskildar með
+bili. Næstu $N$ línur skilgreina skinn kúarinnar, þar sem hver lína
+inniheldur streng af lengdinni $M$ með bókstöfunum `X' og
+`.'.
+
+\section*{Úttak}
+Ein lína sem inniheldur minnsta fjölda `X'a sem þarf að bæta við
+skinnið í inntakinu til að fá einn stóran blett.
+
+\section*{Útskýring á dæmi}
+Inntakið sýnir skinn kúar með tvo mismunandi bletti, merktir með 1 og 2 að
+neðan:
+
+\begin{verbatim}
+................
+..1111....222...
+...1111....22...
+.1111......222..
+........22222...
+.........222....
+\end{verbatim}
+
+Þrjú `X' nægja til að sameina blettina tvo í einn:
+
+\begin{verbatim}
+................
+..1111....222...
+...1111X...22...
+.1111..XX..222..
+........22222...
+.........222....
+\end{verbatim}
+

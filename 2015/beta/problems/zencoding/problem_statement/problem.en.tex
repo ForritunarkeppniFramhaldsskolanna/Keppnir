@@ -1,0 +1,46 @@
+\problemname{Zen Coding}
+
+\illustration{.4}{coding}{}
+
+Forritarar þurfa stundum að skrifa HTML kóða, en það verk vill oft verða mjög
+einhæft með mikið af endurtekningum (eins og að skrifa \texttt{<tag>...</tag>}
+milljón sinnum). Þar sem forritarar eru almennt latir og vilja ekki endurtaka
+vinnuna sína hefur einhver fundið lausn á þessu.
+
+Zen Coding er lítið mál sem lýsir strúktúr á HTML elementum sem stækka síðan út
+í venjulegt HTML. Sem dæmi þá myndi strengurinn
+\begin{verbatim}
+html>head+body>div+div+p>ul>li*3>a
+\end{verbatim}
+stækka út í
+\begin{verbatim}
+<html>
+    <head>
+    </head>
+    <body>
+        <div></div>
+        <div></div>
+        <p>
+            <ul>
+                <li><a></a></li>
+                <li><a></a></li>
+                <li><a></a></li>
+            </ul>
+        </p>
+    </body>
+</html>
+\end{verbatim}
+
+Þið eruð beðin um að útfæra lítinn hluta af þessu máli sem samanstendur af eftirfarandi táknum:
+\begin{itemize}
+    \item \textbf{>}: HTML tréð sem kemur á eftir tákninu er innan í (e. child) HTML elementinu sem kom á undan.
+    \item \textbf{+}: HTML tréð sem kemur á eftir tákninu er samhliða (e. sibling) HTML elementinu sem kom á undan.
+    \item \textbf{*n}: HTML elementið sem kom á undan tákninu og allt það HTML tré endurtekið $n$ sinnum.
+\end{itemize}
+
+\section*{Inntak}
+Inntakið samanstendur af einni línu sem inniheldur streng á Zen Coding forminu.
+
+\section*{Úttak}
+Skrifið út HTML kóðann sem útvíkkaður er úr Zen Coding forminu á einni línu án
+nokkurra biltákna (whitespace).

@@ -1,0 +1,184 @@
+id: fk_2015_delta
+title: FK 2015 - Pí deild
+start: 2015-03-14 10:00:00.000
+db: postgresql://postgres:postgres@postgres:5432/postgres
+duration: 360
+register: false
+
+balloons: true
+display_diff: false
+display_input: false
+
+phases:
+    -60:
+        status: "Keppni ekki hafin"
+        countdown: 60
+
+    0:
+        status: "Fyrir hádegi"
+        countdown: 120
+        frozen: 90
+        problems:
+            - skrifapi: [visible, scoreboard, submit]
+            - skrifapi2: [visible, scoreboard, submit]
+            - margfoldun: [visible, scoreboard, submit]
+            - logri: [visible, scoreboard, submit]
+            - dulmal: [visible, scoreboard, submit]
+            - dulmal2: [visible, scoreboard, submit]
+            - dulmal3: [visible, scoreboard, submit]
+            - autoderivative: [visible, scoreboard, submit]
+            - dotplot: [visible, scoreboard, submit]
+            - brot: [visible, scoreboard, submit]
+            - debruijn2: [visible, scoreboard, submit]
+            - tr: [visible, scoreboard, submit]
+            - margfeldi2: [visible, scoreboard, submit]
+            - p2048: [visible, scoreboard, submit]
+            - lucky2: [visible, scoreboard, submit]
+            - selfdescription: [visible, scoreboard, submit]
+
+
+    120:
+        status: "Hádegishlé"
+        countdown: 60
+        frozen: 90
+        problems:
+            - skrifapi: [visible, scoreboard]
+            - skrifapi2: [visible, scoreboard]
+            - margfoldun: [visible, scoreboard]
+            - logri: [visible, scoreboard]
+            - dulmal: [visible, scoreboard]
+            - dulmal2: [visible, scoreboard]
+            - dulmal3: [visible, scoreboard]
+            - autoderivative: [visible, scoreboard]
+            - dotplot: [visible, scoreboard]
+            - brot: [visible, scoreboard]
+            - debruijn2: [visible, scoreboard]
+            - tr: [visible, scoreboard]
+            - margfeldi2: [visible, scoreboard]
+            - p2048: [visible, scoreboard]
+            - lucky2: [visible, scoreboard]
+            - selfdescription: [visible, scoreboard]
+
+    180:
+        status: "Eftir hádegi"
+        countdown: 180
+        frozen: 300
+        problems:
+            - "Eftir hádegi"
+            - pi: [visible, scoreboard, submit]
+            - summa: [visible, scoreboard, submit]
+            - haed: [visible, scoreboard, submit]
+            - demantar: [visible, scoreboard, submit]
+            - evilodious2: [visible, scoreboard, submit]
+            - divisible11: [visible, scoreboard, submit]
+            - freqletter: [visible, scoreboard, submit]
+            - asdfgh: [visible, scoreboard, submit]
+            - planets: [visible, scoreboard, submit]
+            - countintegers: [visible, scoreboard, submit]
+            - guess2: [visible, scoreboard, submit]
+            - reversibleprimes: [visible, scoreboard, submit]
+            - backup: [visible, scoreboard, submit]
+            - speglasalur2: [visible, scoreboard, submit]
+            - gcd: [visible, scoreboard, submit]
+            - dulmal4: [visible, scoreboard, submit]
+
+            - "Fyrir hádegi"
+            - skrifapi: [visible, submit]
+            - skrifapi2: [visible, submit]
+            - margfoldun: [visible, submit]
+            - logri: [visible, submit]
+            - dulmal: [visible, submit]
+            - dulmal2: [visible, submit]
+            - dulmal3: [visible, submit]
+            - autoderivative: [visible, submit]
+            - dotplot: [visible, submit]
+            - brot: [visible, submit]
+            - debruijn2: [visible, submit]
+            - tr: [visible, submit]
+            - margfeldi2: [visible, submit]
+            - p2048: [visible, submit]
+            - lucky2: [visible, submit]
+            - selfdescription: [visible, submit]
+
+
+    360:
+        status: "Keppni lokið - Verðlaunaafhending"
+        countdown: 120
+        frozen: 300
+        problems:
+            - "Fyrir hádegi"
+            - skrifapi: [visible]
+            - skrifapi2: [visible]
+            - margfoldun: [visible]
+            - logri: [visible]
+            - dulmal: [visible]
+            - dulmal2: [visible]
+            - dulmal3: [visible]
+            - autoderivative: [visible]
+            - dotplot: [visible]
+            - brot: [visible]
+            - debruijn2: [visible]
+            - tr: [visible]
+            - margfeldi2: [visible]
+            - p2048: [visible]
+            - lucky2: [visible]
+            - selfdescription: [visible]
+
+            - "Eftir hádegi"
+            - pi: [visible, scoreboard]
+            - summa: [visible, scoreboard]
+            - haed: [visible, scoreboard]
+            - demantar: [visible, scoreboard]
+            - evilodious2: [visible, scoreboard]
+            - divisible11: [visible, scoreboard]
+            - freqletter: [visible, scoreboard]
+            - asdfgh: [visible, scoreboard]
+            - planets: [visible, scoreboard]
+            - countintegers: [visible, scoreboard]
+            - guess2: [visible, scoreboard]
+            - reversibleprimes: [visible, scoreboard]
+            - backup: [visible, scoreboard]
+            - speglasalur2: [visible, scoreboard]
+            - gcd: [visible, scoreboard]
+            - dulmal4: [visible, scoreboard]
+
+
+    480:
+        status: "Keppni lokið"
+        problems:
+            - "Fyrir hádegi"
+            - skrifapi: [visible, scoreboard]
+            - skrifapi2: [visible, scoreboard]
+            - margfoldun: [visible, scoreboard]
+            - logri: [visible, scoreboard]
+            - dulmal: [visible, scoreboard]
+            - dulmal2: [visible, scoreboard]
+            - dulmal3: [visible, scoreboard]
+            - autoderivative: [visible, scoreboard]
+            - dotplot: [visible, scoreboard]
+            - brot: [visible, scoreboard]
+            - debruijn2: [visible, scoreboard]
+            - tr: [visible, scoreboard]
+            - margfeldi2: [visible, scoreboard]
+            - p2048: [visible, scoreboard]
+            - lucky2: [visible, scoreboard]
+            - selfdescription: [visible, scoreboard]
+
+            - "Eftir hádegi"
+            - pi: [visible, scoreboard]
+            - summa: [visible, scoreboard]
+            - haed: [visible, scoreboard]
+            - demantar: [visible, scoreboard]
+            - evilodious2: [visible, scoreboard]
+            - divisible11: [visible, scoreboard]
+            - freqletter: [visible, scoreboard]
+            - asdfgh: [visible, scoreboard]
+            - planets: [visible, scoreboard]
+            - countintegers: [visible, scoreboard]
+            - guess2: [visible, scoreboard]
+            - reversibleprimes: [visible, scoreboard]
+            - backup: [visible, scoreboard]
+            - speglasalur2: [visible, scoreboard]
+            - gcd: [visible, scoreboard]
+            - dulmal4: [visible, scoreboard]
+

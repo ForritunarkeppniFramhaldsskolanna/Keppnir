@@ -1,0 +1,25 @@
+\problemname{tr}
+
+Í Unix stýrikerfum er innbyggt gríðarlega vinsælt tól sem heitir \texttt{tr}.
+Það sem \texttt{tr} gerir er að þýða eða eyða stöfum úr texta. Ykkar verkefni
+er að útfæra ykkar eigin útgáfu af \texttt{tr}. Forritið ykkar mun styðja tvær
+aðgerðir, að eyða staf úr texta eða breyta staf í texta í annan staf.  Til að
+þýða staf í texta þarf að slá inn \texttt{t} og síðan tvo stafi $c_1$ og $c_2$,
+því næst textann til að þýða. Forritið mun næst prenta út allan textann nema, í
+hvert skipti sem að bókstafurinn $c_1$ kemur fyrir mun það prenta út $c_2$. Til
+að eyða staf úr textanum þarf að slá inn \texttt{d} og síðan stafinn $c_1$ sem
+eyða á úr textanum, eftir því textann sjálfann. Forritið mun síðan lesa inn
+allan textann og prenta hann nema alla stafi $c_1$ sem koma fyrir í textanum.
+
+\section*{Inntak}
+Fyrsta lína inntaksins inniheldur annaðhvort \texttt{t} eða \texttt{d}.
+\begin{enumerate}
+    \item[\texttt t] Á sömu línu verða bókstafirnir $c_1$ og $c_2$.
+    \item[\texttt d] Á sömu línu verður bókstafurinn $c_1$.
+\end{enumerate}
+Eftir fyrstu línuna kemur ein lína af texta til að þýða eða eyða staf úr.
+Stafirnir $c_1$ og $c_2$ munu vera bókstafir eða tölustafir.
+
+\section*{Úttak}
+Prenta á út þýdda textann á einni línu.
+

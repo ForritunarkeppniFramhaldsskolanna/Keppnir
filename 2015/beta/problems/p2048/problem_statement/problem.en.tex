@@ -1,0 +1,26 @@
+\problemname{2048}
+
+\illustration{.4}{2048}{}
+
+Leikurinn 2048 samanstendur af $4\times4$ borði, sem hefur einhverjar tölur raðaðar á því. Í hverjum leik getur leikmaður notað örvatakkana til að láta allar flísarnar hreyfast í ákveðna átt. Ef tvær flísar með sama gildi snertast, sameinast þær í eina flís.
+
+Jóhann er heimsmeistari í 2048. Fyrir hverja hreyfingu af 2048 þarf Jóhann að hugsa fram í tímann og athuga hver staðan á borðinu verður eftir að hann framkvæmir þessa hreyfingu. Honum leiðist þessi auka hugsun. Hann biður þig því um að gera forrit sem tekur á móti borði í 2048 og prentar út stöðu borðsins eftir ákveðna færslu.
+
+Nákvæm lýsing á leiknum er hér að neðan:
+\begin{itemize}
+    \item Leikurinn byrjar með $4\times4$ borð af flísum. Hver flís inniheldur tölu sem er veldi af $2$.
+    \item Í hverjum leik þarf leikmaður að færa allar flísarnar í ákveðna átt. Þegar flísarnar byrja að hreyfast, þá munu allar flísarnar hreyfast samtímis í valda átt á sama hraða. Flís hættir að hreyfast ef hún rekst á endann á borðinu, eða á aðra flís sem inniheldur ekki sömu tölu. Ef flís rekst á aðra flís sem inniheldur sömu tölu sameinast þær og mynda nýja flís með tölu jafngilda summu þeirra tveggja. Þessi flís getur svo ekki sameinast öðrum flísum aftur í þessum leik.
+    \item Ef engin flís getur færst eða sameinast eftir ákveðna færslu telst hreyfingin vera ólögleg. Leikmaðurinn þarf að velja aðra átt, annars hefur hann tapað. Leikmaðurinn hefur unnið ef það er að minnsta kosti ein flís sem inniheldur töluna 2048.
+    \item Eftir hvern leik bætist við ný flís sem hefur annaðhvort gildið $2$ eða $4$.
+\end{itemize}
+
+\section*{Inntak}
+Fyrst koma $4$ línur sem innihalda $4$ tölur hver sem tákna stöðu borðsins.
+Talan $0$ táknar auðan reit. Hver tala, fyrir utan $0$, verður veldi af $2$.
+Næst á eftir kemur lína sem inniheldur annaðhvort \texttt{LEFT},
+\texttt{RIGHT}, \texttt{UP} eða \texttt{DOWN}. Sú lína táknar í hvaða átt
+Jóhann vill færa borðið.
+
+\section*{Úttak}
+Staða borðsins eftir að umbeðin færsla hefur verið framkvæmd.
+

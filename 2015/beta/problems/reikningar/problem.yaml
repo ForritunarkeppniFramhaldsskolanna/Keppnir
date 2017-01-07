@@ -1,0 +1,5 @@
+author: Bjarki Ágúst Guðmundsson
+source: FK 2015
+license: cc by
+validation: default
+validator_flags: float_tolerance 1e-2

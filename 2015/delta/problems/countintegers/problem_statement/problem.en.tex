@@ -1,0 +1,14 @@
+\problemname{Telja heiltölur}
+Arnar er í vandræðum með að telja. Hann er með þrjár jákvæðar heiltölur $i$, $j$ og $n$. Hann þarf að finna  fjölda jákvæðra heiltalna $x$ þar sem $x \leq n$ og $x$ er deilanleg með $i$ eða $j$.
+
+Arnar reyndi að skrifa allar tölurnar upp og prófa deilinguna á hverja einustu tölu en það var alltof tímafrekt og erfitt. Nú biður hann þig um hjálp við að forrita fljótari og þægilegri lausn svo hann geti klárað talninguna. Hann gefur þér formúlu til að finna fjöldann:
+$$\left\lfloor\frac{n}{i}\right\rfloor + \left\lfloor\frac{n}{j}\right\rfloor - \left\lfloor\frac{n}{\mathrm{lcm}(i,j)}\right\rfloor$$
+Hér stendur $\mathrm{lcm}(i,j)$ fyrir lægsta sameiginlega margfeldi $i$ og $j$. Fallið er skilgreint sem $\mathrm{lcm}(a,b) = \frac{a \times b}{\gcd(a,b)}$, og er hægt að finna nánari lýsingu á fallinu \href{http://en.wikipedia.org/wiki/Least_common_multiple}{hér}. Við teljum allar tölur sem $i$ gengur upp í og svo allar tölur sem $j$ gengur upp í. En þá höfum við tvítalið allar tölur sem bæði $i$ og $j$ ganga upp í. Þess vegna tökum við lægsta sameiginlega margfeldi $i$ og $j$ og drögum frá fjölda talna sem margfeldið gengur upp í. Þetta ferli er almennt þekkt sem \href{http://en.wikipedia.org/wiki/Inclusion-exclusion_principle}{"Inclusion-exclusion principle"}.
+
+\section*{Inntak}
+Inntak inniheldur tvær línur. Fyrri línan inniheldur eina jákvæða heiltölu $n$ þar sem $n \leq 10^{10}$.
+Seinni línan inniheldur tvær jákvæðar heiltölur $i$ og $j$,
+þar sem $1 \leq i,j \leq n$.
+
+\section*{Úttak}
+Ein lína sem inniheldur eina tölu $m$ sem táknar fjölda talna minni en $n$ sem eru deilanlegar með $i$ eða $j$.

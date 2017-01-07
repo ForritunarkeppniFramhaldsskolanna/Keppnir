@@ -1,0 +1,35 @@
+\problemname{Dulmál 3}
+
+\illustration{.4}{encryption}{}
+
+Jón og Gunna eru saman í bekk. Þau eru búin að vera að senda hvoru öðru
+skilaboð í kennslustundum. Um daginn sá kennarinn hvað þau voru að gera, tók
+skilaboðin, og las upp fyrir framan bekkinn. Þetta fannst Jóni og Gunnu vera
+mjög óþægilegt, og til að koma í veg fyrir að þetta gerist aftur hafa þau
+ákveðið að byrja að dulkóða skilaboðin sem þau senda hvoru öðru. Þau velja sér
+einhverja jákvæða heiltölu $k$, og enginn veit hver sú tala er nema þau. Svo
+bæta þau við stöfum af handahófi inn á milli stafa í skilaboðunum, þannig að ef
+maður les $k$:ta hvern staf í dulkóðuðu skilaboðunum, þá fær maður upprunalega
+skilaboðin.
+
+Tökum dæmi. Segjum að $k=3$ og skilaboðin sem á að senda sé ``hittumstaeftir''. Þá gæti dulkóðuðu skilaboðin litið út svona:
+\begin{center}
+hpnipktoftdhugfmtxspktqracuefofdqtclihtr
+\end{center}
+Þá ef maður skoðar $k$:ta hvern staf fær maður upphaflegu skilaboðin:
+\begin{center}
+\textbf{h}pn\textbf{i}pk\textbf{t}of\textbf{t}dh\textbf{u}gf\textbf{m}tx\textbf{s}pk\textbf{t}qr\textbf{a}cu\textbf{e}fo\textbf{f}dq\textbf{t}cl\textbf{i}ht\textbf{r}
+\end{center}
+
+Hann Ásgeir litli er líka með Jóni og Gunnu í bekk, og hann er búinn að vera að
+fylgjast með þeim senda skilaboð á milli sín. Hann heyrði í þeim þegar þau voru
+að ákveða hvernig dulmálið átti að virka, en hann heyrði ekki hvaða heiltölu
+$k$ þau völdu sér. Ásgeir er mjög forvitinn að vita hvað þau eru að senda á
+milli sín, svo hann ákveður að brjóta dulmálið þeirra. Hann veit
+að heiltalan $k$ er á bilinu $1$ upp í lengdina á dulkóðuðu skilaboðunum, svo hann
+einfaldlega prufar að afkóða skilaboðin með hverju $k$-i á þessu bili.
+
+Skrifið forrit sem les inn dulkóðuð skilaboð, og prufar að afkóða þau fyrir
+öll $k$ á bilinu $1$ upp í lengdina á dulkóðuðu skilaboðunum. Forritið á að
+skrifa út niðurstöðurnar á forminu ``\texttt{$k$: \textit{skilaboð}}''.
+

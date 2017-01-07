@@ -1,0 +1,29 @@
+\documentclass[tikz]{standalone}
+
+\usepackage[latin1]{inputenc}
+\usepackage{tikz}
+\usepackage{color}
+
+\begin{document}
+\pagestyle{empty}
+
+\newcommand\sz{4}
+
+\begin{tikzpicture}
+
+% aaababbb
+
+\begin{scope}[shift={(0,0)},rotate=-0]\node (0) at (0,2) {\textbf{\textcolor{red}{a}}};\end{scope}
+\begin{scope}[shift={(0,0)},rotate=-45]\node (0) at (0,2) {\textbf{\textcolor{red}{a}}};\end{scope}
+\begin{scope}[shift={(0,0)},rotate=-90]\node (0) at (0,2) {\textbf{\textcolor{red}{a}}};\end{scope}
+    \begin{scope}[shift={(0,0)},rotate=-135]\node (0) at (0,2) {b};\end{scope}
+    \begin{scope}[shift={(0,0)},rotate=-180]\node (0) at (0,2) {a};\end{scope}
+    \begin{scope}[shift={(0,0)},rotate=-225]\node (0) at (0,2) {b};\end{scope}
+    \begin{scope}[shift={(0,0)},rotate=-270]\node (0) at (0,2) {b};\end{scope}
+    \begin{scope}[shift={(0,0)},rotate=-315]\node (0) at (0,2) {b};\end{scope}
+
+    \draw (0,0) circle (1.65);
+
+\end{tikzpicture}
+
+\end{document}

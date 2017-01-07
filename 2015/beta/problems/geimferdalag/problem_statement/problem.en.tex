@@ -1,0 +1,41 @@
+\problemname{Geimferðalag}
+
+Blorg er geimvera frá plánetunni Blarglorg, en hann er á ferðalagi um geiminn á geimskipinu sínu. Þetta er þó ekkert venjulegt geimskip,
+því það getur ferðast í $N$-víðu rúmi. Geimskipið er þó takmarkað á vissan hátt, því það getur bara farið áfram um $1$ í einni vídd í einu.
+Það hefur því eftirfarandi $N$ aðgerðir, ef það er staðsett á hnitinu $(X_1,X_2,\ldots,X_N)$:
+
+\begin{itemize}
+    \item Fara á hnitið $(X_1+1,X_2,\ldots,X_N)$.
+    \item Fara á hnitið $(X_1,X_2+1,\ldots,X_N)$.
+    \item $\cdots$
+    \item Fara á hnitið $(X_1,X_2,\ldots,X_N+1)$.
+\end{itemize}
+
+Blorg er núna staðsettur í byrjun geimsins: á hnitinu $(0,0,\ldots,0)$ ($N$ núll). Hann er búinn ákveða að næsti áfangastaður er á hnitinu $(Y_1,Y_2,\ldots,Y_N)$.
+Hann er að reyna að ákveða hvaða leið hann á að fara, en hann sér að það eru hugsanlega fleiri en ein leið til að komast á áfangastaðinn. En nákvæmlega hversu margar?
+
+\section*{Inntak}
+Inntakið samanstendur af tveimur línum. Á fyrstu línu er heiltalan $N$
+($1\leq N\leq 6$), fjöldi vídda sem geimskipið getur ferðast í. Á
+annarri línu eru $N$ heiltölur
+$Y_1$,$Y_2$,$\ldots$,$Y_N$ ($0\leq Y_i \leq 100$ fyrir hvert $i=1,2,\ldots,N$),
+aðskildar með bili, þar sem
+$(Y_1,Y_2,\ldots,Y_N)$ er
+áfangastaðurinn.
+
+\section*{Úttak}
+Skrifaðu út eina línu sem inniheldur fjölda leiða til áfangastaðarins. Þar sem
+þessi tala getur verið stór, skaltu skrifa út afganginn þegar tölunni er deilt
+með $1\,000\,000\,007$.
+
+\section*{Útskýring á dæmi}
+Ef Blorg er staddur á $(0,0)$ og ætlar að fara til $(2,2)$, þá getur hann farið eftirfarandi sex leiðir:
+\begin{enumerate}
+    \item $(0,0) \rightarrow (0,1) \rightarrow (0,2) \rightarrow (1,2) \rightarrow (2,2)$
+    \item $(0,0) \rightarrow (0,1) \rightarrow (1,1) \rightarrow (1,2) \rightarrow (2,2)$
+    \item $(0,0) \rightarrow (0,1) \rightarrow (1,1) \rightarrow (2,1) \rightarrow (2,2)$
+    \item $(0,0) \rightarrow (1,0) \rightarrow (1,1) \rightarrow (1,2) \rightarrow (2,2)$
+    \item $(0,0) \rightarrow (1,0) \rightarrow (1,1) \rightarrow (2,1) \rightarrow (2,2)$
+    \item $(0,0) \rightarrow (1,0) \rightarrow (2,0) \rightarrow (2,1) \rightarrow (2,2)$
+\end{enumerate}
+

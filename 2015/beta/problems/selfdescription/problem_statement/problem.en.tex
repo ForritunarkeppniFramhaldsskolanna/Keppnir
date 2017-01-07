@@ -1,0 +1,30 @@
+\problemname{Sjálflýsandi Runur}
+
+Við segjum að runa $A = (a_0, a_1, \ldots, a_{n-1})$ af $n$ heiltölum á
+bilinu $0$ upp í $n-1$ sé sjálflýsandi, ef fyrir hverja heiltölu $i$ á þessu
+bili þá eru $a_i$ eintök af $i$ í rununni.
+
+
+\illustration{1}{self}{}
+
+Til dæmis er runan $A = (1,2,1,0)$ sjálflýsandi, því
+\begin{itemize}
+    \item heiltalan $0$ kemur einu sinni fyrir, og $a_0 = 1$,
+    \item heiltalan $1$ kemur tvisvar sinnum fyrir, og $a_1 = 2$,
+    \item heiltalan $2$ kemur einu sinni fyrir, og $a_2 = 1$,
+    \item heiltalan $3$ kemur aldrei fyrir, og $a_3 = 0$.
+\end{itemize}
+
+Skrifið forrit sem les inn heiltölu $n$, og skrifar út sjálflýsandi runu af
+lengd $n$. Ef margar svoleiðis runur eru til, þá skiptir ekki máli hver þeirra
+er skrifuð út. Ef það eru engar svoleiðis runur til, þá á forritið að skrifa út
+\texttt{Engin}.
+
+\section*{Inntak}
+Ein lína með heiltölu $n$, þar sem $1 \leq n \leq 100$.
+
+\section*{Úttak}
+Ein lína sem inniheldur annaðhvort $n$ heiltölur á milli $0$ og $n-1$ sem
+tákna sjálflýsandi runu, eða strenginn \texttt{Engin} ef engin svoleiðis runa
+er til.
+

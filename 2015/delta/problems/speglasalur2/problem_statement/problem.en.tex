@@ -1,0 +1,35 @@
+\problemname{Speglasalur 2}
+
+Björn litli fór í skemmtigarð um daginn. Þar fór hann inn í stóran sal fullan
+af speglum. Honum fannst mjög sniðugt að sjá spegilmynd sína úr öllum áttum. En
+það vildi svo til að hann var með lítinn lazer með sér, og honum fannst enn
+sniðugra að benda lazernum að speglunum og sjá lazerinn skoppa fram og til baka
+á speglunum í salnum. Því fleiri skopp, því betra. Honum langar að telja hversu
+mörgum speglum lazerinn skoppar af áður en lazerinn lendir á vegg eða lendir á
+Birni sjálfum.
+
+Skrifið forrit sem les inn lýsingu á speglasalnum, hvar Björn stendur, og í
+hvaða átt hann skýtur lazernum. Speglasalnum er lýst með $8\times 8$ borði, þar
+sem hver reitur er eitt af:
+\begin{itemize}
+    \item `\texttt{.}' táknar auðan reit sem lazerinn fer yfir án þessa að breyta um stefnu
+    \item `\texttt{/}' táknar spegil. Lazer sem lendir á speglinum frá vinstri eða hægri
+    mun snúast 90 gráður rangsælis. Lazer sem lendir á speglinum að ofan eða að neðan mun snúast um 90 gráður réttsælis.
+    \item `\texttt{\textbackslash}' táknar spegil. Lazer sem lendir á speglinum frá vinstri eða hægri
+    mun snúast 90 gráður réttsælis. Lazer sem lendir á speglinum að ofan eða að neðan mun snúast um 90 gráður rangsælis.
+    \vspace{10pt}
+    \item `\texttt{>}' táknar reitinn sem Björn stendur á, og að hann skjóti lazernum til hægri
+    \item `\texttt{<}' táknar reitinn sem Björn stendur á, og að hann skjóti lazernum til vinstri
+    \item `\texttt{\^}' táknar reitinn sem Björn stendur á, og að hann skjóti lazernum upp
+    \item `\texttt{v}' táknar reitinn sem Björn stendur á, og að hann skjóti lazernum niður
+    \vspace{10pt}
+    \item `\texttt{-}' táknar vegg
+    \item `\texttt{|}' táknar vegg
+    \item `\texttt{+}' táknar vegg
+\end{itemize}
+Speglasalurinn mun alltaf vera umlukinn veggjum, og engir aðrir veggir munu
+vera til staðar í speglasalnum. Forritið á að skrifa út hversu oft lazerinn
+skoppar af speglum áður en lazerinn lendir á vegg eða aftur á Birni. Forritið
+þarf ekki að ráða við lazer sem skoppar óendanlega oft, og svoleiðis tilvik
+verða ekki notuð til að prófa forritið.
+

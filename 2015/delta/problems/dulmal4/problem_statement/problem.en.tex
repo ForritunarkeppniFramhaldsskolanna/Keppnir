@@ -1,0 +1,59 @@
+\problemname{Dulmál 4}
+
+\illustration{.4}{encryption}{}
+
+Jón og Gunna eru saman í bekk. Þau eru búin að vera að senda hvoru öðru
+skilaboð í kennslustundum. Um daginn sá kennarinn hvað þau voru að gera, tók
+skilaboðin, og las upp fyrir framan bekkinn. Þetta fannst Jóni og Gunnu vera
+mjög óþægilegt, og til að koma í veg fyrir að þetta gerist aftur hafa þau
+ákveðið að byrja að dulkóða skilaboðin sem þau senda hvoru öðru. Þau velja sér
+einhverja jákvæða heiltölu $k$, og enginn veit hver sú tala er nema þau. Svo
+bæta þau við stöfum af handahófi inn á milli stafa í skilaboðunum, þannig að ef
+maður les $k$:ta hvern staf í dulkóðuðu skilaboðunum, þá fær maður upprunalega
+skilaboðin.
+
+Tökum dæmi. Segjum að $k=3$ og skilaboðin sem á að senda sé ``hittumstaeftir''. Þá gæti dulkóðuðu skilaboðin litið út svona:
+\begin{center}
+hpnipktoftdhugfmtxspktqracuefofdqtclihtr
+\end{center}
+Þá ef maður skoðar $k$:ta hvern staf fær maður upphaflegu skilaboðin:
+\begin{center}
+\textbf{h}pn\textbf{i}pk\textbf{t}of\textbf{t}dh\textbf{u}gf\textbf{m}tx\textbf{s}pk\textbf{t}qr\textbf{a}cu\textbf{e}fo\textbf{f}dq\textbf{t}cl\textbf{i}ht\textbf{r}
+\end{center}
+
+
+Núna eru Jón og Gunna búin að taka eftir hvað Ásgeir er að gera. Þau sjá að
+hann er að reyna að brjóta dulkóðann þeirra með því að prufa að afkóða dulkóðuð
+skilaboð sem hann kemst yfir með öllum gildum á $k$ frá $1$ upp í lengdina á
+dulkóðuðu skilaboðunum.
+
+En Jón og Gunna halda að þau geti villt fyrir Ásgeiri, því hugsanlega geta
+fleiri en eitt gildi á $k$ gefið skilaboð sem eru skiljanleg. Til dæmis ef
+dulkóðuðu skilaboðin eru ``\texttt{mifaidxzn}'', þá myndi Ásgeir prufa að
+afkóða með öllum mögulegum $k$-um, og fá:
+
+\begin{verbatim}
+1: mifaidxzn
+2: mfixn
+3: max
+4: min
+5: md
+6: mx
+7: mz
+8: mn
+9: m
+\end{verbatim}
+
+En þarna gæti bæði ``\texttt{min}'' og ``\texttt{max}'' komið til greina sem
+skilaboð. Jón og Gunna ætla að nýta sér þetta. Þau velja sér $n$ orð, þar sem
+$n$ er í mesta lagi $5$ og hvert orð er í mesta lagi $15$ stafir að lengd, og
+ætla svo að búa til dulkóðaðan streng, þannig hvert af þessum orðum komi að
+minnsta kosti einu sinni fyrir í listanum sem Ásgeir fær.
+
+Skrifið forrit sem les inn heiltöluna $n$, og svo $n$ orð. Forritið á að skrifa
+út \textbf{stystu} dulkóðuðu skilaboðin sem hafa þann eiginleika að öll af
+gefnu orðunum koma fyrir þegar hann er afkóðaður með mismunandi gildum af $k$.
+Þið megið gera ráð fyrir að svona strengur sé til, og að hann sé aldrei lengri
+en $100$ stafir. Ef það eru mörg dulkóðuð skilaboð sem koma til grein, þá
+skiptir ekki máli hvert þeirra er skrifað út.
+

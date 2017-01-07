@@ -1,0 +1,122 @@
+teams:
+  2DArray:
+    groups: [all, ts]
+    location: unknown
+    pass: elastic ball
+    title: 2DArray
+  400_Bad_Request:
+    groups: [all, ts]
+    location: unknown
+    pass: angry bottle
+    title: 400 Bad Request
+  Bot:
+    groups: [all, fs]
+    location: unknown
+    pass: cut moon
+    title: Bot
+  Brogrammers:
+    groups: [all, ve]
+    location: unknown
+    pass: regular face
+    title: Brogrammers
+  C_flat:
+    groups: [all, ts]
+    location: unknown
+    pass: broken star
+    title: "C\u266D"
+  Chicks_dig_csharp:
+    groups: [all, ts]
+    location: unknown
+    pass: important heart
+    title: Chicks dig c#
+  Dewitos:
+    groups: [all, ts]
+    location: unknown
+    pass: strong bee
+    title: Dewitos
+  Furduhlutur:
+    groups: [all, mk]
+    location: unknown
+    pass: clean school
+    title: Furduhlutur
+  Hi:
+    groups: [all, fs]
+    location: unknown
+    pass: poor book
+    title: Hi
+  Java_the_Hut:
+    groups: [all, other]
+    location: unknown
+    pass: chief orange
+    title: Java the Hut
+  N2O:
+    groups: [all, ve]
+    location: unknown
+    pass: early bridge
+    title: N2O
+  Ray_Bears:
+    groups: [all, ts]
+    location: unknown
+    pass: dependent stick
+    title: Ray Bears
+  Smjoor:
+    groups: [all, ts]
+    location: unknown
+    pass: tall window
+    title: "Smj\xF6\xF6r"
+  Sokyo_Tushi:
+    groups: [all, ts]
+    location: unknown
+    pass: violent button
+    title: "Sokyo Tushi \xA9"
+  Team_Rejects:
+    groups: [all, ts]
+    location: unknown
+    pass: able hat
+    title: Team Rejects
+  The_Codine_Coders:
+    groups: [all, ve]
+    location: unknown
+    pass: possible cheese
+    title: The Codeine Coders
+  The_Programmables:
+    groups: [all, fs]
+    location: unknown
+    pass: hard stick
+    title: The Programmables
+  hneta:
+    groups: [all, ve]
+    location: unknown
+    pass: healthy wing
+    title: (h)neta
+  just_here_for_the_pizza:
+    groups: [all, fs]
+    location: unknown
+    pass: beautiful office
+    title: Im just here for the pizza!
+  lid_9:
+    groups: [all, ts]
+    location: unknown
+    pass: able bridge
+    title: "li\xF0 9 "
+  straight_outta_comp_sci:
+    groups: [all, ts]
+    location: unknown
+    pass: wet pot
+    title: straight outta comp.sci
+  string_name_ERROR:
+    groups: [all, ts]
+    location: unknown
+    pass: sticky frame
+    title: string name = "ERROR!";
+  Snaebari:
+    groups: [all, fg]
+    location: unknown
+    pass: equal carriage
+    title: "SN\xC6BARI"
+
+groups: {all: Allir, fg: "Fj\xF6lbrautask\xF3linn \xED Gar\xF0ab\xE6", fs: "Fj\xF6\
+    lbrautask\xF3li Su\xF0urnesja", ma: "Menntask\xF3linn \xE1 Akureyri", mk: "Menntask\xF3\
+    linn \xED K\xF3pavogi", mr: "Menntask\xF3linn \xED Reykjav\xEDk", other: "A\xF0\
+    rir", ts: "T\xE6knisk\xF3linn", ve: "Verzlunarsk\xF3li \xCDslands"}
+

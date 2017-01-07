@@ -1,0 +1,139 @@
+id: fk_2015_beta
+title: FK 2015 - Sínus deild
+start: 2015-03-14 10:00:00.000
+db: postgresql://postgres:postgres@postgres:5432/postgres
+duration: 360
+register: false
+
+balloons: true
+display_diff: false
+display_input: false
+
+phases:
+    -60:
+        status: "Keppni ekki hafin"
+        countdown: 60
+
+    0:
+        status: "Fyrir hádegi"
+        countdown: 120
+        frozen: 90
+        problems:
+            - dotplot: [visible, scoreboard, submit]
+            - dulmal2: [visible, scoreboard, submit]
+            - margfeldi2: [visible, scoreboard, submit]
+            - pi: [visible, scoreboard, submit]
+            - zencoding: [visible, scoreboard, submit]
+            - selfdescription: [visible, scoreboard, submit]
+            - planets: [visible, scoreboard, submit]
+            - dulmal3: [visible, scoreboard, submit]
+            - p2048: [visible, scoreboard, submit]
+            - divisible11: [visible, scoreboard, submit]
+            - dulmal4: [visible, scoreboard, submit]
+
+    120:
+        status: "Hádegishlé"
+        countdown: 60
+        frozen: 90
+        problems:
+            - dotplot: [visible, scoreboard]
+            - dulmal2: [visible, scoreboard]
+            - margfeldi2: [visible, scoreboard]
+            - pi: [visible, scoreboard]
+            - zencoding: [visible, scoreboard]
+            - selfdescription: [visible, scoreboard]
+            - planets: [visible, scoreboard]
+            - dulmal3: [visible, scoreboard]
+            - p2048: [visible, scoreboard]
+            - divisible11: [visible, scoreboard]
+            - dulmal4: [visible, scoreboard]
+
+    180:
+        status: "Eftir hádegi"
+        countdown: 180
+        frozen: 300
+        problems:
+            - "Eftir hádegi"
+            - lucky: [visible, scoreboard, submit]
+            - demantar: [visible, scoreboard, submit]
+            - breakingbad: [visible, submit]
+            - debruijn: [visible, scoreboard, submit]
+            - brot: [visible, scoreboard, submit]
+            - backup: [visible, scoreboard, submit]
+            - tiskulegarkyr: [visible, scoreboard, submit]
+            - jonspaejo: [visible, scoreboard, submit]
+            - reversibleprimes: [visible, scoreboard, submit]
+            - guess: [visible, scoreboard, submit]
+
+            - "Fyrir hádegi"
+            - dotplot: [visible, submit]
+            - dulmal2: [visible, submit]
+            - margfeldi2: [visible, submit]
+            - pi: [visible, submit]
+            - zencoding: [visible, submit]
+            - selfdescription: [visible, submit]
+            - planets: [visible, submit]
+            - dulmal3: [visible, submit]
+            - p2048: [visible, submit]
+            - divisible11: [visible, submit]
+            - dulmal4: [visible, submit]
+
+
+    360:
+        status: "Keppni lokið - Verðlaunaafhending"
+        countdown: 120
+        frozen: 300
+        problems:
+            - "Fyrir hádegi"
+            - dotplot: [visible]
+            - dulmal2: [visible]
+            - margfeldi2: [visible]
+            - pi: [visible]
+            - zencoding: [visible]
+            - selfdescription: [visible]
+            - planets: [visible]
+            - dulmal3: [visible]
+            - p2048: [visible]
+            - divisible11: [visible]
+            - dulmal4: [visible]
+
+            - "Eftir hádegi"
+            - lucky: [visible, scoreboard]
+            - demantar: [visible, scoreboard]
+            - breakingbad: [visible, scoreboard]
+            - debruijn: [visible, scoreboard]
+            - brot: [visible, scoreboard]
+            - backup: [visible, scoreboard]
+            - tiskulegarkyr: [visible, scoreboard]
+            - jonspaejo: [visible, scoreboard]
+            - reversibleprimes: [visible, scoreboard]
+            - guess: [visible, scoreboard]
+
+    480:
+        status: "Keppni lokið"
+        problems:
+            - "Fyrir hádegi"
+            - dotplot: [visible, scoreboard]
+            - dulmal2: [visible, scoreboard]
+            - margfeldi2: [visible, scoreboard]
+            - pi: [visible, scoreboard]
+            - zencoding: [visible, scoreboard]
+            - selfdescription: [visible, scoreboard]
+            - planets: [visible, scoreboard]
+            - dulmal3: [visible, scoreboard]
+            - p2048: [visible, scoreboard]
+            - divisible11: [visible, scoreboard]
+            - dulmal4: [visible, scoreboard]
+
+            - "Eftir hádegi"
+            - lucky: [visible, scoreboard]
+            - demantar: [visible, scoreboard]
+            - breakingbad: [visible, scoreboard]
+            - debruijn: [visible, scoreboard]
+            - brot: [visible, scoreboard]
+            - backup: [visible, scoreboard]
+            - tiskulegarkyr: [visible, scoreboard]
+            - jonspaejo: [visible, scoreboard]
+            - reversibleprimes: [visible, scoreboard]
+            - guess: [visible, scoreboard]
+

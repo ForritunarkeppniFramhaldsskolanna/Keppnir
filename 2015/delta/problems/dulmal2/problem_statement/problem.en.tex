@@ -1,0 +1,32 @@
+\problemname{Dulmál 2}
+
+\illustration{.4}{encryption}{}
+
+Jón og Gunna eru saman í bekk. Þau eru búin að vera að senda hvoru öðru
+skilaboð í kennslustundum. Um daginn sá kennarinn hvað þau voru að gera, tók
+skilaboðin, og las upp fyrir framan bekkinn. Þetta fannst Jóni og Gunnu vera
+mjög óþægilegt, og til að koma í veg fyrir að þetta gerist aftur hafa þau
+ákveðið að byrja að dulkóða skilaboðin sem þau senda hvoru öðru. Þau velja sér
+einhverja jákvæða heiltölu $k$, og enginn veit hver sú tala er nema þau. Svo
+bæta þau við stöfum af handahófi inn á milli stafa í skilaboðunum, þannig að ef
+maður les $k$:ta hvern staf í dulkóðuðu skilaboðunum, þá fær maður upprunalega
+skilaboðin.
+
+Tökum dæmi. Segjum að $k=3$ og skilaboðin sem á að senda sé ``hittumstaeftir''. Þá gæti dulkóðuðu skilaboðin litið út svona:
+\begin{center}
+hpnipktoftdhugfmtxspktqracuefofdqtclihtr
+\end{center}
+Þá ef maður skoðar $k$:ta hvern staf fær maður upphaflegu skilaboðin:
+\begin{center}
+\textbf{h}pn\textbf{i}pk\textbf{t}of\textbf{t}dh\textbf{u}gf\textbf{m}tx\textbf{s}pk\textbf{t}qr\textbf{a}cu\textbf{e}fo\textbf{f}dq\textbf{t}cl\textbf{i}ht\textbf{r}
+\end{center}
+
+Jóni og Gunnu vantar meiri hjálp, því nú eru þau líka komin með leið á að
+dulkóða skilaboðin sjálf. Skrifið forrit sem les inn jákvæðu heiltöluna $k$ og
+svo eina línu sem inniheldur upprunalegu skilaboðin, og skrifar út dulkóðuðu
+skilaboðin.
+
+Athugið að það skiptir ekki máli hvaða stafi forritið setur inn í strenginn eða
+á eftir strengnum, svo lengi sem að ef maður afkóðar dulkóðaða strenginn, þá fái
+maður upprunalega strenginn.
+
