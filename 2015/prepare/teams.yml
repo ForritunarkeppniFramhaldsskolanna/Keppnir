@@ -1,0 +1,373 @@
+teams:
+  extra_1:
+    groups: [all, other]
+    location: unknown
+    pass: hollow circle
+    title: ''
+  extra_10:
+    groups: [all, other]
+    location: unknown
+    pass: important stocking
+    title: ''
+  extra_11:
+    groups: [all, other]
+    location: unknown
+    pass: acid nose
+    title: ''
+  extra_12:
+    groups: [all, other]
+    location: unknown
+    pass: present spoon
+    title: ''
+  extra_13:
+    groups: [all, other]
+    location: unknown
+    pass: thick bulb
+    title: ''
+  extra_14:
+    groups: [all, other]
+    location: unknown
+    pass: military shoe
+    title: ''
+  extra_15:
+    groups: [all, other]
+    location: unknown
+    pass: round head
+    title: ''
+  extra_16:
+    groups: [all, other]
+    location: unknown
+    pass: boiling girl
+    title: ''
+  extra_17:
+    groups: [all, other]
+    location: unknown
+    pass: frequent cup
+    title: ''
+  extra_18:
+    groups: [all, other]
+    location: unknown
+    pass: tall lip
+    title: ''
+  extra_19:
+    groups: [all, other]
+    location: unknown
+    pass: right ship
+    title: ''
+  extra_2:
+    groups: [all, other]
+    location: unknown
+    pass: angry sail
+    title: ''
+  extra_20:
+    groups: [all, other]
+    location: unknown
+    pass: grey feather
+    title: ''
+  extra_21:
+    groups: [all, other]
+    location: unknown
+    pass: violent boot
+    title: ''
+  extra_22:
+    groups: [all, other]
+    location: unknown
+    pass: warm sail
+    title: ''
+  extra_23:
+    groups: [all, other]
+    location: unknown
+    pass: second cushion
+    title: ''
+  extra_24:
+    groups: [all, other]
+    location: unknown
+    pass: angry street
+    title: ''
+  extra_25:
+    groups: [all, other]
+    location: unknown
+    pass: responsible skirt
+    title: ''
+  extra_3:
+    groups: [all, other]
+    location: unknown
+    pass: fertile train
+    title: ''
+  extra_4:
+    groups: [all, other]
+    location: unknown
+    pass: same hand
+    title: ''
+  extra_5:
+    groups: [all, other]
+    location: unknown
+    pass: true station
+    title: ''
+  extra_6:
+    groups: [all, other]
+    location: unknown
+    pass: black stamp
+    title: ''
+  extra_7:
+    groups: [all, other]
+    location: unknown
+    pass: physical card
+    title: ''
+  extra_8:
+    groups: [all, other]
+    location: unknown
+    pass: important pencil
+    title: ''
+  extra_9:
+    groups: [all, other]
+    location: unknown
+    pass: parallel comb
+    title: ''
+  H_Solo:
+    groups: [all, ts]
+    location: unknown
+    pass: bright spring
+    title: H. Solo
+  Nuclear_Trip:
+    groups: [all, ts]
+    location: unknown
+    pass: sudden gun
+    title: Nuclear Trip
+  String_Konni2:
+    groups: [all, ts]
+    location: unknown
+    pass: tall board
+    title: String Konni2 = null;
+  The_Silmarils:
+    groups: [all, mr]
+    location: unknown
+    pass: hard rat
+    title: The Silmarils
+  import_cool_beans:
+    groups: [all, ts]
+    location: unknown
+    pass: wide camera
+    title: '#import cool_beans'
+  table_flippers:
+    groups: [all, ts]
+    location: unknown
+    pass: healthy circle
+    title: "(\u256F\xB0\u25A1\xB0\uFF09\u256F\uFE35 \u253B\u2501\u253B"
+  2DArray:
+    groups: [all, ts]
+    location: unknown
+    pass: elastic ball
+    title: 2DArray
+  400_Bad_Request:
+    groups: [all, ts]
+    location: unknown
+    pass: angry bottle
+    title: 400 Bad Request
+  Bot:
+    groups: [all, fs]
+    location: unknown
+    pass: cut moon
+    title: Bot
+  Brogrammers:
+    groups: [all, ve]
+    location: unknown
+    pass: regular face
+    title: Brogrammers
+  C_flat:
+    groups: [all, ts]
+    location: unknown
+    pass: broken star
+    title: "C\u266D"
+  Chicks_dig_csharp:
+    groups: [all, ts]
+    location: unknown
+    pass: important heart
+    title: Chicks dig c#
+  Dewitos:
+    groups: [all, ts]
+    location: unknown
+    pass: strong bee
+    title: Dewitos
+  Furduhlutur:
+    groups: [all, mk]
+    location: unknown
+    pass: clean school
+    title: Furduhlutur
+  Hi:
+    groups: [all, fs]
+    location: unknown
+    pass: poor book
+    title: Hi
+  Java_the_Hut:
+    groups: [all, other]
+    location: unknown
+    pass: chief orange
+    title: Java the Hut
+  N2O:
+    groups: [all, ve]
+    location: unknown
+    pass: early bridge
+    title: N2O
+  Ray_Bears:
+    groups: [all, ts]
+    location: unknown
+    pass: dependent stick
+    title: Ray Bears
+  Smjoor:
+    groups: [all, ts]
+    location: unknown
+    pass: tall window
+    title: "Smj\xF6\xF6r"
+  Sokyo_Tushi:
+    groups: [all, ts]
+    location: unknown
+    pass: violent button
+    title: "Sokyo Tushi \xA9"
+  Team_Rejects:
+    groups: [all, ts]
+    location: unknown
+    pass: able hat
+    title: Team Rejects
+  The_Codine_Coders:
+    groups: [all, ve]
+    location: unknown
+    pass: possible cheese
+    title: The Codeine Coders
+  The_Programmables:
+    groups: [all, fs]
+    location: unknown
+    pass: hard stick
+    title: The Programmables
+  hneta:
+    groups: [all, ve]
+    location: unknown
+    pass: healthy wing
+    title: (h)neta
+  just_here_for_the_pizza:
+    groups: [all, fs]
+    location: unknown
+    pass: beautiful office
+    title: Im just here for the pizza!
+  lid_9:
+    groups: [all, ts]
+    location: unknown
+    pass: able bridge
+    title: "li\xF0 9 "
+  straight_outta_comp_sci:
+    groups: [all, ts]
+    location: unknown
+    pass: wet pot
+    title: straight outta comp.sci
+  string_name_ERROR:
+    groups: [all, ts]
+    location: unknown
+    pass: sticky frame
+    title: string name = "ERROR!";
+  Arnar_Neko:
+    groups: [all, ts]
+    location: unknown
+    pass: frequent eye
+    title: Arnar Neko
+  Bengolfur_Bjorn:
+    groups: [all, ts]
+    location: unknown
+    pass: long prison
+    title: "Bengolfur Bj\xF6rn"
+  Bobby_Tables:
+    groups: [all, ts]
+    location: unknown
+    pass: early screw
+    title: Robert'); DROP TABLE teams;--
+  Disabled_Cookies:
+    groups: [all, mr]
+    location: unknown
+    pass: sudden station
+    title: Disabled Cookies
+  Giraffar:
+    groups: [all, ts]
+    location: unknown
+    pass: conscious wheel
+    title: "G\xEDraffar"
+  Hakkalakkar:
+    groups: [all, mr]
+    location: unknown
+    pass: sweet hair
+    title: Hakkalakkar
+  I_have_no_idea_what_My_Name_Is:
+    groups: [all, ts]
+    location: unknown
+    pass: fertile coat
+    title: I have no idea what My Name Is
+  Langlokurnar:
+    groups: [all, fs]
+    location: unknown
+    pass: material brake
+    title: Langlokurnar
+  Nilli_Billo:
+    groups: [all, ma]
+    location: unknown
+    pass: male leaf
+    title: "Nilli & Bill\xF3"
+  O:
+    groups: [all, ts]
+    location: unknown
+    pass: material net
+    title: O
+  Programming_Test_icicles:
+    groups: [all, fs]
+    location: unknown
+    pass: full map
+    title: Programming Test icicles
+  Raise_Your_Dongers:
+    groups: [all, ts]
+    location: unknown
+    pass: boiling pipe
+    title: "( \u0361\xB0 \u035C\u0296 \u0361\xB0)-Raise-Your-Dongers-( \u0361\xB0\
+      \ \u035C\u0296 \u0361\xB0)"
+  SPA:
+    groups: [all, ts]
+    location: unknown
+    pass: male brake
+    title: "SP\xC1"
+  Snowman:
+    groups: [all, ts]
+    location: unknown
+    pass: dependent boat
+    title: "\u2603"
+  The_Speedsturds:
+    groups: [all, fs]
+    location: unknown
+    pass: strong bird
+    title: The Speedsturds
+  Three_Stars:
+    groups: [all, ts]
+    location: unknown
+    pass: serious screw
+    title: Three Stars
+  Undefined_Object:
+    groups: [all, mr]
+    location: unknown
+    pass: true kettle
+    title: Undefined Object
+  Works_On_My_Box:
+    groups: [all, ts]
+    location: unknown
+    pass: hollow cat
+    title: Works On My Box
+  return_you:
+    groups: [all, ts]
+    location: unknown
+    pass: quiet root
+    title: return you
+  Snaebari:
+    groups: [all, fg]
+    location: unknown
+    pass: equal carriage
+    title: "SN\xC6BARI"
+
+groups: {all: Allir, fg: "Fj\xF6lbrautask\xF3linn \xED Gar\xF0ab\xE6", fs: "Fj\xF6\
+    lbrautask\xF3li Su\xF0urnesja", ma: "Menntask\xF3linn \xE1 Akureyri", mk: "Menntask\xF3\
+    linn \xED K\xF3pavogi", mr: "Menntask\xF3linn \xED Reykjav\xEDk", other: "A\xF0\
+    rir", ts: "T\xE6knisk\xF3linn", ve: "Verzlunarsk\xF3li \xCDslands"}
+

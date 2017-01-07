@@ -1,0 +1,18 @@
+id: fk_2015_prepare
+title: FK 2015 - Upphitun
+start: 2015-03-09 16:00:00.000
+db: postgresql://postgres:postgres@postgres:5432/postgres
+duration: 1000000
+register: false
+
+balloons: true
+display_diff: false # TODO
+display_input: false # TODO
+
+phases:
+    0:
+        problems:
+            - egelskahana: [visible, scoreboard, submit]
+            - pyramidi: [visible, scoreboard, submit]
+            - summupi: [visible, scoreboard, submit]
+
