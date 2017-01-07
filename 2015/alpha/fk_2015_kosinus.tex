@@ -1,0 +1,107 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[icelandic]{babel}
+\usepackage{graphicx}
+
+\title{Myndbandaflokkari}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+Hver kannast ekki við óreiðuna í myndbandamöppunni á tölvunni sinni. Ekkert
+skipulag á kvikmyndum né sjónvarpsþáttum, og maður finnur aldrei það sem mann
+langar að horfa á.
+
+Ykkar verkefni í dag er að skrifa forrit sem leysir þennan vanda. Markmiðið er
+að forritið gefi notandanum þægilega sýn á myndbandamöppuna, þar sem, til
+dæmis, kvikmyndir eru flokkaðar eftir ári og sjónvarpsþættir eru flokkaðir
+eftir þáttaröðum. Þá gæti forritið náð í upplýsingar um kvikmyndir og
+sjónvarpsþætti af gagnagrunnum á netinu svo sem \texttt{IMDb.com}. Forritið gæti leyft
+notandanum að spila kvikmyndir og sjónvarpsþætti, og gæti þá haldið utan um
+hvað notandinn er búinn að horfa á.
+
+\vspace{5pt}
+\begin{center}
+    \includegraphics[scale=1.5]{movie.png}
+\end{center}
+
+Hér að neðan eru settar upp grunnkröfur sem forritið verður upp að uppfylla,
+og þar að auki eru gefnar hugmyndir að aukavirkni sem mögulegt er að útfæra.
+Grunnkröfurnar gera ekki ráð fyrir neinni sérstakri útfærslu á viðmóti, en ykkur
+er frjálst að útfæra viðmót í "`console"', með gluggaforriti eða vefforriti.
+Eftir að forritið hefur uppfyllt grunnkröfur getið þið svo lagt áherslu á
+viðmót, nýtingu gagnagrunna eða aukið virkni forritsins.
+
+Á vefsvæði
+Kósínus-deildarinnar\footnote{http://mooshak2.ru.is/fk\_{}2015\_{}kosinus} má
+finna \texttt{zip} skrá sem inniheldur dæmi um myndbandamöppu. Þar má finna
+allskonar kvikmyndir, sjónvarpsþætti, og annað ótengt efni. Athugið að allar
+skrárnar eru tómar.
+
+Gangi ykkur vel!
+
+\section*{Grunnkröfur}
+Eftirfarandi listi lýsir kröfum sem forritið verður að uppfylla.
+\begin{itemize}
+    \item Forritið á að geyma slóð á möppuna sem innihalda myndböndin. Það þarf
+        ekki endilega að vera stillanlegt af notanda.
+    \item Þegar forritið ræsist, eða þegar notandi gefur forritinu skipun, fer
+        það í gegnum allar skrár í myndbandamöppunni (eða myndbandamöppunum) og
+        flokkar myndböndin í (að minnsta kosti) tvo flokka: “sjónvarpsþætti” og
+        “annað”
+        \begin{itemize}
+            \item Þið ráðið hvernig forritið finnur út hvort skrá inniheldur
+                sjónvarpsþætti eða ekki.
+            \item Ein hugmynd er að láta notandann skrá þá sjónvarpsþætti sem
+                hann er með í möppunni. Forritið getur þá leitað að öllum
+                þáttanöfnum í sérhverju skráarnafni og þannig ákvarðað hvort
+                skráin inniheldur sjónvarpsþátt eða ekki.
+            \item Önnur hugmynd er að leita að mynstrum sem oft koma upp í
+                nöfnum á skrám sem innihalda sjónvarpsþætti eins og t.d.\ 
+                `\texttt{the.show.S02E4}' eða `\texttt{show-403}'. Forritið getur þá reynt að
+                giska á nafn sjónvarpsþáttarins út frá nafni skráarinnar.
+            \item Allt sem flokkast ekki sem sjónvarpsþáttur, flokkast sem "`annað"'.
+        \end{itemize}
+    \item Forritið á að setja myndböndin fram á snyrtilegan hátt þannig að
+        notandinn hafi góða yfirsýn yfir hvaða myndbönd hann á. Þá ættu
+        sjónvarsþættir að vera flokkaðir niður í þáttaraðir, og á notandinn að
+        geta vafrað um þær.
+    \item Notanda á að vera kleift að leita að myndböndum eftir nafni.
+\end{itemize}
+
+\section*{Aukavirkni}
+Hér koma hugmyndir að aukinni virkni forritsins, en þið eruð einnig hvött til
+þess að útfæra ykkar eigin hugmyndir!
+\begin{itemize}
+    \item Gera notanda kleift að stilla möppuna sem inniheldur myndbönd.
+    \item Láta forritið styðja margar möppur sem innihalda myndbönd.
+    \item Láta forritið raða myndböndum snyrtilega í möppur.
+        \begin{itemize}
+            \item T.d.\ ef forritið finnur skrá með nafninu
+                \texttt{the.show.S03E14.avi}, þá getur forritið fært það í
+                möppuna \texttt{The Show/Season 3/the.show.S03E14.avi}
+            \item Forritið gæti svo hreinsað til í myndbandamöppunni, t.d.\ með
+                því að eyða tómum möppum eða möppum sem innihalda eingöngu
+                óþarfa skrár (eins og t.d.\ textaskrár með lýsingum á þáttum).
+        \end{itemize}
+    \item Gera grafískt viðmót fyrir forritið. Þetta getur t.d.\ verið gluggaviðmót eða vefviðmót.
+    \item Gera notanda kleift að ræsa myndband úr notendaviðmóti.
+    \item Halda utan um hvaða myndbönd notandinn er búinn að spila, og jafnvel
+        hversu langt notandinn var kominn ef hann kláraði ekki myndbandið.
+    \item Ná í upplýsingar um kvikmyndir og sjónvarpsþætti af gagnagrunnum á
+        netinu, t.d.\ \texttt{IMDb.com}, \texttt{themoviedb.org}, eða \texttt{omdbapi.com}.
+    \item Flokka myndbönd eftir ári, tegund, þáttaröð, leikstjóra, leikurum, o.s.frv.
+    \item Gera notanda kleift að halda utan um uppáhalds myndböndin sín, og/eða
+        myndbönd sem hann vill horfa á seinna.
+    \item Geyma upplýsingar um myndbönd í gagnagrunni, t.d.\ svo ekki þurfi að
+        fara í gegnum alla myndbandamöppuna í hvert skipti sem forritið er
+        opnað.
+    \item Ná í íslenskan texta fyrir kvikmyndir (eða texta á öðrum tungumálum).
+        Til að sækja texta getið þið notað API
+        \texttt{opensubtitles.org}\footnote{http://trac.opensubtitles.org/projects/opensubtitles/wiki/DevReadFirst}.
+\end{itemize}
+
+\end{document}
