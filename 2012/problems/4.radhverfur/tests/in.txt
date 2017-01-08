@@ -1,0 +1,70 @@
+5
+
+4
+game
+mega
+gem
+a gem
+gaame
+
+10
+aabbcc
+abcabc
+aabbcc
+a b c c b a
+ab cc ba
+aaabcc
+ccabbc
+aabbccc
+aabbccz
+ccabb
+abc
+
+2
+a
+b
+c
+
+3
+hjalti
+aaaaaa
+bbbbbb
+cccccc
+
+35
+parliament
+maternal pi
+paternal mi
+prenatal mi
+parental mi
+animal pert
+lamina pert
+manila pert
+laminar pet
+impala rent
+impala tern
+martial pen
+marital pen
+partial men
+airman pelt
+airman lept
+marina pelt
+marina lept
+napalm rite
+napalm tire
+napalm tier
+alarm inept
+anal permit
+natal prime
+rampant lie
+rampant lei
+mantra pile
+manta peril
+menial trap
+menial tarp
+menial rapt
+menial part
+impanel art
+impanel tar
+impanel rat
+mineral pat
