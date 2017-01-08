@@ -1,0 +1,41 @@
+teams:
+    "fk_halldor_jens": { pass: "devils_trawls", title: "Halldór Jens", location: "V108", groups: [all, fs2] }
+    "fk_hard": { pass: "finagle_spoken", title: "How Hard Can Your Drive Get?", location: "V108", groups: [all, ts] }
+    "fk_bengolfur_bjorn": { pass: "neighed_cravens", title: "Bengólfur Björn", location: "V108", groups: [all, ts] }
+    "fk_usmc": { pass: "gaping_escape", title: "U.S.M.C.", location: "V108", groups: [all, fs2] }
+    "fk_fmj": { pass: "hemline_poppadum", title: "FMJ", location: "V108", groups: [all, ts] }
+    "fk_team_moon_moon": { pass: "chaste_enacting", title: "Team moon moon", location: "V108", groups: [all, ts] }
+    "fk_jon": { pass: "woollen_boobed", title: "Jón", location: "V108", groups: [all, ts] }
+    "fk_rodllurnar": { pass: "wheaten_widgets", title: "Rodllurnar", location: "V108", groups: [all, ts] }
+    "fk_red_team": { pass: "clinch_eclogues", title: "Red Team", location: "V108", groups: [all, ts] }
+    "fk_ram": { pass: "reweigh_drumbeats", title: "RAM", location: "V108", groups: [all, ts] }
+    "fk_team_po": { pass: "hulk_chicken", title: "Team Pö", location: "V108", groups: [all, ts] }
+    "fk_morparnir": { pass: "sics_beheld", title: "Morparnir", location: "V108", groups: [all, ts] }
+    "fk_triple_dorans_blade": { pass: "eschew_sculls", title: "Triple Doran's Blade", location: "V108", groups: [all, fs2] }
+    "fk_kartafla": { pass: "utopia_recedes", title: "Kartafla", location: "V108", groups: [all, ts] }
+    "fk_prinsessa": { pass: "refute_read", title: "Ég er lítil Prinsessa", location: "V108", groups: [all, mh] }
+    "fk_hivemind": { pass: "sapped_tosses", title: "Hivemind", location: "V108", groups: [all, mr] }
+    "fk_krissi_palli_breki": { pass: "conciser_unreel", title: "Krissi, Palli og Breki", location: "V108", groups: [all, ts] }
+    "fk_trump_card": { pass: "vitiated_safaris", title: "Trump Card", location: "V108", groups: [all, fs2] }
+    "fk_fags": { pass: "ascent_became", title: "F.A.G.S", location: "V108", groups: [all, fs2] }
+    "fk_noctilucale": { pass: "harvest_pitfall", title: "Noctilucale", location: "V108", groups: [all, fs2] }
+    "fk_python4life": { pass: "xxxiv_delude", title: "PythonForLife", location: "V108", groups: [all, fs2] }
+    "fk_mbm": { pass: "titmice_fateful", title: "MBM", location: "V108", groups: [all, ts] }
+    "fk_team_gudrun": { pass: "dishy_ageings", title: "team guðrún", location: "V108", groups: [all, other] }
+
+    "fk_lid2": { pass: "filter_reopen", title: "Team Swag", location: "V108", groups: [all, other] }
+    "fk_lid3": { pass: "rummage_consonant", title: "Casio", location: "V108", groups: [all, other] }
+
+groups:
+    "all": "Allir"
+    "ts": "Tækniskólinn"
+    "vma": "Verkmenntaskólinn á Akureyri"
+    "fva": "FVA"
+    "fs": "Fjölbrautaskóli Suðurlands"
+    "fs2": "Fjölbrautaskóli Suðurnesja"
+    "mr": "Menntaskólinn í Reykjavík"
+    "mh": "Menntaskólinn við Hamrahlíð"
+    "fb": "Fjölbrautaskólinn í Breiðholti"
+    "kv": "Kvennaskólinn í Reykjavík"
+    "other": "Aðrir"
+
