@@ -1,0 +1,36 @@
+\begin{problem}
+	Mikið er til af (misgóðum) forritum til að þýða texta af einu tungumáli yfir á annað. Í þessu dæmi eigið þið að útfæra mjög einfalda útgáfu af svona þýðanda, en hann þýðir textann orð fyrir orð með notkun orðabókar sem hann les inn.
+
+	Skrifið forrit sem les inn orðabók og texta. Orðabókin er listi af línum á forminu "`\texttt{XXX=YYY}"', þar sem \texttt{XXX} er orð á upphaflega tungumálinu, og \texttt{YYY} er samsvarandi orð á tungumálinu sem þýða á yfir í. Gera má ráð fyrir að hvert orð komi aðeins einu sinni fyrir, og að hvert orð í textanum komi fyrir í orðabókinni. Síðasta lína orðabókarinnar inniheldur aðeins "`\texttt{text:}"'. Eftir að orðabókin hefur verið lesin inn á að lesa eina línu sem inniheldur textann sem á að þýða. Forritið skrifar svo út þýdda textann. Gera má ráð fyrir að allir stafir séu lágstafir, bæði í orðabókinni og í textanum, og að engin tákn önnur en bókstafir og bil komi fyrir.
+
+\begin{example}
+\exmp{%
+\underline{halló=hello}
+\underline{heimur=world}
+\underline{text:}
+\underline{halló heimur}
+hello world
+}%
+\end{example}
+\begin{example}
+\exmp{%
+\underline{hello=halló}
+\underline{world=heimur}
+\underline{text:}
+\underline{hello world}
+halló heimur
+}%
+\end{example}
+
+\begin{example}
+\exmp{%
+\underline{funny=fyndið}
+\underline{this=þetta}
+\underline{is=er}
+\underline{lol=haha}
+\underline{text:}
+\underline{lol this is funny lol lol}
+haha þetta er fyndið haha haha
+}%
+\end{example}
+\end{problem}

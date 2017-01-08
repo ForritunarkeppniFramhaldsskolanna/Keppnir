@@ -1,0 +1,48 @@
+\begin{problem}{Bitmask}{Inn}{Út}{~}{~}
+
+	\begin{wrapfigure}{r}{0.36\textwidth}
+		\vspace{-25pt}
+		\begin{center}
+			\includegraphics[scale=0.22]{../Bitmask/binary.jpg}
+		\end{center}
+		\vspace{-30pt}
+	\end{wrapfigure}
+
+	Bitagrímur (eða \textit{bitmasks}) koma oft upp þegar unnið er með bita og bitareikning. Með þessum grímum er hægt að fá fram allskonar bitamynstur. Til dæmis er hægt að núllstilla fyrstu fjóra bitana í 32-bita tölu með því að nota bitagrímuna \texttt{0xFFFFFFF0} og nota svo \texttt{AND} bitaaðgerðina. Í þessu dæmi átt þú að finna svona bitagrímu.
+
+	Þú færð gefnar þrjár 32-bita jákvæðar heiltölu $N$, $L$ og $U$. Þú átt að finna bitagrímu $M$ þannig að $L \leq M \leq U$ og $N \texttt{ OR } M$ er í hámarki. Til dæmis ef $N$ er 100, og $L = 50$, $U = 60$, þá mun $M$ vera $59$ og $N \texttt{ OR } M$ mun vera $127$, sem er í hámarki. Ef fleiri en eitt gildi fyrir $M$ uppfylla þessi skilyrði, þá skaltu nota minnsta gildið.
+
+	\Input
+
+		Á fyrstu línu er heiltalan $1 \leq T \leq 1000$, sem táknar fjölda prófunartilvika sem fylgja. Hvert prófunartilvik samanstendur af einni línu með þremur 32-bita jákvæðum heiltölum $N$, $L$ og $U$, þar sem $L \leq U$.
+
+	\Output
+
+		Fyrir hvert prófunartilvik á að skrifa út minnsta gildi fyrir $M$ þannig að $N \texttt{ OR } M$ er í hámarki.
+
+	\Examples
+
+		\begin{example}
+			\exmp{
+5
+100 50 60
+100 50 50
+100 0 100
+1 0 100
+15 1 15
+			}{
+59
+50
+27
+100
+1
+}%
+		\end{example}
+
+	\Note
+
+		Látum $x$ og $y$ vera 32-bita pósitífar heiltölur. Í forritunarmálunum \texttt{C++}, \texttt{Python} og \texttt{Java} er bitaaðgerðin $x \texttt{ AND } y$ táknuð $x \texttt{ \&{} } y$, og bitaaðgerðin $x \texttt{ OR } y$ táknuð $x \texttt{ | } y$.
+
+		% TODO: Hugsanlega bæta við meiri upplýsingum um AND/OR aðgerðirnar.
+
+\end{problem}

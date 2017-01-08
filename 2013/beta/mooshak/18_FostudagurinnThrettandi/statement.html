@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Verkefni 18: Föstudagurinn Þrettándi</title>
+		<style>
+			body { background: white; }
+			h1, h2, table.sample th { color: black; }
+			h2 { margin-bottom: 0; }
+			p { text-align: justify; }
+			.center { text-align: center; }
+			table.sample { min-width: 700px; border-collapse: collapse; }
+			table.sample th, table.sample td { border: 1px solid black; }
+			table.sample td { vertical-align: top; padding: 3px; }
+			table.sample pre { margin: 0; }
+			tt { font-size: 1.1em; }
+
+			.months { border-collapse: collapse; text-align: center; margin: 0 auto; }
+			.months td.first { text-align: left; }
+		</style>
+	</head>
+	<body>
+		<h1>Föstudagurinn Þrettándi</h1>
+
+		<p>Þegar föstudagur er þrettándi dagurinn í mánuðinum, þá er hann oft kallaður Föstudagurinn Þrettándi. Svoleiðis föstudagar eru oft taldir vera ólukkudagar. Föstudagurinn Þrettándi vekur líka upp hroll hjá mörgu fólki, en fleiri en ein kvikmynd hefur verið gerð þar sem hræðilegir hlutir gerast á Föstudeginum Þrettánda.</p>
+
+	<p>Á árinu 2013 mun tvisvar sinnum koma Föstudagurinn Þrettándi, því bæði 13. september og 13. desember eru á föstudegi. Á síðasta ári, árinu 2012, átti Föstudagurinn Þrettándi sér þrisvar sinnum stað.</p>
+	
+	<h2>Inntak</h2>
+
+		<p>Á fyrstu línu er heiltalan <tt>1 &leq; T &leq; 100</tt>, sem táknar fjölda prófunartilvika sem fylgja. Hvert prófunartilvik samanstendur af einni línu sem inniheldur eina heiltölu <tt>1 &leq; Y &lt; 100000</tt>.</p>
+
+	<h2>Úttak</h2>
+
+		<p>Fyrir hvert prófunartilvik á að skrifa út eina línu sem inniheldur eina heiltölu <tt>N</tt>, þar sem <tt>N</tt> táknar hversu oft Föstudagurinn Þrettándi á sér stað árið <tt>Y</tt>.</p>
+
+		<h2>Dæmi</h2>
+		<table class="sample">
+			<thead>
+				<tr>
+					<th>inntak</th>
+					<th>úttak</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<pre>5
+2013
+2012
+2077
+2078
+34567
+</pre>
+					</td>
+					<td>
+						<pre>2
+3
+1
+1
+3</pre>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h2>Athugið</h2>
+
+		<p>Dagurinn í dag, 16. mars 2013, er laugardagur. Fjöldi daga í hverjum mánuði eru settir upp í eftirfarandi töflu:</p>
+
+		<table class="months">
+			<tr>
+				<td style="border-bottom:1px solid black;padding:0 10px">Mánuður</td>
+				<td style="border-bottom:1px solid black;padding:0 10px">Dagar</td>
+				<td style="border-bottom:1px solid black;padding:0 10px">Dagar á hlaupaári</td>
+			</tr>
+			<tr>
+				<td class="first">Janúar</td>
+				<td>31</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="first">Febrúar</td>
+				<td>28</td>
+				<td>29</td>
+			</tr>
+			<tr>
+				<td class="first">Mars</td>
+				<td>31</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="first">Apríl</td>
+				<td>30</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="first">Maí</td>
+				<td>31</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="first">Júní</td>
+				<td>30</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="first">Júlí</td>
+				<td>31</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="first">Ágúst</td>
+				<td>31</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="first">September</td>
+				<td>30</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="first">Október</td>
+				<td>31</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="first">Nóvember</td>
+				<td>30</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="first">Desember</td>
+				<td>31</td>
+				<td></td>
+			</tr>
+		</table>
+
+		<p>Árið <tt>Y</tt> er hlaupaár ef <tt>Y</tt> deilanlegt með <tt>4</tt>. En ef <tt>Y</tt> er líka deilanlegt með <tt>100</tt>, þá er það ekki hlaupaár. En ef <tt>Y</tt> er líka deilanlegt með <tt>400</tt>, þá er það aftur hlaupaár.</p>
+	</body>
+</html>

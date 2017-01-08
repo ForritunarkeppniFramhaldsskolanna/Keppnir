@@ -1,0 +1,104 @@
+\documentclass[11pt,a4paper,oneside]{article}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{color}
+\usepackage[icelandic]{babel}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{fullpage}
+\usepackage{titling}
+\newcommand{\subtitle}[1]{%
+  \posttitle{%
+    \par\end{center}
+    \begin{center}\large#1\end{center}
+    \vskip0.5em}%
+}
+
+\newcommand{\problemstatement}[1]{ \input #1.tex }
+
+\title{Forritunarkeppni Framhaldsskólanna 2013}
+\subtitle{Scotty deild - fyrir hádegi}
+\date{16. mars 2013}
+\author{Háskólinn í Reykjavík}
+
+\newcounter{problemCounter}
+
+\newenvironment{example}[1][]{
+    \obeylines\obeyspaces\frenchspacing
+    \newcommand{\exmp}[1]{
+        \begin{minipage}[t]{300px}
+        	\vspace{0px}
+        	\texttt{##1}
+        	\vspace{5px}
+        \end{minipage} \\
+        \hline
+    }
+
+    \newcommand{\exmpexpl}[2]{
+        \begin{minipage}[t]{300px}
+        	\vspace{0px}
+        	\texttt{##1}
+        	\vspace{10px}
+        \end{minipage} \\
+        \hline
+        \multicolumn{1}{|c|}{\textbf{Útskýring á dæmi}} \\
+        \hline
+        \begin{minipage}[t]{300px}
+        	\vspace{0px}
+        	##2
+        	\vspace{5px}
+        \end{minipage} \\
+        \hline
+    }
+
+    \begin{center}
+    \begin{tabular}[h]{|l|}
+        \hline
+        \multicolumn{1}{|c|}{\textbf{Dæmi um virkni}} \\
+        \hline
+}{
+    \end{tabular}
+    \end{center}
+}
+
+\newenvironment{problem}[1][]{
+	\stepcounter{problemCounter}
+	\noindent
+	\textbf{\Large Dæmi \arabic{problemCounter}}
+	\nopagebreak
+	\vspace{3mm}
+	\nopagebreak
+
+}{
+	%\pagebreak
+	\vspace{8em}
+
+}
+
+\begin{document}
+
+	\maketitle
+	\thispagestyle{empty}
+	\pagebreak
+	\problemstatement{hallo_heimur}
+	\problemstatement{namundun}
+	\problemstatement{nidurteljari}
+	\problemstatement{jolagjafir}
+	\problemstatement{fjoldi_stafa}
+	\problemstatement{tveirstrengir}
+	\problemstatement{happy_birthday}
+	\problemstatement{deiling}
+	\problemstatement{deiling_while}
+	\problemstatement{compression}
+	\problemstatement{decompression}
+	\problemstatement{gotumalning}
+    \problemstatement{talnaspirall}
+	\problemstatement{ex}
+    \problemstatement{hamming_distance}
+	\problemstatement{stigatafla}
+	\problemstatement{logleg_nofn}
+	\problemstatement{stysta_leid_skak}
+\end{document} 

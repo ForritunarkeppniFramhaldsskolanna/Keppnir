@@ -1,0 +1,71 @@
+\begin{problem}{Tic Tac Toe}{Inn}{Út}{~}{~}
+	
+	Í leiknum Tic-Tac-Toe skiptast leikmenn á að setja táknið sitt í reiti á fylki af stærð $3\times 3$. Fyrri leikmaðurinn notar táknað \texttt{X}, en seinni leikmaðurinn notar táknið \texttt{O}. Leikmaður vinnur þegar hann hefur fyllt heila röð, dálk, eða aðra hvora skálínuna með tákninu sínu. Til dæmis hefur leikmaður með táknið \texttt{O} unnið þennan leik:
+
+	\begin{center}
+		\begin{tabular}{c|c|c}
+			\texttt{X} & \texttt{X} & \\
+			\hline
+			\texttt{O} & \texttt{O} & \texttt{O} \\
+			\hline
+			\texttt{X} & & \\
+		\end{tabular}
+	\end{center}
+
+	Aftur á móti hefur enginn enn unnið þennan leik:
+
+	\begin{center}
+		\begin{tabular}{c|c|c}
+			\texttt{X} & & \texttt{X} \\
+			\hline
+			\texttt{X} & \texttt{O} & \texttt{X} \\
+			\hline
+			\texttt{O} & \texttt{O} & \\
+		\end{tabular}
+	\end{center}
+
+	Líka er hægt að spila Tic-Tac-Toe á stærra borði, eða á fylki af stærð $n\times n$, þar sem $n \geq 3$. Þá vinnur leikmaður ef hann hefur fyllt einhverja röð, einhvern dálk, eða aðra hvora af skálínunum með tákninu sínu.
+
+	Skrifið forrit sem les inn heiltöluna $n$, og svo $n\times n$ fylki með táknunum \texttt{X} og \texttt{O}. Forritið á svo að skrifa út hvort leikmaður \texttt{X} sé búinn að vinna, leikmaður \texttt{O} sé búinn að vinna, eða enginn sé enn búinn að vinna. Ef sú staða kemur upp að báðir leikmenn hafa unnið á að skrifa út villumeldingu.
+
+	\Input
+
+		Á fyrstu línu er heiltalan $1 \leq T \leq 100$, sem táknar fjölda prófunartilvika sem fylgja. Hvert prófunartilvik byrjar á einni línu með heiltölunni $3 \leq n \leq 100$. Næstu $n$ línur innihalda hver $n$ stafi, þar sem stafirnir eru \texttt{X}, \texttt{O}, og \texttt{.} (punktur). Punktur táknar auðan reit.
+
+	\Output
+
+		Fyrir hvert prófunartilvik á að skrifa út eina línu sem inniheldur "`\texttt{X won}"' ef leikmaður \texttt{X} vann, "`\texttt{O won}"' ef leikmaður \texttt{O} vann, "`\texttt{Neither won}"' ef enginn er enn búinn að vinna, eða "`\texttt{Error}"' ef báðir eru búnir að vinna.
+
+	\Examples
+
+		\begin{example}
+			\exmp{
+4
+3
+.OX
+OOX
+X.X
+3
+O.O
+XOX
+XXO
+5
+O...X
+O...X
+O...X
+O...X
+O...X
+4
+...O
+..OX
+..XX
+O..X
+			}{
+X won
+O won
+Error
+Neither won
+}%
+		\end{example}
+
+\end{problem}

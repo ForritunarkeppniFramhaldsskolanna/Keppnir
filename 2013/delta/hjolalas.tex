@@ -1,0 +1,36 @@
+\begin{problem}
+	
+	% TODO Skólan eða skólann???
+	Á hverjum degi hjólar Gunnar í skólann. Hann læsir hjólinu sínu fyrir utan með talnalás. Á talnalásnum eru fjórar talnaskífur, þar sem hver skífa hefur tölurnar frá 0 til 9. Tölurnar á hverri skífu eru raðaðar í hring, þ.e. fyrst kemur 0, svo 1, og svo alveg þar til 9 kemur, en svo kemur 0 aftur, og svo framvegis. Hægt er að snúa hverri skífu fyrir sig. Með einum snúningi er t.d. hægt að fara frá tölunnni 5 yfir í töluna 4 eða töluna 6, og frá tölunni 9 er hægt að fara yfir í töluna 8 eða töluna 0. Talnalásinn opnast þegar efsta talan á hverri talnaskífu myndar ákveðna runu (lykilorðið).
+
+	Þar sem Gunnar þarf að aflæsa lásinn á hverjum einasta degi, þá vill hann reyna að vera eins fljótur og hann getur að opna lásinn, og hann vill því nota sem fæsta snúninga til þess.
+
+	Skrifið forrit sem tekur inn upphafsstöðu talnalássins, og lykilorðið sem notað er til að aflæsa hann. Bæði upphafsstaðan og lykilorðið eru gefin á forminu "`\texttt{$abcd$}"', þar sem $a$ táknar efstu töluna á fyrstu skífunni, $b$ táknar efstu töluna á annarri skífunni, $c$ táknar efstu töluna á þriðju skífunni, og $d$ táknar efstu töluna á fjórðu skífunni. Forritið skrifar svo út minnsta fjölda snúninga sem þarf til að breyta upphafsstöðu talnalássins í lykilorðið, og þar með aflæsa lásinn.
+
+\begin{example}
+\exmpexpl{%
+Upphafsstaða: \underline{0000}
+Lykilorð: \underline{0300}
+Minnsti fjöldi snúninga: 3
+}{%
+Nóg er að snúa annarri skífunni þrisvar sinnum til að fá lykilorðið.
+}%
+\end{example}
+\begin{example}
+\exmpexpl{%
+Upphafsstaða: \underline{1578}
+Lykilorð: \underline{3408}
+Minnsti fjöldi snúninga: 6
+}{%
+% 2+1+3+0
+Fyrstu skífunni er snúið tvisvar. Annarri skífunni er snúið einu sinni. Þriðju skífunni er snúið þrisvar sinnum (takið eftir að 7 er snúið að 8, svo 9, svo 0). Fjórða skífan er þegar á sínum stað. Þetta gera alls $2+1+3+0 = 6$ snúninga.
+}%
+\end{example}
+\begin{example}
+\exmp{%
+Upphafsstaða: \underline{9999}
+Lykilorð: \underline{0000}
+Minnsti fjöldi snúninga: 4
+}%
+\end{example}
+\end{problem}

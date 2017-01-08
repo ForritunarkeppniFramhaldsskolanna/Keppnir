@@ -1,0 +1,68 @@
+\begin{problem}{Föstudagurinn Þrettándi}{Inn}{Út}{~}{~}
+
+	\begin{wrapfigure}{r}{0.28\textwidth}
+		\vspace{-25pt}
+		\begin{center}
+			\includegraphics[scale=0.3]{../FostudagurinnThrettandi/friday13.jpg}
+		\end{center}
+		\vspace{-30pt}
+	\end{wrapfigure}
+
+	% TODO: Laga söguna smá.
+	Þegar föstudagur er þrettándi dagurinn í mánuðinum, þá er hann oft kallaður Föstudagurinn Þrettándi. Svoleiðis föstudagar eru oft taldir vera ólukkudagar. Föstudagurinn Þrettándi vekur líka upp hroll hjá mörgu fólki, en fleiri en ein kvikmynd hefur verið gerð þar sem hræðilegir hlutir gerast á Föstudeginum Þrettánda.
+
+	Á árinu 2013 mun tvisvar sinnum koma Föstudagurinn Þrettándi, því bæði 13.\ september og 13.\ desember eru á föstudegi. Á síðasta ári, árinu 2012, átti Föstudagurinn Þrettándi sér þrisvar sinnum stað.
+	
+	\Input
+
+		Á fyrstu línu er heiltalan $1 \leq T \leq 100$, sem táknar fjölda prófunartilvika sem fylgja. Hvert prófunartilvik samanstendur af einni línu sem inniheldur eina heiltölu $1 \leq Y < 100000$.
+
+	\Output
+
+		Fyrir hvert prófunartilvik á að skrifa út eina línu sem inniheldur eina heiltölu $N$, þar sem $N$ táknar hversu oft Föstudagurinn Þrettándi á sér stað árið $Y$.
+
+	\Examples
+
+		\begin{example}
+			\exmp{
+5
+2013
+2012
+2077
+2078
+34567
+}{
+2
+3
+1
+1
+3
+}%
+		\end{example}
+
+	\Note
+
+		Dagurinn í dag, 16.\ mars 2013, er laugardagur. Fjöldi daga í hverjum mánuði eru settir upp í eftirfarandi töflu:
+		\begin{center}
+			\begin{tabular}{lcc}
+				\hline
+				Mánuður & Dagar & Dagar á hlaupaári \\
+				\hline
+				Janúar & 31 &  \\
+				Febrúar & 28 & 29 \\
+				Mars & 31 &  \\
+				Apríl & 30 &  \\
+				Maí & 31 &  \\
+				Júní & 30 &  \\
+				Júlí & 31 &  \\
+				Ágúst & 31 &  \\
+				September & 30 &  \\
+				Október & 31 &  \\
+				Nóvember & 30 &  \\
+				Desember & 31 &  \\
+				\hline
+			\end{tabular}
+		\end{center}
+		Árið $Y$ er hlaupaár ef $Y$ deilanlegt með $4$. En ef $Y$ er líka deilanlegt með $100$, þá er það ekki hlaupaár. En ef $Y$ er líka deilanlegt með $400$, þá er það aftur hlaupaár.
+
+\end{problem}

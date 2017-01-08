@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Verkefni 7: Fatahengi Sveins Litla</title>
+		<style>
+			body { background: white; }
+			h1, h2, table.sample th { color: black; }
+			h2 { margin-bottom: 0; }
+			p { text-align: justify; }
+			.center { text-align: center; }
+			table.sample { min-width: 700px; border-collapse: collapse; }
+			table.sample th, table.sample td { border: 1px solid black; }
+			table.sample td { vertical-align: top; padding: 3px; }
+			table.sample pre { margin: 0; }
+			tt { font-size: 1.1em; }
+		</style>
+	</head>
+	<body>
+		<h1>Fatahengi Sveins Litla</h1>
+
+		<p>Sveinn litli hefur ákveðið að stofna leikhús með litlu vinum sínum, Jóni og Palla. Sveinn litli er því miður ekki mikill leikari, en í staðinn fékk hann það spennandi starf að hafa umsjón með fatahenginu. Hans hlutverk er að taka við yfirhöfnum gesta og geyma þær á meðan á sýningu stendur. Eftir sýninguna koma gestirnir og sækja yfirhafnirnar sínar áður en þeir fara.</p>
+
+	<p>Í kvöld er nú ansi stórt kvöld fyrir þá félaga, Svein, Jón og Palla, en það munu koma <tt>N</tt> (<tt>1 &leq; N &leq; 9</tt>) gestir að sjá sýninguna þeirra!</p>
+
+	<p>Núna eru gestirnir byrjaðir að streyma inn, og hver á eftir öðrum skilur yfirhöfnina sína eftir í öruggum höndum Jóns litla, yfirumsjónarmanns fatahengisins. Þegar allir <tt>N</tt> gestirnir hafa skilið eftir yfirhöfnina sína og farnir að horfa á sýninguna, þá tekur Jón litli eftir að hann gleymdi að merkja yfirhafnir gestanna. Núna er hann í vanda, því hann veit ekki hvaða gestur á hvaða yfirhöfn. Hann ákveður að láta sem allt sé í lagi, og þegar gestirnir koma að ná í yfirhafnirnar sínar lætur hann hvern gest fá yfirhöfn af handahófi.</p>
+
+	<p>Núna eru gestirnir farnir. Jón litli fer nú að hugsa með sér hversu slæmt þetta gæti hafa verið. Hann ákveður að telja fjölda möguleika á því að enginn gestur hafi fengið sína yfirhöfn. Eftir að hafa reynt að telja í dálítinn tíma gefst Jón litli upp. Hann er ekki búinn að læra að telja svona hátt, og biður hann þig um að hjálpa sér.</p>
+
+	<p>Skrifið forrit sem telur fjölda möguleika á því að enginn af <tt>N</tt> gestunum hafi fengið sína yfirhöfn.</p>
+
+	<h2>Inntak</h2>
+
+		<p>Á fyrstu línu er heiltalan <tt>1 &leq; T &leq; 10</tt>, sem táknar fjölda prófunartilvika sem fylgja. Hvert prófunartilvik samanstendur af einni línu með heiltölunni <tt>1 &leq; N &leq; 9</tt>.</p>
+
+	<h2>Úttak</h2>
+
+		<p>Fyrir hvert prófunartilvik á að skrifa út eina línu með fjölda möguleika á því að enginn af <tt>N</tt> gestunum hafi fengið sína yfirhöfn.</p>
+
+		<h2>Dæmi</h2>
+		<table class="sample">
+			<thead>
+				<tr>
+					<th>inntak</th>
+					<th>úttak</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<pre>3
+1
+3
+5</pre>
+					</td>
+					<td>
+						<pre>0
+2
+44</pre>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h2>Útskýring á dæmi</h2>
+
+		<p>Ef það er bara einn gestur, þá mun hann auðvitað fá sína yfirhöfn þegar hann fer. Þá eru því 0 möguleikar á að enginn fái sína yfirhöfn.</p>
+
+		<p>Ef það eru þrír gestir, þá eru tveir möguleikar á að enginn fái sína yfirhöfn:</p>
+	
+		<ol>
+			<li>Gestur nr. 1 fær yfirhöfn gests nr. 3, gestur nr. 2 fær yfirhöfn gests nr. 1, og gestur nr. 3 fær yfirhöfn gests nr. 2.</li>
+			<li>Gestur nr. 1 fær yfirhöfn gests nr. 2, gestur nr. 2 fær yfirhöfn gests nr. 3, og gestur nr. 3 fær yfirhöfn gests nr. 1.</li>
+		</ol>
+	</body>
+</html>

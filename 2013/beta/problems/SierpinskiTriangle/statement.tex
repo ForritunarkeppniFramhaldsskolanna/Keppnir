@@ -1,0 +1,57 @@
+\begin{problem}{Sierpinski Triangle}{Inn}{Út}{~}{~}
+
+	\definecolor{dark-gray}{gray}{0.15}
+	\newcommand{\oddSq}[1]{\colorbox{dark-gray}{\color{white}{\textbf{#1}}}}
+	\newcommand{\evenSq}[1]{\textbf{#1}}
+
+	Pascal-þríhyrningurinn er óendanlega stór þríhyrningur af heiltölum, skilgreindur þannig að efst í þríhyrningnum er talan 1, og er talan 1 svo í fyrsta og síðasta dálki hverrar raðar. Tölur annarstaðar í þríhyrningnum eru fengnar með því að leggja saman tölurnar tvær fyrir ofan hana. Fyrstu sjö raðirnar í þríhyrningnum líta þá svona út:
+
+	\begin{center}
+		\begin{tabular}{ccccccccccccc}
+			&    &    &    &    &    &  \oddSq1\\\noalign{\smallskip\smallskip}
+			&    &    &    &    &  \oddSq1 &    &  \oddSq1\\\noalign{\smallskip\smallskip}
+			&    &    &    &  \oddSq1 &    &  \evenSq2 &    &  \oddSq1\\\noalign{\smallskip\smallskip}
+			&    &    &  \oddSq1 &    &  \oddSq3 &    &  \oddSq3 &    &  \oddSq1\\\noalign{\smallskip\smallskip}
+			&    &  \oddSq1 &    &  \evenSq4 &    &  \evenSq6 &    &  \evenSq4 &    &  \oddSq1\\\noalign{\smallskip\smallskip}
+		    &  \oddSq1 &    &  \oddSq5 &    & \evenSq{10} &    & \evenSq{10} &    &  \oddSq5 &    &  \oddSq1\\\noalign{\smallskip\smallskip}
+		   \oddSq1 &    &  \evenSq6 &    & \oddSq{15} &    & \evenSq{20} &    & \oddSq{15} &    &  \evenSq6 &    &  \oddSq1\\\noalign{\smallskip\smallskip}
+		\end{tabular}
+
+	\end{center}
+
+	Ef við litum reitina sem innihalda oddatölur svarta, og reitina sem innihalda sléttar tölur hvíta, þá fáum við mynstur. Þetta mynstur heitir Sierpinski þríhyrningurinn, og er svokallaður "`fractal"'.
+
+	\Input
+
+		Inntakið inniheldur eina heiltölu $1 \leq n \leq 100$.
+
+	\Output
+
+		Skrifa á út fyrstu $n$ raðirnar í Sierpinski þríhyrningnum, þar sem svartur dálkur er táknaður með '\texttt{\#}`, og hvítur dálkur er táknaður með '.`. Athuga skal að þríhyrningurinn á að halla til vinstri.
+
+	\Examples
+
+		\begin{example}
+			\exmp{
+16
+			}{
+\#
+\#\#
+\#.\#
+\#\#\#\#
+\#...\#
+\#\#..\#\#
+\#.\#.\#.\#
+\#\#\#\#\#\#\#\#
+\#.......\#
+\#\#......\#\#
+\#.\#.....\#.\#
+\#\#\#\#....\#\#\#\#
+\#...\#...\#...\#
+\#\#..\#\#..\#\#..\#\#
+\#.\#.\#.\#.\#.\#.\#.\#
+\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#
+}%
+		\end{example}
+
+\end{problem}

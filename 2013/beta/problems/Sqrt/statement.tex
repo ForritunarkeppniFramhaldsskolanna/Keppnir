@@ -1,0 +1,55 @@
+\begin{problem}{Sqrt}{Inn}{Út}{~}{~}
+
+	Gömul japönsk aðferð til að reikna $\sqrt{n}$ (kvaðratrót af $n$) er eftirfarandi:
+
+	\begin{quote}
+		Búðu til breyturnar $a$ og $b$.\newline
+		Breytan $a$ tekur gildið $5 \times n$ og breytan $b$ gildið $5$.\newline
+		\newline
+		Eftirfarandi skref er hægt að gera oft til að fá meiri nákvæmni (þetta á að gera $i$ sinnum, sjá lýsingu að neðan):
+
+		\begin{quote}
+			ef $a \geq b$:
+			\begin{quote}
+				$a$ tekur gildið $a - b$\newline
+				$b$ tekur gildið $b + 10$
+			\end{quote}
+			annars:
+			\begin{quote}
+				bæta tveimur núllum fyrir aftan $a$\newline
+				bæta einu núlli á milli næstsíðasta og síðasta tölustafsins í $b$
+			\end{quote}
+		\end{quote}
+
+		Breytan $b$ inniheldur svo svarið.
+
+	\end{quote}
+
+	Þú átt að lesa inn tölurnar $n$ og $i$. Notaðu svo aðferðina til að reikna $\sqrt{n}$. Framkvæmdu milliskrefið $i$ sinnum og skrifaðu svo út lokagildi $b$.
+
+	\Input
+
+		Á fyrstu línu er heiltalan $1 \leq T \leq 100$, sem táknar fjölda prófunartilvika sem fylgja. Hvert prófunartilvik samanstendur af einni línu með tveimur heiltölum $1 < n \leq 10000$ og $1 \leq i \leq 1000$, aðskildum með bili.
+
+	\Output
+
+		Fyrir hvert prófunartilvik á að skrifa út eina línu sem inniheldur lokagildi $b$.
+
+	\Examples
+
+	\begin{example}
+\exmp{%
+4
+2 20
+25 8
+123 15
+54847 360
+}{%
+14142115
+50005
+11025
+234194363723809544630456655
+}%
+	\end{example}
+
+\end{problem}

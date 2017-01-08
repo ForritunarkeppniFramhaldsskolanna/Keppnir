@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Verkefni 3: Fermat&rsquo;s Last Theorem</title>
+		<style>
+			body { background: white; }
+			h1, h2, table.sample th { color: black; }
+			h2 { margin-bottom: 0; }
+			p { text-align: justify; }
+			.center { text-align: center; }
+			table.sample { min-width: 700px; border-collapse: collapse; }
+			table.sample th, table.sample td { border: 1px solid black; }
+			table.sample td { vertical-align: top; padding: 3px; }
+			table.sample pre { margin: 0; }
+			tt { font-size: 1.1em; }
+		</style>
+	</head>
+	<body>
+		<h1>Fermat&rsquo;s Last Theorem</h1>
+
+		<p>Pierre de Fermat er franskur stærðfræðingur sem uppi var á 17. öld. Þekktastur er hann fyrir eftirfarandi tilgátu:</p>
+
+	<div style="text-align:center">
+		<i>Ekki eru til neinar pósitífar heiltölur <tt>a</tt>, <tt>b</tt> og <tt>c</tt> sem uppfylla<br/>jöfnuna <tt>a<sup>n</sup> + b<sup>n</sup> = c<sup>n</sup></tt> þegar <tt>n</tt> er heiltala stærri en <tt>2</tt>.</i>
+	</div>
+
+	<p>Fermat skrifaði þessa tilgátu í spássíu bókar sem hann var að lesa, og sagðist hafa sönnun fyrir tilgátunni, en hún væri of löng til að komast fyrir á spássíunni. Margir stærðfræðingar reyndu að sanna tilgátuna eftir þetta, en það var ekki fyrr en rúmlega 300 árum síðar að breski stærðfræðingurinn Andrew Wiles kom loksins með sönnun. Tilgátan reyndist því vera sönn, og er nú kölluð &ldquo;síðasta setning Fermats.&rdquo;</p>
+
+	<h2>Inntak</h2>
+
+		<p>Á fyrstu línu er heiltalan <tt>1 &leq; T &leq; 100</tt>, sem táknar fjölda prófunartilvika sem fylgja. Hvert prófunartilvik samanstendur af einni línu með heiltölunni <tt>2 < n < 10<sup>100</sup></tt>.</p>
+
+	<h2>Úttak</h2>
+
+		Fyrir hvert prófunartilvik á að skrifa út allar pósitífar heiltölur <tt>a</tt>, <tt>b</tt> og <tt>c</tt> sem uppfylla jöfnuna <tt>a<sup>n</sup> + b<sup>n</sup> = c<sup>n</sup></tt>. Skrifa á út eina lausn á línu á forminu &ldquo;<tt>a b c</tt>&rdquo;. Ekki skiptir máli í hvaða röð lausnirnar eru skrifaðar út. Ef það eru ekki neinar lausnir, þá á að skrifa út eina línu á forminu &ldquo;<tt>no solutions when n = <i>n</i></tt>&rdquo;.
+
+		<h2>Dæmi</h2>
+		<table class="sample">
+			<thead>
+				<tr>
+					<th>inntak</th>
+					<th>úttak</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<pre>2
+3
+42</pre>
+					</td>
+					<td>
+						<pre>no solutions when n = 3
+no solutions when n = 42</pre>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>

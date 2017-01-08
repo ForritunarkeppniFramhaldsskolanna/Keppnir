@@ -1,0 +1,58 @@
+\begin{problem}
+	Ein vinsæl stærðfræðiþraut er eftirfarandi. Gefið er samlagningardæmi á formi eins og:
+	\begin{center}
+		\begin{tabular}{cccccc}
+			     &  & S & E & N & D \\
+			$+$  &  & M & O & R & E \\
+			  \hline
+			$=$ & M & O & N & E & Y \\
+		\end{tabular}
+	\end{center}
+	Breyta þarf hverjum bókstaf í tölustaf á bilinu $0$ til $9$, þannig að samlagningardæmið gangi upp. Nokkrar reglur eru til staðar. Ef tveir eða fleiri bókstafir eru eins, þá þarf að breyta þeim öllum í sama tölustafinn. Ef tveir bókstafir eru ólíkir, þá þarf að breyta þeim í ólíka tölustafi. Ef bókstafur er fremst á línu, þá má ekki breyta honum í $0$. Ein lausn á dæminu að ofan er þá:
+	\begin{center}
+		\begin{tabular}{cccccc}
+			     &  & 9 & 5 & 6 & 7 \\
+			$+$  &  & 1 & 0 & 8 & 5 \\
+			  \hline
+			$=$ & 1 & 0 & 6 & 5 & 2 \\
+		\end{tabular}
+	\end{center}
+
+	Skrifið forrit sem les inn svona stærðfræðiþraut, og skrifar svo út lausn við henni. Þrautin mun alltaf innihalda þrjár línur, og vera á forminu "`fyrsta lína + önnur lína = þriðja lína"'. Allir bókstafirnir munu vera hástafir. Ef fleiri en ein lausn koma til greina, þá skiptir ekki máli hvaða lausn er skrifuð út. Ef ekki er til lausn við dæminu á forritið að láta vita að svo sé.
+
+\begin{example}
+\exmp{%
+Þraut:
+\underline{   SEND}
+\underline{+  MORE}
+\underline{= MONEY}
+Lausn:
+\   9567
++  1085
+= 10652
+}%
+\end{example}
+
+\begin{example}
+\exmpexpl{%
+Þraut:
+\underline{   MOO}
+\underline{+ MEOW}
+\underline{= MIOW}
+Lausn:
+\   300
++ 3608
+= 3908
+}{Þetta er ein af mörgum lausnum. Ekki skiptir máli hver þeirra er skrifuð út.}%
+\end{example}
+
+\begin{example}
+\exmp{%
+Þraut:
+\underline{  DOG}
+\underline{+ CAT}
+\underline{= DAD}
+Engin lausn
+}%
+\end{example}
+\end{problem}

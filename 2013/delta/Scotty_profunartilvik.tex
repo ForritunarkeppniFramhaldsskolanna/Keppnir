@@ -1,0 +1,1376 @@
+\documentclass[11pt,a4paper,oneside]{article}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{color}
+\usepackage[icelandic]{babel}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{fullpage}
+\usepackage{titling}
+\newcommand{\subtitle}[1]{%
+  \posttitle{%
+    \par\end{center}
+    \begin{center}\large#1\end{center}
+    \vskip0.5em}%
+}
+
+\title{Forritunarkeppni Framhaldsskólanna 2013}
+\subtitle{Scotty deild - prófunartilvik}
+\date{16. mars 2013}
+\author{Háskólinn í Reykjavík}
+
+\newcounter{problemCounter}
+
+\newenvironment{example}[1][]{
+    \obeylines\obeyspaces\frenchspacing
+    \newcommand{\exmp}[1]{
+        \begin{minipage}[t]{400px}
+        	\vspace{0px}
+        	\texttt{##1}
+        	\vspace{5px}
+        \end{minipage} \\
+        \hline
+    }
+
+    \newcommand{\exmpexpl}[2]{
+        \begin{minipage}[t]{400px}
+        	\vspace{0px}
+        	\texttt{##1}
+        	\vspace{10px}
+        \end{minipage} \\
+        \hline
+        \multicolumn{1}{|c|}{\textbf{Útskýring á dæmi}} \\
+        \hline
+        \begin{minipage}[t]{400px}
+        	\vspace{0px}
+        	##2
+        	\vspace{5px}
+        \end{minipage} \\
+        \hline
+    }
+
+    \begin{center}
+    \begin{tabular}[h]{|l|}
+        %\hline
+        %\multicolumn{1}{|c|}{\textbf{Dæmi um virkni}} \\
+        \hline
+}{
+    \end{tabular}
+    \end{center}
+}
+
+\newenvironment{problem}[1][]{
+	\stepcounter{problemCounter}
+	\noindent
+	\textbf{\Large Dæmi \arabic{problemCounter}}
+	\nopagebreak
+	\vspace{3mm}
+	\nopagebreak
+
+}{
+	%\pagebreak
+	\vspace{2em}
+
+}
+
+\begin{document}
+
+	\maketitle
+	\thispagestyle{empty}
+	\pagebreak
+
+    \section*{Fyrir hádegi}
+
+	%\problemstatement{hallo_heimur}
+    \begin{problem}
+        Forritið á bara að skrifa út "`\texttt{Hello World}"'.
+    \end{problem}
+
+	%\problemstatement{namundun}
+    \begin{problem}
+        \begin{example}
+\exmp{%
+Kommutala: \underline{53.46}
+Námunduð: 53
+}%
+        \end{example}
+        \begin{example}
+\exmp{%
+Kommutala: \underline{6.9}
+Námunduð: 7
+}%
+        \end{example}
+        \begin{example}
+\exmp{%
+Kommutala: \underline{3280.5}
+Námunduð: 3281
+}%
+        \end{example}
+    \end{problem}
+
+	%\problemstatement{nidurteljari}
+    \begin{problem}
+        \begin{example}
+\exmp{%
+Byrja í: \underline{1}
+1
+BÚMM!
+}%
+        \end{example}
+        \begin{example}
+\exmp{%
+Byrja í: \underline{10}
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+BÚMM!
+}%
+        \end{example}
+        \begin{example}
+\exmp{%
+Byrja í: \underline{22}
+22
+21
+20
+19
+18
+17
+16
+15
+14
+13
+12
+11
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+BÚMM!
+}%
+        \end{example}
+    \end{problem}
+
+	%\problemstatement{jolagjafir}
+    \begin{problem}
+        \begin{example}
+\exmp{%
+\underline{2}
+2
+}%
+        \end{example}
+        \begin{example}
+\exmp{%
+\underline{56}
+3080
+}%
+        \end{example}
+        \begin{example}
+\exmp{%
+\underline{42}
+1722
+}%
+        \end{example}
+    \end{problem}
+
+	%\problemstatement{fjoldi_stafa}
+    \begin{problem}
+        \begin{example}
+\exmp{%
+\underline{Hello World}
+10
+}%
+        \end{example}
+        \begin{example}
+\exmp{%
+\underline{abcdX!X}
+6
+}%
+        \end{example}
+        \begin{example}
+\exmp{%
+\underline{jon@gmail.com}
+11
+}%
+        \end{example}
+    \end{problem}
+
+	%\problemstatement{tveirstrengir}
+    \begin{problem}
+        \begin{example}
+\exmp{%
+\underline{Forritun}
+\underline{Upphitun}
+4
+}%
+        \end{example}
+        \begin{example}
+\exmp{%
+\underline{undercover}
+\underline{coffeecake}
+10
+}%
+        \end{example}
+        \begin{example}
+\exmp{%
+\underline{Testing}
+\underline{testing}
+1
+}%
+        \end{example}
+    \end{problem}
+
+	%\problemstatement{happy_birthday}
+    \begin{problem}
+        \begin{example}
+            \exmp{%
+Nafn: \underline{Andri}
+Aldur: \underline{98}
+Kyn: \underline{kk}
+
+Hann á afmæli í dag,
+hann á afmæli í dag.
+Hann á afmæli hann Andri,
+hann á afmæli í dag.\\
+
+Hann er 98 ára í dag,
+hann er 98 ára í dag.
+Hann er 98 ára hann Andri,
+hann er 98 ára í dag.
+            }%
+        \end{example}
+
+        \begin{example}
+            \exmp{%
+Nafn: \underline{Bjarni}
+Aldur: \underline{4}
+Kyn: \underline{kk}
+
+Hann á afmæli í dag,
+hann á afmæli í dag.
+Hann á afmæli hann Bjarni,
+hann á afmæli í dag.\\
+
+Hann er 4 ára í dag,
+hann er 4 ára í dag.
+Hann er 4 ára hann Bjarni,
+hann er 4 ára í dag.
+            }%
+        \end{example}
+
+        \begin{example}
+            \exmp{%
+Nafn: \underline{Elsa}
+Aldur: \underline{42}
+Kyn: \underline{kk}
+
+Hún á afmæli í dag,
+hún á afmæli í dag.
+Hún á afmæli hún Elsa,
+hún á afmæli í dag.\\
+
+Hún er 98 ára í dag,
+hún er 98 ára í dag.
+Hún er 98 ára hún Elsa,
+hún er 98 ára í dag.
+            }%
+        \end{example}
+    \end{problem}
+
+	%\problemstatement{deiling}
+    \begin{problem}
+        \begin{example}
+            \exmp{%
+Fyrri heiltala: \underline{64}
+Seinni heiltala: \underline{4}
+4 gengur 16 sinnum upp í 64
+Enginn afgangur
+            }%
+        \end{example}
+
+        \begin{example}
+            \exmp{%
+Fyrri heiltala: \underline{3719}
+Seinni heiltala: \underline{3720}
+3720 gengur 0 sinnum upp í 3719
+Afgangur er 3719
+            }%
+        \end{example}
+
+        \begin{example}
+            \exmp{%
+Fyrri heiltala: \underline{8434}
+Seinni heiltala: \underline{233}
+233 gengur 36 sinnum upp í 8434
+Afgangur er 46
+            }%
+        \end{example}
+    \end{problem}
+
+	%\problemstatement{deiling_while}
+    \begin{problem}
+        \begin{example}
+            \exmp{%
+Fyrri heiltala: \underline{64}
+Seinni heiltala: \underline{4}
+4 gengur 16 sinnum upp í 64
+Enginn afgangur
+Viltu endurtaka vinnslu (j eða n)? \underline{j}
+Fyrri heiltala: \underline{3719}
+Seinni heiltala: \underline{3720}
+3720 gengur 0 sinnum upp í 3719
+Afgangur er 3719
+Viltu endurtaka vinnslu (j eða n)? \underline{j}
+Fyrri heiltala: \underline{8434}
+Seinni heiltala: \underline{233}
+233 gengur 36 sinnum upp í 8434
+Afgangur er 46
+Viltu endurtaka vinnslu (j eða n)? \underline{n}
+            }%
+        \end{example}
+    \end{problem}
+
+	%\problemstatement{compression}
+    \begin{problem}
+        \begin{example}
+            \exmp{%
+Óþjappað: \underline{10}
+Þjappað: 10
+            }%
+        \end{example}
+
+        \begin{example}
+            \exmp{%
+Óþjappað: \underline{15 16 17 20 21 22 23}
+Þjappað: 15-17 20-23
+            }%
+        \end{example}
+
+        \begin{example}
+            \exmp{%
+Óþjappað: \underline{5 8 9 16 24 25 26 32 33}
+Þjappað: 5 8-9 16 24-26 32-33
+            }%
+        \end{example}
+    \end{problem}
+
+	%\problemstatement{decompression}
+    \begin{problem}
+        \begin{example}
+            \exmp{%
+Þjappað: \underline{10}
+Óþjappað: 10
+            }%
+        \end{example}
+
+        \begin{example}
+            \exmp{%
+Þjappað: \underline{15-17 20-23}
+Óþjappað: 15 16 17 20 21 22 23
+            }%
+        \end{example}
+
+        \begin{example}
+            \exmp{%
+Þjappað: \underline{5 8-9 16 24-26 32-33}
+Óþjappað: 5 8 9 16 24 25 26 32 33
+            }%
+        \end{example}
+    \end{problem}
+
+	%\problemstatement{gotumalning}
+    \begin{problem}
+        \begin{example}
+            \exmp{%
+Fjöldi raða: \underline{2}
+Fjöldi dálka: \underline{4}
+\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#
+\#    \#    \#    \#    \#
+\#    \#    \#    \#    \#
+\#    \#    \#    \#    \#
+\#    \#    \#    \#    \#
+\#    \#    \#    \#    \#
+\#    \#    \#    \#    \#\\
+\vspace{8mm}
+\#    \#    \#    \#    \#
+\#    \#    \#    \#    \#
+\#    \#    \#    \#    \#
+\#    \#    \#    \#    \#
+\#    \#    \#    \#    \#
+\#    \#    \#    \#    \#
+\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#
+            }%
+        \end{example}
+
+        \begin{example}
+            \exmp{%
+Fjöldi raða: \underline{3}
+Fjöldi dálka: \underline{6}
+\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#
+\#    \#    \#    \#    \#    \#    \#
+\#    \#    \#    \#    \#    \#    \#
+\#    \#    \#    \#    \#    \#    \#
+\#    \#    \#    \#    \#    \#    \#
+\#    \#    \#    \#    \#    \#    \#
+\#    \#    \#    \#    \#    \#    \#\\
+\vspace{8mm}
+\#    \#    \#    \#    \#    \#    \#
+\#    \#    \#    \#    \#    \#    \#
+\#    \#    \#    \#    \#    \#    \#
+\#    \#    \#    \#    \#    \#    \#
+\#    \#    \#    \#    \#    \#    \#
+\#    \#    \#    \#    \#    \#    \#
+\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#
+\#    \#    \#    \#    \#    \#    \#
+\#    \#    \#    \#    \#    \#    \#
+\#    \#    \#    \#    \#    \#    \#
+\#    \#    \#    \#    \#    \#    \#
+\#    \#    \#    \#    \#    \#    \#
+\#    \#    \#    \#    \#    \#    \#
+            }%
+        \end{example}
+
+        \begin{example}
+            \exmp{%
+Fjöldi raða: \underline{1}
+Fjöldi dálka: \underline{10}
+\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#
+\#    \#    \#    \#    \#    \#    \#    \#    \#    \#    \#
+\#    \#    \#    \#    \#    \#    \#    \#    \#    \#    \#
+\#    \#    \#    \#    \#    \#    \#    \#    \#    \#    \#
+\#    \#    \#    \#    \#    \#    \#    \#    \#    \#    \#
+\#    \#    \#    \#    \#    \#    \#    \#    \#    \#    \#
+\#    \#    \#    \#    \#    \#    \#    \#    \#    \#    \#
+            }%
+        \end{example}
+    \end{problem}
+
+    %\problemstatement{talnaspirall}
+    \begin{problem}
+        \begin{example}
+            \exmp{%
+Stærð: \underline{13}\\
+\  144  143  142  141  140  139  138  137  136  135  134  133  132
+\  145  100   99   98   97   96   95   94   93   92   91   90  131
+\  146  101   64   63   62   61   60   59   58   57   56   89  130
+\  147  102   65   36   35   34   33   32   31   30   55   88  129
+\  148  103   66   37   16   15   14   13   12   29   54   87  128
+\  149  104   67   38   17    4    3    2   11   28   53   86  127
+\  150  105   68   39   18    5    0    1   10   27   52   85  126
+\  151  106   69   40   19    6    7    8    9   26   51   84  125
+\  152  107   70   41   20   21   22   23   24   25   50   83  124
+\  153  108   71   42   43   44   45   46   47   48   49   82  123
+\  154  109   72   73   74   75   76   77   78   79   80   81  122
+\  155  110  111  112  113  114  115  116  117  118  119  120  121
+\  156  157  158  159  160  161  162  163  164  165  166  167  168
+            }%
+        \end{example}
+
+        \begin{example}
+            \exmp{%
+Stærð: \underline{119}\\
+Ekki lögleg stærð!
+            }%
+        \end{example}
+
+        \begin{example}
+            \exmp{%
+Stærð: \underline{9}\\
+\   64   63   62   61   60   59   58   57   56
+\   65   36   35   34   33   32   31   30   55
+\   66   37   16   15   14   13   12   29   54
+\   67   38   17    4    3    2   11   28   53
+\   68   39   18    5    0    1   10   27   52
+\   69   40   19    6    7    8    9   26   51
+\   70   41   20   21   22   23   24   25   50
+\   71   42   43   44   45   46   47   48   49
+\   72   73   74   75   76   77   78   79   80
+            }%
+        \end{example}
+    \end{problem}
+
+	%\problemstatement{ex}
+    \begin{problem}
+        \begin{example}
+            \exmp{%
+x = \underline{13.2}
+e \^{} 13.2 = 540364.9372
+            }%
+        \end{example}
+
+        \begin{example}
+            \exmp{%
+x = \underline{0.5}
+e \^{} 0.5 = 1.6487
+            }%
+        \end{example}
+
+        \begin{example}
+            \exmp{%
+x = \underline{4.83}
+e \^{}  = 125.211
+            }%
+        \end{example}
+    \end{problem}
+
+    %\problemstatement{hamming_distance}
+    \begin{problem}
+        \begin{example}
+            \exmp{%
+Fyrri tala: \underline{23}
+Seinni tala: \underline{992}
+Hamming fjarĺægð er 9
+            }%
+        \end{example}
+
+        \begin{example}
+            \exmp{%
+Fyrri tala: \underline{16}
+Seinni tala: \underline{17}
+Hamming fjarĺægð er 1
+            }%
+        \end{example}
+
+        \begin{example}
+            \exmp{%
+Fyrri tala: \underline{99}
+Seinni tala: \underline{66}
+Hamming fjarĺægð er 2
+            }%
+        \end{example}
+    \end{problem}
+
+	%\problemstatement{stigatafla}
+    \begin{problem}
+        \begin{example}
+            \exmp{%
+\underline{888888}
+
+@@@ @@@ @@@ @@@ @@@ @@@
+@ @ @ @ @ @ @ @ @ @ @ @
+@@@ @@@ @@@ @@@ @@@ @@@
+@ @ @ @ @ @ @ @ @ @ @ @
+@@@ @@@ @@@ @@@ @@@ @@@
+            }%
+        \end{example}
+
+        \begin{example}
+            \exmp{%
+\underline{128901}
+
+\  @ @@@ @@@ @@@ @@@   @
+\  @   @ @ @ @ @ @ @   @
+\  @ @@@ @@@ @@@ @ @   @
+\  @ @   @ @   @ @ @   @
+\  @ @@@ @@@   @ @@@   @
+            }%
+        \end{example}
+
+        \begin{example}
+            \exmp{%
+\underline{42}
+
+@ @ @@@
+@ @   @
+@@@ @@@
+\  @ @  
+\  @ @@@
+            }%
+        \end{example}
+    \end{problem}
+
+	%\problemstatement{logleg_nofn}
+    \begin{problem}
+        \begin{center}
+        \begin{tabular}{|l|}
+        \hline
+        \multicolumn{1}{|c|}{\textbf{nofn.txt}}\\
+        \hline
+        \texttt{Jón kk}\\
+        \hline
+        \end{tabular}
+        \end{center}
+
+        \begin{example}
+\exmp{%
+Skrá: \underline{nofn1.txt}
+mannanafn: \underline{Jón}
+Löglegt
+mannanafn: \underline{Jón Jón}
+Löglegt
+mannanafn: \underline{Jón Þór}
+Ekki löglegt
+mannanafn: \underline{Þór}
+Ekki löglegt
+mannanafn: \underline{Þór Jón}
+Ekki löglegt
+mannanafn: \underline{bless}
+}%
+        \end{example}
+
+        \begin{center}
+        \begin{tabular}{|l|}
+        \hline
+        \multicolumn{1}{|c|}{\textbf{nofn2.txt}}\\
+        \hline
+        \texttt{Elsa kvk}\\
+        \texttt{Jón kk}\\
+        \texttt{Þór kk}\\
+        \texttt{Beta kvk}\\
+        \hline
+        \end{tabular}
+        \end{center}
+        
+        \begin{example}
+\exmp{%
+Skrá: \underline{nofn2.txt}
+mannanafn: \underline{Beta Þór}
+Ekki löglegt
+mannanafn: \underline{Beta Elsa}
+Löglegt
+mannanafn: \underline{Tómatur Elsa}
+Ekki löglegt
+mannanafn: \underline{Jón Elsa}
+Ekki löglegt
+mannanafn: \underline{Þór Jón}
+Löglegt
+mannanafn: \underline{bless}
+}%
+        \end{example}
+
+        \begin{center}
+        \begin{tabular}{|l|}
+        \hline
+        \multicolumn{1}{|c|}{\textbf{nofn3.txt}}\\
+        \hline
+        \texttt{Api kk}\\
+        \texttt{Banani kvk}\\
+        \texttt{Epli kvk}\\
+        \hline
+        \end{tabular}
+        \end{center}
+        
+        \begin{example}
+\exmp{%
+Skrá: \underline{nofn3.txt}
+mannanafn: \underline{Abi}
+Ekki löglegt
+mannanafn: \underline{Banani Epli}
+Löglegt
+mannanafn: \underline{Epli Api}
+Ekki löglegt
+mannanafn: \underline{Api Api}
+Löglegt
+mannanafn: \underline{Banani}
+Löglegt
+mannanafn: \underline{bless}
+}%
+        \end{example}
+    \end{problem}
+
+	%\problemstatement{stysta_leid_skak}
+    \begin{problem}
+        \begin{example}
+            \exmp{%
+Upphafsreitur: \underline{a1}
+Endareitur: \underline{h7}
+\textit{hér á að koma leið með 5 hoppum, til dæmis:}
+Stysta leið: a1 c2 e3 g4 f6 h7
+            }%
+        \end{example}
+
+        \begin{example}
+            \exmp{%
+Upphafsreitur: \underline{d8}
+Endareitur: \underline{e4}
+\textit{hér á að koma leið með 3 hoppum, til dæmis:}
+Stysta leið: d8 f7 d6 e4
+            }%
+        \end{example}
+
+        \begin{example}
+            \exmp{%
+Upphafsreitur: \underline{g1}
+Endareitur: \underline{b6}
+\textit{hér á að koma leið með 4 hoppum, til dæmis:}
+Stysta leið: g1 e2 c3 a4 b6
+            }%
+        \end{example}
+    \end{problem}
+
+    \section*{Eftir hádegi}
+
+    \setcounter{problemCounter}{0}
+    
+    %\problemstatement{veldi_af_2}
+    \begin{problem}
+        \begin{example}
+            \exmp{%
+n = \underline{0}
+2\^{}0 = 1
+            }%
+        \end{example}
+
+        \begin{example}
+            \exmp{%
+n = \underline{1}
+2\^{}0 = 1
+2\^{}1 = 2
+            }%
+        \end{example}
+
+        \begin{example}
+            \exmp{%
+n = \underline{16}
+2\^{}0 = 1
+2\^{}1 = 2
+2\^{}2 = 4
+2\^{}3 = 8
+2\^{}4 = 16
+2\^{}5 = 32
+2\^{}6 = 64
+2\^{}7 = 128
+2\^{}8 = 256
+2\^{}9 = 512
+2\^{}10 = 1024
+2\^{}11 = 2048
+2\^{}12 = 4096
+2\^{}13 = 8192
+2\^{}14 = 16384
+2\^{}15 = 32768
+2\^{}16 = 65536
+            }%
+        \end{example}
+    \end{problem}
+
+    %\problemstatement{ofugur_texti}
+    \begin{problem}
+        \begin{example}
+            \exmp{%
+\underline{Test}
+tseT
+            }%
+        \end{example}
+
+        \begin{example}
+            \exmp{%
+\underline{a b c d e f}
+a b c d e f
+            }%
+        \end{example}
+
+        \begin{example}
+            \exmp{%
+\underline{ab cd ef}
+ba dc fe
+            }%
+        \end{example}
+    \end{problem}
+
+    %\problemstatement{kula_i_kassa}
+    \begin{problem}
+        \begin{example}
+\exmp{%
+Breidd: \underline{5284.122}
+Lengd: \underline{8172.8}
+Hæð: \underline{4447.871}
+Stærsta r = 2223.9355
+}%
+        \end{example}
+
+        \begin{example}
+\exmp{%
+Breidd: \underline{3}
+Lengd: \underline{5}
+Hæð: \underline{4}
+Stærsta r = 1.5
+}%
+        \end{example}
+
+        \begin{example}
+\exmp{%
+Breidd: \underline{0}
+Lengd: \underline{0}
+Hæð: \underline{0}
+Stærsta r = 0
+}%
+        \end{example}
+    \end{problem}
+
+    %\problemstatement{lykilord}
+    \begin{problem}
+        \begin{example}
+            \exmp{%
+Lykilorð: \underline{hello}
+Lykilorðið er veikt
+            }%
+        \end{example}
+
+        \begin{example}
+            \exmp{%
+Lykilorð: \underline{!@xYhello}
+Lykilorðið er sterkt
+            }%
+        \end{example}
+
+        \begin{example}
+            \exmp{%
+Lykilorð: \underline{@}
+Lykilorðið er gott
+            }%
+        \end{example}
+    \end{problem}
+
+    %\problemstatement{kelvin_fahrenheit}
+    \begin{problem}
+        \begin{example}
+            \exmp{%
+1. Breyta Kelvin í Fahrenheit
+2. Breyta Fahrenheit í Kelvin
+3. Hætta
+Val: \underline{2}
+Fahrenheit = \underline{100}
+Kelvin = 310.93\\
+
+1. Breyta Kelvin í Fahrenheit
+2. Breyta Fahrenheit í Kelvin
+3. Hætta
+Val: \underline{1}
+Kelvin = \underline{310}
+Fahrenheit = 98.33\\
+
+1. Breyta Kelvin í Fahrenheit
+2. Breyta Fahrenheit í Kelvin
+3. Hætta
+Val: \underline{3}
+            }%
+        \end{example}
+    \end{problem}
+
+    %\problemstatement{oradad}
+    \begin{problem}
+        \begin{example}
+            \exmp{%
+List: \underline{1 2 3}
+\textit{hér á að koma umröðun af listanum 1 2 3 sem er ekki röðuð í hækkandi né lækkandi röð, til dæmis:}
+1 3 2
+            }%
+        \end{example}
+
+        \begin{example}
+            \exmp{%
+List: \underline{5 4 6}
+\textit{hér á að koma umröðun af listanum 5 4 6 sem er ekki röðuð í hækkandi né lækkandi röð, til dæmis:}
+5 4 6
+            }%
+        \end{example}
+
+        \begin{example}
+            \exmp{%
+List: \underline{13 8 6 4 2}
+\textit{hér á að koma umröðun af listanum 13 8 6 4 2 sem er ekki röðuð í hækkandi né lækkandi röð, til dæmis:}
+2 8 4 6 13
+            }%
+        \end{example}
+    \end{problem}
+
+    %\problemstatement{lodrettur_texti}
+    \begin{problem}
+        \begin{example}
+            \exmp{%
+Fjöldi lína: \underline{3}
+\underline{123456}
+\underline{321}
+\underline{123456}\\
+
+131
+222
+313
+4 4
+5 5
+6 6
+            }%
+        \end{example}
+
+        \begin{example}
+            \exmp{%
+Fjöldi lína: \underline{1}
+\underline{hello}\\
+
+h
+e
+l
+l
+o
+            }%
+        \end{example}
+        
+        \begin{example}
+            \exmp{%
+Fjöldi lína: \underline{2}
+\underline{test}
+\underline{forritunarkeppnin}\\
+
+tf
+eo
+sr
+tr
+\ i
+\ t
+\ u
+\ n
+\ a
+\ r
+\ k
+\ e
+\ p
+\ p
+\ n
+\ i
+\ n
+            }%
+        \end{example}
+    \end{problem}
+
+    %\problemstatement{fizzbuzz}
+    \begin{problem}
+        \begin{example}
+            \exmp{%
+n = \underline{1}
+1
+            }%
+        \end{example}
+
+        \begin{example}
+            \exmp{%
+n = \underline{3}
+1
+2
+Fizz
+            }%
+        \end{example}
+
+        \begin{example}
+            \exmp{%
+n = \underline{30}
+1
+2
+Fizz
+4
+Buzz
+Fizz
+7
+8
+Fizz
+Buzz
+11
+Fizz
+13
+14
+FizzBuzz
+16
+17
+Fizz
+19
+Buzz
+Fizz
+22
+23
+Fizz
+Buzz
+26
+Fizz
+28
+29
+FizzBuzz
+            }%
+        \end{example}
+    \end{problem}
+
+    %\problemstatement{inniheldur_tolu}
+    \begin{problem}
+        \begin{example}
+            \exmp{%
+Lína: \underline{1337 is elite}
+Já
+            }%
+        \end{example}
+
+        \begin{example}
+            \exmp{%
+Lína: \underline{42=43}
+Nei
+            }%
+        \end{example}
+
+        \begin{example}
+            \exmp{%
+Lína: \underline{pi is about 3.1415}
+Nei
+            }%
+        \end{example}
+    \end{problem}
+
+    %\problemstatement{dagatal}
+    \begin{problem}
+        \begin{example}
+            \exmp{%
+Dagar í mánuðinum: \underline{29}
+Fyrsti dagur mánaðarins: \underline{1}\\
+
+Sun Mán Þri Mið Fim Fös Lau
+\  1   2   3   4   5   6   7 
+\  8   9  10  11  12  13  14 
+\ 15  16  17  18  19  20  21 
+\ 22  23  24  25  26  27  28 
+\ 29 
+            }%
+        \end{example}
+
+        \begin{example}
+            \exmp{%
+Dagar í mánuðinum: \underline{31}
+Fyrsti dagur mánaðarins: \underline{7}\\
+
+Sun Mán Þri Mið Fim Fös Lau
+\                          1 
+\  2   3   4   5   6   7   8 
+\  9  10  11  12  13  14  15 
+\ 16  17  18  19  20  21  22 
+\ 23  24  25  26  27  28  29 
+\ 30  31 
+            }%
+        \end{example}
+
+        \begin{example}
+            \exmp{%
+Dagar í mánuðinum: \underline{31}
+Fyrsti dagur mánaðarins: \underline{7}\\
+
+Sun Mán Þri Mið Fim Fös Lau
+\                  1   2   3 
+\  4   5   6   7   8   9  10 
+\ 11  12  13  14  15  16  17 
+\ 18  19  20  21  22  23  24 
+\ 25  26  27  28  29  30
+            }%
+        \end{example}
+    \end{problem}
+
+    %\problemstatement{slongu_texti}
+    \begin{problem}
+        \begin{example}
+            \exmp{%
+Texti: \underline{The answer is 42.}\\
+
+\            s 4
+\       w r i   2
+\      s e       .
+\ h   n
+T e a
+
+            }%
+        \end{example}
+
+        \begin{example}
+            \exmp{%
+Texti: \underline{abcdefghijklmno}\\
+
+\              o
+\             n
+\            m
+\           l
+\          k
+\         j
+\        i
+\       h
+\      g
+\     f
+\    e
+\   d
+\  c
+\ b
+a
+            }%
+        \end{example}
+
+        \begin{example}
+            \exmp{%
+Texti: \underline{lolololololololololololol}\\
+
+\ o o o o o o o o o o o o
+l l l l l l l l l l l l l
+            }%
+        \end{example}
+    \end{problem}
+
+    %\problemstatement{hjolalas}
+    \begin{problem}
+        \begin{example}
+            \exmp{%
+Upphafsstaða: \underline{2584}
+Lykilorð: \underline{6849}
+Minnsti fjöldi snúninga: 16
+            }%
+        \end{example}
+
+        \begin{example}
+            \exmp{%
+Upphafsstaða: \underline{3899}
+Lykilorð: \underline{9124}
+Minnsti fjöldi snúninga: 15
+            }%
+        \end{example}
+
+        \begin{example}
+            \exmp{%
+Upphafsstaða: \underline{9714}
+Lykilorð: \underline{9532}
+Minnsti fjöldi snúninga: 6
+            }%
+        \end{example}
+    \end{problem}
+
+    %\problemstatement{freq_analysis}
+    \begin{problem}
+        \begin{example}
+            \exmp{%
+\underline{Forritunarkeppnin er awesome.}
+e 15.3846\%{}
+r 15.3846\%{}
+n 11.5385\%{}
+a 7.69231\%{}
+i 7.69231\%{}
+o 7.69231\%{}
+p 7.69231\%{}
+f 3.84615\%{}
+k 3.84615\%{}
+m 3.84615\%{}
+s 3.84615\%{}
+t 3.84615\%{}
+u 3.84615\%{}
+w 3.84615\%{}
+            }%
+        \end{example}
+
+        \begin{example}
+            \exmp{%
+\underline{test}
+t 50\%{}
+e 25\%{}
+s 25\%{}
+            }%
+        \end{example}
+
+        \begin{example}
+            \exmp{%
+\underline{lollipop}
+l 37.5\%{}
+o 25\%{}
+p 25\%{}
+i 12.5\%{}
+            }%
+        \end{example}
+    \end{problem}
+
+    %\problemstatement{fullkomintala}
+    \begin{problem}
+        \begin{example}
+            \exmp{%
+n = \underline{120}
+Ekki fullkomin
+            }%
+        \end{example}
+
+        \begin{example}
+            \exmp{%
+n = \underline{8128}
+Fullkomin
+            }%
+        \end{example}
+
+        \begin{example}
+            \exmp{%
+n = \underline{2096128}
+Ekki fullkomin
+            }%
+        \end{example}
+    \end{problem}
+
+    %\problemstatement{translate}
+    \begin{problem}
+        \begin{example}
+            \exmp{%
+\underline{leg=ben}
+\underline{carrot=gulerod}
+\underline{sulten=hungry}
+\underline{er=am}
+\underline{jeg=i}
+\underline{text:}
+jeg er sulten
+i am hungry
+            }%
+        \end{example}
+
+        \begin{example}
+            \exmp{%
+\underline{my=mein}
+\underline{programming=programmierung}
+\underline{where=wo}
+\underline{car=auto}
+\underline{is=ist}
+\underline{text:}
+where is my car
+wo ist mein auto
+            }%
+        \end{example}
+
+        \begin{example}
+            \exmp{%
+\underline{x=y}
+\underline{y=z}
+\underline{z=x}
+\underline{text:}
+\underline{x x y z y x z}
+y y z x z y x
+            }%
+        \end{example}
+    \end{problem}
+
+    %\problemstatement{bmi}
+    \begin{problem}
+        \begin{example}
+            \exmp{%
+Fjöldi: \underline{3}\\
+
+Nafn 1: \underline{John}
+Hæð 1: \underline{1.5}
+Þyngd 1: \underline{60}\\
+
+Nafn 2: \underline{Jane}
+Hæð 2: \underline{1.4}
+Þyngd 2: \underline{55}\\
+
+Nafn 3: \underline{Bob}
+Hæð 3: \underline{2.0}
+Þyngd 3: \underline{95}\\
+
+Bob 23.8
+John 26.7
+Jane 28.1
+            }%
+        \end{example}
+
+        \begin{example}
+            \exmp{%
+Fjöldi: \underline{2}\\
+
+Nafn 1: \underline{Alice}
+Hæð 1: \underline{1.85}
+Þyngd 1: \underline{75}\\
+
+Nafn 2: \underline{Bob}
+Hæð 2: \underline{1.96}
+Þyngd 2: \underline{94}\\
+
+Alice 21.9
+Bob 24.5
+            }%
+        \end{example}
+
+        \begin{example}
+            \exmp{%
+Fjöldi: \underline{1}\\
+
+Nafn 1: \underline{Abc}
+Hæð 1: \underline{2.4}
+Þyngd 1: \underline{135}\\
+
+Abc 23.4
+            }%
+        \end{example}
+    \end{problem}
+
+    %\problemstatement{stae_pusl}
+    \begin{problem}
+        \begin{example}
+            \exmp{%
+Þraut:
+\underline{\   GREEN}
+\underline{+ ORANGE}
+\underline{= COLORS}
+Lausn:
+\   83446
++ 135684
+= 219130
+            }%
+        \end{example}
+
+        \begin{example}
+            \exmp{%
+Þraut:
+\underline{\   HVAR}
+\underline{+    ER}
+\underline{= HELGI}
+Lausn:
+Engin lausn
+            }%
+        \end{example}
+
+        \begin{example}
+            \exmp{%
+Þraut:
+\underline{\   CROSS}
+\underline{+  ROADS}
+\underline{= DANGER}
+Lausn:
+\   96233
++  62512
+= 158746
+            }%
+        \end{example}
+    \end{problem}
+
+    %\problemstatement{samlagning}
+    \begin{problem}
+        \begin{example}
+            \exmp{%
+Tölur: \underline{8 7 9 45}
+Samtals: 69
+Minnsti kostnaður: 108
+            }%
+        \end{example}
+
+        \begin{example}
+            \exmp{%
+Tölur: \underline{9 7 8 37 69 42 85 80}
+Samtals: 337
+Minnsti kostnaður: 877
+            }%
+        \end{example}
+
+        \begin{example}
+            \exmp{%
+Tölur: \underline{5 -8 -2 14 35 66}
+Samtals: 110
+Minnsti kostnaður: 148
+            }%
+        \end{example}
+    \end{problem}
+
+\end{document} 

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Verkefni 11: Sort</title>
+		<style>
+			body { background: white; }
+			h1, h2, table.sample th { color: black; }
+			h2 { margin-bottom: 0; }
+			p { text-align: justify; }
+			.center { text-align: center; }
+			table.sample { min-width: 700px; border-collapse: collapse; }
+			table.sample th, table.sample td { border: 1px solid black; }
+			table.sample td { vertical-align: top; padding: 3px; }
+			table.sample pre { margin: 0; }
+			tt { font-size: 1.1em; }
+		</style>
+	</head>
+	<body>
+		<h1>Sort</h1>
+
+		<p>Margar forritunarkeppnir hafa dæmi þar sem keppendur eiga að raða lista af heiltölum. Þetta dæmi er aðeins öðruvísi, en hérna eigið þið að dæma lausnir á röðunarverkefninu.</p>
+
+		<p>Þið fáið gefna tvo lista af heiltölum. Fyrri listinn er ekki í neinni sérstakri röð, og er það listinn sem keppendur eiga að raða. Seinni listinn er hugsanlega raðaða útgáfan af fyrri listanum, en hann er svar frá einhverjum keppanda við fyrri listanum.</p>
+
+		<p>Skrifið forrit sem ákvarðar hvort seinni listinn sé raðaða útgáfan af fyrri listanum eða ekki.</p>
+
+	<h2>Inntak</h2>
+
+		<p>Á fyrstu línu er heiltalan <tt>1 &leq; T &leq; 1000</tt>, sem táknar fjölda prófunartilvika sem fylgja. Hvert prófunartilvik samanstendur af tveimur línum, sem hvor um sig hefur eina eða fleiri heiltölur aðskildar með bili.</p>
+
+	<h2>Úttak</h2>
+
+		<p>Fyrir hvert prófunartilvik á að skrifa út eina línu sem inniheldur &ldquo;<tt>Accepted</tt>&rdquo; ef seinni listinn er raðaða útgáfan af fyrri listanum, en &ldquo;<tt>Wrong Answer</tt>&rdquo; annars.</p>
+
+		<h2>Dæmi</h2>
+		<table class="sample">
+			<thead>
+				<tr>
+					<th>inntak</th>
+					<th>úttak</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<pre>4
+2 3 1 4
+1 2 3 4
+10 -8 4 7 7 8 9
+-8 4 7 7 9 8 10
+10 11 12
+10 11 12
+1 2 3 4
+5 6 7 8</pre>
+					</td>
+					<td>
+						<pre>Accepted
+Wrong Answer
+Accepted
+Wrong Answer</pre>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h2>Útskýring á dæmi</h2>
+
+		<ol>
+			<li>Listinn <tt>1 2 3 4</tt> er augljóslega raðaða útgáfan af listanum <tt>2 3 1 4</tt>, og þess vegna er svarið <tt>Accepted</tt></lit>
+			<li>Svarið væri <tt>Accepted</tt> ef skipt væri á 8 og 9</li>
+			<li>Listinn var raðaður, og er rétta svarið því listinn sjálfur. Þetta gefur því <tt>Accepted</tt></li>
+			<li>Seinni listinn er ekki raðaða útgáfan af fyrri listanum, en hann inniheldur ekki einu sinni sömu heiltölur</li>
+		</ol>
+	</body>
+</html>

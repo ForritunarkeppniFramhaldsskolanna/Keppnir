@@ -1,0 +1,55 @@
+\begin{problem}
+	Við skulum skoða mannanöfn sem samanstanda af fornafni eða fornafni og millinafni (í þessu dæmi höfum við ekki áhuga á eftirnöfnum). Tvö dæmi um mannanöfn eru þá Laufey Björk og Ólafur Georg.
+
+	Til að mannanafn sé löglegt, þá þurfa bæði fornafnið og millinafnið (ef millinafn er til staðar) að vera lögleg nöfn. Ef millinafn er til staðar, þá verður millinafnið að hafa sama kyn og fornafnið. Þess vegna eru hvorki Gúrka né Ólafur Björk lögleg mannanöfn.
+
+	Skrifið forrit sem spyr um nafn á skrá. Þessi skrá inniheldur lista af löglegum nöfnum og kyn hvers nafns (þar sem kyn er annaðhvort "`\texttt{kk}"' eða "`\texttt{kvk}"'). Dæmi um skrá er:
+
+\begin{center}
+\begin{tabular}{|l|}
+\hline
+\multicolumn{1}{|c|}{\textbf{nofn.txt}}\\
+\hline
+\texttt{Jón kk}\\
+\texttt{Ólafur kk}\\
+\texttt{Bolli kk}\\
+\texttt{Geir kk}\\
+\texttt{Þórunn kvk}\\
+\texttt{Þór kk}\\
+\texttt{Laufey kvk}\\
+\texttt{Björk kvk}\\
+\texttt{Georg kk}\\
+\texttt{Hreinn kk}\\
+\hline
+\end{tabular}
+\end{center}
+
+	Gera má ráð fyrir að hvert nafn komi aðeins einu sinni fyrir í skránni.
+
+	Athuga skal að ekki er nauðsynlegt að forritið lesi nöfnin upp úr skrá. Nóg er að biðja notandann um að skrifa nöfnin inn.
+	
+	Forritið spyr svo um mannanafn, og ákvarðar hvort það sé löglegt eða ekki, miðað við að nöfnin í uppgefinni skrá séu öll lögleg nöfn. Forritið á að endurtaka þetta þangað til að innslegið mannanafn er "`\texttt{bless}"'.
+
+\begin{example}
+\exmp{%
+Skrá: \underline{nofn.txt}
+mannanafn: \underline{Ólafur Georg}
+Löglegt
+mannanafn: \underline{Laufey Björk}
+Löglegt
+mannanafn: \underline{Ólafur Björk}
+Ekki löglegt
+mannanafn: \underline{Þór}
+Löglegt
+mannanafn: \underline{Þórunn}
+Löglegt
+mannanafn: \underline{Gúrka}
+Ekki löglegt
+mannanafn: \underline{Epli Banani}
+Ekki löglegt
+mannanafn: \underline{Hreinn Bolli}
+Löglegt
+mannanafn: \underline{bless}
+}%
+\end{example}
+\end{problem}
