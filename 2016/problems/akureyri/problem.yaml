@@ -1,0 +1,10 @@
+author: Tómas Ken Magnússon, Bjarki Ágúst Guðmundsson
+source: Forritunarkeppni Framhaldsskólanna 2016
+rights_owner: Forritunarkeppni Framhaldsskólanna
+license: cc by-sa
+validation: custom
+grading:
+    on_reject: grade
+    objective: max
+    range: 0 100
+type: scoring

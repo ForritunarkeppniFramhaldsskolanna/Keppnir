@@ -1,0 +1,60 @@
+#!/bin/bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+setup_dirs
+use_solution n.cpp
+
+compile random_generator.py # Arguments: n method seed
+
+samplegroup
+sample 01
+sample 02
+
+# 1: N <= 100
+group cubic 25
+tc cubic-01 random_generator 100 random
+tc cubic-02 random_generator 100 random
+tc cubic-03 random_generator 100 random
+tc cubic-04 random_generator 100 random
+tc cubic-05 random_generator 100 random
+tc cubic-06 random_generator 100 only0
+tc cubic-07 random_generator 100 only1
+tc cubic-08 random_generator 1 only0
+tc cubic-09 random_generator 1 only1
+tc cubic-10 random_generator 2 alternate0
+tc cubic-11 random_generator 2 alternate1
+tc cubic-12 random_generator 100 alternate0
+tc cubic-13 random_generator 100 alternate1
+tc cubic-14 random_generator 99 alternate0
+tc cubic-15 random_generator 99 alternate1
+tc cubic-16 random_generator 99 random
+
+# 2: N <= 5000
+group quadratic 25
+include_group cubic
+tc quadratic-01 random_generator 5000 random
+tc quadratic-02 random_generator 5000 random
+tc quadratic-03 random_generator 5000 random
+tc quadratic-04 random_generator 5000 random
+tc quadratic-05 random_generator 5000 random
+tc quadratic-06 random_generator 5000 random
+tc quadratic-07 random_generator 5000 random
+tc quadratic-08 random_generator 4999 random
+
+# 3: N <= 10^5
+group linear 50
+include_group cubic
+include_group quadratic
+tc linear-01 random_generator 100000 random
+tc linear-02 random_generator 100000 random
+tc linear-03 random_generator 100000 random
+tc linear-04 random_generator 100000 random
+tc linear-05 random_generator 100000 random
+tc linear-06 random_generator 100000 random
+tc linear-07 random_generator 100000 random
+tc linear-08 random_generator 99999 random
+
+generate_grader
+cleanup_programs
+

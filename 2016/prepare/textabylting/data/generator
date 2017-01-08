@@ -1,0 +1,58 @@
+#!/bin/bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+setup_dirs
+use_solution sol.cpp
+
+compile random_generator.py
+
+samplegroup
+sample 01
+sample 02
+
+group one 30
+tc one-01 random_generator 1 1 True
+tc one-02 random_generator 1 2 True
+tc one-03 random_generator 1 4 True
+tc one-04 random_generator 1 8 True
+tc one-05 random_generator 1 10 True
+tc one-06 random_generator 1 100 True
+
+group same 30
+include_group one
+tc same-01 random_generator 2 1 True
+tc same-02 random_generator 2 2 True
+tc same-03 random_generator 2 4 True
+tc same-04 random_generator 2 8 True
+tc same-05 random_generator 2 10 True
+tc same-06 random_generator 2 100 True
+tc same-07 random_generator 10 1 True
+tc same-08 random_generator 10 2 True
+tc same-09 random_generator 10 4 True
+tc same-10 random_generator 10 8 True
+tc same-11 random_generator 10 10 True
+tc same-12 random_generator 10 100 True
+
+group any 40
+include_group one
+include_group same
+tc any-01 random_generator 2 1 False
+tc any-02 random_generator 2 2 False
+tc any-03 random_generator 2 4 False
+tc any-04 random_generator 2 8 False
+tc any-05 random_generator 2 10 False
+tc any-06 random_generator 2 100 False
+tc any-07 random_generator 10 1 False
+tc any-08 random_generator 10 2 False
+tc any-09 random_generator 10 4 False
+tc any-10 random_generator 10 8 False
+tc any-11 random_generator 10 10 False
+tc any-12 random_generator 10 100 False
+tc any-13 random_generator 10 100 False
+tc any-14 random_generator 10 100 False
+tc any-15 random_generator 10 100 False
+
+generate_grader
+cleanup_programs
+

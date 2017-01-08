@@ -1,0 +1,96 @@
+\documentclass[tikz]{standalone}
+\usepackage{circuitikz}
+% \usepackage{tikz}
+
+\begin{document}
+\pagestyle{empty}
+
+% \begin{tikzpicture}[scale=1.0]
+%     \draw (0.9,-0.3) rectangle (2.1,0.3);
+%     \node at (1.5,0) {Haus};
+%     \draw (-3,-2) grid (4,-1);
+%     \draw[->] (1.5,-0.3) -- (1.5,-1);
+%
+%     \node at (-2.5,-1.5) {$1$};
+%     \node at (-1.5,-1.5) {$0$};
+%     \node at (-0.5,-1.5) {$0$};
+%     \node at (0.5,-1.5) {$1$};
+%     \node at (1.5,-1.5) {$0$};
+%     \node at (2.5,-1.5) {$0$};
+%     \node at (3.5,-1.5) {$1$};
+%
+%     \node at (-2.5,-2.2) {\scriptsize $1$};
+%     \node at (-1.5,-2.2) {\scriptsize $2$};
+%     \node at (-0.5,-2.2) {\scriptsize $3$};
+%     \node at (0.5,-2.2) {\scriptsize $4$};
+%     \node at (1.5,-2.2) {\scriptsize $5$};
+%     \node at (2.5,-2.2) {\scriptsize $6$};
+%     \node at (3.5,-2.2) {\scriptsize $7$};
+
+\begin{circuitikz}
+\newcommand{\AND}[2]{\draw (#2) node[and port] (#1) {}; \draw (#2) node[xshift=-0.66cm] {\tiny{OG}};};
+\newcommand{\OR}[2]{\draw (#2) node[or port] (#1) {}; \draw (#2) node[xshift=-0.55cm] {\tiny{EDA}};};
+\newcommand{\NOT}[2]{\draw (#2) node[not port] (#1) {}; \draw (#2) node[xshift=-0.15cm] {\tiny{EKKI}};};
+\newcommand{\LINK}[4]{
+    \draw (#1) -- (#2);
+    \fill[white] (#1) circle (0.1cm);
+    \fill[white] (#2) circle (0.1cm);
+    \draw (#1) circle (0.1cm);
+    \draw (#2) circle (0.1cm);
+    \node at (#1) {\tiny{#3}};
+    \node at (#2) {\tiny{#3}};
+};
+\newcommand{\INPUT}[3]{
+    \node (#1) at (#2) {};
+    \node[anchor=east,xshift=-1] at (#2) {#3};
+};
+\newcommand{\OUTPUT}[2]{
+    \node (#1) at (#2) {};
+};
+% \draw
+% (0,2) node[and port] (myand1) {}
+% (0,0) node[and port] (myand2) {}
+% (2,1) node[xnor port] (myxnor) {}
+% (myand1.out) -- (myxnor.in 1)
+% (myand2.out) -- (myxnor.in 2);
+
+    \INPUT{a}{1,1}{SATT};
+    \INPUT{b}{0,0}{SATT};
+    \NOT{c}{1.5,0};
+    \LINK{b}{c.in}{2}{3};
+    \AND{d}{4,0.5};
+    \LINK{a}{d.in 1}{1}{4};
+    \LINK{c.out}{d.in 2}{3}{4};
+
+    \INPUT{e}{3,1.5}{SATT};
+    \OR{f}{6,1};
+    \LINK{e}{f.in 1}{8}{9};
+    \LINK{d.out}{f.in 2}{4}{9};
+
+    \OUTPUT{g}{7,1.5};
+    \LINK{f.out}{g}{9}{9};
+
+    \INPUT{h}{4,-1}{OSATT};
+    \OR{i}{6,-1};
+    \LINK{d.out}{i.in 1}{4}{6};
+    \LINK{h}{i.in 2}{5}{6};
+
+    \NOT{j}{7.5,0};
+    \LINK{i.out}{j.in}{6}{7};
+    \OUTPUT{k}{9,0};
+    \LINK{j.out}{k}{7}{7};
+
+    % \draw (2,0) node[and port] (and1) {}; \draw (2,0) node[xshift=-0.65cm] {OG};
+
+\end{circuitikz}
+
+    % \def\size {5}
+    % \def\cellscale {1.5}
+    % \foreach \x in {0,...,\size}
+    %     \foreach \y in {\size,...,0}
+    %     {
+    %         \draw (\cellscale*\x,\cellscale*\y) rectangle +(\cellscale, \cellscale);
+    %         \draw (\cellscale*\x + \cellscale/2,\cellscale*\y + \cellscale/2) node{$(\y,\x)$};
+    %     }
+% \end{tikzpicture}
+\end{document}

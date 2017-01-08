@@ -1,0 +1,95 @@
+#!/bin/bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+setup_dirs
+use_solution divrule.cpp
+
+compile random_generator.py # Arguments: n k method seed
+
+samplegroup
+sample 01
+sample 02
+sample 03
+
+# 1: 1 <= N <= 3
+group check1 10
+tc check1-01 random_generator fixed 1
+tc check1-02 random_generator fixed 2
+tc check1-03 random_generator fixed 3
+
+# 2: 1 <= N <= 30
+group check2 10
+include_group check1
+tc check2-01 random_generator fixed 4
+tc check2-02 random_generator fixed 9
+tc check2-03 random_generator fixed 11
+tc check2-04 random_generator fixed 12
+tc check2-05 random_generator fixed 13
+tc check2-06 random_generator fixed 14
+tc check2-07 random_generator fixed 15
+tc check2-08 random_generator fixed 20
+tc check2-09 random_generator fixed 21
+tc check2-10 random_generator fixed 23
+tc check2-11 random_generator fixed 24
+tc check2-12 random_generator fixed 25
+tc check2-13 random_generator fixed 26
+tc check2-14 random_generator fixed 29
+
+# 3: 1 <= N <= 30000
+group loop 20
+include_group check1
+include_group check2
+tc loop-01 random_generator random 0 30000
+tc loop-02 random_generator random 0 30000
+tc loop-03 random_generator random 0 30000
+tc loop-04 random_generator random 0 30000
+tc loop-05 random_generator random 1 30000
+tc loop-06 random_generator random 1 30000
+tc loop-07 random_generator random 1 30000
+tc loop-08 random_generator random 1 30000
+tc loop-09 random_generator random 2 30000
+tc loop-10 random_generator random 2 30000
+tc loop-11 random_generator random 2 30000
+tc loop-12 random_generator random 2 30000
+
+# 4: 1 <= N <= 10^12
+group mod 20
+include_group check1
+include_group check2
+include_group loop
+tc mod-01 random_generator random 0 1000000000000
+tc mod-02 random_generator random 0 1000000000000
+tc mod-03 random_generator random 0 1000000000000
+tc mod-04 random_generator random 0 1000000000000
+tc mod-05 random_generator random 1 1000000000000
+tc mod-06 random_generator random 1 1000000000000
+tc mod-07 random_generator random 1 1000000000000
+tc mod-08 random_generator random 1 1000000000000
+tc mod-09 random_generator random 2 1000000000000
+tc mod-10 random_generator random 2 1000000000000
+tc mod-11 random_generator random 2 1000000000000
+tc mod-12 random_generator random 2 1000000000000
+
+# 5: 1 <= N <= 10^100
+group rule 40
+include_group check1
+include_group check2
+include_group loop
+include_group mod
+tc rule-01 random_generator random 0 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tc rule-02 random_generator random 0 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tc rule-03 random_generator random 0 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tc rule-04 random_generator random 0 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tc rule-05 random_generator random 1 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tc rule-06 random_generator random 1 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tc rule-07 random_generator random 1 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tc rule-08 random_generator random 1 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tc rule-09 random_generator random 2 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tc rule-10 random_generator random 2 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tc rule-11 random_generator random 2 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+tc rule-12 random_generator random 2 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+generate_grader
+cleanup_programs
+

@@ -1,0 +1,53 @@
+#!/bin/bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+setup_dirs
+use_solution correct.cpp
+
+compile random_generator.py # Arguments: Q maxX method [removeratio] (in the case of method == 'wremov') seed
+
+samplegroup
+sample 01
+sample 02
+sample 03
+
+# 1: Q <= 1000, no removals
+group noremovesmall 20
+tc noremovesmall-01 random_generator 1000 1000 noremove
+tc noremovesmall-02 random_generator 1000 1000000 noremove
+
+# 2: Q <= 1000
+group removesmall 20
+include_group noremovesmall
+tc removesmall-01 random_generator 1000 500 addremove
+tc removesmall-02 random_generator 1000 1000000 addremove
+tc removesmall-03 random_generator 1000 500 wremove 0.2
+tc removesmall-04 random_generator 1000 1000000 wremove 0.2
+tc removesmall-05 random_generator 1000 500 wremove 0.3
+tc removesmall-06 random_generator 1000 1000000 wremove 0.3
+tc removesmall-07 random_generator 1000 500 wremove 0.4
+tc removesmall-08 random_generator 1000 1000000 wremove 0.4
+
+# 3: Q <= 10^5, x_i <= 100
+group removevalsmall 20
+tc removevalsmall-01 random_generator 100000 100 addremove
+tc removevalsmall-02 random_generator 100000 100 wremove 0.4
+
+# 4: Q <= 10^5, no removals
+group noremovelarge 20
+include_group noremovesmall
+tc noremovelarge-01 random_generator 100000 1000000000 noremove 0.4
+
+# 5: Q <= 10^5
+group removelarge 20
+include_group noremovesmall
+include_group removesmall
+include_group removevalsmall
+include_group noremovelarge
+tc removelarge-01 random_generator 100000 10000 addremove
+tc removelarge-02 random_generator 100000 1000000000 wremove 0.4
+
+generate_grader
+cleanup_programs
+

@@ -1,0 +1,61 @@
+#!/bin/bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+setup_dirs
+use_solution trie.cpp
+
+compile random_generator.py # Arguments: n q three seed
+
+samplegroup
+sample 01
+
+# 1: N = 1, Q = 1, query numbers have length 3
+group tiny3 5
+tc tiny3-01 random_generator 1 1 True
+tc tiny3-02 random_generator 1 1 True
+tc tiny3-03 random_generator 1 1 True 1337
+tc tiny3-04 random_generator 1 1 True 1338
+
+# 2: N = 1, Q = 1
+group tiny 5
+include_group tiny3
+tc tiny-01 random_generator 1 1 False
+tc tiny-02 random_generator 1 1 False
+tc tiny-03 random_generator 1 1 False 1341
+tc tiny-04 random_generator 1 1 False 1342
+
+# 3: N <= 100, Q <= 100, query numbers have length 3
+group small3 15
+include_group tiny3
+tc small3-01 random_generator 100 100 True
+tc small3-02 random_generator 100 100 True
+
+# 4: N <= 100, Q <= 100
+group small 20
+include_group tiny3
+include_group tiny
+include_group small3
+tc small-01 random_generator 100 100 False
+tc small-02 random_generator 100 100 False
+
+# 5: N <= 10^5, Q <= 10^5, query numbers have length 3
+group large3 25
+include_group tiny3
+include_group small3
+tc large3-01 random_generator 100000 100000 True
+tc large3-02 random_generator 100000 100000 True
+
+# 6: N <= 10^5, Q <= 10^5
+group large 30
+include_group tiny3
+include_group tiny
+include_group small3
+include_group small
+include_group large3
+tc large-01 random_generator 100000 100000 False
+tc large-02 random_generator 100000 100000 False
+
+generate_grader
+cleanup_programs
+

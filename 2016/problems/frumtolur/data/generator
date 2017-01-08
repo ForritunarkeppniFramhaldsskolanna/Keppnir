@@ -1,0 +1,18 @@
+#!/bin/bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+setup_dirs
+use_solution ../smpl.py
+
+compile random_generator.py # Arguments: n k method seed
+
+samplegroup
+sample 01
+
+group main 100
+tc main-01 random_generator
+
+generate_grader
+cleanup_programs
+

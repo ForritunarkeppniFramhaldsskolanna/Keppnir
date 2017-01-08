@@ -1,0 +1,32 @@
+\problemname{Uppröðun}
+
+\illustration{0.4}{stofa}{Stofa í Háskólanum í Reykjavík}
+
+Eitt sem skipuleggjendur keppninnar þurfa að gera er að ákveða hvaða lið eiga að vera í hvaða stofu. Það eru $N$ stofur og $M$ keppendur. Stofurnar eru svipað stórar, svo það er best að keppendum sé skipt niður á stofurnar eins jafnt og mögulegt er. Til dæmis ef það eru $N=3$ stofur og $M=8$ keppendur, þá er best að setja $3$ keppendur í eina stofu, $3$ keppendur í aðra stofu, og svo síðustu $2$ keppendurna í síðustu stofuna.
+
+\section*{Inntak}
+Inntakið samanstendur af tveimur línum. Á fyrri línunni er heiltalan $N$, og á seinni línunni er heiltalan $M$.
+
+\section*{Úttak}
+Úttak á að innihalda $N$ línur, eina fyrir hverja stofu. Ef það eiga $k$ keppendur að vera í stofu númer $i$, þá á lína númer $i$ að innihalda $k$ eintök af tákninu \texttt{*}.
+
+\section*{Útskýring á sýnidæmum}
+Í fyrsta sýnidæminu er $N=1$ stofa og $M=5$ keppendur. Þar sem það er bara ein stofa, þá er eru allir keppendurnir í þeirri stofu.
+
+Annað sýnidæmið er það sama og var tekið að ofan.
+
+Í þriðja sýnidæminu eru $N=5$ stofur og $M=33$ keppendur. Hér er best að setja $6$ keppendur í tvær af stofunum, en $7$ keppendur í hinar þrjár stofurnar. Hér sjáum við líka að röð skiptir ekki máli. 
+
+\section*{Stigagjöf}
+Lausnin mun verða prófuð á miserfiðum inntaksgögnum, og er gögnunum skipt í
+hópa eins og sýnt er í töflunni að neðan. Lausnin mun svo fá stig eftir því
+hvaða hópar eru leystir.
+
+\begin{tabular}{|l|l|l|l|}
+\hline
+Hópur & Stig & Inntaksstærð & Önnur skilyrði \\ \hline
+1 & 20 & $N = 1$, $M \leq 500$ & \\ \hline
+2 & 20 & $N = 2$, $M \leq 500$ & \\ \hline
+3 & 30 & $N \leq 10$, $M \leq 500$ & Það munu vera jafn margir í öllum stofum \\ \hline
+4 & 30 & $N \leq 10$, $M \leq 500$ & \\ \hline
+\end{tabular}

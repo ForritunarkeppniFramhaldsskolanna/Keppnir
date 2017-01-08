@@ -1,0 +1,46 @@
+\problemname{Símanúmer}
+Kristín hefur risið til metorða innan Rannsóknardeildar Lögreglunnar í
+Reykjavík undanfarin ár, einna helst vegna færni sinnar í tölvunarfræði, og er
+orðinn einn helsti rannsakandi deildarinnar. Við rannsóknir mála vinnur hún
+oftast með vitnum og hefur hún tekið eftir því, í vinnu sinni, að vitni muna
+símanúmer mjög illa. Flest vitni muna bara fyrstu stafina í símanúmerum.
+
+Þau símanúmer sem vitnin gefa upp eru oftar en ekki lykillinn að lausn
+sakamálanna, en það kerfi sem lögreglan notar við að fara í gegnum símanúmerin
+er ekki skilvirkt. Hópur lögregluþjóna fer yfir öll skráð símanúmer og tínir
+til þau símanúmer sem byrja á þeim tölustöfum sem vitnin gefa upp.
+
+Kristín, verandi tölvunarfræðingur, veit að hægt er að gera leitina töluvert
+skilvirkari, en er mjög upptekin og biður því ykkur um að útfæra leitina fyrir
+sig. Forritið á að geta tekið við upphafi símanúmers, sem við köllum
+\emph{fyrirspurn}, frá vitni og segir svo til um hversu mörg símanúmer byrja á
+þeirri fyrirspurn.
+
+\section*{Inntak}
+Fyrsta lína inntaksins inniheldur heiltölu $N$ sem segir til um fjölda
+símanúmera í safninu sem lögreglan hefur yfir að ráða. Næstu $N$ línur
+innihalda símanúmer safnsins, eitt símanúmer í hverri línu. Engin tvö símanúmer
+eru eins, og hvert þeirra samanstendur af $7$ tölustöfum. Næsta lína inniheldur
+heiltölu $Q$ sem segir til um fjölda fyrirspurna. Næstu $Q$ línur innihalda
+fyrirspurnirnar, ein fyrirspurn í hverri línu. Hver fyrirspurn samanstendur af
+$1$ til $7$ tölustöfum.
+
+\section*{Úttak}
+Skrifið út eina línu fyrir sérhverja fyrirspurn með fjölda símanúmera í safninu
+sem byrja á þeirri fyrirspurn.
+
+\section*{Stigagjöf}
+Lausnin mun verða prófuð á miserfiðum inntaksgögnum, og er gögnunum skipt í
+hópa eins og sýnt er í töflunni að neðan. Lausnin mun svo fá stig eftir því
+hvaða hópar eru leystir.
+
+\begin{tabular}{|l|l|l|l|}
+\hline
+Hópur & Stig & Inntaksstærð & Önnur skilyrði \\ \hline
+1 & 5 & $N=1$, $Q=1$ & Hver fyrirspurn inniheldur nákvæmlega $3$ tölustafi \\ \hline
+2 & 5 & $N = 1$, $Q=1$ & \\ \hline
+3 & 15 & $N \leq 100$, $Q \leq 100$ & Hver fyrirspurn inniheldur nákvæmlega $3$ tölustafi \\ \hline
+4 & 20 & $N \leq 100$, $Q \leq 100$ & \\ \hline
+5 & 25 & $N \leq 10^5$, $Q \leq 10^5$ & Hver fyrirspurn inniheldur nákvæmlega $3$ tölustafi \\ \hline
+6 & 30 & $N \leq 10^5$, $Q \leq 10^5$ & \\ \hline
+\end{tabular}

@@ -1,0 +1,61 @@
+#!/bin/bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+setup_dirs
+use_solution deque.cpp
+
+compile random_generator.py # Arguments: n k method seed
+
+samplegroup
+sample 01
+sample 02
+sample 03
+
+# 1: N <= 100, only the letter 'a' is used (10 points)
+group onlya 10
+tc onlya-01 random_generator 100 1 random
+tc onlya-02 random_generator 100 1 erase
+tc onlya-03 random_generator  99 1 erase
+tc onlya-04 random_generator 100 1 interleave
+tc onlya-05 random_generator  99 1 interleave
+tc onlya-06 random_generator 100 1 interleave2
+tc onlya-07 random_generator 100 1 blocks
+
+# 2: N <= 100, no two consecutive deletions (10 points)
+group noconsecutive 10
+tc noconsecutive-01 random_generator 100 26 interleave
+tc noconsecutive-01 random_generator  99 26 interleave
+tc noconsecutive-01 random_generator 100 26 interleave2
+tc noconsecutive-01 random_generator 100 26 interleave2
+
+# 3: N <= 100 (40 points)
+group small 40
+include_group onlya
+include_group noconsecutive
+tc small-01 random_generator 100 26 random
+tc small-02 random_generator 100 26 erase
+tc small-03 random_generator  99 26 erase
+tc small-04 random_generator 100 26 interleave
+tc small-05 random_generator  99 26 interleave
+tc small-06 random_generator 100 26 interleave2
+tc small-07 random_generator 100 26 blocks
+
+# 4: N <= 1000000 (40 points)
+group large 40
+include_group onlya
+include_group noconsecutive
+include_group small
+tc large-01 random_generator 1000000 26 random
+# tc large-02 random_generator 1000000 26 erase
+tc large-03 random_generator 999999  26 erase
+tc large-04 random_generator 1000000 26 interleave
+# tc large-05 random_generator 999999  26 interleave
+tc large-06 random_generator 1000000 26 interleave2
+tc large-07 random_generator 1000000 26 blocks
+tc large-08 random_generator 1000000 26 worst
+tc large-09 random_generator 1000000 26 none
+
+generate_grader
+cleanup_programs
+

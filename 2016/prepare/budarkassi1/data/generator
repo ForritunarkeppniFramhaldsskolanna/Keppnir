@@ -1,0 +1,30 @@
+#!/bin/bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+setup_dirs
+use_solution sol.cpp
+
+compile random_generator.py
+
+samplegroup
+sample 01
+sample 02
+
+group rand 100
+tc rand-01 random_generator 1
+tc rand-02 random_generator 2
+tc rand-03 random_generator 3
+tc rand-04 random_generator 5
+tc rand-05 random_generator 10
+tc rand-06 random_generator 30
+tc rand-07 random_generator 50
+tc rand-08 random_generator 50
+tc rand-09 random_generator 100
+tc rand-10 random_generator 100
+tc rand-11 random_generator 100
+tc rand-12 random_generator 100
+
+generate_grader
+cleanup_programs
+

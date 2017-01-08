@@ -1,0 +1,68 @@
+#!/bin/bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+setup_dirs
+use_solution sol.cpp
+
+compile random_generator.py
+
+samplegroup
+sample 01
+sample 02
+sample 03
+
+group easy 50
+tc easy-01 random_generator 1 1
+tc easy-02 random_generator 1 1
+tc easy-03 random_generator 1 1
+tc easy-04 random_generator 1 1
+tc easy-05 random_generator 1 1
+tc easy-06 random_generator 1 2
+tc easy-07 random_generator 1 2
+tc easy-08 random_generator 1 2
+tc easy-09 random_generator 1 2
+tc easy-10 random_generator 1 3
+tc easy-11 random_generator 1 4
+tc easy-12 random_generator 1 5
+tc easy-13 random_generator 1 6
+tc easy-14 random_generator 1 10
+tc easy-15 random_generator 1 20
+tc easy-16 random_generator 1 30
+tc easy-17 random_generator 1 100
+
+group hard 50
+include_group easy
+tc hard-01 random_generator 2 1
+tc hard-02 random_generator 2 1
+tc hard-03 random_generator 2 1
+tc hard-04 random_generator 2 2
+tc hard-05 random_generator 2 2
+tc hard-06 random_generator 2 2
+tc hard-07 random_generator 2 3
+tc hard-08 random_generator 2 4
+tc hard-09 random_generator 2 10
+tc hard-10 random_generator 3 1
+tc hard-11 random_generator 3 1
+tc hard-12 random_generator 3 1
+tc hard-13 random_generator 3 2
+tc hard-14 random_generator 3 2
+tc hard-15 random_generator 3 2
+tc hard-16 random_generator 3 3
+tc hard-17 random_generator 3 4
+tc hard-18 random_generator 3 10
+tc hard-19 random_generator 5 1
+tc hard-20 random_generator 5 1
+tc hard-21 random_generator 5 1
+tc hard-22 random_generator 5 2
+tc hard-23 random_generator 5 2
+tc hard-24 random_generator 5 2
+tc hard-25 random_generator 5 3
+tc hard-26 random_generator 5 4
+tc hard-27 random_generator 5 10
+tc hard-28 random_generator 5 20
+tc hard-29 random_generator 5 100
+
+generate_grader
+cleanup_programs
+

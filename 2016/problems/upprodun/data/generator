@@ -1,0 +1,61 @@
+#!/bin/bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+setup_dirs
+use_solution sol_rand.py
+
+compile random_generator.py # Arguments: n k method seed
+
+samplegroup
+sample 01
+sample 02
+sample 03
+sample 04
+
+# 1: N == 1, M <= 500
+group one 20
+tc one-01 random_generator 1 False
+tc one-02 random_generator 1 False
+tc one-03 random_generator 1 False
+tc one-04 random_generator 1 False
+tc one-05 random_generator 1 False
+
+# 2: N == 2, M <= 500
+group two 20
+tc two-01 random_generator 2 False
+tc two-02 random_generator 2 False
+tc two-03 random_generator 2 False
+tc two-04 random_generator 2 False
+tc two-05 random_generator 2 False
+
+# 3: N <= 10, M <= 500, M divisible by N
+group div 30
+tc div-01 random_generator 2 True
+tc div-02 random_generator 3 True
+tc div-03 random_generator 4 True
+tc div-04 random_generator 5 True
+tc div-05 random_generator 6 True
+tc div-06 random_generator 7 True
+tc div-07 random_generator 8 True
+tc div-08 random_generator 9 True
+tc div-09 random_generator 10 True
+
+# 4: N <= 10, M <= 500
+group any 30
+include_group one
+include_group two
+include_group div
+tc any-01 random_generator 2 False
+tc any-02 random_generator 3 False
+tc any-03 random_generator 4 False
+tc any-04 random_generator 5 False
+tc any-05 random_generator 6 False
+tc any-06 random_generator 7 False
+tc any-07 random_generator 8 False
+tc any-08 random_generator 9 False
+tc any-09 random_generator 10 False
+
+generate_grader
+cleanup_programs
+

@@ -1,0 +1,33 @@
+\problemname{Léttasta verkefnið?}
+
+\illustration{0.4}{stigatafla}{Stigatafla}
+
+Jói litli er að taka þátt í Forritunarkeppni Framhaldsskólanna í fyrsta skipti. Liðið hans er í stökustu vandræðum með að leysa dæmin, og er enn sem komið er ekki búið að leysa neitt dæmi. Núna starir Jói litli bara á stigatöfluna með öfundaraugum.
+
+En þá fær hann hugmynd. Kannski er liðið hans bara ekki búið að vera að reyna við léttu dæmin. Hann ákveður að nýta stigatöfluna til að finna einfaldasta dæmið, og hann hugsar að einfaldasta dæmið sé líklega það dæmi sem hefur gefið flest stig samtals.
+
+En stigataflan er stór, svo Jói litli sér að maður verður að nota forritun til að finna einfaldasta dæmið. En hann er ekki nógu klár í forritun, og biður þig því um hjálp. Viltu ekki hjálpa Jóa litla?
+
+\section*{Inntak}
+Á fyrstu línu er jákvæða heiltalan $N$ sem táknar fjölda dæma í stigatöflunni. Á annarri línu er jákvæða heiltalan $M$ sem táknar fjölda liða í stigatöflunni. Á þriðju línu eru nöfnin á dæmunum $N$, aðskild með bili. Nöfnin eru mismunandi og samanstanda af enskum lágstöfum. Þar eftir fylgja $M$ línur, ein fyrir hvert lið. Lína hvers liðs samanstendur af $N$ heiltölum á bilinu $0$ til $100$ sem tákna fjölda stiga sem liðið hefur fyrir samsvarandi dæmi. Það er, stigin eru gefin upp í sömu röð og nöfnin á dæmunum.
+
+\section*{Úttak}
+Skrifið út eina línu með nafninu á dæminu sem hefur gefið flest stig samtals.
+
+\section*{Útskýring á sýnidæmum}
+Í sýnidæminu eru þrjú dæmi, \texttt{frumtolur}, \texttt{lidaskipting} og \texttt{akureyri}, og fjögur lið. Fyrsta liðið fékk $100$ stig fyrir \texttt{frumtolur}, $60$ stig fyrir \texttt{lidaskipting} og engin stig fyrir \texttt{akureyri}. Annað liðið fékk engin stig fyrir \texttt{frumtolur}, $80$ stig fyrir \texttt{lidaskipting} og $50$ stig fyrir \texttt{akureyri}. Samtals hafa verið gefin $100+0+10+0=110$ stig fyrir \texttt{frumtolur}, $60+80+90+0=230$ stig fyrir \texttt{lidaskipting} og $0+50+10+0=60$ stig fyrir \texttt{akureyri}. Við sjáum því að dæmið \texttt{lidaskipting} hefur gefið flest stig samtals, og er það því svarið.
+
+\section*{Stigagjöf}
+Lausnin mun verða prófuð á miserfiðum inntaksgögnum, og er gögnunum skipt í
+hópa eins og sýnt er í töflunni að neðan. Lausnin mun svo fá stig eftir því
+hvaða hópar eru leystir.
+
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Önnur skilyrði \\ \hline
+1 & 10 & $N=1$, $M \leq 100$ \\ \hline
+2 & 10 & $N=2$, $M \leq 100$ \\ \hline
+3 & 20 & $N \leq 12$, $M=1$ \\ \hline
+4 & 20 & $N \leq 12$, $M=2$ \\ \hline
+5 & 40 & $N \leq 12$, $M \leq 500$ \\ \hline
+\end{tabular}

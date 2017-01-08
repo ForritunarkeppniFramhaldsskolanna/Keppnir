@@ -1,0 +1,117 @@
+#!/bin/bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+setup_dirs
+
+use_solution greedy.cpp
+
+compile random_generator.py # Arguments: N T method seed
+
+samplegroup
+sample 01
+sample 02
+
+# 1: N <= 10, K <= 1000
+group dp1 15
+tc dp1-01 random_generator 10 1000 random
+tc dp1-02 random_generator 10 1000 random
+tc dp1-03 random_generator 10 1000 random
+tc dp1-04 random_generator 10 1000 random
+tc dp1-05-none random_generator 10 1000 none
+tc dp1-06-none random_generator 10 1000 none
+tc dp1-07-all random_generator 10 1000 all_unique
+tc dp1-08-all random_generator 10 1000 all_unique
+tc dp1-09 random_generator 10 1000 dense
+tc dp1-10 random_generator 10 1000 dense
+tc dp1-11 random_generator 10 1000 sim_random
+tc dp1-12 random_generator 10 1000 sim_random
+tc dp1-13 random_generator 10 1000 sim_random2
+tc dp1-14 random_generator 10 1000 sim_random2
+tc dp1-15 random_generator 10 1000 sim_random_all
+tc dp1-16 random_generator 10 1000 sim_random_all
+
+# 2: N <= 100, K <= 100
+group mat 15
+tc mat-01 random_generator 100 100 random
+tc mat-02 random_generator 100 100 random
+tc mat-03 random_generator 100 100 random
+tc mat-04 random_generator 100 100 random
+tc mat-05-none random_generator 50 100 none
+tc mat-06-none random_generator 50 100 none
+tc mat-07-all random_generator 100 100 all_unique
+tc mat-08-all random_generator 100 100 all_unique
+tc mat-09 random_generator 100 100 dense
+tc mat-10 random_generator 100 100 dense
+tc mat-11 random_generator 100 100 sim_random
+tc mat-12 random_generator 100 100 sim_random
+tc mat-13 random_generator 100 100 sim_random2
+tc mat-14 random_generator 100 100 sim_random2
+tc mat-15 random_generator 100 100 sim_random_all
+tc mat-16 random_generator 100 100 sim_random_all
+
+# 3: N <= 1000, K <= 1000
+group dp2 20
+include_group mat
+include_group dp1
+tc dp2-01 random_generator 1000 1000 random
+tc dp2-02 random_generator 1000 1000 random
+tc dp2-03 random_generator 1000 1000 random
+tc dp2-04 random_generator 1000 1000 random
+tc dp2-05-none random_generator 500 1000 none
+tc dp2-06-none random_generator 500 1000 none
+tc dp2-07-all random_generator 1000 1000 all_unique
+tc dp2-08-all random_generator 1000 1000 all_unique
+tc dp2-09 random_generator 1000 1000 dense
+tc dp2-10 random_generator 1000 1000 dense
+tc dp2-11 random_generator 1000 1000 dense
+tc dp2-12 random_generator 1000 1000 dense
+tc dp2-13 random_generator 1000 1000 sim_random
+tc dp2-14 random_generator 1000 1000 sim_random
+tc dp2-15 random_generator 1000 1000 sim_random2
+tc dp2-16 random_generator 1000 1000 sim_random2
+tc dp2-17 random_generator 1000 1000 sim_random_all
+tc dp2-18 random_generator 1000 1000 sim_random_all
+
+# 4: N <= 10^5, K <= 2
+group special 20
+tc special-01 random_generator 100000 2 random
+tc special-02 random_generator 100000 2 random
+tc special-03 random_generator 100000 2 random
+tc special-04 random_generator 100000 2 random
+tc special-05-none random_generator 1 2 none
+tc special-06-all random_generator 2 2 all_unique
+tc special-07 random_generator 100000 2 biased0
+tc special-08 random_generator 100000 2 biased1
+
+# 5: N <= 10^5, K <= 100000
+group greedyslow 15
+include_group mat
+include_group dp1
+include_group dp2
+include_group special
+tc greedyslow-01 random_generator 100000 100000 random
+tc greedyslow-02-none random_generator 50000 100000 none
+tc greedyslow-03-all random_generator 100000 100000 all_unique
+tc greedyslow-04 random_generator 100000 100000 dense
+tc greedyslow-05 random_generator 100000 100000 sim_random
+tc greedyslow-06 random_generator 100000 100000 sim_random2
+tc greedyslow-07 random_generator 100000 100000 sim_random_all
+
+# 6: N <= 10^5, K <= 10^9
+group greedy 15
+include_group mat
+include_group dp1
+include_group dp2
+include_group special
+include_group greedyslow
+tc greedy-01 random_generator 100000 1000000000 random
+tc greedy-02-none random_generator 100000 1000000000 none
+tc greedy-03-all random_generator 100000 1000000000 all_unique
+tc greedy-04 random_generator 100000 1000000000 dense
+tc greedy-05 random_generator 100000 1000000000 sim_random
+tc greedy-06 random_generator 100000 1000000000 sim_random2
+tc greedy-07 random_generator 100000 1000000000 sim_random_all
+
+generate_grader
+cleanup_programs

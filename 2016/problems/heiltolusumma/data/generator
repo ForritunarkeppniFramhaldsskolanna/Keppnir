@@ -1,0 +1,78 @@
+#!/bin/bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+setup_dirs
+use_solution sol.cpp
+
+compile random_generator.py # Arguments: lo hi seed
+
+samplegroup
+sample 01
+sample 02
+sample 03
+
+# 1: 1 <= N <= 100 (10 points)
+group smallpos 10
+tc smallpos-01 random_generator 1     1
+tc smallpos-02 random_generator 2     2
+tc smallpos-03 random_generator 3    10
+tc smallpos-04 random_generator 11  100
+tc smallpos-05 random_generator 1   100
+tc smallpos-06 random_generator 99   99
+tc smallpos-07 random_generator 100 100
+
+# 2: 1 <= N <= 10^5 (20 points)
+group medpos 20
+include_group smallpos
+tc medpos-01 random_generator 100   100000
+tc medpos-01 random_generator 100   100000
+tc medpos-01 random_generator 40000 100000
+tc medpos-01 random_generator 50000 100000
+tc medpos-01 random_generator 90000 100000
+tc medpos-01 random_generator 98000 100000
+
+# 3: 1 <= N <= 10^9 (20 points)
+group largepos 20
+include_group smallpos
+include_group medpos
+tc largepos-01 random_generator 100000    1000000000
+tc largepos-02 random_generator 1000000   1000000000
+tc largepos-03 random_generator 10000000  1000000000
+tc largepos-04 random_generator 100000000 1000000000
+tc largepos-05 random_generator 200000000 1000000000
+tc largepos-06 random_generator 400000000 1000000000
+tc largepos-07 random_generator 900000000 1000000000
+
+# 4: -100 <= N <= 100 (20 points)
+group small 20
+include_group smallpos
+tc small-01 random_generator   0   0
+tc small-02 random_generator  -1  -1
+tc small-03 random_generator  -2  -2
+tc small-04 random_generator -10  -3
+tc small-05 random_generator -100 -11
+tc small-06 random_generator -100  -1
+tc small-07 random_generator  -99 -99
+tc small-08 random_generator -100 -100
+
+# 5: -10^9 <= N <= 10^9 (30 points)
+group large 30
+include_group smallpos
+include_group medpos
+include_group largepos
+include_group small
+tc large-01 random_generator -1000000000 -100
+tc large-02 random_generator -1000000000 -100
+tc large-03 random_generator -1000000000 -100
+tc large-04 random_generator -1000000000 -100000
+tc large-05 random_generator -1000000000 -1000000
+tc large-06 random_generator -1000000000 -10000000
+tc large-07 random_generator -1000000000 -100000000
+tc large-08 random_generator -1000000000 -200000000
+tc large-09 random_generator -1000000000 -400000000
+tc large-10 random_generator -1000000000 -900000000
+
+generate_grader
+cleanup_programs
+

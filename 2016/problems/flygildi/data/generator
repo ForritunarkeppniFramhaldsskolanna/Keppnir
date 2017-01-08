@@ -1,0 +1,104 @@
+#!/bin/bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+setup_dirs
+use_solution sol.cpp
+
+compile random_generator.py # Arguments: n x0 ypos method
+
+samplegroup
+sample 01
+sample 02
+sample 03
+
+# 1: N == 1
+group one 10
+tc one-01 random_generator 1 False False random
+tc one-02 random_generator 1 False False random
+tc one-03 random_generator 1 False False random
+tc one-04 random_generator 1 True False random
+tc one-05 random_generator 1 True False random
+
+# 2: N <= 3
+group three 10
+include_group one
+tc three-01 random_generator 3 True False jumps
+tc three-02 random_generator 3 False False random
+tc three-03 random_generator 3 False False random
+tc three-04 random_generator 3 False False random
+tc three-05 random_generator 3 True False random
+tc three-06 random_generator 3 True False random
+
+# 3: N <= 1000, x_i = 0, y_i >= 0
+group x0posy 20
+tc x0posy-01 random_generator 1 True True random
+tc x0posy-02 random_generator 2 True True random
+tc x0posy-03 random_generator 3 True True random
+tc x0posy-04 random_generator 4 True True random
+tc x0posy-05 random_generator 100 True True random
+tc x0posy-06 random_generator 100 True True random
+tc x0posy-07 random_generator 100 True True random
+tc x0posy-08 random_generator 500 True True random
+tc x0posy-09 random_generator 500 True True random
+tc x0posy-10 random_generator 500 True True random
+tc x0posy-11 random_generator 1000 True True random
+tc x0posy-12 random_generator 1000 True True random
+tc x0posy-13 random_generator 1000 True True random
+tc x0posy-14 random_generator 1000 True True random
+
+# 4: N <= 1000, x_i = 0
+group x0 20
+include_group x0posy
+tc x0-01 random_generator 1 True False random
+tc x0-02 random_generator 2 True False random
+tc x0-03 random_generator 3 True False random
+tc x0-04 random_generator 4 True False random
+tc x0-05 random_generator 100 True False random
+tc x0-06 random_generator 100 True False random
+tc x0-07 random_generator 100 True False random
+tc x0-08 random_generator 500 True False random
+tc x0-09 random_generator 500 True False random
+tc x0-10 random_generator 500 True False random
+tc x0-11 random_generator 1000 True False random
+tc x0-12 random_generator 1000 True False random
+tc x0-13 random_generator 1000 True False random
+tc x0-14 random_generator 1000 True False random
+tc x0-15 random_generator 2 True False jumps
+tc x0-16 random_generator 3 True False jumps
+tc x0-17 random_generator 5 True False jumps
+tc x0-18 random_generator 8 True False jumps
+tc x0-19 random_generator 10 True False jumps
+tc x0-20 random_generator 100 True False jumps
+tc x0-21 random_generator 100 True False jumps
+tc x0-22 random_generator 100 True False jumps
+tc x0-23 random_generator 500 True False jumps
+tc x0-24 random_generator 500 True False jumps
+tc x0-25 random_generator 500 True False jumps
+tc x0-26 random_generator 1000 True False jumps
+tc x0-27 random_generator 1000 True False jumps
+tc x0-28 random_generator 1000 True False jumps
+
+# 5: N <= 8
+group eight 40
+include_group one
+include_group three
+tc eight-01 random_generator 5 True False jumps
+tc eight-02 random_generator 8 True False jumps
+tc eight-03 random_generator 5 True False random
+tc eight-04 random_generator 8 True False random
+tc eight-05 random_generator 4 False False random
+tc eight-06 random_generator 5 False False random
+tc eight-07 random_generator 6 False False random
+tc eight-08 random_generator 7 False False random
+tc eight-09 random_generator 8 False False random
+tc eight-10 random_generator 8 False False random
+tc eight-11 random_generator 8 False False random
+tc eight-12 random_generator 8 False False random
+tc eight-13 random_generator 8 False False random
+tc eight-14 random_generator 8 False False random
+tc eight-15 random_generator 8 False False random
+
+generate_grader
+cleanup_programs
+

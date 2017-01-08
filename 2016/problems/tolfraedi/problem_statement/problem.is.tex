@@ -1,0 +1,70 @@
+\problemname{Tölfræði}
+
+Murray Christianson var einn afkastamesti skoski stærðfræðingurinn á 19.\ öld en
+hann var aðallega þekktur fyrir verk sín í fléttufræði og tölfræði.  Meðal
+þess sem hann hefur gert má nefna \emph{Setningu Christanson} sem snýr að
+talningu umraðana og umraðanamynstra. Þrátt fyrir það lagði hann þó ávallt mestu
+áhersluna á tölfræði og gagnavinnslu. Í hans daga voru engar tölvur sem gátu
+haldið utan um gígantísk gagnasöfn og unnið með þau, né var til það sem við
+köllum í dag \emph{Big Data}. Hann vann þó oft með gríðarlegt magn af gögnum og
+reiknaði ýmsar niðurstöður í höndunum, þar á meðal alla konunglega tölfræði
+fyrir Viktoríu drottningu og hirð hennar.
+
+Þegar hann lést árið 1901, sama ár og Viktoría drotting lést og rétt áður
+en Játvarður VII tók við krúnunni, var hann að vinna við að reikna ýmsa tölfræði
+yfir nýja hirðmenn konungs. Sumir hirðmenn voru að hætta og nýir ráðnir, og í
+hvert skipti sem einhverjar breytingar áttu sér stað þurfti hann að reikna
+aldur yngsta og elsta hirðmanns konungs og meðalaldur þeirra allra.
+
+Til að sýna yfirburði tölva yfir handútreikninga, þá þarft þú að skrifa forrit
+sem vinnur verk Murray Christianson margfalt hraðar. Í þessu dæmi færðu gefið
+aldur manneskju $x_i$ og hvort að hún sé að hætta í hirðinni, táknað með
+\texttt{R}, eða að byrja í hirðinni, táknað með \texttt{A}. Fyrir hverja
+breytingu, prentaðu út lægsta og hæsta aldur manneskju í hirðinni og
+meðalaldurinn.
+
+\section*{Inntak}
+Inntakið byrjar á einni línu sem inniheldur eina jákvæða heiltölu $Q$ sem
+táknar fjölda breytinga sem eiga sér stað. Því næst fylgja $Q$ línur, ein fyrir
+hverja breytingu, og á línu $i$ er einn bókstafur, \texttt{A} eða \texttt{R}, og
+síðan jákvæð heiltala $x_i$.
+
+Gera má ráð fyrir að aðeins hirðmenn sem eru nú þegar í hirðinni hætta.
+
+\section*{Úttak}
+Eftir hverja breytingu á að prenta út línu sem inniheldur lægsta aldur, hæsta
+aldur og meðalaldur þeirra sem eru í hirðinni á þeim tímapunkti. Ef enginn er í
+hirðinni á þeim tímapunkti skal línan innihalda \texttt{-1~-1~-1}. Úttakið er
+talið rétt ef hver tala er annaðhvort nákvæmlega eða hlutfallslega ekki lengra
+frá réttu svari en $10^{-4}$. Þetta þýðir að það skiptir ekki máli með hversu
+margra aukastafa nákvæmni tölurnar eru skrifaðar út, svo lengi sem þær er nógu
+nákvæmar.
+
+\section*{Útskýring á sýnidæmum}
+Fyrsta sýnidæmið sýnir manneskju með aldurinn $1$ bætta við hirðina og er því
+lægsti aldurinn $1$, hæsti aldurinn $1$ og meðalaldurinn $1$. Næst er bætt við
+manneskju með aldurinn $2$ og er þá lægsti aldurinn áfram $1$, hæsti aldurinn $2$
+og meðalaldurinn $1.5$. Og þannig gengur þetta koll af kolli.
+
+Í næsta sýnidæmi bætast við manneskjur með aldurinn $2$, $5$ og $2$. Á þeim
+tímapunkti er lægsti aldurinn $2$, hæsti aldurinn $5$ og meðalaldurinn $3$,
+eins og sést á þriðju línu í úttakinu. Næst er manneskja með aldurinn $2$ rekin
+úr hirðinni, en lægsti aldurinn breytist ekki því enn er ein manneskja með
+aldurinn $2$ í hirðinni. Í lokin er seinni manneskjan með aldurinn $2$ rekin úr
+hirðinni og breytist því lægsti aldurinn og meðalaldurinn í $5$ því það er
+aldurinn á einu manneskjunni sem er eftir.
+
+\section*{Stigagjöf}
+Lausnin mun verða prófuð á miserfiðum inntaksgögnum, og er gögnunum skipt í
+hópa eins og sýnt er í töflunni að neðan. Lausnin mun svo fá stig eftir því
+hvaða hópar eru leystir.
+
+\begin{tabular}{|l|l|l|l|}
+\hline
+Hópur & Stig & Inntaksstærð & Önnur skilyrði  \\ \hline
+1     & 20         & $ 1 \le Q \le 1\,000$, $1 \leq x_i \leq 10^6$ & Engar $R$ breytingar \\ \hline
+2     & 20         & $ 1 \le Q \le 1\,000$, $1 \leq x_i \leq 10^6$ & \\ \hline
+3     & 20         & $ 1 \le Q \le 100\,000$, $1 \leq x_i \leq 100$ & \\ \hline
+4     & 20         & $ 1 \le Q \le 100\,000$, $1 \leq x_i \leq 10^9$ & Engar $R$ breytingar \\ \hline
+5     & 20         & $ 1 \le Q \le 100\,000$, $1 \leq x_i \leq 10^9$ & \\ \hline
+\end{tabular}

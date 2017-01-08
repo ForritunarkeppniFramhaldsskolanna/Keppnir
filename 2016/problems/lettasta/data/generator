@@ -1,0 +1,66 @@
+#!/bin/bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+setup_dirs
+use_solution sol.cpp
+
+compile random_generator.py # Arguments: n k method seed
+
+samplegroup
+sample 01
+
+# 1: N == 1, M <= 100
+group n1 10
+tc n1-01 random_generator 1 100
+tc n1-02 random_generator 1 99
+tc n1-03 random_generator 1 10
+tc n1-04 random_generator 1 8
+tc n1-05 random_generator 1 50
+tc n1-06 random_generator 1 90
+
+# 2: N == 2, M <= 100
+group n2 10
+tc n2-01 random_generator 2 100
+tc n2-02 random_generator 2 99
+tc n2-03 random_generator 2 10
+tc n2-04 random_generator 2 8
+tc n2-05 random_generator 2 50
+tc n2-06 random_generator 2 90
+
+# 3: N <= 12, M == 1
+group m1 20
+tc m1-01 random_generator 10 1
+tc m1-02 random_generator 11 1
+tc m1-03 random_generator 12 1
+tc m1-04 random_generator 9 1
+tc m1-05 random_generator 8 1
+tc m1-06 random_generator 6 1
+
+# 4: N <= 12, M == 2
+group m2 20
+tc m2-01 random_generator 10 2
+tc m2-02 random_generator 11 2
+tc m2-03 random_generator 12 2
+tc m2-04 random_generator 9 2
+tc m2-05 random_generator 8 2
+tc m2-06 random_generator 6 2
+
+# 5: N <= 12, M <= 500
+group any 40
+include_group n1
+include_group n2
+include_group m1
+include_group m2
+tc any-01 random_generator 12 500
+tc any-02 random_generator 12 500
+tc any-03 random_generator 12 500
+tc any-04 random_generator 12 3
+tc any-05 random_generator 3 500
+tc any-06 random_generator 8 400
+tc any-07 random_generator 11 100
+tc any-08 random_generator 10 25
+
+generate_grader
+cleanup_programs
+

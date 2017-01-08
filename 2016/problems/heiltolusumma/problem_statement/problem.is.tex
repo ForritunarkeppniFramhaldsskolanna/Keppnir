@@ -1,0 +1,47 @@
+\problemname{Heiltölusumma}
+
+Hefur þú heyrt um stærðfræðinginn Carl Friedrich Gauss? Það er til skemmtileg
+saga af honum frá því hann var í grunnskóla. Einn daginn var kennarinn hans
+orðinn þreyttur á uslanum í krökkunum, svo hann setti fyrir erfitt
+stærðfræðidæmi til að halda krökkunum uppteknum. Verkefnið var að leggja saman
+allar heiltölur á milli $1$ og $100$. Kennaranum brá þegar Gauss kom að
+kennaraborðinu, aðeins örstuttri stundu seinna, og sagðist vera búinn.
+Kennarinn trúði honum auðvitað ekki og bað hann um að segja sér svarið.
+Kennarinn var ekki sjálfur búinn að leysa verkefnið, enda bjóst hann ekki við
+að neinn myndi klára það svona fljótt, svo að hann þurfti nokkrar mínútur til
+að athuga svarið. Og viti menn, Gauss var með rétt svar!
+
+Sem betur fer höfum við tölvur í dag til að gera svona handavinnu fyrir okkur.
+Auðvitað fann Gauss aðferð til að leggja tölurnar saman hratt án þessa að
+framkvæma mikla handavinnu, en við erum ekki öll eins klár og hann. Í þessu
+verkefni ætlum við engu að síður að biðja ykkur um að leysa sama
+stærðfræðidæmi: Gefin heiltala $N$, hver er summan af öllum heiltölum á milli
+$1$ og $N$?
+
+\section*{Inntak}
+Ein lína með heltölunni $N$.
+
+\section*{Úttak}
+Ein lína með summunni af öllum heiltölum á milli $1$ og $N$.
+
+\section*{Útskýring á sýnidæmum}
+Í fyrsta sýnidæminu er $N = 4$. Heiltölurnar á milli $1$ og $4$ eru $1$, $2$,
+$3$ og $4$, og summa þeirra er $1+2+3+4=10$.
+
+Í öðru sýnidæminu er $N = -1$. Heiltölurnar á milli $1$ og $-1$ eru $-1$, $0$,
+og $1$, og summa þeirra er $(-1)+0+1 = 0$.
+
+\section*{Stigagjöf}
+Lausnin mun verða prófuð á miserfiðum inntaksgögnum, og er gögnunum skipt í
+hópa eins og sýnt er í töflunni að neðan. Lausnin mun svo fá stig eftir því
+hvaða hópar eru leystir.
+
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Inntaksstærð \\ \hline
+1 & 10  & $1\leq N\leq 100$ \\ \hline
+1 & 20  & $1\leq N\leq 10^5$ \\ \hline
+1 & 20  & $1\leq N\leq 10^9$ \\ \hline
+1 & 20  & $-100\leq N\leq 100$ \\ \hline
+1 & 30  & $-10^9\leq N\leq 10^9$ \\ \hline
+\end{tabular}

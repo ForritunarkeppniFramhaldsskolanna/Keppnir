@@ -1,0 +1,98 @@
+#!/bin/bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+setup_dirs
+use_solution sol1.cpp
+
+compile random_generator.py # Arguments: n k method seed
+
+samplegroup
+sample 01
+sample 02
+sample 03
+
+# 1: N = 1, M <= 10, small space
+group singleshipsmall 10
+tc singleshipsmall-01 random_generator 1 10 0 nochain
+tc singleshipsmall-02 random_generator 1 0 0 nochain
+tc singleshipsmall-03 random_generator 1 10 0 nochain
+tc singleshipsmall-04 random_generator 1 10 0 nochain
+tc singleshipsmall-05 random_generator 1 10 0 nochain
+tc singleshipsmall-06 random_generator 1 10 0 nochain
+tc singleshipsmall-07 random_generator 1 10 0 nochain
+tc singleshipsmall-08 random_generator 1 10 0 nochain
+tc singleshipsmall-09 random_generator 1 10 0 nochain
+tc singleshipsmall-10 random_generator 1 10 0 nochain
+tc singleshipsmall-11 random_generator 1 10 0 nochain
+
+# 2: N = 1, M <= 1000, small space
+group singleshipbig 10
+include_group singleshipsmall
+tc singleshipbig-01 random_generator 1 100 0 nochain
+tc singleshipbig-02 random_generator 1 100 0 nochain
+tc singleshipbig-03 random_generator 1 100 0 nochain
+tc singleshipbig-04 random_generator 1 100 0 nochain
+tc singleshipbig-05 random_generator 1 100 0 nochain
+tc singleshipbig-06 random_generator 1 0 0 nochain
+
+tc singleshipbig-07 random_generator 1 1000 0 nochain
+tc singleshipbig-08 random_generator 1 1000 0 nochain
+tc singleshipbig-09 random_generator 1 1000 0 nochain
+tc singleshipbig-10 random_generator 1 1000 0 nochain
+tc singleshipbig-11 random_generator 1 1000 0 nochain
+tc singleshipbig-12 random_generator 1 1000 0 nochain
+
+# 3: N, M <= 1000, small space, no chain reaction
+group nochain 25
+include_group singleshipsmall
+include_group singleshipbig
+tc nochain-01 random_generator 100 1000 0 nochain
+tc nochain-02 random_generator 100 1000 0 nochain
+tc nochain-03 random_generator 100 1000 0 nochain
+tc nochain-04 random_generator 100 1000 0 nochain
+
+tc nochain-05 random_generator 1000 1000 0 nochain
+tc nochain-06 random_generator 1000 1000 0 nochain
+tc nochain-07 random_generator 1000 1000 0 nochain
+tc nochain-08 random_generator 1000 1000 0 nochain
+
+# 4: N, M <= 1000, small space, with chain reaction
+group chainsmall 25
+include_group singleshipsmall
+include_group singleshipbig
+include_group nochain
+tc chainsmall-01 random_generator 100 1000 0 wchain
+tc chainsmall-02 random_generator 100 1000 0 wchain
+tc chainsmall-03 random_generator 100 1000 0 wchain
+
+tc chainsmall-04 random_generator 100 1000 0 chain
+tc chainsmall-05 random_generator 100 0 0 chain
+tc chainsmall-06 random_generator 100 100 0 chain
+
+tc chainsmall-07 random_generator 1000 1000 0 wchain
+tc chainsmall-08 random_generator 1000 1000 0 wchain
+tc chainsmall-09 random_generator 1000 1000 0 wchain
+
+
+# 4: N, M <= 1000, big space, with chain reaction
+group chainbig 30
+include_group singleshipsmall
+include_group singleshipbig
+include_group nochain
+include_group chainsmall
+tc chainbig-01 random_generator 100 1000 1 wchain
+tc chainbig-02 random_generator 100 1000 1 wchain
+tc chainbig-03 random_generator 100 1000 1 wchain
+
+tc chainbig-04 random_generator 100 1000 1 wchain
+tc chainbig-05 random_generator 1000 0 1 wchain
+tc chainbig-06 random_generator 1000 1000 1 wchain
+
+tc chainbig-07 random_generator 1000 1000 1 wchain
+tc chainbig-08 random_generator 1000 1000 1 wchain
+tc chainbig-09 random_generator 1000 1000 1 wchain
+
+generate_grader
+cleanup_programs
+

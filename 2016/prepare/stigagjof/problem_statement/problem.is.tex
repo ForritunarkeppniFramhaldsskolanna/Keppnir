@@ -1,0 +1,57 @@
+\problemname{Stigagjöf}
+
+Keppnin í ár mun vera með aðeins öðru sniði en fyrri keppnir. Ein stærsta
+breytingin (fyrir utan krúttlegri hóp af dæmasmiðum en nokkurntíman hefur sést
+áður) er stigagjöfin.
+
+Fyrir hvert dæmi er hægt að fá stig á bilinu $0$ til $100$. Því fleiri stig,
+því betra. Hvert lið má senda inn eins margar lausnir og það vill. Ef mörgum
+lausnum hefur verið skilað í sama dæmi, þá er það lausnin sem fékk flestu
+stigin sem gildir, og þessi lausn ákvárðar stigafjöldann fyrir þetta dæmi.
+
+Heildarstigafjöldi liðs er svo summa stiga sem liðið hefur fengið fyrir hvert
+dæmi. Liðum er svo raðað í lækkandi röð eftir heildarstigafjölda. Ef tvö lið
+hafa sama heildarstigafjölda, þá er liðið sem fékk þennan heildarstigafjölda á
+undan sem er ofar á stigatöflunni.
+
+Í þessu dæmi þurfið þið hvorki að spá í heildarstigafjölda né tíma. Þið fáið
+gefið nafn á dæmi, svo lista af lausnum sem lið hefur sent inn, og eigið að
+finna stigafjöldann sem liðið hefur fyrir uppgefið dæmi.
+
+\section*{Inntak}
+Á fyrstu línu er nafnið á dæminu sem spurt er um. Á annarri línu kemur heiltala
+$1 \leq N \leq 100$ sem táknar fjölda lausna sem liðið hefur skilað inn. Svo
+fylgja $N$ línur. Hver af þessum línum táknar lausn sem liðið hefur skilað inn,
+og samanstendur af heiltölunni $1 \leq t\leq 360$, sem segir á hvaða mínútu
+lausninni var skilað inn, nafninu á dæminu sem lausninni er ætlað, og loks
+heiltölunni $0 \leq s\leq 100$ sem táknar stigafjöldann sem lausnin fékk. Nöfn
+dæmanna munu aðeins innihalda enska lágstafi og tölustafi, og lausnirnar
+koma inn í hækkandi röð eftir tíma.
+
+\section*{Úttak}
+Ein lína með stigafjöldanum sem liðið hefur fyrir dæmið sem spurt er um.
+
+\section*{Útskýring á sýnidæmum}
+Í fyrsta sýnidæminu er spurt um dæmið \texttt{stigagjof}, en liðið er búið að
+skila þremur lausnum í það dæmi. Af þessum lausnum fékk önnur lausnin hæsta
+stigafjöldann, $100$. Þetta er því stigafjöldinn sem liðið hefur fyrir þetta
+dæmi, og er því svarið.
+
+Í öðru sýnidæminu er spurt um dæmið \texttt{budarkassi2}. Liðið hefur skilað
+tveimur lausnum í það dæmi, og af þeim fékk betri lausnin $60$ stig.
+
+Í þriðja sýnidæminu er spurt um dæmið \texttt{budarkassi1}. Liðið hefur ekki
+skilað neinum lausnum í það dæmi, og hefur liðið því engin stig fyrir þetta
+dæmi, og svarið er $0$.
+
+\section*{Stigagjöf}
+Lausnin mun verða prófuð á miserfiðum inntaksgögnum, og er gögnunum skipt í
+hópa eins og sýnt er í töflunni að neðan. Lausnin mun svo fá stig eftir því
+hvaða hópar eru leystir.
+
+\begin{tabular}{|l|l|l|l|}
+\hline
+Hópur & Stig & Önnur skilyrði \\ \hline
+1     & 50      & Eina dæmið sem kemur í inntakinu er dæmið sem spurt er um \\ \hline
+2     & 50      &  \\ \hline
+\end{tabular}

@@ -1,0 +1,30 @@
+\documentclass[tikz]{standalone}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\begin{document}
+  \begin{tikzpicture}[->]
+    \node (side1) at (-2,0) {Fyrir};
+    \node (side1) at (-2,-1) {Eftir viðlag \#1};
+    \node (side1) at (-2,-2) {Eftir viðlag \#2};
+
+    \node[minimum size=7pt,draw,circle,inner sep=1pt] (a1) at (0,0) {$1$};
+    \node[minimum size=7pt,draw,circle,inner sep=1pt] (b1) at (1,0) {$2$};
+    \node[minimum size=7pt,draw,circle,inner sep=1pt] (c1) at (2,0) {$3$};
+
+    \node[minimum size=7pt,draw,circle,inner sep=1pt] (a2) at (0,-1) {$2$};
+    \node[minimum size=7pt,draw,circle,inner sep=1pt] (b2) at (1,-1) {$3$};
+    \node[minimum size=7pt,draw,circle,inner sep=1pt] (c2) at (2,-1) {$1$};
+
+    \node[minimum size=7pt,draw,circle,inner sep=1pt] (a3) at (0,-2) {$3$};
+    \node[minimum size=7pt,draw,circle,inner sep=1pt] (b3) at (1,-2) {$1$};
+    \node[minimum size=7pt,draw,circle,inner sep=1pt] (c3) at (2,-2) {$2$};
+
+    \draw[>=stealth] (a1) -- (c2);
+    \draw[>=stealth] (b1) -- (a2);
+    \draw[>=stealth] (c1) -- (b2);
+
+    \draw[>=stealth] (a2) -- (c3);
+    \draw[>=stealth] (b2) -- (a3);
+    \draw[>=stealth] (c2) -- (b3);
+  \end{tikzpicture}
+\end{document}

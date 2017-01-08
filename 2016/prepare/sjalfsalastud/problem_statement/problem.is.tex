@@ -1,0 +1,67 @@
+\problemname{Sjálfsalastuð}
+
+Í Háskólanum í Reykjavík eru stundaðar miklar rannsóknir innan tölvunarfræði.
+Til að halda rannsakendum virkum og þægum, þá þarf að gefa þeim mikið Kók og
+það fellur á deildarforseta tölvunarfræðideildar að fara í sjálfsalann og kaupa
+Kók fyrir alla starfsmenn deildarinnar. Þar sem deildarforseti er mjög
+upptekinn, þá kaupir hann yfirleitt fleiri en eina flösku í hverri ferð.
+
+Sjálfsalarnir í HR taka aðeins 100 kr, 50 kr og 10 kr peninga, og þeir gefa til
+baka í eins fáum myntum og mögulegt er. Sjálfsalarnir afgreiða jafnframt aðeins
+eina flösku í einu.
+
+Vegna mikilvægi rannsóknanna sem fram fara í tölvunarfræðideildinni, hefur HR
+samið um það að fá Kókflöskuna á 80 kr. Deildarforseta finnst mjög leiðinlegt
+að setja peninga í sjálfsala, svo hann biður ykkur að skrifa forrit sem,
+að gefnum fjölda flaska sem hann þarf að kaupa og þann fjölda sem hann hefur af
+hverri mynt, finnur minnsta mögulega fjölda mynta sem hann þarf að setja í
+sjálfsalann til að fá allar flöskurnar. Við megum gera ráð fyrir því að
+deildarforseti taki ávallt nægan pening með sér í sjálfsalann til að greiða
+fyrir allar flöskurnar.
+
+\section*{Inntak}
+Inntakið innheldur fjórar heiltölur, aðskildar
+af einu orðabili. Fyrsta talan $1 \leq C \leq 150$ er fjöldi flaska
+sem deildarforseti ætlar að kaupa. Næstu þrjár tölurnar
+$n_{10}$, $n_{50}$ og $n_{100}$
+eru fjöldi 10 kr, 50 kr og 100 kr mynta, þar sem $0 \leq n_{10}
+\leq 500$, $0 \leq n_{50} \leq 100$ og $0 \leq n_{100} \leq 50$.
+
+\section*{Úttak}
+Skrifið út eina heiltölu sem táknar minnsta fjölda mynta sem deildarforseti
+þarf að setja í sjálfsalann.
+
+\section*{Útskýring á sýnidæmum}
+Í fyrsta sýnidæminu er deildarforseti með tvo tíkalla, einn fimmtíukall, einn
+hundraðkall og ætlar að kaupa tvær Kókflöskur. Hann greiðir fyrir fyrstu
+flöskuna með hundraðkallinum og fær tvo tíkalla til baka. Hann hefur þá sett
+eina mynt í sjálfsalann. Næst setur hann fimmtíukallinn, ásamt þremur tíköllum
+í sjálfsalann, samtals fjórar myntir, og fær þá seinni flöskuna. Í heildina
+hefur hann þá sett fimm myntir í sjálfsalann.
+
+Í öðru sýnidæminu er deildarforseti með einn tíkall, fjóra fimmtíukalla, einn
+hundraðkall og ætlar aftur að kaupa tvær Kókflöskur. Hann greiðir fyrir
+fyrstu flöskuna með hundraðkallinum og fær tvo tíkalla til baka. Næst setur hann
+fimmtíukallana tvo í sjálfsalann og fær þá seinni flöskuna. Hann hefur þá sett
+þrjár myntir samtals í sjálfsalann.
+
+Í því þriðja er deildarforseti með 200 tíkalla og þrjá fimmtíukalla. Hann
+kaupir fyrstu þrjár flöskurnar með einum fimmtíukalli og þremur tíköllum. Þá
+hefur hann sett samtals $3 \cdot 4 = 12$ myntir í sjálfsalann. Hann á þá bara
+tíkalla eftir til að kaupa 17 síðustu flöskurnar. Hann þarf að setja 8 myntir í
+sjálfsalann fyrir hverja flösku, og þarf því að setja samtals $8 \cdot 17 =
+136$ myntir í sjálfsalann til að kaupa þessar 17 flöskur. Til að kaupa allar 20
+flöskurnar hefur hann þá sett $136 + 12 = 148$ myntir í sjálfsalann.
+
+\section*{Stigagjöf}
+Lausnin mun verða prófuð á miserfiðum inntaksgögnum, og er gögnunum skipt í
+hópa eins og sýnt er í töflunni að neðan. Lausnin mun svo fá stig eftir því
+hvaða hópar eru leystir.
+
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Önnur skilyrði \\ \hline
+1        & 10   & Eingöngu tíkallar \\ \hline
+2        & 30   & Eingöngu tíkallar og fimmtíukallar \\ \hline
+2        & 60   &  \\ \hline
+\end{tabular}

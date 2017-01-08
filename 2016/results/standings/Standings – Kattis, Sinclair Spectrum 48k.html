@@ -1,0 +1,3768 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)https://iceland-delta.kattis.com/standings -->
+<html lang="en" class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Standings – Kattis, Sinclair Spectrum 48k</title>
+
+    <script type="text/javascript" async="" src="./Standings – Kattis, Sinclair Spectrum 48k_files/ynnn5d6q"></script><script src="./Standings – Kattis, Sinclair Spectrum 48k_files/jquery.min.js"></script>
+    <script src="./Standings – Kattis, Sinclair Spectrum 48k_files/jquery-ui.min.js"></script>
+
+    <!-- Fonts/Icons -->
+    <link href="./Standings – Kattis, Sinclair Spectrum 48k_files/font-awesome.min.css" rel="stylesheet">
+
+    <link href="./Standings – Kattis, Sinclair Spectrum 48k_files/css" rel="stylesheet" type="text/css">
+
+    <!-- Bootstrap CSS -->
+    <link href="./Standings – Kattis, Sinclair Spectrum 48k_files/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Editable and Select2 -->
+    <link href="./Standings – Kattis, Sinclair Spectrum 48k_files/select2.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="https://iceland-delta.kattis.com/favicon">
+
+    <!-- Own CSS -->
+    <link rel="stylesheet" href="./Standings – Kattis, Sinclair Spectrum 48k_files/system.css">
+    <style type="text/css">
+     .header {
+       background-color: #9a9a9a;
+     }
+     .header .main-nav > ul > li.current:before {
+       border-bottom-color: #9a9a9a;
+     }
+    </style>
+
+    <script type="text/javascript">
+        window.page_loaded_at = new Date();
+        jQuery.noConflict();
+        var $j = jQuery;
+    </script>
+
+    <script type="text/javascript">
+    jQuery.ns = function (namespace) {
+        var parts = namespace.split('.');
+        var last = window;
+        for (var i = 0; i < parts.length; i++) {
+            last = last[parts[i]] || (last[parts[i]] = {});
+        }
+        return last;
+    };
+</script>
+
+
+    
+
+    
+
+    
+<style>#cVim-link-container, .cVim-link-hint, #cVim-command-bar, #cVim-command-bar-mode, #cVim-command-bar-input, #cVim-command-bar-search-results, .cVim-completion-item, .cVim-completion-item .cVim-full, .cVim-completion-item .cVim-left, .cVim-completion-item .cVim-right, #cVim-hud, #cVim-status-bar {
+  font-family: Helvetica, Helvetica Neue, Neue, sans-serif, monospace, Arial;
+  font-size: 10pt !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+#cVim-link-container {
+  position: absolute;
+  pointer-events: none;
+  width: 100%; left: 0;
+  height: 100%; top: 0;
+  z-index: 2147483647;
+}
+
+.cVim-link-hint {
+  border-radius: 2px;
+  color: #ddd;
+  padding: 2px !important;
+  font-size: 11pt !important;
+  font-weight: bold !important;
+  display: inline-block !important;
+  border: 1px solid #ccc;
+  vertical-align: middle !important;
+  text-align: center !important;
+  box-shadow: 2px 2px 1px rgba(0,0,0,0.25) !important;
+  position: absolute !important;
+  background: linear-gradient(to bottom, #636363 0%,#3f3f3f 39%,#3f3f3f 39%,#000000 100%);
+}
+
+.cVim-link-hint_match {
+  color: #888;
+}
+
+#cVim-command-bar {
+  position: fixed !important;
+  z-index: 2147483646 !important;
+  background-color: #1b1d1e !important;
+  color: #bbb !important;
+  display: none;
+  box-sizing: content-box !important;
+  box-shadow: 0 3px 3px rgba(0,0,0,0.4);
+  left: 0 !important;
+  width: 100% !important;
+  height: 20px !important;
+}
+
+#cVim-command-bar-mode {
+  display: inline-block;
+  vertical-align: middle;
+  box-sizing: border-box !important;
+  padding-left: 2px !important;
+  height: 100% !important;
+  width: 10px !important;
+  padding-top: 2px !important;
+  color: #888 !important;
+}
+
+#cVim-command-bar-input {
+  background-color: #1b1d1e !important;
+  color: #bbb !important;
+  height: 100% !important;
+  right: 0 !important;
+  top: 0 !important;
+  width: calc(100% - 10px) !important;
+  position: absolute !important;
+}
+
+#cVim-command-bar-search-results {
+  position: fixed;
+  width: 100% !important;
+  overflow: hidden;
+  z-index: 2147483647 !important;
+  left: 0;
+  box-shadow: 0 3px 3px rgba(0,0,0,0.4);
+  background-color: rgba(44, 44, 44, 1);
+}
+
+.cVim-completion-item, .cVim-completion-item .cVim-full, .cVim-completion-item .cVim-left, .cVim-completion-item .cVim-right {
+  text-overflow: ellipsis;
+  padding: 1px;
+  display: inline-block;
+  box-sizing: border-box;
+  vertical-align: middle;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.cVim-completion-item:nth-child(even) {
+  background-color: #282828;
+}
+
+.cVim-completion-item {
+  width: 100%; left: 0;
+  color: #fff;
+}
+
+.cVim-completion-item .cVim-left {
+  color: #fff;
+  width: 37%;
+}
+
+.cVim-completion-item .cVim-right {
+  font-style: italic;
+  color: #888;
+  width: 57%;
+}
+
+#cVim-hud {
+  background-color: rgba(28,28,28,0.9);
+  position: fixed !important;
+  transition: right 0.2s ease-out;
+  z-index: 24724289;
+}
+
+#cVim-hud span {
+  padding: 2px;
+  padding-left: 4px;
+  padding-right: 4px;
+  color: #8f8f8f;
+  font-size: 10pt;
+}
+
+#cVim-frames-outline {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 9999999999;
+  box-sizing: border-box;
+  border: 3px solid yellow;
+}
+</style></head>
+
+<body class="page-master-layout ">
+<!--[if lt IE 7]>
+<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+<![endif]-->
+
+
+<div id="wrapper">
+    
+<header class="header">
+    <div class="background">
+        
+        <div class="wrap">
+            <div class="fl">
+                <a href="https://iceland-delta.kattis.com/" class="logo"><img src="./Standings – Kattis, Sinclair Spectrum 48k_files/site-logo" alt=""></a>
+
+                <div class="title-wrapper">
+                    <div class="header-title">Sinclair Spectrum 48k</div>
+                    <nav class="main-nav">
+                        <ul>
+                                                                                            
+                                <li class="current"><a href="https://iceland-delta.kattis.com/standings">Standings</a></li>
+                                                                                            
+                                <li class=""><a href="https://iceland-delta.kattis.com/problems">Problems</a></li>
+                                                                                            
+                                <li class=""><a href="https://iceland-delta.kattis.com/clars">Clarifications</a></li>
+                                                                                            
+                                <li class=""><a href="https://iceland-delta.kattis.com/contests/fk2016delta/help">Docs</a></li>
+                            
+                                                            <li>
+                                    <div class="btn-group">
+                                        <button class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="false">admin <b class="caret"></b></button>
+                                        <ul class="dropdown-menu">
+                                                                                                                                                <li><div class="dropdown-divider">Admin</div></li>
+                                                                                                                                                    <li><a href="https://iceland-delta.kattis.com/admin/accounts">Accounts</a></li>
+                                                                                                    <li><a href="https://iceland-delta.kattis.com/admin/change-header">Change site header</a></li>
+                                                                                                    <li><a href="https://iceland-delta.kattis.com/admin/countdown">Countdown</a></li>
+                                                                                                    <li><a href="https://iceland-delta.kattis.com/admin/emailtemplates">E-mail template editor</a></li>
+                                                                                                    <li><a href="https://iceland-delta.kattis.com/admin/finalize">Finalize</a></li>
+                                                                                                                                                                                                <li><div class="dropdown-divider">Judge</div></li>
+                                                                                                                                                    <li><a href="https://iceland-delta.kattis.com/full-standings">Full Standings</a></li>
+                                                                                                    <li><a href="https://iceland-delta.kattis.com/submissions">Queue</a></li>
+                                                                                                    <li><a href="https://iceland-delta.kattis.com/standings/resolver">Resolver</a></li>
+                                                                                                    <li><a href="https://iceland-delta.kattis.com/standings/statistics?full=true">Statistics</a></li>
+                                                                                                    <li><a href="https://iceland-delta.kattis.com/teamlist">Teams</a></li>
+                                                                                                                                    </ul>
+                                    </div>
+                                </li>
+                                                    </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="user-side fr">
+
+                <nav class="user-nav">
+                    <ul class="user-nav-ul">
+                                                    <li>
+                                <form action="https://iceland-delta.kattis.com/search" class="site-search" method="GET">
+                                    <input type="text" name="q" placeholder="Search Kattis">
+                                    <a href="https://iceland-delta.kattis.com/standings#">
+                                        <i class="fa fa-search"></i>
+                                    </a>
+                                </form>
+                            </li>
+                        
+                        
+                                                            <li>
+                                    <a href="https://iceland-delta.kattis.com/submit" class="btn green"><i class="fa fa-upload"></i>Submit</a>
+                                </li>
+                            
+                            <li class="user">
+                                <div class="user-infobox pull-left">
+                                    <div>
+                                                                                    <a href="https://iceland-delta.kattis.com/users/suprdewd">
+                                                Bjarki Ágúst Guðmundsson
+                                            </a>
+                                                                            </div>
+                                    <div>
+                                        <ul class="profile-header-list">
+                                                                                            <li>Admin</li>
+                                                                                    </ul>
+                                    </div>
+                                </div>
+                                <div class="dropdown my-profile">
+                                    <a data-toggle="dropdown" data-hover="dropdown" data-close-others="false" href="https://iceland-delta.kattis.com/standings#" class="user-img-link">
+                                        <div class="user-img" style="background-image: url(&#39;/images/users/suprdewd&#39;)"></div>
+                                        <b class="caret"></b>
+                                    </a>
+                                    <ul id="menu1" class="dropdown-menu pull-right">
+                                        <li class="caret"></li>
+                                        <li><a href="https://iceland-delta.kattis.com/users/suprdewd"><i class="glyphicon glyphicon-user blue"></i>My Profile</a></li>
+                                        <li><a href="https://iceland-delta.kattis.com/users/suprdewd/settings"><i class="fa fa-cog blue"></i>Settings</a></li>
+
+                                        
+
+                                        <li class="divider"></li>
+                                        <li><a href="https://iceland-delta.kattis.com/logout"><i class="glyphicon glyphicon-log-out red"></i>Log out</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                                            </ul>
+
+                </nav>
+
+            </div>
+        </div>
+    </div>
+</header>
+
+    
+    
+            <div class="wrap">
+            
+
+    
+
+
+        <div class="alert alert-info" id="clarbox" style="display:none">
+                    
+            </div>
+
+            <script type="text/javascript">
+            jQuery(function ($) {
+                var box = $('#clarbox');
+                setInterval(function () {
+                    $.get('/script/check_for_new_clars.php').success(function (data) {
+                        box.html(data);
+                        if (data === '') {
+                            box.hide();
+                        } else {
+                            box.show();
+                        }
+                    });
+                }, 30 * 1000);
+            });
+        </script>
+    
+
+
+
+
+
+<div class="page-content boxed clearfix">
+    <section class="box clearfix main-content">
+                    <div id="session_banner"><img src="./Standings – Kattis, Sinclair Spectrum 48k_files/fk2016delta" alt=""></div>
+                <div id="contest_time">
+
+            <div class="contest-progress session-finished">
+                                    <div class="info upper">
+                        <div class="left">
+                            <h4>Start</h4>
+                            10:00 GMT
+                        </div>
+
+                        <h2 class="title">Sinclair Spectrum 48k</h2>
+
+                        <div class="right">
+                            <h4>End</h4>
+                            16:00 GMT
+                        </div>
+                    </div>
+                
+                <div class="progress">
+                                                                                                        <div class="progress-bar" style="width: 100.00%">
+                        <div class="nearend">
+                            <span>The end is near!</span>
+                        </div>
+
+                        <div class="finished">
+                            Contest is over.                        </div>
+
+                        <div class="nostart">
+                            Not yet started.                        </div>
+
+                        <div class="notstarted">
+                            Contest                            is starting in                            <span class="countdown">-8:50:44</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info only_in_contest">
+                    <div class="left">
+                        <h4>Time elapsed</h4>
+                        <span class="count_elapsed">6:00:00</span>
+                    </div>
+
+                    <div class="right">
+                        <h4>Time remaining</h4>
+                        <span class="count_remaining">0:00:00</span>
+                    </div>
+                </div>
+            </div>
+
+            <script type="text/javascript">
+                jQuery(function ($) {
+                                            window.updateContestHeader = initContestHeader(true, 31845, 21600);
+                                    });
+            </script>
+        </div>
+
+    </section>
+</div>
+
+        </div>
+    
+
+    
+    
+
+    
+    
+
+
+    
+
+    <div class="wrap-fullwidth">
+        <div id="standings_wrapper">
+            
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="page-content boxed clearfix">
+    <section class="box clearfix main-content">
+                    <div class="contest_buttons">
+                                                            <a class="btn btn-default btn-sm" href="https://iceland-delta.kattis.com/contests/fk2016delta/edit">Edit contest</a>
+                                                    
+            </div>
+        
+        
+        
+        
+        
+        
+
+        
+        
+            
+    <table id="tablelegend">
+        <tbody><tr>
+            
+            
+            <td class="solved">Solved problem</td>
+            <td class="attempted">Attempted problem</td>
+            <td class="pending">Pending judgement</td>
+            
+        </tr>
+    </tbody></table>
+
+
+        <table id="standings" class="table table-kattis kattis-table-contest-standings">
+                <thead>    <tr>
+                                    <th>Rk</th>
+            
+                            <th>Team</th>
+            
+                    
+                     <th class="problemcolheader"><a data-toggle="tooltip" title="" href="https://iceland-delta.kattis.com/problems/iceland%3Afrumtolur" data-original-title="Frumtölur">A (100)</a></th> <th class="problemcolheader"><a data-toggle="tooltip" title="" href="https://iceland-delta.kattis.com/problems/iceland%3Alidaskipting" data-original-title="Liðaskipting">B (100)</a></th> <th class="problemcolheader"><a data-toggle="tooltip" title="" href="https://iceland-delta.kattis.com/problems/iceland%3Aakureyri" data-original-title="Akureyri">C (100)</a></th> <th class="problemcolheader"><a data-toggle="tooltip" title="" href="https://iceland-delta.kattis.com/problems/iceland%3Abackspace" data-original-title="Backspace">D (100)</a></th> <th class="problemcolheader"><a data-toggle="tooltip" title="" href="https://iceland-delta.kattis.com/problems/iceland%3Aroomba1" data-original-title="Roomba 1">E (100)</a></th> <th class="problemcolheader"><a data-toggle="tooltip" title="" href="https://iceland-delta.kattis.com/problems/iceland%3Atolfraedi" data-original-title="Tölfræði">F (100)</a></th> <th class="problemcolheader"><a data-toggle="tooltip" title="" href="https://iceland-delta.kattis.com/problems/iceland%3Agiskadu" data-original-title="Giskaðu á svarið">G (100)</a></th> <th class="problemcolheader"><a data-toggle="tooltip" title="" href="https://iceland-delta.kattis.com/problems/iceland%3Aupprodun" data-original-title="Uppröðun">H (100)</a></th> <th class="problemcolheader"><a data-toggle="tooltip" title="" href="https://iceland-delta.kattis.com/problems/iceland%3Aheiltolusumma" data-original-title="Heiltölusumma">I (100)</a></th> <th class="problemcolheader"><a data-toggle="tooltip" title="" href="https://iceland-delta.kattis.com/problems/iceland%3Alettasta" data-original-title="Léttasta verkefnið?">J (100)</a></th> <th class="problemcolheader"><a data-toggle="tooltip" title="" href="https://iceland-delta.kattis.com/problems/iceland%3Asimanumer" data-original-title="Símanúmer">K (100)</a></th> <th class="problemcolheader"><a data-toggle="tooltip" title="" href="https://iceland-delta.kattis.com/problems/iceland%3Abitaflipp" data-original-title="Bitaflipp">L (100)</a></th>
+        
+                                    <th>Score</th>
+                                    <th>Time</th>
+                                        </tr>
+    </thead>
+
+                                                                        
+                                        
+                                        
+                                <tbody><tr>
+    
+            <td class="rank">1</td>
+    
+            <td>
+    
+            <div class="truncate-table-td">
+                    Los Magos
+                </div>
+        </td>
+    
+    
+    
+    
+                        
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            1
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            1
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            1
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            2
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            5
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            40<br>
+            5
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            6
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            2
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            5
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            1
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            45<br>
+            3
+        </td>
+    
+                    
+                                        
+            <td></td>
+    
+            
+                        <td class="total score">985</td>
+                            <td class="total time">354</td>
+            
+    </tr>
+
+
+                                                                                    
+                                        
+                                        
+                                <tr>
+    
+            <td class="rank">2</td>
+    
+            <td>
+    
+            <div class="truncate-table-td">
+                    Prophets of Konni
+                </div>
+        </td>
+    
+    
+    
+    
+                        
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            2
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            2
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            1
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            60<br>
+            2
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            80<br>
+            3
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            40<br>
+            4
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            97<br>
+            64
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            1
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            3
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            1
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            45<br>
+            2
+        </td>
+    
+                    
+                                                                                        
+            <td class="attempted team_problem_cell">
+
+            0<br>
+            2
+        </td>
+    
+            
+                        <td class="total score">922</td>
+                            <td class="total time">340</td>
+            
+    </tr>
+
+
+                                                                                    
+                                        
+                                        
+                                <tr>
+    
+            <td class="rank">3</td>
+    
+            <td>
+    
+            <div class="truncate-table-td">
+                    Team Doules
+                </div>
+        </td>
+    
+    
+    
+    
+                        
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            9
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            2
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            2
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            60<br>
+            5
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            80<br>
+            22
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            40<br>
+            9
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            32
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            70<br>
+            2
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            8
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            1
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            45<br>
+            5
+        </td>
+    
+                    
+                                                                                        
+            <td class="attempted team_problem_cell">
+
+            0<br>
+            1
+        </td>
+    
+            
+                        <td class="total score">895</td>
+                            <td class="total time">323</td>
+            
+    </tr>
+
+
+                                                                                    
+                                        
+                                        
+                                <tr>
+    
+            <td class="rank">4</td>
+    
+            <td>
+    
+            <div class="truncate-table-td">
+                    Forriddu
+                </div>
+        </td>
+    
+    
+    
+    
+                        
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            1
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            2
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            1
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            60<br>
+            2
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            60<br>
+            5
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            40<br>
+            5
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            13
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            4
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            50<br>
+            10
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            1
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            45<br>
+            1
+        </td>
+    
+                    
+                                                                                        
+            <td class="attempted team_problem_cell">
+
+            0<br>
+            2
+        </td>
+    
+            
+                        <td class="total score">855</td>
+                            <td class="total time">341</td>
+            
+    </tr>
+
+
+                                                                                    
+                                        
+                                        
+                                <tr>
+    
+            <td class="rank">5</td>
+    
+            <td>
+    
+            <div class="truncate-table-td">
+                    TheNextGen
+                </div>
+        </td>
+    
+    
+    
+    
+                        
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            3
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            60<br>
+            2
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            1
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            20<br>
+            10
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            2
+        </td>
+    
+                    
+                                                                                        
+            <td class="attempted team_problem_cell">
+
+            0<br>
+            4
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            97<br>
+            10
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            1
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            1
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            1
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            45<br>
+            1
+        </td>
+    
+                    
+                                        
+            <td></td>
+    
+            
+                        <td class="total score">822</td>
+                            <td class="total time">338</td>
+            
+    </tr>
+
+
+                                                                                    
+                                        
+                                        
+                                <tr>
+    
+            <td class="rank">6</td>
+    
+            <td>
+    
+            <div class="truncate-table-td">
+                    Victorious secret
+                </div>
+        </td>
+    
+    
+    
+    
+                        
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            2
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            2
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            5
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            60<br>
+            2
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            40<br>
+            4
+        </td>
+    
+                    
+                                                                                        
+            <td class="attempted team_problem_cell">
+
+            0<br>
+            5
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            8
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            1
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            50<br>
+            5
+        </td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            45<br>
+            3
+        </td>
+    
+                    
+                                        
+            <td></td>
+    
+            
+                        <td class="total score">695</td>
+                            <td class="total time">296</td>
+            
+    </tr>
+
+
+                                                                                    
+                                        
+                                        
+                                <tr>
+    
+            <td class="rank">7</td>
+    
+            <td>
+    
+            <div class="truncate-table-td">
+                    The meme team
+                </div>
+        </td>
+    
+    
+    
+    
+                        
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            1
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            1
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            50<br>
+            5
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            60<br>
+            2
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            40<br>
+            3
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            20<br>
+            1
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            6
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            1
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            50<br>
+            3
+        </td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            10<br>
+            2
+        </td>
+    
+                    
+                                        
+            <td></td>
+    
+            
+                        <td class="total score">630</td>
+                            <td class="total time">349</td>
+            
+    </tr>
+
+
+                                                                                    
+                                        
+                                        
+                                <tr>
+    
+            <td class="rank">8</td>
+    
+            <td>
+    
+            <div class="truncate-table-td">
+                    foobar'); DROP TABLE keppendur;--
+                </div>
+        </td>
+    
+    
+    
+    
+                        
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            1
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            1
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            4
+        </td>
+    
+                    
+                                                                                        
+            <td class="attempted team_problem_cell">
+
+            0<br>
+            6
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            40<br>
+            2
+        </td>
+    
+                    
+                                                                                        
+            <td class="attempted team_problem_cell">
+
+            0<br>
+            5
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            5
+        </td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            30<br>
+            7
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            1
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            45<br>
+            2
+        </td>
+    
+                    
+                                        
+            <td></td>
+    
+            
+                        <td class="total score">615</td>
+                            <td class="total time">302</td>
+            
+    </tr>
+
+
+                                                                                    
+                                        
+                                        
+                                <tr>
+    
+            <td class="rank">9</td>
+    
+            <td>
+    
+            <div class="truncate-table-td">
+                    Modulus
+                </div>
+        </td>
+    
+    
+    
+    
+                        
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            3
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            60<br>
+            6
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            50<br>
+            2
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            10<br>
+            8
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            40<br>
+            3
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            20<br>
+            1
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            6
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            70<br>
+            4
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            4
+        </td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            25<br>
+            3
+        </td>
+    
+            
+                        <td class="total score">575</td>
+                            <td class="total time">309</td>
+            
+    </tr>
+
+
+                                                                                    
+                                        
+                                        
+                                <tr>
+    
+            <td class="rank">10</td>
+    
+            <td>
+    
+            <div class="truncate-table-td">
+                    gRoot
+                </div>
+        </td>
+    
+    
+    
+    
+                        
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            2
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            11
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            1
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            10<br>
+            6
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            40<br>
+            8
+        </td>
+    
+                    
+                                                                                        
+            <td class="attempted team_problem_cell">
+
+            0<br>
+            3
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            9
+        </td>
+    
+                    
+                                                                                        
+            <td class="attempted team_problem_cell">
+
+            0<br>
+            2
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            50<br>
+            3
+        </td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+            
+                        <td class="total score">500</td>
+                            <td class="total time">275</td>
+            
+    </tr>
+
+
+                                                                                    
+                                        
+                                        
+                                <tr>
+    
+            <td class="rank">11</td>
+    
+            <td>
+    
+            <div class="truncate-table-td">
+                    pepperoni veisla
+                </div>
+        </td>
+    
+    
+    
+    
+                        
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            6
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            5
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            50<br>
+            4
+        </td>
+    
+                    
+                                                                                        
+            <td class="attempted team_problem_cell">
+
+            0<br>
+            1
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            40<br>
+            4
+        </td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            7
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            50<br>
+            4
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            50<br>
+            13
+        </td>
+    
+                    
+                                                                                        
+            <td class="attempted team_problem_cell">
+
+            0<br>
+            1
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            10<br>
+            6
+        </td>
+    
+                    
+                                        
+            <td></td>
+    
+            
+                        <td class="total score">500</td>
+                            <td class="total time">351</td>
+            
+    </tr>
+
+
+                                                                                    
+                                        
+                                        
+                                <tr>
+    
+            <td class="rank">12</td>
+    
+            <td>
+    
+            <div class="truncate-table-td">
+                    malt &gt; allt
+                </div>
+        </td>
+    
+    
+    
+    
+                        
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            2
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            2
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            1
+        </td>
+    
+                    
+                                                                                        
+            <td class="attempted team_problem_cell">
+
+            0<br>
+            1
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            40<br>
+            3
+        </td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            8
+        </td>
+    
+                    
+                                                                                        
+            <td class="attempted team_problem_cell">
+
+            0<br>
+            2
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            30<br>
+            3
+        </td>
+    
+                    
+                                                                                        
+            <td class="attempted team_problem_cell">
+
+            0<br>
+            1
+        </td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+            
+                        <td class="total score">470</td>
+                            <td class="total time">233</td>
+            
+    </tr>
+
+
+                                                                                    
+                                        
+                                        
+                                <tr>
+    
+            <td class="rank">13</td>
+    
+            <td>
+    
+            <div class="truncate-table-td">
+                    HSB
+                </div>
+        </td>
+    
+    
+    
+    
+                        
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            1
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            60<br>
+            2
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            50<br>
+            1
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            60<br>
+            1
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            40<br>
+            2
+        </td>
+    
+                    
+                                                                                        
+            <td class="attempted team_problem_cell">
+
+            0<br>
+            1
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            8
+        </td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            50<br>
+            4
+        </td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+            
+                        <td class="total score">460</td>
+                            <td class="total time">291</td>
+            
+    </tr>
+
+
+                                                                                    
+                                        
+                                        
+                                <tr>
+    
+            <td class="rank">14</td>
+    
+            <td>
+    
+            <div class="truncate-table-td">
+                    Með Mexíkanann á bakinu
+                </div>
+        </td>
+    
+    
+    
+    
+                        
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            2
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            3
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            50<br>
+            2
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            10<br>
+            2
+        </td>
+    
+                    
+                                                                                        
+            <td class="attempted team_problem_cell">
+
+            0<br>
+            1
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            40<br>
+            5
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            10
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            20<br>
+            2
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            30<br>
+            2
+        </td>
+    
+                    
+                                                                                        
+            <td class="attempted team_problem_cell">
+
+            0<br>
+            2
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            10<br>
+            1
+        </td>
+    
+                    
+                                        
+            <td></td>
+    
+            
+                        <td class="total score">460</td>
+                            <td class="total time">332</td>
+            
+    </tr>
+
+
+                                                                                    
+                                        
+                                        
+                                <tr>
+    
+            <td class="rank">15</td>
+    
+            <td>
+    
+            <div class="truncate-table-td">
+                    1. Sæti
+                </div>
+        </td>
+    
+    
+    
+    
+                        
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            1
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            2
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            50<br>
+            2
+        </td>
+    
+                    
+                                                                                        
+            <td class="attempted team_problem_cell">
+
+            0<br>
+            4
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            10<br>
+            1
+        </td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            13
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            50<br>
+            3
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            30<br>
+            3
+        </td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                                                                        
+            <td class="attempted team_problem_cell">
+
+            0<br>
+            2
+        </td>
+    
+            
+                        <td class="total score">440</td>
+                            <td class="total time">342</td>
+            
+    </tr>
+
+
+                                                                                    
+                                        
+                                        
+                                <tr>
+    
+            <td class="rank">16</td>
+    
+            <td>
+    
+            <div class="truncate-table-td">
+                    IBotted99Agility
+                </div>
+        </td>
+    
+    
+    
+    
+                        
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            2
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            7
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            50<br>
+            1
+        </td>
+    
+                    
+                                                                                        
+            <td class="attempted team_problem_cell">
+
+            0<br>
+            1
+        </td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            7
+        </td>
+    
+                    
+                                                                                        
+            <td class="attempted team_problem_cell">
+
+            0<br>
+            2
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            30<br>
+            6
+        </td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+            
+                        <td class="total score">380</td>
+                            <td class="total time">285</td>
+            
+    </tr>
+
+
+                                                                                    
+                                        
+                                        
+                                <tr>
+    
+            <td class="rank">17</td>
+    
+            <td>
+    
+            <div class="truncate-table-td">
+                    RatchetAndClank
+                </div>
+        </td>
+    
+    
+    
+    
+                        
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            7
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            9
+        </td>
+    
+                    
+                                                                                        
+            <td class="attempted team_problem_cell">
+
+            0<br>
+            1
+        </td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                                                                        
+            <td class="attempted team_problem_cell">
+
+            0<br>
+            5
+        </td>
+    
+                    
+                                                                                        
+            <td class="attempted team_problem_cell">
+
+            0<br>
+            1
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            11
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            50<br>
+            1
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            30<br>
+            7
+        </td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                                                                        
+            <td class="attempted team_problem_cell">
+
+            0<br>
+            1
+        </td>
+    
+                    
+                                                                                        
+            <td class="attempted team_problem_cell">
+
+            0<br>
+            1
+        </td>
+    
+            
+                        <td class="total score">380</td>
+                            <td class="total time">302</td>
+            
+    </tr>
+
+
+                                                                                    
+                                        
+                                        
+                                <tr>
+    
+            <td class="rank">18</td>
+    
+            <td>
+    
+            <div class="truncate-table-td">
+                    FreeFood!
+                </div>
+        </td>
+    
+    
+    
+    
+                        
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            3
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            40<br>
+            2
+        </td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            4
+        </td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            3
+        </td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+            
+                        <td class="total score">340</td>
+                            <td class="total time">251</td>
+            
+    </tr>
+
+
+                                                                                    
+                                        
+                                        
+                                <tr>
+    
+            <td class="rank">19</td>
+    
+            <td>
+    
+            <div class="truncate-table-td">
+                    Ég veit ekki
+                </div>
+        </td>
+    
+    
+    
+    
+                        
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            1
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            1
+        </td>
+    
+                    
+                                                                                        
+            <td class="attempted team_problem_cell">
+
+            0<br>
+            1
+        </td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            96<br>
+            6
+        </td>
+    
+                    
+                                                                                        
+            <td class="attempted team_problem_cell">
+
+            0<br>
+            1
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            30<br>
+            2
+        </td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+            
+                        <td class="total score">326</td>
+                            <td class="total time">348</td>
+            
+    </tr>
+
+
+                                                                                    
+                                        
+                                        
+                                <tr>
+    
+            <td class="rank">20</td>
+    
+            <td>
+    
+            <div class="truncate-table-td">
+                    Tveir Ferskir
+                </div>
+        </td>
+    
+    
+    
+    
+                        
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            1
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            60<br>
+            2
+        </td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            40<br>
+            2
+        </td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            87<br>
+            4
+        </td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            30<br>
+            1
+        </td>
+    
+                    
+                                                                                        
+            <td class="attempted team_problem_cell">
+
+            0<br>
+            1
+        </td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+            
+                        <td class="total score">317</td>
+                            <td class="total time">313</td>
+            
+    </tr>
+
+
+                                                                                    
+                                        
+                                        
+                                <tr>
+    
+            <td class="rank">21</td>
+    
+            <td>
+    
+            <div class="truncate-table-td">
+                    Magic Mike XXL
+                </div>
+        </td>
+    
+    
+    
+    
+                        
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            2
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            60<br>
+            3
+        </td>
+    
+                    
+                                                                                        
+            <td class="attempted team_problem_cell">
+
+            0<br>
+            3
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            10<br>
+            3
+        </td>
+    
+                    
+                                                                                        
+            <td class="attempted team_problem_cell">
+
+            0<br>
+            1
+        </td>
+    
+                    
+                                                                                        
+            <td class="attempted team_problem_cell">
+
+            0<br>
+            1
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            3
+        </td>
+    
+                    
+                                                                                        
+            <td class="attempted team_problem_cell">
+
+            0<br>
+            1
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            30<br>
+            2
+        </td>
+    
+                    
+                                                                                        
+            <td class="attempted team_problem_cell">
+
+            0<br>
+            1
+        </td>
+    
+                    
+                                                                                        
+            <td class="attempted team_problem_cell">
+
+            0<br>
+            1
+        </td>
+    
+                    
+                                                                                        
+            <td class="attempted team_problem_cell">
+
+            0<br>
+            1
+        </td>
+    
+            
+                        <td class="total score">300</td>
+                            <td class="total time">281</td>
+            
+    </tr>
+
+
+                                                                                    
+                                        
+                                        
+                                <tr>
+    
+            <td class="rank">22</td>
+    
+            <td>
+    
+            <div class="truncate-table-td">
+                    Hrekkjusvínin fjögru.exe
+                </div>
+        </td>
+    
+    
+    
+    
+                        
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            4
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            60<br>
+            9
+        </td>
+    
+                    
+                                                                                        
+            <td class="attempted team_problem_cell">
+
+            0<br>
+            6
+        </td>
+    
+                    
+                                                                                        
+            <td class="attempted team_problem_cell">
+
+            0<br>
+            1
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            40<br>
+            4
+        </td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            27<br>
+            5
+        </td>
+    
+                    
+                                                                                        
+            <td class="attempted team_problem_cell">
+
+            0<br>
+            1
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            50<br>
+            3
+        </td>
+    
+                    
+                                                                                        
+            <td class="attempted team_problem_cell">
+
+            0<br>
+            1
+        </td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+            
+                        <td class="total score">277</td>
+                            <td class="total time">253</td>
+            
+    </tr>
+
+
+                                                                                    
+                                        
+                                        
+                                <tr>
+    
+            <td class="rank">23</td>
+    
+            <td>
+    
+            <div class="truncate-table-td">
+                    Vigenere
+                </div>
+        </td>
+    
+    
+    
+    
+                        
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            1
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            60<br>
+            5
+        </td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            7
+        </td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+            
+                        <td class="total score">260</td>
+                            <td class="total time">317</td>
+            
+    </tr>
+
+
+                                                                                    
+                                        
+                                        
+                                <tr>
+    
+            <td class="rank">24</td>
+    
+            <td>
+    
+            <div class="truncate-table-td">
+                    G-Modders
+                </div>
+        </td>
+    
+    
+    
+    
+                        
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            25<br>
+            2
+        </td>
+    
+                    
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            2
+        </td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                                                                        
+            <td class="attempted team_problem_cell">
+
+            0<br>
+            4
+        </td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                                                                        
+            <td class="attempted team_problem_cell">
+
+            0<br>
+            6
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            95<br>
+            2
+        </td>
+    
+                    
+                                                                                        
+            <td class="attempted team_problem_cell">
+
+            0<br>
+            1
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            30<br>
+            4
+        </td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+            
+                        <td class="total score">250</td>
+                            <td class="total time">298</td>
+            
+    </tr>
+
+
+                                                                                    
+                                        
+                                        
+                                <tr>
+    
+            <td class="rank">25</td>
+    
+            <td>
+    
+            <div class="truncate-table-td">
+                    That's going straight in my basket
+                </div>
+        </td>
+    
+    
+    
+    
+                        
+                                                                                        
+            <td class="solved team_problem_cell">
+
+            100<br>
+            4
+        </td>
+    
+                    
+                                                                                        
+            <td class="partial-score team_problem_cell">
+
+            60<br>
+            11
+        </td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                                                                        
+            <td class="attempted team_problem_cell">
+
+            0<br>
+            2
+        </td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+            
+                        <td class="total score">160</td>
+                            <td class="total time"> 96</td>
+            
+    </tr>
+
+
+                                                                                    
+                                        
+                                        
+                                <tr>
+    
+            <td class="rank">26</td>
+    
+            <td>
+    
+            <div class="truncate-table-td">
+                    Alveg Sama
+                </div>
+        </td>
+    
+    
+    
+    
+                        
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+            
+                        <td class="total score">0</td>
+                            <td class="total time">  0</td>
+            
+    </tr>
+
+
+                                                                                    
+                                        
+                                        
+                                <tr>
+    
+            <td class="rank">26</td>
+    
+            <td>
+    
+            <div class="truncate-table-td">
+                    extra-00
+                </div>
+        </td>
+    
+    
+    
+    
+                        
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+            
+                        <td class="total score">0</td>
+                            <td class="total time">  0</td>
+            
+    </tr>
+
+
+                                                                                    
+                                        
+                                        
+                                <tr>
+    
+            <td class="rank">26</td>
+    
+            <td>
+    
+            <div class="truncate-table-td">
+                    extra-02
+                </div>
+        </td>
+    
+    
+    
+    
+                        
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+            
+                        <td class="total score">0</td>
+                            <td class="total time">  0</td>
+            
+    </tr>
+
+
+                                                                                    
+                                        
+                                        
+                                <tr>
+    
+            <td class="rank">26</td>
+    
+            <td>
+    
+            <div class="truncate-table-td">
+                    extra-04
+                </div>
+        </td>
+    
+    
+    
+    
+                        
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+            
+                        <td class="total score">0</td>
+                            <td class="total time">  0</td>
+            
+    </tr>
+
+
+                                                                                    
+                                        
+                                        
+                                <tr>
+    
+            <td class="rank">26</td>
+    
+            <td>
+    
+            <div class="truncate-table-td">
+                    extra-06
+                </div>
+        </td>
+    
+    
+    
+    
+                        
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+            
+                        <td class="total score">0</td>
+                            <td class="total time">  0</td>
+            
+    </tr>
+
+
+                                                                                    
+                                        
+                                        
+                                <tr>
+    
+            <td class="rank">26</td>
+    
+            <td>
+    
+            <div class="truncate-table-td">
+                    extra-08
+                </div>
+        </td>
+    
+    
+    
+    
+                        
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+            
+                        <td class="total score">0</td>
+                            <td class="total time">  0</td>
+            
+    </tr>
+
+
+                                                                                    
+                                        
+                                        
+                                <tr>
+    
+            <td class="rank">26</td>
+    
+            <td>
+    
+            <div class="truncate-table-td">
+                    U4IC
+                </div>
+        </td>
+    
+    
+    
+    
+                        
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+                    
+                                        
+            <td></td>
+    
+            
+                        <td class="total score">0</td>
+                            <td class="total time">  0</td>
+            
+    </tr>
+
+
+                                                
+            
+                    <tr>
+                                <td colspan="2"></td>
+        
+                     <th class="problemcolheader"><a data-toggle="tooltip" title="" href="https://iceland-delta.kattis.com/problems/iceland%3Afrumtolur" data-original-title="Frumtölur">A (100)</a></th> <th class="problemcolheader"><a data-toggle="tooltip" title="" href="https://iceland-delta.kattis.com/problems/iceland%3Alidaskipting" data-original-title="Liðaskipting">B (100)</a></th> <th class="problemcolheader"><a data-toggle="tooltip" title="" href="https://iceland-delta.kattis.com/problems/iceland%3Aakureyri" data-original-title="Akureyri">C (100)</a></th> <th class="problemcolheader"><a data-toggle="tooltip" title="" href="https://iceland-delta.kattis.com/problems/iceland%3Abackspace" data-original-title="Backspace">D (100)</a></th> <th class="problemcolheader"><a data-toggle="tooltip" title="" href="https://iceland-delta.kattis.com/problems/iceland%3Aroomba1" data-original-title="Roomba 1">E (100)</a></th> <th class="problemcolheader"><a data-toggle="tooltip" title="" href="https://iceland-delta.kattis.com/problems/iceland%3Atolfraedi" data-original-title="Tölfræði">F (100)</a></th> <th class="problemcolheader"><a data-toggle="tooltip" title="" href="https://iceland-delta.kattis.com/problems/iceland%3Agiskadu" data-original-title="Giskaðu á svarið">G (100)</a></th> <th class="problemcolheader"><a data-toggle="tooltip" title="" href="https://iceland-delta.kattis.com/problems/iceland%3Aupprodun" data-original-title="Uppröðun">H (100)</a></th> <th class="problemcolheader"><a data-toggle="tooltip" title="" href="https://iceland-delta.kattis.com/problems/iceland%3Aheiltolusumma" data-original-title="Heiltölusumma">I (100)</a></th> <th class="problemcolheader"><a data-toggle="tooltip" title="" href="https://iceland-delta.kattis.com/problems/iceland%3Alettasta" data-original-title="Léttasta verkefnið?">J (100)</a></th> <th class="problemcolheader"><a data-toggle="tooltip" title="" href="https://iceland-delta.kattis.com/problems/iceland%3Asimanumer" data-original-title="Símanúmer">K (100)</a></th> <th class="problemcolheader"><a data-toggle="tooltip" title="" href="https://iceland-delta.kattis.com/problems/iceland%3Abitaflipp" data-original-title="Bitaflipp">L (100)</a></th>
+        
+                                                <td colspan="2"></td>
+                        </tr>
+    
+
+            
+        </tbody></table>
+
+        
+
+    </section>
+</div>
+
+<script type="text/javascript">
+    jQuery(function ($) {
+        if (window.updateContestHeader) {
+                            window.updateContestHeader(true, 31845, 21600, new Date());
+                    }
+
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        jQuery(function ($) {
+            var interval = 60;
+
+            var update_standings = function () {
+                var url = '/standings?ajax=1';
+                $.get(url, {
+                    'cache': false
+                }).fail(function () {
+                }).success(function (data) {
+                    $('#standings_wrapper').html(data);
+                }).always(function () {
+                    setTimeout(update_standings, interval * 1000);
+                });
+            };
+
+            setTimeout(update_standings, interval * 1000);
+        });
+    </script>
+
+
+
+</div>
+
+
+<div id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-info col-md-3 has-much-info">
+                
+                                    Page generated:  18:50:44 GMT in 0.109
+ seconds.
+                    <br>
+                    2+27 db calls. 9 cache hits, 1 cache misses
+                            </div>
+            <div class="footer-powered col-md-6">
+                <h4>
+                                    Powered by&nbsp;Kattis                </h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <script>
+    window.intercomSettings = {
+        app_id: "ynnn5d6q",
+        name: "Bjarki Ágúst Guðmundsson"    };
+</script>
+
+<script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/ynnn5d6q';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>
+
+
+
+<script src="./Standings – Kattis, Sinclair Spectrum 48k_files/bootstrap.min.js"></script>
+<script src="./Standings – Kattis, Sinclair Spectrum 48k_files/modernizr.min.js"></script>
+<script src="./Standings – Kattis, Sinclair Spectrum 48k_files/select2.min.js"></script>
+<script src="./Standings – Kattis, Sinclair Spectrum 48k_files/raphael-min.js"></script>
+<script src="./Standings – Kattis, Sinclair Spectrum 48k_files/system.js" type="text/javascript"></script>
+
+
+
+
+
+<iframe style="display: none;"></iframe></body><div id="cVim-status-bar" style="bottom: 0px;"></div><iframe src="./Standings – Kattis, Sinclair Spectrum 48k_files/cmdline_frame.html" id="cVim-command-frame"></iframe></html>

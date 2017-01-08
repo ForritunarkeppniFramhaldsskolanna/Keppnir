@@ -1,0 +1,56 @@
+#!/bin/bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+setup_dirs
+use_solution sol.py
+compile random_generator.py
+
+samplegroup
+sample 01
+sample 02
+# sample 03
+# sample 04
+
+# 1: N <= 100, only consists of inputs and outputs
+group io 20
+tc io-01 random_generator 100 True 0
+tc io-02 random_generator 100 True 0
+
+# 2: N <= 100
+group small 30
+include_group io
+tc small-01 random_generator 100 False 0
+tc small-02 random_generator 100 False 0
+tc small-03 random_generator 100 False 0
+tc small-04 random_generator 100 False 0
+
+# 3: N <= 10^5
+group large 50
+include_group io
+include_group small
+tc large-01 random_generator 100000 False 0
+tc large-02 random_generator 100000 False 0
+tc large-03 random_generator 100000 False 0
+tc large-04 random_generator 100000 False 0
+
+# # 3: There are at most 5 inputs with ?
+# group fiveq 30
+# include_group ionoq
+# include_group noq
+# tc fiveq-01 random_generator 1000 False 5
+# tc fiveq-02 random_generator 1000 False 5
+# tc fiveq-03 random_generator 1000 False 5
+# tc fiveq-04 random_generator 1000 False 5
+
+# # 4:
+# group any 30
+# include_group ionoq
+# include_group noq
+# include_group fiveq
+# tc any-01 random_generator 1000 False 1000
+# tc any-02 random_generator 1000 False 1000
+
+generate_grader
+cleanup_programs
+

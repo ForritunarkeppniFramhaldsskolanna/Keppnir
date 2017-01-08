@@ -1,0 +1,43 @@
+\problemname{Bolir}
+
+\illustration{0.4}{bolur}{Keppendur fá boli}
+
+Eitt það skemmtilegasta við að taka þátt í forritunarkeppninni er auðvitað að fá bol. En í ár gætu skipuleggjendurnir hafa klúðrað málunum\ldots Þegar keppandi skráir sig í keppnina þá gefur hann upp hvaða bolastærð hann vill. En þessar upplýsingar týndust, svo skipuleggjendurnir pöntuðu í staðinn boli í alls konar stærðum í von um að allir keppendurnir gætu fengið stærð sem þeir væru ánægðir með, þó það væri ekki endilega stærðin sem þeir báðu um.
+
+Nú er dagur keppninnar runninn upp, og bæði keppendurnir og bolirnir eru komnir í hús. Það eru jafn margir keppendur og bolir, eða $N$ keppendur og $N$ bolir. Bolastærðirnar eru táknaðar með heiltölum frá $1$ upp í $K$, og því hærri sem talan er því stærri er bolurinn. Keppendurnir eru spurðir um hvaða bolastærðir þeir væru ánægðir með að vera í, og gefur keppandi $i$ upp bil af bolastærðum frá $L_i$ upp í $R_i$, þar sem $L_i$ er minnsta bolastærðin sem hann væri ánægður með að vera í, og $R_i$ er stærsta bolastærðin sem hann væri ánægður með að vera í.
+
+Þú færð líka gefinn lista af stærðunum á bolunum sem skipuleggjendurnir pöntuðu. Getur þú athugað hvort hægt sé að úthluta bolunum þannig að hver keppandi fái bol sem hann væri ánægður með að vera í?
+
+\section*{Inntak}
+Á fyrstu línu er heiltalan $N$ sem táknar bæði fjölda keppenda og fjölda bola. Þar eftir fylgja $N$ línur, ein fyrir hvern keppanda. Af þessum línum mun lína númer $i$ innihalda tvær heiltölur $L_i$ og $R_i$, þar sem $1 \leq L_i \leq R_i \leq K$, sem tákna bilið af bolastærðum sem keppandi $i$ væri ánægður með. Að lokum kemur ein lína með $N$ heiltölum á bilinu $1$ upp í $K$, þar sem hver heiltala táknar stærð á einum boli.
+
+\section*{Úttak}
+Ein lína sem inniheldur \texttt{Jebb} ef hægt er að úthluta bolunum til keppendanna þannig að hver keppandi fái bol sem hann er ánægður með, eða \texttt{Neibb} annars.
+
+\section*{Útskýring á sýnidæmum}
+Í fyrsta sýnidæminu eru $N=4$ keppendur og bolir. Keppendurnir fjórir vilja boli af eftirfarandi stærðum:
+\begin{enumerate}
+    \item stærð á milli $1$ og $3$,
+    \item stærð á milli $1$ og $10$,
+    \item stærð á milli $2$ og $2$, og
+    \item stærð á milli $2$ og $3$.
+\end{enumerate}
+Bolirnir fjórir eru af stærðum $1$, $2$, $2$ og $9$. Ef keppandi $1$ fær bol af stærð $1$, keppandi $2$ fær bol af stærð $9$, og keppendur $3$ og $4$ fá boli af stærð $2$, þá hefur öllum keppendum verið úthlutað bolum sem þeir eru ánægðir með, og svarið er því \texttt{Jebb}.
+
+Í öðru sýnidæminu eru þrír sem vilja bara bol af stærð $2$, en það eru bara tveir bolir af stærð $2$. Það er því ekki hægt að úthluta öllum boli sem þeir eru ánægðir með, og svarið er því \texttt{Neibb}.
+
+\section*{Stigagjöf}
+Lausnin mun verða prófuð á miserfiðum inntaksgögnum, og er gögnunum skipt í
+hópa eins og sýnt er í töflunni að neðan. Lausnin mun svo fá stig eftir því
+hvaða hópar eru leystir.
+
+\begin{tabular}{|l|l|l|l|}
+\hline
+Hópur & Stig & Inntaksstærð & Önnur skilyrði \\ \hline
+1 & 15 & $N \leq 10$ & Stærsta bolastærðin $K$ er $1\,000$ \\ \hline
+2 & 15 & $N \leq 100$ & Stærsta bolastærðin $K$ er $100$ \\ \hline
+3 & 20 & $N \leq 1\,000$ & Stærsta bolastærðin $K$ er $1\,000$ \\ \hline
+4 & 20 & $N \leq 10^5$ & Stærsta bolastærðin $K$ er $2$ \\ \hline
+5 & 15 & $N \leq 10^5$ & Stærsta bolstærðin $K$ er $10^5$ \\ \hline
+6 & 15 & $N \leq 10^5$ & Stærsta bolastærðin $K$ er $10^9$ \\ \hline
+\end{tabular}

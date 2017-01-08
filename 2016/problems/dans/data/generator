@@ -1,0 +1,99 @@
+#!/bin/bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+setup_dirs
+use_solution cycles.cpp
+
+compile random_generator.py # Arguments: n k method seed
+
+samplegroup
+sample 01
+sample 02
+sample 03
+
+# 1:
+#     points: 10
+#     description: "n <= 2, k <= 10"
+
+group len2-small 10
+
+tc len2-small-01 random_generator 1     0   cyc
+tc len2-small-02 random_generator 1     1   cyc
+tc len2-small-03 random_generator 1     2   cyc
+tc len2-small-04 random_generator 1     5   cyc
+tc len2-small-05 random_generator 1     10  cyc
+
+tc len2-small-06 random_generator 1,1   0   cyc
+tc len2-small-07 random_generator 1,1   1   cyc
+tc len2-small-08 random_generator 1,1   2   cyc
+tc len2-small-09 random_generator 1,1   5   cyc
+tc len2-small-10 random_generator 1,1   10  cyc
+tc len2-small-11 random_generator 2     0   cyc
+tc len2-small-12 random_generator 2     1   cyc
+tc len2-small-13 random_generator 2     2   cyc
+tc len2-small-14 random_generator 2     5   cyc
+tc len2-small-15 random_generator 2     10  cyc
+
+# 2:
+#     points: 40
+#     description: "n <= 10, k <= 10"
+
+group small 40
+include_group len2-small
+
+tc small-01 random_generator 3     10 random
+tc small-02 random_generator 4     10 random
+tc small-03 random_generator 5     10 random
+tc small-04 random_generator 6     10 random
+tc small-05 random_generator 7     10 random
+tc small-06 random_generator 8     10 random
+tc small-07 random_generator 9     10 random
+tc small-08 random_generator 10    10 random
+tc small-09 random_generator 2,3,5 10 cyc
+tc small-10 random_generator 2,3,5  1 cyc
+tc small-11 random_generator 2,3,5  2 cyc
+tc small-12 random_generator 2,3,5  3 cyc
+tc small-13 random_generator 2,3,5  4 cyc
+tc small-14 random_generator 5x2    4 cyc
+tc small-15 random_generator 5x2    5 cyc
+
+# 3:
+#     points: 25
+#     description: "n <= 2, k <= 10^9"
+
+group len2-large 25
+include_group len2-small
+
+tc len2-large-01 random_generator 1     999999999    cyc
+tc len2-large-02 random_generator 1     1000000000   cyc
+
+tc len2-large-03 random_generator 1,1   999999999    cyc
+tc len2-large-04 random_generator 1,1   1000000000   cyc
+tc len2-large-05 random_generator 2     999999999    cyc
+tc len2-large-06 random_generator 2     1000000000   cyc
+
+# 4:
+#     points: 25
+#     description: "n <= 1000, k <= 10^9"
+
+group large 25
+include_group small
+include_group len2-small
+include_group len2-large
+
+tc large-01 random_generator 2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89    1000000000 cyc
+tc large-02 random_generator 2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89    999999999  cyc
+tc large-03 random_generator 2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89    999999998  cyc
+tc large-04 random_generator 5x2,6x3,5,7,11,13,17,19,23,29,10x31,2x37,41,43,47,53,59,61,67,71       999999997  cyc
+tc large-05 random_generator 5x2,6x3,5,7,11,13,17,19,23,29,10x31,2x37,41,43,47,53,59,61,67,71       999999996  cyc
+tc large-06 random_generator 1000                                                                   999999995  cyc
+tc large-07 random_generator 1000                                                                   1000       cyc
+tc large-08 random_generator 1000                                                                   1001       cyc
+tc large-09 random_generator 499,501                                                                900000000  cyc
+tc large-10 random_generator 499,501                                                                900000001  cyc
+
+
+generate_grader
+cleanup_programs
+

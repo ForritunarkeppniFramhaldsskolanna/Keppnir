@@ -1,0 +1,61 @@
+#!/bin/bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+setup_dirs
+use_solution sol.cpp
+
+compile random_generator.py # Arguments: n method seed
+
+samplegroup
+sample 01
+sample 02
+sample 03
+
+# 1: Only Reykjavik and Akureyri appear, and each appears at least once
+group both 35
+tc both-01 random_generator 2 both
+tc both-02 random_generator 3 both
+tc both-03 random_generator 5 both
+tc both-04 random_generator 8 both
+tc both-05 random_generator 25 both
+tc both-06 random_generator 10 both
+tc both-07 random_generator 100 both
+tc both-08 random_generator 1000 both
+
+# 2: Only Reykjavik and Akureyri appear
+group one 15
+include_group both
+tc one-01 random_generator 1 one
+tc one-02 random_generator 2 one
+tc one-03 random_generator 3 one
+tc one-04 random_generator 5 one
+tc one-05 random_generator 7 one
+tc one-06 random_generator 13 one
+tc one-07 random_generator 100 one
+tc one-08 random_generator 1000 one
+
+# 3: Any city can appear
+group any 50
+include_group both
+include_group one
+tc any-01 random_generator 1,1 any
+tc any-02 random_generator 2,1 any
+tc any-03 random_generator 5,1 any
+tc any-04 random_generator 8,1 any
+tc any-05 random_generator 10,1 any
+tc any-06 random_generator 100,1 any
+tc any-07 random_generator 2,2 any
+tc any-08 random_generator 5,2 any
+tc any-09 random_generator 8,2 any
+tc any-10 random_generator 10,2 any
+tc any-11 random_generator 100,2 any
+tc any-12 random_generator 5,5 any
+tc any-13 random_generator 8,5 any
+tc any-14 random_generator 10,5 any
+tc any-15 random_generator 1000,5 any
+tc any-16 random_generator 10000,1000 any
+
+generate_grader
+cleanup_programs
+

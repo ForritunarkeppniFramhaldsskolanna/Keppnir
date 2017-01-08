@@ -1,0 +1,71 @@
+#!/bin/bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+setup_dirs
+use_solution sol.py
+
+compile gen.py # Arguments: n k method seed
+
+samplegroup
+sample 01
+sample 02
+
+# 1: Small hamiltonian paths (10 points)
+group smallham 10
+tc smallham-01 gen fixed 2 2
+tc smallham-02 gen fixed 2 3
+tc smallham-03 gen fixed 3 2
+tc smallham-04 gen fixed 4 2
+tc smallham-05 gen fixed 2 4
+tc smallham-06 gen fixed 3 4
+tc smallham-07 gen fixed 4 3
+tc smallham-08 gen fixed 4 4
+
+# 2: Small non-hamiltonian paths (10 points)
+group smallnonham 10
+tc smallnonham-01 gen fixed 3 3
+tc smallnonham-02 gen fixed 3 5
+tc smallnonham-03 gen fixed 5 3
+tc smallnonham-04 gen fixed 5 5
+
+# 3: Width/breadth is 1 (20 points)
+group one 20
+tc one-01 gen fixed 1 1
+tc one-02 gen fixed 1 3
+tc one-03 gen fixed 3 1
+tc one-04 gen fixed 1 39
+tc one-05 gen fixed 39 1
+tc one-06 gen fixed 1 42
+tc one-07 gen fixed 42 1
+
+# 4: large hamiltonian paths (30 points)
+group largeham 30
+include_group smallham
+tc largeham-01 gen eveneven 100
+tc largeham-02 gen eveneven 100
+tc largeham-03 gen eveneven 100
+tc largeham-04 gen oddeven 100
+tc largeham-05 gen oddeven 100
+tc largeham-06 gen oddeven 100
+tc largeham-07 gen evenodd 100
+tc largeham-08 gen evenodd 100
+tc largeham-09 gen evenodd 100
+
+# 5: large non-hamiltonian paths (30 points)
+group largenonham 30
+include_group smallnonham
+tc largenonham-01 gen oddodd 100
+tc largenonham-02 gen oddodd 100
+tc largenonham-03 gen oddodd 100
+tc largenonham-04 gen oddodd 100
+tc largenonham-05 gen oddodd 100
+tc largenonham-06 gen oddodd 100
+tc largenonham-07 gen oddodd 100
+tc largenonham-08 gen oddodd 100
+tc largenonham-09 gen oddodd 100
+
+generate_grader
+cleanup_programs
+
+
