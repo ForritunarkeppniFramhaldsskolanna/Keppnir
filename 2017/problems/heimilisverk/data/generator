@@ -1,0 +1,54 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+setup_dirs
+use_solution bjarki_lame.py
+
+compile random_generator.py # Arguments: method
+
+samplegroup
+sample 01
+sample 02
+sample 03
+
+group A 20
+tc A-01 random_generator rand 10 10 0.2
+tc A-02 random_generator rand 10 10 0.6
+tc A-03 random_generator rand 10 10 0.5
+tc A-04 random_generator rand 10 10 0.9
+tc A-05 random_generator rand 10 10 0.1
+tc A-06 random_generator rand 10 10 0.3
+tc A-07 random_generator rand 10 10 0.0
+tc A-08 random_generator rand 10 10 1.0
+
+group B 20
+include_group A
+tc B-01 random_generator rand 100000 2 0.2 
+tc B-02 random_generator rand 100000 2 0.5
+tc B-03 random_generator rand 100000 2 0.9
+
+group C 20
+include_group B
+tc C-01 random_generator rand 100000 10 0.4
+tc C-02 random_generator rand 100000 10 0.1
+tc C-04 random_generator rand 100000 10 0.5
+
+group D 20
+include_group A
+tc D-01 random_generator rand 1000 1000 0.1
+tc D-03 random_generator rand 1000 1000 0.5
+tc D-05 random_generator rand 1000 1000 0.9
+
+group E 20
+include_group D
+include_group C
+tc E-01 random_generator atmost 1000000
+tc E-02 random_generator atmost 1000000
+tc E-06 random_generator atmost 1000000
+tc E-07 random_generator sqrt 1000000
+tc E-08 random_generator sqrt 1000000
+
+generate_grader
+cleanup_programs
+

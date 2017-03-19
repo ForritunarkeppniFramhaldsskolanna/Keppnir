@@ -1,0 +1,56 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+setup_dirs
+use_solution ok.py
+
+compile random_generator.py # Arguments: n k method seed
+
+samplegroup
+sample 01
+
+group tiny 10
+tc tiny-01 random_generator exactly 1
+tc tiny-02 random_generator exactly 2
+tc tiny-03 random_generator exactly 3
+tc tiny-04 random_generator exactly 4
+tc tiny-05 random_generator exactly 5
+
+group small 20
+tc small-01 random_generator random 50
+tc small-02 random_generator random 50
+tc small-03 random_generator random 50
+tc small-04 random_generator random 50
+tc small-05 random_generator random 50
+tc small-06 random_generator random 50
+tc small-07 random_generator random 50  
+
+group mediumsmall 30
+include_group small
+tc mediumsmall-01 random_generator random 2000
+tc mediumsmall-02 random_generator random 2000
+tc mediumsmall-03 random_generator random 2000
+tc mediumsmall-04 random_generator random 2000
+tc mediumsmall-05 random_generator random 2000
+
+group medium 20
+include_group mediumsmall
+tc medium-01 random_generator random 10000
+tc medium-02 random_generator random 10000
+tc medium-03 random_generator random 10000
+tc medium-04 random_generator random 10000
+
+group big 20
+include_group medium
+tc big-01 random_generator random 1000000000 
+tc big-02 random_generator random 1000000000 
+tc big-03 random_generator random 1000000000 
+tc big-04 random_generator random 1000000000 
+tc big-05 random_generator random 1000000000 
+tc big-06 random_generator random 1000000000 
+tc big-07 random_generator random 1000000000 
+
+generate_grader
+cleanup_programs
+

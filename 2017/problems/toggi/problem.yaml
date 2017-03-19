@@ -1,0 +1,12 @@
+author: Garðar Andri Sigurðsson, Arnar Bjarni Arnarson
+source: Forritunarkeppni Framhaldsskólanna 2017
+rights_owner: Forritunarkeppni Framhaldsskólanna
+license: cc by-sa
+grading:
+    on_reject: grade
+    objective: max
+    range: 0 100
+type: scoring
+limits:
+    time_multiplier: 1.3
+    time_safety_margin: 1.3

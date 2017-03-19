@@ -1,0 +1,63 @@
+\problemname{Órökrétt}
+
+Anna er virtur rökfræðingur. Nýlega hefur hún verið að rannsaka röksegðir á
+mismunandi formi. Tvö algeng form eru ONF (ogað normlegt form) og ENF (eðað
+normlegt form).
+
+Í ONF þá er röksegðin samsett af einni eða fleiri klausum með OG-um á milli,
+þar sem hver klausa samanstendur af einni eða fleiri breytu (eða neitun breytu)
+með EÐA-um á milli. Dæmu um röksemd á ONF formi er eftirfarandi:
+
+\begin{center}
+    \texttt{(a EDA !b) OG (c) OG (!a EDA !c EDA b)}
+\end{center}
+
+ENF er svipað, en þá er röksegðin samsett af einni eða fleiri klausum með EÐA-um á milli,
+þar sem hver klausa samanstendur af einni eða fleiri breytu (eða neitun breytu)
+með OG-um á milli. Dæmi um röksemd á ENF formi er eftirfarandi:
+
+\begin{center}
+    \texttt{(c) EDA (b OG !a) EDA (!b OG a OG !c)}
+\end{center}
+
+Algengt verkefni fyrir rökfræðing er að athuga hvort það sé hægt að gera gefna
+röksegð sanna með því að setja gildin SATT/ÓSATT í breyturnar. Ef það er hægt,
+þá segir maður að röksegðin sé fullnægjanleg. Til dæmis er hægt að gera
+eftirfarandi röksegð sanna með því að setja \texttt{a = ÓSATT}, \texttt{b =
+ÓSATT}, \texttt{c = SATT}, og hún er því fullnægjanleg:
+
+\begin{center}
+    \texttt{(a EDA !b) OG (c) OG (!a EDA !c EDA b)}
+\end{center}
+
+Aftur á móti er ekki hægt að gera eftirfarandi röksegð sanna, sama hvaða gildi
+við látum breyturnar hafa, og hún er því ekki fullnægjanleg:
+
+\begin{center}
+    \texttt{(a EDA b) OG (!a EDA !b)}
+\end{center}
+
+Anna var að gera snilldarlega uppgötvun. Hún fann upp á skilvirkri leið til að
+breyta röksegð á ONF formi yfir í jafngilda röksegð á ENF formi. Núna biður hún
+þig um að hjálpa sér að athuga hvort röksegðin sem er á ENF formi sé
+fullnægjanleg.
+
+\section*{Inntak}
+Ein lína sem inniheldur röksegð á ENF formi. Hver breyta inniheldur bara enska
+lágstafi, og hefur lengd á bilinu 1 til 5.
+
+\section*{Úttak}
+Ein lína sem inniheldur \texttt{Jebb} ef röksegðin er fullnægjanleg, og \texttt{Neibb} ef hún er ekki fullnægjanleg.
+
+\section*{Stigagjöf}
+Lausnin mun verða prófuð á miserfiðum inntaksgögnum, og er gögnunum skipt í
+hópa eins og sýnt er í töflunni að neðan. Lausnin mun svo fá stig eftir því
+hvaða hópar eru leystir.
+
+\begin{tabular}{|l|l|l|l|}
+\hline
+Hópur & Stig & Skilyrði \\ \hline
+1     & 50   & Það eru bara $10$ breytur, táknaðar með einum bókstaf frá \texttt{a} til \texttt{j}, og það eru í mesta lagi $10$ klausur. \\ \hline
+2     & 50   & Það eru allt að $100$ breytur, og það eru í mesta lagi $100$ klausur. \\ \hline
+\end{tabular}
+

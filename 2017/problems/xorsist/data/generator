@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+setup_dirs
+use_solution unnar_best.py
+
+compile random_generator.py # Arguments: mx mxa seed
+
+samplegroup
+sample 01
+sample 02
+
+# 1: N <= 1000
+group small 50
+tc small-01 random_generator 1000
+tc small-02 random_generator 1000
+tc small-03 random_generator 1000
+tc small-04 random_generator 1000
+tc small-05 random_generator 1000
+tc small-06 random_generator 1000
+tc small-07 random_generator 1000
+tc small-08 random_generator 1000
+tc small-09 random_generator 1000
+tc small-10 random_generator 1000
+
+
+# 2: N <= 10**18
+group large 50
+include_group small
+tc large-01 random_generator 1000000000000000000
+tc large-02 random_generator 1000000000000000000
+tc large-03 random_generator 1000000000000000000
+tc large-04 random_generator 1000000000000000000
+tc large-05 random_generator 1000000000000000000
+tc large-06 random_generator 1000000000000000000
+tc large-07 random_generator 1000000000000000000
+tc large-08 random_generator 1000000000000000000
+tc large-09 random_generator 1000000000000000000
+tc large-10 random_generator 1000000000000000000
+
+generate_grader
+cleanup_programs
+

@@ -1,0 +1,316 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+setup_dirs
+use_solution magic.py
+
+compile H.py
+
+samplegroup
+sample 1
+sample 2
+
+
+group tiny-0 1
+tc tiny-0 H 0
+
+group tiny-1 1
+tc tiny-1 H 1
+
+group tiny-2 1
+tc tiny-2 H 2
+
+group tiny-3 1
+tc tiny-3 H 3
+
+group tiny-4 1
+tc tiny-4 H 4
+
+group tiny-5 1
+tc tiny-5 H 5
+
+group tiny-6 1
+tc tiny-6 H 6
+
+group tiny-7 1
+tc tiny-7 H 7
+
+group tiny-8 1
+tc tiny-8 H 8
+
+group tiny-9 1
+tc tiny-9 H 9
+
+group small-0 1
+tc small-0 H 204
+
+group small-1 1
+tc small-1 H 602
+
+group small-2 1
+tc small-2 H 251
+
+group small-3 1
+tc small-3 H 158
+
+group small-4 1
+tc small-4 H 384
+
+group small-5 1
+tc small-5 H 929
+
+group small-6 1
+tc small-6 H 207
+
+group small-7 1
+tc small-7 H 947
+
+group small-8 1
+tc small-8 H 930
+
+group small-9 1
+tc small-9 H 311
+
+group perfect-0 1
+tc perfect-0 H 6
+
+group perfect-1 1
+tc perfect-1 H 28
+
+group perfect-2 1
+tc perfect-2 H 496
+
+group perfect-3 1
+tc perfect-3 H 8128
+
+group perfect-4 1
+tc perfect-4 H 33550336
+
+group perfect-5 1
+tc perfect-5 H 8589869056
+
+group perfect-6 1
+tc perfect-6 H 137438691328
+
+group factorial-0 1
+tc factorial-0 H 362880
+
+group factorial-1 1
+tc factorial-1 H 5040
+
+group factorial-2 1
+tc factorial-2 H 121645100408832000
+
+group factorial-3 1
+tc factorial-3 H 120
+
+group factorial-4 1
+tc factorial-4 H 6227020800
+
+group factorial-5 1
+tc factorial-5 H 3628800
+
+group factorial-6 1
+tc factorial-6 H 87178291200
+
+group factorial-7 1
+tc factorial-7 H 355687428096000
+
+group factorial-8 1
+tc factorial-8 H 1307674368000
+
+group factorial-9 1
+tc factorial-9 H 6402373705728000
+
+group p2-0 1
+tc p2-0 H 4294967296
+
+group p2-1 1
+tc p2-1 H 137438953472
+
+group p2-2 1
+tc p2-2 H 576460752303423488
+
+group p2-3 1
+tc p2-3 H 16777216
+
+group p2-4 1
+tc p2-4 H 144115188075855872
+
+group p2-5 1
+tc p2-5 H 72057594037927936
+
+group p2-6 1
+tc p2-6 H 288230376151711744
+
+group p2-7 1
+tc p2-7 H 4503599627370496
+
+group p2-8 1
+tc p2-8 H 8388608
+
+group p2-9 1
+tc p2-9 H 64
+
+group fibonacci-0 1
+tc fibonacci-0 H 160500643816367088
+
+group fibonacci-1 1
+tc fibonacci-1 H 259695496911122585
+
+group fibonacci-2 1
+tc fibonacci-2 H 806515533049393
+
+group fibonacci-3 1
+tc fibonacci-3 H 1836311903
+
+group fibonacci-4 1
+tc fibonacci-4 H 139583862445
+
+group fibonacci-5 1
+tc fibonacci-5 H 679891637638612258
+
+group fibonacci-6 1
+tc fibonacci-6 H 420196140727489673
+
+group fibonacci-7 1
+tc fibonacci-7 H 8944394323791464
+
+group fibonacci-8 1
+tc fibonacci-8 H 610
+
+group fibonacci-9 1
+tc fibonacci-9 H 61305790721611591
+
+group catalan-0 1
+tc catalan-0 H 55534064877048198
+
+group catalan-1 1
+tc catalan-1 H 212336130412243110
+
+group catalan-2 1
+tc catalan-2 H 343059613650
+
+group catalan-3 1
+tc catalan-3 H 14544636039226909
+
+group catalan-4 1
+tc catalan-4 H 2674440
+
+group catalan-5 1
+tc catalan-5 H 1767263190
+
+group catalan-6 1
+tc catalan-6 H 42
+
+group catalan-7 1
+tc catalan-7 H 263747951750360
+
+group catalan-8 1
+tc catalan-8 H 91482563640
+
+group catalan-9 1
+tc catalan-9 H 129644790
+
+group motzkin-0 1
+tc motzkin-0 H 66368199913921497
+
+group motzkin-1 1
+tc motzkin-1 H 41835
+
+group motzkin-2 1
+tc motzkin-2 H 13933569346707
+
+group motzkin-3 1
+tc motzkin-3 H 2750016719520991
+
+group motzkin-4 1
+tc motzkin-4 H 73007772802
+
+group motzkin-5 1
+tc motzkin-5 H 953467954114363
+
+group motzkin-6 1
+tc motzkin-6 H 400763223
+
+group motzkin-7 1
+tc motzkin-7 H 556704809728838604
+
+group motzkin-8 1
+tc motzkin-8 H 22944749046030949
+
+group motzkin-9 1
+tc motzkin-9 H 192137918101841817
+
+group triangluar-0 1
+tc triangluar-0 H 426548945951821605
+
+group triangluar-1 1
+tc triangluar-1 H 875611033061344128
+
+group triangluar-2 1
+tc triangluar-2 H 11130037491592671
+
+group triangluar-3 1
+tc triangluar-3 H 743301543085819453
+
+group triangluar-4 1
+tc triangluar-4 H 832721640469329331
+
+group triangluar-5 1
+tc triangluar-5 H 38756443662964566
+
+group triangluar-6 1
+tc triangluar-6 H 150145796978065540
+
+group triangluar-7 1
+tc triangluar-7 H 498522796180270956
+
+group triangluar-8 1
+tc triangluar-8 H 451909860726587616
+
+group triangluar-9 1
+tc triangluar-9 H 541595904581297566
+
+group large-0 1
+tc large-0 H 885703806313795871
+
+group large-1 1
+tc large-1 H 897145272235330422
+
+group large-2 1
+tc large-2 H 205043723361104587
+
+group large-3 1
+tc large-3 H 848821429864631901
+
+group large-4 1
+tc large-4 H 179224005103730170
+
+group large-5 1
+tc large-5 H 603441230355458022
+
+group large-6 1
+tc large-6 H 738009091801197773
+
+group large-7 1
+tc large-7 H 264118168634493448
+
+group large-8 1
+tc large-8 H 182829778442895830
+
+group large-9 1
+tc large-9 H 65346306570478875
+
+group large-10 1
+tc large-10 H 822173150480239530
+
+group large-11 1
+tc large-11 H 724066394573497037
+
+group large-12 1
+tc large-12 H 108500229861914394
+
+generate_grader
+cleanup_programs

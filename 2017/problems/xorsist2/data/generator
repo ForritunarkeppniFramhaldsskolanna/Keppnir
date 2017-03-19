@@ -1,0 +1,59 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+setup_dirs
+use_solution unnar_best.py
+
+compile random_generator.py # Arguments: mx mxa seed
+
+samplegroup
+sample 01
+sample 02
+sample 03
+
+
+# 1: N <= 1000
+group small 33
+tc small-01 random_generator whatevs 1000
+tc small-02 random_generator whatevs 1000
+tc small-03 random_generator whatevs 1000
+tc small-04 random_generator whatevs 1000
+tc small-05 random_generator whatevs 1000
+tc small-06 random_generator whatevs 1000
+tc small-07 random_generator whatevs 1000
+tc small-08 random_generator whatevs 1000
+tc small-09 random_generator whatevs 1000
+tc small-10 random_generator whatevs 1000
+
+# 1: N <= 10**18, a = 1
+group med 33
+tc med-01 random_generator one 1000000000000000000
+tc med-02 random_generator one 1000000000000000000
+tc med-03 random_generator one 1000000000000000000
+tc med-04 random_generator one 1000000000000000000
+tc med-05 random_generator one 1000000000000000000
+tc med-06 random_generator one 1000000000000000000
+tc med-07 random_generator one 1000000000000000000
+tc med-08 random_generator one 1000000000000000000
+tc med-09 random_generator one 1000000000000000000
+tc med-10 random_generator one 1000000000000000000
+
+
+# 2: N <= 10**18
+group large 34
+include_group med
+tc large-01 random_generator whatevs 1000000000000000000
+tc large-02 random_generator whatevs 1000000000000000000
+tc large-03 random_generator whatevs 1000000000000000000
+tc large-04 random_generator whatevs 1000000000000000000
+tc large-05 random_generator whatevs 1000000000000000000
+tc large-06 random_generator whatevs 1000000000000000000
+tc large-07 random_generator whatevs 1000000000000000000
+tc large-08 random_generator whatevs 1000000000000000000
+tc large-09 random_generator whatevs 1000000000000000000
+tc large-10 random_generator whatevs 1000000000000000000
+
+generate_grader
+cleanup_programs
+

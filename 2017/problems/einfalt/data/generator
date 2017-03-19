@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+setup_dirs
+use_solution sol.py
+
+compile random_generator.py
+
+samplegroup
+sample 01
+sample 02
+
+group A 10
+tc A-01 random_generator 1 1
+tc A-02 random_generator 2 2
+
+group B 50
+include_group A
+tc B-01 random_generator 0 0
+tc B-02 random_generator 3 3
+tc B-03 random_generator 4 4
+tc B-04 random_generator 5 5
+tc B-05 random_generator 6 6
+tc B-06 random_generator 7 7
+tc B-07 random_generator 8 8
+tc B-08 random_generator 9 9
+tc B-09 random_generator 10 10
+
+group C 40
+include_group B
+tc C-01 random_generator 100 100
+tc C-02 random_generator 30 100
+tc C-03 random_generator 31 100
+tc C-04 random_generator 32 100
+tc C-05 random_generator 33 100
+tc C-06 random_generator 34 100
+tc C-07 random_generator 35 100
+
+generate_grader
+cleanup_programs
+

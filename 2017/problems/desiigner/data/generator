@@ -1,0 +1,67 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+setup_dirs
+use_solution ohg.cpp
+
+compile random_generator.py # Arguments: method seed
+
+samplegroup
+sample 01
+sample 02
+sample 03
+sample 04
+
+group easy 50
+tc easy-01 random_generator True illegal 
+tc easy-02 random_generator True correct
+tc easy-04 random_generator True correct
+tc easy-05 random_generator True illegal 
+tc easy-06 random_generator True correct
+tc easy-07 random_generator True illegal 
+tc easy-08 random_generator True correct
+
+group hard 40
+include_group easy
+tc hard-01 random_generator False illegal
+tc hard-02 random_generator False correct_mult_vowels
+tc hard-03 random_generator False almost_correct
+tc hard-04 random_generator False illegal
+tc hard-05 random_generator False correct_mult_vowels
+tc hard-06 random_generator False almost_correct
+tc hard-07 random_generator False illegal
+tc hard-08 random_generator False correct_mult_vowels
+tc hard-09 random_generator False almost_correct
+tc hard-11 random_generator False correct_mult_vowels
+tc hard-12 random_generator False almost_correct
+tc hard-13 random_generator False illegal
+tc hard-14 random_generator False correct_mult_vowels
+tc hard-15 random_generator False almost_correct
+tc hard-16 random_generator False illegal
+tc hard-17 random_generator False correct_mult_vowels
+tc hard-18 random_generator False almost_correct
+tc hard-20 random_generator False illegal
+tc hard-21 random_generator False correct_mult_vowels
+tc hard-22 random_generator False almost_correct
+tc hard-23 random_generator False illegal
+tc hard-24 random_generator False correct_mult_vowels
+tc hard-25 random_generator False almost_correct
+tc hard-26 random_generator False illegal
+tc hard-27 random_generator False correct_mult_vowels
+tc hard-28 random_generator False almost_correct
+tc hard-29 random_generator False illegal
+tc hard-31 random_generator False exactly brrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrg
+tc hard-32 random_generator False exactly brrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+
+group empty 10
+include_group hard
+tc empty-01 random_generator False exactly ""
+tc empty-02 random_generator False exactly b
+tc empty-03 random_generator False exactly a
+tc empty-04 random_generator False exactly bra
+tc empty-05 random_generator False exactly ba
+
+generate_grader
+cleanup_programs
+

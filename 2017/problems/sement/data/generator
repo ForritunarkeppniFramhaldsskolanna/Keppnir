@@ -1,0 +1,74 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+setup_dirs
+use_solution fast.py
+
+compile random_generator.py # Arguments: n k method seed
+
+samplegroup
+sample 01
+sample 02
+sample 03
+
+# n <= 10^3, k <= 10^9
+group brute 30
+tc brute-01 random_generator 1000 1000000000 generate
+tc brute-02 random_generator 1000 1000000000 random
+tc brute-03 random_generator 1000 1000000000 generate
+tc brute-04 random_generator 1000 1000000000 random
+tc brute-05 random_generator 1000 1000000000 generate
+tc brute-06 random_generator 1000 1000000000 excluded
+tc brute-07 random_generator 1000 1000000000 excluded
+tc brute-08 random_generator 1000 1000000000 excluded
+
+# n <= 10^3, k <= 10^18
+group brute2 10
+include_group brute
+tc brute2-01 random_generator 1000 1000000000000000000 generate
+tc brute2-02 random_generator 1000 1000000000000000000 random
+tc brute2-03 random_generator 1000 1000000000000000000 generate
+tc brute2-04 random_generator 1000 1000000000000000000 random
+tc brute2-05 random_generator 1000 1000000000000000000 generate
+tc brute2-06 random_generator 1000 1000000000000000000 excluded
+tc brute2-07 random_generator 1000 1000000000000000000 excluded
+tc brute2-08 random_generator 1000 1000000000000000000 excluded
+
+# n <= 2*10^5, k <= 100
+group tiny 30
+tc tiny-01 random_generator 200000 100 generate
+tc tiny-02 random_generator 200000 100 random
+tc tiny-03 random_generator 200000 100 generate
+tc tiny-04 random_generator 200000 100 random
+tc tiny-05 random_generator 200000 100 generate
+tc tiny-06 random_generator 200000 100 excluded
+
+# n <= 2*10^5, k <= 10^9
+group fast 30
+include_group tiny
+include_group brute
+tc fast-01 random_generator 200000 1000000000 generate
+tc fast-02 random_generator 200000 1000000000 random
+tc fast-03 random_generator 200000 1000000000 generate
+tc fast-04 random_generator 200000 1000000000 random
+tc fast-05 random_generator 200000 1000000000 generate
+tc fast-06 random_generator 200000 1000000000 excluded
+tc fast-07 random_generator 200000 1000000000 excluded
+tc fast-08 random_generator 200000 1000000000 excluded
+
+# n <= 2*10^5, k <= 10^18
+# group fast2 20
+# tc fast2-01 random_generator 200000 1000000000000000000 generate
+# tc fast2-02 random_generator 200000 1000000000000000000 random
+# tc fast2-03 random_generator 200000 1000000000000000000 generate
+# tc fast2-04 random_generator 200000 1000000000000000000 random
+# tc fast2-05 random_generator 200000 1000000000000000000 generate
+# tc fast2-06 random_generator 200000 1000000000000000000 excluded
+# tc fast2-07 random_generator 200000 1000000000000000000 excluded
+# tc fast2-08 random_generator 200000 1000000000000000000 excluded
+
+
+generate_grader
+cleanup_programs
+

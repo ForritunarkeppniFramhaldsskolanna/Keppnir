@@ -1,0 +1,89 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+setup_dirs
+use_solution sol.cpp
+
+compile random_generator.py
+
+samplegroup
+sample 1
+sample 2
+
+# 1: N <= 31
+group A 20
+tc A-01 random_generator 31 7
+tc A-02 random_generator 31 9
+tc A-03 random_generator 31 11
+tc A-04 random_generator 31 13
+tc A-05 random_generator 31 15
+tc A-06 random_generator 31 17
+tc A-07 random_generator 31 19
+tc A-08 random_generator 31 21
+tc A-09 random_generator 31 23
+tc A-10 random_generator 31 25
+tc A-11 random_generator 31 27
+tc A-12 random_generator 31 29
+tc A-13 random_generator 31 31
+
+# 2: N <= 500
+group B 25
+include_group A
+tc B-01 random_generator 500 "random.randint(30,500)"
+tc B-02 random_generator 500 "random.randint(30,500)"
+tc B-03 random_generator 500 "random.randint(30,500)"
+tc B-04 random_generator 500 "random.randint(30,500)"
+tc B-05 random_generator 500 "random.randint(30,500)"
+tc B-06 random_generator 500 "random.randint(30,500)"
+tc B-07 random_generator 500 "random.randint(30,500)"
+tc B-08 random_generator 500 "random.randint(30,500)"
+tc B-09 random_generator 500 "random.randint(30,500)"
+tc B-10 random_generator 500 "random.randint(30,500)"
+tc B-11 random_generator 500 "random.randint(30,500)"
+tc B-12 random_generator 500 497
+tc B-13 random_generator 500 499
+tc B-14 random_generator 500 "rp(30,500) - 4"
+tc B-15 random_generator 500 "rp(30,500) - 2"
+tc B-16 random_generator 500 "rp(30,500)"
+tc B-17 random_generator 500 "rp(30,500) + 2"
+tc B-18 random_generator 500 "rp(30,500) + 4"
+
+# 3: N <= 10^4
+group C 25
+include_group B
+tc C-06 random_generator 10000 "random.randint(500,10000)"
+tc C-07 random_generator 10000 "random.randint(500,10000)"
+tc C-08 random_generator 10000 "random.randint(500,10000)"
+tc C-09 random_generator 10000 "random.randint(500,10000)"
+tc C-10 random_generator 10000 "random.randint(500,10000)"
+tc C-11 random_generator 10000 "random.randint(500,10000)"
+tc C-12 random_generator 10000 "rp(500,10000) - 4"
+tc C-13 random_generator 10000 "rp(500,10000) - 2"
+tc C-14 random_generator 10000 "rp(500,10000) + 0"
+tc C-15 random_generator 10000 "rp(500,10000) + 2"
+tc C-16 random_generator 10000 "rp(500,10000) + 4"
+
+# 4: N <= 10^8
+group D 30
+include_group C
+tc D-05 random_generator 100000000 "random.randint(10000,10**8)"
+tc D-06 random_generator 100000000 "random.randint(10000,10**8)"
+tc D-07 random_generator 100000000 "random.randint(10000,10**8)"
+tc D-08 random_generator 100000000 "random.randint(10000,10**8)"
+tc D-09 random_generator 100000000 "random.randint(10000,10**8)"
+tc D-10 random_generator 100000000 "random.randint(10000,10**8)"
+tc D-11 random_generator 100000000 "random.randint(10000,10**8)"
+tc D-12 random_generator 100000000 "rp(10000,10**8) - 4"
+tc D-13 random_generator 100000000 "rp(10000,10**8) - 2"
+tc D-14 random_generator 100000000 "rp(10000,10**8) + 0"
+tc D-15 random_generator 100000000 "rp(10000,10**8) + 2"
+tc D-16 random_generator 100000000 "rp(10000,10**8) + 4"
+tc D-17 random_generator 100000000 "random_gap(l1=10**8, d0=200)"
+tc D-18 random_generator 100000000 "825265"
+tc D-38 random_generator 100000000 "825265 + 2"
+tc D-45 random_generator 100000000 "825265 + 4"
+
+generate_grader
+cleanup_programs
+

@@ -1,0 +1,48 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+setup_dirs
+use_solution bjarki.cpp
+
+compile random_generator.py # Arguments: n k method seed
+
+samplegroup
+sample 01
+sample 02
+
+group A 25
+tc A-01 random_generator 500 500 500*500
+tc A-02 random_generator 500 500 500*500
+tc A-03 random_generator 500 500 500*500
+tc A-04 random_generator 500 500 500*500
+tc A-05 random_generator 500 500 500*500
+
+group B 25
+include_group A
+tc B-01 random_generator 1 500 1*500
+tc B-02 random_generator 32 500 32*500
+tc B-03 random_generator 100 500 100*500
+tc B-04 random_generator 500 1 1*500
+tc B-05 random_generator 500 32 32*500
+tc B-06 random_generator 500 100 100*500
+
+group C 25
+tc C-01 random_generator 1000000000 1000000000 500
+tc C-02 random_generator 10000 1000000000 500
+tc C-03 random_generator 1000000000 100000 500
+tc C-04 random_generator 1000000000 1000000000 500
+tc C-05 random_generator 1000000000 1000000000 500
+
+group D 25
+include_group B
+include_group C
+tc D-01 random_generator 1000000000 1000000000 2*10**5
+tc D-02 random_generator 1000000000 1000000000 2*10**5
+tc D-03 random_generator 1000000000 1000000000 2*10**5
+tc D-04 random_generator 1000000000 1000000000 2*10**5
+tc D-05 random_generator 1000000000 1000000000 2*10**5
+tc D-06 random_generator 1000000000 1000000000 2*10**5
+
+generate_grader
+cleanup_programs

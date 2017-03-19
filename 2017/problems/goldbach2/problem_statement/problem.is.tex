@@ -1,0 +1,51 @@
+\problemname{Önnur tilgáta Goldbachs}
+
+Heiltalan $P$ er kölluð frumtala ef einu heiltölurnar sem ganga upp í hana eru
+$1$ og $p$ sjálf. Til dæmis er $20$ ekki frumtala, því heiltalan $5$ gengur upp
+í hana. Aftur á móti er $11$ frumtala, því aðeins $1$ og $11$ ganga upp í $11$.
+
+Fræg tilgáta um frumtölur er Tilgáta Goldbachs, en hún segir:
+\begin{quote}
+    Allar sléttar heiltölur stærri en $2$ er hægt að tákna sem summu tveggja frumtalna.
+\end{quote}
+
+Þessi tilgáta er frá árinu 1742. Enn þann dag í dag hefur engum tekist að sanna tilgátuna,
+né koma með mótdæmi gegn henni. Okkur datt í hug að láta ykkur sanna hana hér í dag,
+en það væri of auðvelt.
+
+Við kynnum heldur erfiðari tilgátu þekkt sem Önnur tilgáta Goldbachs:
+\begin{quote}
+    Allar oddatölur stærri en $5$ er hægt að tákna sem summu þriggja frumtalna.
+\end{quote}
+
+Í þessu verkefni gefum við oddatöluna $N$ sem er stærri en $5$. Við biðjum þig
+að finna þrjár frumtölur $P_1$, $P_2$, $P_3$ þannig að $P_1 + P_2 + P_3 = N$,
+eða tilkynna okkur að $N$ brjóti Aðra kenningu Goldbachs.
+
+\section*{Inntak}
+Inntakið inniheldur eina oddatölu $N > 5$. 
+
+\section*{Úttak}
+Skrifið út þrjár frumtölur aðskildar með einu bili þar sem summa þeirra er $N$.
+Ef það eru margir möguleikar megið þið skrifa hvern þeirra sem er. Ef engar
+slíkar tölur eru til, skrifið þá út \texttt{Neibb}.
+
+\section*{Útskýring á sýnidæmum}
+Í fyrsta sýnidæminu er $N = 65$. Ef þú skoðar úttakið sérðu að allar tölurnar
+eru frumtölur og summa þeirra $65$. Þessar tölur geta komið út í hvaða röð sem
+er. Aðrar mögulegar lausnir eru \texttt{11 37 17} og \texttt{11 11 43}.
+
+\section*{Stigagjöf}
+Lausnin mun verða prófuð á miserfiðum inntaksgögnum, og er gögnunum skipt í
+hópa eins og sýnt er í töflunni að neðan. Lausnin mun svo fá stig eftir því
+hvaða hópar eru leystir.
+
+\begin{tabular}{|l|l|l|l|}
+\hline
+Hópur & Stig & Inntaksstærð \\ \hline
+1     & 15   & $N \le 31$ \\ \hline
+2     & 20   & $N \le 500$ \\ \hline
+3     & 20   & $N \le 10^4$ \\ \hline
+4     & 25   & $N \le 10^8$ \\ \hline
+5     & 20   & $N \le 10^{18}$ \\ \hline
+\end{tabular}

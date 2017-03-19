@@ -1,0 +1,51 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+setup_dirs
+use_solution ohg.cpp
+
+compile random_generator.py # Arguments: n k method seed
+
+samplegroup
+sample 01
+sample 02
+
+group small 25
+tc small32-01 random_generator 1
+tc small32-02 random_generator 1
+tc small32-03 random_generator 1
+tc small32-04 random_generator 1
+tc small32-05 random_generator 1
+tc small32-06 random_generator 1
+tc small32-07 random_generator 1
+
+group medium 25
+include_group small
+tc medium-01 random_generator 5
+tc medium-02 random_generator 5 
+tc medium-03 random_generator 5 
+tc medium-04 random_generator 5 
+
+group big 25
+include_group medium
+tc big-01 random_generator 1000
+tc big-02 random_generator 1000
+tc big-03 random_generator 1000
+tc big-04 random_generator 1000
+tc big-05 random_generator 1000
+tc big-06 random_generator 1000
+tc big-07 random_generator 1000
+
+group extrabig 25
+include_group big
+tc extrabig-01 random_generator 100000
+tc extrabig-02 random_generator 100000
+tc extrabig-03 random_generator 100000
+tc extrabig-04 random_generator 100000
+tc extrabig-05 random_generator 100000
+tc extrabig-06 random_generator 100000
+tc extrabig-07 random_generator 100000
+
+generate_grader
+cleanup_programs

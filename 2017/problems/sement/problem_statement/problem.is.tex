@@ -1,0 +1,54 @@
+\problemname{Siggi sement}
+
+\illustration{0.45}{cement}{Mynd eftir \href{https://www.flickr.com/photos/65924740@N00/6573336709/}{judy\_and\_ed}}
+
+Siggi vinnur sem malbikari fyrir borgina. Einn daginn sér hann óvenjulega stóra holu í úthverfum Reykjavíkur, en íbúar úthverfisins eru mjög óþolinmóðir og vilja láta laga þetta strax.
+
+Siggi mælir gatið og sér að það er nákvæmlega $K$ einingar að stærð. Hann
+ákveður að laga gatið sjálfur, og fer því í næstu sementverslun. Þar fást pokar
+af sementi af allskyns stærðum og gerðum. Hann er slæmur í bakinu, svo hann
+ætlar að kaupa nákvæmlega tvo poka svo að þyngdin dreifist jafnt. Og þar að
+auki vill hann ekki halda á meiri þyngd en hann þarf, svo hann vill að pokarnir
+tveir rúmi saman nákvæmlega $K$ einingar.
+
+Þú færð gefinn lista af öllum pokum sem eru til, og stærðum þeirra. Það gætu
+verið til margir af sömu stærð. Getur þú hjálpað Sigga að velja tvo poka
+sem hafa samtals stærð nákvæmlega $K$?
+
+\section*{Inntak}
+Fyrsta línan inniheldur tvær heiltölur $N$, fjöldi poka í búðinni, og $K$, stærðin
+á holunni. Svo fylgja $N$ línur, ein fyrir hvern sementspoka, sem inniheldur
+heiltölu $S_i$, stærðin á sementspokanum í einingum.
+
+\section*{Úttak}
+Skrifið út stærðir á tveimur pokum úr versluninni sem uppfylla skilyrðin. Það
+má bara velja hvern poka einu sinni (en það má velja tvo mismunandi poka af
+sömu stærð).
+
+Ef margar lausnir koma til greina, þá megið þið skrifa einhverja þeirra út.
+Ef það eru engar lausnir, skrifið þá út \texttt{Neibb}.
+
+\section*{Útskýring á sýnidæmum}
+Í fyrsta sýnidæminu getur Siggi valið poka af stærð $3$ og $17$. Samtals hafa
+þeir stærð $3+17=20$, eins og beðið var um. Önnur lausn sem kæmi til greina
+væri að velja poka $4$ og $16$.
+
+Í öðru sýnidæminu er bara einn poki til í búðinni, svo hann getur ekki valið
+tvo poka.
+
+Í þriðja sýnidæminu getur Siggi valið poka af stærð $5$ og $5$.
+
+\section*{Stigagjöf}
+Lausnin mun verða prófuð á miserfiðum inntaksgögnum, og er gögnunum skipt í
+hópa eins og sýnt er í töflunni að neðan. Lausnin mun svo fá stig eftir því
+hvaða hópar eru leystir.
+
+\begin{tabular}{|l|l|l|l|}
+\hline
+Hópur & Stig & Inntaksstærð \\ \hline
+	1     & 30         & $ 1 \le N \le 10^3$,  $ 1 \le K \le 10^9$\\ \hline
+	2     & 10         & $ 1 \le N \le 10^3$,  $ 1 \le K \le 10^{18}$\\ \hline
+	3     & 30         & $ 1 \le N \le 2\cdot 10^5$,  $ 1 \le K \le 100$\\ \hline
+	4     & 30         & $ 1 \le N \le 2\cdot 10^5$,  $ 1 \le K \le 10^{9}$\\ \hline
+% 5     & 20         & $ 1 \le N \le 2\cdot 10^5$,  $ 1 \le K \le 10^{18}$\\ \hline
+\end{tabular}

@@ -1,0 +1,58 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+setup_dirs
+use_solution fast.py
+
+compile random_generator.py # Arguments: randmin randmax seed
+
+samplegroup
+sample 01
+sample 02
+
+# 1: N <= 10 (20 points)
+group easy 20
+tc easy-01 random_generator 1 1
+tc easy-02 random_generator 2 2
+tc easy-03 random_generator 3 3
+tc easy-04 random_generator 4 4
+tc easy-05 random_generator 5 5
+tc easy-06 random_generator 6 6
+tc easy-07 random_generator 7 7
+tc easy-08 random_generator 8 8
+tc easy-09 random_generator 9 9
+tc easy-10 random_generator 10 10
+
+# 2: N <= 1000 (40 points)
+group simulation 40
+include_group easy
+tc simulation-01 random_generator 10 1000
+tc simulation-02 random_generator 10 1000
+tc simulation-03 random_generator 10 1000
+tc simulation-04 random_generator 10 1000
+tc simulation-05 random_generator 10 1000
+tc simulation-06 random_generator 10 1000
+tc simulation-07 random_generator 10 1000
+tc simulation-08 random_generator 10 1000
+tc simulation-09 random_generator 10 1000
+tc simulation-10 random_generator 10 1000
+
+# 3: N <= 1000000 (40 points)
+group fastsim 40
+include_group simulation
+tc fastsim-01 random_generator 1000 1000000
+tc fastsim-02 random_generator 1000 1000000 
+tc fastsim-03 random_generator 1000 1000000 
+tc fastsim-04 random_generator 1000 1000000 
+tc fastsim-05 random_generator 1000 1000000 
+tc fastsim-06 random_generator 1000 1000000 
+tc fastsim-07 random_generator 1000 1000000
+tc fastsim-08 random_generator 1000 1000000
+tc fastsim-09 random_generator 1000 1000000
+tc fastsim-10 random_generator 1000 1000000
+
+
+generate_grader
+cleanup_programs
+

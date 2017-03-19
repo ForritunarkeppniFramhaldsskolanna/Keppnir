@@ -1,0 +1,49 @@
+\problemname{Veggurinn, seinni hluti}
+
+\noindent
+Þegar verktakar Trumps eru búnir að reisa vegginn hans þá hringir
+Trump í Magga málara:
+
+\begin{quote}
+\textbf{TRUMP:} ``I need you to paint my wall. The builders have no clue how to do it. Sad!''\\
+\textbf{MAGGI:} ``Ok, hvernig á hann að vera á litinn?''\\
+\textbf{TRUMP:} ``It should be great: Orange like my beautiful face!''\\
+\textbf{MAGGI:} ``Ok, ég mæti með appelsínugula málningu.''
+\end{quote}
+
+\noindent
+Veggurinn er $N$ einingar að breidd, og eru einingarnar númeraðar frá $1$ upp í
+$N$.
+Bíllinn hans Magga er ekki mjög stór og rúmar ekki alla málninguna sem hann
+þarf, og þarf hann því að fara nokkrar ferðir í málningarbúðina. Eftir hverja ferð kemur hann að veggnum 
+og byrjar að mála einingu númer $i$. Síðan málar hann næstu einingar við hliðina, $i+1$, $i+2$,
+$\ldots$, alveg þar til hann hefur málað $j$-tu eininguna, en þá er hann búinn með málninguna
+og þarf að fara aftur í búðina.
+
+Maggi á það til að ruglast, og málar því stundum yfir einingar sem hann
+hefur málað áður. Og nú, eftir $M$ bílferðir, er Maggi alveg búinn að gleyma
+hve margar einingar hann er búinn að mála! Sem betur fer var Trump að fylgjast
+með honum að mála og getur sagt honum hve margar einingar hann er búinn að
+mála.
+
+\section*{Inntak}
+Fyrsta lína inntaksins inniheldur tvær heiltölur $N$, fjölda eininga í veggnum,
+og $M$, fjöldi bílferða. Síðan koma $M$ línur. $k$-ta línan inniheldur tvær
+heiltölur $i$ og $j$, þar sem $i \le j$, sem er upphafs- og lokaeiningin sem
+Maggi málar eftir bílferð númer $k$.
+
+\section*{Úttak}
+Skilið fjölda eininga sem Maggi málaði og prentið ``The Mexicans took our jobs! Sad!'' ef sá fjöldi er stærri en $N / 2$, en annars ``The Mexicans are Lazy! Sad!''.
+
+\section*{Stigagjöf}
+Lausnin mun verða prófuð á miserfiðum inntaksgögnum, og er gögnunum skipt í
+hópa eins og sýnt er í töflunni að neðan. Lausnin mun svo fá stig eftir því
+hvaða hópar eru leystir.
+
+\begin{tabular}{|l|l|l|l|}
+\hline
+Hópur & Stig & Inntaksstærð \\ \hline
+1     & 30         & $ 1 \le N \le 1000$, $1 \le M \le 10^4$ \\ \hline
+2     & 30         & $ 1 \le N \le 10^6$, $1 \le M \le 10^5$ \\ \hline
+3     & 40         & $ 1 \le N \le 10^{12}$, $1 \le M \le 10^5$ \\ \hline
+\end{tabular}

@@ -1,0 +1,45 @@
+#!/bin/bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+setup_dirs
+use_solution best.py
+
+compile random_generator.py # Arguments: mx full_round static seed
+
+samplegroup
+sample 01
+
+# 1: N <= 1000, always full rounds (50 points)
+group full_rounds 50
+tc full_rounds-01 random_generator 1000 1 0
+tc full_rounds-02 random_generator 1000 1 0
+tc full_rounds-03 random_generator 1000 1 0 
+tc full_rounds-04 random_generator 1000 1 0
+tc full_rounds-05 random_generator 1000 1 0
+tc full_rounds-06 random_generator 1000 1 0
+tc full_rounds-07 random_generator 1000 1 0
+tc full_rounds-08 random_generator 1000 1 0
+tc full_rounds-09 random_generator 1000 1 0
+tc full_rounds-10 random_generator 1000 1 0
+
+
+# 2: N <= 1000
+group random_rounds 50
+tc random_rounds-01 random_generator 1000 0 0 
+tc random_rounds-02 random_generator 1000 0 0
+tc random_rounds-03 random_generator 1000 0 0
+tc random_rounds-04 random_generator 1000 0 0
+tc random_rounds-05 random_generator 1000 0 0
+tc random_rounds-06 random_generator 1000 0 0
+tc random_rounds-07 random_generator 1000 0 0
+tc random_rounds-08 random_generator 1000 0 0
+tc random_rounds-09 random_generator 1000 0 0
+tc random_rounds-10 random_generator 1000 0 0
+tc random_rounds-11 random_generator 1000 0 1
+tc random_rounds-12 random_generator 1000 0 1
+tc random_rounds-13 random_generator 1000 0 1
+
+generate_grader
+cleanup_programs
+

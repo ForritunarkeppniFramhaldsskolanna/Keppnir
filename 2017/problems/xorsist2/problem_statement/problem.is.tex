@@ -1,0 +1,75 @@
+\problemname{XORsistinn 2}
+
+Presturinn Gunnar fékk dularfull skilaboð í pósti í gær þar sem stóð að eitt af 
+sóknarbörnum hans væri mögulega andsetið. Að auki þá var búið að skrifa niður tvær
+tölur á bakhliðinni, $a$ og $b$ auk skilaboða ,,Þú ert okkar eina von XORsist!". Gunnar var
+nefnilega líka særingamaður og hefur mikla reynslu af því að bæla í burtu púka og djöfla.
+
+Hann hefur nú fundið út að tölurnar á bakhliðinni eru til að hjálpa honum að komast að því
+hver sé andsetinn. Hann ákvað að skrifa niður nöfnin á öllum í sókninni sinni og endaði með nöfn
+númeruð frá $1$ upp í $N$. Hann fattaði að ef hann myndi taka XOR af öllum tölum frá
+$a$ upp í $b$ myndi það gefa honum upplýsingar um hver væri andsetinn; ef talan er $0$ þá er enginn
+andsetinn, ef hún er á bilinu $1$ og upp í $N$ þá er það manneskjan á listanum hans sem
+passar við þá tölu. Ef hún er hinsvegar stærri en $N$ þá er það Gunnar sjálfur sem er
+andsetinn og þá erum við öll í vanda! 
+
+
+\section*{Útskýring á XOR}
+XOR, venjulega táknuð með $~\hat{}~$ í forritunarmálum, er aðgerð sem tekur tvær
+tölur og skilar nýrri tölu. Aðgerðin er framkvæmd á tölurnar tvær á
+tvíundarformi (e.\ binary), bita fyrir bita. Eftirfarandi tafla sýnir hvernig
+nýr biti er reiknaður út frá samsvarandi bitum í tölunum tveimur.
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+A & B & A XOR B \\ \hline
+1 & 1 & 0 \\ \hline
+1 & 0 & 1 \\ \hline
+0 & 1 & 1 \\ \hline
+0 & 0 & 0 \\ \hline
+\end{tabular}
+\end{center}
+
+Tökum dæmi. Talan $1337$ í binary er 10100111001 og talan $1993$ í binary er 11111001001.
+\begin{center}
+\begin{tabular}{|c|ccccccccccc|}
+\hline
+1337 & 1 & 0 & 1 & 0 & 0 & 1 & 1 & 1 & 0 & 0 & 1\\ \hline
+1993 & 1 & 1 & 1 & 1 & 1 & 0 & 0 & 1 & 0 & 0 & 1 \\ \hline
+1337 XOR 1993 & 0 & 1 & 0 & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 \\ \hline
+\end{tabular}
+\end{center}
+Útkoman er 01011110000 sem er talan $752$.
+
+\section*{Inntak}
+Fyrsta lína inniheldur heiltölu $N$, hversu mörg sóknarbörn eru í sókninni hans Gunnars.
+Næsta lína inniheldur tvær heiltölur, $a$ og $b$, $1 \leq a \leq b \leq  N$.
+
+\section*{Úttak}
+Prentið út númerið á sóknarbarninu sem er andsetið, \texttt{Enginn} ef talan er $0$ og
+\texttt{Gunnar} ef talan er stærri en $N$.
+
+\section*{Útskýring á sýnidæmum}
+Í fyrsta sýnidæminu eru $N = 3$ börn, og $a = 1$, $b = 3$. Ef við reiknum XOR
+af öllum tölum frá $1$ upp í $3$, þá fáum við $(1\textrm{ XOR  }2)\textrm{ XOR
+}3 = 0$. Það er því enginn andsetinn, og svarið er \texttt{Enginn}.
+
+Í öðru sýndæminu eru $N = 7$ börn, og $a = 1$, $b = 4$. Ef við reiknum XOR af öllum tölum frá $1$ upp í
+$4$, þá er útkoman $4$. Barn númer $4$ er því andsetið, og svarið er \texttt{4}.
+
+Í þriðja sýndæminu eru $N = 6$ börn, og $a = 3$, $b = 4$. Ef við reiknum XOR af öllum tölum frá $3$ upp í
+$4$, þá er útkoman $7$. Það er stærra en $N$, svo Gunnar er andsetinn. Svarið er því \texttt{Gunnar}.
+
+\section*{Stigagjöf}
+Lausnin mun verða prófuð á miserfiðum inntaksgögnum, og er gögnunum skipt í
+hópa eins og sýnt er í töflunni að neðan. Lausnin mun svo fá stig eftir því
+hvaða hópar eru leystir.
+
+\begin{tabular}{|l|l|l|l|}
+\hline
+Hópur & Stig & Inntaksstærð & Önnur skilyrði \\ \hline
+1     & 33         & $ 1 \le N \le 1000$ &   \\ \hline
+2     & 33         & $ 1 \le N \le 10^{18}$ & $a = 1$  \\ \hline
+3     & 34         & $ 1 \le N \le 10^{18}$ & \\ \hline
+\end{tabular}
+

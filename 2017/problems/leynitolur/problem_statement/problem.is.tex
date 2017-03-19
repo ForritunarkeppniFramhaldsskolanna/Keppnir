@@ -1,0 +1,92 @@
+\problemname{Leynitölur}
+
+Jón litli er með lista af 100 uppáhalds tölunum sínum, allt heiltölur á bilinu
+$0$ upp í $10^{18}$. Honum er mjög annt um þessar tölur, og vill ekki að neinn
+komist að því hverjar tölurnar eru. Hann hefur því ákveðið að dulkóða tölurnar
+sínar, og gerir það á eftirfarandi hátt:
+
+\begin{enumerate}
+    \item Hann tekur tölu $x$ úr listanum sínum.
+    \item Hann margfaldar $x$ með tölunni $230\,309\,227$ og leggur svo töluna
+        $68\,431\,307$ við útkomuna. Hann deilir svo útkomunni með $2^{64}$, og
+        kallar afganginn úr deilingunni $y$.
+    \item Hann gleymir nú tölunni $x$, og geymir í staðinn $y$ sem er dulkóðaða talan.
+\end{enumerate}
+
+Hann gerði þetta við allar tölurnar í listanum sínum, og er því núna með 100
+dulkóðaðar tölur. En hann gleymdi mikilvægasta hlutanum: hann veit ekki hvernig
+hann getur afkóðað dulkóðuðu tölurnar sínar. Getur þú hjálpað honum?
+
+\section*{Inntak}
+Inntakið inniheldur hundrað heiltölur, sem hver er dulkóðuð tala, ein á hverri
+línu.
+
+\section*{Úttak}
+Skrifið út eina línu fyrir hverja dulkóðaða heiltölu í inntakinu. Þessi lína á
+að innihalda afkóðuðu töluna, sem er heiltala á milli $0$ og $10^{18}$, eða
+töluna $0$ ef þið vitið ekki hver afkóðaða talan er. Þið megið gera ráð fyrir
+að það sé nákvæmlega ein tala á milli $0$ og $10^{18}$ sem er afkóðuð útgáfa af
+samsvarandi tölu í inntakinu. Þ.e. ef hún er dulkóðuð, þá fæst samsvarandi
+tala í inntakinu.
+
+\section*{Stigagjöf}
+Lausin verður keyrð á lista af 100 dulkóðuðum tölum. Listinn er alltaf sá sami,
+og er sá sem er sýndur hér fyrir neðan. Lausnin fær 1 stig fyrir hverja tölu
+sem hún nær að afkóða.
+
+Jón gaf ykkur aukalega eftirfarandi upplýsingar um upprunalega listann af
+tölunum:
+
+\begin{itemize}
+\item 10 tölur eru mjög litlar ($< 10$)
+\item 10 tölur eru nokkuð litlar ($< 1000$)
+\item 7 tölur eru ``Perfect tölur''
+\item 10 tölur eru ``Factorial tölur''
+\item 10 tölur eru á forminu $2^n$
+\item 10 tölur eru ``Fibonacci tölur''
+\item 10 tölur eru ``Catalan tölur''
+\item 10 tölur eru ``Motzkin tölur''
+\item 10 tölur eru ``Triangular tölur''
+\item 13 tölur eru mjög stórar ($< 10^{18}$)
+\end{itemize}
+
+\section*{Útskýring á sýnidæmi}
+Í sýnidæminu er gefinn listi af 100 dulkóðuðum tölum sem lausnin ykkar verður
+prófuð á. Úttakið í sýnidæminu gefur dæmi um hvað lausnin ykkar gæti skrifað
+út. Þar eru allar tölurnar, nema þrjár, $0$.
+
+Á línu 5 í úttakinu skilaði lausnin tölunni $6$. Prufum að dulkóða þessa tölu:
+\begin{enumerate}
+    \item Margföldum $6$ með tölunni $230\,309\,227$ og fáum $1\,381\,855\,362$.
+    \item Leggjum svo töluna $68\,431\,307$ við útkomuna, og fáum $1\,450\,286\,669$.
+    \item Framkvæmum svo deilinguna $1\,450\,286\,669 / 2^{64}$ og fáum út $0$ með afganginn $1\,450\,286\,669$.
+    \item Afgangurinn $1\,450\,286\,669$ er því dulkóðaða útgáfan af tölunni $6$.
+\end{enumerate}
+Ef við skoðum nú línu 5 í inntakinu, þá er það einmitt talan $1\,450\,286\,669$
+sem var dulkóðaða talan sem Jói litli vildi afkóða. Svarið $6$ er því rétt, og
+lausnin fær eitt stig fyrir þessa tölu. Það vill líka svo til að talan $6$ er
+einmitt bæði ``Perfect tala'' og lítil tala ($< 10$).
+
+Á línu 38 í úttakinu skilaði lausnin tölunni $42$. Prufum að dulkóða þessa tölu:
+\begin{enumerate}
+    \item Margföldum $42$ með tölunni $230\,309\,227$ og fáum $9\,672\,987\,534$.
+    \item Leggjum svo töluna $68\,431\,307$ við útkomuna, og fáum $9\,741\,418\,841$.
+    \item Framkvæmum svo deilinguna $9\,741\,418\,841 / 2^{64}$ og fáum út $0$ með afganginn $9\,741\,418\,841$.
+    \item Afgangurinn $9\,741\,418\,841$ er því dulkóðaða útgáfan af tölunni $42$.
+\end{enumerate}
+En ef við skoðum nú línu 38 í inntakinu, þá var það talan $68\,431\,307$ sem
+Jói litli vildi afkóða. Svarið $42$ er því \textbf{ekki} rétt, og lausnin fær
+ekki stig fyrir þessa tölu.
+
+Á línu 40 í úttakinu skilaði lausnin tölunni $806\,515\,533\,049\,393$. Prufum að dulkóða þessa tölu:
+\begin{enumerate}
+    \item Margföldum $806\,515\,533\,049\,393$ með tölunni $230\,309\,227$ og fáum $185\,747\,968\,980\,098\,654\,649\,211$.
+    \item Leggjum svo töluna $68\,431\,307$ við útkomuna, og fáum $185\,747\,968\,980\,098\,723\,080\,518$.
+    \item Framkvæmum svo deilinguna $185\,747\,968\,980\,098\,723\,080\,518 / 2^{64}$ og fáum út $10\,069$ með afganginn $7\,702\,901\,917\,247\,859\,014$.
+    \item Afgangurinn $7\,702\,901\,917\,247\,859\,014$ er því dulkóðaða útgáfan af tölunni $806\,515\,533\,049\,393$.
+\end{enumerate}
+Ef við skoðum nú línu 40 í inntakinu, þá er það einmitt talan $7\,702\,901\,917\,247\,859\,014$
+sem var dulkóðaða talan sem Jói litli vildi afkóða. Svarið $806\,515\,533\,049\,393$ er því rétt, og
+lausnin fær eitt stig fyrir þessa tölu. Það vill líka svo til að talan $806\,515\,533\,049\,393$ er
+einmitt ``Fibonacci tala''.
+
