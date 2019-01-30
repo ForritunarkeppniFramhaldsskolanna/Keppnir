@@ -1,0 +1,26 @@
+\problemname{Formúlublað}
+\illustration{0.3}{formula}{Mynd eftir \href{https://www.flickr.com/photos/dolinski/318939943}{dolinski}}
+Hannes er að fara í stærðfræðipróf og hann má bara taka með sér eina blaðsíðu af formúlum. Hann vantar
+hjálp við að ákveða hvaða formúlur hann ætti að setja á formúlublaðið sitt. Formúla númer $i$ tekur $l_i$ línur
+og mikilvægisgildi hennar er $m_i$. Hannes vill vita hvaða formúlur hann ætti að setja á formúlublaðið sitt
+þannig að summan af mikilvægisgildum formúlanna á blaðinu sé hámörkuð.
+
+\section*{Inntak}
+Fyrsta línan í inntakinu inniheldur tvær heiltölur $1 \leq n \leq 1000$, hversu margar formúlur eru
+og $1 \leq L \leq 1000$, hversu margar línur komast fyrir á blaðinu.
+Eftir fylgja $n$ línur, ein fyrir hverja formúlu, sem inniheldur tvær heiltölur $1 \leq l_i \leq L$
+og $0 \leq m_i \leq 10^6$, fjöldi lína sem formúlan tekur og mikilvægisgildi formúlunnar.
+
+\section*{Úttak}
+Fyrsta línan í úttakinu ætti að innihelda tvær heiltölur $k$, fjölda formúla sem eru valdar og $M$, summuna af
+mikilvægisgildum þeirra.
+Síðan kemur ein lína með $k$ tölum, vísunum á formúlunum sem hámarka summuna af mikilvægisgildum.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 20   & $L = 1$\\ \hline
+2     & 30   & Allar formúlur hafa sama mikilvægisgildi\\ \hline
+3     & 50   & Engar frekari takmarkanir\\ \hline
+\end{tabular}

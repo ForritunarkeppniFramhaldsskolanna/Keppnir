@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+setup_dirs
+use_solution arnar.py
+
+compile random_generator.py # Arguments: minN maxN
+
+samplegroup
+#sample sampleinputname
+sample 01
+sample 02
+
+# group groupname score
+group small 50
+# tc testcasename random_generator arg1, arg2, ...
+tc small-01 random_generator 1 10000 0
+tc small-02 random_generator 1 10000 0
+tc small-03 random_generator 1 10000 0
+tc small-04 random_generator 1 10000 0
+tc small-05 random_generator 1 10000 0
+tc small-06 random_generator 1 10000 1
+tc small-07 random_generator 1 10000 1
+tc small-08 random_generator 1 10000 1
+tc small-09 random_generator 1 10000 1
+tc small-10 random_generator 1 10000 1
+
+group large 50
+tc large-01 random_generator 1 1000000000 0
+tc large-02 random_generator 1 1000000000 0
+tc large-03 random_generator 1 1000000000 0
+tc large-04 random_generator 1 1000000000 0
+tc large-05 random_generator 1 1000000000 0
+tc large-06 random_generator 1 1000000000 1
+tc large-07 random_generator 1 1000000000 1
+tc large-08 random_generator 1 1000000000 1
+tc large-09 random_generator 1 1000000000 1
+tc large-10 random_generator 1 1000000000 1
+# Add more groups and adjust scoring if needed
+
+generate_grader
+cleanup_programs

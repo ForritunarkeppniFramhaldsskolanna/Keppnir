@@ -1,0 +1,36 @@
+\problemname{Nafnatalning}
+\illustration{0.3}{twins}{Ónefndu tvíburarnir (mynd fengin af \href{https://static.pexels.com/photos/36039/baby-twins-brother-and-sister-one-hundred-days.jpg}{pexels.com})}
+Sunna og Ari er nýbúin að eignast tvíbura. Þau eiga hins vegar eftir að ákveða hvað
+tvíburarnir eiga að heita. Til þess að geta greint á milli tvíburanna vilja þau ekki að þeir 
+hafi nöfn með sama uppruna, því eins og er geta þau ekki greint á milli tvíburanna.
+Þau eru búin að finna $n$ uppruna sem þau hafa áhuga á og hafa valið $a_i$ nöfn fyrir
+upprunann $i$.
+
+Það er stutt í skírnina, bara 42 dagar! Þau þurfa ákveða hvað þau ætla að skíra tvíburana
+fyrir skírnina. Á hverjum degi geta þau skoðað $P$ pör af nöfnum. Þau hafa beðið þig um
+að ákvarða hversu marga daga það mun taka að skoða öll nafnapörin.
+
+\section*{Inntak}
+Fyrsta línan í inntakinu inniheldur tvær heiltölur 
+$2 \leq n \leq 10^6$ og
+$1 \leq P \leq 10^9$ í þessari röð. Síðan kemur ein lína með $n$
+heiltölum þar sem $i$-ta línan er heiltalan $0 \leq a_i \leq 1000$.
+
+%
+% Fjöldinn er sum_{i < j} a_i a_j <= n(n-1)/2 * max(a_i)^2
+% Svo þarf að tékka hvort 
+% P*T >= fjöldinn
+% og skrifa út eftir því hvort þetta er true eða false 
+%
+
+\section*{Úttak}
+Skrifið út hvað það tekur marga daga fyrir Sunnu og Ara að skoða öll 
+nöfnin.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 50   & $2 \leq n \leq 10^3, 0 \leq a_i \leq 10$ \\ \hline
+2     & 50   & Engar frekari takmarkanir\\ \hline
+\end{tabular}

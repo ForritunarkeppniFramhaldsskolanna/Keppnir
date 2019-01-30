@@ -1,0 +1,109 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+setup_dirs
+use_solution benni.cpp
+
+compile random_generator.py # Arguments: minN maxN
+
+samplegroup
+#sample sampleinputname
+sample 01
+sample 02
+sample 03
+
+# group groupname score
+group first 20
+# tc testcasename random_generator arg1, arg2, ...
+tc first-01 random_generator 1 100000 1 100000 1
+tc first-02 random_generator 1 100000 1 100000 1
+tc first-03 random_generator 1 100000 1 100000 1
+tc first-04 random_generator 1 100000 1 100000 1
+tc first-05 random_generator 1 100000 1 100000 1
+tc first-06 random_generator 100000 100000 100000 100000 1
+tc first-07 random_generator 100000 100000 100000 100000 1
+tc first-08 random_generator 100000 100000 100000 100000 1
+tc first-09 random_generator 100000 100000 100000 100000 1
+tc first-10 random_generator 100000 100000 100000 100000 1
+tc first-11 random_generator 100000 100000 100000 100000 1
+tc first-12 random_generator 100000 100000 100000 100000 1
+tc first-13 random_generator 100000 100000 100000 100000 1
+tc first-14 random_generator 100000 100000 100000 100000 1
+tc first-15 random_generator 100000 100000 100000 100000 1
+tc first-16 random_generator 100000 100000 100000 100000 1
+tc first-17 random_generator 100000 100000 100000 100000 1
+tc first-18 random_generator 100000 100000 100000 100000 1
+tc first-19 random_generator 100000 100000 100000 100000 1
+tc first-20 random_generator 100000 100000 100000 100000 1
+
+group second 14
+tc second-01 random_generator 1 100000 1 100000 2
+tc second-02 random_generator 1 100000 1 100000 2
+tc second-03 random_generator 1 100000 1 100000 2
+tc second-04 random_generator 1 100000 1 100000 2
+tc second-05 random_generator 1 100000 1 100000 2
+tc second-06 random_generator 100000 100000 100000 100000 2
+tc second-07 random_generator 100000 100000 100000 100000 2
+tc second-08 random_generator 100000 100000 100000 100000 2
+tc second-09 random_generator 100000 100000 100000 100000 2
+tc second-10 random_generator 100000 100000 100000 100000 2
+tc second-11 random_generator 100000 100000 100000 100000 2
+tc second-12 random_generator 100000 100000 100000 100000 2
+tc second-13 random_generator 100000 100000 100000 100000 2
+tc second-14 random_generator 100000 100000 100000 100000 2
+tc second-15 random_generator 100000 100000 100000 100000 2
+tc second-16 random_generator 100000 100000 100000 100000 2
+tc second-17 random_generator 100000 100000 100000 100000 2
+tc second-18 random_generator 100000 100000 100000 100000 2
+tc second-19 random_generator 100000 100000 100000 100000 2
+tc second-20 random_generator 100000 100000 100000 100000 2
+# Add more groups and adjust scoring if needed
+
+group third 30
+tc third-01 random_generator 1 1000 1 1000 3
+tc third-02 random_generator 1 1000 1 1000 3
+tc third-03 random_generator 1 1000 1 1000 3
+tc third-04 random_generator 1 1000 1 1000 3
+tc third-05 random_generator 1 1000 1 1000 3
+tc third-06 random_generator 1000 1000 1000 1000 3
+tc third-07 random_generator 1000 1000 1000 1000 3
+tc third-08 random_generator 1000 1000 1000 1000 3
+tc third-09 random_generator 1000 1000 1000 1000 3
+tc third-10 random_generator 1000 1000 1000 1000 3
+tc third-11 random_generator 1000 1000 1000 1000 3
+tc third-12 random_generator 1000 1000 1000 1000 3
+tc third-13 random_generator 1000 1000 1000 1000 3
+tc third-14 random_generator 1000 1000 1000 1000 3
+tc third-15 random_generator 1000 1000 1000 1000 3
+tc third-16 random_generator 1000 1000 1000 1000 3
+tc third-17 random_generator 1000 1000 1000 1000 3
+tc third-18 random_generator 1000 1000 1000 1000 3
+tc third-19 random_generator 1000 1000 1000 1000 3
+tc third-20 random_generator 1000 1000 1000 1000 3
+
+group fourth 36
+tc fourth-01 random_generator 1 100000 1 100000 3
+tc fourth-02 random_generator 1 100000 1 100000 3
+tc fourth-03 random_generator 1 100000 1 100000 3
+tc fourth-04 random_generator 1 100000 1 100000 3
+tc fourth-05 random_generator 1 100000 1 100000 3
+tc fourth-06 random_generator 100000 100000 100000 100000 3
+tc fourth-07 random_generator 100000 100000 100000 100000 3
+tc fourth-08 random_generator 100000 100000 100000 100000 3
+tc fourth-09 random_generator 100000 100000 100000 100000 3
+tc fourth-10 random_generator 100000 100000 100000 100000 3
+tc fourth-11 random_generator 100000 100000 100000 100000 3
+tc fourth-12 random_generator 100000 100000 100000 100000 3
+tc fourth-13 random_generator 100000 100000 100000 100000 3
+tc fourth-14 random_generator 100000 100000 100000 100000 3
+tc fourth-15 random_generator 100000 100000 100000 100000 3
+tc fourth-16 random_generator 100000 100000 100000 100000 3
+tc fourth-17 random_generator 100000 100000 100000 100000 3
+tc fourth-18 random_generator 100000 100000 100000 100000 3
+tc fourth-19 random_generator 100000 100000 100000 100000 3
+tc fourth-20 random_generator 100000 100000 100000 100000 3
+
+
+generate_grader
+cleanup_programs

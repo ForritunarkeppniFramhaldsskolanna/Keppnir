@@ -1,0 +1,18 @@
+\problemname{Skilaboð}
+\illustration{0.3}{broadcast}{Mynd tekin af Pixabay}
+Þú ert staddur nákvæmlega í miðju alheimsins í hnitunum $(0,0)$ og vilt senda skilaboð með sendi til allra manneskja í heiminum, og eins og allir vita þá eru bara milljón manneskjur í heiminum.
+Því miður drífa sumir sendar ekkert rosalega langt. 
+Sem betur fer áttu alveg slatta af sendum af mismunandi styrk því einhver hluti allra manneskja í heiminum hafa gefið þér einn sendi hver.
+Sendir drífur $d$ einingar ef styrkleiki hans er $d$. Það er að segja, ef evklíðsk vegalengd milli þín og einhverrar manneskju er ekki meiri en $d$ að þá fær sú manneskja skilaboðin þín. Með aðstoð Þjóðaröryggisstofnunarinnar veistu nákvæmlega hvar allir eru staddir og nú viltu vita fyrir hvern sendi hversu margir munu fá skilaboðin þín ef þú notar þann sendi.
+\section*{Inntak}
+Ein lína með heiltölu $N$. Næst koma $N$ línur með tveim heiltölum hver $x_i$ og $y_i$ þar sem lína $i$ táknar punkt $i$, $|x_i| , |y_i| \leq 10^9$. Þar á eftir kemur ein lína með heiltölu $Q$. Að lokum koma $Q$ línur með einni heiltölu hver $d_i$ þar sem $d_i$ er styrkleiki sendis $i$, $0 \leq d_i \leq 10^9$.
+\section*{Úttak}
+$Q$ línur með einni heiltölu hver, þar sem talan í línu $i$ táknar hversu margir myndu fá skilaboðin ef sendir $i$ væri notaður.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|l|}
+\hline
+Hópur & Stig & Inntaks takmarkanir \\ \hline
+    1 & 50     & $1 \leq N, Q \leq 1000$ \\ \hline
+    2 & 50     & $1000 < N, Q \leq 10^5$ \\ \hline
+\end{tabular}

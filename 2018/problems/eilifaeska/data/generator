@@ -1,0 +1,74 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+setup_dirs
+use_solution arnar.cpp
+
+compile random_generator.py # Arguments: type of testcase
+
+samplegroup
+#sample sampleinputname
+sample 01
+sample 02
+
+# group groupname score
+group small 50
+# tc testcasename random_generator arg1, arg2, ...
+tc one-01 random_generator 1
+tc one-02 random_generator 1
+tc one-03 random_generator 1
+tc one-04 random_generator 1
+tc one-05 random_generator 1
+tc one-06 random_generator 1
+tc one-07 random_generator 1
+tc one-08 random_generator 1
+tc one-09 random_generator 1
+tc one-10 random_generator 1
+tc two-01 random_generator 2
+tc two-02 random_generator 2
+tc two-03 random_generator 2
+tc two-04 random_generator 2
+tc two-05 random_generator 2
+tc two-06 random_generator 2
+tc two-07 random_generator 2
+tc two-08 random_generator 2
+tc two-09 random_generator 2
+tc two-10 random_generator 2
+
+# group groupname score
+group big 50
+# tc testcasename random_generator arg1, arg2, ...
+tc three-01 random_generator 3 
+tc three-02 random_generator 3 
+tc three-03 random_generator 3 
+tc three-04 random_generator 3 
+tc three-05 random_generator 3 
+tc three-06 random_generator 3 
+tc three-07 random_generator 3 
+tc three-08 random_generator 3 
+tc three-09 random_generator 3 
+tc three-10 random_generator 3 
+tc three-11 random_generator 3 
+tc three-12 random_generator 3 
+tc three-13 random_generator 3 
+tc three-14 random_generator 3 
+tc three-15 random_generator 3 
+tc three-16 random_generator 3 
+tc three-17 random_generator 3 
+tc three-18 random_generator 3 
+tc three-19 random_generator 3 
+tc three-20 random_generator 3
+tc four-01 random_generator 4 
+tc four-02 random_generator 4 # Add more groups and adjust scoring if needed
+tc four-03 random_generator 4 
+tc four-04 random_generator 4 
+tc four-05 random_generator 4 
+tc four-06 random_generator 4 
+tc four-07 random_generator 4 
+tc four-08 random_generator 4 
+tc four-09 random_generator 4 
+tc four-10 random_generator 4
+
+generate_grader
+cleanup_programs

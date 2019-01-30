@@ -1,0 +1,19 @@
+\problemname{Lyklagangriti}
+Benni var að vafra á netinu og náði óvart í lyklagangrita (e. keylogger). Sem betur fer er Benni með vírusvörn sem lét hann vita, en vörnin fjarlægði vírusinn ekki. Alltaf þegar Benni skrifar lykilorðin sín á ýmsar síður þá reynir hann að leyna það svo lyklagangritinn nái ekki lykilorðum hans. Benni notar örvatakkana til að færa bendilinn og strokar út stafi til að villa fyrir lyklagangritanum. Ef þér eru gefnir takkarnir sem Benni ýtti á til að skrifa lykilorðið sitt, getur þú fundið út hvað lykilorðið hans er.
+
+\section*{Inntak}
+Ein lína sem inniheldur einn streng af lengd $n$. Benni skrifar bara litla stafi og tölustafi, en þegar hann ýtir á vinstri örvatakkann, hægri örvatakkan eða bakktakkann er það táknað með \texttt{L}, \texttt{R}, \texttt{B}, hver um sig í þeirri röð sem um var getið. Hvorki \texttt{B} né \texttt{L} mun koma í strengnum ef að bendillinn er fyrir framan fyrsta stafin og \texttt{R} mun ekki koma ef bendillinn er fyrir aftan aftasta stafinn.
+
+\section*{Úttak}
+Ein lína sem inniheldur einungis lykilorðið hans Benna.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|l|}
+\hline
+Hópur & Stig & Inntaks takmarkanir \\ \hline
+    1 &   10 & $1 \leq n \leq 1000000$, enginn \texttt{L}, \texttt{R} eða \texttt{B} stafur í strengnum \\ \hline
+    2 &   13 & $1 \leq n \leq 1000$ \\ \hline
+    3 &   17 & $1 \leq n \leq 1000000$, enginn \texttt{L} eða \texttt{R} stafur í strengnum \\ \hline
+    4 &   24 & $1 \leq n \leq 1000000$, enginn \texttt{B} stafur í strengnum \\ \hline
+    5 &   36 & $1 \leq n \leq 1000000$ \\ \hline
+\end{tabular}

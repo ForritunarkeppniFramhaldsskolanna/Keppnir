@@ -1,0 +1,91 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+setup_dirs
+use_solution arnar.cpp
+
+compile random_generator.py # Arguments: minN maxN
+
+samplegroup
+#sample sampleinputname
+sample 01
+sample 02
+sample 03
+
+# group groupname score
+# tc testcasename random_generator arg1, arg2, ...
+
+group small-some 30
+tc small-some-01 random_generator 2 5 0 100000 0
+tc small-some-02 random_generator 6 10 0 100000 0
+tc small-some-03 random_generator 11 15 0 100000 0
+tc small-some-04 random_generator 16 20 0 100000 0
+tc small-some-05 random_generator 21 25 0 100000 2
+tc small-some-06 random_generator 26 30 0 100000 0
+tc small-some-07 random_generator 31 35 0 100000 2
+tc small-some-08 random_generator 36 40 0 100000 0
+tc small-some-09 random_generator 41 45 0 100000 2
+tc small-some-10 random_generator 46 50 0 100000 0
+tc small-some-11 random_generator 51 55 0 100000 2
+tc small-some-12 random_generator 56 60 0 100000 0
+tc small-some-13 random_generator 61 65 0 100000 2
+tc small-some-14 random_generator 66 70 0 100000 0
+tc small-some-15 random_generator 71 75 0 100000 2
+tc small-some-16 random_generator 76 80 0 100000 0
+tc small-some-17 random_generator 81 85 0 100000 2
+tc small-some-18 random_generator 86 90 0 100000 0
+tc small-some-19 random_generator 91 95 0 100000 2
+tc small-some-20 random_generator 96 100 0 100000 0
+tc small-some-21 random_generator 96 100 0 100000 2
+
+group large-all 20
+tc small-all-01 random_generator 1 1 0 0 1
+tc small-all-02 random_generator 2 2 0 0 1
+tc small-all-03 random_generator 3 3 0 0 1
+tc small-all-04 random_generator 4 4 0 0 1
+tc small-all-05 random_generator 5 5 0 0 1
+tc small-all-06 random_generator 6 10 0 0 1
+tc small-all-07 random_generator 11 20 0 0 1
+tc small-all-08 random_generator 21 30 0 0 1
+tc small-all-09 random_generator 31 40 0 0 1
+tc small-all-10 random_generator 41 50 0 0 1
+tc small-all-11 random_generator 51 60 0 0 1
+tc small-all-12 random_generator 61 70 0 0 1
+tc small-all-13 random_generator 71 80 0 0 1
+tc small-all-14 random_generator 81 90 0 0 1
+tc small-all-15 random_generator 91 100 0 0 1
+tc large-all-01 random_generator 101 446 0 0 1
+tc large-all-02 random_generator 101 446 0 0 1
+tc large-all-03 random_generator 101 446 0 0 1
+tc large-all-04 random_generator 101 446 0 0 1
+tc large-all-05 random_generator 101 446 0 0 1
+tc large-all-06 random_generator 101 446 0 0 1
+tc large-all-07 random_generator 101 446 0 0 1
+tc large-all-08 random_generator 101 446 0 0 1
+tc large-all-09 random_generator 101 446 0 0 1
+tc large-all-10 random_generator 447 447 0 0 1
+
+group large-some 50
+tc large-some-01 random_generator 101 100000 0 100000 0
+tc large-some-02 random_generator 101 100000 0 100000 0
+tc large-some-03 random_generator 101 100000 0 100000 0
+tc large-some-04 random_generator 101 100000 0 100000 0
+tc large-some-05 random_generator 101 100000 0 100000 0
+tc large-some-06 random_generator 101 100000 0 100000 0
+tc large-some-07 random_generator 101 100000 100000 100000 0
+tc large-some-08 random_generator 101 100000 0 100000 2
+tc large-some-09 random_generator 101 100000 0 100000 2
+tc large-some-10 random_generator 101 100000 0 100000 2
+tc large-some-11 random_generator 101 100000 0 100000 2
+tc large-some-12 random_generator 101 100000 0 100000 2
+tc large-some-13 random_generator 101 100000 100000 100000 2
+tc large-some-14 random_generator 100000 100000 99998 99998 0
+tc large-some-15 random_generator 100000 100000 99999 99999 2
+tc large-some-16 random_generator 100000 100000 100000 100000 0
+tc large-some-17 random_generator 100000 100000 100000 100000 2
+
+# Add more groups and adjust scoring if needed
+
+generate_grader
+cleanup_programs

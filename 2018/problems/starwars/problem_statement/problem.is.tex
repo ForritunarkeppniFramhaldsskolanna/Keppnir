@@ -1,0 +1,22 @@
+\problemname{Star Wars röðun}
+\illustration{0.3}{dvds}{Mynd frá \href{https://www.flickr.com/photos/cjsorg/3211961956}{cjsort}}
+Eins og margir vita, þá eru Stjörnustríðs myndirnar númeraðar á einkennilegan hátt. Eftirfarandi er röðin á Stjörnustríðs myndum í útgáfuröð:
+Episode 4, Episode 5, Episode 6, Episode 1, Episode 2, Episode 3, Episode 7, Episode 8, Episode 9.\\\\
+Við skilgreinum \textit{starwars-röðun}, sem aðgerð á lista á tölum, þannig að ef listanum er raðað, þá mun fyrsti þriðjungurinn á listanum færast í miðjuna, miðju þriðjungurinn myndi færast í byrjun, og síðasti þriðjungurinn er á sama stað.\\\\
+Vandamálið er eftirfarandi, gefinn er listi af tölum, gefið starwars-röðunina á þeim.\\T.d. fyrir Stjörnustríðs myndirnar, þá myndi starwars-röðunin af $1, 2, 3, 4, 5, 6, 7, 8, 9$ vera $4, 5, 6, 1, 2, 3, 7, 8, 9$.\\\\
+
+
+\section*{Inntak}
+Fyrri línan inniheldur eina tölu, $n$, fjölda talna, þar sem $n$ er margfeldi af $3$.
+Seinni línan samanstendur af $n$ mismunandi heiltölum aðskildar með bilum, þar sem hver tala $x$ uppfyllir $1 \leq x \leq 10^9$.
+
+\section*{Úttak}
+Starwars-röðunin af tölunum sem gefnar voru í inntakinu, í einni línu, aðskildar með bilum.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|l|}
+\hline
+Group & points & Input Constraints \\ \hline
+1     & 20     & $n = 9$ \\ \hline
+2     & 80     & $3 \leq n \leq 3*10^5$ \\ \hline
+\end{tabular}

@@ -1,0 +1,47 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+setup_dirs
+use_solution benni.cpp
+
+compile random_generator.py # Arguments: type of testcase
+
+samplegroup
+#sample sampleinputname
+sample 01
+sample 02
+
+# group groupname score
+group all 100
+# tc testcasename random_generator arg1, arg2, ...
+tc random-01 random_generator 1 10
+tc random-02 random_generator 1 10
+tc random-03 random_generator 1 10
+tc random-04 random_generator 1 10
+tc random-05 random_generator 1 10
+tc random-06 random_generator 1 10
+tc random-07 random_generator 1 10
+tc random-08 random_generator 1 10
+tc random-09 random_generator 1 10
+tc random-10 random_generator 1 10
+tc random-11 random_generator 1000 1000
+tc random-12 random_generator 1000 1000
+tc random-13 random_generator 1000 1000
+tc random-14 random_generator 1000 1000
+tc random-15 random_generator 1000 1000
+tc random-16 random_generator 1000 1000
+tc random-17 random_generator 1000 1000
+tc random-18 random_generator 1000 1000
+tc random-19 random_generator 1000 1000
+tc random-20 random_generator 1000 1000
+tc random-21 random_generator 1000 1000
+tc random-22 random_generator 1000 1000
+tc random-23 random_generator 1000 1000
+tc random-24 random_generator 1000 1000
+tc random-25 random_generator 1000 1000
+
+# Add more groups and adjust scoring if needed
+
+generate_grader
+cleanup_programs

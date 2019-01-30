@@ -1,0 +1,65 @@
+#/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+setup_dirs
+use_solution gardar_large.cpp opt
+
+compile random_generator.py # Arguments: type of testcase
+
+samplegroup
+#sample sampleinputname
+sample 01
+sample 02
+
+# group groupname score
+group small 50
+# tc testcasename random_generator arg1, arg2, ...
+tc small-1 random_generator 1
+tc small-2 random_generator 1
+tc small-3 random_generator 1
+tc small-4 random_generator 1
+tc small-5 random_generator 1
+tc small-6 random_generator 1
+tc small-7 random_generator 1
+tc small-8 random_generator 1
+tc small-9 random_generator 1
+tc small-10 random_generator 1
+tc small-11 random_generator 1
+tc small-12 random_generator 1
+tc small-13 random_generator 1
+tc small-14 random_generator 1
+tc small-15 random_generator 1
+tc small-16 random_generator 1
+tc small-17 random_generator 1
+tc small-18 random_generator 1
+tc small-19 random_generator 1
+tc small-20 random_generator 1
+
+group large 50
+tc large-1 random_generator 2
+tc large-2 random_generator 2
+tc large-3 random_generator 2
+tc large-4 random_generator 2
+tc large-5 random_generator 2
+tc large-6 random_generator 2
+tc large-7 random_generator 2
+tc large-8 random_generator 2
+tc large-9 random_generator 2
+tc large-10 random_generator 2
+tc large-11 random_generator 2
+tc large-12 random_generator 2
+tc large-13 random_generator 2
+tc large-14 random_generator 2
+tc large-15 random_generator 2
+tc large-16 random_generator 2
+tc large-17 random_generator 2
+tc large-18 random_generator 2
+tc large-19 random_generator 2
+tc large-20 random_generator 2
+
+
+# Add more groups and adjust scoring if needed
+
+generate_grader
+cleanup_programs

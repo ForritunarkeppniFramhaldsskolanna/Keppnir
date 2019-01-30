@@ -1,0 +1,27 @@
+\problemname{Eilíf æska}
+Hildur hefur gaman af því að blanda drykki og hefur skapað drykkinn \textit{eilíf æska}.
+Hún hefur hellt drykknum í nokkur glös og ætlar að deila með nokkrum vinum sínum.
+Eftir að hafa hellt í glösin tekur hún eftir því að ekki er jafn mikið magn í öllum glösum.
+Til að gæta ítrustu sanngirni þarf hún lagfæra fyrri mistök með því að hella úr einu glasi í annað, eins oft og þarf, þar til jafnt er í öllum glösum.
+Þegar hún hellir úr glasi $i$ í glas $j$ þá þarf glas $i$ að innihalda að minnsta kosti jafn mikið magn og glas $j$. Einnig hættir hún að hella úr glasi $i$ í glas $j$ þegar jafnt er í báðum glösunum.
+Hjálpið Hildi og vinum hennar að öðlast \textit{eilífa æsku}.
+
+\section*{Inntak}
+Fyrsta línan inniheldur eina heiltölu $n$, þar sem $1\leq n\leq 4$.
+Síðan kemur ein lína með $n$ heiltölum $a_i$, magn vökva í glasi $i$ í mL. Það gildir alltaf að $0 \leq a_i \leq 10^8$.
+
+\section*{Úttak}
+Ef ekki er til lausn skrifaðu út $-1$.
+Annars skal skrifa út heiltölu $0 \leq k \leq 1000$ sem er fjöldi umhellinga á milli glasa.
+Ef hægt er að leysa vandamálið þá er það hægt með fjölda aðgerða innan þessarra marka.
+Því næst koma $k$ línur með tveimur heiltölum $1 \leq i,j \leq n$ hver, sem segja að hellt sé úr glasi $i$ í glas $j$ þar til jafnt er í báðum.
+Svarið er talið rétt ef öll glös innihalda jafnt magn eftir allar aðgerðirnar gefið að allar aðgerðirnar séu gildar.
+Ef aðgerð vísar í glas sem ekki er til eða hellir úr glasi $i$ í glas $j$ þegar minna magn er í glasi $i$ en er í glasi $j$ þá er sú aðgerð talin ógild.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 50     & $1 \leq n \leq 2$ \\ \hline
+2     & 50     & $3 \leq n \leq 4$ \\ \hline
+\end{tabular}

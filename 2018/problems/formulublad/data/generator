@@ -1,0 +1,90 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+setup_dirs
+use_solution unnar.cpp opt
+
+compile random_generator.py # Arguments: type of testcase
+
+samplegroup
+#sample sampleinputname
+sample 01
+sample 02
+sample 03
+
+# group groupname score
+group max 20
+# tc testcasename random_generator arg1, arg2, ...
+tc max-01 random_generator 0 
+tc max-02 random_generator 0
+tc max-03 random_generator 0
+tc max-04 random_generator 0
+tc max-05 random_generator 0
+tc max-06 random_generator 0
+tc max-07 random_generator 0
+tc max-08 random_generator 0
+tc max-09 random_generator 0
+tc max-10 random_generator 0
+tc max-11 random_generator 0
+tc max-12 random_generator 0
+tc max-13 random_generator 0
+tc max-14 random_generator 0
+tc max-15 random_generator 0
+tc max-16 random_generator 0
+tc max-17 random_generator 0
+tc max-18 random_generator 0
+tc max-19 random_generator 0
+tc max-20 random_generator 0
+
+group sameval 30
+tc sameval-01 random_generator 1 
+tc sameval-02 random_generator 1
+tc sameval-03 random_generator 1
+tc sameval-04 random_generator 1
+tc sameval-05 random_generator 1
+tc sameval-06 random_generator 1
+tc sameval-07 random_generator 1
+tc sameval-08 random_generator 1
+tc sameval-09 random_generator 1
+tc sameval-10 random_generator 1
+tc sameval-11 random_generator 1
+tc sameval-12 random_generator 1
+tc sameval-13 random_generator 1
+tc sameval-14 random_generator 1
+tc sameval-15 random_generator 1
+tc sameval-16 random_generator 1
+tc sameval-17 random_generator 1
+tc sameval-18 random_generator 1
+tc sameval-19 random_generator 1
+tc sameval-20 random_generator 1
+
+group knapsack 50
+tc knapsack-01 random_generator 2 
+tc knapsack-02 random_generator 2
+tc knapsack-03 random_generator 2
+tc knapsack-04 random_generator 2
+tc knapsack-05 random_generator 2
+tc knapsack-06 random_generator 2
+tc knapsack-07 random_generator 2
+tc knapsack-08 random_generator 2
+tc knapsack-09 random_generator 2
+tc knapsack-10 random_generator 2
+tc knapsack-11 random_generator 2
+tc knapsack-12 random_generator 2
+tc knapsack-13 random_generator 2
+tc knapsack-14 random_generator 2
+tc knapsack-15 random_generator 2
+tc knapsack-16 random_generator 2
+tc knapsack-17 random_generator 2
+tc knapsack-18 random_generator 2
+tc knapsack-19 random_generator 2
+tc knapsack-20 random_generator 2
+tc knapsack-21 random_generator 3
+
+
+
+# Add more groups and adjust scoring if needed
+
+generate_grader
+cleanup_programs

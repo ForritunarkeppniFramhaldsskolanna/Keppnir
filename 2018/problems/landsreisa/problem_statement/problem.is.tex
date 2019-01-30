@@ -1,0 +1,27 @@
+\problemname{Landsreisa}
+Stefán og Eva búa í Vestmannaeyjum. Hún Eva vil sjá allt landið.
+Ætla þau því að heimsækja hvern einasta stað landsins nákvæmlega einu sinni og enda svo aftur heima í Vestmannaeyjum.
+Stefán hatar að ferðast og vill því verja sem minnstum tíma að ferðast á milli staða. Ef Stefán er of lengi að ferðast verður hann önugur og fer það í taugarnar á Evu.
+Eva vil hafa Stefán í góðu skapi og hefur beðið um hjálp þína við að hanna ferðaáætlun. Því styttri sem ferðaáætlunin þín er því ánægðari verður Stefán.
+
+Byrjunarstaður Stefáns og Evu er staður númer $0$. Þau ferðast alltaf jafn hratt á milli staða. Hægt er að ferðast milli allra para staða í báðar áttir.
+Upp á einfaldleika er heimurinn tvívíður, þar sem hverri lengdargráðu hefur verið breytt í $x$ gildi og hverri breiddargráðu hefur verið breytt í $y$ gildi.
+Vegna þess að heimurinn er tvívíður er notast við evklíðska vegalengd.
+
+\section*{Inntak}
+Inntakið í þessu verkefni er ekki leynilegt eins og í öðrum dæmum, heldur er hægt að nálgast það \href{/problems/iceland.landsreisa/file/statement/attachments/iceland.txt}{hér}.
+
+Fyrsta línan inniheldur heiltölu $n$, fjölda staða.
+Næst koma $n$ línur. Hver lína inniheldur tvær rauntölur $x$ og $y$, þar sem $-25 \leq x \leq -13$ og $63 \leq y \leq 67$. Lína $i$ táknar staðsetningu staðar $i$.
+Tölurnar eru mesta lagi með $4$ aukastafi.
+
+Hér að neðan má sjá mynd af uppgefnu inntaki.
+
+\section*{Úttak}
+Skrifið út ferðaplanið í einni línu með $n$ tölum, aðskilnar með bili, þar sem hver tala á bilinu $0$ uppí $n-1$ kemur fyrir nákvæmlega einu sinni.
+Tölurnar skulu tákna í hvaða röð staðirnir eru heimsóttir. Fyrsta talan skal alltaf vera $0$.
+
+\section*{Stigagjöf}
+Stig eru gefin sem heiltala $0 \leq x \leq 100$. Ef lengd ferðaáætlun þinnar er $k$ þá er $x = \left\lfloor 100 \cdot \frac{90 - k}{30} \right\rfloor$.
+
+\illustration{0.9}{island}{Staðirnir á Íslandi}

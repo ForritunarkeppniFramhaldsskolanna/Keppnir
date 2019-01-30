@@ -1,0 +1,88 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+setup_dirs
+use_solution unnar.cpp opt
+
+compile random_generator.py # Arguments: type of testcase
+
+samplegroup
+#sample sampleinputname
+sample 01
+sample 02
+
+# group groupname score
+group small 20
+# tc testcasename random_generator arg1, arg2, ...
+tc small-01 random_generator 1
+tc small-02 random_generator 1
+tc small-03 random_generator 1
+tc small-04 random_generator 1
+tc small-05 random_generator 1
+tc small-06 random_generator 1
+tc small-07 random_generator 1
+tc small-08 random_generator 1
+tc small-09 random_generator 1
+tc small-10 random_generator 1
+tc small-11 random_generator 1
+tc small-12 random_generator 1
+tc small-13 random_generator 1  
+tc small-14 random_generator 1
+tc small-15 random_generator 1
+tc small-16 random_generator 1
+tc small-17 random_generator 1
+tc small-18 random_generator 1
+tc small-19 random_generator 1
+tc small-20 random_generator 1
+
+# Add more groups and adjust scoring if needed
+
+group qfirst 30
+
+tc qfirst-01 random_generator 2  
+tc qfirst-02 random_generator 2
+tc qfirst-03 random_generator 2
+tc qfirst-04 random_generator 2
+tc qfirst-05 random_generator 2
+tc qfirst-06 random_generator 2
+tc qfirst-07 random_generator 2
+tc qfirst-08 random_generator 2
+tc qfirst-09 random_generator 2
+tc qfirst-10 random_generator 2
+tc qfirst-11 random_generator 2
+tc qfirst-12 random_generator 2
+tc qfirst-13 random_generator 2  
+tc qfirst-14 random_generator 2
+tc qfirst-15 random_generator 2
+tc qfirst-16 random_generator 2
+tc qfirst-17 random_generator 2
+tc qfirst-18 random_generator 2
+tc qfirst-19 random_generator 2
+tc qfirst-20 random_generator 2
+
+group large 50
+
+tc large-01 random_generator 3  
+tc large-02 random_generator 3
+tc large-03 random_generator 3
+tc large-04 random_generator 3
+tc large-05 random_generator 3
+tc large-06 random_generator 3
+tc large-07 random_generator 3
+tc large-08 random_generator 3
+tc large-09 random_generator 3
+tc large-10 random_generator 3
+tc large-11 random_generator 3
+tc large-12 random_generator 3
+tc large-13 random_generator 3  
+tc large-14 random_generator 3
+tc large-15 random_generator 3
+tc large-16 random_generator 3
+tc large-17 random_generator 3
+tc large-18 random_generator 3
+tc large-19 random_generator 3
+tc large-20 random_generator 3
+
+generate_grader
+cleanup_programs

@@ -1,0 +1,12 @@
+author: Hannes Kristján Hannesson, Unnar Freyr Erlendsson
+source: Forritunarkeppni Framhaldsskólanna 2018
+rights_owner: Forritunarkeppni Framhaldsskólanna
+license: cc by-sa
+grading:
+    on_reject: grade
+    objective: max
+    range: 0 100
+type: scoring
+validation: custom
+limits:
+    time_multiplier: 1

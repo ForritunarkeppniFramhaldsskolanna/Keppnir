@@ -1,0 +1,79 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+setup_dirs
+use_solution arnar.py
+
+compile random_generator.py # Arguments: minN maxN
+
+samplegroup
+#sample sampleinputname
+sample 01
+sample 02
+sample 03
+
+# group groupname score
+group naive 20
+# tc testcasename random_generator arg1, arg2, ...
+tc naive-win-01 random_generator 1 5 1 5 1
+tc naive-win-02 random_generator 1 5 1 5 1
+tc naive-win-03 random_generator 1 5 1 5 1
+tc naive-win-04 random_generator 1 5 1 5 1
+tc naive-win-05 random_generator 1 5 1 5 1
+
+tc naive-loss-01 random_generator 4 4 1 1 0
+tc naive-loss-02 random_generator 4 4 3 3 0
+tc naive-loss-03 random_generator 5 5 4 4 0
+tc naive-loss-04 random_generator 3 3 2 2 0
+tc naive-loss-05 random_generator 2 2 1 1 0
+
+group dp 40
+tc dp-win-01 random_generator 6 99 1 10 1
+tc dp-win-02 random_generator 6 99 6 100 1
+tc dp-win-03 random_generator 6 99 6 100 1
+tc dp-win-04 random_generator 6 99 6 100 1
+tc dp-win-05 random_generator 6 99 6 100 1
+tc dp-win-06 random_generator 6 99 6 100 1
+tc dp-win-07 random_generator 6 99 6 100 1
+tc dp-win-08 random_generator 6 99 6 100 1
+tc dp-win-09 random_generator 100 100 6 100 1
+tc dp-win-10 random_generator 100 100 6 100 1
+
+tc dp-loss-01 random_generator 6 100 1 10 0
+tc dp-loss-02 random_generator 6 100 6 100 0
+tc dp-loss-03 random_generator 6 100 6 100 0
+tc dp-loss-04 random_generator 6 100 6 100 0
+tc dp-loss-05 random_generator 6 100 6 100 0
+tc dp-loss-06 random_generator 6 100 6 100 0
+tc dp-loss-07 random_generator 6 100 6 100 0
+tc dp-loss-08 random_generator 6 100 6 100 0
+tc dp-loss-09 random_generator 100 100 6 100 0
+tc dp-loss-10 random_generator 100 100 6 100 0
+
+group constant 40
+tc constant-win-01 random_generator 101 1000 1 10 1
+tc constant-win-02 random_generator 1001 10000 1 100 1
+tc constant-win-03 random_generator 10001 100000 1 1000 1
+tc constant-win-04 random_generator 100001 1000000 10 10000 1
+tc constant-win-05 random_generator 1000001 10000000 100 1000001 
+tc constant-win-06 random_generator 10000001 100000000 100 100000 1
+tc constant-win-07 random_generator 100000001 999999999 1 100000 1
+tc constant-win-08 random_generator 100000001 999999999 1000 999999999 1
+tc constant-win-09 random_generator 1000000000 1000000000 1 1000000 1
+tc constant-win-10 random_generator 1000000000 1000000000 100 1000000000 1
+
+tc constant-loss-01 random_generator 101 1000 1 10 0
+tc constant-loss-02 random_generator 1001 10000 1 100 0
+tc constant-loss-03 random_generator 10001 100000 1 1000 0
+tc constant-loss-04 random_generator 100001 1000000 10 10000 0
+tc constant-loss-05 random_generator 1000001 10000000 100 100000 0
+tc constant-loss-06 random_generator 10000001 100000000 100 100000 0
+tc constant-loss-07 random_generator 100000001 999999999 1 100000 0
+tc constant-loss-08 random_generator 100000001 999999999 1000 999999999 0
+tc constant-loss-09 random_generator 1000000000 1000000000 1 1000 0
+tc constant-loss-10 random_generator 1000000000 1000000000 1000 1000000000 0
+# Add more groups and adjust scoring if needed
+
+generate_grader
+cleanup_programs

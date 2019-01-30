@@ -1,0 +1,80 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+setup_dirs
+use_solution arnar.cpp opt
+
+compile random_generator.py # Arguments: minN maxN
+
+samplegroup
+#sample sampleinputname
+sample 01
+sample 02
+sample 03
+
+# group groupname score
+# tc testcasename random_generator arg1, arg2, ...
+group trivial 10
+tc trivial-01 random_generator 1 1000000 1
+tc trivial-02 random_generator 1 1000000 1
+tc trivial-03 random_generator 1 1000000 1
+tc trivial-04 random_generator 1 1000000 1
+tc trivial-05 random_generator 1 1000000 1
+tc trivial-06 random_generator 1 1000000 1
+tc trivial-07 random_generator 1 1000000 1
+tc trivial-08 random_generator 1 1000000 1
+tc trivial-09 random_generator 1 1000000 1
+tc trivial-10 random_generator 1000000 1000000 1
+
+group small 13
+tc small-01 random_generator 1 1000 2
+tc small-02 random_generator 1 1000 2
+tc small-03 random_generator 1 1000 2
+tc small-04 random_generator 1 1000 2
+tc small-05 random_generator 1 1000 2
+tc small-06 random_generator 1 1000 2
+tc small-07 random_generator 1 1000 2
+tc small-08 random_generator 1 1000 2
+tc small-09 random_generator 1 1000 2
+tc small-10 random_generator 1000 1000 2
+
+group nolr 17
+tc nolr-01 random_generator 1 1000000 3
+tc nolr-02 random_generator 1 1000000 3
+tc nolr-03 random_generator 1 1000000 3
+tc nolr-04 random_generator 1 1000000 3
+tc nolr-05 random_generator 1 1000000 3
+tc nolr-06 random_generator 1 1000000 3
+tc nolr-07 random_generator 1 1000000 3
+tc nolr-08 random_generator 1 1000000 3
+tc nolr-09 random_generator 1 1000000 3
+tc nolr-10 random_generator 1000000 1000000 3
+
+group nob 24
+tc nob-01 random_generator 1 1000000 4
+tc nob-02 random_generator 1 1000000 4
+tc nob-03 random_generator 1 1000000 4
+tc nob-04 random_generator 1 1000000 4
+tc nob-05 random_generator 1 1000000 4
+tc nob-06 random_generator 1 1000000 4
+tc nob-07 random_generator 1 1000000 4
+tc nob-08 random_generator 1 1000000 4
+tc nob-09 random_generator 1 1000000 4
+tc nob-10 random_generator 1000000 1000000 4
+
+group large 36
+tc large-01 random_generator 1 1000000 2
+tc large-02 random_generator 1 1000000 2
+tc large-03 random_generator 1 1000000 2
+tc large-04 random_generator 1 1000000 2
+tc large-05 random_generator 1 1000000 2
+tc large-06 random_generator 1 1000000 2
+tc large-07 random_generator 1 1000000 2
+tc large-08 random_generator 1 1000000 2
+tc large-09 random_generator 1 1000000 2
+tc large-10 random_generator 1000000 1000000 2
+# Add more groups and adjust scoring if needed
+
+generate_grader
+cleanup_programs

@@ -1,0 +1,17 @@
+\problemname{Röðun}
+Eitt af vinsælum verkefnum í tölvunarfræði er röðunarvandamálið. Gefinn er listi af raðanlegum hlutum t.d. tölum eða strengjum og markmiðið að raða þeim í annað hvort vaxandi eða minnkandi röð. Í þessu verkefni er ætlunin að raða lista af nöfnum keppenda eftir vaxandi fjölda dæma sem þau hafa leyst. Gefnar verða tvenndir af nöfnum keppenda og sagt hvor þeirra hafi leyst fleiri dæmi. Svo vill til að engir tveir keppendur hafa leyst sama fjölda dæma. Finnið röð keppendanna eða segið til ef ónægar upplýsingar eru gefnar.
+
+\section*{Inntak}
+Fyrsta línan inniheldur heiltölur $n$ og $k$, þar sem $n$ er fjöldi keppenda og $k$ er fjöldi samanburða sem gefnir verða. Því næst er lína með $n$ nöfnum keppendana sem allir heita einu nafni og engir tveir keppendur heita sama nafni. Þar á eftir koma $k$ línur með samanburðunum, þ.e. lína með tveimur nöfnum keppenda og $<$ eða $>$ á milli nafnanna sem stendur fyrir hvor hefur leyst fleiri dæmi. \texttt{Ed $>$ Bob}  þýðir að Ed hefur leyst fleiri dæmi en Bob, en \texttt{Jim $<$ Cox} þýðir að Jim hefur leyst færri dæmi en Cox. Sömu tveir keppendurnir eru ekki bornir saman oftar en einu sinni. Nöfn keppenda eru mesta lagi $8$ stafir á lengd.
+
+\section*{Úttak}
+Nöfn keppendana í vaxandi röð eftir fjölda leystra dæma, aðgreind með bili, ef mögulegt er að ákvarða röðunina. Ef ekki er möguleg að ákvarða röðunina skal skrifa út \texttt{veit ekki}.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|l|}
+\hline
+Hópur & Stig & Inntaks takmarkanir \\ \hline
+    1     & 20  & $0 < n \leq 400$, $k = \frac{n \cdot (n-1)}{2}$, allir samanburðir gefnir \\ \hline
+    2     & 30  & $0 < n \leq 100$, $0 \leq k < \frac{n \cdot (n-1)}{2}$ \\ \hline
+    3     & 50  & $100 < n \leq 100000$, $0 \leq k < \min\left(100001, \frac{n \cdot (n-1)}{2}\right)$ \\ \hline
+\end{tabular}

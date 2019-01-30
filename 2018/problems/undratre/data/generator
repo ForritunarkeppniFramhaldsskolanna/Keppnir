@@ -1,0 +1,80 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+setup_dirs
+use_solution arnar.cpp opt
+
+compile random_generator.py # Arguments: minN maxN
+
+samplegroup
+#sample sampleinputname
+sample 01
+sample 02
+sample 03
+
+# group groupname score
+# tc testcasename random_generator arg1, arg2, ...
+group small 50
+tc binary-01 random_generator 0 0 2 2
+tc binary-02 random_generator 1 1 2 2
+tc binary-03 random_generator 2 2 2 2
+tc binary-04 random_generator 3 1000000000 2 2
+tc binary-05 random_generator 3 1000000000 2 2
+tc binary-06 random_generator 3 1000000000 2 2
+tc binary-07 random_generator 3 1000000000 2 2
+tc binary-08 random_generator 3 1000000000 2 2
+tc binary-09 random_generator 3 1000000000 2 2
+tc binary-10 random_generator 3 1000000000 2 2
+tc binary-11 random_generator 3 1000000000 2 2
+tc binary-12 random_generator 3 1000000000 2 2
+tc binary-13 random_generator 3 1000000000 2 2
+tc binary-14 random_generator 3 1000000000 2 2
+tc binary-15 random_generator 1000000000 1000000000 2 2
+
+group large 50
+tc nary-01 random_generator 0 0 1 1
+tc nary-02 random_generator 0 0 3 10000
+tc nary-03 random_generator 0 0 3 10000
+tc nary-04 random_generator 0 0 3 10000
+tc nary-05 random_generator 0 0 3 10000
+tc nary-06 random_generator 1 1 1 1
+tc nary-07 random_generator 1 1 3 10000
+tc nary-08 random_generator 1 1 3 10000
+tc nary-09 random_generator 1 1 3 10000
+tc nary-10 random_generator 1 1 3 10000
+tc nary-11 random_generator 0 1000000000 1 1
+tc nary-12 random_generator 0 1000000000 1 1
+tc nary-13 random_generator 0 1000000000 1 1
+tc nary-14 random_generator 0 1000000000 1 1
+tc nary-15 random_generator 0 1000000000 1 1
+tc nary-16 random_generator 0 1000000000 1 10000
+tc nary-17 random_generator 0 1000000000 1 10000
+tc nary-18 random_generator 0 1000000000 1 10000
+tc nary-19 random_generator 0 1000000000 1 10000
+tc nary-20 random_generator 0 1000000000 1 10000
+tc nary-21 random_generator 0 1000000000 1 10000
+tc nary-22 random_generator 0 1000000000 1 10000
+tc nary-23 random_generator 0 1000000000 1 10000
+tc nary-24 random_generator 0 1000000000 1 10000
+tc nary-25 random_generator 0 1000000000 1 10000
+tc nary-26 random_generator 0 1000000000 1 10000
+tc nary-27 random_generator 0 1000000000 1 10000
+tc nary-28 random_generator 0 1000000000 1 10000
+tc nary-29 random_generator 0 1000000000 1 10000
+tc nary-30 random_generator 0 1000000000 10000 10000
+tc nary-31 random_generator 0 1000000000000000 1 10
+tc nary-32 random_generator 1000000000000000 1000000000000000 1 10
+tc nary-33 random_generator 0 1000000000000000 11 100
+tc nary-34 random_generator 1000000000000000 1000000000000000 11 100
+tc nary-35 random_generator 0 1000000000000000 101 1000
+tc nary-36 random_generator 1000000000000000 1000000000000000 101 1000
+tc nary-37 random_generator 0 1000000000000000 101 1000
+tc nary-38 random_generator 1000000000000000 1000000000000000 1001 10000
+tc nary-39 random_generator 0 1000000000000000 1001 10000
+tc nary-40 random_generator 1000000000000000 1000000000000000 1001 10000
+
+# Add more groups and adjust scoring if needed
+
+generate_grader
+cleanup_programs

@@ -1,0 +1,14 @@
+8 12
+Bernhard Ernhardb Rnhardbe Nhardber Hardbern Ardbernh Rdbernha Dbernhar
+Bernhard > Ernhardb
+Ernhardb > Rnhardbe
+Rnhardbe > Nhardber
+Rnhardbe > Hardbern
+Rnhardbe > Ardbernh
+Rnhardbe > Rdbernha
+Rnhardbe > Dbernhar
+Nhardber > Ardbernh
+Hardbern > Ardbernh
+Ardbernh > Rdbernha
+Ardbernh > Dbernhar
+Dbernhar < Rdbernha
