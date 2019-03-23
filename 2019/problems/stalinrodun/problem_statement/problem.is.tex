@@ -1,0 +1,41 @@
+\problemname{Stalínröðun}
+\illustration{0.3}{stalinrodun}{Sýnidæmi 2}
+Eitt af þeim fjölmörgu skiptum sem Unnar var að skruna og skoða nýjar færslur á
+samfélagsmiðlinum LasÞað sá hann færslu á /l/forritunarhúmor um Stalínröðun.
+Þar var lýst línulegu reikniriti til þess að raða lista en það virkaði með því að
+fjarlæga öll stök í listanum sem voru ekki í vaxandi röð.
+
+Nú fór Unnar að pæla ,,Hvað með að í staðinn fyrir að eyða út öllum stökum sem eru ekki í vaxandi
+röð að þá eyðum við út öllum þeim stökum sem eru í vaxandi röð?''. Mjög eðlileg spurning til að spyrja er
+þá hvað tæki það margar ítranir þangað til við endum með tóman lista?
+
+Stak $a_i$ er í vaxandi röð ef að fyrir öll $j < i$ gildir að $a_i \geq a_j$.
+
+\section*{Inntak}
+Fyrsta línan inniheldur eina heiltölu $1 \leq n \leq 5 \cdot 10^5$.
+Næsta lína inniheldur $n$ heiltölur $1 \leq a_i \leq 10^6$. 
+
+\section*{Úttak}
+Skrifið út fjölda ítrana til þess að enda með tóman lista.
+
+\section*{Sýnidæmi}
+
+[ 1 7 5 8 6 3 2 4 ]\newline
+Eftir fyrstu ítrun:\newline
+[ 5 6 3 2 4 ]\newline
+Eftir aðra ítrun:\newline
+[ 3 2 4 ]\newline
+Eftir þriðju ítrun:\newline
+[ 2 ]\newline
+Eftir fjórðu ítrun:\newline
+[ ]\newline
+Svarið er því fjórir.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 20   & $n \leq 50$, öll $a_i$ mismunandi \\ \hline
+2     & 30   & $n \leq 2\,500$, öll $a_i$ mismunandi \\ \hline
+3     & 50   & Engar frekari takmarkanir\\ \hline
+\end{tabular}

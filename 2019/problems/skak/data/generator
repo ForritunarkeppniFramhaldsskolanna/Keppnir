@@ -1,0 +1,26 @@
+#/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution benni100.cpp opt
+
+compile random_generator.py # Arguments: type of testcase
+
+samplegroup
+#sample sampleinputname
+sample 01
+sample 02
+
+# group groupname score
+group group1 100
+for i in {1..20}; do
+tc group-1-$i random_generator 
+done;
+
+
+
+
+
+# Add more groups and adjust scoring if needed
+
+#generate_grader

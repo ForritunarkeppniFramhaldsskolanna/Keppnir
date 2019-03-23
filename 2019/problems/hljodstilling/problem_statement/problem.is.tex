@@ -1,0 +1,43 @@
+\problemname{Hljóðstilling}
+\illustration{0.3}{volume_knob}{Mynd fengin af \href{https://www.flickr.com/photos/martin_thomas/3323193088/}{flickr.com}}
+\noindent
+Sara hlustar oft á tónlist í bílferðum með vinum sínum. Hér fylgir rit um samskipti í einni tiltekinni bílferð.
+
+\begin{quote}
+    \textbf{SARA:} ``Tónlist eða?''\\
+    \textbf{HANNES:} ``Ehaggi!''\\
+    \textbf{ARNAR:} ``Hey Google! Play Despacito!''\\
+    \textit{Hannes stillir hljóðið í fljótu bragði.}\\
+    \textbf{SARA:} ``HVERNIG DIRFISTU AÐ STILLA HLJÓÐIÐ Á 11?!?!? 11 ER EKKI DEILANLEG MEÐ NEINUM AF UPPÁHALDSTÖLUNUM MÍNUM!!!''\\
+\end{quote}
+
+Söru finnst nefnilega alveg ómögulegt þegar hljóðstillingin á hljómtækinu er ekki deilanleg með allavega einni af uppáhaldstölunum sínum.
+Til dæmis ef uppáhalds tölurnar hennar Söru væru $2$ og $5$ þá væri leyfilegt að stilla hljóðið á $15$, $18$ eða $20$ en $11$, $17$ eða $21$ væru ekki leyfileg gildi.
+Til að einfalda líf allra þá geta einungis frumtölur verið í uppáhaldi hjá Söru.
+
+Það er mismunandi eftir hljómtækjum á hvaða bili er hægt að stilla hljóðið, en hljómtæki styðja einungis heiltölur. Gefið bilið sem hljómtækið styður og uppáhalds tölurnar hennar Söru geturðu sagt hvað eru margar hljóðstillingar í boði sem hún væri sátt með?
+
+\section*{Inntak}
+Heiltölur $L$ og $R$, þar sem $1 \leq L \leq R \leq 10^{14}$, bilið sem hljómtækið styður og heiltölu $k$, þar sem $1 \leq k \leq 20$. 
+Að lokum kemur ein lína með $k$ heiltölum $a_1, a_2, \dotsc, a_k$, uppáhalds tölur Söru.
+Það gildir fyrir öll $i$ að $2 \leq a_i \leq 7\,919$ og $a_i$ er frumtala.
+
+\section*{Úttak}
+Ein heiltala $n$, fjöldi hljóðstillinga sem Sara er sátt með á þessu hljómtæki.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+\hline
+1     & 20   & $R-L \leq 10\,000$ \\
+\hline
+2     & 20   & $k = 1$ \\
+\hline
+3     & 15   & $k \leq 2$ \\
+\hline
+4     & 15   & $k \leq 3$ \\
+\hline
+5     & 30   & Engar frekari takmarkanir. \\
+\hline
+\end{tabular}

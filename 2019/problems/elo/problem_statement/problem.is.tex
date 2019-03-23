@@ -1,0 +1,31 @@
+\problemname{Elo}
+\illustration{0.3}{elo2}{}
+Arnar er hrikalegur League of Legends spilari og langar að verða betri.
+Hver einasti spilari í League of Legends hefur Elo einkunn sem táknar hversu góður hann er, því hærra því betra.
+Arnar hefur Eloið $x$ en vill reyna að hækka það sem mest.
+
+Spilarar í League of Legends mega ekki spila á móti hverjum sem er,
+þeir geta aðeins spilað á móti spilara sem eru með um það bil sama Elo.
+Arnar hefur því búið til lista af $n$ spilurum, þar sem Arnar má spila
+á móti $i$-ta spilaranum bara ef Eloið hans Arnars er á bilinu $[L_i, R_i]$.
+Í hvert skipti sem Arnar spilar á móti spilara $i$ mun Eloið hans hækka um
+$a_i$, enda veit hann að hann getur unnið alla þessa spilara.
+
+Arnar má spila á móti sama spilara eins oft og hann vill svo lengi sem Eloið hans Arnars sé á bilinu $[L_i,R_i]$.
+
+Gefnar upplýsingar um alla spilara, hvað er hæsta mögulega Elo sem Arnar getur náð?
+
+\section*{Inntak}
+Fyrsta línan inniheldur tvær heiltölur $1 \le n \le 1\,000$, fjöldi spilara, og $1 \le x \le 5\,000$, Eloið hans Arnars í upphafi.
+Næstu $n$ línur innihalda þrjár heiltölur $1 \le L_i \le R_i \le 5\,000$, $1 \le a_i \le 500$.
+
+\section*{Úttak}
+Skrifaðu út eina heiltölu, hæsta Elo sem Arnar getur náð.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 50    & $a_i$ er sama fyrir öll $i$ \\ \hline
+2     & 50    & Engar frekari takmarkanir \\ \hline
+\end{tabular}

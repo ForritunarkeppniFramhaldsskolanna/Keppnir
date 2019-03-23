@@ -1,0 +1,52 @@
+\problemname{Skrift}
+\illustration{0.3}{teikn}{Bjarki að skrifa}
+Bjarki ætlar að skrifa $n$ stafa orð.
+Bjarki er ekki búinn að ákveða hvaða orð hann ætlar að skrifa en hann veit að 
+það samanstendur af $m$ ólíkum bókstöfum þar sem $i$-ti bókstafurinn kemur $a_i$ 
+sinnum fyrir í orðinu og að það þarf $b_i$ milligrömm af strokleðri til að 
+stroka út hvert eintak af þessum bókstaf.
+
+Bjarki gleymdi samt öllu strokleðrinu sínu heima þannig nú er hann í klandri. 
+Hann biður því vin sinn Unnar um að fara í A4 að kaupa strokleður fyrir sig.
+Unnar er svo góðhjartaður strákur að hann samþykkir það og fer í A4.
+Á leiðinni í A4 fattar Unnar að hann veit ekki hversu mikið Bjarki mun 
+stroka út og er alveg í losti. Hann ákveður því að fara fyrst til
+Diddu spákonu og spyrja hana.
+
+Didda spákona er dularfull kona. Hún sagði Unnari að það væri hægt að lýsa 
+skrift Bjarka í $Q$ aðgerðum þar sem hver aðgerð samanstendur af tveimur
+heiltölum $x_i,y_i$. Ef $x_i = 1$ þá þýðir það að Bjarki skrifi $y_i$ stafi,
+en ef $x_i = 2$ þá þýðir það að Bjarki strokar út síðustu $y_i$ stafina.
+Glaður stekkur Unnar út og aftur í A4 en nú hugsar Unnar: af öllum strengjum
+sem Bjarki gæti verið að skrifa sem er hægt að lýsa með þessum $Q$ aðgerðum 
+hvað er mesta magn af strokleðri sem Bjarki gæti þurft?
+
+Nú hringir Unnar í þig með öllum þessum upplýsingum og spyr þig um hjálp.
+Hvað á Unnar að kaupa mörg milligrömm af strokleðri?
+
+\section*{Inntak}
+Fyrsta línan í inntakinu inniheldur þrjár heiltölur $1 \le n \le 10^9, 1 \le m,q \le 10^5$.
+Næstu $m$ línur innihalda hver tvær heiltölur $1 \le a_i \le n, 1 \le b_i \le 10^4$.
+Næstu $q$ línur innihalda hver tvær heiltölur $1 \le x_i \le 2, 1 \le y_i \le n$.
+
+Gefið er að summan af öllum $a_i$ er alltaf $n$.
+Bjarki mun aldrei skrifa fleiri stafi heldur en eru í orðinu.
+Einnig mun Bjarki aldrei stroka út fleiri stafi en hafa verið skrifaðir.
+
+\section*{Úttak}
+Skrifið út eina tölu, hversu mikið strokleður í milligrömmum þarf Unnar að kaupa til 
+að vera viss um að hann sé með nóg.
+Svarið mun aldrei vera meira en $10^{18}$.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 3    & $1 \le n,m,q \le 10, x_i = 1$\\ \hline
+2     & 7    & $1 \le n,q \le 10, m = 1$\\ \hline
+3     & 10   & $1 \le n,q \le 20, m = 2$\\ \hline
+4     & 10   & $1 \le n,m,q \le 100$\\ \hline
+5     & 15   & $1 \le n,m,q \le 1\,000 $ \\ \hline
+6     & 25   & $1 \le n \le 10^5$ \\ \hline
+7     & 30   & Engar frekari takmarkanir \\ \hline
+\end{tabular}

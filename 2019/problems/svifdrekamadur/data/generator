@@ -1,0 +1,70 @@
+#/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution arnar_100.cpp opt
+
+compile random_generator.py # Arguments: type of testcase
+compile distinct_generator.py
+
+samplegroup
+#sample sampleinputname
+sample 01
+sample 02
+sample 03
+sample 04
+
+# group groupname score
+group small 20
+tc small-01 distinct_generator 1
+tc small-02 distinct_generator 2
+tc small-03 distinct_generator 3
+tc small-04 distinct_generator 4
+tc small-05 distinct_generator 5
+tc small-06 distinct_generator 25
+tc small-07 distinct_generator 50
+tc small-08 distinct_generator 75
+tc small-09 distinct_generator 100
+tc small-10 distinct_generator 100
+
+group medium 25
+tc medium-01 distinct_generator 1
+tc medium-02 distinct_generator 2
+tc medium-03 distinct_generator 3
+tc medium-04 distinct_generator 100
+tc medium-05 distinct_generator 1000
+tc medium-06 distinct_generator 2000
+tc medium-07 distinct_generator 3000
+tc medium-08 distinct_generator 4000
+tc medium-09 distinct_generator 5000
+tc medium-10 distinct_generator 5000
+
+group few-distinct 25
+for i in {01..05}; do
+tc few-distinct-$i random_generator $i $i 1 100
+done;
+for i in {06..10}; do
+tc few-distinct-$i random_generator 1 100000 1 100
+done;
+for i in {11..20}; do
+tc few-distinct-$i random_generator 100000 100000 1 100
+done;
+tc fet-distinct-1-x random_generator x
+tc fet-distinct-1-y random_generator y
+tc fet-distinct-1-incr random_generator incr
+tc fet-distinct-1-decr random_generator decr
+
+group large 30
+# include_group medium
+include_group few-distinct
+for i in {01..05}; do
+tc large-$i random_generator 5000 100000 1 1000000000
+done;
+for i in {06..15}; do
+tc large-$i random_generator 100000 100000 1 1000000000
+done;
+
+
+# Add more groups and adjust scoring if needed
+
+#generate_grader

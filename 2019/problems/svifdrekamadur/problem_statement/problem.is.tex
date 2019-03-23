@@ -1,0 +1,38 @@
+\problemname{Svifdrekamaður}
+\illustration{0.4}{svif}
+
+\noindent
+Hinn mikli svifdrekamaður, Sigurður Jens, er að fara að halda sýningu í Reykjavíkurborg.
+Eins og allir vita er bara ein húsaröð í Reykjavíkurborg og sú húsaröð samanstendur af $n$ húsum.
+Við getum því táknað Reykjavíkurborg með lista af $n$ heiltölum $a_1, a_2, \dotsc, a_n$ þar sem hver tala $a_i$ táknar hæð $i$-tu byggingarinnar í metrum.
+Fjarlægð milli $i$-ta hússins og $j$-ta hússins er einfaldlega munurinn á tölunum $i$ og $j$ (sem má einnig rita $\mid i - j \mid$).
+
+Eins og allir vita er svifdrekamaðurinn Sigurður Jens frægur fyrir að svífa milli bygginga.
+Þó hann sé rosalega fær svifdrekamaður þá getur hann ekki hækkað flugið frá upphafshæð sinni.
+Hann verður því alltaf að lenda í lægri hæð en hann hóf svifið.
+
+Til að forðast vandræði með að mögulega klessa á byggingar þá hefur Reykjavíkurborg sett þá reglu að allar byggingar á milli
+byggingarinnar þar sem hann byrjar svifið og byggingarinnar þar sem hann endar svifið þurfa að vera lægri en þær.
+Við getum því sagt að hann má einungis svífa á milli tveggja bygginga $i,j$ svo lengi sem $a_i > a_j$ og allar byggingar á milli $i$ og $j$ eru minni en $a_i$ og $a_j$.
+
+Sigurður Jens vill að sýningin hans í Reykjavíkurborg verði eins spennandi og mögulegt er, en spenna svifs er skilgreind sem vegalengdin sem svifið nær yfir.
+Hann þarf því að finna bestu tvær byggingarnar til að svífa á milli.
+Af öllum mögulegum sýningum sem Sigurður Jens svifdrekamaður gæti boðið uppá, geturðu sagt hvað er hámarks spenna sem hann gæti náð?
+
+
+\section*{Inntak}
+Fyrsta lína inniheldur eina heiltölu $1 \le n \le 10^5$.
+Næsta lína inniheldur $n$ heiltölur aðskildar með bili, $a_1, a_2, \dotsc, a_n$. Fyrir hverja tölu $a_i$ gildir $1 \le a_i \le 10^9$.
+
+\section*{Úttak}
+Skrifaðu út eina heiltölu, hæstu mögulegu spennu sem hægt er að fá úr sýningu. Ef engar sýningar eru mögulegar skal skrifa út $0$.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 20    & $1 \le n \le 100$, öll $a_i$ mismunandi \\ \hline
+2     & 25    & $1 \le n \le 5\,000$, öll $a_i$ mismunandi \\ \hline
+3     & 25    & $1 \le n \le 10^5$, $1 \le a_i \le 100$ \\ \hline
+4     & 30    & Engar frekari takmarkanir \\ \hline
+\end{tabular}

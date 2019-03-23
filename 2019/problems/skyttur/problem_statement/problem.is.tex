@@ -1,0 +1,35 @@
+\problemname{Skyttur}
+\illustration{0.3}{soldiers}{Mynd fengin af \href{https://upload.wikimedia.org/wikipedia/commons/7/71/Kosovo_Security_Force_Marching.jpg}{wikimedia.org}}
+
+\noindent
+Fyrir mörgum árum fór mikið af hernaði fram í skotgryfjum. Núna er allur íslenski herinn að æfa sig í skotgryfjuhernaði.
+Í skotgryfjuhernaði er hermönnum raðað í röð í skotgryfju og reisa þeir sig svo upp til þess að miða skotvopni sínu og hleypa af því.
+Hermennirnir eru sjálfir í hættu að verða skotnir þegar þeir reisa sig upp.
+Íslensku hermennirnir fengu allir sömu frábæru þjálfun og því hegða þeir sér allir nákvæmlega eins. Í öðrum orðum þá taka allir hermennirnir skotin sín samtímis.
+Vegna þjálfunar sinnar eru íslensku hermennirnir einnig með fullkomna nákvæmni; þeir hitta alltaf skotmark sitt.
+Ef hermenn verða fyrir skoti þá eru þeir fjarlægðir úr gryfjunni.
+
+Hershöfðingi Íslands er mikill stærðfræðingur í sér. Hann setur því upp æfinguna á stærðfræðilegan máta.
+Hann skilgreinir ``leyniskyttusjónauka'' virkjann $\oplus$. Ef hermaður $a$ miðar á hermann $b$ táknar hann það með $a \oplus b$.
+
+Hershöfðingi Íslands hefur ritað tvo tvíundarstrengi $s$ og $t$, einn fyrir hvora gryfju, til að tákna staðsetningu hermannanna í æfingunni.
+Í æfingunni eru skotgryfjurnar báðar með $n$ staðsetningar í boði fyrir hermennina.
+Ef $i$-ti stafurinn er $1$, þá er hermaður staddur á $i$-tu staðsetningu gryfjunnar, en ef stafurinn er $0$ þá er enginn hermaður þar.
+Í æfingunni gildir fyrir hvert $1 \leq i \leq n$ að $s_i \oplus t_i$ og $t_i \oplus s_i$ gefið að það séu hermenn staddir þar.
+
+Hershöfðinginn vill að þú segir til fyrir hverja staðsetningu hvort það má finna hermann í annarri hvorri gryfjunni.
+
+\section*{Inntak}
+Fyrsta lína inniheldur eina heiltölu $1 \le n \le 10^5$.
+Næst fylgja tvær línur, fyrri inniheldur strenginn $s$ og sú seinni inniheldur strenginn $t$. Strengirnir eru ávallt tvíundarstrengir; hver einasti stafur er annaðhvort $0$ eða $1$.
+
+\section*{Úttak}
+Skrifaðu út eina línu með $n$ stöfum. Ef að eftir æfinguna má finna hermann í annarri hvorri gryfjunni á staðsetningu $i$ þá skal $i$-ti stafurinn vera $1$, annars $0$.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 20    & $n = 1$\\ \hline
+2     & 80    & Engar frekari takmarkanir \\ \hline
+\end{tabular}

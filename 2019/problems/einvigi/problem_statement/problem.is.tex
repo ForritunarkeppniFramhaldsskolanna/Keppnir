@@ -1,0 +1,38 @@
+\problemname{Einvígi}
+\illustration{0.35}{battle}{Einvígi milli tveggja hermenn}
+
+\noindent
+Tómas er mikill aðdáandi stríðsleikja. Uppáhaldsleikurinn hans núna er \textbf{Einvígi margra}.
+Í leiknum eru tveir spilarar að spila orrustu. Hver orrusta samanstendur af mörgum einvígum.
+
+Tómas hefur $n$ hermenn, hver táknaður með styrkleika $a_i$.
+Andstæðingur Tómasar hefur einnig $n$ hermenn, hver táknaður með styrkleika $b_i$.
+
+Einvígin fara þannig fram að $i$-ti hermaðurinn hjá Tómasi berst við $i$-ta hermanninn hjá andstæðingi sínum.
+Tómas vinnur einvígið ef $a_i > b_i$, það er jafntefli ef $a_i = b_i$ og andstæðingurinn vinnur ef $a_i < b_i$.
+Einvígin fara fram í hækkandi röð; fyrst berjast $a_1$ og $b_1$, svo $a_2$ og $b_2$, og svo framvegis þar til $a_n$ og $b_n$ eru búnir að berjast.
+
+Tómas vinnur orrustuna ef hann vinnur fleiri einvígi heldur en óvinur sinn.
+
+Tómas er nýbúinn að kaupa viðbótarpakka fyrir leikinn og í því var eitt \textbf{Ofurseyði}.
+\textbf{Ofurseyðið} virkar þannig að ef Tómas notar það þá mun styrkleikur hermanna hans verða sterkari um $k$ í næstu $m$ einvígum.
+
+Tómas er ekki alveg viss um hvenær hann á að nota \textbf{Ofurseyðið}.
+Ef hann myndi velja besta tímann til að nota það, myndi Tómas geta unnið orrustuna?
+
+\section*{Inntak}
+Fyrsta lína inniheldur þrjár heiltölur $n,m,k$, þar sem $1 \le m \le n \le 10^5$, $1 \le k \le 10^7$.
+Önnur lína inniheldur $n$ heiltölur $a_1, a_2, \dotsc, a_n$, þar sem $1 \le a_i \le 10^7$.
+Þriðja lína inniheldur $n$ heiltölur $b_1, b_2, \dotsc, b_n$, þar sem $1 \le b_i \le 10^7$.
+
+\section*{Úttak}
+Ef Tómas getur unnið orrustuna skrifið þá út fyrsta tíman sem hann gæti notað \textbf{Ofurseyðið}
+og unnið orrustuna. Ef Tómas getur ekki unnið orrustuna skrifið þá út \texttt{Neibb}.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 50  & $1 \le m \le n \le 1\,000$, $1 \le k, a_i \le 100$ \\ \hline
+2     & 100  & Engar frekari takmarkanir \\ \hline
+\end{tabular}

@@ -1,0 +1,48 @@
+\problemname{Hakkari}
+\illustration{0.3}{hack}{Bergur að hakka}
+
+Bergur hakkari er nýkominn frá Hollandi í nýja fína Adidas gallanum sínum og er reiðubúinn í vinnuna.
+Hann opnar tölvupóstinn sinn og sér skilaboð frá \texttt{hackers.com}.
+Í skilaboðunum er beiðni um forrit sem hakkar Minesweeper og finnur allar sprengjurnar í leiknum.
+Í skilaboðunum stendur einnig að forritið þurfi að vera tilbúið fyrir morgundaginn.
+
+``Ekkert mál'' hugsar Bergur og byrjar að forrita.
+
+Nokkrum tímum seinna klárar Bergur forritið.
+Forritið hans skrifar út $n$ raðir og $m$ dálka þar sem hver reitur inniheldur \texttt{.}
+ef það er ekki sprengja þar eða \texttt{*} ef það er sprengja þar.
+Eftir alla þessa vinnu er Bergur gjörsamlega uppgefinn. Hann ákveður að fá sér bjór
+sem var eftir frá því hann var í Hollandi.
+
+Eftir dágóða stund er Bergur dauðadrukkinn og þá kemur kærastan hans, Björk, heim.
+Björk og Bergur eru mjög gott teymi.
+Bergur hakkar og svo skoðar Björk hvort hann hafi ekki örugglega fylgt fyrirmælunum.
+Þar sem Bergur er meðvitundarlaus fer Björk beint í tölvuna og skoðar skilaboðin frá \texttt{hackers.com}.
+Hún les varlega yfir allt þangað til hún sér hvað stendur í síðustu efnisgreininni.
+\begin{quote}
+    \textbf{Forritið má ekki skila út dálkum og röðum með upplýsingunum. Forritið þarf að skila
+    pari af tölum fyrir hverja sprengju. Hvert par skal tákna röðina og dálkinn sem sprengjan er í}.
+\end{quote}
+
+Andskotans, Bergur hafði greinilega ekki lesið allan póstinn og Björk getur ekki látið hann laga þetta þar sem hann er dauðadrukkinn.
+
+Getur þú hjálpað Björk að breyta forritinu hans Bergs þannig það er eins og \texttt{hackers.com} vilja hafa það?
+
+\section*{Inntak}
+Fyrsta lína inniheldur $1 \le n,m \le 100$.
+Næstu $n$ línur innihalda $m$ tákn hver; annaðhvort \textbf{*} eða \textbf{.}
+eftir því hvort það sé sprengja á þeim reit eða ekki.
+
+\section*{Úttak}
+Fyrstu línu skal skrifa út eina heiltölu $k$ sem er fjöldi sprengja.
+Næstu $k$ línur skal hver innihalda tvær heiltölur $r_i, c_i$ sem tákna röð og dálk $i$-tu sprengjunnar.
+
+Skrifa má sprengjurnar út í hvaða röð sem er.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 40    & $1 \le n,m \le 15$ \\ \hline
+2     & 60    & Engar frekari takmarkanir \\ \hline
+\end{tabular}

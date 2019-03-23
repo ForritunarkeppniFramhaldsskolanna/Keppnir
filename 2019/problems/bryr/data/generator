@@ -1,0 +1,66 @@
+#/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution arnar_100.cpp
+
+compile random_generator.py # Arguments: type of testcase
+
+samplegroup
+#sample sampleinputname
+sample 01
+sample 02
+sample 03
+
+# group groupname score
+group cycle 20
+for i in {01..09}; do
+tc cycle-$i random_generator 1 1 100 1 1
+done;
+tc cycle-10 random_generator 1 100 100 1 1
+
+group small-bridges-only 20
+include_group cycle
+for i in {01..04}; do
+tc small-bridges-only-$i random_generator 2 1 100 1 1
+done;
+for i in {05..09}; do
+tc small-bridges-only-$i random_generator 2 100 100 1 1
+done;
+tc small-bridges-only-10 random_generator 3 100 100 1 1
+tc small-bridges-only-11 random_generator 4 100 100 1 1
+
+group large-bridges-only 20
+include_group small-bridges-only
+for i in {01..03}; do
+tc large-bridges-only-$i random_generator 2 100000 100000 1 1
+done;
+for i in {04..06}; do
+tc large-bridges-only-$i random_generator 4 100000 100000 1 1
+done;
+tc large-bridges-only-07 random_generator 3 632 632 1 1
+
+group small 20
+include_group small-bridges-only
+for i in {01..04}; do
+tc small-$i random_generator 2 100 100 0 1
+done;
+for i in {05..09}; do
+tc small-$i random_generator 4 100 100 0 1
+done;
+tc small-10 random_generator 3 100 100 0 1
+
+group large 20
+include_group small
+include_group large-bridges-only
+for i in {01..03}; do
+tc large-$i random_generator 2 100000 100000 0 1
+done;
+for i in {04..06}; do
+tc large-$i random_generator 4 100000 100000 0 1
+done;
+tc large-07 random_generator 3 632 632 0 1
+
+# Add more groups and adjust scoring if needed
+
+#generate_grader

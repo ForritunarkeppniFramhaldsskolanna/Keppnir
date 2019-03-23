@@ -1,0 +1,56 @@
+#/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution unnar_bs_100.cpp opt
+
+compile random_generator.py # Arguments: type of testcase
+compile distinct_generator.py # Arguments: type of testcase
+
+samplegroup
+#sample sampleinputname
+sample 01
+sample 02
+
+# group groupname score
+group small 20
+# tc testcasename random_generator arg1, arg2, ...
+tc small-01 distinct_generator 1 1
+tc small-02 distinct_generator 1 1
+tc small-03 distinct_generator 1 1
+tc small-04 distinct_generator 1 1
+tc small-05 distinct_generator 1 1
+tc small-06 distinct_generator 1 1
+tc small-07 distinct_generator 1 2
+tc small-08 distinct_generator 1 3
+tc small-09 distinct_generator 1 4
+tc small-10 distinct_generator 1 5
+
+group medium 30
+tc medium-01 distinct_generator 2 1
+tc medium-02 distinct_generator 2 1
+tc medium-03 distinct_generator 2 1
+tc medium-04 distinct_generator 2 1
+tc medium-05 distinct_generator 2 1
+tc medium-06 distinct_generator 2 1
+tc medium-07 distinct_generator 2 2
+tc medium-08 distinct_generator 2 3
+tc medium-09 distinct_generator 2 4
+tc medium-10 distinct_generator 2 5
+
+group large 50
+tc large-01 random_generator 3 1
+tc large-02 random_generator 3 1
+tc large-03 random_generator 3 1
+tc large-04 random_generator 3 1
+tc large-05 random_generator 3 1
+tc large-06 random_generator 3 1
+tc large-07 random_generator 3 2
+tc large-08 random_generator 3 3
+tc large-09 random_generator 3 4
+tc large-10 random_generator 3 5
+
+
+# Add more groups and adjust scoring if needed
+
+#generate_grader

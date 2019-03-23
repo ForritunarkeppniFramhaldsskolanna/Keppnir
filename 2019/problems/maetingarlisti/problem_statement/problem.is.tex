@@ -1,0 +1,33 @@
+\problemname{Mætingarlisti}
+\illustration{0.3}{lecture_hall}{Skólastofa (mynd fengin af \href{https://flic.kr/p/BTRZe}{flickr.com})}
+
+Mætingarlisti er látinn ganga um skólastofu þar sem hver nemandi skráir nafnið sitt einu sinni fyrir neðan
+síðasta nafn (fyrsta manneskjan skrifar nafnið sitt efst). Stofan samantendur af $r$ röðum þar sem hver röð
+er með $c$ stóla. Vitað er að stofan er fullsetin. Verkefni þitt er að skrifa forrit sem segir til um hvort
+mætingarlistinn var látinn ganga frá vinstri til hægri eða öfugt, fyrir hverja röð í skólastofunni.
+
+Athugið að hver röð lét listann ganga annaðhvort frá vinstri til hægri eða öfugt, það er ekki möguleiki á neinu öðru.
+
+\section*{Inntak}
+Fyrsta línan í inntakinu inniheldur þrjár heiltölur 
+$4 \leq n \leq 10^5$,
+$r$, og $c$, þar sem $n = r \cdot c$.
+Síðan koma $r$ línur, hver lína með $c$ nöfnum, þar sem hver lína táknar eina röð af nemendum.
+Síðan fylgja $n$ línur, hver lína með einu nafni, sem táknar mætingarlistann.
+
+Hvert nafn er $2$ til $20$ enskir lágstafir að lengd, og $c \geq 2$.
+
+
+\section*{Úttak}
+Út skal prenta $r$ línur, þar sem lína $i$ er annaðhvort \texttt{left} ef að mætingarlistinn var látinn ganga
+frá vinstri til hægri í röð $i$, en \texttt{right} annars.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 10  & $4 \leq n \leq 50$\\
+\hline
+2     & 90  & Engar frekari takmarkanir \\
+\hline
+\end{tabular}

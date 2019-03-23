@@ -1,0 +1,31 @@
+#/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution arnar_100.cpp
+
+compile random_generator.py # Arguments: type of testcase
+
+samplegroup
+#sample sampleinputname
+sample 01
+sample 02
+sample 03
+
+# group groupname score
+group small 10
+tc small-01 random_generator 1 1
+tc small-02 random_generator 2 2
+for i in {03..10}; do
+tc small-$i random_generator 1 100
+done;
+
+group large 90
+include_group small
+for i in {01..5}; do
+tc large-$i random_generator 101 100000
+done;
+
+# Add more groups and adjust scoring if needed
+
+#generate_grader

@@ -1,0 +1,48 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution arnar_fast_100.py
+
+compile random_generator.py # Arguments: type of testcase
+
+samplegroup
+#sample sampleinputname
+sample 01
+sample 02
+
+# group groupname score
+group small 20
+# tc testcasename random_generator arg1, arg2, ...
+for i in {1..9}; do
+tc small-$i random_generator 1 1 20 1
+done;
+tc small-10 random_generator 1 1 20 0
+
+group large-k1 20
+for i in {1..8}; do
+tc large-k1-$i random_generator 2 1 1 1
+done;
+
+group large-k2 15
+include_group large-k1
+for i in {1..8}; do
+tc large-k2-$i random_generator 2 2 2 1
+done;
+
+group large-k3 15
+include_group large-k2
+for i in {1..8}; do
+tc large-k3-$i random_generator 2 3 3 1
+done;
+
+group large-k20 30
+include_group large-k3
+for i in {04..20}; do
+tc large-k20-$i random_generator 2 $i $i
+done;
+tc large-k20-21 random_generator 2 20 20
+
+# Add more groups and adjust scoring if needed
+
+#generate_grader

@@ -1,0 +1,51 @@
+#/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution bjarki_D_100.cpp opt
+
+compile random_generator.py # Arguments: max_n, max_k, max_c
+
+samplegroup
+sample 01
+sample 02
+sample 03
+
+group A 25
+tc A-01 random_generator 10**3 10**3 10**3
+tc A-02 random_generator 10**3 10**3 10**3
+tc A-03 random_generator 10**3 10**3 10**3
+tc A-04 random_generator 10**3 10**3 10**3
+tc A-05 random_generator 10**3 10**3 10**3
+tc A-edge1 random_generator 1 10**3 10**3
+tc A-edge2 random_generator 2 10**3 10**3
+
+group B 25
+include_group A
+tc B-01 random_generator 2*10**5 10**3 10**3
+tc B-02 random_generator 2*10**5 10**3 10**3
+tc B-03 random_generator 2*10**5 10**3 10**3
+tc B-04 random_generator 2*10**5 10**3 10**3
+tc B-05 random_generator 2*10**5 10**3 10**3
+
+group C 20
+tc C-01 random_generator 2*10**5 10**9 1
+tc C-02 random_generator 2*10**5 10**9 1
+tc C-03 random_generator 2*10**5 10**9 1
+tc C-04 random_generator 2*10**5 10**9 1
+tc C-05 random_generator 2*10**5 10**9 1
+tc C-06 random_generator 2*10**5 10**9 1
+tc C-07 random_generator 2*10**5 10**9 1
+tc C-edge1 random_generator 1 10**9 1
+tc C-edge2 random_generator 2 10**9 1
+
+group D 30
+# include_group A
+# include_group B
+include_group C
+tc D-01 random_generator 2*10**5 10**9 10**3
+tc D-02 random_generator 2*10**5 10**9 10**3
+tc D-03 random_generator 2*10**5 10**9 10**3
+tc D-04 random_generator 2*10**5 10**9 10**3
+tc D-05 random_generator 2*10**5 10**9 10**3
+

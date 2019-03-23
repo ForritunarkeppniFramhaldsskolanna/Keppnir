@@ -1,0 +1,22 @@
+#/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution arnar_100.py
+
+compile random_generator.py # Arguments: type of testcase
+
+samplegroup
+#sample sampleinputname
+sample 01
+sample 02
+
+# group groupname score
+group all 100
+for i in {1..10}; do
+tc all-$i random_generator 1 1000
+done;
+
+# Add more groups and adjust scoring if needed
+
+#generate_grader

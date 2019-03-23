@@ -1,0 +1,91 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution hannes_100.py
+
+compile random_generator.py # Arguments: type of testcase
+
+samplegroup
+#sample sampleinputname
+sample 01
+sample 02
+
+# group groupname score
+# tc testcasename random_generator arg1, arg2, ...
+group octic 10
+tc octic-1 random_generator 1
+tc octic-2 random_generator 1
+tc octic-3 random_generator 1
+tc octic-4 random_generator 1
+tc octic-5 random_generator 1
+tc octic-6 random_generator 1
+tc octic-7 random_generator 1
+tc octic-8 random_generator 1
+tc octic-9 random_generator 1
+tc octic-10 random_generator 1
+
+group quartic 10
+tc quartic-1 random_generator 2
+tc quartic-2 random_generator 2
+tc quartic-3 random_generator 2
+tc quartic-4 random_generator 2
+tc quartic-5 random_generator 2
+tc quartic-6 random_generator 2
+tc quartic-7 random_generator 2
+tc quartic-8 random_generator 2
+tc quartic-9 random_generator 2
+tc quartic-10 random_generator 7 50 50
+
+group cubic 20
+tc cubic-1 random_generator 3
+tc cubic-2 random_generator 3
+tc cubic-3 random_generator 3
+tc cubic-4 random_generator 3
+tc cubic-5 random_generator 3
+tc cubic-6 random_generator 3
+tc cubic-7 random_generator 3
+tc cubic-8 random_generator 3
+tc cubic-9 random_generator 3
+tc cubic-10 random_generator 7 200 200
+
+group quadratic 20
+tc quadratic-1 random_generator 4
+tc quadratic-2 random_generator 4
+tc quadratic-3 random_generator 4
+tc quadratic-4 random_generator 4
+tc quadratic-5 random_generator 4
+tc quadratic-6 random_generator 4
+tc quadratic-7 random_generator 4
+tc quadratic-8 random_generator 4
+tc quadratic-9 random_generator 4
+tc quadratic-10 random_generator 7 2000 2000
+
+group linear 20
+tc linear-1 random_generator 5
+tc linear-2 random_generator 5
+tc linear-3 random_generator 5
+tc linear-4 random_generator 5
+tc linear-5 random_generator 5
+tc linear-6 random_generator 5
+tc linear-7 random_generator 5
+tc linear-8 random_generator 5
+tc linear-9 random_generator 5
+tc linear-10 random_generator 7 1000000 1000000
+
+group constant 20
+tc constant-1 random_generator 6
+tc constant-2 random_generator 6
+tc constant-3 random_generator 6
+tc constant-4 random_generator 6
+tc constant-5 random_generator 6
+tc constant-6 random_generator 6
+tc constant-7 random_generator 6
+tc constant-8 random_generator 6
+tc constant-9 random_generator 6
+tc constant-10 random_generator 7 1000000000000000000 1000000000000000000
+
+
+# Add more groups and adjust scoring if needed
+
+#generate_grader

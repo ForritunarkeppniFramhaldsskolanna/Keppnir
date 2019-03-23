@@ -1,0 +1,30 @@
+\problemname{Brýr}
+\illustration{0.3}{Einbreid_Bru}{Mynd fengin af \href{https://upload.wikimedia.org/wikipedia/commons/1/1a/Einbreid_Bru.jpg}{Wikimedia Commons}}
+
+\noindent
+Eins og allir vita frá því í fyrra þá búa Eva og Stefán í Vestmannaeyjum. Þá hjálpaðir þú Evu að finna bestu ferðaáætlunina til að skoða allt landið með honum Stefáni á sem stystum tíma. Núna langar Evu aftur að heimsækja Egilsstaði en á ferð sinni í kringum landið þá fundu þau út að Stefán HATAR einbreiðar brýr. Hún Eva leitar því aftur til þín til að hjálpa sér að halda Stefáni í góðu skapi.
+
+Getur þú hjálpað Evu að finna leiðina frá Vestmannaeyjum til Egilsstaða sem inniheldur sem fæstar einbreiðar brýr?
+
+
+\section*{Inntak}
+Í fyrstu línu koma tvær heiltölur, $2 \leq n \leq 10^5$, fjöldi staða, $n-1 \leq m \leq \min{(2\cdot 10^5, n(n-1)/2)}$ fjöldi vega.
+Næst koma $m$ línur hver með $3$ tölum $1 \leq a, b \leq n$ og $c \in \{0, 1\}$ sem þýðir að það er vegur sem liggur á milli staðar $a$ og staðar $b$ og inniheldur einbreiða brú ef $c = 1$, en tvíbreiða brú ef $c=0$.
+Vestmannaeyjar munu alltaf vera númer $1$ og Egilsstaðir munu alltaf vera númer $n$.
+Þú mátt gera ráð fyrir að vegakerfi Íslands sé samhangandi: það er hægt að komast á hvern einasta stað frá hverjum einasta stað.
+Þú mátt einnig gera ráð fyrir að hvert par $a, b$ kemur mesta lagi einu sinni fyrir í inntakinu.
+
+\section*{Úttak}
+Ein lína með minnsta fjölda einbreiðra brúa sem Stefán og Eva þurfa að fara yfir til að komast á leiðarenda.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 20  & $1 \leq n \leq 100$, $n = m$, Vegakerfi Íslands myndar eina hringrás af einbreiðum brúm ($c = 1$) \\ \hline
+2     & 20  & $1 \leq n \leq 100$, allir vegir innihalda einbreiða brú ($c = 1$) \\ \hline
+3     & 20  & $1 \leq n \leq 100$ \\ \hline
+4     & 20  & Allir vegir innihalda einbreiða brú ($c = 1$) \\ \hline
+5     & 20  & Engar frekari takmarkanir \\ \hline
+
+\end{tabular}

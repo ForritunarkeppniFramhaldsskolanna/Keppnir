@@ -1,0 +1,41 @@
+\problemname{Háhýsi}
+\illustration{0.3}{construction_site}{Lóðin (mynd fengin af \href{https://www.flickr.com/photos/alexprevot/6102245535}{flickr.com})}
+Siggi sement var nýlega ráðinn sem verktaki til að byggja háhýsi í miðbæ Reykjavíkur.
+Nýlega fékk hann þær upplýsingar að það er búið að úthluta honum lóð að stærð $n \cdot m$.
+Siggi er mjög nákvæmur þegar það kemur að starfinu sínu, og langar hann að meta kostnað og fýsileika á öllum mögulegum staðsetningum horna hússins.
+Kúnninn hans Sigga setti samt enga kröfu um hversu breitt né vítt húsið þarf að vera, svo lengi sem það er að minnsta kosti 1 fermetri og passi inn á lóðina.
+Lóðinni er skipt upp í reiti sem eru $1$ fermetri hver ($1m \cdot 1m$). Háhýsið þarf að vera rétthyrningur þegar horft er að ofan frá.
+Hvert einasta horn hússins þarf að vera fyrir miðju í einhverjum reit og engin tvö horn mega vera á sama reit.
+Siggi hefur ráðið þig í að meta hversu margar mögulegar staðsetningar hann þarf að meta.
+
+\section*{Inntak}
+Fyrsta og eina línan í inntakinu er lengd lóðarinnar, og breidd lóðarinnar, $n$ og $m$, aðskildar með bili.
+Gefið er að $1 \leq n, m \leq 10^{18}$.
+
+\section*{Úttak}
+Skrifið út fjölda mögulegra staðsetninga á háhýsinu. Þar sem svarið getur verið mjög stórt skaltu skrifa út afganginn á svarinu þegar því er deilt með $10^9 + 7$.
+Til dæmis ef það eru $1\,000\,203\,876$ mögulegar staðsetningar á hornunum þá skal skrifa út $203\,869$.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+% n^8, n og m <= 7
+1 & 10 & $1 \leq n, m \leq 7$ \\
+\hline
+% n^4, n og m <= 50
+2 & 10 & $1 \leq n, m \leq 50$ \\
+\hline
+% n^3, n og m <= 200
+3 & 20 & $1 \leq n, m \leq 200$ \\
+\hline
+% n^2, n og m <= 2,000
+4 & 20 & $1 \leq n, m \leq 2\,000$ \\
+\hline
+% n, n og m <= 10^6
+5 & 20 & $1 \leq n, m \leq 10^6$ \\
+\hline
+% 1, n og m <= 10^{18}
+6 & 20 & $1 \leq n, m \leq 10^{18}$ \\
+\hline
+\end{tabular}

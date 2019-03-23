@@ -1,0 +1,121 @@
+\problemname{Gagnaleki}
+\illustration{0.3}{fall}{}
+
+
+Hakkari braust inn á Forritun.is og lak út mörgum gígabætum af gögnum á netið,
+þar með talið skráningarupplýsingum keppenda Forritunarkeppni Framhaldsskólanna
+frá upphafi. Í þessum gögnum eru því meðal annars lykilorð frá þér og öðrum
+keppendum. Þetta finnst þér mjög spennandi. Þú finnur gögnin á svokölluðu
+Hulduneti og ákveður að skoða lykilorð andstæðinga þinna í keppninni í ár. En
+þér til mikillar mæðu eru lykilorðin sjálf ekki geymd í gögnunum, heldur eru
+lykilorðin geymd á tættu formi. Það er, þegar keppandi skráir sig fyrst í
+keppnina og slær inn lykilorð, þá er lykilorðið brenglað með svokölluðu
+tætifalli áður en það er sett inn í gagnagrunninn. Svo þegar keppandi ætlar að
+skrá sig inn með lykilorðinu sínu, þá er lykilorðið brenglað með sama
+tætifalli, og niðurstaðan borin saman við tætta lykilorðið sem var geymt í
+gagnagrunninum. Ef tættu lykilorðin eru eins, þá er keppandinn skráður inn;
+annars ekki.
+
+Það er því ljóst að þeir sem forrituðu Forritun.is höfðu öryggið í fyrirrúmi ef
+ske kynni að vefsíðan yrði hökkuð með því að geyma ekki sjálf lykilorðin. Þetta
+gerir þér erfiðara fyrir, en þú gefst ekki svo einfaldlega upp! Á GitHub finnur
+þú eftirfarandi kóða fyrir tætifallið í forritunarmálinu Python:
+
+\begin{verbatim}
+def heiltala(c):
+    if '0' <= c <= '9':
+        return int(c)
+    return ord(c) - ord('a') + 10
+
+def stafur(c):
+    if 0 <= c <= 9:
+        return str(c)
+    return chr(ord('a') + c - 10)
+
+def leggjaSaman(a, b):
+    carry = 0
+    s = ''
+    for at in range(31, -1, -1):
+        carry += heiltala(a[at]) + heiltala(b[at])
+        s = stafur(carry % 16) + s
+        carry = carry // 16
+    return s
+
+def brengla(s, at, u):
+    magic = 'b058592efd277ae75f27bd99d1628fbd'
+    if at >= len(s):
+        return magic
+
+    res = leggjaSaman(brengla(s, at+1, True), brengla(s, at+1, False))
+    for i in range(6):
+        res = leggjaSaman(res, res)
+
+    cnt = ord(s[at])
+    for i in range(cnt):
+        res = leggjaSaman(res, magic)
+
+    return res
+
+def taetaLykilord(s):
+    return brengla(s, 0, True)
+
+
+print(taetaLykilord('forrit123'))
+\end{verbatim}
+
+Þar að auki fannstu líka kóðann í forritunarmálunum
+\href{/problems/iceland.gagnaleki/file/statement/attachments/taeta.cpp}{C++},
+\href{/problems/iceland.gagnaleki/file/statement/attachments/Taeta.cs}{C\#},
+\href{/problems/iceland.gagnaleki/file/statement/attachments/Taeta.java}{Java},
+\href{/problems/iceland.gagnaleki/file/statement/attachments/taeta.js}{JavaScript} og
+\href{/problems/iceland.gagnaleki/file/statement/attachments/taeta.rb}{Ruby}.
+
+Þú varst líka búinn að safna saman tættu lykilorðunum -- sem eru hvorki færri
+né fleiri en $2\,500$ -- í skrá sem má nálgast
+\href{/problems/iceland.gagnaleki/file/statement/attachments/gagnaleki.txt}{hér},
+eitt tætt lykilorð á hverri línu.
+
+Með þessa vitneskju um hvernig tætifallið virkar, þá viltu reyna að brjóta eins
+mörg af tættu lykilorðunum og þú getur. Tætt lykilorð telst brotið þegar þú
+finnur einhvern streng sem gefur sömu útkomu ef þú setur hann í gegnum
+tætifallið. Þú mátt nota hvaða aðferðir sem þú vilt til að brjóta tættu
+lykilorðin, þar með talið finna enska orðalista á netinu eða breyta tætifallinu
+til að gera það hraðara (svo lengi sem það gefur sömu niðurstöður).
+
+\section*{Inntak}
+Forritið verður bara keyrt einu sinni, og mun inntakið vera nákvæmlega það sama
+og er í skránni sem bent er á að ofan. Á fyrstu línu er fjöldi tættra
+lykilorða, sem er alltaf $2\,500$. Þar eftir fylgja $2\,500$ tætt lykilorð,
+eitt á hverri línu.
+
+\section*{Úttak}
+Fyrir hvert tætt lykilorð úr inntakinu sem þú nærð að brjóta, skrifaðu út eina
+línu á forminu ``\textit{tætt lykilorð}\texttt{:}\textit{lykilorð}'', þar sem
+\textit{lykilorð} er strengur sem gefur niðurstöðuna \textit{tætt lykilorð} úr
+tætifallinu.
+
+\section*{Stigagjöf}
+Þú færð $0.04$ stig fyrir hvert tætt lykilorð sem þú nærð að brjóta. Ef
+heildarfjöldi stiga er kommutala, þá er hún námunduð upp að næstu heiltölu. Þú
+færð líka að vita eftirfarandi um upprunalegu lykilorðin, áður en þau voru
+tætt:
+
+\begin{itemize}
+    \item 20\% af lykilorðunum innihalda bara tölustafi og eru að lengd í mesta lagi 4.
+    \item 20\% af lykilorðunum eru ensk orð.
+    \item 20\% af lykilorðunum innihalda bara enska lágstafi og eru að lengd í mesta lagi 5.
+    \item 20\% af lykilorðunum eru ensk orð með tölustafi fyrir aftan.
+    \item 20\% af lykilorðunum samanstanda af allt að 15 enskum bókstöfum, tölustöfum og táknum.
+\end{itemize}
+
+\section*{Sýnidæmi}
+Ef lausnin þín skrifar út eftirfarandi, þá fær hún $0.2$ stig, sem er svo
+námundað upp í $1$ stig.
+\begin{verbatim}
+73f5bcbc047219f8ce6fa72e7910b82d:1234
+109de74e2dc5851b9e4dc32f40a34eda:benni
+c5e0062df0ca99faa2d710c058b3f130:password
+3c50164525d099e1b909b3e4b3675a67:sexy1000
+053e0ff2244d8f9f1633c0b4f7223e79:mN9`C6ZjGa@!$/L
+\end{verbatim}
+

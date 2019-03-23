@@ -1,0 +1,39 @@
+\problemname{Minesweeper}
+\illustration{0.3}{sweep}{Minesweeper}
+
+Arnar er ótrúlega góður í \textbf{Minesweeper} enda hefur hann verið að spila leikinn frá 1989. Vinur hans Bjarki er alltaf að segja að það sé ekkert merkilegt.
+\begin{quote}
+    Bjarki: ``Hver sem er getur verið góður í Minesweeper.''\\
+    Arnar: ``Ef það er svona létt sannaðu það þá, æfðu þig og kepptu svo við mig.''\\
+\end{quote}
+
+Bjarki tók þessu mjög illa og fór strax að æfa sig í \textbf{Minesweeper}.
+
+Eftir margar vikur af æfingu varð Bjarki ekkert betri í \textbf{Minesweeper}.
+Hann einfaldlega hefur ekki rökhugsunina í svona flókinn leik.
+Þannig hann fer inná \texttt{hackers.com} og niðurhalar hakki fyrir \textbf{Minesweeper}.
+Hakkið virkar þannig að hann lætur það fá leikinn og það gefur út $k$ pör af tölum.
+Hvert par $y_i,x_i$ táknar röðina og dálkinn þar sem sprengjan er staðsett.
+
+Bjarki nennir ekkert að finna út hvar þessar staðsetningar eru í Minesweeper.
+Þetta er bara ennþá meiri hausverkur. Getur þú hjálpað Bjarka og teiknað upp Minesweeper borðið.
+Reitir sem eru ekki með sprengju eru táknaðir með \texttt{.} (punkti).
+Reitir sem eru með sprengju eru táknaðir með \texttt{*} (stjörnu).
+
+\section*{Inntak}
+Fyrsta línan inniheldur þrjár heiltölur $1 \le n,m \le 250$, $1 \le k \le n \cdot m$,
+þar sem $n$ táknar fjölda raða og $m$ táknar fjölda dálka í \textbf{Minesweeper} leikborðinu,
+go $k$ segir til um fjölda para sem hakkaraforritið fann.
+Næstu $k$ línur innihalda tvær heiltölur $1 \le y_i \le n$, $1 \le x_i \le m$.
+
+\section*{Úttak}
+Skrifaðu út borðið í heild sinni. Úttakið skal samanstanda af $n$ línum og hver
+lína skal innihalda $m$ stafi.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 40    & $1 \le n,m \le 15$ \\ \hline
+2     & 60    & Engar frekari takmarkanir \\ \hline
+\end{tabular}
