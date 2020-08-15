@@ -1,0 +1,62 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution bjarki_100.cpp opt
+
+compile random_generator.py
+
+samplegroup
+sample 1
+sample 2
+
+group gA 22
+tc gA-01 random_generator 100 32 1 1 random
+tc gA-02 random_generator 100 32 1 1 random
+tc gA-03 random_generator 100 32 1 1 random
+tc gA-04 random_generator 100 32 1 1 random
+tc gA-05 random_generator 100 32 1 1 random
+tc gA-06 random_generator 100 32 1 1 random
+tc gA-07 random_generator 100 32 1 1 max1
+tc gA-08 random_generator 100 32 1 1 max2
+tc gA-09 random_generator 100 32 1 1 max3
+
+group gB 26
+include_group gA
+tc gB-01 random_generator 1000 100 1 1 random
+tc gB-02 random_generator 1000 100 1 1 random
+tc gB-03 random_generator 1000 100 1 1 random
+tc gB-04 random_generator 1000 100 1 1 random
+tc gB-05 random_generator 1000 100 1 1 random
+tc gB-06 random_generator 1000 100 1 1 random
+tc gB-07 random_generator 1000 100 1 1 max1
+tc gB-08 random_generator 1000 100 1 1 max2
+tc gB-09 random_generator 1000 100 1 1 max3
+
+group gC 25
+include_group gA
+include_group gB
+tc gC-01 random_generator 1000 100 10**9 10**9 random
+tc gC-02 random_generator 1000 100 10**9 10**9 random
+tc gC-03 random_generator 1000 100 10**9 10**9 random
+tc gC-04 random_generator 1000 100 10**9 10**9 random
+tc gC-05 random_generator 1000 100 10**9 10**9 random
+tc gC-06 random_generator 1000 100 10**9 10**9 random
+tc gC-07 random_generator 1000 100 10**9 10**9 max1
+tc gC-08 random_generator 1000 100 10**9 10**9 max2
+tc gC-09 random_generator 1000 100 10**9 10**9 max3
+
+group gD 27
+include_group gA
+include_group gB
+include_group gC
+tc gD-01 random_generator 10**5 10**5 10**9 10**9 random
+tc gD-02 random_generator 10**5 10**5 10**9 10**9 random
+tc gD-03 random_generator 10**5 10**5 10**9 10**9 random
+# tc gD-04 random_generator 10**5 10**5 10**9 10**9 random
+# tc gD-05 random_generator 10**5 10**5 10**9 10**9 random
+# tc gD-06 random_generator 10**5 10**5 10**9 10**9 random
+tc gD-07 random_generator 10**5 10**5 10**9 10**9 max1
+tc gD-08 random_generator 10**5 10**5 10**9 10**9 max2
+tc gD-09 random_generator 10**5 10**5 10**9 10**9 max3
+

@@ -1,0 +1,59 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution benni_100.cpp opt
+
+compile random_generator.py # Arguments: max_n, max_k, max_c
+
+samplegroup
+sample 1
+sample 2
+sample 3
+
+group gA 28
+tc A-01 random_generator 1 100 0 1
+tc A-02 random_generator 1 100 0 1
+tc A-03 random_generator 1 100 0 1
+tc A-04 random_generator 1 100 0 1
+tc A-05 random_generator 1 100 0 1
+tc A-06 random_generator 1 100 0 1
+tc A-07 random_generator 95 100 1 1
+tc A-08 random_generator 95 100 1 1
+tc A-09 random_generator 95 100 1 1
+tc A-10 random_generator 95 100 1 2
+tc A-11 random_generator 1 100 1 3
+
+group gB 32
+include_group gA
+tc B-01 random_generator 1 3000 0 1
+tc B-02 random_generator 1 3000 0 1
+tc B-03 random_generator 1 3000 0 1
+tc B-04 random_generator 1 3000 0 1
+tc B-05 random_generator 1 3000 0 1
+tc B-06 random_generator 1 3000 0 1
+tc B-07 random_generator 2995 3000 1 1
+tc B-08 random_generator 2995 3000 1 1
+tc B-09 random_generator 2995 3000 1 1
+tc B-10 random_generator 2995 3000 1 2
+tc B-11 random_generator 1 3000 1 3
+
+group gC 40
+include_group gA
+include_group gB
+tc C-01 random_generator 499950 5*10**5 1 1 
+tc C-02 random_generator 499950 5*10**5 1 1 
+tc C-03 random_generator 499950 5*10**5 1 1 
+tc C-04 random_generator 499950 5*10**5 1 2
+tc C-05 random_generator 499950 5*10**5 1 2
+tc C-06 random_generator 1 5*10**5 0 1
+tc C-07 random_generator 1 5*10**5 0 1
+tc C-08 random_generator 1 5*10**5 0 1
+tc C-09 random_generator 1 5*10**5 0 2
+tc C-10 random_generator 1 5*10**5 0 2
+tc C-11 random_generator 30000 5*10**5 1 2
+tc C-12 random_generator 30000 5*10**5 1 2
+tc C-13 random_generator 30000 5*10**5 1 1
+tc C-14 random_generator 1 5*10**5 1 3
+
+

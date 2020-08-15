@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution bjarki_100.cpp opt
+
+compile random_generator.py
+
+samplegroup
+sample 1
+sample 2
+sample 3
+
+group gA 33
+tc gA-01 random_generator 500 1 random
+tc gA-02 random_generator 500 1 random
+tc gA-03 random_generator 500 1 random
+tc gA-04 random_generator 500 1 random
+tc gA-05 random_generator 500 1 random
+
+group gB 33
+include_group gA
+tc gB-01 random_generator 500 10 random
+tc gB-02 random_generator 500 50 random
+tc gB-03 random_generator 500 100 random
+tc gB-04 random_generator 500 200 random
+tc gB-05 random_generator 500 300 random
+tc gB-06 random_generator 500 400 random
+tc gB-07 random_generator 500 500 random
+tc gB-08 random_generator 500 500 random
+
+group gC 34
+include_group gB
+tc gC-01 random_generator 500 10 singleerror
+tc gC-02 random_generator 500 50 singleerror
+tc gC-03 random_generator 500 100 singleerror
+tc gC-04 random_generator 500 200 singleerror
+tc gC-05 random_generator 500 300 singleerror
+tc gC-06 random_generator 500 400 singleerror
+tc gC-07 random_generator 500 500 singleerror
+tc gC-08 random_generator 500 500 singleerror

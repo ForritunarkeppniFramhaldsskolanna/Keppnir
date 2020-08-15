@@ -1,0 +1,52 @@
+\problemname{Raðgreining 2}
+\illustration{0.3}{corona}{Mynd fengin af \href{https://en.wikipedia.org/wiki/File:2019-nCoV-CDC-23312_without_background.png}{Wikipedia}, public domain}%
+Þú vinnur á rannsóknarstofu þar sem verið er að raðgreina erfðamengi veirunnar
+2019-nCoV, betur þekkt sem Kórónaveiran. Með raðgreiningu er verið að finna út
+hvernig DNA röð veirunnar lítur út, en DNA röð veirunnar er strengur af lengd
+$n$ sem inniheldur stafina \texttt{G}, \texttt{T}, \texttt{A} og \texttt{C}.
+
+Aðferðin sem rannsóknarstofan þín notar til að raðgreina getur aðeins fundið
+smá bút af DNA röðinni í einu. Sem dæmi, ef DNA röð veirunnar er af lengd $6$,
+þá væri hægt að nota aðferðina til að greina DNA bútinn sem byrjar á staf $1$
+og endar á staf $4$ í DNA röð veirunnar, og svo greina DNA bútinn sem byrjar á
+staf $3$ og endar á staf $6$ í DNA röð veirunnar. Ef fyrri greiningin skilaði
+DNA bútinum \texttt{GCAT} og seinni greiningin DNA bútinum \texttt{ATTC}, þá
+væri hægt að leiða það út að DNA röð veirunnar er í raun \texttt{GCATTC}.
+
+Á þennan hátt er búið að raðgreina mismunandi búta af DNA röð veirunnar sem
+byrja á mismunandi stöðum, og það eina sem á eftir að gera er að taka bútana
+saman og finna hver DNA röð veirunnar er í heild sinni. En vúbs! Þú missir alla
+DNA bútana sem var búið að greina á gólfið, og núna veistu ekki hvernig hver
+bútur snýr. Til dæmis gæti seinni búturinn að ofan verið orðinn \texttt{CTTA}.
+
+Gefnir þeir bútar sem búið er að greina, annaðhvort rétta eða öfuga, og hvar
+hver bútur byrjar í DNA röð veirunnar, skrifaðu forrit sem setur þá saman og
+finnur eina mögulega DNA röð sem gæti komið til greina.
+
+\section*{Inntak}
+Fyrsta línan í inntakinu inniheldur tvær heiltölur $n$ og $m$ ($1 \leq n, m \leq
+500$), lengdin á DNA röð veirunnar og fjöldi búta sem búið er að raðgreina.
+
+Svo fylgja $m$ línur, ein fyrir hvern bút sem búið er að raðgreina. Hver af
+þessum línum byrjar á heiltölu $s$ ($1 \leq s \leq n$), staðsetningin í DNA röð
+veirunnar þar sem þessi bútur byrjar, og svo fylgir búturinn sjálfur, sem er
+strengur af lengd $k$ ($1\leq k \leq n-s+1$) sem inniheldur stafina \texttt{G},
+\texttt{T}, \texttt{A} og \texttt{C}.
+
+\section*{Úttak}
+Skrifið út eina línu sem inniheldur stafina í einni mögulegri DNA röð
+veirunnar. Ef margar mögulegar DNA raðir koma til greina, þá má skrifa út
+einhverja þeirra. Ef engin DNA röð kemur til greina, þá á bara að skrifa út
+eina línu sem inniheldur \texttt{Villa}.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 20   & $n\leq 100$, $m\leq 10$ \\ \hline
+2     & 20   & $n\leq 25$, $m\leq 100$ \\ \hline
+3     & 20   & Hver bútur hefur lengd nákvæmlega $3$ \\ \hline
+4     & 20   & Hver bútur hefur lengd nákvæmlega $15$ \\ \hline
+5     & 20   & Engar frekari takmarkanir\\ \hline
+\end{tabular}
+

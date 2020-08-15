@@ -1,0 +1,54 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution bjarki_100.cpp opt
+
+compile random_generator.py
+
+samplegroup
+sample 1
+sample 2
+sample 3
+
+group gA 25
+tc gA-01 random_generator 1000000 onlymoney
+tc gA-02 random_generator 1000000 onlymoney
+tc gA-03 random_generator 1000000 onlymoney
+
+group gB 35
+tc gB-01 random_generator 20 random
+tc gB-02 random_generator 20 random
+tc gB-03 random_generator 20 random
+tc gB-04 random_generator 20 random
+tc gB-05 random_generator 20 random
+tc gB-06 random_generator 20 randompog
+tc gB-07 random_generator 20 randompog
+tc gB-08 random_generator 20 randompog
+tc gB-09 random_generator 20 randompog
+tc gB-10 random_generator 20 randompog
+tc gB-11 random_generator 20 randomvalid
+tc gB-12 random_generator 20 randomvalid
+tc gB-13 random_generator 20 randomvalid
+tc gB-14 random_generator 20 randomvalid
+tc gB-15 random_generator 20 randomvalid
+
+group gC 40
+include_group gA
+include_group gB
+tc gC-01 random_generator 1000000 random
+tc gC-02 random_generator 1000000 random
+tc gC-03 random_generator 1000000 random
+# tc gC-04 random_generator 1000000 random
+# tc gC-05 random_generator 1000000 random
+tc gC-06 random_generator 1000000 randompog
+tc gC-07 random_generator 1000000 randompog
+tc gC-08 random_generator 1000000 randompog
+# tc gC-09 random_generator 1000000 randompog
+# tc gC-10 random_generator 1000000 randompog
+tc gC-11 random_generator 1000000 randomvalid
+tc gC-12 random_generator 1000000 randomvalid
+tc gC-13 random_generator 1000000 randomvalid
+# tc gC-14 random_generator 1000000 randomvalid
+# tc gC-15 random_generator 1000000 randomvalid
+

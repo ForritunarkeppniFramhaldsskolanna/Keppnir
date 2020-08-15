@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution benni_100.cpp opt
+
+compile random_generator.py # Arguments: max_n, max_k, max_c
+
+samplegroup
+sample 1
+sample 2
+sample 3
+
+group gA 50
+tc gA-01 random_generator 100
+tc gA-02 random_generator 100
+tc gA-03 random_generator 100
+tc gA-04 random_generator 100
+tc gA-05 random_generator 100
+tc gA-06 random_generator 100
+tc gA-07 random_generator 100
+tc gA-08 random_generator 100
+tc gA-09 random_generator 100
+tc gA-10 random_generator 100
+tc gA-11 random_generator 1
+
+group gB 50
+include_group gA
+tc gB-01 random_generator 10**5
+tc gB-02 random_generator 10**5
+tc gB-03 random_generator 10**5
+tc gB-04 random_generator 10**5
+tc gB-05 random_generator 10**5
+# tc gB-06 random_generator 10**5
+# tc gB-07 random_generator 10**5
+# tc gB-08 random_generator 10**5
+# tc gB-09 random_generator 10**5
+# tc gB-10 random_generator 10**5
+

@@ -1,0 +1,41 @@
+\problemname{Rust}
+\illustration{0.3}{Rust_logo}{Mynd fengin af \href{https://commons.wikimedia.org/wiki/File:Rust_logo.png}{commons.wikimedia.org}}
+
+Benni er nýbyrjaður að spila leikinn Rust. Þetta er gífurlega spennandi leikur fullpakkaður
+af hasari. Í Rust er samt líka hægt að byggja. Benni er búinn að vera allan dag að safna steinum
+til að geta búið til sitt eigið heimili. Hann hefur ákveðið að búa til ferningslaga múr að stærð $K \times K$.  \\
+
+Benni gerði sér aldrei grein fyrir því að það yrði erfitt að velja stað til að búa til heimilið sitt.
+Benni hefur kort af stærð $N \times N$. Á því má sjá steina sem ekki er hægt að brjóta og eru þeir táknaðir
+sem \texttt{\#} á kortinu. Einnig eru verðmæti á kortinu en þau eru táknuð með tölu á bilinu $1$ til $9$. Ef
+Benni ákveður að byggja þennan ferningslaga múr sinn þá má ekki vera neinn óbrjótanlegur steinn á
+svæðinu sem múrinn verður byggður á né verðmæti. Hinsvegar má múrinn liggja utan um óbrjótanlega steina eða verðmæti.
+Ef Benni býr til múr sem umlykur verðmæti þá mun hann eignast öll verðmætin sem eru innan fyrir múrinn. \\
+
+Benni hefur ekki hugmynd hvar hann ætti að byggja múrinn sinn. Hann spyr þig hvort þú
+getir sagt honum hvað mesta virði samanlagðra verðmæta væri sem hann gæti átt ef hann myndi
+byggja múrinn sinn á sem besta stað.
+
+\section*{Inntak}
+Fyrsta línan í inntakinu inniheldur tvær heiltölur $N$ og $K$ ($5 \leq N \leq 1\,000$, $3 \leq K \leq N$),
+stærð kortsins og stærð múrsins sem Benni ætlar að byggja.
+
+Næst koma $N$ línur, hver lína hefur $N$ stök. Á kortinu má sjá \texttt{\#}, sem
+táknar óbrjótanlega steina, \texttt{.} sem táknar tóman reit og einnig má sjá
+tölur á bilinu $1$ til $9$ sem tákna verðmæti, þar sem talan táknar hversu mikils virði
+þetta verðmæti er.
+
+\section*{Úttak}
+Skrifa skal út eina tölu, mesta virði samanlagðra verðmæta sem Benni gæti átt
+ef hann byggir múrinn sinn á sem besta stað. Ef enginn staður kemur til greina,
+þá skal skrifa út töluna $0$.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 23   & $K = 3$ \\ \hline
+2     & 27   & $N \leq 50$ \\ \hline
+3     & 50   & Engar frekari takmarkanir \\ \hline
+\end{tabular}
+

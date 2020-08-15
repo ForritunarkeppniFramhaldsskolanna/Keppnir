@@ -1,0 +1,54 @@
+\problemname{Þjarki}
+\illustration{0.3}{robot}{Mynd fengin af \href{https://flic.kr/p/kTYqmv}{flickr.com}}
+
+Í frítíma sínum hefur Gunnar forritað lítinn þjarka sem fylgir örvum á gólfinu.
+Gólfinu hans er skipt upp í reiti, en á hverjum reit hefur hann sett niður ör
+sem bendir á einn af fjórum reitum sem eru í kringum reitinn.
+
+Gunnar setur þjarkinn niður á reit á gólfinu. Þjarkurinn skoðar örina á reitnum
+sem hann er á, og fer á þann reit sem örin bendir á. Þar endurtekur þjarkurinn
+leikinn; skoðar örina á þeim reit, fylgir henni, og svo koll af kolli.
+
+Gunnar er ekki alveg viss hvort þjarkurinn virki eins og hann eigi að virka, og
+hefur ekki tíma til að fylgjast með honum allan daginn enda þarf hann að fara í
+vinnuna. Gunnar biður þig um aðstoð. Gefinn reiturinn sem þjarkurinn byrjar á,
+og hversu mörg skref þjarkurinn á að taka, geturðu hjálpað Gunnari að finna
+hvaða reit þjarkurinn á að enda á?
+
+\section*{Inntak}
+Fyrsta línan í inntakinu inniheldur tvær heiltölur $n$ og $m$ ($1 \leq n,m \leq
+500$), fjöldi raða og fjöldi dálka á gólfinu.
+
+Svo fylgja $n$ línur, hver með $m$ stöfum, sem saman tákna gólfið hans Gunnars.
+Stafirnir geta verið
+`\texttt{\^{}}' (ör sem bendir upp),
+`\texttt{<}' (ör sem bendir til vinstri),
+`\texttt{v}' (ör sem bendir niður) eða
+`\texttt{>}' (ör sem bendir til hægri).
+
+Svo kemur ein lína með heiltölunni $q$ ($1 \leq q \leq 10^4$), fjöldi
+fyrirspurna. Svo fylgja $q$ línur, ein fyrir hverja fyrirspurn, sem inniheldur
+þrjár heiltölur $x$, $y$ og $k$ ($1\leq x \leq n$, $1 \leq y \leq m$ og $1 \leq
+k \leq 10^9$), þar sem $x$ táknar röð reitsins sem þjarkurinn byrjar á, $y$
+táknar dálk reitsins sem þjarkurinn byrjar á, og $k$ táknar fjölda skrefa sem
+þjarkurinn á að taka.
+
+\section*{Úttak}
+Fyrir hverja fyrirspurn, skrifið út eina línu með tveimur heiltölum $x'$ og
+$y'$, þar sem $x'$ er röð reitsins sem þjarkurinn endar á, og $y'$ er dálkur
+reitsins sem þjarkurinn endar á.
+
+Það mun aldrei koma upp tilfelli þar sem þjarkurinn mun labba út af gólfinu.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 15   & $n=1$, $q=1$, $k \leq 1\,000$, $q\leq 100$ og stafirnir geta bara verið `\texttt{<}' og `\texttt{>}' \\ \hline
+2     & 15   & $n=1$ , $q\leq 100$ og stafirnir geta bara verið `\texttt{<}' og `\texttt{>}' \\ \hline
+3     & 15   & $q\leq 100$ og stafirnir geta bara verið `\texttt{<}', `\texttt{>}' og `\texttt{v}' \\ \hline
+4     & 15   & $k \leq 1\,000$, $q\leq 100$ \\ \hline
+5     & 15   & $q\leq 10$ \\ \hline
+6     & 25   & Engar frekari takmarkanir\\ \hline
+\end{tabular}
+

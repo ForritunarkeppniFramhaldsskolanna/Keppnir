@@ -1,0 +1,59 @@
+\problemname{Fibonacci Gjöf}
+Siggi litli fékk fylki af $n$ jákvæðum heiltölum, $x_1, x_2, \ldots, x_n$, í afmælisgjöf frá ömmu sinni.
+Þessar heiltölur eru ekki bara einhverjar heiltölur, heldur tákna þær númer
+á Fibonacci tölum. Fibonacci tala númer $1$ er $1$, Fibonacci tala númer $2$ er
+líka $1$, og svo er næsta Fibonacci tala alltaf reiknuð með því að leggja saman
+síðustu tvær Fibonacci tölur. Fibonacci tala númer $3$ er því $1+1=2$,
+Fibonacci tala númer $4$ er $1+2 = 3$, Fibonacci tala númer $5$ er $2+3=5$, og
+svo koll af kolli. Við táknum Fibonacci tölu númer $n$ sem $\mathrm{Fib}(n)$.
+
+Hann Siggi litli er að leika sér með nýja fylkið sitt, en honum finnst gaman að
+gera eftirfarandi tvær aðgerðir við fylkið:
+\begin{enumerate}
+    \item Siggi velur sér jákvæða heiltölu $d$ og eitthvað bil í fylkinu sem
+        byrjar í $l$ og endar í $r$, þ.e.\ $x_l, x_{l+1}, \ldots, x_{r}$. Hann bætir svo
+        heiltölunni $d$ við öll stökin í fylkinu á þessu bili.
+    \item Siggi velur sér eitthvað bil í fylkinu sem byrjar í $l$ og endar í
+        $r$, og reiknar summuna af öllum þeim Fibonacci tölum sem heiltölurnar
+        á þessu bili tákna:
+        \[
+            \mathrm{Fib}(x_l) + \mathrm{Fib}(x_l+1) + \cdots + \mathrm{Fib}(x_r)
+        \]
+\end{enumerate}
+
+Nú er hann orðinn svolítið leiður á að gera þetta í höndunum, og biður þig því
+um aðstoð. Gefið upphaflega fylkið sem Siggi litli fékk í afmælisgjöf, og þær
+aðgerðir sem Siggi litli framkvæmir, getur þú reiknað svarið fyrir hverja
+aðgerð nr.\ $2$ sem Siggi litli framkvæmir?
+
+\section*{Inntak}
+Fyrsta línan í inntakinu inniheldur tvær heiltölur $n$ og $m$ ($1 \leq n, m \leq
+10^5$), stærðin á fylkinu hans Sigga litla og fjöldi aðgerða sem hann
+framkvæmir.
+
+Næsta lína inniheldur $n$ heiltölur $x_1,x_2,\ldots, x_n$ aðskildar með bili,
+sem tákna fylkið sem Siggi litli fékk í afmælisgjöf ($1 \leq x_i\leq 10^9$
+fyrir öll $i$).
+
+Síðan koma $m$ línur, ein fyrir hverja aðgerð sem Siggi framkvæmir, en hver
+þeirra er á öðru hvoru af eftirfarandi formum:
+\begin{itemize}
+    \item \texttt{1 $l$ $r$ $d$}: Siggi litli framkvæmir aðgerð nr.\ $1$ með töluna $d$ á bilið $l$, $r$. ($1 \leq l \leq r \leq n$, $1 \leq d \leq 10^9$)
+    \item \texttt{2 $l$ $r$}: Siggi litli framkvæmir aðgerð nr.\ $2$ á bilið $l$, $r$. ($1 \leq l \leq r \leq n$)
+\end{itemize}
+
+\section*{Úttak}
+Fyrir hverja aðgerð nr.\ $2$, skrifið út eina línu með gildinu á summunni sem
+Siggi litli reiknar. Þessi tala getur orðið svolítið stór, og biðjum við því
+ykkur um að skrifa út afganginn af svarinu þegar honum er deilt með $10^9+7$.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 22   & $n \leq 100$, $m \leq 32$, $d = 1$, $x_i = 1$ \\ \hline
+2     & 26   & $n \leq 1\,000$, $m \leq 100$, $d = 1$, $x_i = 1$ \\ \hline
+3     & 25   & $n \leq 1\,000$, $m \leq 100$ \\ \hline
+4     & 27   & Engar frekari takmarkanir\\ \hline
+\end{tabular}
+

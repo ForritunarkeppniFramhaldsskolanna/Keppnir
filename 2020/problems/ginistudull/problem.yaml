@@ -1,0 +1,6 @@
+author: Garðar Andri Sigurðsson
+source: Forritunarkeppni Framhaldsskólanna 2020
+rights_owner: Forritunarkeppni Framhaldsskólanna
+license: cc by-sa
+type: scoring
+validator_flags: float_tolerance 1e-6

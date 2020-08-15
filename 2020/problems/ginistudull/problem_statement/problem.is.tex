@@ -1,0 +1,42 @@
+\problemname{Gini Stuðull}
+\illustration{0.40}{ginimap}{Gini stuðullinn í mismunandi löndum}%
+Árið 1912 gaf félagsfræðingurinn og tölfræðingurinn Corrado Gini út pappír titlaðan ``Variability and Mutability''. 
+Í honum kynnir hann til söguna hinn svokallaðan Gini stuðul. Markmið stuðulsins er að mæla ójöfnuð í dreifingum og
+er oft notaður til að mæla tekjuójöfnuð innan hópa. Stuðullinn tekur gildi milli $0$ og $1$, þar sem $0$ merkir
+fullkominn jöfnuð en $1$ fullkominn ójöfnuð. Sem dæmi hefur Ísland Gini stuðul upp á $0.256$ og Bandaríkin
+$0.415$.
+\\[0.5cm]
+Til þess að reikna stuðulinn fyrir hóp af fólki þarf að vita tekjur allra einstaklinga í hópnum.
+Ef $y_1, y_2, \ldots, y_n$ ($y_i > 0$ fyrir öll $i$) eru tekjur $n$ einstaklinga má reikna Gini stuðul þess hóps
+með eftirfarandi formúlu:
+\[
+    G
+    =
+    \dfrac{
+        \sum\limits_{i=1}^n \sum\limits_{j=1}^n \lvert y_i - y_j \rvert
+    }{
+        2 \sum\limits_{i=1}^n \sum\limits_{j=1}^n y_i
+    }
+\]
+
+Hér táknar $\lvert x\rvert$ algildi $x$: $\lvert x\rvert = x$ ef $x \geq 0$, en $\lvert x\rvert = -x$ ef $x < 0$.
+
+\section*{Inntak}
+Fyrsta línan í inntakinu inniheldur eina heiltölu $n$, fjöldi einstaklinga í hóp.
+Síðan koma $n$ línur, ein fyrir hvern einstakling í hópnum, sem inniheldur eina heiltölu $0 < y_i \leq 10^5$,
+tekjur $i$-ta einstaklingsins.
+
+\section*{Úttak}
+Skrifið út Gini stuðul fyrir hópinn
+Úttakið er talið rétt ef talan er annaðhvort nákvæmlega eða hlutfallslega ekki 
+lengra frá réttu svari en $10^{-6}$. Þetta þýðir að það skiptir ekki máli með hversu 
+margra aukastafa nákvæmni talan eru skrifuð út, svo lengi sem hún er nógu nákvæm.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 50   & $n \leq 10^3$ \\ \hline
+2     & 50   & $n \leq 10^5$ \\ \hline
+\end{tabular}
+

@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution benni_100.cpp opt
+
+compile random_generator.py # Arguments: identical_words, max_len
+
+samplegroup
+sample 1
+sample 2
+
+group GA 10
+tc A-01 random_generator 1 10**6
+tc A-02 random_generator 1 10**6
+# tc A-03 random_generator 1 10**6
+# tc A-04 random_generator 1 10**6
+# tc A-05 random_generator 1 10**6
+# tc A-06 random_generator 1 10**6
+# tc A-07 random_generator 1 10**6
+
+group GB 20
+include_group GA
+tc B-01 random_generator 0 100
+tc B-02 random_generator 0 100
+tc B-03 random_generator 0 100
+tc B-04 random_generator 0 100
+tc B-05 random_generator 0 100
+
+group GC 70
+include_group GA
+include_group GB
+tc C-01 random_generator 0 10**6
+tc C-02 random_generator 0 10**6
+# tc C-03 random_generator 0 10**6
+# tc C-04 random_generator 0 10**6
+# tc C-05 random_generator 0 10**6
+# tc C-06 random_generator 0 10**6

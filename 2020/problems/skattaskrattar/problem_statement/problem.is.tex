@@ -1,0 +1,80 @@
+\problemname{Skattaskrattar}
+\illustration{0.4}{finances}{Picture from \href{https://flic.kr/p/77Un37}{flickr}}%
+Þegar fólk vinnur sér inn laun þá þarf það að borga tekjuskatta af laununum til
+ríkisins. Til að reikna hversu mikla skatta á að borga þá er laununum skipt upp
+í mismunandi skattaþrep, sem ríkið gefur út, en á hverju þrepi þarf að borga
+ákveðna prósentu af laununum sem falla inn á það skattþrep.
+
+Tökum dæmi, og segjum að það séu þrjú skattþrep:
+
+\begin{table}[h]
+\begin{tabular}{lll}
+    Þrep & Laun & Skattprósenta \\ \hline
+    $1$ & $0$ kr.\ -- $1\,000$ kr. & $40\%$ \\
+    $2$ & $1\,000$ kr.\ -- $5\,000$ kr. & $30\%$ \\
+    $3$ & $5\,000$ kr.\ og meira & $50\%$ \\
+\end{tabular}
+\end{table}
+
+Gefum okkar svo að manneskja fái $3\,000$ kr.\ í laun. Þessi laun falla alveg
+yfir fyrsta þrepið ($1\,000$ kr.\ á því þrepi), og að hluta til yfir annað
+þrepið ($2\,000$ kr.\ á því þrepi). Manneskjan borgar því $40\%$ af fyrstu
+$1\,000$ krónunum af laununum, og svo $30\%$ af næstu $2\,000$ krónunum af
+laununum. Samtals verða það því $0.4 \cdot 1\,000 + 0.3 \cdot 2\,000 = 1\,000$
+krónur sem manneskjan þarf að borga.
+
+Ef manneskjan hefði aftur á móti fengið $5\,500$ kr.\ í laun, þá hefðu launin
+alveg fallið yfir fyrsta þrepið ($1\,000$ kr.\ á því þrepi), alveg yfir annað
+þrepið ($4\,000$ kr.\ á því þrepi), og að hluta til yfir þriðja þrepið ($500$
+kr.\ á því þrepi). Samtals verða það því $0.4\cdot 1\,000 + 0.3 \cdot 4\,000 +
+0.5 \cdot 500 = 1\,850$ krónur sem manneskjan þarf að borga.
+
+Árið er $3020$, og þó skýjakljúfar standi stoltir um Reykjavík og fljúgandi
+bílar leggi í svifbílastæði gegn vægu gjaldi, þá er enn í notkun sama
+skattakerfið. Skattþrepin eru þó orðin aðeins fleiri, eða $n$ talsins. Fyrsta
+skattþrepið gildir frá $0$ upp í $a_1$ krónur, annað skattþrepið frá $a_1$ upp
+í $a_2$ krónur, og svo framvegis upp í skattþrep númer $n$ sem gildir frá $a_{n-1}$
+krónum og uppúr. Á fyrsta skattþrepinu þarf að borga $p_1\%$ skatta, á öðru
+skattþrepinu $p_2\%$ skatta, og svo framvegis upp í skattþrep númer $n$ þar sem
+þarf að borga $p_n\%$ skatta.
+
+Forseti Íslands hefur verið að íhuga hvernig skattþrepin fyrir árið $3021$ eiga
+að líta út. Hann er kominn með hugmynd að $m$ skattþrepum, og er þeim lýst eins
+og að ofan nema að skattþrepin eru táknuð með $b_i$ í stað $a_i$, og
+skattprósenturnar eru táknaðar með $q_i$ í stað $p_i$. Ef þessi skattþrep
+skildu vera notuð á næsta ári, þá hefur Forseti Íslands beðið þig að finna öll
+þau laun sem hann getur greitt starfsfólki sínu þannig að það borgi jafn mikinn
+skatt árið $3020$ og $3021$. Laun geta verið hvaða rauntölur sem eru, svo lengi
+sem þær séu ekki neikvæðar, en skattþrepin eru alltaf jákvæðar heiltölur.
+
+\section*{Inntak}
+Fyrsta lína inntaksins inniheldur tvær heiltölur $n$ og $m$ ($1 \leq n,m \leq
+10^5$), fjöldi skattþrepa árið $3020$ og $3021$.
+
+Næst koma $n$ línur sem tákna skattþrepin árið $3020$.
+Fyrstu $n - 1$ línurnar innihalda tvær jákvæðar heiltölur $p_i$ og $a_i$.
+Síðan kemur ein lína með einni heiltölu $p_n$. ($0 < p_i < 100$ fyrir öll $i$)
+
+Svo koma $n$ línur sem tákna skattþrepin árið $3021$.
+Fyrstu $m - 1$ línurnar innihalda tvær jákvæðar heiltölur $q_i$ og $b_i$.
+Að lokum kemur ein lína með einni heiltölu $q_m$. ($0 < q_i < 100$ fyrir öll $i$)
+
+Skattþrepin eru gefin í hækkandi röð, þ.e.\ $a_i < a_{i + 1}$ og $b_i < b_{i + 1}$,
+og ekkert skattþrep fer yfir $10^5$ krónur, þ.e.\ $a_{n-1}, b_{m-1} \leq 10^5$.
+
+\section*{Úttak}
+Úttakið skal innihalda öll þau laun sem borga sama skatt í báðum skattkerfunum, í hækkandi röð.
+Ef laun $x$ borga sama skatt í báðum skattkerfum er gefið að engin laun á bilinu $[x - 10^{-4}, x + 10^{-4}]$ borgi líka sama skatt í báðum skattkerfum.
+
+Úttakið er talið rétt ef hver tala er annaðhvort nákvæmlega eða hlutfallslega ekki 
+lengra frá réttu svari en $10^{-4}$. Þetta þýðir að það skiptir ekki máli með hversu 
+margra aukastafa nákvæmni tölurnar eru skrifaðar út, svo lengi sem þær er nógu nákvæmar.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 40   & $n,m \leq 10^3$\\ \hline
+2     & 60   & Engar frekari takmarkanir\\ \hline
+\end{tabular}
+

@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution bjarki.cpp
+
+compile random_generator.py # Arguments:
+
+samplegroup
+sample 1
+sample 2
+
+group GA 25
+tc GA-1 random_generator 20
+tc GA-2 random_generator 20
+tc GA-3 random_generator 20
+tc GA-4 random_generator 20
+tc GA-5 random_generator 20
+
+group GB 25
+include_group GA
+tc GB-1 random_generator 1
+tc GB-2 random_generator 2
+tc GB-3 random_generator 3
+tc GB-4 random_generator 7
+tc GB-5 random_generator 8
+tc GB-6 random_generator 11
+tc GB-7 random_generator 15
+tc GB-8 random_generator 16
+tc GB-9 random_generator 18
+tc GB-10 random_generator 19
+
+group GC 50
+include_group GB
+tc GC-1 random_generator 10000
+tc GC-2 random_generator 9999
+tc GC-3 random_generator 9123
+tc GC-4 random_generator 8541
+tc GC-5 random_generator 7123
+tc GC-6 random_generator 6543
+tc GC-7 random_generator 3214
+

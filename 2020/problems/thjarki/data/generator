@@ -1,0 +1,69 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution bjarki_100.cpp opt
+
+compile random_generator.py
+compile cycle.py
+
+samplegroup
+sample 1
+sample 2
+
+group gA 15
+tc gA-01 random_generator 1 500 1 1000 "<>"
+tc gA-02 random_generator 1 500 1 1000 "<>"
+tc gA-03 random_generator 1 500 1 1000 "<>"
+tc gA-04 random_generator 1 500 1 1000 "<>"
+tc gA-05 random_generator 1 500 1 1000 "<>"
+
+group gB 15
+include_group gA
+tc gB-01 random_generator 1 500 100 10**9 "<>"
+tc gB-02 random_generator 1 500 100 10**9 "<>"
+tc gB-03 random_generator 1 500 100 10**9 "<>"
+tc gB-04 random_generator 1 500 100 10**9 "<>"
+tc gB-05 random_generator 1 500 100 10**9 "<>"
+
+group gC 15
+include_group gA
+include_group gB
+tc gC-01 random_generator 500 500 100 10**9 "<>v"
+tc gC-02 random_generator 500 500 100 10**9 "<>v"
+tc gC-03 random_generator 500 500 100 10**9 "<>v"
+tc gC-04 random_generator 500 500 100 10**9 "<>v"
+tc gC-05 random_generator 500 500 100 10**9 "<>v"
+
+group gD 15
+include_group gA
+tc gD-01 random_generator 500 500 100 1000 "<>v^"
+tc gD-02 random_generator 500 500 100 1000 "<>v^"
+tc gD-03 random_generator 500 500 100 1000 "<>v^"
+tc gD-04 random_generator 500 500 100 1000 "<>v^"
+tc gD-05 random_generator 500 500 100 1000 "<>v^"
+tc gD-06 cycle 500 500 100 1000
+tc gD-07 cycle 32 31 100 1000
+
+group gE 15
+tc gE-01 random_generator 500 500 10 10**9 "<>v^"
+tc gE-02 random_generator 500 500 10 10**9 "<>v^"
+tc gE-03 random_generator 500 500 10 10**9 "<>v^"
+tc gE-04 random_generator 500 500 10 10**9 "<>v^"
+tc gE-05 random_generator 500 500 10 10**9 "<>v^"
+tc gE-06 cycle 500 500 10 10**9
+
+group gF 25
+include_group gA
+include_group gB
+include_group gC
+include_group gD
+include_group gE
+tc gF-01 random_generator 500 500 10**4 10**9 "<>v^"
+tc gF-02 random_generator 500 500 10**4 10**9 "<>v^"
+tc gF-03 random_generator 500 500 10**4 10**9 "<>v^"
+tc gF-04 random_generator 500 500 10**4 10**9 "<>v^"
+tc gF-05 random_generator 500 500 10**4 10**9 "<>v^"
+tc_manual ../manual_tests/hm1.in
+tc gF-06 cycle 500 500 10**4 10**9
+

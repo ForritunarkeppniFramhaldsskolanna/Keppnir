@@ -1,0 +1,47 @@
+\problemname{Veður}
+\illustration{0.3}{ovedur}{Mynd fengin af \href{https://commons.wikimedia.org/wiki/File:Low_pressure_system_over_Iceland.jpg}{commons.wikimedia.org}}%
+Eins og oft áður er aftur komin bládoppótt veðurviðvörun á höfuðborgarsvæðinu svo
+fólk þarf að hafa varann á þegar það ferðast um. Þar sem ofurtölva veðurstofunnar
+fauk burt þarf að aðstoða þá við að plana ferðir borgarbúa.
+
+Tákna má vindspá fyrir
+höfuðborgarsvæðið með tvívíðu korti af reitum þar sem hver tala inniheldur vindhraðann
+á þeim reit. Þar sem veðrið er svona slæmt finnst fólki í lagi að fara lengri leiðir
+en vanalega til að komast á leiðarenda, en það vill bara komast á leiðarenda í sem
+minnstum vindi. Það er hægt að ferðast milli aðlægra reita á kortinu (upp, niður, hægri
+og til vinstri en ekki á ská) og vill fólk fara leiðina sem lágmarkar hæsta vindstigið
+sem það verður fyrir á leiðinni.
+
+Áður en ofurtölva veðurstofunnar fauk burt var
+búið að finna út úr því hvaða leið allir áttu að fara, en það glötuðust upplýsingarnar
+um hvað mesta vindstigið yrði á leiðinni. Þar sem fólk þarf að vita hversu undirbúið
+það þarf að vera þarf að finna út úr þessu.
+
+\section*{Inntak}
+Fyrsta línan í inntakinu inniheldur tvær heiltölur $n$ og $m$ ($1 \leq n, m \leq
+10^5$), hæð og breidd kortsins. Einnig gildir að $1 \leq n\cdot m \leq 10^5$.
+
+Síðan koma $n$ línur, hver með $m$ tölum $v_{i,j}$ ($1 \leq v_{i,j} \leq 10^{18}$),
+sem tákna vindhraðann á reit kortsins í línu $i$ og dálki $j$. 
+
+Næst kemur ein lína með heiltölu $q$ ($1 \leq q \leq 10^5$) sem er fjöldi
+einstaklinga sem þurfa að fá að vita mesta vindstig sem þeir verða fyrir. 
+
+Loks fylgja $q$ línur með fjórum heiltölum hver $l_1, d_1, l_2, d_2$ ($1 \leq l_1, l_2 \leq n$
+og $1 \leq d_1, d_2, \leq m$). Þetta táknar fyrirspurn um mesta vindstig sem einstaklingur verður
+fyrir á leiðinni frá reitnum í línu $l_1$ og dálki $d_1$ yfir á reitinn í línu $l_2$ og dálki $d_2$.
+
+\section*{Úttak}
+Fyrir hverja fyrirspurn í inntakinu, skrifið út eina línu með heiltölu sem
+táknar mesta vindstigið sem einstaklingurinn þarf að þola ef hann velur leiðina
+á sem bestan hátt.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 30   & $q = 1$ \\ \hline
+2     & 30   & $l_1 = d_1 = 1$ \\ \hline
+3     & 40   & Engar frekari takmarkanir\\ \hline
+\end{tabular}
+

@@ -1,0 +1,91 @@
+#/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution arnar_F_100.py
+
+compile random_generator.py # Arguments: tp, max_n
+
+samplegroup
+sample 1
+sample 2
+sample 3
+
+group GA 10
+tc A-01 random_generator 1 1 1
+tc A-02 random_generator 1 2 2
+tc A-03 random_generator 1 20 20
+tc A-04 random_generator 1 22 22
+tc A-05 random_generator 1 200 200
+tc A-06 random_generator 1 202 202
+tc A-07 random_generator 1 220 220
+tc A-08 random_generator 1 222 222
+tc A-09 random_generator 1 1 1000
+tc A-10 random_generator 1 1 1000
+tc A-11 random_generator 1 1 1000
+tc A-12 random_generator 1 1 1000
+tc A-13 random_generator 1 1 999
+tc A-14 random_generator 1 1 1000
+tc A-15 random_generator 1 1 1000
+
+group GB 15
+include_group GA
+tc B-01 random_generator 1 10**3 10**6
+tc B-02 random_generator 1 10**3 10**6
+tc B-03 random_generator 1 10**3 10**6
+tc B-04 random_generator 1 10**3 10**6
+tc B-05 random_generator 1 10**6 10**6
+tc B-06 random_generator 2 10**3 10**6
+tc B-07 random_generator 2 10**3 10**6
+tc B-08 random_generator 2 10**3 10**6
+tc B-09 random_generator 2 10**3 10**6
+tc B-10 random_generator 2 10**6 10**6
+
+group GC 20
+include_group GB
+tc C-01 random_generator 1 10**6 10**18
+tc C-02 random_generator 1 10**6 10**18
+tc C-03 random_generator 1 10**6 10**18
+tc C-04 random_generator 1 10**6 10**18
+tc C-05 random_generator 1 10**18 10**18
+tc C-06 random_generator 2 10**6 10**18
+tc C-07 random_generator 2 10**6 10**18
+tc C-08 random_generator 2 10**6 10**18
+tc C-09 random_generator 2 10**6 10**18
+tc C-10 random_generator 2 10**18 10**18
+
+group GD 25
+tc D-01 random_generator 3 1 1
+tc D-02 random_generator 3 2 2
+tc D-03 random_generator 3 3 3
+tc D-04 random_generator 3 4 4
+tc D-05 random_generator 3 5 45
+tc D-06 random_generator 3 35 45
+tc D-07 random_generator 3 5 45
+tc D-08 random_generator 3 20 45
+tc D-09 random_generator 3 5 45
+tc D-10 random_generator 3 5 45
+tc D-11 random_generator 3 5 45
+tc D-12 random_generator 3 5 45
+tc D-13 random_generator 3 5 45
+tc D-14 random_generator 3 5 45
+tc D-15 random_generator 3 5 45
+tc D-16 random_generator 3 46 46
+tc D-17 random_generator 3 47 47
+tc D-18 random_generator 3 48 48
+tc D-19 random_generator 3 49 49
+tc D-20 random_generator 3 50 50
+
+group GE 30
+include_group GC
+include_group GD
+tc E-01 random_generator 1 10**18 10**50
+tc E-02 random_generator 1 10**18 10**50
+tc E-03 random_generator 1 10**18 10**50
+tc E-04 random_generator 1 10**18 10**50
+tc E-05 random_generator 1 10**49 10**50
+tc E-06 random_generator 2 10**18 10**50
+tc E-07 random_generator 2 10**18 10**50
+tc E-08 random_generator 2 10**18 10**50
+tc E-09 random_generator 2 10**18 10**50
+tc E-10 random_generator 2 10**48 10**49

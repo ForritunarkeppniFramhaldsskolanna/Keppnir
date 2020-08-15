@@ -1,0 +1,117 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution bjarki_dp_100.cpp opt
+
+compile random_generator.py
+compile hard.py
+
+samplegroup
+sample 1
+sample 2
+sample 3
+
+group gA 20
+for tp in small; do
+tc gA-01-valid-$tp random_generator 100 1 1 100 random $tp
+tc gA-02-valid-$tp random_generator 100 5 1 100 random $tp
+tc gA-03-valid-$tp random_generator 100 10 1 100 random $tp
+tc gA-04-valid-$tp random_generator 100 10 1 100 random $tp
+# tc gA-05-valid-$tp random_generator 100 10 1 100 random $tp
+# tc gA-06-valid-$tp random_generator 100 10 1 100 random $tp
+tc gA-07-$tp random_generator 100 1 1 100 singleerror $tp
+tc gA-08-$tp random_generator 100 5 1 100 singleerror $tp
+tc gA-09-$tp random_generator 100 10 1 100 singleerror $tp
+tc gA-10-$tp random_generator 100 10 1 100 singleerror $tp
+# tc gA-11-$tp random_generator 100 10 1 100 singleerror $tp
+# tc gA-12-$tp random_generator 100 10 1 100 singleerror $tp
+done
+
+group gB 20
+for tp in small; do
+tc gB-01-valid-$tp random_generator 25 1 1 100 random $tp
+tc gB-02-valid-$tp random_generator 25 10 1 100 random $tp
+tc gB-03-valid-$tp random_generator 25 50 1 100 random $tp
+tc gB-04-valid-$tp random_generator 25 100 1 100 random $tp
+tc gB-05-valid-$tp random_generator 25 100 1 100 random $tp
+# tc gB-06-valid-$tp random_generator 25 100 1 100 random $tp
+# tc gB-07-valid-$tp random_generator 25 100 1 100 random $tp
+tc gB-08-$tp random_generator 25 1 1 100 singleerror $tp
+tc gB-09-$tp random_generator 25 10 1 100 singleerror $tp
+tc gB-10-$tp random_generator 25 50 1 100 singleerror $tp
+tc gB-11-$tp random_generator 25 100 1 100 singleerror $tp
+tc gB-12-$tp random_generator 25 100 1 100 singleerror $tp
+# tc gB-13-$tp random_generator 25 100 1 100 singleerror $tp
+# tc gB-14-$tp random_generator 25 100 1 100 singleerror $tp
+done
+
+group gC 20
+for tp in random; do
+tc gC-01-valid-$tp random_generator 500 1 3 3 random $tp
+tc gC-02-valid-$tp random_generator 500 10 3 3 random $tp
+tc gC-03-valid-$tp random_generator 500 100 3 3 random $tp
+tc gC-04-valid-$tp random_generator 500 250 3 3 random $tp
+tc gC-05-valid-$tp random_generator 500 500 3 3 random $tp
+tc gC-06-valid-$tp random_generator 500 500 3 3 random $tp
+# tc gC-07-valid-$tp random_generator 500 500 3 3 random $tp
+# tc gC-08-valid-$tp random_generator 500 500 3 3 random $tp
+tc gC-09-$tp random_generator 500 1 3 3 singleerror $tp
+tc gC-10-$tp random_generator 500 10 3 3 singleerror $tp
+tc gC-11-$tp random_generator 500 100 3 3 singleerror $tp
+tc gC-12-$tp random_generator 500 250 3 3 singleerror $tp
+tc gC-13-$tp random_generator 500 500 3 3 singleerror $tp
+tc gC-14-$tp random_generator 500 500 3 3 singleerror $tp
+# tc gC-15-$tp random_generator 500 500 3 3 singleerror $tp
+# tc gC-16-$tp random_generator 500 500 3 3 singleerror $tp
+done
+tc gC-15 hard 500 500 3
+
+group gD 20
+for tp in random; do
+tc gD-01-valid-$tp random_generator 500 1 15 15 random $tp
+tc gD-02-valid-$tp random_generator 500 10 15 15 random $tp
+tc gD-03-valid-$tp random_generator 500 100 15 15 random $tp
+tc gD-04-valid-$tp random_generator 500 250 15 15 random $tp
+tc gD-05-valid-$tp random_generator 500 500 15 15 random $tp
+tc gD-06-valid-$tp random_generator 500 500 15 15 random $tp
+# tc gD-07-valid-$tp random_generator 500 500 15 15 random $tp
+# tc gD-08-valid-$tp random_generator 500 500 15 15 random $tp
+tc gD-09-$tp random_generator 500 1 15 15 singleerror $tp
+tc gD-10-$tp random_generator 500 10 15 15 singleerror $tp
+tc gD-11-$tp random_generator 500 100 15 15 singleerror $tp
+tc gD-12-$tp random_generator 500 250 15 15 singleerror $tp
+tc gD-13-$tp random_generator 500 500 15 15 singleerror $tp
+tc gD-14-$tp random_generator 500 500 15 15 singleerror $tp
+# tc gD-15-$tp random_generator 500 500 15 15 singleerror $tp
+# tc gD-16-$tp random_generator 500 500 15 15 singleerror $tp
+done
+tc gD-15 hard 500 500 15
+
+group gE 20
+include_group gA
+include_group gB
+include_group gC
+include_group gD
+for tp in small random large; do
+tc gE-01-valid-$tp random_generator 500 1 1 100 random $tp
+tc gE-02-valid-$tp random_generator 500 10 1 100 random $tp
+tc gE-03-valid-$tp random_generator 500 100 1 100 random $tp
+tc gE-04-valid-$tp random_generator 500 250 1 100 random $tp
+tc gE-05-valid-$tp random_generator 500 500 1 100 random $tp
+tc gE-06-valid-$tp random_generator 500 500 1 100 random $tp
+# tc gE-07-valid-$tp random_generator 500 500 1 100 random $tp
+# tc gE-08-valid-$tp random_generator 500 500 1 100 random $tp
+tc gE-09-$tp random_generator 500 1 1 100 singleerror $tp
+tc gE-10-$tp random_generator 500 10 1 100 singleerror $tp
+tc gE-11-$tp random_generator 500 100 1 100 singleerror $tp
+tc gE-12-$tp random_generator 500 250 1 100 singleerror $tp
+tc gE-13-$tp random_generator 500 500 1 100 singleerror $tp
+tc gE-14-$tp random_generator 500 500 1 100 singleerror $tp
+# tc gE-15-$tp random_generator 500 500 1 100 singleerror $tp
+# tc gE-16-$tp random_generator 500 500 1 100 singleerror $tp
+done
+tc gE-15 hard 500 500 2
+tc gE-16 hard 500 500 3
+tc gE-17 hard 500 500 15
+

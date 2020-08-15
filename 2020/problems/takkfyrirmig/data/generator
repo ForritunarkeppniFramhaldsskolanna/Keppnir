@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution bjarki.cpp
+
+compile random_generator.py # Arguments:
+
+samplegroup
+sample 1
+sample 2
+
+group GA 100
+tc GA-1 random_generator 1
+tc GA-2 random_generator 10
+tc GA-3 random_generator 13
+tc GA-4 random_generator 25
+tc GA-5 random_generator 1000

@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution arnar_100.java
+
+compile random_generator.py
+
+samplegroup
+sample 1
+sample 2
+
+group GA 100
+tc GA-01 random_generator 5
+tc GA-02 random_generator 10
+tc GA-03 random_generator 10
+tc GA-04 random_generator 10
+tc GA-05 random_generator 10
+tc GA-06 random_generator 20
+tc GA-07 random_generator 30
+tc GA-08 random_generator 50
+tc GA-09 random_generator 70
+tc GA-10 random_generator 100
+tc GA-11 random_generator 200
+tc GA-12 random_generator 300
+tc GA-13 random_generator 500
+tc GA-14 random_generator 700
+tc GA-15 random_generator 800
+tc GA-16 random_generator 900
+tc GA-17 random_generator 1000
+tc GA-18 random_generator 1000
+tc GA-19 random_generator 1000
+tc GA-20 random_generator 1000
+

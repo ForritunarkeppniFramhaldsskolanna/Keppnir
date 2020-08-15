@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution siggi_B_100.cpp opt
+
+compile random_generator.py # Arguments: n
+
+samplegroup
+sample 1
+sample 2
+sample 3
+
+group GA 25
+tc A-01 random_generator 10**3 0.2
+tc A-02 random_generator 10**3 0.2
+tc A-03 random_generator 10**3 0.2
+tc A-04 random_generator 10**3 0.2
+tc A-05 random_generator 10**3 0.2
+tc A-vowels1 random_generator 10**3 0.8
+tc A-vowels2 random_generator 10**3 1
+
+group GB 75
+include_group GA
+tc B-01 random_generator 10**6 0.2
+tc B-02 random_generator 10**6 0.2
+tc B-03 random_generator 10**6 0.2
+tc B-vowels1 random_generator 10**6 0.8
+tc B-vowels2 random_generator 10**6 1

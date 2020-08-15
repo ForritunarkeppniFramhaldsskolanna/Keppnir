@@ -1,0 +1,84 @@
+#/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution bjarki_100.cpp opt
+
+compile random_generator.py
+compile line_generator.py
+
+samplegroup
+sample 1
+sample 2
+sample 3
+
+group gA 25
+tc gA-01 random_generator 100 100 empty random
+tc gA-02 random_generator 100 100 empty random
+tc gA-03 random_generator 100 100 empty random
+tc gA-04 random_generator 100 100 empty random
+tc gA-05 random_generator 100 100 random random
+tc gA-06 random_generator 100 100 random down
+tc gA-07 random_generator 100 100 random down
+tc gA-08 random_generator 100 100 random down
+tc gA-09 random_generator 100 100 full random
+tc gA-10 random_generator 100 100 full down
+tc gA-11 random_generator 100 100 single random
+tc gA-12 random_generator 100 100 single random
+tc gA-13 random_generator 100 100 single random
+tc gA-14 random_generator 100 100 single down
+tc gA-15 random_generator 100 100 single down
+
+group gB 5
+tc gB-01 random_generator 200000 1 empty random
+tc gB-02 random_generator 200000 1 full random
+tc gB-03 random_generator 200000 1 random random
+tc gB-04 random_generator 200000 1 random random
+# tc gB-05 random_generator 200000 1 random random
+# tc gB-06 random_generator 200000 1 random random
+tc gB-07 random_generator 200000 1 single random
+tc gB-08 random_generator 200000 1 single random
+# tc gB-09 random_generator 200000 1 single random
+# tc gB-10 random_generator 200000 1 single random
+
+group gC 30
+tc gC-01 line_generator 200000 200000 empty random
+tc gC-02 line_generator 200000 200000 empty random
+# tc gC-03 line_generator 200000 200000 empty random
+# tc gC-04 line_generator 200000 200000 empty random
+# tc gC-05 line_generator 200000 200000 empty random
+tc gC-06 line_generator 200000 200000 random random
+tc gC-07 line_generator 200000 200000 random random
+tc gC-08 line_generator 200000 200000 random down
+tc gC-09 line_generator 200000 200000 random down
+# tc gC-10 line_generator 200000 200000 random down
+# tc gC-11 line_generator 200000 200000 random down
+tc gC-12 line_generator 200000 200000 full random
+tc gC-13 line_generator 200000 200000 full down
+
+group gD 40
+include_group gA
+include_group gB
+include_group gC
+tc gD-01 random_generator 200000 200000 empty random
+tc gD-02 random_generator 200000 200000 empty random
+# tc gD-03 random_generator 200000 200000 empty random
+# tc gD-04 random_generator 200000 200000 empty random
+# tc gD-05 random_generator 200000 200000 empty random
+tc gD-06 random_generator 200000 200000 random random
+tc gD-07 random_generator 200000 200000 random random
+# tc gD-08 random_generator 200000 200000 random random
+tc gD-09 random_generator 200000 200000 random down
+tc gD-10 random_generator 200000 200000 random down
+# tc gD-11 random_generator 200000 200000 random down
+# tc gD-12 random_generator 200000 200000 random down
+tc gD-13 random_generator 200000 200000 full down
+tc gD-14 random_generator 200000 200000 full random
+tc gD-15 random_generator 200000 200000 single random
+tc gD-16 random_generator 200000 200000 single random
+# tc gD-17 random_generator 200000 200000 single random
+# tc gD-18 random_generator 200000 200000 single random
+tc gD-19 random_generator 200000 200000 single down
+tc gD-20 random_generator 200000 200000 single down
+# tc gD-21 random_generator 200000 200000 single down
+

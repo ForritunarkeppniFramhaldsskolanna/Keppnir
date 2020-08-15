@@ -1,0 +1,28 @@
+#/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution gardar_B_100.cpp opt
+
+compile random_generator.py # Arguments: n, max_y
+
+samplegroup
+sample 1
+sample 2
+sample 3
+
+group gA 50
+tc A-01 random_generator 10**3 10**5
+tc A-02 random_generator 10**3 10**5
+tc A-03 random_generator 10**3 10**5
+tc A-04 random_generator 10**3 10**5
+tc A-05 random_generator 10**3 10**5
+
+group gB 50
+include_group gA
+tc B-01 random_generator 10**5 10**5
+tc B-02 random_generator 10**5 10**5
+tc B-03 random_generator 10**5 10**5
+tc B-04 random_generator 10**5 10**5
+tc B-05 random_generator 10**5 10**5
+

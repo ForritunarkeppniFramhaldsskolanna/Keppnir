@@ -1,0 +1,71 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution benni_100.cpp opt
+
+compile random_generator.py # Arguments: max_n, max_k, max_c
+
+samplegroup
+sample 1
+sample 2
+sample 3
+
+group gS 23
+tc S-01 random_generator 5 1000 3 3 normal
+tc S-02 random_generator 5 1000 3 3 normal
+tc S-03 random_generator 500 1000 3 3 normal
+tc S-04 random_generator 500 1000 3 3 normal
+tc S-05 random_generator 500 1000 3 3 normal
+tc S-08 random_generator 900 1000 3 3 normal
+tc S-09 random_generator 900 1000 3 3 normal
+tc S-10 random_generator 900 1000 3 3 normal
+tc S-11 random_generator 999 999 3 3 special
+
+group gA 27
+tc A-01 random_generator 5 50 3 50 normal
+tc A-02 random_generator 5 50 3 50 normal
+tc A-03 random_generator 5 50 3 50 normal
+tc A-04 random_generator 5 50 3 50 normal
+tc A-05 random_generator 5 50 3 50 normal
+tc A-06 random_generator 5 50 3 50 normal
+tc A-07 random_generator 5 50 3 50 normal
+tc A-08 random_generator 5 50 3 50 normal
+tc A-09 random_generator 5 50 3 50 normal
+tc A-10 random_generator 5 50 3 50 normal
+tc A-11 random_generator 49 49 23 23 special
+tc A-12 random_generator 49 49 25 25 special
+tc A-13 random_generator 49 49 27 27 special
+
+# group gB 35
+# include_group gA
+# tc B-01 random_generator 150 250 3 250 normal
+# tc B-02 random_generator 200 250 3 250 normal
+# tc B-03 random_generator 200 250 3 250 normal
+# tc B-04 random_generator 200 250 3 250 normal
+# tc B-05 random_generator 200 250 3 250 normal
+# tc B-06 random_generator 200 250 3 250 normal
+# tc B-07 random_generator 200 250 3 250 normal
+# tc B-08 random_generator 230 250 100 140 normal
+# tc B-09 random_generator 230 250 110 130 normal
+# tc B-10 random_generator 230 250 110 130 normal
+# tc B-11 random_generator 249 249 123 123 special
+# tc B-12 random_generator 249 249 125 125 special
+# tc B-13 random_generator 249 249 127 127 special
+
+group gC 50
+include_group gA
+include_group gS
+tc C-01 random_generator 5 1000 3 1000 normal
+tc C-02 random_generator 5 1000 3 1000 normal
+tc C-03 random_generator 500 1000 3 1000 normal
+tc C-04 random_generator 500 1000 3 1000 normal
+tc C-05 random_generator 500 1000 3 1000 normal
+tc C-06 random_generator 500 1000 3 1000 normal
+tc C-07 random_generator 500 1000 3 1000 normal
+tc C-08 random_generator 900 1000 400 600 normal
+tc C-09 random_generator 900 1000 400 600 normal
+tc C-10 random_generator 900 1000 400 600 normal
+tc C-11 random_generator 999 999 497 497 special
+tc C-12 random_generator 999 999 499 499 special
+tc C-13 random_generator 999 999 501 501 special

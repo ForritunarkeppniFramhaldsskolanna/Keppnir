@@ -1,0 +1,62 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution bjarki_100.cpp opt
+
+compile random_generator.py
+
+samplegroup
+sample 1
+sample 2
+sample 3
+sample 4
+
+group gA 25
+tc gA-01 random_generator 2020 2400 a
+tc gA-02 random_generator 2020 2400 a
+tc gA-03 random_generator 2020 2400 a
+tc gA-04 random_generator 2020 2400 b
+tc gA-05 random_generator 2020 2400 b
+tc gA-06 random_generator 2020 2400 b
+tc gA-07 random_generator 2020 2400 c
+tc gA-08 random_generator 2020 2400 d
+
+group gB 35
+include_group gA
+tc gB-01 random_generator 3000 10**4 a
+tc gB-02 random_generator 10**4 10**5 a
+tc gB-03 random_generator 10**5 10**6 a
+tc gB-04 random_generator 9*10**5 10**6 a
+tc gB-05 random_generator 3000 10**4 b
+tc gB-06 random_generator 10**4 10**5 b
+tc gB-07 random_generator 10**5 10**6 b
+tc gB-08 random_generator 9*10**5 10**6 b
+tc gB-09 random_generator 3000 10**4 c
+tc gB-10 random_generator 10**4 10**5 c
+tc gB-11 random_generator 10**5 10**6 c
+tc gB-12 random_generator 9*10**5 10**6 c
+tc gB-13 random_generator 3000 10**4 d
+tc gB-14 random_generator 10**4 10**5 d
+tc gB-15 random_generator 10**5 10**6 d
+tc gB-16 random_generator 9*10**5 10**6 d
+
+group gC 40
+include_group gB
+tc gC-01 random_generator 10**17 10**18 a
+tc gC-02 random_generator 10**17 10**18 a
+tc gC-03 random_generator 10**17 10**18 a
+tc gC-04 random_generator 10**18-400 10**18 a
+tc gC-05 random_generator 10**17 10**18 b
+tc gC-06 random_generator 10**17 10**18 b
+tc gC-07 random_generator 10**17 10**18 b
+tc gC-08 random_generator 10**18-400 10**18 b
+tc gC-09 random_generator 10**17 10**18 c
+tc gC-10 random_generator 10**17 10**18 c
+tc gC-11 random_generator 10**17 10**18 c
+tc gC-12 random_generator 10**18-400 10**18 c
+tc gC-13 random_generator 10**17 10**18 d
+tc gC-14 random_generator 10**17 10**18 d
+tc gC-15 random_generator 10**17 10**18 d
+tc gC-16 random_generator 10**18-400 10**18 d
+

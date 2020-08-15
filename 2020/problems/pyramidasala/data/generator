@@ -1,0 +1,112 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution arnar_E_100.cpp opt
+
+compile random_generator.py # Arguments: tp, min_n, max_n
+
+samplegroup
+sample 1
+sample 2
+sample 3
+
+group BSTS 15
+tc BSTS-01 random_generator BST 5 97 none
+tc BSTS-02 random_generator BST 5 97 none
+tc BSTS-03 random_generator BST 5 97 none
+# tc BSTS-04 random_generator BST 5 97 none
+# tc BSTS-05 random_generator BST 5 97 none
+tc BSTS-06 random_generator BST 99 99 none
+tc BSTS-07 random_generator BST 99 99 none
+tc BSTS-08 random_generator BST 99 99 none
+# tc BSTS-09 random_generator BST 99 99 none
+# tc BSTS-10 random_generator BST 99 99 none
+tc BSTS-one random_generator BST 1 1 none
+tc BSTS-three random_generator BST 3 3 none
+tc BSTS-left random_generator BST 99 99 left
+tc BSTS-right random_generator BST 99 99 right
+tc BSTS-complete random_generator BST 63 63 complete
+
+group BSTL 20
+include_group BSTS
+tc BSTL-01 random_generator BST 101 99997 none
+tc BSTL-02 random_generator BST 101 99997 none
+tc BSTL-03 random_generator BST 101 99997 none
+# tc BSTL-04 random_generator BST 101 99997 none
+# tc BSTL-05 random_generator BST 101 99997 none
+tc BSTL-06 random_generator BST 99999 99999 none
+tc BSTL-07 random_generator BST 99999 99999 none
+tc BSTL-08 random_generator BST 99999 99999 none
+# tc BSTL-09 random_generator BST 99999 99999 none
+# tc BSTL-10 random_generator BST 99999 99999 none
+tc BSTL-left random_generator BST 99999 99999 left
+tc BSTL-right random_generator BST 99999 99999 right
+tc BSTL-complete random_generator BST 65535 65535 complete
+
+group BTS 15
+include_group BSTS
+tc BTS-01 random_generator BT 5 97 none
+tc BTS-02 random_generator BT 5 97 none
+tc BTS-03 random_generator BT 5 97 none
+# tc BTS-04 random_generator BT 5 97 none
+# tc BTS-05 random_generator BT 5 97 none
+tc BTS-06 random_generator BT 99 99 none
+tc BTS-07 random_generator BT 99 99 none
+tc BTS-08 random_generator BT 99 99 none
+# tc BTS-09 random_generator BT 99 99 none
+# tc BTS-10 random_generator BT 99 99 none
+tc BTS-three-nodes random_generator BT 3 3 none
+tc BTS-left random_generator BT 99 99 left
+tc BTS-right random_generator BT 99 99 right
+tc BTS-complete random_generator BT 63 63 complete
+
+group BTL 20
+include_group BSTL
+include_group BTS
+tc BTL-01 random_generator BT 101 99997 none
+tc BTL-02 random_generator BT 101 99997 none
+tc BTL-03 random_generator BT 101 99997 none
+# tc BTL-04 random_generator BT 101 99997 none
+# tc BTL-05 random_generator BT 101 99997 none
+tc BTL-06 random_generator BT 99999 99999 none
+tc BTL-07 random_generator BT 99999 99999 none
+tc BTL-08 random_generator BT 99999 99999 none
+# tc BTL-09 random_generator BT 99999 99999 none
+# tc BTL-10 random_generator BT 99999 99999 none
+tc BTL-left random_generator BT 99999 99999 left
+tc BTL-right random_generator BT 99999 99999 right
+tc BTL-complete random_generator BT 65535 65535 complete
+
+group GTS 15
+include_group BTS
+tc GTS-01 random_generator GT 6 99 none
+tc GTS-02 random_generator GT 6 99 none
+tc GTS-03 random_generator GT 6 99 none
+# tc GTS-04 random_generator GT 6 99 none
+# tc GTS-05 random_generator GT 6 99 none
+tc GTS-06 random_generator GT 100 100 none
+tc GTS-07 random_generator GT 100 100 none
+tc GTS-08 random_generator GT 100 100 none
+# tc GTS-09 random_generator GT 100 100 none
+# tc GTS-10 random_generator GT 100 100 none
+tc GTS-four random_generator GT 4 4 none
+tc GTS-five random_generator GT 5 5 none
+tc GTS-wide random_generator GT 100 100 wide
+tc GTS-center random_generator GT 100 100 center
+
+group GTL 15
+include_group BTL
+include_group GTS
+tc GTL-01 random_generator GT 101 99999 none
+tc GTL-02 random_generator GT 101 99999 none
+tc GTL-03 random_generator GT 101 99999 none
+# tc GTL-04 random_generator GT 101 99999 none
+# tc GTL-05 random_generator GT 101 99999 none
+tc GTL-06 random_generator GT 100000 100000 none
+tc GTL-07 random_generator GT 100000 100000 none
+tc GTL-08 random_generator GT 100000 100000 none
+# tc GTL-09 random_generator GT 100000 100000 none
+# tc GTL-10 random_generator GT 100000 100000 none
+tc GTL-wide random_generator GT 100000 100000 wide
+tc GTL-center random_generator GT 100000 100000 center

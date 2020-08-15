@@ -1,0 +1,39 @@
+\problemname{Sushi}
+\illustration{0.3}{sushi}{Sushi}
+
+Sigríður er eigandi Mæju-Sushi sem er einn vinsælasti sushi staður á landinu.
+Mæju-Sushi er svona vinsælt útaf dularfullu sushi pökkunum þeirra.
+Þegar viðskiptavinur kaupir dularfullan sushi pakka hefur viðskiptavinurinn ekki 
+hugmynd um hvað er í honum, eina sem hann veit er að ef hann kaupir 
+pakka fyrir verð $2^{i}$ krónur að þá eru $i$ mismunandi
+bragðtegundir í pakkanum og allavega $k$ sushi af hverri bragðtegund. \\
+
+Sigríður hefur verið í miklum vanda við að búa til pakka þannig það sé hægt að selja þá
+fyrir sem mestan pening. Sigríður hefur $n$ sushi röðuð á borð $a_1,a_2,\ldots,a_n$ þar sem 
+$a_i$ merkir bragðtegund $i$-ta sushi-sins. Þegar Sigríður býr til pakkana
+tekur hún nýjan kassa sem er upprunalega tómur, en svo getur hún valið hversu
+mörg af fremstu sushi-unum hún tekur áður en hún lokar og byrjar á næsta pakka.
+Svona gengur þetta koll af kolli þangað til ekkert sushi er eftir. \\
+
+Getur þú sagt Sigríði hvert mesta virði pakkanna samtals gæti verið ef hún
+myndi pakka þeim á sem bestan hátt. \\
+
+Ef pakki inniheldur $i$ mismunandi bragðtegundir og það er minna en $k$ sushi
+af einhverri af þessum $i$ bragðtegundum þá verður pakkinn virði $0$ krónur. \\
+
+\section*{Inntak}
+Fyrsta línan inniheldur tvær heiltölur $n$ og $k$ þar sem $1 \le k \le n \le 10^5$ \\
+Næsta lína inniheldur $n$ heiltölur $a_1,a_2,\ldots,a_n$, þar sem $1 \le a_i \le 32$. \\
+
+\section*{Úttak}
+Skrifa á út eina tölu, mesta magn penings sem Sigríður getur eignast ef hún pakkar sushi-inu sem best. \\
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 7    & $a_i = 1$ og $n \le 20$ \\ \hline
+2     & 21   & $n \le 20$ \\ \hline
+3     & 31   & $n \le 1\,000$ \\ \hline
+4     & 41   & Engar frekari takmarkanir \\ \hline
+\end{tabular}

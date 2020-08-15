@@ -1,0 +1,43 @@
+\problemname{Snjóteppa}
+\illustration{0.35}{cars}{Mynd fengin af \href{https://flic.kr/p/mTmGAr}{flickr.com}}
+
+Einn daginn ætlaði Nesi að keyra niður í HR, en það er búið að snjóa mjög
+mikið. Einhverjir bílar hafa fests á báðum akreinum í götunni hans, og hann
+veit ekki hvort hann geti með nokkru móti keyrt í gegnum götuna, jafnvel þó
+hann noti báðar akgreinarnar og keyri á móti umferð. Og enn verra er að bílar
+eru að koma og fara, þannig hann veit bara ekkert hvenær hann getur farið.
+
+Götuna hans er hægt að tákna sem töflu með tveimur röðum og $n$ dálkum, en
+hver reitur $(x,y)$ getur annaðhvort verið tómur eða innihaldið bíl sem er fastur.
+
+Nesi segir þér hver staða götunnar er í upphafi, og
+í hvert skipti sem breyting á sér stað, eins og þegar bíll kemur og festist eða
+bíll losnar og fer, þá lætur Nesi þig vita.
+Þess inn á milli spyr Nesi hvort hann komist í gegnum götuna á þeim tímapunkti.
+
+\section*{Inntak}
+Fyrsta línan í inntakinu inniheldur tvær heiltölur $n$ og $k$ ($2\leq n, k \leq 2\cdot 10^5$), lengd götunnar og fjöldi fyrirspurna.
+Næstu tvær línur innihalda $n$ stafi hvor, sem tákna upphafsstöðu götunnar, en `\texttt{o}' táknar bíl sem er fastur og `\texttt{.}' táknar auðan reit.
+Síðan koma $k$ línur hver með einni fyrirspurn, sem er annaðhvort:
+\begin{itemize}
+    \item \texttt {U $x$ $y$}: Uppfærsla á reit $(x,y)$; ef bíll var fastur á reitnum þá var hann að losna,
+        en ef enginn bíll var á reitnum þá var bíll að festast þar. ($1\leq x\leq 2$, $1\leq y \leq n$)
+    \item \texttt {Q}: Nesi vill vita hvort hann komist í gegnum götuna á þessum tímapunkti.
+\end{itemize}
+
+\section*{Úttak}
+Í hvert skipti sem Nesi spyr hvort hann komist í gegn, skrifið eina línu sem inniheldur
+\texttt{Jebb} ef Nesi getur byrjað einhverstaðar í vinstrasta dálkinum, keyrt bílinn sinn til hægri, vinstri, upp og niður
+í gegnum reitina (ekki á ská) og endað í hægrasta dálkinum, án þess að keyra nokkurn tímann á annan bíl,
+en \texttt{Neibb} ef það er ekki hægt.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 25   & $n,k \leq 100$ \\ \hline
+2     & 5    & $k = 1$ og fyrirspurnin verður af gerðinni \texttt{Q} \\ \hline
+3     & 30   & Allir reitirnir í neðri röðinni innihalda bíl sem er fastur, og þeir munu aldrei losna ($x=1$ í öllum fyrirspurnum) \\ \hline
+4     & 40   & Engar frekari takmarkanir\\ \hline
+\end{tabular}
+

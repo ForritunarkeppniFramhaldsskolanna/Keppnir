@@ -1,0 +1,58 @@
+#/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution bjarki.cpp opt
+
+compile random_generator.py # Arguments: max_n, max_k, max_c
+
+samplegroup
+sample 1
+sample 2
+sample 3
+
+group gA 20
+tc A-01 random_generator 3 3 random
+tc A-02 random_generator 3 3 random
+tc A-03 random_generator 3 3 random
+tc A-04 random_generator 3 3 neibb
+tc A-05 random_generator 3 3 neibb
+tc A-06 random_generator 3 3 neibb
+tc A-07 random_generator 3 3 almost
+tc A-08 random_generator 3 3 almost
+tc A-09 random_generator 3 3 almost
+
+group gB 35
+include_group gA
+tc B-01 random_generator 3 50 random
+tc B-02 random_generator 3 50 random
+tc B-03 random_generator 3 50 random
+tc B-04 random_generator 3 50 neibb
+tc B-05 random_generator 3 50 neibb
+tc B-06 random_generator 3 50 neibb
+tc B-07 random_generator 3 50 almost
+tc B-08 random_generator 3 50 almost
+tc B-09 random_generator 3 50 almost
+
+group gC 45
+include_group gB
+tc C-11 random_generator 50 3 random
+tc C-12 random_generator 50 3 random
+tc C-13 random_generator 50 3 random
+tc C-14 random_generator 50 3 neibb
+tc C-15 random_generator 50 3 neibb
+tc C-16 random_generator 50 3 neibb
+tc C-17 random_generator 50 3 almost
+tc C-18 random_generator 50 3 almost
+tc C-19 random_generator 50 3 almost
+
+tc C-21 random_generator 50 50 random
+tc C-22 random_generator 50 50 random
+tc C-23 random_generator 50 50 random
+tc C-24 random_generator 50 50 neibb
+tc C-25 random_generator 50 50 neibb
+tc C-26 random_generator 50 50 neibb
+tc C-27 random_generator 50 50 almost
+tc C-28 random_generator 50 50 almost
+tc C-29 random_generator 50 50 almost
+

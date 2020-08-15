@@ -1,0 +1,17 @@
+INT(1, 10^5, n) SPACE INT(1, 10^5, m) NEWLINE
+SET(p = n - 1)
+SET(q = m - 1)
+SET(l = 0)
+REP(p)
+	INT(1, 99) SPACE INT(1, 10^5, k) NEWLINE 
+	ASSERT(l < k)
+	SET(l = k)
+END
+INT(1, 99) NEWLINE
+SET(l = 0)
+REP(q)
+	INT(1, 99) SPACE INT(1, 10^5, k) NEWLINE
+	ASSERT(l < k)
+	SET(l = k)
+END
+INT(1, 99) NEWLINE

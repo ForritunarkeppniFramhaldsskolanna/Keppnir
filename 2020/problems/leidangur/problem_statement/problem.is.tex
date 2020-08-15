@@ -1,0 +1,56 @@
+\problemname{Leiðangur}
+\illustration{0.3}{adventure}{Mynd fengin af \href{https://flic.kr/p/AQgXd4}{flickr.com}}
+Óli litli er að leggja af stað í leiðangur. Á leiðinni mun hann rekast á þrjár
+gerðir af hlutum: peninga, gull og gimsteina. Þegar hann rekst á hlut, þá getur
+hann sett hlutinn efst í bakpokann sinn, ef hann vill. En Óli mun líka rekast á
+vonda kalla á leiðinni. Það eru þrjár tegundir af vondum köllum, og allir munu
+þeir krefja Óla um hlut af mismunandi gerðum: vondir bankamenn munu vilja
+pening, vondir gullgrafarar mun vilja gull, og vondir skartgripasalar munu
+vilja gimsteina.
+
+Óli litli getur ekki annað en orðið við þessum beiðnum vondu kallanna, og þarf
+að gefa hverjum vondum kall einn hlut af þeirri gerð sem þeir biðja um. En
+bakpokinn hans Óla er svolítið þröngur, og Óli nær aðeins í þann hlut sem situr
+efst í töskunni (þ.e.\ þann hlut sem hann setti síðast í töskuna). Ef Óla
+vantar hlut sem er neðar í töskunni, þá getur hann hent hlutum sem eru efst í
+töskunni, en þeir hlutir glatast þegar hann tekur þá úr töskunni og fara ekki
+aftur ofan í töskuna. Ef Óli á ekki til hlutinn sem vondur kall biður um, þá
+nær Óli ekki að klára leiðangurinn sinn.
+
+Hjálpaðu Óla að athuga hvort hann geti klárað leiðangurinn sinn, og ef já, hvað
+er það mesta sem Óli getur átt af peningum, gulli og gimsteinum í lok
+leiðangursins.
+
+\section*{Inntak}
+Inntakið inniheldur eina línu sem táknar leiðangurinn hans Óla litla, og
+samanstendur af eftirfarandi stöfum:
+\begin{itemize}
+    \item `\texttt{p}' táknar pening á jörðinni.
+    \item `\texttt{g}' táknar gull á jörðinni.
+    \item `\texttt{o}' táknar gimsteina á jörðinni.
+    \item `\texttt{P}' táknar vondan bankamann.
+    \item `\texttt{G}' táknar vondan gullgrafara.
+    \item `\texttt{O}' táknar vondan skartgripasala.
+    \item `\texttt{.}' táknar jörðina.
+\end{itemize}
+
+Óli byrjar á reitnum lengst til vinstri og labbar alltaf til hægri. (Ef Óli
+skilur eftir hlut, þá má hann ekki koma aftur seinna til að sækja hann.)
+Leiðangurinn klárast þegar Óli er kominn á reitinn lengst til hægri.
+
+Leiðangurinn inniheldur í mesta lagi $10^6$ reiti.
+
+\section*{Úttak}
+Ef Óli kemst ekki á leiðarenda, skrifið út eina lína sem inniheldur
+\texttt{Neibb}. Skrifið annars út þrjár tölur, hver í sinni línu, mesta magn
+peninga, gulls og gimsteina sem Óli getur átt eftir leiðangurinn sinn.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 25   & Leiðangurinn inniheldur enga vonda kalla \\ \hline
+2     & 35   & Leiðangurinn inniheldur í mesta lagi 20 reiti \\ \hline
+3     & 40   & Engar frekari takmarkanir\\ \hline
+\end{tabular}
+
