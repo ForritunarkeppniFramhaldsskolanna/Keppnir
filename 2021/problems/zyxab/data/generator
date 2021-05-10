@@ -1,0 +1,101 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution bergur.py
+
+compile gen1.cpp
+compile gen2.cpp
+compile gen3.cpp
+compile abcd.cpp
+
+samplegroup
+sample 1
+sample 2
+sample 3
+
+group GA 30
+tc GA-01 abcd 1
+tc GA-02 abcd 1
+tc GA-03 abcd 1
+tc GA-04 abcd 1
+tc GA-05 abcd 2
+tc GA-06 abcd 2
+tc GA-07 abcd 2
+tc GA-08 abcd 2
+tc GA-09 abcd 5
+tc GA-10 abcd 5
+tc GA-11 abcd 5
+tc GA-12 abcd 5
+tc GA-13 abcd 8
+tc GA-14 abcd 8
+tc GA-15 abcd 8
+tc GA-16 abcd 8
+tc GA-17 abcd 12
+tc GA-18 abcd 12
+tc GA-19 abcd 12
+tc GA-20 abcd 12
+tc GA-21 abcd 17
+tc GA-22 abcd 17
+tc GA-23 abcd 17
+tc GA-24 abcd 17
+tc GA-25 abcd 20
+tc GA-26 abcd 20
+tc GA-27 abcd 20
+tc GA-28 abcd 20
+
+group GB 70
+include_group GA
+tc GB-01 gen1 1
+tc GB-02 gen1 2
+tc GB-03 gen1 5
+tc GB-04 gen1 8
+tc GB-05 gen1 13
+tc GB-06 gen1 18
+tc GB-07 gen1 20
+tc GB-08 gen1 20
+tc GB-09 gen1 20
+tc GB-10 gen1 20
+tc GB-11 gen2 1
+tc GB-12 gen2 2
+tc GB-13 gen2 5
+tc GB-14 gen2 8
+tc GB-15 gen2 13
+tc GB-16 gen2 18
+tc GB-17 gen2 20
+tc GB-18 gen2 20
+tc GB-19 gen2 20
+tc GB-20 gen2 20
+tc GB-21 gen3 1
+tc GB-22 gen3 2
+tc GB-23 gen3 5
+tc GB-24 gen3 8
+tc GB-25 gen3 13
+tc GB-26 gen3 18
+tc GB-27 gen3 20
+tc GB-28 gen3 20
+tc GB-29 gen3 20
+tc GB-30 gen3 20
+
+tc GB-31 gen2 20
+tc GB-32 gen2 20
+tc GB-33 gen2 20
+tc GB-34 gen2 20
+tc GB-35 gen2 20
+tc GB-36 gen2 20
+tc GB-37 gen2 20
+tc GB-38 gen2 20
+tc GB-39 gen2 20
+tc GB-40 gen2 20
+tc GB-41 gen2 20
+tc GB-42 gen2 20
+tc GB-43 gen2 20
+tc GB-44 gen2 20
+tc GB-45 gen2 20
+tc GB-46 gen2 20
+tc GB-47 gen2 20
+tc GB-48 gen2 20
+tc GB-49 gen2 20
+tc GB-50 gen2 20
+tc GB-51 gen2 20
+

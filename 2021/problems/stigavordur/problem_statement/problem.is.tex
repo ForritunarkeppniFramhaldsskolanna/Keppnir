@@ -1,0 +1,44 @@
+\problemname{Stigavörður}
+\illustration{0.4}{guard}{\href{https://unsplash.com/photos/8FxJi5wuwKc}{Security guard} eftir Collin Armstrong, Unsplash}%
+Þú hefur mjög gaman af því að spila leiki með vinum þínum. En þetta skipti er
+öðruvísi, aftur á móti, þar sem nú er komið að þér að vera stigavörður. Vinir
+þínir eru að spila leik þar sem $n$ reitir, númeraðir frá $1$ upp í $n$, eru á
+borðinu, en hver reitur inniheldur einhverja tölu.
+
+Í hverri umferð getur leikmaður gert eina af eftirfarandi tveimur aðgerðum:
+\begin{enumerate}
+\item Velja einhvern reit og breyta tölunni sem er í þeim reit.
+\item Velja tvær tölur $j$ og $k$, þannig að $1 \leq j \leq k \leq n$, og fá þá
+\[
+	a_j \oplus a_{j + 1} \oplus \dots \oplus a_{k - 1} \oplus a_k
+\]
+mörg stig, þar sem $a_i$ er talan sem er á $i$-ta reitnum og $p\oplus q =
+\mathrm{gcd}(p,q)$ táknar stærsta sameiginlega deili $p$ og $q$, þ.e.\ stærstu
+heiltöluna $s$ þannig að bæði $p/s$ og $q/s$ hefur engan afgang.
+\end{enumerate}
+
+Þú veist ekki alveg hvað markmið leiksins er, en það er algjört aukaatriði. Það
+eina sem þú þarft að gera er að halda utan um stigin.
+
+\section*{Inntak}
+Fyrsta lína inniheldur tvær heiltölur $n$ og $q$ ($1 \leq n, q \leq 10^5$),
+fjöldi reita og fjöldi umferða. Önnur lína inniheldur $n$ heiltölur $a_1, a_2,
+\ldots, a_n$ ($1 \leq a_i \leq 10^9$), þar sem $a_i$ er upprunalega talan á
+reit númer $i$. Næstu $q$ línur tákna umferðirnar, en hver þeirra inniheldur
+þrjár tölur $x$, $y$ og $z$. Ef $x=1$, þá breytti leikmaðurinn tölunni á reit
+númer $y$ í töluna $z$ ($1 \leq y \leq n$, $1 \leq z \leq 10^9$). En ef $x=2$
+þá framkvæmdi leikmaðurinn seinni aðgerðina með $j=y$ og $k=z$ ($1\leq y \leq z
+\leq n$), og fær stig samkvæmt því.
+
+\section*{Úttak}
+Fyrir hverja umferð þar sem leikmaður framkvæmdi seinni aðgerðina, skrifið út
+eina línu með stigunum sem leikmaðurinn fékk í þeirri umferð.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 50   & $1 \leq n, q \leq 100$ \\ \hline
+2     & 50   & Engar frekari takmarkanir\\ \hline
+\end{tabular}
+

@@ -1,0 +1,17 @@
+INT(1, 100000, n) SPACE INT(1, 100000, q) NEWLINE
+REP(n, SPACE) INT(1, 10^9) END NEWLINE
+REP(q)
+	INT(1, 2, x) SPACE
+	IF(x == 1)
+		INT(1, n) SPACE
+		INT(1, 10^9)
+	END
+	IF(x == 2)
+		INT(1, n, a) SPACE
+		INT(1, n, b)
+		ASSERT(a <= b)
+	END
+	NEWLINE
+END
+EOF
+

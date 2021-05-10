@@ -1,0 +1,118 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution bjarki_100.cpp
+
+compile random_generator.py
+
+samplegroup
+sample 1
+sample 2
+sample 3
+
+group GA 9
+tc GA-01 random_generator 1 5 random_walk
+tc GA-02 random_generator 1 6 random_walk
+tc GA-03 random_generator 1 8 random_walk
+tc GA-04 random_generator 1 5 random_walk_change_one
+tc GA-05 random_generator 1 6 random_walk_change_one
+tc GA-06 random_generator 1 8 random_walk_change_one
+tc GA-07 random_generator 1 5 random_walk_multi
+tc GA-08 random_generator 1 6 random_walk_multi
+tc GA-09 random_generator 1 8 random_walk_multi
+tc GA-10 random_generator 1 5 random_walk_noise
+tc GA-11 random_generator 1 6 random_walk_noise
+tc GA-12 random_generator 1 8 random_walk_noise
+
+group GB 14
+tc GB-01 random_generator 2 10 random_walk
+tc GB-02 random_generator 2 50 random_walk
+tc GB-03 random_generator 2 90 random_walk
+tc GB-04 random_generator 2 10 random_walk_change_one
+tc GB-05 random_generator 2 50 random_walk_change_one
+tc GB-06 random_generator 2 90 random_walk_change_one
+tc GB-07 random_generator 2 10 random_walk_multi
+tc GB-08 random_generator 2 50 random_walk_multi
+tc GB-09 random_generator 2 90 random_walk_multi
+tc GB-10 random_generator 2 10 random_walk_noise
+tc GB-11 random_generator 2 50 random_walk_noise
+tc GB-12 random_generator 2 90 random_walk_noise
+
+group GC 17
+tc GC-01 random_generator 3 100 random_walk
+tc GC-02 random_generator 3 500 random_walk
+tc GC-03 random_generator 3 990 random_walk
+tc GC-04 random_generator 3 100 random_walk_change_one
+tc GC-05 random_generator 3 500 random_walk_change_one
+tc GC-06 random_generator 3 990 random_walk_change_one
+tc GC-07 random_generator 3 100 random_walk_multi
+tc GC-08 random_generator 3 500 random_walk_multi
+tc GC-09 random_generator 3 990 random_walk_multi
+tc GC-10 random_generator 3 100 random_walk_noise
+tc GC-11 random_generator 3 500 random_walk_noise
+tc GC-12 random_generator 3 990 random_walk_noise
+
+group GD 20
+tc GD-01 random_generator 5 10**3 random_walk
+tc GD-02 random_generator 5 10**4 random_walk
+tc GD-03 random_generator 5 10**5//2 random_walk
+tc GD-04 random_generator 5 10**5-10 random_walk
+tc GD-05 random_generator 5 10**3 random_walk_change_one
+tc GD-06 random_generator 5 10**4 random_walk_change_one
+tc GD-07 random_generator 5 10**5//2 random_walk_change_one
+tc GD-08 random_generator 5 10**5-10 random_walk_change_one
+tc GD-09 random_generator 5 10**3 random_walk_multi
+tc GD-10 random_generator 5 10**4 random_walk_multi
+tc GD-11 random_generator 5 10**5//2 random_walk_multi
+tc GD-12 random_generator 5 10**5-10 random_walk_multi
+tc GD-13 random_generator 5 10**3 random_walk_noise
+tc GD-14 random_generator 5 10**4 random_walk_noise
+tc GD-15 random_generator 5 10**5//2 random_walk_noise
+tc GD-16 random_generator 5 10**5-10 random_walk_noise
+
+group GE 12
+tc GE-01 random_generator 25 10 random_walk
+tc GE-02 random_generator 50 10 random_walk
+tc GE-03 random_generator 50 10 random_walk
+tc GE-04 random_generator 25 10 random_walk_change_one
+tc GE-05 random_generator 50 10 random_walk_change_one
+tc GE-06 random_generator 50 10 random_walk_change_one
+tc GE-07 random_generator 25 10 random_walk_multi
+tc GE-08 random_generator 50 10 random_walk_multi
+tc GE-09 random_generator 50 10 random_walk_multi
+tc GE-10 random_generator 25 10 random_walk_noise
+tc GE-11 random_generator 50 10 random_walk_noise
+tc GE-12 random_generator 50 10 random_walk_noise
+
+group GF 10
+include_group GE
+tc GF-01 random_generator 25 20 random_walk
+tc GF-02 random_generator 50 20 random_walk
+tc GF-03 random_generator 50 20 random_walk
+tc GF-04 random_generator 25 20 random_walk_change_one
+tc GF-05 random_generator 50 20 random_walk_change_one
+tc GF-06 random_generator 50 20 random_walk_change_one
+tc GF-07 random_generator 25 20 random_walk_multi
+tc GF-08 random_generator 50 20 random_walk_multi
+tc GF-09 random_generator 50 20 random_walk_multi
+tc GF-10 random_generator 25 20 random_walk_noise
+tc GF-11 random_generator 50 20 random_walk_noise
+tc GF-12 random_generator 50 20 random_walk_noise
+
+group GG 18
+include_group GF
+tc GG-01 random_generator 6 10**5//6 random_walk
+tc GG-02 random_generator 10 10**5//10 random_walk
+tc GG-03 random_generator 20 10**5//20 random_walk
+tc GG-04 random_generator 50 10**5//50 random_walk
+tc GG-05 random_generator 6 10**5//6 random_walk_change_one
+tc GG-06 random_generator 25 10**5//25 random_walk_change_one
+tc GG-07 random_generator 50 10**5//50 random_walk_change_one
+tc GG-08 random_generator 6 10**5//6 random_walk_multi
+tc GG-09 random_generator 10 10**5//10 random_walk_multi
+tc GG-10 random_generator 50 10**5//50 random_walk_multi
+tc GG-11 random_generator 6 10**5//6 random_walk_noise
+tc GG-12 random_generator 25 10**5//25 random_walk_noise
+tc GG-13 random_generator 50 10**5//50 random_walk_noise
+

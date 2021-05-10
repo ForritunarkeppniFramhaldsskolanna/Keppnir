@@ -1,0 +1,106 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution bjarki.cpp
+
+compile gen1.cpp
+compile gen2.cpp
+compile random_c.py
+
+samplegroup
+sample 1
+sample 2
+sample 3
+
+
+# n <= 100
+group GA 27
+tc GA-01 gen1 100 5
+tc GA-02 gen1 100 5
+tc GA-03 gen1 100 5
+tc GA-04 gen1 100 5
+tc GA-05 gen1 100 5
+tc GA-06 gen1 100 25
+tc GA-07 gen1 100 25
+tc GA-08 gen1 100 25
+tc GA-09 gen1 100 25
+tc GA-10 gen1 100 25
+tc GA-11 gen2 100 3 75
+tc GA-12 gen2 100 3 75
+tc GA-13 gen2 100 3 75
+tc GA-14 gen2 100 3 75
+tc GA-15 gen2 100 3 75
+tc GA-16 gen2 100 3 100
+tc GA-17 gen2 100 3 100
+tc GA-18 gen2 100 3 100
+tc GA-19 gen2 100 3 100
+tc GA-20 gen2 100 3 100
+
+# n <= 5000
+group GB 23
+include_group GA
+tc GB-01 gen1 5000 5
+tc GB-02 gen1 5000 5
+tc GB-03 gen1 5000 5
+tc GB-04 gen1 5000 5
+tc GB-05 gen1 5000 5
+tc GB-06 gen1 5000 25
+tc GB-07 gen1 5000 25
+tc GB-08 gen1 5000 25
+tc GB-09 gen1 5000 25
+tc GB-10 gen1 5000 25
+tc GB-11 gen2 5000 3 10
+tc GB-12 gen2 5000 3 100
+tc GB-13 gen2 5000 3 500
+tc GB-14 gen2 5000 3 1000
+tc GB-15 gen2 5000 3 1000
+tc GB-16 gen2 5000 3 2000
+tc GB-17 gen2 5000 3 3000
+tc GB-18 gen2 5000 3 4000
+tc GB-19 gen2 5000 3 4990
+tc GB-20 gen2 5000 3 5000
+
+# n <= 10^6, same sort, 1 <= gildi <= 3
+group GC 15
+tc GC-01 random_c 1000000 3 1
+tc GC-02 random_c 1000000 3 3
+tc GC-03 random_c 1000000 3 10
+tc GC-04 random_c 1000000 10 100
+tc GC-05 random_c 1000000 3 1000
+tc GC-06 random_c 1000000 3 10000
+tc GC-07 random_c 1000000 100 100000
+tc GC-08 random_c 1000000 3 500000
+tc GC-09 random_c 1000000 3 600000
+tc GC-10 random_c 1000000 100 800000
+tc GC-11 random_c 1000000 3 900000
+tc GC-12 random_c 1000000 5000 990000
+tc GC-13 random_c 1000000 3 999900
+tc GC-14 random_c 1000000 10000 999990
+tc GC-15 random_c 1000000 3 1000000
+
+# n <= 10^6
+group GD 35
+include_group GB
+include_group GC
+tc GD-01 gen1 1000000 3
+tc GD-02 gen1 1000000 3
+tc GD-03 gen1 1000000 3
+tc GD-04 gen1 1000000 3
+tc GD-05 gen1 1000000 3
+tc GD-06 gen1 1000000 420
+tc GD-07 gen1 1000000 420
+tc GD-08 gen1 1000000 420
+tc GD-09 gen1 1000000 420
+tc GD-10 gen1 1000000 420
+tc GD-11 gen2 1000000 100 1000
+tc GD-12 gen2 1000000 100 5000
+tc GD-13 gen2 1000000 100 50000
+tc GD-14 gen2 1000000 100 100000
+tc GD-15 gen2 1000000 100 999990
+tc GD-16 gen2 1000000 100 999990
+tc GD-17 gen2 1000000 100 999990
+tc GD-18 gen2 1000000 100 1000000
+tc GD-19 gen2 1000000 100 1000000
+tc GD-20 gen2 1000000 100 1000000
+

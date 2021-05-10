@@ -1,0 +1,29 @@
+\problemname{Töflur}
+Þú elskar að spila leiki með vinkonu þinni.
+Núna eruð þið að spila leik þar sem hver leikmaður fær $n$ reiti með tölu á.
+Hver leikmaður setur svo reitina niður á borð í röð að þeirra vali.
+Látum $a_j$ tákna töluna á $j$-ta reitnum í röð leikmanns, fyrir $j=1,2,\ldots,n$.
+Fjöldi stiga sem leikmaðurinn fær fyrir þessa röð er reiknuð með því að skoða
+hverjar tvær tölur sem eru hlið við hlið, taka mismun þeirra og setja þær í
+annað veldið, og leggja svo saman allar niðurstöðurnar, þ.e.\
+\[
+	\sum_{j = 1}^{n - 1} (a_j - a_{j + 1})^2.
+\]
+Leikmaðurinn með lægsta stigafjöldann vinnur.
+
+\section*{Inntak}
+Fyrsta lína inniheldur heiltölu $n$ ($1\leq n\leq 10^6$), fjöldi reita.
+Næsta lína inniheldur $n$ heiltölur, tölurnar á reitunum, sem eru að minnsta kosti $1$ en ekki stærri en $10^6$.
+
+\section*{Úttak}
+Skrifið út eina línu með minnsta mögulega stigafjölda ef leikmaður raðar reitunum á sem bestan máta.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 15   & $n = 3$ \\ \hline
+2     & 42   & $n \leq 18$ \\ \hline
+3     & 43   & Engar frekari takmarkanir\\ \hline
+\end{tabular}
+

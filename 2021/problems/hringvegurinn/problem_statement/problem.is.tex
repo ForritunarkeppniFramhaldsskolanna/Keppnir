@@ -1,0 +1,28 @@
+\problemname{Hringvegurinn}
+\illustration{0.4}{road}{\href{https://unsplash.com/photos/rRJ0aA6AIpQ}{Road} eftir Matteo Paganelli, Unsplash}%
+Vegagerðin er að útfæra nýtt tölvukerfi til að halda utan um uppihalds- og viðgerðarkostnaði á vegum landsins.
+Fyrsta mál á dagskrá er að útfæra kerfið fyrir mikilvægasta veg landsins, hringveginn. Til að einfalda utanumhald
+er hringveginum fyrst skipt í $N$ jafn langa hluta og eru þeir númeraðir $1, 2, \dots, N$ þar sem $1$ er vegurinn
+sem liggur í vestur frá Akureyri og hlutarnir eru í vaxandi röð eftir því. Þá er hluti $N$ vegurinn austan við
+Akureyri. Kerfið þarf að styðja eftirfarandi aðgerðir. Hægt þarf að vera að skrá kostnað upp á $x$ fyrir hvern
+veghluta á einhverjum vegarkafla. Hægt þarf að vera að spyrja hver heildarkostnaður einhvers vegarkafla er
+hingað til. Loks þarf að vera hægt að breyta tölusetningu kerfisins svo hluti $1$ sé á nýjum stað. Vegarkafli
+merkir hér samfellt bil vegarhluta. Bilið $3, 6$ eru hlutarnir $3, 4, 5, 6$. Hins vegar ef við erum með $6$ hluta
+samtals er $5, 2$ hlutarnir $5, 6, 1, 2$. $3, 3$ er bara hlutinn $3$. Eftir endurtölusetningu er áttun kerfisins
+áfram eins, þ.e. hlutarnir eru í vaxandi röð þegar ferðast er rangsælis. Snúningur um $1$ sæti þýðir þá að vegarhlutinn sem var númeraður $1$ er nú númeraður $N$ og vegarhlutinn sem var númeraður $2$ er nú númeraður $1$.
+
+\section*{Inntak}
+Fyrsta línan inniheldur tvær heiltölur, fjölda vegarhluta $n$ og fjölda fyrirspurna $q$ ($1 \leq n \leq 10^6$, $1 \leq q \leq 10^4$). Næst fylgja $q$ línur, hver með einni fyrirspurn. Hver fyrirspurn er ein lína og byrjar á tölunni $1, 2$ eða $3$. Ef talan er $1$ fylgir næst ein tala $t$ ($1 \leq t \leq N$) sem merkir að hliðra eigi tölusetningunni um $t$ sæti rangsælis. Ef talan er $2$ fylgja næst þrjár heiltölur $l, r, x$ ($1 \leq l, r \leq N$, $1 \leq x \leq 10^9$) sem merkir að uppfæra eigi heildarkostnað á vegarkaflanum frá $l$ til $r$ um $x$ á hvern hluta. Loks ef talan er $3$ fylgja tvær heiltölur $l, r$ ($1 \leq l, r \leq N$) og á þá að prenta út heildarkostnað hingað til á vegarkaflanum frá $l$ til $r$.
+
+\section*{Úttak}
+Skrifa á út eina línu fyrir hverja fyrirspurn sem byrjar á tölunni $3$ og samsvarandi úttaki er lýst að ofan.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 20   & $1 \leq n \leq 1000$ \\ \hline
+2     & 50   & $l \leq r$ í öllum vegarköflum og engar snúningsskipanir \\ \hline
+3     & 30   & Engar frekari takmarkanir \\ \hline
+\end{tabular}
+

@@ -1,0 +1,33 @@
+\problemname{Hraðskrif}
+\illustration{0.3}{keyboard}{\href{https://pixabay.com/images/id-2308477/}{Keyboard} eftir DomAlberts, Pixabay}%
+Við keppnisforritun er hentugt að geta skrifað hratt á lyklaborð.
+Bjarki æfir sig oft á TypeRacer til þess að ná fleiri orðum á mínútu.
+Stundum þegar Bjarki er byrjaður skrifa orð þá vildi hann helst geta ýtt á TAB takkann sinn til þess að klára orðið sem hann er að hugsa um.
+Það myndi spara honum mikinn tíma en væri aðeins mögulegt ef það kæmi bara eitt orð til greina.
+
+Bjarki setur því upp orðabók á tölvuna sína sem inniheldur öll þau orð sem eru í textanum sem hann vill skrifa.
+Til dæmis getur textinn sem Bjarki skrifar verið \texttt{ANNA OG AMMA ETA MAT SAMAN} sem krefst þess að Bjarki slær á $26$ lykla.
+Ef hann notar orðabókina og slær á lyklana
+\texttt{AN! O! AM! E! M! S!}, þar sem að \texttt{!} táknar að Bjarki hafi ýtt á TAB takkann, þá slær hann á $19$ lykla og sparar sér því $7$ lykla.
+Athugið að hann getur ekki notað TAB takkann strax á eftir \texttt{A} því það er óvíst á þeim punkti hvort hann vill skrifa \texttt{ANNA} eða \texttt{AMMA}.
+Athugið einnig að ef aðeins eitt orð er í orðabókinni þá getur Bjarki slegið á TAB takkann strax, því þó hann hafi ekki slegið inn neinn staf, þá er aðeins eitt orð sem kemur til greina.
+
+Gefin textinn sem Bjarki skrifar, hvað getur hann sparað sér marga áslætti á lyklaborðinu?
+
+\section*{Inntak}
+Fyrsta línan inniheldur eina heiltölu $1 \leq n \leq 5 \cdot 10^5$, fjöldi orða sem Bjarki skrifar í textanum.
+Næsta lína inniheldur textann sem Bjarki skrifar.
+Textinn samanstendur af einu eða fleiri orðum sem eru aðskilin með bilum og er fjöldi tákna í mesta lagi $10^6$.
+Orðin innihalda einungis hástafi úr enska stafrófinu.
+
+\section*{Úttak}
+Skrifið út eina línu með fjölda áslátta á lyklaborðið sem Bjarki sparar sér.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 30   & $1 \leq n \leq 10$ og hvert orð er í mesta lagi $10$ tákn \\ \hline
+2     & 40   & Hvert orð er í mesta lagi $10$ tákn \\ \hline
+3     & 30   & Engar frekari takmarkanir \\ \hline
+\end{tabular}

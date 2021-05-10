@@ -1,0 +1,35 @@
+\problemname{Bíóferð}
+\illustration{0.4}{seat}{\href{https://pixabay.com/images/id-3197424/}{Cinema} eftir Deedee86, Pixabay}%
+Sara fer oft í bíóferðir með vinum sínum.
+Þegar kemur að sætavali í bíósalnum er mikilvægt að allur hópurinn sé ánægður með sætin.
+Hópurinn velur eina sætaröð og kemur sér fyrir einhversstaðar í röðinni.
+Sumir hafa sterkar skoðanir á hvar þeir sitja í röðinni en aðrir ekki.
+
+Til dæmis ef við númerum sætin frá vinstri til hægri að þá vill Sara alls ekki sitja í fyrsta sætinu.
+
+Þú færð upplýsingar um hóp sem ætlar í bíó.
+Hverjir eru að fara og hvaða sæti hver og einn er sáttur með.
+Getur þú hjálpað hópnum að skipa í sæti svo allir séu ánægðir?
+
+\section*{Inntak}
+Fyrsta línan inniheldur eina heiltölu $1 \leq n \leq 10^3$, stærð hópsins.
+Næst koma $n$ línur þar sem hver lína byrjar á heiltölu $0 \leq k_i \leq n$
+og svo fylgja $k_i$ mismunandi heiltölur $1 \leq x_{i,j} \leq n$ sem tákna hvaða sæti
+manneskja $i$ er sátt með.
+
+\section*{Úttak}
+Skrifaðu út eina línu með $n$ heiltölum $a_1, a_2, \dotsc, a_n$ 
+þar sem $a_i$ táknar númerið á manneskjunni sem situr í sæti $i$, frá vinstri til hægri.
+Ef það eru margar mögulegar lausnir, þá máttu skrifa út hverja þeirra sem er.
+Ef það er engin lausn, þá skaltu skrifa út ``\texttt{Neibb}''.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 20   & $n \leq 5$ \\ \hline
+2     & 30   & $n \leq 10$ \\ \hline
+3     & 27   & $n \leq 20$\\ \hline
+4     & 23   & Engar frekari takmarkanir\\ \hline
+\end{tabular}
+

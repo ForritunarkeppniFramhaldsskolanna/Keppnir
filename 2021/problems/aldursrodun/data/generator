@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution bergur.py
+
+compile random_generator.py
+
+samplegroup
+sample 1
+sample 2
+sample 3
+
+group GA 50
+for i in {01..5}; do
+tc GA-neibb-$i random_generator 3 100 1
+done;
+for i in {01..20}; do
+tc GA-$i random_generator 3 100 0
+done;
+
+group GB 40
+include_group GA
+for i in {01..5}; do
+tc GB-neibb-$i random_generator 8 100 1
+done;
+for i in {01..20}; do
+tc GB-$i random_generator 8 100 0
+done;
+
+group GC 10
+include_group GA
+include_group GB
+for i in {01..5}; do
+tc GC-neibb-$i random_generator 8 1000000000 1
+done;
+for i in {01..20}; do
+tc GC-$i random_generator 8 1000000000 0
+done;
+

@@ -1,0 +1,28 @@
+\problemname{Vefþjónatjón}
+\illustration{0.3}{servers.jpg}{Mynd fengin af \href{https://flic.kr/p/4H1hyC}{flickr.com}}%
+Bjarki hefur verið á fullu að setja upp vefþjóna fyrir norð-vestur evrópu mótið í forritun, og hefur fengið $N$ tölvur að láni frá UT deildinni í HR.
+Vandamálið, sem Bjarki áttaði sig ekki strax á, er að það vantar íhluti í sumar tölvurnar, og þar af leiðir þýðir að hann getur ekki sett upp jafn marga vefþjóna og hann ætlaði sér.
+
+Vefþjónn þarf þrjá hluti til að virka: Örgjörva, minni, og harðann disk, ef að eitt eða fleiri af þessum íhlutum vantar þá virkar vefþjónninn ekki.
+
+Bjarki fékk þá hugmynd að hann gæti tekið parta úr sumum vefþjónum og sett í aðrar, t.d.\ ef að einn vefþjónn er með allt sem þarf nema minni, þá gæti hann tekið minni úr öðrum vefþjón til að þessi vefþjónn gæti virkað. Bjarki fór að pæla hver væri mesti fjöldi vefþjóna sem hann getur sett upp, með því að skipta út pörtum.
+
+Getur þú hjálpað Bjarka að reikna út hversu marga vefþjóna hann getur sett upp, ef hann gefur þér lista af vefþjónunum og hvaða íhlutir virka í hverjum þjón?
+
+
+\section*{Inntak}
+Fyrsta línan inniheldur töluna $n$, fjölda vefþjóna sem Bjarki fékk.\\
+\\
+Næstu $n$ línur innihalda lýsingu á vefþjón, þar sem hver og ein lína inniheldur 3 bókstafi, sem geta annaðhvort verið "J" eða "N". \\
+Fyrsti stafurinn í línu $i$ táknar hvort að örgjörvi sé til staðar í vefþjón $i$, annar stafurinn táknar hvort að minni sé til staðar í vefþjón $i$, og að lokum táknar þriðji stafurinn hvort að það sé harður diskur í vefþjón $i$.\\
+
+\section*{Úttak}
+Skrifið út mesta fjölda af vefþjónum sem Bjarki getur sett upp.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 50   & $1 \leq n \leq 1000$ \\ \hline
+2     & 50   & $1 \leq n \leq 10^5$\\ \hline
+\end{tabular}

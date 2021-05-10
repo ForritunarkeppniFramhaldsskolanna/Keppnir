@@ -1,0 +1,30 @@
+\problemname{Röðunarrugl}
+\illustration{0.3}{perm}{Mynd fengin af \href{https://commons.wikimedia.org/wiki/File:Permutation_cycles_qtl1.svg}{commons.wikimedia.org}}%
+Meðan beðið er eftir flatbökunni frá Trominos ætla þeir sem mættir eru í partíið hjá KFFÍ að horfa á einhverja þætti.
+Ekki voru margar tillögur svo það endar með því að Atli komi með uppástungu sem enginn nennir að mótmæla,
+	svo það endar með því að allir horfi á Bogletics.
+Á einhverjum tímapunkti í þættinum lendir aðalkarakterinn í smá vandræðum.
+Hann er með $n$ hluti og $n + 1$ staði til að geyma þá.
+Þar sem hann getur ekki haldið á svo mörgu í einu og er þegar með ýmislegt á sér getur hann aðeins haldið á einum hlut í einu.
+Eins og stendur eru hlutirnir dreifðir einhvern veginn á fyrstu $n$ staðina, en þeir eru ekki í þeirri röð sem hann vill hafa þá.
+Ef það eina sem hann getur gert er að taka einn hlut og færa hann yfir á tóman stað,
+	hvað þarf hann að framkvæma margar færslur til að allt sé á réttum stað?
+
+\section*{Inntak}
+Fyrsta lína inntaksins inniheldur eina tölu $n$ sem uppfyllir $1 \leq n \leq 10^5$, fjöldi hluta sem þarf að raða.
+Næst kemur lína með $n$ heiltölum $k_1, k_2, \dots, k_n$ sem uppfylla $1 \leq k_i \leq n$.
+Gildi $k_i$ segir þá til um númer hvaða stað hluturinn sem er núna á stað $i$ ætti að vera.
+Ekkert gildanna verður jafnt $n + 1$ þar sem staður $n + 1$ á ávallt að vera aftur tómur í lokin.
+Gildin verða auk þess öll ólík.
+
+\section*{Úttak}
+Eina línu með einni heiltölu sem segir til um lágmarksfjölda færslna sem þarf til þess að koma öllu á réttan stað.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 20   & $n \leq 5$ \\ \hline
+2     & 30   & $n \leq 10^3$ \\ \hline
+3     & 50   & Engar frekari takmarkanir \\ \hline
+\end{tabular}

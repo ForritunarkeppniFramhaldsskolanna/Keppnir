@@ -1,0 +1,34 @@
+\problemname{Teningakast}
+\illustration{0.35}{paradice}{\href{https://pixabay.com/images/id-1265633/}{Dice} eftir EsaRiutta, Pixabay}%
+Meðlimir KFFÍ eru að plana borðspilakvöld og eru að velja spunaspilakerfi sem hentar til að spila saman gegnum netið.
+Spilakerfið Ravendice verður fyrir valinu. Það er ekki vinsælasta spunaspilakerfið að svo stöddu svo ekki er búið að
+búa til sjálfvirkt kerfi fyrir teningaköst og annað slíkt. Hver spilari þarf því að kasta teningum sjálfur og tilkynna
+niðurstöðuna upphátt. Atli er að halda utan um spilið og er farið að gruna að sumir séu að svindla og vill fá þína aðstoð
+til að athuga hvort niðurstöðurnar séu raunhæfar.
+
+Hvaða teningum á að kasta er gefinn sem strengur. $n$d$m$ táknar að kasta eigi $n$ $m$-hliða teningum og leggja saman
+niðurstöðuna. Hér eru $m$-hliða teningar jafn líklegir til að gefa niðurstöðurnar $1, 2, \dots$ og upp í $m$. $n$ og $m$
+geta verið hvaða heiltölur sem er stærri en $0$. Í þessu dæmi munu $n$ og $m$ hins vegar vera minni en $10^4$. $n$d$m!$
+táknar `exploding dice' sem þýðir að ef hæsta niðurstaðan fæst á teningi, þ.e. $m$, þá skuli kasta teningnum aftur og
+bæta þeirri niðurstöðu við. Þetta getur gerst oft í röð ef hæsta niðurstaðan fæst oft í röð. `Exploding dice' mun aldrei
+hafa $m = 1$. Teningakastsstrengurinn er runa teningakasta eða talna með $+$ eða $-$ á milli, mögulega einnig með $-$ fremst. 
+Tölurnar verða einnig minni en $10^4$. Til dæmis táknar \verb|3d6+1d4!-2| að kasta eigi þremur sex-hliða teningum, einum 
+`exploding' fjögurra hliða teningi, leggja það allt saman og svo draga tvo frá niðurstöðunni.
+
+\section*{Inntak}
+Fyrsta línan inniheldur eina heiltölu $q$ ($1 \leq q \leq 10^5$). Síðan fylgja $q$ fyrirspurnir, hver á $2$ línum.
+Fyrri línan inniheldur teningakastsstreng eins og lýst er að ofan. Seinni línan inniheldur eina
+heiltölu $r$ ($-10^{18} \leq r \leq 10^{18}$). Heildarlengd allra teningakastsstrengjanna verður mest $10^5$ stafir.
+
+\section*{Úttak}
+Skrifið út \texttt{Raunhaeft} ef hægt er að fá $r$ sem niðurstöðu úr teningakastinu, annars \texttt{Svindl} fyrir
+hverja fyrirspurn í sömu röð með hvert svar á sinni eigin línu.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 30   & Ekkert \verb|!| í inntaki \\ \hline
+2     & 70   & Engar frekari takmarkanir \\ \hline
+\end{tabular}
+

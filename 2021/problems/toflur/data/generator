@@ -1,0 +1,79 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution bjarki.cpp
+
+compile gen1.cpp
+
+samplegroup
+sample 1
+sample 2
+
+# n = 3
+group GA 15
+tc GA-01 gen1 3
+tc GA-02 gen1 3
+tc GA-03 gen1 3
+tc GA-04 gen1 3
+tc GA-05 gen1 3
+tc GA-06 gen1 3
+tc GA-07 gen1 3
+tc GA-08 gen1 3
+tc GA-09 gen1 3
+tc GA-10 gen1 3
+tc GA-11 gen1 3
+tc GA-12 gen1 3
+tc GA-13 gen1 3
+tc GA-14 gen1 3
+
+# n <= 18
+group GB 42
+tc GB-01 gen1 18
+tc GB-02 gen1 18
+tc GB-03 gen1 18
+tc GB-04 gen1 18
+tc GB-05 gen1 18
+tc GB-06 gen1 18
+tc GB-07 gen1 18
+tc GB-08 gen1 18
+tc GB-09 gen1 18
+tc GB-10 gen1 18
+tc GB-11 gen1 18
+tc GB-12 gen1 18
+tc GB-13 gen1 18
+tc GB-14 gen1 18
+
+# n <= 1000000
+group GC 43
+tc GC-01 gen1 23
+tc GC-02 gen1 20
+tc GC-03 gen1 20
+tc GC-04 gen1 20
+tc GC-05 gen1 20
+tc GC-06 gen1 20
+tc GC-08 gen1 20
+tc GC-09 gen1 20
+tc GC-10 gen1 20
+tc GC-11 gen1 20
+tc GC-12 gen1 1000000
+tc GC-13 gen1 1000000
+tc GC-14 gen1 1000000
+tc GC-15 gen1 1000000
+tc GC-16 gen1 1000000
+tc GC-17 gen1 1000000
+tc GC-18 gen1 1000000
+tc GC-19 gen1 1000000
+tc GC-20 gen1 1000000
+tc GC-21 gen1 1000000
+tc GC-22 gen1 1000000
+tc GC-23 gen1 1000000
+tc GC-24 gen1 1000000
+tc GC-25 gen1 1000000
+tc GC-26 gen1 1000000
+tc GC-27 gen1 1000000
+tc GC-28 gen1 1000000
+tc GC-29 gen1 1000000
+tc GC-30 gen1 1000000
+tc GC-31 gen1 1000000
+

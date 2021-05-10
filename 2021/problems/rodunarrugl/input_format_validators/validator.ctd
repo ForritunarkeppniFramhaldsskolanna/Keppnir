@@ -1,0 +1,7 @@
+INT(1, 100000, n) NEWLINE
+REPI(i, n, SPACE)
+    INT(1, n, k[i])
+END
+ASSERT(UNIQUE(k))
+NEWLINE
+

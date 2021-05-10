@@ -1,0 +1,62 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution bjarki.cpp
+
+compile gen1.cpp
+compile gen2.cpp
+compile gen3.cpp
+compile gen4.cpp
+compile gen5.cpp
+
+samplegroup
+sample 1
+
+# n <= 100, q <= 100
+group GA 50
+tc GA-01 gen1 100 100 1000000000
+tc GA-02 gen1 100 100 1000000000
+tc GA-03 gen1 100 100 1000000000
+tc GA-04 gen1 100 100 1000000000
+tc GA-05 gen2 100 100 1000000000
+tc GA-06 gen2 100 100 1000000000
+tc GA-07 gen2 100 100 1000000000
+tc GA-08 gen2 100 100 1000000000
+tc GA-09 gen3 100 100
+tc GA-10 gen3 100 100
+tc GA-11 gen3 100 100
+tc GA-12 gen3 100 100
+tc GA-13 gen4 100 100
+tc GA-14 gen4 100 100
+tc GA-15 gen4 100 100
+tc GA-16 gen4 100 100
+tc GA-17 gen5 100 100
+tc GA-18 gen5 100 100
+tc GA-19 gen5 100 100
+tc GA-20 gen5 100 100
+
+# n <= 10^5, q <= 10^5
+group GB 50
+include_group GA
+tc GB-01 gen1 100000 100000 1000000000
+tc GB-02 gen1 100000 100000 1000000000
+tc GB-03 gen1 100000 100000 1000000000
+tc GB-04 gen1 100000 100000 1000000000
+tc GB-05 gen2 100000 100000 1000000000
+tc GB-06 gen2 100000 100000 1000000000
+tc GB-07 gen2 100000 100000 1000000000
+tc GB-08 gen2 100000 100000 1000000000
+tc GB-09 gen3 100000 100000
+tc GB-10 gen3 100000 100000
+tc GB-11 gen3 100000 100000
+tc GB-12 gen3 100000 100000
+tc GB-13 gen4 100000 100000
+tc GB-14 gen4 100000 100000
+tc GB-15 gen4 100000 100000
+tc GB-16 gen4 100000 100000
+tc GB-17 gen5 100000 100000
+tc GB-18 gen5 100000 100000
+tc GB-19 gen5 100000 100000
+tc GB-20 gen5 100000 100000
+

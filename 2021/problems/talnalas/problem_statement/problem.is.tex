@@ -1,0 +1,62 @@
+\problemname{Talnalás}
+\illustration{0.3}{lock}{\href{https://pixabay.com/images/id-2580718/}{Bicycle lock} eftir Photorama, Pixabay}
+Anna litla hjólaði í skólann í morgun. Hún læsti hjólinu sínu í
+hjólageymslunni með talnalás, og ruglaði svo tölunum á lásnum. Talnalásinn
+samanstendur af $n$ talnaskífum sem hver hefur tölur á bilinu $0$ til $9$, en
+hægt er að snúa skífunum í báðar áttir. Með einum snúning er því hægt að færa
+skífu yfir á tölu sem er einni lægri eða einni hærri en talan sem var þar
+áður. Skífan myndar hring, svo ef maður hækkar töluna $9$ þá fer maður aftur
+á töluna $0$, og ef maður lækkar töluna $0$ þá fer maður aftur á töluna $9$.
+
+Anna er núna að fara heim og þarf því að opna talnalásinn. Þetta gerir hún
+með því að snúa skífunum, einn snúning í einu á hvaða skífu sem er, svo að
+tölurnar á skífunum myndi á endanum ákveðna talnarunu. En Anna er mjög
+hjátrúarfull og í gegnum tíðina hefur hún fundið sér $m$ happatölur. Eftir
+hvern snúning sem hún framkvæmir vill hún vera viss um að talnaröðin sem
+skífurnar mynda sé örugglega ein af happatölunum hennar, því annað boðar
+ólukku.
+
+Gefin upprunalega talnarunan á lásnum, talnarunan sem þarf til að opna
+lásinn, og listi af öllum happatölunum hennar Önnu, hjálpaðu henni að finna í
+hvaða röð hún á að snúa skífunum til að mynda talnarununa til að opna lásinn,
+þannig að tölurnar á skífunum myndi happatölu eftir hvern snúning. Þar sem Anna
+er að drífa sig heim þá vill hún gera þetta með sem fæstum mögulegum snúningum.
+
+\section*{Inntak}
+Fyrsta lína inniheldur tvær heiltölur $n$ og $m$ ($1 \leq n$, $1 \leq m$),
+fjöldi skífa á talnalásnum og fjöldi happatalna. Önnur lína inniheldur
+$n$-stafa tölu, þar sem $i$-ti stafurinn táknar töluna á $i$-tu skífunni í
+upprunalegu talnarununni á talnalásnum. Þriðja lína inniheldur
+$n$-stafa tölu, þar sem $i$-ti stafurinn táknar töluna á $i$-tu skífunni í
+talnarununni sem þarf til að opna lásinn. Að lokum fylgja $m$ línur, hver með
+$n$-stafa tölu sem tákna happatölurnar hennar Önnu. Að auki eru upprunalega
+talnarunan og talnarunan til að opna lásinn happatölur.
+
+Gera má ráð fyrir því að upprunalega talnarunan og talnarunan til að opna
+lásinn séu mismunandi.
+
+\section*{Úttak}
+Skrifið út eina línu með heiltölunni $k$, minnsta fjölda hreyfinga sem Anna
+þarf til að opna lásinn þannig að talnarunan á lásnum myndi happatölu eftir
+hverja einustu hreyfingu. Skrifið svo út $k+1$ línur, hver með $n$-stafa tölu,
+þar sem sú fyrsta er upprunalega talnarunan á lásnum, og seinni $k$ sýna
+talnarununa á lásnum eftir hvern snúning sem Anna þarf að framkvæma. Síðasta
+talnarunan þarf því að vera talnarunan sem Anna þarf til að opna lásinn. 
+
+Ef það eru margar mögulegar lausnir, þá skiptir ekki máli hverja þeirra þið
+skrifið út. Ef það er ekki til nein lausn, skrifið þá bara út eina línu sem
+inniheldur ``\texttt{Neibb}''.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 9   & $n = 1$, $m \leq 10$ \\ \hline
+2     & 14   & $n = 2$, $m \leq 100$ \\ \hline
+3     & 17   & $n = 3$, $m \leq 10^3$ \\ \hline
+4     & 20   & $n = 5$, $m \leq 10^5$ \\ \hline
+5     & 12   & $n = 50$, $m \leq 10$ \\ \hline
+6     & 10   & $n = 50$, $m \leq 20$ \\ \hline
+7     & 18   & $n = 50$, $n\cdot m \leq 10^5$ \\ \hline
+\end{tabular}
+

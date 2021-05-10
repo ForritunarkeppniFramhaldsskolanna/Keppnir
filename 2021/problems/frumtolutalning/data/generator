@@ -1,0 +1,88 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution bjarki_100.cpp
+
+compile random_generator.py
+
+samplegroup
+sample 1
+sample 2
+sample 3
+
+# Trial division over range: O(n*k) - 19
+# - n <= 10^3, k <= 10^3
+group GA 19
+tc GA-01 random_generator 10**3 10**3 max
+tc GA-02 random_generator 10**3 10**3 maxprimes
+tc GA-03 random_generator 10**3 10**3 random
+tc GA-04 random_generator 10**3 10**3 random
+tc GA-05 random_generator 10**3 10**3 random
+tc GA-06 random_generator 10**3 10**3 random
+tc GA-07 random_generator 10**3 10**3 random
+
+# Sqrt trial division over range: O(sqrt(n)*k) - 23
+# - n <= 10^9, k <= 10^3
+group GB 23
+include_group GA
+tc GB-01 random_generator 10**9 10**3 max
+tc GB-02 random_generator 10**9 10**3 maxprimes
+tc GB-03 random_generator 10**9 10**3 random
+tc GB-04 random_generator 10**9 10**3 random
+tc GB-05 random_generator 10**9 10**3 random
+tc GB-06 random_generator 10**9 10**3 random
+tc GB-07 random_generator 10**9 10**3 random
+
+# Probable prime over range: O(log(n)*k) - 14
+# - n <= 10^18, k <= 10^5
+group GC 14
+include_group GA
+include_group GB
+tc GC-01 random_generator 10**18 10**5 max
+tc GC-02 random_generator 10**18 10**5 maxprimes
+tc GC-03 random_generator 10**18 10**5 random
+tc GC-04 random_generator 10**18 10**5 random
+tc GC-05 random_generator 10**18 10**5 random
+tc GC-06 random_generator 10**18 10**5 random
+tc GC-07 random_generator 10**18 10**5 random
+
+# Sieve: O(n) - 13
+# - n <= 10^7, k <= 10^7
+group GD 13
+include_group GA
+tc GD-01 random_generator 10**7 10**7 max
+tc GD-02 random_generator 10**7 10**7 maxprimes
+tc GD-03 random_generator 10**7 10**7 random
+tc GD-04 random_generator 10**7 10**7 random
+tc GD-05 random_generator 10**7 10**7 random
+tc GD-06 random_generator 10**7 10**7 random
+tc GD-07 random_generator 10**7 10**7 random
+
+# Segment sieve: O(sqrt(n) + k log(n)) - 16
+# - n <= 10^15, k <= 10^7
+group GE 16
+include_group GA
+include_group GB
+tc GE-01 random_generator 10**15 10**7 max
+tc GE-02 random_generator 10**15 10**7 maxprimes
+tc GE-03 random_generator 10**15 10**7 random
+tc GE-04 random_generator 10**15 10**7 random
+tc GE-05 random_generator 10**15 10**7 random
+tc GE-06 random_generator 10**15 10**7 random
+tc GE-07 random_generator 10**15 10**7 random
+
+# primepi: O(n^{2/3}) - 15
+# - n <= 10^11, k <= 10^11
+group GF 15
+include_group GA
+include_group GB
+include_group GD
+tc GF-01 random_generator 10**11 10**11 max
+tc GF-02 random_generator 10**11 10**11 maxprimes
+tc GF-03 random_generator 10**11 10**11 random
+tc GF-04 random_generator 10**11 10**11 random
+tc GF-05 random_generator 10**11 10**11 random
+tc GF-06 random_generator 10**11 10**11 random
+tc GF-07 random_generator 10**11 10**11 random
+

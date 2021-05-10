@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution arnar_100.py
+
+compile random_generator.py
+compile fixed.py
+
+samplegroup
+sample 1
+sample 2
+
+group GA 30
+tc GA-01 fixed u
+tc GA-02 fixed uu
+tc GA-03 fixed uuu
+tc GA-04 fixed uuuu
+tc GA-05 fixed uuuuu
+
+group GB 70
+for i in {01..20}; do
+tc GB-$i random_generator 1 1000
+done

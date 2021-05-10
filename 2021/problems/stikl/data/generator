@@ -1,0 +1,79 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution bjarki.cpp
+
+compile gen2.cpp
+compile gen3.cpp
+compile long.py
+
+samplegroup
+sample 1
+
+# n <= 100, q <= 100, s <= 10^5
+group GA 42
+tc GA-01 gen2 100 100 5
+tc GA-02 gen2 100 100 10
+tc GA-03 gen2 100 100 20
+tc GA-04 gen2 100 100 40
+tc GA-05 gen2 100 100 50
+tc GA-06 gen2 100 100 70
+tc GA-07 gen2 100 100 80
+tc GA-08 gen2 100 100 90
+tc GA-09 gen3 100 100 1
+tc GA-10 gen3 100 100 10
+tc GA-11 gen3 100 100 25
+tc GA-12 gen3 100 100 50
+tc GA-13 gen3 100 100 75
+tc GA-14 gen3 100 100 90
+tc GA-15 gen3 100 100 95
+tc GA-16 gen3 100 100 99
+tc GA-17 gen3 100 100 10
+tc GA-18 long 100 100 30
+tc GA-19 long 100 100 50
+tc GA-20 long 100 100 70
+tc GA-21 long 100 100 90
+
+# n <= 10^5, q <= 10^5, s = 1
+group GB 26
+tc GB-01 gen2 100000 100000 1
+tc GB-02 gen2 100000 100000 1
+tc GB-03 gen2 100000 100000 1
+tc GB-04 gen2 100000 100000 1
+tc GB-05 gen2 100000 100000 1
+tc GB-06 gen2 100000 100000 1
+tc GB-07 long 100000 100000 1
+tc GB-08 long 100000 100000 1
+tc GB-09 long 100000 100000 1
+tc GB-10 long 100000 100000 1
+tc GB-11 long 100000 100000 1
+tc GB-12 long 100000 100000 1
+
+# n <= 10^5, q <= 10^5, s <= 10^5
+group GC 32
+include_group GA
+include_group GB
+tc GC-01 gen2 100000 100000 10000
+tc GC-02 gen2 100000 100000 20000
+tc GC-03 gen2 100000 100000 30000
+tc GC-04 gen2 100000 100000 40000
+tc GC-05 gen2 100000 100000 50000
+tc GC-06 gen2 100000 100000 60000
+tc GC-07 gen2 100000 100000 80000
+tc GC-08 gen2 100000 100000 99000
+tc GC-09 gen3 100000 100000 1000
+tc GC-10 gen3 100000 100000 10000
+tc GC-11 gen3 100000 100000 25000
+tc GC-12 gen3 100000 100000 50000
+tc GC-13 gen3 100000 100000 75000
+tc GC-14 gen3 100000 100000 90000
+tc GC-15 gen3 100000 100000 95000
+tc GC-16 gen3 100000 100000 99990
+tc GC-17 gen3 100000 100000 10000
+tc GC-18 long 100000 100000 20000
+tc GC-19 long 100000 100000 30000
+tc GC-20 long 100000 100000 50000
+tc GC-21 long 100000 100000 70000
+tc GC-22 long 100000 100000 80000
+

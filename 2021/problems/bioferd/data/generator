@@ -1,0 +1,64 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution bjarki_100.cpp
+
+compile random_generator.py
+
+samplegroup
+sample 1
+sample 2
+sample 3
+
+group GA 20
+tc GA-01 random_generator 5 random
+tc GA-02 random_generator 5 random
+tc GA-03 random_generator 5 random
+tc GA-04 random_generator 5 random
+tc GA-05 random_generator 5 random
+tc GA-06 random_generator 5 choose
+tc GA-07 random_generator 5 choose
+tc GA-08 random_generator 5 choose
+tc GA-09 random_generator 5 choose
+tc GA-10 random_generator 5 choose
+
+group GB 30
+include_group GA
+tc GB-01 random_generator 10 random
+tc GB-02 random_generator 10 random
+tc GB-03 random_generator 10 random
+tc GB-04 random_generator 10 random
+tc GB-05 random_generator 10 random
+tc GB-06 random_generator 10 choose
+tc GB-07 random_generator 10 choose
+tc GB-08 random_generator 10 choose
+tc GB-09 random_generator 10 choose
+tc GB-10 random_generator 10 choose
+
+group GC 27
+include_group GB
+tc GC-01 random_generator 20 random
+tc GC-02 random_generator 20 random
+tc GC-03 random_generator 20 random
+tc GC-04 random_generator 20 random
+tc GC-05 random_generator 20 random
+tc GC-06 random_generator 20 choose
+tc GC-07 random_generator 20 choose
+tc GC-08 random_generator 20 choose
+tc GC-09 random_generator 20 choose
+tc GC-10 random_generator 20 choose
+
+group GD 23
+include_group GC
+tc GD-01 random_generator 1000 random
+tc GD-02 random_generator 1000 random
+tc GD-03 random_generator 1000 random
+tc GD-04 random_generator 1000 random
+tc GD-05 random_generator 1000 random
+tc GD-06 random_generator 1000 choose
+tc GD-07 random_generator 1000 choose
+tc GD-08 random_generator 1000 choose
+tc GD-09 random_generator 1000 choose
+tc GD-10 random_generator 1000 choose
+

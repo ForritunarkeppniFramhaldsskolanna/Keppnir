@@ -1,0 +1,29 @@
+\problemname{Gangur}
+\illustration{0.4}{hallway}{\href{https://unsplash.com/photos/RlC1eHzJOFI}{Hallway} eftir Chuttersnap, Unsplash}%
+Fjöldi fólks gengur í gegnum langan þröngan gang.
+Þegar tvær manneskjur mætast í ganginum þurfa þær að snúa sér á hlið til að komast framhjá hvorri annarri.
+Ganginum má skipta upp í hólf.
+Í sumum hólfum má finna manneskju en hin eru tóm.
+Hver einasta manneskja snýr í áttina að öðrum hvorum enda gangsins og ganga þær allar á sama hraða.
+Þegar allar manneskjurnar eru búnar að ganga í gegnum allan ganginn í þá átt sem þær snúa,
+hversu oft þurftu tvær manneskjur að smeygja sér framhjá hvorri annarri í heildina?
+
+\section*{Inntak}
+Inntak er ein lína sem táknar innihald allra hólfa í ganginum.
+Ganginum er skipt upp í minnsta lagi $1$ og mesta lagi $10^6$ hólf.
+Við táknum hólf með \texttt{>} ef manneskja byrjar þar og stefnir að hægri enda gangsins.
+Við táknum hólf með \texttt{<} ef manneskja byrjar þar og stefnir að vinstri enda gangsins.
+Við táknum hólf með \texttt{-} ef hólfið er tómt.
+
+\section*{Úttak}
+Skrifið út eina línu með einni heiltölu, fjöldi skipta þar sem tvær manneskjur mætast á ganginum.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 25  & Eina hólfið sem inniheldur \texttt{>} er fyrsta hólfið \\ \hline
+2     & 25  & Öll \texttt{>} eru vinstra megin við öll \texttt{<} \\ \hline
+3     & 25  & Mesta lagi $1\,000$ hólf \\ \hline
+4     & 25  & Engar frekari takmarkanir \\ \hline
+\end{tabular}

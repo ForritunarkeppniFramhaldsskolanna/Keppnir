@@ -1,0 +1,38 @@
+\problemname{Raðir}
+\illustration{0.4}{cards}{\href{https://unsplash.com/photos/tSE54tVzlqM}{Three of Hearts} eftir Harry Shelton, Unsplash}%
+Þér finnst rosalega gaman að spila á spil með vinkonu þinni, en hún var nýlega
+að kynna þig fyrir nýjum leik. Til að byrja með fær hvor leikmaður $p$ spil til
+að hafa á hendi. Þið skiptist svo á að gera, en sá sem á leik dregur eitt spil
+á hendi og hendir svo einu spili af hendi (mögulega spilinu sem var dregið).
+Markmið leiksins er að fá \emph{röð} á hendi. Röð samanstendur af þremur spilum
+af sömu sort sem uppfyllir það að, ef minnsta spilið hefur gildi $a$, þá hafa
+hin tvö spilin gildi $a+1$ og $a+2$. Þú getur tilkynnt sigur þegar þinni umferð
+er lokið, svo lengi sem þú ert með að minnsta kosti eina röð á hendi.
+
+Þú varst rétt í þessu að tapa fyrir vinkonu þinni. Þú varðst ekki fyrir miklum
+vonbrigðum þar sem þú varst bara að kynnast leiknum, en vilt engu að síður læra
+af mistökum þínum. Þú lítur á spilin þín og veltir því fyrir þér hversu snemma
+þú hefðir getað fengið röð ef þú hefðir spilað á sem bestan máta.
+
+\section*{Inntak}
+Fyrsta línan inniheldur tvær heiltölur $n$ og $p$ ($3 \leq p \leq n \leq
+10^6$), heildarfjöldi spila og fjöldi spila sem þú getur haft á hendi.
+Svo fylgja $n$ línur, þar sem $j$-ta línan inniheldur tvær heiltölur $c_j$ og
+$k_j$ ($1 \leq c_j \leq 4$, $1 \leq k_j \leq 13$), sem táknar sort og gildi á
+ákveðnu spili. Fyrstu $p$ spilin tákna þau spil sem þú byrjaðir með á hendi, og
+seinni $n-p$ spilin eru þau spil sem þú dróst, í þeirri röð sem þau dróst þau.
+
+\section*{Úttak}
+Skrifaðu út eina heiltölu sem táknar fæsta fjölda umferða sem það hefði getað
+tekið þig að fá röð, ef þú hefðir spilað á sem bestan máta. Ef það er engin
+leið til að fá röð þá skaltu skrifa út ``\texttt{Neibb}''.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 27   & $n \leq 100$ \\ \hline
+2     & 23   & $n \leq 5\,000$ \\ \hline
+3     & 15   & $n \leq 10^6$, öll spil af sömu sort og hafa gildi $1$, $2$ eða $3$ \\ \hline
+4     & 35   & Engar frekari takmarkanir\\ \hline
+\end{tabular}

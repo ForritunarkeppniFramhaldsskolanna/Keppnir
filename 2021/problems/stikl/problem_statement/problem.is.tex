@@ -1,0 +1,31 @@
+\problemname{Stikl}
+\illustration{0.35}{tiles}{\href{https://pixabay.com/images/id-937881/}{Number tiles} eftir geralt, Pixabay}%
+Þú elskar að spila leiki með vini þínum. Um þessar mundir er uppháldið ykkar leikurinn \emph{Stikl}.
+Til að byrja með eru $n$ reitir settir í línu, og tala af handahófi skrifuð á hvern þeirra.
+Reglur leiksins eru einfaldar. Báðir leikmenn byrja á reit af handahófi. Þeir
+skiptast svo á að kasta tening og framkvæma svo fjölda skrefa samkvæmt því.
+Hvert skref virkar þannig að leikmaðurinn færir sig á fyrsta reitinn til hægri sem hefur \emph{ekki} lægra númer en reiturinn sem hann er nú þegar á.
+Það erfiðasta við þennan leik er að finna út hvar leikmaðurinn endar eftir ákveðinn fjölda af skrefum.
+
+\section*{Inntak}
+Fyrsta lína inniheldur tvær heiltölur $n$ og $q$ ($1 \leq n, q \leq 10^5$), fjöldi reita og fjöldi fyrirspurna.
+Önnur lína inniheldur $n$ heiltölur $a_1,a_2,\ldots,a_n$ ($1 \leq a_i \leq 10^9$) sem tákna tölurnar á reitunum frá vinstri til hægri.
+Svo fylgja $q$ fyrirspurnir, hver á línu sem inniheldur tvær heiltölur $s$ og
+$d$ ($1 \leq s \leq n$, $1 \leq d \leq 10^5$), númerið á reitnum sem
+leikmaður byrjar á og fjöldi skrefa sem hann framkvæmir.
+
+\section*{Úttak}
+Fyrir hverja fyrirspurn skrifið út eina línu með númeri reitsins sem
+leikmaðurinn endar á, ef hann byrjar á reit $s$ og framkvæmir $d$ skref. Ef
+leikmaðurinn myndi hoppa út fyrir enda reitanna, skrifið þá ``\texttt{leik lokid}''
+í þeirri fyrirspurn.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 42   & $n, q \leq 100$ \\ \hline
+2     & 26   & $s$ er alltaf $1$ \\ \hline
+3     & 32   & Engar frekari takmarkanir\\ \hline
+\end{tabular}
+
