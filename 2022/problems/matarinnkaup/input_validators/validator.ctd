@@ -1,0 +1,32 @@
+INT(1, 10000, u) SPACE INT(1, 10000, k) NEWLINE
+SET(c = 0)
+REP(u, NEWLINE) 
+    REGEX("[a-z_]+", s)
+    SET(c = c + 1)
+    ASSERT(STRLEN(s) <= 20)
+    NEWLINE
+    INT(1, 10000, h)
+    NEWLINE
+    REP(h, NEWLINE)
+        REGEX("[a-z_]+", s)
+        SET(c = c + 1)
+        ASSERT(STRLEN(s) <= 20)
+        SPACE
+        INT(1, 500)
+    END
+END
+NEWLINE
+REP(k, NEWLINE)
+    INT(1, 10000, n)
+    NEWLINE
+    REP(n, NEWLINE)
+        REGEX("[a-z_]+", s)
+        SET(c = c + 1)
+        ASSERT(STRLEN(s) <= 20)
+        SPACE
+        INT(1, 500)
+    END
+END
+NEWLINE
+ASSERT(c <= 50000)
+EOF

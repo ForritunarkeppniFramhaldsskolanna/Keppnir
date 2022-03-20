@@ -1,0 +1,61 @@
+\problemname{Orðla}
+\illustration{0.3}{letters}{Mynd fengin af \href{https://unsplash.com/photos/gL7oJLJOb_I}{Unsplash}}%
+Orðaleikurinn Orðla hefur farið um eins og eldur í sinu á netinu undanfarið.
+Leikurinn virkar þannig að þú ert með orðabók af $n$ fimm-stafa enskum orðum,
+en tölvan hefur valið eitt af þessum orðum í leyni. Leikmaðurinn má giska eins
+oft og hann vill á orð úr orðabókinni til að finna leynda orðið, en því færri
+gisk sem hann þarf, því betra.
+
+Eftir hvert gisk aðstoðar tölvan leikmanninn með því að lita orðið hans, og
+tákna þannig hversu nálægt leikmaðurinn er leynda orðinu. Tölvan litar orðið á
+eftirfarandi hátt:
+
+\begin{enumerate}
+    \item Stafir sem eru þegar á réttum stað eru litaðir grænir, táknað með \texttt{O}.
+    \item Stafir sem eru í leynda orðinu en eru ekki á réttum stað eru litaðir
+        gulir, táknað með \texttt{/}. Ef stafur kemur oftar fyrir í
+        ágiskuninni en leynda orðinu, þá litar tölvan bara vinstrustu eintökin
+        af þessum staf, eða eins mörg eintök og eru í leynda orðinu.
+    \item Restin af stöfunum eru litaðir gráir, táknað með \texttt{X}.
+\end{enumerate}
+
+Sem dæmi, ef leikmaður giskar á \texttt{error} en leynda orðið er
+\texttt{racer}, þá mun tölvan lita ágiskunina með \texttt{//XXO}.
+
+\section*{Gagnvirkni}
+Þetta er gagnvirkt vandamál. Lausnin þín verður keyrð á móti gagnvirkum dómara
+sem les úttakið frá lausninni þinni og skrifar í inntakið á lausninni þinni.
+Þessi gagnvirkni fylgir ákveðnum reglum:
+
+Dómarinn skrifar fyrst út eina línu með heiltölunni $n$ ($1 \leq n \leq 500$),
+fjöldi orða í orðabókinni. Næst skrifar dómarinn $n$ línur með orðunum úr
+orðabókinni, sem hvert samanstendur af fimm enskum lágstöfum. Öll orðin eru
+mismunandi. Dómarinn velur svo eitt af þessum orðum alveg af handahófi.
+
+Næst giskar lausnin þín á orð úr orðabókinni með því að skrifa út línu með því
+orði. Dómarinn svarar með því að skrifa út eina línu sem inniheldur lituðu
+útgáfuna af ágiskuninni eins og útskýrt er að ofan. Ef litunin er
+\texttt{OOOOO} þá hefur lausnin þín giskað á rétt orð og á að hætta þegar í
+stað. Annars á lausnin þín að giska aftur, eins og lýst er í byrjunninni á
+þessari málsgrein.
+
+Vertu viss um að gera \texttt{flush} eftir hvert gisk, t.d., með
+\begin{itemize}
+    \item \texttt{print(..., flush=True)} í Python,
+    \item \texttt{cout << ... << endl;} í C++,
+    \item \texttt{System.out.flush();} í Java.
+\end{itemize}
+
+Með dæminu fylgir tól til þess að hjálpa við að prófa lausnina þína.
+
+\section*{Stigagjöf}
+Lausnin þín verður keyrð á 100 mismunandi prófunartilfelli. Ef lausnin þín þarf
+$g$ gisk til að leysa prófunartilfelli sem inniheldur $n$ orð, þá fær lausnin
+% $\mathrm{max}(0, 1 - x / (1 + exp(-x)))$ stig fyrir það prófunartilfelli, þar
+% sem $x = (g-1) / n$.
+$\mathrm{max}(0, 1 - (g-1)^2/n)$ stig fyrir það prófunartilfelli.
+Lokastigafjöldi er svo summa stiga úr öllum prófunartilfellum.
+
+Við ábyrgjumst að $30$ prófunartilfelli hafa $n\leq 10$, $50$ prófunartilfelli
+hafa $10 < n \leq 100$, og $20$ prófunartilfelli hafa $n = 500$.
+

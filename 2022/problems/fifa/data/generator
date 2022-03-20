@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution sammi_100.py opt
+
+compile random_generator.py
+
+samplegroup
+sample 1
+sample 2
+
+group GA 50
+for i in {01..10}; do
+tc GA-$i random_generator 10**3 2*10 random
+done;
+for i in {01..05}; do
+tc GA-edge-$i random_generator 10**3 ${i#0} edge
+tc GA-same-$i random_generator 10**3 10**3 same
+done;
+tc GA-zero random_generator 0 10**3
+
+group GB 50
+include_group GA
+
+for i in {01..10}; do
+tc GB-$i random_generator 2*10**9 2*10 random
+done;
+for i in {01..05}; do
+tc GB-edge-$i random_generator 2*10**9 ${i#0} edge
+tc GB-same-$i random_generator 2*10**9 10**3 same
+done;

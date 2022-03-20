@@ -1,0 +1,73 @@
+\problemname{Bendilfærslur}
+\illustration{0.3}{dns}{Mynd fengin af \href{https://www.ripe.net/manage-ips-and-asns/db/support/configuring-reverse-dns}{RIPE NCC}}
+
+Níels er mjög gleyminn og á alltof mörg lén. Þegar hann var að setja upp vefsíðuna sína
+lenti hann í því að gleyma á hvaða léni síðan er á, en sem betur fer hann var búin 
+að skrifa niður hver IP talan á vefsíðunni sinni er. Nú þarf Níels að finna á hvaða léni 
+síðan hans er á, því honum langar að sýna vini sínum síðuna sína. Hann 
+þarf því að framkvæma öfuga DNS leit til að finna lénið sitt. Til þess 
+þarf hann hinsvegar að breyta IP tölunni á form fyrir bendilfærslu (e. PTR record) 
+en þar sem hann er of upptekinn við að miðja div á síðunni 
+sinni bað hann þig um að koma IP tölunni yfir á rétt form.
+
+\section*{Inntak}
+Ein lína með einni IP tölu sem getur verið annaðhvort IPv4 eða IPv6.
+
+IPv4 tölur samanstanda af fjórum pörtum.
+Hver partur er ein heiltala á bilinu $0$ til $255$.
+Partarnir eru aðskildir með punkti.
+
+Dæmi um gildar IPv4 tölur
+\begin{itemize}
+	\item \texttt{10.100.80.13}
+	\item \texttt{255.255.255.255}
+	\item \texttt{255.160.134.0}
+\end{itemize}
+
+Dæmi um ógildar IPv4 tölur
+\begin{itemize}
+	\item \texttt{300.1.35.28}
+	\item \texttt{255.255.255.254.1}
+	\item \texttt{127,0,0,1}
+\end{itemize}
+
+IPv6 tölur samanstanda af átta pörtum.
+Hver partur er fjögurra stafa sextándakerfistala.
+Sextándakerfistölur eru táknaðar með tölustöfunum $0$ til $9$ og bókstöfunum $a$ til $f$.
+Partarnir eru aðskildir með tvípunkti.
+Í hverjum parti fyrir sig má sleppa að skrifa inn ofauknum núllum framan af tölunni.
+Ef það eru tveir eða fleiri samliggjandi partar sem innihalda bara 0 þá er hægt að stytta þá út með því að skrifa tvo tvípunkta í staðinn.
+Þetta er einungis hægt að gera á einum stað í IP tölunni.
+
+Dæmi um gildar IPv6 tölur
+\begin{itemize}
+	\item \texttt{ffff:dead:1337:beef:4321:f33d:2f92:3419}
+	\item \texttt{2001:db8:0:0:0:ff00:42:8329}
+	\item \texttt{::1}
+\end{itemize}
+
+Dæmi um ógildar IPv6 tölur
+\begin{itemize}
+	\item \texttt{0123:4567:89ab:cdef:ghij:klmn:opqr:stuv}
+	\item \texttt{ffff:1234::f6b90::abcd}
+	\item \texttt{2001:db8:0:0:0:ff00:42:8329:1234}
+\end{itemize}
+
+\section*{Úttak}
+Ein lína þar sem er búið að breyta IP tölunni yfir á form fyrir bendilfærslu.
+
+IPv4 tölur á bendilfærslu formi eru þannig að röðinni á pörtunum fjórum er snúið við og \texttt{in-addr.arpa.} bætt við í lokin.
+
+Síðan eru IPv6 tölur á bendilfærslu formi þannig að óstyttu gerðinni af 
+tölunni er snúið við, sleppt tvípunktunum og settur er punktur á milli hvers tákns. 
+Síðan er bætt við \texttt{.ip6.arpa.} í endann.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 30   & Einungis IPv4 \\ \hline
+2     & 40   & Einungis IPv6, þar sem ekki er búið að stytta út samliggjandi 0 \\ \hline
+3     & 30   & Engar frekari takmarkanir \\ \hline
+\end{tabular}
+

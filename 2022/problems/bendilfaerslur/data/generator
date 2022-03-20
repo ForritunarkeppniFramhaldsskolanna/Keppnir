@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution elvar_100.py
+
+compile random_generator.py
+
+samplegroup
+sample 1
+sample 2
+sample 3
+
+group gA 30
+for i in {01..10}; do
+	tc GA-$i random_generator IPV4
+done;
+
+group gB 40
+for i in {01..10}; do
+	tc GB-$i random_generator IPV6
+done;
+
+group gC 30
+include_group gB
+for i in {01..09}; do
+	tc GC-$i random_generator IPV6_edge_at $i
+done;
+for i in {10..20}; do
+	tc GC-$i random_generator IPV6_edge
+done;
+
+

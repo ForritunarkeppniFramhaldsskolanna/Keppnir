@@ -1,0 +1,61 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution atli_cube_100.cpp opt
+
+compile random_generator.py
+
+samplegroup
+sample 1
+sample 2
+
+group gA 40
+for i in {01..10}; do
+tc gA-rand-$i random_generator 1 10**6 1 100
+done;
+for i in {11..20}; do
+tc gA-rand-$i random_generator 1 10**6 1 10
+done;
+for i in {01..05}; do
+tc gA-randeq-$i random_generator 1 10**6 1 10**6
+done;
+tc gA-edge-1 random_generator 10**6-2 10**6-2 10**6 10**6
+tc gA-edge-2 random_generator 10**6-1 10**6-1 10**6 10**6
+tc gA-edge-3 random_generator 10**6 10**6 10**6 10**6
+tc gA-edge-4 random_generator 10**6 10**6 10**6-1 10**6-1
+tc gA-edge-5 random_generator 10**6 10**6 10**6-2 10**6-2
+tc gA-maxans random_generator 2**19-1 2**19-1 1 1
+tc gA-manual-1 random_generator 647 647 3 3
+
+group gB 30
+include_group gA
+for i in {01..10}; do
+tc gB-rand-$i random_generator 1 10**12 1 10**4
+done;
+for i in {11..20}; do
+tc gB-rand-$i random_generator 1 10**12 1 10**2
+done;
+for i in {01..05}; do
+tc gB-randeq-$i random_generator 1 10**12 1 10**12
+done;
+tc gB-maxans random_generator 2**39-1 2**39-1 1 1
+tc gB-manual-01 random_generator 1372226 1372226 4 4
+tc gB-manual-02 random_generator 1372569 1372569 4 4
+tc gB-manual-03 random_generator 1020111101 1020111101 1009 1009
+tc gB-manual-04 random_generator 1184004033 1184004033 777 777
+
+group gC 30
+include_group gA
+include_group gB
+for i in {01..10}; do
+tc gC-rand-$i random_generator 1 10**18 1 10**6
+done;
+for i in {11..20}; do
+tc gC-rand-$i random_generator 1 10**18 1 10**3
+done;
+for i in {01..05}; do
+tc gC-randeq-$i random_generator 1 10**18 1 10**18
+done;
+tc gC-maxans random_generator 2**59-1 2**59-1 1 1
+tc gC-manual-01 random_generator 10906574194895 10906574194895 23 23

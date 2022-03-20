@@ -1,0 +1,158 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution ../empty.py opt
+
+compile random_generator.py
+compile repeat.py
+
+samplegroup
+sample 1
+
+group gA 10
+tc gA-01 random_generator adaptive 10**3 4*10**3
+tc gA-02 random_generator random 25 25 25 25 10**3 4*10**3
+tc gA-03 random_generator random 25 25 25 25 10**3 4*10**3
+tc gA-04 random_generator random 25 25 25 25 10**3 4*10**3
+
+group gB 25
+include_group gA
+tc gB-01 random_generator adaptive 10**3 3*10**3+1
+tc gB-02 random_generator random 25 25 25 25 10**3 3*10**3+1
+tc gB-03 random_generator random 25 25 25 25 10**3 3*10**3+1
+tc gB-04 random_generator random 25 25 25 25 10**3 3*10**3+1
+
+group gC 25
+include_group gA
+tc gC-01 random_generator random 25 25 25 25 10**3 2.75*10**3
+tc gC-02 random_generator random 25 25 25 25 10**3 2.75*10**3
+tc gC-03 random_generator random 25 25 25 25 10**3 2.75*10**3
+tc gC-04 random_generator random 10 50 30 10 10**3 2.75*10**3
+tc gC-05 random_generator random 30 10 10 50 10**3 2.75*10**3
+tc gC-06 random_generator random 40 15 15 30 10**3 2.75*10**3
+tc gC-07 random_generator random  0 33 33 34 10**3 2.75*10**3
+tc gC-08 random_generator random 34  0 33 33 10**3 2.75*10**3
+tc gC-09 random_generator random 33 34  0 33 10**3 2.75*10**3
+tc gC-10 random_generator random 33 33 34  0 10**3 2.75*10**3
+tc gC-11 random_generator random 50  0  0 50 10**3 2.75*10**3
+tc gC-12 repeat P 10**3 2.75*10**3
+tc gC-13 repeat I 10**3 2.75*10**3
+tc gC-14 repeat Z 10**3 2.75*10**3
+tc gC-15 repeat A 10**3 2.75*10**3
+tc gC-16 repeat PI 10**3 2.75*10**3
+tc gC-17 repeat PZ 10**3 2.75*10**3
+tc gC-18 repeat PA 10**3 2.75*10**3
+tc gC-19 repeat IP 10**3 2.75*10**3
+tc gC-20 repeat IZ 10**3 2.75*10**3
+tc gC-21 repeat IA 10**3 2.75*10**3
+tc gC-22 repeat ZP 10**3 2.75*10**3
+tc gC-23 repeat ZI 10**3 2.75*10**3
+tc gC-24 repeat ZA 10**3 2.75*10**3
+tc gC-25 repeat AP 10**3 2.75*10**3
+tc gC-26 repeat AI 10**3 2.75*10**3
+tc gC-27 repeat AZ 10**3 2.75*10**3
+tc gC-28 repeat PII 10**3 2.75*10**3
+tc gC-29 repeat PIZ 10**3 2.75*10**3
+tc gC-30 repeat PIA 10**3 2.75*10**3
+tc gC-31 repeat PZI 10**3 2.75*10**3
+tc gC-32 repeat PZZ 10**3 2.75*10**3
+tc gC-33 repeat PZA 10**3 2.75*10**3
+tc gC-34 repeat PAI 10**3 2.75*10**3
+tc gC-35 repeat PAZ 10**3 2.75*10**3
+tc gC-36 repeat PAA 10**3 2.75*10**3
+tc gC-37 repeat IPP 10**3 2.75*10**3
+tc gC-38 repeat IPZ 10**3 2.75*10**3
+tc gC-39 repeat IPA 10**3 2.75*10**3
+tc gC-40 repeat IZP 10**3 2.75*10**3
+tc gC-41 repeat IZZ 10**3 2.75*10**3
+tc gC-42 repeat IZA 10**3 2.75*10**3
+tc gC-43 repeat IAP 10**3 2.75*10**3
+tc gC-44 repeat IAZ 10**3 2.75*10**3
+tc gC-45 repeat IAA 10**3 2.75*10**3
+tc gC-46 repeat ZPP 10**3 2.75*10**3
+tc gC-47 repeat ZPI 10**3 2.75*10**3
+tc gC-48 repeat ZPA 10**3 2.75*10**3
+tc gC-49 repeat ZIP 10**3 2.75*10**3
+tc gC-50 repeat ZII 10**3 2.75*10**3
+tc gC-51 repeat ZIA 10**3 2.75*10**3
+tc gC-52 repeat ZAP 10**3 2.75*10**3
+tc gC-53 repeat ZAI 10**3 2.75*10**3
+tc gC-54 repeat ZAA 10**3 2.75*10**3
+tc gC-55 repeat APP 10**3 2.75*10**3
+tc gC-56 repeat API 10**3 2.75*10**3
+tc gC-57 repeat APZ 10**3 2.75*10**3
+tc gC-59 repeat AIP 10**3 2.75*10**3
+tc gC-60 repeat AII 10**3 2.75*10**3
+tc gC-61 repeat AIZ 10**3 2.75*10**3
+tc gC-62 repeat AZP 10**3 2.75*10**3
+tc gC-63 repeat AZI 10**3 2.75*10**3
+tc gC-64 repeat AZZ 10**3 2.75*10**3
+tc gC-65 repeat PIZZA 10**3 2.75*10**3
+
+group gD 40
+include_group gC
+tc gD-01 random_generator random 25 25 25 25 10**3 2.45*10**3
+tc gD-02 random_generator random 25 25 25 25 10**3 2.45*10**3
+tc gD-03 random_generator random 25 25 25 25 10**3 2.45*10**3
+tc gD-04 random_generator random 10 50 30 10 10**3 2.45*10**3
+tc gD-05 random_generator random 30 10 10 50 10**3 2.45*10**3
+tc gD-06 random_generator random 40 15 15 30 10**3 2.45*10**3
+tc gD-07 random_generator random  0 33 33 34 10**3 2.45*10**3
+tc gD-08 random_generator random 34  0 33 33 10**3 2.45*10**3
+tc gD-09 random_generator random 33 34  0 33 10**3 2.45*10**3
+tc gD-10 random_generator random 33 33 34  0 10**3 2.45*10**3
+tc gD-11 random_generator random 50  0  0 50 10**3 2.45*10**3
+tc gD-12 repeat P 10**3 2.45*10**3
+tc gD-13 repeat I 10**3 2.45*10**3
+tc gD-14 repeat Z 10**3 2.45*10**3
+tc gD-15 repeat A 10**3 2.45*10**3
+tc gD-16 repeat PI 10**3 2.45*10**3
+tc gD-17 repeat PZ 10**3 2.45*10**3
+tc gD-18 repeat PA 10**3 2.45*10**3
+tc gD-19 repeat IP 10**3 2.45*10**3
+tc gD-20 repeat IZ 10**3 2.45*10**3
+tc gD-21 repeat IA 10**3 2.45*10**3
+tc gD-22 repeat ZP 10**3 2.45*10**3
+tc gD-23 repeat ZI 10**3 2.45*10**3
+tc gD-24 repeat ZA 10**3 2.45*10**3
+tc gD-25 repeat AP 10**3 2.45*10**3
+tc gD-26 repeat AI 10**3 2.45*10**3
+tc gD-27 repeat AZ 10**3 2.45*10**3
+tc gD-28 repeat PII 10**3 2.45*10**3
+tc gD-29 repeat PIZ 10**3 2.45*10**3
+tc gD-30 repeat PIA 10**3 2.45*10**3
+tc gD-31 repeat PZI 10**3 2.45*10**3
+tc gD-32 repeat PZZ 10**3 2.45*10**3
+tc gD-33 repeat PZA 10**3 2.45*10**3
+tc gD-34 repeat PAI 10**3 2.45*10**3
+tc gD-35 repeat PAZ 10**3 2.45*10**3
+tc gD-36 repeat PAA 10**3 2.45*10**3
+tc gD-37 repeat IPP 10**3 2.45*10**3
+tc gD-38 repeat IPZ 10**3 2.45*10**3
+tc gD-39 repeat IPA 10**3 2.45*10**3
+tc gD-40 repeat IZP 10**3 2.45*10**3
+tc gD-41 repeat IZZ 10**3 2.45*10**3
+tc gD-42 repeat IZA 10**3 2.45*10**3
+tc gD-43 repeat IAP 10**3 2.45*10**3
+tc gD-44 repeat IAZ 10**3 2.45*10**3
+tc gD-45 repeat IAA 10**3 2.45*10**3
+tc gD-46 repeat ZPP 10**3 2.45*10**3
+tc gD-47 repeat ZPI 10**3 2.45*10**3
+tc gD-48 repeat ZPA 10**3 2.45*10**3
+tc gD-49 repeat ZIP 10**3 2.45*10**3
+tc gD-50 repeat ZII 10**3 2.45*10**3
+tc gD-51 repeat ZIA 10**3 2.45*10**3
+tc gD-52 repeat ZAP 10**3 2.45*10**3
+tc gD-53 repeat ZAI 10**3 2.45*10**3
+tc gD-54 repeat ZAA 10**3 2.45*10**3
+tc gD-55 repeat APP 10**3 2.45*10**3
+tc gD-56 repeat API 10**3 2.45*10**3
+tc gD-57 repeat APZ 10**3 2.45*10**3
+tc gD-59 repeat AIP 10**3 2.45*10**3
+tc gD-60 repeat AII 10**3 2.45*10**3
+tc gD-61 repeat AIZ 10**3 2.45*10**3
+tc gD-62 repeat AZP 10**3 2.45*10**3
+tc gD-63 repeat AZI 10**3 2.45*10**3
+tc gD-64 repeat AZZ 10**3 2.45*10**3
+tc gD-65 repeat PIZZA 10**3 2.45*10**3

@@ -1,0 +1,8 @@
+author: Hannes Kristján Hannesson
+source: Forritunarkeppni Framhaldsskólanna 2022
+rights_owner: Forritunarkeppni Framhaldsskólanna
+license: cc by-sa
+type: scoring
+validator_flags: float_absolute_tolerance 1e-5
+grading:
+    show_test_data_groups: true

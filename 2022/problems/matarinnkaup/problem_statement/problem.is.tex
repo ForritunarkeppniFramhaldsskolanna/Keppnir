@@ -1,0 +1,35 @@
+\problemname{Matarinnkaup}
+\illustration{0.3}{salad}{Mynd fengin af \href{https://commons.wikimedia.org/wiki/File:Chicken_salad_on_striped_tablecloth.jpg}{commons.wikimedia.org}}
+
+Vel seldist af allskyns mat og drykk á Nauthóli síðustu daga. Nú er hins vegar
+komið að því að taka lagerstöðuna og undirbúa innkaup. Það verk fellur nú á þig.
+Gefið bæði uppskriftalista Nauthóls og kvittanir síðustu daga, hvað er búið að fara
+mikið af hverju hráefni?
+
+\section*{Inntak}
+Fyrsta línan í inntakinu inniheldur tvær heiltölur $1 \leq u, k \leq 10^4$ þar sem
+$u$ er fjöldi uppskrifta og $k$ er fjöldi kvittana. Næst koma $u$ lýsingar á uppskriftum.
+Fyrsta lína hverrar lýsingar inniheldur streng sem gefur nafn réttsins. Nöfn rétta eru einstök.
+Næsta lína inniheldur eina heiltölu $1 \leq h \leq 10^4$, fjölda hráefna sem uppskriftin
+kallar á. Loks koma $h$ línur, hver með nafninu á einu hráefni, bili og svo heiltölu $1 \leq x \leq 500$.
+Þetta merkir að til þurfi $x$ eintök af þessu hráefni í réttinn.
+Svo koma $k$ lýsingar á kvittunum. Hver þeirra byrjar á línu með einni heiltölu $1 \leq n \leq 10^4$,
+fjölda rétta sem er á kvittuninni. Þar á eftir koma $n$ línur. Hver þeirra inniheldur nafn á rétti,
+bili og svo heiltölu $1 \leq y \leq 500$. Þetta merkir að $y$ eintök af réttinum voru keypt. Gefið
+er að þessir réttir komu fyrir í uppskriftalistanum ofar í inntaki. Sérhvert nafn í inntaki er að hámarki
+$20$ stafir og samanstendur af enskum lágstöfum ásamt undirstrikum. Heildarfjöldi nafna í inntaki verður
+einnig í mesta lagi $5 \cdot 10^4$.
+
+\section*{Úttak}
+Skrifið út hvað þarf mikið af hverju hráefni, eitt hráefni á hverri línu. Á hverja línu á að skrifa
+nafn hráefnisins, eitt bil og svo heiltölu sem segir til um hversu mikið þarf af því. Prenta á
+hráefnin í stafrófsröð. Ef ekki þarf að nota hráefnið á ekki að prenta það í úttaki.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 50   & Það eru mest $500$ nöfn í inntakinu. \\ \hline
+2     & 50   & Engar frekari takmarkanir\\ \hline
+\end{tabular}
+

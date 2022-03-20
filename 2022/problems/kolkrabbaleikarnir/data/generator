@@ -1,0 +1,62 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution atli_linear_100.cpp
+
+compile random_generator.py
+
+samplegroup
+sample 1
+sample 2
+sample 3
+
+group GA-one-row 10
+for i in {00..04}; do
+tc GA-one-row-$i random_generator 1 1 $i $i
+done;
+for i in {05..12}; do
+tc GA-one-row-$i random_generator 1 1 5 1000
+done;
+
+group GB-one-person 20
+tc GB-one-person-00 random_generator 0 0 1 1
+tc GA-one-row-01
+tc GB-one-person-02 random_generator 2 2 1 1
+tc 3
+tc GB-one-person-04 random_generator 4 4 1 1
+for i in {05..12}; do
+tc GB-one-person-$i random_generator 5 1000 1 1
+done;
+
+group GC-slow 30
+tc GC-slow-00 random_generator 0 0 0 0
+for i in {01..05}; do
+tc GC-slow-$i random_generator 2 10 2 9
+done;
+for i in {06..10}; do
+tc GC-slow-$i random_generator 2 9 2 10
+done;
+tc GC-slow-11 random_generator 10 10 10 10
+
+group GD-dp 30
+include_group GA-one-row
+include_group GB-one-person
+include_group GC-slow
+for i in {01..05}; do
+tc GD-dp-$i random_generator 11 1000 11 999
+done;
+for i in {06..10}; do
+tc GD-dp-$i random_generator 11 999 11 1000
+done;
+tc GD-dp-11 random_generator 1000 1000 1000 1000
+
+group GE-linear 10
+include_group GD-dp
+for i in {01..05}; do
+tc GE-linear-$i random_generator 1001 1000000 1001 999999
+done;
+for i in {06..10}; do
+tc GE-linear-$i random_generator 1001 999999 1001 1000000
+done;
+tc GE-linear-11 random_generator 1000000 1000000 1000000 1000000

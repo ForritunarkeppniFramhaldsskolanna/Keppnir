@@ -1,0 +1,31 @@
+\problemname{Tvær Vikur}
+\illustration{0.3}{tvaervikur}{Mynd fengin af \href{https://commons.wikimedia.org/wiki/File:Fortnite_F_lettermark_logo.png}{commons.wikimedia.org}}
+
+`Sælir drengir, hvar erum við að detta inn?' heyrist í heyrnartólunum hjá Benna. Hann stynur og reynir að halda sér við efnið. Benni er að 
+keppa í leiknum `Tvær vikur'. Á hliðarlínunni situr Arnar sem fylgist vel með. Arnar er óður í veðmál og veit ekkert betra en að sigra veðbankana.
+Hann veltir því fyrir sér í hvaða sæti sérhver keppandi gæti lent í svo hann geti veðjað rétt. \\
+
+Eins og stendur eru $n$ keppendur. Keppandi númer $i$ hefur $a_i$ lífpunkta eftir. Ef tveir þeirra rekast á hvorn annan berjast þeir og
+missa báðir $B$ þessarra lífpunkta. Ef annar þeirra hefur enga lífpunkta eftir þá tapar hann. Athugið að það getur gerst að báðir leikmenn tapa samtímis. Ef það voru $H$ aðrir eftir á lífi þegar leikmaður
+tapar lendir hann í sæti $H + 1$. Ef leikmaður lifir þetta af fer hann sína leið að þessu loknu og berst næst aftur þegar hann rekst á
+annan leikmann, mögulega þann sama. \\
+
+Keppendur geta rekist á hvorn annan í hvaða röð sem er. Arnar vill nú vita, fyrir hvern keppenda, hvað er efsta sætið sem hann gæti
+lent í fyrir allar mögulegar uppsetningar af árekstrum.
+
+\section*{Inntak}
+Fyrsta línan í inntakinu inniheldur tvær heiltölur $1 \leq n \leq 10^5$ og $1 \leq B \leq 10^9$.
+Næsta línan inniheldur $n$ heiltölur $1 \leq a_1, a_2, \dots, a_n \leq 10^9$, með einu bili milli talna.
+
+\section*{Úttak}
+Prentið $b_1, b_2, \dots, b_n$ með bili milli talnanna þar sem $b_i$ er hæsta sætið sem keppandi $i$ gæti lent í.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 20   & $n \leq 3$ \\ \hline
+2     & 30   & $n \leq 10^3$ \\ \hline
+3     & 50   & Engar frekari takmarkanir \\ \hline
+\end{tabular}
+

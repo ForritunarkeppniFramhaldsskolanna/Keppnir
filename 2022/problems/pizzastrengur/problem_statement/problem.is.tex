@@ -1,0 +1,50 @@
+\problemname{Pizzastrengur}
+\illustration{0.3}{pizza}{Mynd fengin af \href{https://upload.wikimedia.org/wikipedia/commons/a/a3/Eq_it-na_pizza-margherita_sep2005_sml.jpg}{wikipedia.com}}
+
+Í dag er leikjadagur hjá Tommapizzu þannig að Georg og félagar ætla að panta
+sér pizzu. Leikurinn virkar þannig að starfsmenn Tommapizzu velja sér leyniorð
+sem inniheldur einungis stafina \{``\texttt{P}'', ``\texttt{I}'',
+``\texttt{Z}'', ``\texttt{A}''\} og segja Georgi og félögum hvað það er langt.
+Ef Georg og félagar ná að giska á leyniorðið í að hámarki $m$ tilraunum þá fá
+þeir pizzuna frítt! Georg og félagar mega giska á styttri orð en þá segja
+starfsmenn Tommapizzu hvort orðið sé forskeyti af leyniorðinu. Getur þú hjálpað
+Georgi og félögum að giska á rétt orð þannig að þeir fái pizzuna frítt?
+
+Orð $A$ er forskeyti af orði $B$ ef $B$ byrjar á $A$. Til dæmis er ``PIZ''
+forskeyti af ``PIZZA'' en ``ZZA'' er ekki forskeyti af ``PIZZA''.
+
+\section*{Gagnvirkni}
+Þetta er gagnvirkt vandamál. Lausnin þín verður keyrð á móti gagnvirkum dómara
+sem les úttakið frá lausninni þinni og skrifar í inntakið á lausninni þinni.
+Þessi gagnvirkni fylgir ákveðnum reglum:
+
+Dómarinn skrifar fyrst út heiltölu $n$ ($1 \leq n \leq 10^4$), lengd
+leyniorðsins $S$ sem inniheldur bara stafina \{``\texttt{P}'', ``\texttt{I}'',
+``\texttt{Z}'', ``\texttt{A}''\}.
+
+Næst giskar lausnin þín á streng $P$ sem má innihalda 1 til $n$ stafi. Loks
+svarar dómarinn:
+\begin{itemize}
+    \item Ef $P$ er ekki forskeyti af $S$ þá svarar dómarinn 0.
+    \item Ef $P$ er forskeyti af $S$ þá svarar dómarinn 1.
+    \item EF $P = S$ þá svarar dómarinn 2 og lausnin þín á að hætta að giska.
+\end{itemize}
+
+Vertu viss um að gera \texttt{flush} eftir hvert gisk, t.d., með
+\begin{itemize}
+    \item \texttt{print(..., flush=True)} í Python,
+    \item \texttt{cout << ... << endl;} í C++,
+    \item \texttt{System.out.flush();} í Java.
+\end{itemize}
+
+Með dæminu fylgir tól til þess að hjálpa við að prófa lausnina þína.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+    \hline
+    Hópur & Stig & Takmarkanir \\ \hline
+    1     & 10   & $1 \leq n \leq 10^3, m = 4 \cdot n$ \\ \hline
+    2     & 25   & $1 \leq n \leq 10^3, m = 3 \cdot n + 1$ \\ \hline
+    3     & 25   & $n = 10^3, m = 2.75 \cdot n$ \\ \hline
+    4     & 40   & $n = 10^3, m = 2.45 \cdot n$ \\ \hline
+\end{tabular}

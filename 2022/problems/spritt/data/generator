@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution sammi_100.cpp opt
+
+compile random_generator.py
+
+samplegroup
+sample 1
+sample 2
+
+group gA 50
+tc gA-01 random_generator 10**3 10**8 normal
+tc gA-02 random_generator 10**3 10**8 normal
+tc gA-03 random_generator 10**3 10**8 normal
+tc gA-04 random_generator 10**3 10**8 normal
+tc gA-05 random_generator 10**3 10**8 normal
+tc gA-yep1 random_generator 10**3 10**8 exact
+tc gA-edge1 random_generator 10**3 10**8 edge
+
+
+group gB 50
+include_group gA
+tc gB-01 random_generator 10**6 10**8 normal
+tc gB-02 random_generator 10**6 10**8 normal
+tc gB-03 random_generator 10**6 10**8 normal
+tc gB-04 random_generator 10**6 10**8 normal
+tc gB-05 random_generator 10**6 10**8 normal
+tc gB-yep1 random_generator 10**6 10**8 exact
+tc gB-edge1 random_generator 10**6 10**8 edge
+tc gB-edge2 random_generator 10**6 10**8 edge
+
+

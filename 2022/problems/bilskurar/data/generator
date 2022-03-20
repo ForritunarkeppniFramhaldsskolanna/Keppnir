@@ -1,0 +1,57 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution atli_100.cpp
+
+compile random_generator.py
+
+samplegroup
+sample 1
+sample 2
+sample 3
+
+LO_GA=1
+HI_GA=10
+
+LO_GB=$(($HI_GA + 1))
+HI_GB=1000
+
+LO_GD=$(($HI_GB + 1))
+HI_GD=200000
+
+group GA 20
+for i in {01..09}; do
+tc GA-$i random_generator inc random $LO_GA $HI_GA
+done
+tc GA-10 random_generator inc random $HI_GA $HI_GA
+
+group GB 20
+include_group GA
+for i in {01..09}; do
+tc GB-$i random_generator inc random $LO_GB $HI_GB
+done
+tc GB-10 random_generator inc random $HI_GB $HI_GB
+
+group GC 20
+include_group GB
+for i in {01..09}; do
+tc GC-$i random_generator random random $LO_GB $HI_GB
+done
+tc GC-10 random_generator random random $HI_GB $HI_GB
+
+group GD 20
+include_group GB
+for i in {01..09}; do
+tc GD-$i random_generator inc random $LO_GD $HI_GD
+done
+tc GD-10 random_generator inc random $HI_GD $HI_GD
+
+group GE 20
+include_group GC
+include_group GD
+for i in {01..09}; do
+tc GE-$i random_generator random random $LO_GD $HI_GD
+done
+tc GE-10 random_generator random random $HI_GD $HI_GD
+

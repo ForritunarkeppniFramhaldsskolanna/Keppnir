@@ -1,0 +1,54 @@
+\problemname{Hittast}
+\illustration{0.3}{leidarkerfi}{Mynd fengin af \href{https://pixels-cache.icelandair.com/upload/w_3200\%2Cg_auto\%2Cc_fill\%2Cf_auto\%2Cq_auto/icelandair/bltc8254562698160cd.jpg}{icelandair.com} með leyfi}
+
+Álfur og Benedikt eru ástfangnir og vilja ekkert meira en að verja tíma sínum saman.
+Því miður búa þeir mjög langt í burtu frá hvorum öðrum. Álfur býr í Helsinki en
+Benedikt býr í Buenos Aires. Því geta þeir ekki bara hist hvenær sem er.
+Þeir ákveða því að skipuleggja hvar og hvenær þeir ætla sér að hittast.
+
+Þeir hafa ákveðið dagsetningarnar nú þegar en þurfa aðstoð við val á staðsetningu.
+Þeim er í raun alveg sama hver staðsetningin er svo lengi sem þeir séu saman.
+Álfur er hinsvegar háskólanemi og hefur því mjög takmarkað fjármagn.
+Þess vegna biðja þeir þig um að finna ódýrustu lausnina fyrir sig.
+
+Benedikt skrifaði niður lista af mögulegum staðsetningum til að hittast á
+og fann besta verðið á gistingu á hverjum stað fyrir sig.
+Hann fann einnig marga mismunandi ferðamöguleika milli staðsetninga.
+Álfur og Benedikt eru með mismunandi kreditkort og fá því mismunandi tilboð.
+Getur þú fundið ódýrasta kostinn fyrir elskhugana með þessum upplýsingum?
+
+\section*{Inntak}
+Fyrsta línan í inntakinu inniheldur tvær heiltölur $n$ ($2 \leq n \leq 10^5$),
+fjölda staðsetninga sem koma til greina, og $m$ ($1 \leq m \leq 10^5$),
+fjölda mismunandi ferðaleiða milli staðsetninga.
+Helsinki er staðsetning $1$ og Buenos Aires er staðsetning $n$.
+
+Önnur línan inniheldur $n$ heiltölur, $g_1, \dotsc, g_n$,
+þar sem $g_i$ táknar gistingarkostnaðinn á staðsetningu númer $i$.
+
+Næst fylgja $m$ línur, þar sem hver lína inniheldur fjórar heiltölur $u$, $v$, $a$ og $b$,
+þar sem $u$ og $v$ eru staðsetningar sem má ferðast á milli í báðar áttir,
+$a$ er kostnaðurinn fyrir Álf að ferðast milli þessara staða og $b$ er kostnaðurinn fyrir Benedikt.
+Þar sem $u$ og $v$ tákna tvo mismunandi staði uppfylla gildin $1 \leq u, v \leq n$ og $u \neq v$.
+Benedikt skrifaði bara ódýrasta ferðamátann milli hverra staðsetninga þannig hvert par $u, v$ í 
+inntakinu er einstakt. Þar sem ódýrasti kosturinn til að ferðast frá staðsetningu til hinnar sömu 
+staðsetningu er $0$, kemur því aldrei fyrir lína þar sem endapunktarnir eru hinir sömu.
+
+Öll verð í inntakinu eru á bilinu $0$ til $10^4$.
+
+Það má gera ráð fyrir að það sé til bein eða óbein tenging frá 
+hverri einustu staðsetningu til hverrar einustu annarar staðsetningu.
+
+\section*{Úttak}
+Skrifaðu út eina heiltölu, verðið á ódýrasta ferðalaginu fyrir Álf og Benedikt.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 10   & Einungis Helsinki og Buenos Aires koma til greina: $n = 2, m = 1$ \\ \hline
+2     & 20   & Enginn ferðakostnaður, bara gistingakostnaður \\ \hline
+3     & 30   & $2 \leq n \leq 100$ \\ \hline
+4     & 40   & Engar frekari takmarkanir\\ \hline
+\end{tabular}
+

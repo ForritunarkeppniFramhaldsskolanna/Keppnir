@@ -1,0 +1,54 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution benni_100.cpp
+
+compile random_generator.py
+
+samplegroup
+sample 1
+sample 2
+sample 3
+
+group size3 40
+tc 1
+#tc size3-samp random_generator 3 3 1 2 2
+
+for i in {01..10}; do
+tc size3-$i random_generator 3 3 0 2 
+done;
+
+group large 60
+include_group size3
+for i in {01..10}; do
+tc large-$i random_generator 3 20 0 2 
+done;
+
+for i in {11..20}; do
+tc large-$i random_generator 500 1000 0 2 
+done;
+
+for i in {21..24}; do
+tc large-$i random_generator 3 20 1 2 
+done;
+
+for i in {25..27}; do
+tc large-$i random_generator 3 20 1 1 
+done;
+
+for i in {28..30}; do
+tc large-$i random_generator 3 20 1 0 
+done;
+
+for i in {31..34}; do
+tc large-$i random_generator 500 1000 1 2 
+done;
+
+for i in {35..37}; do
+tc large-$i random_generator 500 1000 1 1 
+done;
+
+for i in {38..40}; do
+tc large-$i random_generator 500 1000 1 0
+done;

@@ -1,0 +1,40 @@
+\problemname{Almennir Borgarar}
+\illustration{0.3}{queue}{Mynd fengin af \href{https://unsplash.com/photos/ysambitxV8M}{Unsplash}}%
+Í mörg ár hafa keppendur Forritunarkeppni Framhaldsskólanna fengið gómsæta
+hamborgara frá Hamborgarabúllu Tómasar í hádegismat. Keppendur mynda eina langa
+röð á meðan þeir bíða eftir borgurunum, en kokkar Búllunnar vinna hörðum höndum
+við að undirbúa borgarana. Kokkar Búllunnar eru mjög færir, og taka enga stund
+að undirbúa borgara. Eina undantekningin er að þeir þurfa að bíða eftir að
+borgararnir eldist á grillinu. Búllan er með $n$ lítil grill (númeruð frá $1$ til
+$n$), en hvert grill getur bara eldað einn borgara í einu. Grillin eru líka
+misheit og taka því mislangan tíma að elda borgara. Kokkarnir mældu þennan tíma
+og komust að því að grill númer $i$ tekur $t_i$ sekúndur að elda einn borgara.
+
+Nú bíður Benni spenntur í röðinni eftir að fá borgara, en það eru $m$ keppendur
+fyrir framan hann í röðinni. Ef kokkarnir nota grillin á sem bestan hátt, hvað
+er langt í að Benni fái borgarann sinn?
+
+\section*{Inntak}
+Fyrsta línan í inntakinu inniheldur tvær heiltölur $n$ ($1 \leq n \leq
+2\cdot10^5$), fjöldi grilla, og $m$ ($0 \leq m \leq 10^9$), fjöldi keppenda
+fyrir framan Benna í röðinni.
+
+Síðan kemur lína með $n$ heiltölum $t_1, t_2, \ldots, t_n$, þar sem $t_i$ ($1
+\leq t_i \leq 10^9$) er tíminn sem það tekur að elda borgara á grilli númer
+$i$.
+
+\section*{Úttak}
+Skrifið út í hversu margar sekúndur Benni þarf að bíða áður en hann fær borgarann
+sinn, ef kokkarnir nota grillin á sem bestan máta.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 20   & $n, m, t_i \leq 100$ \\ \hline
+2     & 20   & $n, m \leq 10^3$ \\ \hline
+3     & 20   & $m, t_i \leq 10^3$ \\ \hline
+4     & 10   & $m \leq 10^5$ \\ \hline
+5     & 30   & Engar frekari takmarkanir\\ \hline
+\end{tabular}
+

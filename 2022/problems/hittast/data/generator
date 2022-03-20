@@ -1,0 +1,51 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution arnar_100.java
+
+compile random_generator.py
+
+samplegroup
+sample 1
+sample 2
+sample 3
+
+group GA-two 10
+for i in {01..10}; do
+tc GA-two-$i random_generator path 2 2 0 10000 0 10000
+done;
+tc GA-two-11 random_generator path 2 2 0 10000 0 0
+tc GA-two-12 random_generator path 2 2 0 0 0 10000
+tc GA-two-13 random_generator path 2 2 0 0 0 0
+
+group GB-free-travel 20
+for i in {01..05}; do
+tc GB-free-travel-$i random_generator general 2 100000 0 0 0 10000
+done;
+for i in {06..10}; do
+tc GB-free-travel-$i random_generator general 100000 100000 0 0 0 10000
+done;
+tc GB-free-travel-11 random_generator tree 2 100000 0 0 0 10000
+tc GB-free-travel-12 random_generator complete 447 447 0 0 0 10000
+tc GB-free-travel-13 random_generator path 2 100000 0 0 0 10000
+tc GB-free-travel-14 random_generator path 2 100000 0 0 0 0
+
+group GC-small 30
+include_group GA-two
+for i in {01..10}; do
+tc GC-small-$i random_generator general 100 100 0 10000 0 10000
+done;
+tc GC-small-11 random_generator complete 100 100 0 10000 0 10000
+
+group GD-large 40
+include_group GB-free-travel
+include_group GC-small
+for i in {01..10}; do
+tc GD-large-$i random_generator general 100000 100000 0 10000 0 10000
+done;
+tc GD-large-11 random_generator tree 2 100000 0 10000 0 10000
+tc GD-large-12 random_generator complete 447 447 0 10000 0 10000
+tc GD-large-13 random_generator path 2 100000 0 10000 0 10000
+tc GD-large-14 random_generator path 2 100000 0 10000 0 0
+

@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution hannes_100.py
+
+compile random_generator.py
+
+samplegroup
+sample 1
+sample 2
+sample 3
+
+group gA 100
+tc gA-00-low random_generator 200 0 low
+tc gA-00-high random_generator 200 0 high
+tc gA-00-random-01 random_generator 200 0 random
+for category in {01..12}; do
+tc "gA-$category-low" random_generator 200 $category low
+tc "gA-$category-high" random_generator 200 $category high
+for i in {01..02}; do
+tc "gA-$category-random-$i" random_generator 200 $category random
+done
+done
+for i in {03..05}; do
+tc gA-12-random-$i random_generator 200 12 random
+done

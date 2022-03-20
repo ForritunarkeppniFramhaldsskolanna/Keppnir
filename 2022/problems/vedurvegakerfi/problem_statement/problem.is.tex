@@ -1,0 +1,63 @@
+\problemname{Veður - Vegakerfi}
+\illustration{0.3}{vegakerfi}{Mynd fengin af \href{https://www.vegagerdin.is/ferdaupplysingar/faerd-og-vedur/allt-landid-faerd-kort/}{vegagerdin.is}}
+
+Vegagerðin hefur samband við þig aftur varðandi annað verkefni.
+Nú eru margir Íslendingar að ferðast um landið, þrátt fyrir slæma veðrið.
+Því koma oft inn fyrirspurnir til Vegagerðarinnar, til dæmis, hvort hægt
+sé að komast frá Kópavogi til Egilsstaða við núverandi aðstæður.
+
+Vegagerðin gefur þér lýsingu á vegakerfi Íslands þar sem
+öllum vegum landsins er lýst. Sérhverjum vegi er lýst með
+tveimur endapunktum og vindstigsþröskuldi.
+Ef vindhraðinn er minni en eða jafn vindstigsþröskuldi vegarins þá
+er vegurinn opinn og þá má ferðast um veginn, annars er vegurinn
+lokaður.
+
+Nú þarft þú að skrifa forrit sem getur svarað þessum fyrispurnum.
+Fyrirspurnir innihalda upplýsingar um upphafsstaðsetningu, endastaðsetningu
+og vindhraðann á landinu. Svarið skal vera \texttt{Jebb} ef til er leið
+frá upphafsstaðsetningu til endastaðsetningar sem notar einungis opna vegi.
+Annars skal svarið vera \texttt{Neibb}.
+
+\section*{Inntak}
+Fyrsta línan í inntakinu inniheldur þrjár heiltölur $n$ ($1 \leq n \leq
+10^5$), fjöldi gatnamóta, $m$ ($0 \leq m \leq 10^5)$, fjöldi vega,
+og $q$ ($1 \leq q \leq 10^5)$, fjöldi fyrirspurna.
+
+Næst fylgja $m$ línur, þar sem $i$-ta línan lýsir vegi númer $i$.
+Hver lína inniheldur þrjár heiltölur $u_i$ ($1 \leq u_i \leq n$) og $v_i$
+($1 \leq v_i \leq n$), endapunkta vegarins, og $t_i$ ($0 \leq t_i \leq 10^9$),
+vindstigsþröskuld vegarins.
+
+Að lokum koma $q$ línur, þar sem $j$-ta línan lýsir fyrirspurn númer $j$.
+Til að tryggja að fyrirspurnum sé svarað einni í einu þá eru þær dulkóðaðar.
+Hver lína inniheldur því þrjár dulkóðaðar heiltölur $a'_j$, $b'_j$ og $h'_j$
+Táknum fjölda fyrirspurna sem hafa verið svarað með \texttt{Jebb} upp að þessu
+með $x$.
+Til að fá rétt gildi á $a_j, b_j$ og $h_j$ skal beita XOR aðgerðinni, táknuð með
+$\hat{}$ virkjanum í flestum forritunarmálum, og því er
+\begin{itemize}
+    \item $a_j = a'_j \hat{} x$,
+    \item $b_j = b'_j \hat{} x$,
+    \item $h_j = h'_j \hat{} x$.
+\end{itemize}
+Hver fyrirspurn inniheldur því þrjár heiltölur $a_j$ ($1 \leq a_j \leq n$), upphafspunkt,
+$b_j$ ($1 \leq b_j \leq n$, endapunkt og $h_j$ ($0 \leq h_j \leq 10^9$), vindhraðann.
+
+\section*{Úttak}
+Fyrir hverja fyrirspurn skal svara annaðhvort \texttt{Jebb}, ef til er leið
+frá gefna byrjunarpunktinum til gefna endapunktsins sem hefur engan lokaðan veg,
+eða \texttt{Neibb} ef ekki er til leið.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 10   & \begin{tabular}{@{}c@{}}$1 \leq n, q \leq 20$, fyrirspurnir koma í lækkandi röð eftir vindhraða, vegakerfið myndar eina rás sem\\
+                                       táknar hringveginn og gatnamót eru tengd í hækkandi röð ($1$ við $2$, $2$ við $3$, ...) og svo $n$ við $1$.\end{tabular}  \\ \hline
+2     & 30   & $1 \leq n, q \leq 100$, fyrirspurnir koma í lækkandi röð eftir vindhraða. \\ \hline
+3     & 20   & $1 \leq n \leq 250$, fyrirspurnir koma í lækkandi röð eftir vindhraða.  \\ \hline
+4     & 30   & Fyrirspurnir koma í lækkandi röð eftir vindhraða. \\ \hline
+5     & 10   & Engar frekari takmarkanir.  \\ \hline
+\end{tabular}
+

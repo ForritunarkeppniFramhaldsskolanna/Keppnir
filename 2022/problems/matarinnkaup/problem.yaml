@@ -1,0 +1,9 @@
+author: Atli Fannar Franklín, Bernhard Linn Hilmarsson
+source: Forritunarkeppni Framhaldsskólanna 2022
+rights_owner: Forritunarkeppni Framhaldsskólanna
+license: cc by-sa
+type: scoring
+limits:
+    time_multiplier: 2
+grading:
+    show_test_data_groups: true

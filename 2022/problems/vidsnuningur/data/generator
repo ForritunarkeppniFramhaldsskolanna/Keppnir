@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution elvar_100.py opt
+
+compile random_generator.py
+
+samplegroup
+sample 1
+sample 2
+
+group gA 100
+for i in {01..50}; do
+tc gA-$i random_generator 10**3 
+done
+

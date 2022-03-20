@@ -1,0 +1,72 @@
+\problemname{Kolkrabbaleikarnir}
+\illustration{0.3}{glassbridge}{Mynd fengin af \href{https://upload.wikimedia.org/wikipedia/commons/9/96/Hongya_Valley_glass_bridge_(cropped).jpg}{wikimedia.org}}
+
+Kolkrabbaleikarnir 2022 eru hafnir. Arnar, einnig þekktur sem Kolkrabbi,
+bauð mörgum keppendum að taka þátt í þessarri æsispennandi keppni þar sem
+keppt er um risastór peningaverðlaun.
+Keppnin samanstendur af mörgum mismunandi leikjum.
+Keppendur voru $1\,234\,567$ í upphafi, en eftir að hafa keppt í síðustu fjórum 
+leikjum hefur mörgum keppendum verið útrýmt úr keppninni.
+Því eru aðeins $m$ keppendur eftir.
+
+Nú er komið að fimmta leiknum og er keppendum raðað í eina röð. Það er enginn annar
+en Hlini sem er fyrstur í röðinni. Hann stígur áfram í herbergi næsta leiks
+þar sem hann tekur eftir að hann stendur á palli. Hann sér annan pall hinum megin í
+herberginu og stóra brú á milli. En þetta er engin eðlileg brú. Brúin samanstendur
+af $n$ röðum, þar sem hver röð er gerð úr tveimur gler reitum. Keppendur eiga því að
+komast yfir glerbrúnna með því að velja annanhvorn gler reitinn til að stíga á í
+hverri röð.
+
+Gler reitirnir líta eins út en það er stórhættulegt að gera ráð fyrir að þeir séu
+eins. Annar reiturinn í hverri röð er úr tempruðu gleri og þolir þyngd einnar 
+manneskju. Hinn reiturinn er ekki úr tempruðu gleri og myndi því brotna við þyngd
+manneskjunnar sem stígur á reitinn. Manneskjan myndi þá falla niður og vera úr leik.
+
+Eftir að Arnar hefur útskýrt leikreglurnar þá segir Hlini: ``Þetta er bara fifty-fifty,
+annaðhvort kemst ég yfir eða ekki.'' Arnar útskýrir fyrir honum að svo sé ekki, þar sem
+það eru helmingslíkur að hann giski rétt í hvert skipti sem hann stígur áfram.
+Allir keppendur, fyrir utan Hlina, eru með fullkomið minni. Allir keppendur eru með
+fullkomið jafnvægi.
+
+Margir áhorfendur eru til staðar og er algengur leikur fyrir þá að giska hversu margir
+keppendur verða eftir í lok hvers leiks. Hvað má búast við að margir keppendur verði
+eftir í lok leiksins?
+
+\section*{Inntak}
+Inntak er ein lína með tveimur heiltölum $n$, fjöldi raða í brúnni, og $m$, fjöldi keppenda
+í leiknum, þar sem $0 \leq n \leq 10^6$ og $0 \leq m \leq 10^6$.
+
+\section*{Úttak}
+Úttak skal vera ein lína með einni rauntölu, fjölda fólks sem má búast við að séu eftirstandandi
+í lok leiksins.
+Úttakið er talið rétt ef talan er annaðhvort nákvæmlega eða hlutfallslega 
+ekki lengra frá réttu svari en $10^{-6}$.
+Þetta þýðir að það skiptir ekki máli með hversu margra aukastafa nákvæmni 
+tölurnar eru skrifaðar út, svo lengi sem þær er nógu nákvæmar.
+
+%\section*{Útskýring á sýnidæmi}
+%Sýnidæmi $1$ tilheyrir hópi 3 og í því eru tvær raðir í brúnni og tveir leikmenn.
+%Það eru fjórar mismunandi útkomur á leiknum í þessu tilviki.
+%\begin{itemize}
+%    \item Fyrri leikmaður giskar rétt fyrir báðar raðir. 
+%          Tveir leikmenn komast yfir.
+%    \item Fyrri leikmaður giskar rétt fyrir fyrri röðina, en rangt fyrir seinni röðina.
+%          Einn leikmaður kemst yfir.
+%    \item Fyrri leikmaður giskar rangt fyrir fyrri röðina og seinni leikmaður giskar rétt fyrir seinni röðina.
+%          Einn leikmaður kemst yfir.
+%    \item Fyrri leikmaður giskar rangt fyrir fyrri röðina og seinni leikmaður giskar rangt fyrir seinni röðina.
+%          Enginn leikmaður kemst yfir.
+%\end{itemize}
+%Meðalfjöldinn sem kemst yfir er því $1$.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 10   & Brúin er aðeins ein röð.\\ \hline
+2     & 20   & Hlini er eini keppandinn eftir.\\ \hline
+3     & 30   & $0 \leq n, m \leq 10$ \\ \hline
+4     & 30   & $0 \leq n, m, \leq 1000$ \\ \hline
+5     & 10   & Engar frekari takmarkanir. \\ \hline
+\end{tabular}
+

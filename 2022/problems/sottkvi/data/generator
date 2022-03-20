@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution unnar_100.py
+
+compile random_generator.py
+
+samplegroup
+sample 1
+sample 2
+sample 3
+
+group gA 100
+for i in {0..10}; do
+  tc gA-random-$i random_generator 10**3 10**3 $i+14
+done;
+for i in {0..10}; do
+  tc gA-max-effective-k-$i random_generator 10**3 14 10**3
+done;
+for i in {1..13}; do
+  tc gA-small-k-$i random_generator 10**3 $i 10**3 
+done;
+tc gA-edge1 random_generator 1 1 1
+tc gA-edge2 random_generator 1000 1 1
+tc gA-edge3 random_generator 1000 14 14
+tc gA-edge4 random_generator 1000 14 1
+tc gA-edge5 random_generator 1000 10 1
+tc gA-edge6 random_generator 1000 7 1

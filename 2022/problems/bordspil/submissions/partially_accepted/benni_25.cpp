@@ -1,0 +1,37 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define rep(i,a,b) for(auto i = (a); i < (b); i++)
+#define pb push_back
+#define fs first
+#define sc second
+typedef long long ll;
+typedef pair<int,int> ii;
+typedef vector<int> vi;
+typedef vector<vi> vvi;
+typedef vector<ii> vii;
+typedef vector<vii> vvii;
+
+const double EPS = 1e-9;
+
+int main() {
+    cin.sync_with_stdio(false);
+    int n,m;
+    cin >> n >> m;
+    bool arnar_wins = false;
+
+    if(n == 3) arnar_wins = true;
+    if(n == 2) {
+        if(m < 3) arnar_wins = true;
+    }
+    if(n == 1) {
+        if(m < 2) arnar_wins = true;
+    }
+    if(n == 0) {
+        if(m < 2) arnar_wins = true;
+    }
+
+
+    if(arnar_wins) cout << "Arnar" << endl;
+    else cout << "Unnar" << endl;
+}
+

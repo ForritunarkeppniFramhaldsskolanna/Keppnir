@@ -1,0 +1,54 @@
+\problemname{RúnaHeimur}
+\illustration{0.35}{15-puzzle-solvable}{\href{https://upload.wikimedia.org/wikipedia/commons/f/f7/15-puzzle-solvable.svg}{Sliding puzzle} frá Wikipedia}%
+Níels er rosalegur leikmaður í tölvuleiknum RúnaHeimur.
+Í leiknum er hægt að gera marga mismunandi hluti eins og að veiða, höggva tré, slást við dreka, versla húfur, fara í ævintýri og leysa þrautabókrollur.
+Níels skemmtir sér við allt þetta nema hann hatar þrautabókrollurnar af einni ástæðu.
+Í þrautabókrollunum þarf stundum að leysa rennipúsl sem honum finnst alveg afskaplega leiðinlegt.
+Hann biður þig því um að skrifa forrit sem leysir þessar þrautir fyrir sig.
+
+Í rennipúsli er búið að brjóta mynd niður í $n$ raðir og $m$ dálka.
+Þá eru samtals $n \cdot m$ reitir sem mynda myndina.
+Reitirnir eru oft merktir með tölum frá $1$ upp í $n \cdot m$ frá vinstri til hægri.
+Upprunalega staðan er þá til dæmis:
+\begin{verbatim}1 2 3
+4 5 6
+7 8 9\end{verbatim}
+Reitur númer $n \cdot m$ er síðan fjarlægður þannig það sé pláss til að hreyfa reitina.
+Svo er reitunum rennt af handahófi þar til búið er að rugla í myndinni.
+Markmiðið er þá að færa reitina á upprunalegu staðsetningar sínar þannig að myndin sjáist eins og hún var upprunalega.
+
+Allt að fjórar hreyfingar eru leyfilegar úr hverri leikstöðu.
+\begin{itemize}
+    \item Hreyfingin `U` þýðir að næsti reitur fyrir neðan tóma reitinn er færður upp.
+    \item Hreyfingin `D` þýðir að næsti reitur fyrir ofan tóma reitinn er færður niður.
+    \item Hreyfingin `L` þýðir að næsti reitur hægra megin við tóma reitinn er færður til vinstri.
+    \item Hreyfingin `R` þýðir að næsti reitur vinstra megin við tóma reitinn er færður til hægri.
+\end{itemize}
+Ef reiturinn sem á að hreyfast í hreyfingunni er ekki til þá er sú hreyfing ólögleg fyrir leikstöðuna.
+
+\section*{Inntak}
+Inntak er margar línur.
+Fyrsta línan inniheldur tvær heiltölur $n$ og $m$ ($2 \leq n, m \leq 10$), þar sem $n$ táknar fjölda raða og $m$ táknar fjölda dálka á leikborðinu.
+Næst fylgja $n$ línur, hver með $m$ heiltölum. Tölurnar eru á bilinu $1$ til $n \cdot m$ og kemur hver tala fyrir nákvæmlega einu sinni.
+Einnig mun talan $n \cdot m$ alltaf vera síðasta talan í inntakinu.
+
+\section*{Úttak}
+Skrifið út eina línu með hreyfingum sem leiða að leystu leikborði.
+Ef lausnin inniheldur ólöglega hreyfingu þá er lausnin talin röng.
+Ef engin lausn er til skal skrifa út \texttt{impossible}.
+Gera má ráð fyrir að, ef til er lausn, þá sé til lausn með færri en $10\,000$ hreyfingar.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 15  & $n = 2, m = 2$\\ \hline
+2     & 15  & $n = 2, m \leq 3$\\ \hline
+3     & 15  & $n = 2, m \leq 5$\\ \hline
+4     & 5  & $n = 2, m \leq 10$\\ \hline
+5     & 15  & $n \leq 3, m \leq 3$\\ \hline
+6     & 15  & $n \leq 4, m \leq 4$\\ \hline
+7     & 15  & $n \leq 5, m \leq 5$\\ \hline
+8     & 5  & Engar frekari takmarkanir\\ \hline
+\end{tabular}
+

@@ -1,0 +1,29 @@
+\problemname{Samlokur}
+\illustration{0.3}{Sandvich}{Sandvich, intellectual property of Valve Inc.}
+
+Atli er mikill samlokuunnandi. Síðustu ár hefur hann þróað með sér mjög tiltekinn smekk á samlokum. Matarbúðin sem Atli fer venjulega í til að
+kaupa inn er nú lokuð næstu $k$ daga vegna COVID. Þetta veldur Atla vissum áhyggjum því hann verður að fá sínar daglegu samlokur. Hann er með
+$n$ samlokur í kælinum að svo stöddu. Hverri samloku má lýsa með tveimur tölum $a_i, b_i$ þar sem $a_i$ er gæði $i$-tu samlokunnar og $b_i$ er fjöldi
+daga þar til hún rennur út. Sérkennilegur smekkur Atla felur það í sér að hann borðar nákvæmlega eina samloku í hádegismat og aðra
+í kvöldmat. Samtals gæði þessarra tveggja samlokna verður að vera að minnsta kosti $9$. Hann lætur hvorki bjóða sér útrunnar samlokur né
+samlokur með gæði undir $4$. Ef samloka rennur út eftir $x$ daga þá má borða hana á degi $x$ eða fyrr, svo samloku með $b_i = 1$ verður að borða á fyrsta
+degi eða henda. Nú veltir Atli því fyrir sér hvort þessar samlokur dugi honum næstu $k$ dagana.
+
+\section*{Inntak}
+Fyrsta lína inntaksins inniheldur tvær heiltölur $1 \leq n \leq 10^5$ og $1 \leq k \leq 10^5$, fjöldi samlokna og fjöldi daga sem búðin er lokuð.
+Næsta lína inniheldur $n$ heiltölur $0 \leq a_i \leq 10$, gæði samloknanna.
+Loks inniheldur síðasta línan $n$ heiltölur $0 \leq b_i \leq 10^9$, hversu marga daga hver samloka endist.
+
+\section*{Úttak}
+Ef samlokurnar duga Atla þessa $k$ daga, prentið \texttt{Jebb}. Prentið annars \texttt{Neibb}.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 20   & $n \leq 8$ \\ \hline
+2     & 20   & $n \leq 10^2$ \\ \hline
+3     & 20   & $n \leq 10^3$ \\ \hline
+4     & 40   & Engar frekari takmarkanir\\ \hline
+\end{tabular}
+

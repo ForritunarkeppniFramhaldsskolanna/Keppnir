@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution atli_100.cpp opt
+
+compile random_generator.py
+
+samplegroup
+sample 1
+sample 2
+sample 3
+sample 4
+
+group gA 30
+for i in {01..10}; do
+tc gA-rand-$i random_generator 1
+done;
+
+group gB 30
+for i in {01..10}; do
+tc gB-rand-$i random_generator 2
+done;
+
+group gC 30
+for i in {01..10}; do
+tc gC-rand-$i random_generator 3
+done;
+
+group gD 10
+for i in {01..10}; do
+tc gD-rand-$i random_generator 4
+done;

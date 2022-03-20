@@ -1,0 +1,88 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution unnar_100.cpp opt
+
+compile random_generator.py
+
+samplegroup
+sample 1
+sample 2
+sample 3
+
+group gA 15
+tc gA-01 random_generator 50 all_ones
+tc gA-02 random_generator 50 all_zeros
+tc gA-03 random_generator 50 zero_one_r
+tc gA-04 random_generator 50 one_zero_r
+tc gA-05 random_generator 50 zero_one
+tc gA-06 random_generator 50 one_zero
+tc gA-07 random_generator 50 zero_one_zero
+tc gA-08 random_generator 50 one_zero_one
+tc gA-09 random_generator 50 zero_one_zero_one
+tc gA-10 random_generator 50 one_zero_one_zero
+tc gA-11 random_generator 50 test_A_1
+tc gA-12 random_generator 50 test_D_1
+tc gA-13 random_generator 50 test_E_1
+tc gA-14 random_generator 50 test_F_1
+for i in {15..30}; do
+  tc gA-$i random_generator 50 random;
+done
+
+group gB 15
+tc gB-01 random_generator 350 all_ones
+tc gB-02 random_generator 350 all_zeros
+tc gB-03 random_generator 350 zero_one_r
+tc gB-04 random_generator 350 one_zero_r
+tc gB-05 random_generator 350 zero_one
+tc gB-06 random_generator 350 one_zero
+tc gB-07 random_generator 350 zero_one_zero
+tc gB-08 random_generator 350 one_zero_one
+tc gB-09 random_generator 350 zero_one_zero_one
+tc gB-10 random_generator 350 one_zero_one_zero
+tc gB-11 random_generator 350 test_A_2
+tc gB-12 random_generator 350 test_D_2
+tc gB-13 random_generator 350 test_E_2
+tc gB-14 random_generator 350 test_F_2
+for i in {15..30}; do
+  tc gB-$i random_generator 350 random;
+done
+
+group gC 40
+tc gC-01 random_generator 2000 all_ones
+tc gC-02 random_generator 2000 all_zeros
+tc gC-03 random_generator 2000 zero_one_r
+tc gC-04 random_generator 2000 one_zero_r
+tc gC-05 random_generator 2000 zero_one
+tc gC-06 random_generator 2000 one_zero
+tc gC-07 random_generator 2000 zero_one_zero
+tc gC-08 random_generator 2000 one_zero_one
+tc gC-09 random_generator 2000 zero_one_zero_one
+tc gC-10 random_generator 2000 one_zero_one_zero
+tc gC-11 random_generator 2000 test_A_3
+tc gC-12 random_generator 2000 test_D_3
+tc gC-13 random_generator 2000 test_E_3
+tc gC-14 random_generator 2000 test_F_3
+for i in {15..30}; do
+  tc gC-$i random_generator 2000 random;
+done
+
+group gD 30
+tc gD-01 random_generator 10**5 all_ones
+tc gD-02 random_generator 10**5 all_zeros
+tc gD-03 random_generator 10**5 zero_one_r
+tc gD-04 random_generator 10**5 one_zero_r
+tc gD-05 random_generator 10**5 zero_one
+tc gD-06 random_generator 10**5 one_zero
+tc gD-07 random_generator 10**5 zero_one_zero
+tc gD-08 random_generator 10**5 one_zero_one
+tc gD-09 random_generator 10**5 zero_one_zero_one
+tc gD-10 random_generator 10**5 one_zero_one_zero
+tc gD-11 random_generator 10**5 test_A_4
+tc gD-12 random_generator 10**5 test_D_4
+tc gD-13 random_generator 10**5 test_E_4
+tc gD-14 random_generator 10**5 test_F_4
+for i in {15..30}; do
+  tc gD-$i random_generator 10**5 random;
+done
