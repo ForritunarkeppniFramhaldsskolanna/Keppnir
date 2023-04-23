@@ -1,0 +1,92 @@
+\problemname{Skattareiknivel}
+
+Sigurjón was chosen employee of the month at Krabbaborgarar for twelve months in
+a row, and therefore got a big raise. However, Sigurjón knows that he will not
+directly receive all of his salary, first he must pay into a pension fund and a
+supplementary pension fund, and then he has to pay income tax and communal tax of the
+rest. Sigurjón also knows that he gets a personal tax exemption every month that
+can be deducted from the total tax, and if he does not use all of his personal
+tax exemption one month, he can use the rest of it the following month! Sigurjón
+wants to know how much of his salary he will receive after paying all fees and
+taxes, but the calculations are too complicated for him. Can you help Sigurjón?
+
+Taxes of individual's salary are calculated as follows:
+
+First you have to pay into a pension fund and a supplementary pension fund. The fees
+are calculated as a percentage of the total salary before tax. The total salary
+minus the fund fees are called tax base, which is rounded down to the nearest
+integer. We represent this using $\lfloor x \rfloor$, therefore $\lfloor 11.3 \rfloor = 11$
+and $\lfloor 25.99 \rfloor = 25$.
+For example, if an individual's monthly salary is $500\,000$ ISK, and
+he pays $4\%$ into a pension fund, and $1\%$ into a supplementary pension fund, then
+the individual pays $\lfloor 500\,000 \cdot 0.04 \rfloor = 20\,000$ ISK into a pension fund and
+$\lfloor 500\,000 \cdot 0.01 \rfloor = 5\,000$ ISK into a supplementary pension fund. The tax base is
+then $500\,000 - 20\,000 - 5\,000 = 475\,000$ ISK.
+
+It is necessary to pay income tax, and communal tax of the tax base to the
+state, and to the municipality that the individual lives in, respectively.  The
+income tax is divided into different tax brackets, and in each bracket it is
+necessary to pay a certain percentage of the tax base that is covered by the
+bracket. The communal tax is not divided into brackets. The sum of the income
+tax and the communal tax is called withholding tax, which is also rounded down
+to the nearest integer.
+
+In 2023, we have the following three tax brackets in Iceland and we assume mean
+communal tax of $14.67\%$:
+
+\begin{table}[h]
+\begin{tabular}{lll}
+    Bracket & Salary & Tax rate \\ \hline
+    $1$ & $0$ ISK.\ -- $409\,986$ ISK. & $31.45\%$, which includes $16.78\%$ income tax \\
+    $2$ & $409\,987$ ISK.\ -- $1\,151\,012$ ISK. & $37.95\%$, which includes $23.28\%$ income tax \\
+    $3$ & $1\,151\,013$ ISK.\ and over & $46.25\%$, which includes $31.58\%$ income tax \\
+\end{tabular}
+\end{table}
+
+If the tax base is $475\,000$ ISK, then it completely covers the first bracket,
+$409\,986$ ISK in that bracket, and partially covers the second bracket,
+$65\,014$ ISK in that bracket. The individual therefore pays $31.45\%$ of the
+first $409\,986$ ISK, and $37.95\%$ of the remaining $65\,014$ ISK. The total
+withholding tax is then
+$\lfloor 0.3145 \cdot 409\,986 + 0.3795 \cdot 65\,014 \rfloor = 153\,613$ ISK.
+
+Finally, the personal tax exemption is deducted from the withholding tax, and
+the result is the amount that the individual has to pay in taxes of the tax
+base. If the withholding tax is lower than the personal tax exemption, then the
+personal tax exemption is accrued (but not retroactively). In 2023, the personal
+tax exemption is $59\,665$ ISK per month. For example, if the withholding tax is
+$153\,613$ ISK, then the individual has to pay
+$153\,613 - 59\,665 = 93\,948$ ISK of the tax base, and therefore receives
+a salary of $475\,000 - 93\,948 = 381\,052$ ISK after paying all fees and
+taxes. In this case, the personal tax exemption was fully used, and nothing is
+carried over to the next month.
+
+Had the withholding tax been $30\,000$ ISK, and the personal tax exemption still
+$59\,665$ ISK, then the individual would not have needed to pay anything of the
+tax base, and $59\,665 - 30\,000 = 29\,665$ ISK of the personal tax exemption
+would have carried over to the next month. The invididual would therefore have a
+personal tax exemption of $59\,665 + 29\,665 = 89\,330$ ISK the following month.
+
+\section*{Input}
+The first line contains a real number $l$, where $0 \leq l \leq 4$, the
+contribution percentage to a pension fund.
+
+The second line contains a real number $s$, where $0 \leq s \leq 4$, the
+contribution percentage to a private property fund.
+
+The real numbers are given with exactly two digits after the decimal
+point.
+
+Following that are twelve lines. Each line contains one integer $m_{i}$,
+where $0 \leq m_i \leq 10^8$ for each $i$, denoting Sigurjón's salary for month $i$.
+
+\section*{Output}
+The output should contain one integer $h$, the sum of Sigurjón's monthly
+salaries over the year after he has paid all fees and taxes.
+
+\section*{Scoring}
+\begin{tabular}{|l|l|l|}
+\hline
+Group & Points & Constraints \\ \hline
+1     & 100  & No further constraints\\ \hline
+\end{tabular}

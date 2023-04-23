@@ -1,0 +1,34 @@
+\problemname{Guillaume}
+\illustration{0.3}{billiards}{Mynd fengin af \href{https://www.flickr.com/photos/williac/222560820}{flickr.com}}
+
+Guillaume hefur einstakan hæfileika til að gleyma atburðum sem gerðust fyrir sérstakan tímapunkt, til að líta betur út í minningu sinni.
+Guillaume og Arnar spila oft pool og ert þú með skrá af niðurstöðum leikja þeirra.
+Guillaume telur alltaf bara síðustu $k$ leikina sem hámarka sigurprósentu hans og hunsar alla aðra leiki á undan þeim.
+Guillaume getur samt ekki hunsað alla söguna því Arnar man alltaf niðurstöðu síðasta leiks.
+Sigurprósenta er skilgreind sem fjöldi sigra deildur með fjölda gildra leikja.
+Ef tvö gildi á $k$ koma til greina þá skal velja $k$ þannig það sé lágmarkað, því það er auðveldara fyrir Guillaume að muna.
+
+Í pool er jafntefli ef báðir leikmenn ákveða að leikurinn sé ógildur og vilja byrja uppá nýtt.
+Ef leikur endar í jafntefli að þá er enginn sigurvegari í þeim leik.
+
+Hver er staðan samkvæmt Guillaume?
+
+\section*{Inntak}
+Inntak samanstendur af tveim línum.
+Fyrri línan inniheldur eina heiltölu $n$, fjöldi leikja sem voru skráðir.
+Seinni línan inniheldur runu af stöfum sem tákna niðurstöðu leikjanna sem Arnar og Guillaume hafa spilað.
+Stafur númer $i$ táknar niðurstöðu leiks $i$ og er \texttt{A} ef Arnar vann, \texttt{G} ef Guillaume vann eða \texttt{D} ef það var jafntefli.
+
+\section*{Úttak}
+Skrifaðu út eina línu á forminu \texttt{g-a} þar sem $g$ er heiltala sem táknar fjölda sigra hans Guillaume og $a$ er heiltala sem táknar fjölda sigra Arnars, samkvæmt Guillaume.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 10   & $n = 1$ \\ \hline
+2     & 30   & $1 \leq n \leq 100$ \\ \hline
+3     & 20   & $1 \leq n \leq 3 \cdot 10^5$, samanlagður fjöldi \texttt{A} og \texttt{G} er í mesta lagi $1\,000$  \\ \hline
+4     & 40   & $1 \leq n \leq 3 \cdot 10^5$ \\ \hline
+\end{tabular}
+

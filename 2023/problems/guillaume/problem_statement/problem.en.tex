@@ -1,0 +1,34 @@
+\problemname{Guillaume}
+\illustration{0.3}{billiards}{Photo from \href{https://www.flickr.com/photos/williac/222560820}{flickr.com}}
+
+Guillaume has a unique ability to forget events before a certain point in time, only to look better in his memory.
+Guillaume and Arnar play pool quite often and you have a log of results from their matches.
+Guillaume only counts the last $k$ matches such that his win percentage is maximized, and ignores all matches before those.
+Guillaume cannot ignore the entire match history since Arnar will always remember the result of their last match.
+Win percentage is defined as the ratio between number of victories and number of valid matches.
+If multiple values of $k$ are possible then $k$ should be chosen such that it is minimized, because that is easier for Guillaume to remember.
+
+A draw occurs in pool if both players decide the match is invalid and want to restart the match.
+If a match ends in a draw, then the match has no winner.
+
+What's the score according to Guillaume?
+
+\section*{Input}
+Input consists of two lines.
+The former line has one integer $n$, the number of matches logged.
+The latter line has a sequence of characters which represent the results of the matches that Arnar and Guillaume have played.
+The $i$-th symbol represents the result of the $i$-th match and is \texttt{A} if Arnar won, \texttt{G} if Guillaume won or \texttt{D} in case of a draw.
+
+\section*{Output}
+Output a single line in the format \texttt{g-a} where $g$ is an integer representing the number of matches won by Guillaume and $a$ is the number of matches won by Arnar, according to Guillaume.
+
+\section*{Scoring}
+\begin{tabular}{|l|l|l|}
+\hline
+Group & Score & Constraints \\ \hline
+1     & 10   & $n = 1$ \\ \hline
+2     & 30   & $1 \leq n \leq 100$ \\ \hline
+3     & 20   & $1 \leq n \leq 3 \cdot 10^5$, total amount of the symbols \texttt{A} and \texttt{G} is at most $1\,000$  \\ \hline
+4     & 40   & $1 \leq n \leq 3 \cdot 10^5$ \\ \hline
+\end{tabular}
+

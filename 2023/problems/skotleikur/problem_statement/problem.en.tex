@@ -1,0 +1,47 @@
+\problemname{Skotleikur}
+\illustration{0.3}{controller}{Mynd fengin af \href{https://www.flickr.com/photos/anporsche/28698595812/}{flickr.com}}
+
+Recently, Elvar has been playing the new shooter that everyone is playing; Medal of Valor: Contemporary Tactics 2.
+
+Elvar has finally played long enough to unlock access to his favourite gun,
+but whenever he uses it, he notices that it is not particularly good,
+and other players always seem to get the kill on Elvar's target.
+
+That's why Elvar has been thinking how many \emph{kills} and how many \emph{assists}, which is when
+you've hit a target but an ally gets the kill, he has truly gotten in the time he has been using this gun.
+
+The issue is that in MoV: CT2, you are only shown the number of points you have,
+where each kill grants $a$ points, and each assist grants $b$ points.
+
+You would like to help Elvar by writing a program,
+which accepts the total number of points $K$ that Elvar scored in a match,
+the number of points each kill grants and the number of points each
+assist grants. The program then computes all possible combinations
+of kills and assists which would grant Elvar $K$ points total.
+
+You may assume that Elvar has been using his favourite gun for the entire match.
+
+\section*{Input}
+The first line of the input contains a single integer $K$, the total number of points Elvar scored in the match.
+The second line of the input contains a single integer $a$, the number of points each kill grants.
+The third and final lines of the input contains a single integer $b$, the number of points each assist grants.
+
+\section*{Output}
+Output $N$, the total number of combinations of kills and asists which would grant Elvar $K$ points total.
+After that you should output each of the $N$ combinations.
+Each combination consists of two space separated integers $x_i$, which represents the number of kills in the $i$-th combination,
+and $y_i$, which represents the number of assists in the $i$-th combination, for $1 \leq i \leq N$.
+
+The order of the combinations does not matter.
+
+\section*{Scoring}
+\begin{tabular}{|l|l|l|}
+\hline
+Group & Points & Constraints \\ \hline
+& & \\[-1ex]
+1  & 30 & $a = 100$, $b = 50$, $0 \leq K \leq 1\,000$ \\[1ex] \hline
+& & \\[-1ex]
+2  & 40 & $1 \leq a, b \leq 1\,000$, $0 \leq \frac{K}{a} \leq 500$, $0 \leq \frac{K}{b} \leq 500$ \\[1ex] \hline
+& & \\[-1ex]
+3  & 30 & $1 \leq a, b \leq 1\,000$, $0 \leq \frac{K}{a} \leq 10^5$, $0 \leq \frac{K}{b} \leq 10^5$ \\[1ex] \hline
+\end{tabular}

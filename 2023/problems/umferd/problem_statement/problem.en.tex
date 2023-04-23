@@ -1,0 +1,34 @@
+\problemname{Umferð}
+\illustration{0.3}{umferd.jpg}{Image from \href{https://www.flickr.com/photos/seattlecamera/51511583493/}{flickr.com}}
+
+Traffic jams are a major problem in larger cities like Njú Jork and Síattúl, especially during rush hour.
+
+In a traffic jam there are many cars with very little spacing between them, and they are not moving particularly fast.
+To simplify things we will assume that traffic is divided into \emph{lanes} and each lane consists of $m$ \emph{cells}.
+Each cell can contain at most $1$ car, but a cell can also be empty.
+
+The length $m$ of the lanes, the number of lanes $n$ and a textual description of each cell, such that a cell
+containing a car is denoted \texttt{\#} and an empty cell is denoted \texttt{.}, is given.
+
+The task at hand is to calculate the proportion of empty cells, as a number between $0$ and $1$, inclusive.
+
+\section*{Input}
+The first line of the input contains a single integer $m$, the number of cells per lane.
+The next line contains a single integer $n$, the number of lanes.
+Next there are $n$ lines.
+Each line contains $m$ letters, each being either \texttt{.} or \texttt{\#}.
+
+\section*{Output}
+Print the proportion of empty cells as a value from $0$ to $1$.
+
+The output is considered correct if its relative or absolute error is at most $10^{-5}$. This means that the exact number of digits after the
+decimal point does not matter as long as the value is accurate enough.
+
+\section*{Scoring}
+\begin{tabular}{|l|l|l|}
+\hline
+Group & Points & Constraints \\ \hline
+1     & 40   & $n = 1$ and $ 1 \leq m \leq 500$ \\ \hline
+2     & 60   & $1 \leq n, m \leq 500$ \\ \hline
+\end{tabular}
+

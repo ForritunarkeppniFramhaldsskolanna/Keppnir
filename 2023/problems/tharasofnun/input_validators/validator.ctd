@@ -1,0 +1,20 @@
+INT(1, 1000000000000, c)
+SPACE
+INT(1, 1000000000000, r)
+NEWLINE
+INT(1, 100000, q)
+NEWLINE
+SET(tlast = 0)
+REPI(i, q, NEWLINE)
+    INT(0, 1000000000000000000, t)
+    ASSERT(t >= tlast)
+    SET(tlast = t)
+    SPACE
+    INT(0, c - 1, x[i])
+    SPACE
+    INT(0, r - 1, y[i])
+    ASSERT(x[i] != 0 || y[i] != 0)
+END
+ASSERT(UNIQUE(x, y))
+NEWLINE
+EOF

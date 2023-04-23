@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution arnar_100.py
+
+samplegroup
+sample 1
+
+group GA 100
+tc 1

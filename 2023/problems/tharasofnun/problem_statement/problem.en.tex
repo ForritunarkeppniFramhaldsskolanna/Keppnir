@@ -1,0 +1,49 @@
+\problemname{Þarasöfnun}
+\illustration{0.3}{kelp}{Image from Peter Southwood, taken from \href{https://commons.wikimedia.org/wiki/File:Kelp_forest_at_Taranga_pinnacles_Hen_and_Chicken_Islands_PA232359.JPG}{Wikimedia Commons}}
+
+Yet again certain unnamed individuals within KFFÍ are trying to make easy cash
+and they heard from their engineer friends that anything with sustainable or
+futuristic in the title gets plenty of grants these days. With this in mind
+one of them had the idea of building a kelp harvesting robot. Of course they
+later realized that this was not such an easy task, especially when they had
+to herd some engineers to actually build the robot itself. This herding went
+so badly that they completely forgot to finish programming the robot.
+
+Sensors have been placed in the sea where the kelp grows, so the only thing
+that needs to be done is to get the bot to the right location to harvest the kelp
+when the sensors send a message. The growing plot can be modeled as a $C \times R$
+cell square grid with a plant in each square. The robot starts at $(0, 0)$ at
+time $0$. The robot can move one square per second in any direction, even
+diagonally. When a cell is ready for harvesting the robot should always move
+to that cell along the shortest possible path, always moving diagonally when
+it helps. The time it takes to harvest the kelp is negligible once the robot
+arrives at the cell. If several cells are ready to be harvested, the one
+earliest in the input should always be prioritized. On the other hand, if the
+robot moves over a cell waiting to be harvested, on its way elsewhere, it should
+be harvested immediately. If the robot has nothing to do, it is supposed to simply
+stay still.
+
+\section*{Input}
+The first line of the input contains two positive integers $C, R$,
+the number of columns and rows of cells in the growing plot. The next line contains
+a single positive integer $q$, the number of queries. Then there will be $q$
+lines, each containing three integers $t$, where $0 \leq t \leq 10^{18}$, 
+$x$, where$0 \leq x < C$, and $y$, where $0 \leq y < R$.
+$t$ is the time at which the query arrives and $(x, y)$ is the
+location of the kelp to be harvested. Each location appears at most once in the
+input, $(x, y) \neq (0, 0)$ and the times are in weakly increasing order.
+
+\section*{Output}
+Print the time of harvest and location in the same format as the input each time
+a batch of kelp is harvested, in the order they get harvested.
+
+\section*{Scoring}
+\begin{tabular}{|l|l|l|}
+\hline
+Group & Points & Constraints \\ \hline
+1     & 20   & $q = 1$, $R, C \leq 1\,000$ \\ \hline
+2     & 20   & $1 \leq q, R, C \leq 1\,000$, kelp is collected in the same order as in the input \\ \hline
+3     & 20   & $1 \leq q, R, C, \leq 1\,000$ \\ \hline
+4     & 40   & $1 \leq q \leq 10^5$, $1 \leq R, C \leq 10^{12}$ \\ \hline
+\end{tabular}
+

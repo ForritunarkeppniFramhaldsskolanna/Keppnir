@@ -1,0 +1,59 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution atli_100.cpp opt
+
+compile random_generator.py
+
+samplegroup
+sample 1
+sample 2
+sample 3
+sample 4
+
+group GA 20
+tc GA-01 random_generator 10**3 10**3 1 0
+tc GA-02 random_generator 10**3 10**3 1 0
+tc GA-03 random_generator 10**3 10**3 1 0
+tc GA-04 random_generator 10**3 10**3 1 0
+tc GA-skew1 random_generator 200 700 1 0
+tc GA-skew2 random_generator 700 200 1 0
+tc GA-edge-1 random_generator 1 2 1 0
+tc GA-edge-2 random_generator 2 1 1 0
+
+group GB 20
+tc GB-01 random_generator 10**3 10**3 10**3 1
+tc GB-02 random_generator 10**3 10**3 10**3 1
+tc GB-03 random_generator 10**3 10**3 10**3 1
+tc GB-04 random_generator 10**3 10**3 10**3 1
+tc GB-skew1 random_generator 200 700 10**3 1
+tc GB-skew2 random_generator 700 200 10**3 1
+
+group GC 20
+include_group GA
+include_group GB
+tc GC-01 random_generator 10**3 10**3 10**3 0
+tc GC-02 random_generator 10**3 10**3 10**3 0
+tc GC-03 random_generator 10**3 10**3 10**3 0
+tc GC-04 random_generator 10**3 10**3 10**3 0
+tc GC-small1 random_generator 32 32 10**3 0
+tc GC-small2 random_generator 32 32 10**3 0
+tc GC-edge1 random_generator 1 1001 10**3 0
+tc GC-edge2 random_generator 1001 1 10**3 0
+tc GC-skew1 random_generator 200 700 10**3 0
+tc GC-skew2 random_generator 700 200 10**3 0
+
+group GD 40
+include_group GA
+include_group GB
+include_group GC
+tc GD-01 random_generator 10**12 10**12 10**5 0
+tc GD-02 random_generator 10**12 10**12 10**5 0
+tc GD-03 random_generator 10**12 10**12 10**5 0
+tc GD-04 random_generator 10**12 10**12 10**5 0
+tc GD-small1 random_generator 317 317 10**5 0
+tc GD-small2 random_generator 317 317 10**5 0
+tc GD-edge1 random_generator 1 10**12 10**5 0
+tc GD-edge2 random_generator 10**12 1 10**5 0
+

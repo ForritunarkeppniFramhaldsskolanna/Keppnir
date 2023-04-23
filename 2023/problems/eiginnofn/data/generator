@@ -1,0 +1,61 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution arnar_100.py
+
+compile random_generator.py
+
+samplegroup
+sample 1
+sample 2
+sample 3
+
+group GA 10
+tc GA-small-one-01 random_generator one 100 100 100 100
+for i in {02..05}; do
+tc GA-small-one-$i random_generator one 1 100 1 100
+done;
+
+group GB 10
+tc GB-small-two-01 random_generator two 100 100 100 100
+for i in {02..05}; do
+tc GB-small-two-$i random_generator two 1 100 1 100
+done;
+
+group GC 20
+include_group GA
+include_group GB
+tc GC-small-01 random_generator any 100 100 100 100
+for i in {02..05}; do
+tc GC-small-$i random_generator any 1 100 1 100
+done;
+
+group GD 20
+include_group GA
+for i in {01..03}; do
+tc GD-one-$i random_generator one 100000 100000 100000 100000 
+done;
+for i in {04..05}; do
+tc GD-one-$i random_generator one 1 100000 1 100000 
+done;
+
+group GE 20
+include_group GB
+for i in {01..03}; do
+tc GE-two-$i random_generator two 100000 100000 100000 100000 
+done;
+for i in {04..05}; do
+tc GE-two-$i random_generator two 1 100000 1 100000 
+done;
+
+group GF 20
+include_group GC
+include_group GD
+include_group GE
+for i in {01..03}; do
+tc GF-large-$i random_generator any 100000 100000 100000 100000
+done;
+for i in {04..05}; do
+tc GF-large-$i random_generator any 1 100000 1 100000
+done;

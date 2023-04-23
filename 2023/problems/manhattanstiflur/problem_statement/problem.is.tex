@@ -1,0 +1,31 @@
+\problemname{Manhattanstíflur}
+\illustration{0.3}{gridlock}{Mynd fengin af \href{https://commons.wikimedia.org/wiki/File:Gridlock.svg}{commons.wikimedia.org}}
+
+Eins og er vel þekkt samanstendur gatnakerfi Manhattan af götum sem liggja frá norðri til suðurs og frá austri til vesturs. Skulum númera
+göturnar sem liggja frá norðri til suðurs $0, 1, \dots, n$ þar sem $0$ er vestasta slíka gatan. Númerum einnig göturnar frá austri til
+vesturs með $0, 1, \dots, m$ þar sem $0$ er nyrsta slíka gatan. Þá getum við táknað gatnamót með númerum gatnanna sem mynda mótin, frá
+$(0, 0)$ til $(n, m)$. Við höfum áhuga á að geta komist frá norðvesturhorninu $(0, 0)$ í suðausturhornið $(n, m)$ með því að ferðast
+meðfram götunum. Hins vegar er alltaf
+verið að loka leiðum milli aðlægra gatnamóta vegna framkvæmda eða annarra uppákoma. Getur þú svarað því hvenær slíkar framkvæmdir loka 
+á allar leiðir frá $(0, 0)$ til $(n, m)$?
+
+\section*{Inntak}
+Fyrsta línan inniheldur eina jákvæða heiltölu $q$. Næst kemur lína með tveimur jákvæðum heiltölum $n, m$, fjölda
+gatna í hvora stefnu. Loks fylgja $q$ línur, hver þeirra með upplýsingar um götubút sem er lokað. Hver lína hefur fjórar heiltölur
+$x_1, y_1, x_2, y_2$ sem uppfylla $0 \leq x_1, x_2 \leq n$ og $0 \leq y_1, y_2 \leq m$. Þetta merkir að leiðin frá gatnamótunum $(x_1, y_1)$
+að gatnamótunum $(x_2, y_2)$ er lokað. Þessi gatnamót eru ávallt aðlæg hvorum öðrum. 
+
+\section*{Úttak}
+Ef fyrirspurn númer $i$ lokar á allar leiðir frá $(0, 0)$ til $(n, m)$, prentið $i$. Ef ennþá er hægt að fara frá $(0, 0)$ til $(n, m)$ eftir
+allar fyrirspurnir, prentið $-1$ í staðinn.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 20   & $n = 1$, $m, q \leq 500$ \\ \hline
+2     & 20   & $n, m, q \leq 500$ \\ \hline
+3     & 30   & $n, m, q \leq 5\,000$ \\ \hline
+4     & 30   & $n, m \leq 10^9$, $q \leq 5 \cdot 10^5$ \\ \hline
+\end{tabular}
+

@@ -1,0 +1,41 @@
+\problemname{Tónlistarlisti}
+\illustration{0.3}{note}{}
+
+Atli is very disorganized and only has one playlist of songs to listen to. All
+songs he likes go into the top of the list, and when he listens to music he starts
+with the top song and listens to them in order. If he has listened to them all, he starts
+anew from the top.
+
+For some reason the program he uses to listen to music cannot show him how often
+he has listened to each song. Thus he asks you to make a program that can maintain
+such statistics. He only counts times when he listens to a song from start to end
+without interruption.
+
+\section*{Input}
+The first line in the input contains one integer $q$, the number of queries.
+
+Next there are $q$ lines, each with one query. They start with a single letter
+that denotes the type of query. If the line starts with a $P$ a positive integer $\leq 10^9$
+follows, the number of seconds Atli listened to music for. Atli always starts at the top of the list 
+and pauses when the time is up. If the line starts with an $L$, a
+string with a song name follows, and then the length of that song in seconds. This means Atli
+added this song to the top of his playlist, or deleted it from the playlist if it was already present.
+If the line starts with $Q$ a song name will follow and the program should print how often Atli has
+listened to that song. The song names only contain lower
+case English letters and underscores. The total length of all song names in the input is at most
+$2 \cdot 10^6$. The playlist is empty at the start and Atli will never listen to music while the playlist
+is empty. No two different songs have the same name.
+
+\section*{Output}
+For each query that starts with a $Q$, print how often Atli has listened to the corresponding song.
+
+\section*{Scoring}
+\begin{tabular}{|l|l|l|}
+\hline
+Group & Points & Constraints \\ \hline
+1     & 20   & $1 \leq q \leq 1\,000$, songs are never removed from the playlist, each song has length $1$ \\ \hline
+2     & 20   & $1 \leq q \leq 1\,000$, songs are never removed from the playlist \\ \hline
+3     & 30   & $1 \leq q \leq 5 \cdot 10^5$, songs are never removed from the playlist \\ \hline
+4     & 30   & $1 \leq q \leq 5 \cdot 10^5$ \\ \hline
+\end{tabular}
+

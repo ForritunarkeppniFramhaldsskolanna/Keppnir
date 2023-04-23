@@ -1,0 +1,72 @@
+\problemname{S10}
+\illustration{0.3}{garage}{Mynd fengin af \href{https://commons.wikimedia.org/wiki/File:Empty_parking_garage_\%2842791016642\%29.jpg}{commons.wikimedia.org}}
+
+Á Suðurlandsbraut getur oft reynst erfitt að finna bílastæði, þar sem margir eiga erindi til fyrirtækjanna sem eiga heima þar.
+Mörg bílastæðin eru sérmerkt fyrir viðskiptavini fyrirtækjanna og eru því skammtímastæði.
+Því má aðeins leggja í 15--30 mínútur í þessi bílastæði.
+Starfsmenn fyrirtækjanna geta ekki notað þessi bílastæði og því þurfa fyrirtækin að tryggja að einhver bílastæði séu úthlutuð fyrir starfsmenn sína.
+
+Hjá Suðurlandsbraut 10 er bílastæðahús á þremur hæðum með mörg bílastæði.
+Þó svo bílastæðin séu mörg þá getur verið að þau séu öll í notkun og að bíl sé lagt ólöglega í pláss sem er ekki merkt sem bílastæði, til dæmis fyrir framan önnur bílastæði eða í inngangnum.
+Þar sem fyrirtækin deila bílastæðahúsinu að þá hefur stæðunum verið skipt upp á milli fyrirtækjanna.
+Bílastæðin eru ekki sérmerkt eftir fyrirtækjum, heldur leggja starfsmenn í bílastæði og má hvert fyrirtæki ekki nota fleiri bílastæði samtímis en því var úthlutað.
+Við inngang bílastæðahússins er myndavél sem tekur mynd af bílnúmeraplötu bílsins þegar hann keyrir inn og út úr bílastæðahúsinu.
+Það má einnig ekki skilja bíla eftir yfir nóttina og er því bílastæðahúsið alltaf tómt í byrjun hvers dags.
+
+Sérhver bíll sem fer inní bílastæðahúsið leggur annaðhvort löglega eða ólöglega sem er ákvarðað með eftirfarandi reglum.
+\begin{itemize}
+    \item Ef það er eitthvað laust bílastæði þá leggur bíllinn í það, annars leggur bíllinn ólöglega utan bílastæðis.
+    \item Ef bílnúmer bílsins er ekki skráð á neitt fyrirtæki, þá er bílnum lagt ólöglega, hvort sem honum sé lagt í bílastæði eða ekki.
+    \item Ef bílnúmerið er skráð á fyrirtæki og fyrirtækið er þegar að fullnýta úthlutaða kvótann sinn, þá er bílnum lagt ólöglega.
+\end{itemize}
+Aðeins þeir bílar sem eru lagðir í bílastæði telja upp í kvótann hjá fyrirtækinu sem bílnúmerið er skráð.
+
+Eyþór er forritari hjá hugbúnaðarfyrirtækinu Karlar \& Kanínur ehf. og finnst honum mjög einkennilegt að það sé aldrei laust bílastæði fyrir sig.
+Hann grunar að eitthvað gruggugt sé í gangi því það eru ekki svo margir á bíl hjá Körlum og Kanínum.
+Einhver hlýtur að vera leggja í leyfisleysi.
+Honum dettur í hug að nota gögnin frá myndavélinni til þess að athuga hverjir eru að brjóta reglurnar.
+
+Eyþór biður húseigandann um myndirnar úr myndavélini fyrir gærdaginn.
+Hann biður einnig um lista yfir bílnúmer frá hverju fyrirtæki.
+Þegar upplýsingarnar eru komnar í hendurnar hans skrifar hann forrit sem les myndirnar
+og breytir þeim í textaskrá, til að auðvelda vinnslu á gögnunum.
+
+Ansans! Eyþór fattar að hann er seinn á daglega scrum fundinn, fyrsta af sjö fundum hans þennan dag.
+Svo virðist sem Eyþór mun ekki hafa færi á að finna sökudólgana í dag einsamall og því biður hann þig um að klára verkefnið sitt.
+Getur þú klárað að greina gögnin fyrir Eyþór og fundið bílnúmer þeirra sem lögðu ólöglega?
+
+\section*{Inntak}
+Fyrsta línan í inntakinu samanstendur af tveimur heiltölum $n$, fjölda bílastæða í bílastæðahúsinu, og $k$, fjölda fyrirtækja sem nýta bílastæðahúsið.
+
+Næst koma $k$ lýsingar, ein fyrir hvert fyrirtæki.
+Lýsingin á fyrirtæki $i$ byrjar fyrst á línu með tveimur heiltölum $n_i$, fjölda bílastæða sem fyrirtæki $i$ má nota í bílastæðahúsinu, og $m_i$, fjölda bílnúmera á skrá hjá fyrirtæki $i$.
+Næst fylgja $m_i$ línur, hver þeirra með einu bílnúmeri.
+
+Næst kemur lína með einni heiltölu $m$, fjöldi mynda sem myndavélin tók.
+Að lokum koma $m$ línur, ein fyrir hverja mynd sem myndavélin tók, í sömu röð og myndirnar voru teknar.
+Hver lína inniheldur eitt bílnúmer.
+
+Sérhvert bílnúmer í inntaki er tvö til sex tákn að lengd og inniheldur einungis enska hástafi og tölustafi.
+Það gildir fyrir öll $i$ að $0 \leq n_i \leq n$ og gera má ráð fyrir að samanlagður fjöldi bílastæða sem hefur veruð úthlutaður til fyrirtækja er ekki meiri en fjöldi bílastæða í bílastæðahúsinu.
+Fjöldi bílnúmera sem eru skráð á fyrirtæki eru í mesta lagi tvöfaldur fjöldi bílastæða.
+Einnig má gera ráð fyrir að bílnúmer séu hvorki skráð á tvö mismunandi fyrirtæki né skráð tvisvar á sama fyrirtækið.
+Samtals fjöldi bílnúmera í inntakinu er í mesta lagi $4 \cdot 10^5$.
+
+\section*{Úttak}
+Fyrst skal skrifa út eina heiltölu, fjölda bílnúmera sem lausnin mun skrifa út.
+Skrifaðu út öll bílnúmer þeirra bíla sem lögðu að minnsta kosti einu sinni í leyfisleysi.
+Bílnúmerin skal skrifa út í stafrófsröð.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 10   & $1 \leq n \leq 100$, $1 \leq k \leq 10$, $1 \leq m \leq 200$, öllum bílum er lagt í bílastæði\\
+      &      & og öll fyrirtæki fylgja úthlutaða kvótanum sínum \\ \hline
+2     & 15   & $1 \leq n \leq 100$, $1 \leq k \leq 10$, $1 \leq m \leq 200$, öllum bílum er lagt í bílastæði \\ \hline 
+3     & 15   & $1 \leq n \leq 100$, $1 \leq k \leq 10$, $1 \leq m \leq 200$, öll fyrirtæki fylgja úthlutaða kvótanum sínum \\ \hline
+4     & 15   & $1 \leq n \leq 100$, $1 \leq k \leq 10$,  $1 \leq m \leq 200$ \\ \hline
+5     & 15   & $1 \leq n \leq 10^5$, $1 \leq k \leq 10^4$, $1 \leq m \leq 2 \cdot 10^5$, öllum bílum er lagt í bílastæði  \\ \hline % O(n + m log m)
+6     & 15   & $1 \leq n \leq 10^5$, $1 \leq k \leq 10^4$, $1 \leq m \leq 2 \cdot 10^5$, öll fyrirtæki fylgja úthlutaða kvótanum sínum  \\ \hline % O(n + m log m)
+7     & 15   & $1 \leq n \leq 10^5$, $1 \leq k \leq 10^4$, $1 \leq m \leq 2 \cdot 10^5$ \\ \hline % O(n + m log m)
+\end{tabular}

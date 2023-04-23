@@ -1,0 +1,72 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution dagur_logn_100.py
+
+compile random_generator.py
+
+samplegroup
+sample 1
+sample 2
+
+group GA 20
+for i in {01..02}; do
+tc GA-$i random_generator $i $i 0
+done;
+tc 1
+for i in {04..17}; do
+tc GA-$i random_generator $i $i 0
+done;
+tc 2
+for i in {19..20}; do
+tc GA-$i random_generator $i $i 0
+done;
+
+group GB 25
+for i in {01..10}; do
+tc GB-$i random_generator 21 1000000 10
+done;
+for i in {11..15}; do
+tc GB-$i random_generator 999000 1000000 10
+done;
+tc GB-16 random_generator 1000000 1000000 10
+
+group GC 25
+include_group GA
+include_group GB
+for i in {01..10}; do
+tc GC-$i random_generator 21 1000000 0
+done;
+for i in {11..15}; do
+tc GC-$i random_generator 999900 1000000 0
+done;
+tc GC-17 random_generator 999999 999999 0
+
+group GD 15
+include_group GB
+for i in {01..05}; do
+tc GD-$i random_generator 1000001 1000000000 10
+done;
+for i in {06..10}; do
+tc GD-$i random_generator 50000000 1000000000000000 10
+done;
+for i in {11..15}; do
+tc GD-$i random_generator 999999999900000 1000000000000000 10
+done;
+tc GD-18 random_generator 1000000000000000 1000000000000000 10
+
+group GE 15
+include_group GC
+include_group GD
+for i in {01..05}; do
+tc GE-$i random_generator 1000001 1000000000 0
+done;
+for i in {06..10}; do
+tc GE-$i random_generator 50000000 1000000000000000 0
+done;
+for i in {11..15}; do
+tc GE-$i random_generator 999999999900000 1000000000000000 0
+done;
+tc GE-16 random_generator 999999999999995 999999999999995 0
+tc GE-17 random_generator 999999999999999 999999999999999 0

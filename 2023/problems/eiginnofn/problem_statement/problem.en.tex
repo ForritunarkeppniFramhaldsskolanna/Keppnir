@@ -1,0 +1,46 @@
+\problemname{Eiginnöfn}
+\illustration{0.3}{doorbell}{Image from \href{https://flickr.com/photos/david_e_smith/3616672234/}{flickr.com}}
+
+Most Icelanders have either one or two given names.
+Those that have two given names are usually addressed only with their former given name, but not the latter.
+The parents of those people sometimes react quite harshly when this happens.
+When Arnar's parents were asked whether Arnar was home, the answer was rarely a simple yes or no.
+Instead they answered: ``No, but Arnar Bjarni is home.''
+
+A smart doorbell has been set up at the house, in which guests can input the name of the person which they are visiting.
+There are some concerns that this is a solution that loses the personal touch and there is an unwillingness to lose the charm which people experience from jokes made by parents.
+Therefore the doorbell stores the name of each resident, but in the visitor interface the user can only input a single given name to ask for a resident.
+The doorbell then responds whether the resident is home, as Arnar's parents did.
+If the resident has one given name and is home, the doorbell responds with a yes.
+If the resident has two given names and is home, the doorbell responds with a no, but additionally corrects the person and claims a person with both given names of the resident is home.
+If the resident is not home, the doorbell answer with a no.
+
+\section*{Input}
+Input starts with a line consisting of a single integer $n$, the number of residents which are home.
+Then $n$ lines follow, where each line consists of either one or two given names, which are separated by a space.
+
+Then follows a line with a single integer $m$, the number of queries made to the doorbell.
+Finally, $m$ lines follow, where each line consists of one given name, meaning the resident with that name is the one asked for.
+
+You may assume that no two residents share the same former given name.
+Each given name starts with a capital letter and then small letters follow.
+Each letter in the given names is in the English alphabet.
+Given names are at most $10$ letters long.
+
+\section*{Output}
+Each query shall be answered in the following way, in the same order as they appear in the input.
+If the resident is not home, you should output \texttt{Neibb}.
+If the resident is home and has no latter given name, you should output \texttt{Jebb}.
+If the resident is home and has a latter given name, you should output in the form of \texttt{Neibb en <both given names> er heima}.
+
+\section*{Scoring}
+\begin{tabular}{|l|l|l|}
+\hline
+Group & Points & Constraints \\ \hline
+1     & 10   & Each resident has one given name and $1 \leq n, m, \leq 100$ \\ \hline
+2     & 10   & Each resident has two given names and $1 \leq n, m \leq 100$ \\ \hline
+3     & 20   & $1 \leq n, m \leq 100$ \\ \hline
+4     & 20   & Each resident has one given name and $1 \leq n, m, \leq 10^5$ \\ \hline
+5     & 20   & Each resident has two given names and $1 \leq n, m \leq 10^5$ \\ \hline
+6     & 20   & $1 \leq n, m \leq 10^5$ \\ \hline
+\end{tabular}

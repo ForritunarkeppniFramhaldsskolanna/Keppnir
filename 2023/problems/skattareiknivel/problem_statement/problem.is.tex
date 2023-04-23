@@ -1,0 +1,93 @@
+\problemname{Skattareiknivel}
+
+Sigurjón var valinn starfsmaður mánaðarins hjá Krabbaborgurum tólf mánuði í röð
+og fékk því mikla launahækkun. Sigurjón veit þó að hann fær ekki öll launin sín
+beint í vasann, heldur þarf hann að fyrst að greiða í lífeyrissjóð og
+séreignarsparnað og svo þarf hann að greiða tekjuskatt og útsvar af restinni.
+Sigurjón veit líka að í hverjum mánuði fær hann ákveðinn persónuafslátt sem
+dreginn er frá útreiknuðum tekjuskatti og útsvari og ef hann notar ekki allan
+persónuafsláttinn sinn einn mánuðinn þá má hann nota afganginn í næsta mánuði!
+Sigurjón vill vita hversu há laun hann fær útborguð í hverjum mánuði eftir alla
+skatta og gjöld en útreikningarnir eru of flóknir fyrir hann. Getur þú hjálpað
+Sigurjóni?
+
+Skattur af launum einstaklinga er reiknaður á eftirfarandi hátt:
+
+Fyrst þarf að greiða iðgjald í lífeyrissjóð og séreignarsparnað. Gjöldin eru
+reiknuð sem prósenta af heildarlaunum fyrir skatt. Heildarlaunin að frádregnum
+iðgjöldum eru kölluð skattstofn og er hann námundaður niður að næstu heiltölu.
+Við táknum þetta með $\lfloor x \rfloor$, því er
+$\lfloor 11.3 \rfloor = 11$ og $\lfloor 25.99 \rfloor = 25$.
+Til dæmis, ef einstaklingur er með $500\,000$ krónur í mánaðarlaun og greiðir
+$4\%$ iðgjald í lífeyrissjóð og $1\%$ iðgjald í séreignarsparnað, þá greiðir
+einstaklingurinn $\lfloor 500\,000 \cdot 0.04 \rfloor= 20\,000$ krónur í
+lífeyrissjóð og $\lfloor 500\,000 \cdot 0.01 \rfloor = 5\,000$ krónur í
+séreignarsparnað. Skattstofninn er þá
+$500\,000 - 20\,000 - 5\,000 = 475\,000$ krónur.
+
+Af skattstofni þarf að greiða tekjuskatt til ríkisins og útsvar til
+sveitarfélagsins sem einstaklingurinn býr í. Tekjuskattinum er skipt upp í
+mismunandi skattþrep en í hverju þrepi þarf að borga ákveðna prósentu af
+skattstofninum sem fellur inn í það skattþrep en útsvarinu er ekki skipt upp í
+þrep. Samanlagður tekjuskattur og útsvar nefnist staðgreiðsluskattur og er hann
+einnig námundaður niður að næstu heiltölu.
+
+Árið 2023 eru eftirfarandi þrjú skattþrep á Íslandi og er gert ráð fyrir $14.67\%$
+meðalútsvari:
+
+\begin{table}[h]
+\begin{tabular}{lll}
+    Þrep & Laun & Skattshlutfall \\ \hline
+    $1$ & $0$ kr.\ -- $409\,986$ kr. & $31.45\%$, þar af $16.78\%$ tekjuskattur \\
+    $2$ & $409\,987$ kr.\ -- $1\,151\,012$ kr. & $37.95\%$, þar af $23.28\%$ tekjuskattur \\
+    $3$ & $1\,151\,013$ kr.\ og meira & $46.25\%$, þar af $31.58\%$ tekjuskattur \\
+\end{tabular}
+\end{table}
+
+Sé skattstofninn $475\,000$ krónur fellur hann alveg yfir fyrsta skattþrepið, 
+$409\,986$ krónur í því þrepi, og að hluta yfir annað þrepið, $65\,014$ krónur
+í því þrepi. Einstaklingurinn borgar því $31.45\%$ af fyrstu $409\,986$
+krónunum og $37.95\%$ af síðustu $65\,014$ krónunum. Reiknaður
+staðgreiðsluskattur er þá
+$\lfloor 0.3145 \cdot 409\,986 + 0.3795 \cdot 65\,014 \rfloor = 153\,613$
+krónur.
+
+Að lokum er persónuafslátturinn dreginn frá reiknuðum staðgreiðsluskatti og er
+útkoman sú upphæð sem einstaklingurinn þarf að greiða af skattstofninum. Ef
+reiknaður staðgreiðsluskattur er lægri en persónuafslátturinn þá safnanst
+persónuafslátturinn upp milli mánaða, en ekki aftur í tímann. Árið 2023 er
+persónuafslátturinn $59\,665$ krónur á mánuði. Til dæmis, ef reiknaður
+staðgreiðsluskattur er $153\,613$ krónur, þá þarf einstaklingurinn
+aðeins að greiða $153\,613 - 59\,665 = 93\,948$ krónur af skattstofninum
+og fær því $475\,000 - 93\,948 = 381\,052$ krónur í laun eftir að hafa
+greitt öll gjöld og skatta. Í þessu tilfelli var persónuafslátturinn fullnýttur
+og ekkert safnast upp milli mánaða.
+
+Ef reiknaður staðgreiðsluskattur hefði verið $30\,000$ krónur og
+persónuafslátturinn ennþá $59\,665$ krónur þá hefði einstaklingurinn ekki þurft
+að greiða neitt af skattstofninum og $59\,665 - 30\,000 = 29\,665$ krónur af
+persónuafslættinum hefðu verið ónýttar þennan mánuð. Næsta mánuð hefði
+einstaklingurinn þá átt verið með $59\,665 + 29\,665 = 89\,330$ krónur í
+persónuafslátt.
+
+\section*{Inntak}
+Fyrsta línan inniheldur eina rauntölu $l$, þar sem $0 \leq l \leq 4$, sem táknar iðgjaldið í
+lífeyrissjóð sem prósentu.
+
+Næsta lína inniheldur eina rauntölu $u$, þar sem $0 \leq l \leq 4$, sem táknar iðgjaldið í
+séreignarsjóð sem prósentu.
+
+Rauntölurnar tvær eru gefnar með nákvæmlega tveimur aukastöfum.
+
+Næst koma tólf línur. Hver lína inniheldur eina heiltölu $m_{i}$, þar sem $0 \leq m_i \leq 10^8$ fyrir öll sérhvert $i$, sem táknar launin sem Sigurjón fær í mánuði $i$.
+
+\section*{Úttak}
+Skrifa skal út eina heiltölu $h$, samanlögð útborguð mánaðarlaun Sigurjóns yfir árið
+eftir alla skatta og gjöld.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 100  & Engar frekari takmarkanir\\ \hline
+\end{tabular}

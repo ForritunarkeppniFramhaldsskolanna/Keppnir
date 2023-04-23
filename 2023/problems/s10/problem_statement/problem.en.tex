@@ -1,0 +1,72 @@
+\problemname{S10}
+\illustration{0.3}{garage}{Photo from \href{https://commons.wikimedia.org/wiki/File:Empty_parking_garage_\%2842791016642\%29.jpg}{commons.wikimedia.org}}
+
+On Suðurlandsbraut, it can prove difficult to find a parking spot, as many people have business with the companies residing there.
+A large portion of the parking spots are explicitly marked for the customers of these companies and are for short term parking only.
+Therefore they may only be used for 15--30 minutes at a time.
+The employees of the companies are not allowed to use these parking spots and therefore the companies must ensure that some parking spots are reserved for staff.
+
+There is a three story parking garage by Suðurlandsbraut 10 with many parking spots.
+Even though there is a large number of parking spots, it is possible they are all in use. Additional cars may be parked illegally in place which are not parking spots, for example, in front of other parking spots or by the entrance.
+Since the companies share the parking garage, the parking spots have been split among them.
+The parking spots are not explicitly marked for the companies. The employees can simply park in the garage and each company has a limit on the number of parking spots they can use at the same time.
+A camera by the entrance of the garage takes pictures of the license plates of each car that enters or exits.
+Cars may not be left parked in the garage over night so the garage is always empty at the start of each day.
+
+Each car that enters the parking garage either parks legally or illegally, which is decided by the following rules.
+\begin{itemize}
+    \item If there is a free parking spot, then the car parks in the parking spot, otherwise it parks illegally, not in a parking spot.
+    \item If the license plate of the car is not registered to any company, then the car parks illegally, whether it is in a parking spot or not.
+    \item If the license plate of the car is registered to some company, and the same company has reached its assigned quota of parking spots, then the car parks illegally.
+\end{itemize}
+Only the cars which are parked in a parking spot count towards the quota of the company, to which the license plate is registered.
+
+Eyþór is a programmer at the company Karlar \& Kanínur ehf. and he thinks it's very strange how he can never find a parking spot.
+He suspects something shady is going on since not many employees at his company use a car.
+Someone must be parking illegally.
+He comes up with the idea to use data from the camera to find out who is breaking the rules.
+
+Eyþór asks the landlord for the photos taken by the camera yesterday.
+He also requests a list of license plates registered to each company.
+When he has received the information requested, he writes a program which scans
+the photos and changes them to a text log so the data processing becomes easier.
+
+Darn! Eyþór realizes he is late to the daily scrum meeting, which is only the first of seven meetings today.
+Seems like Eyþór will not have a chance to catch the culprits today on his own, so he asks for your help in finishing this assignment.
+Can you finish processing the data for Eyþór and find all license plates of those who parked illegally?
+
+\section*{Input}
+The first line of the input consists of two integers $n$, the number of parking spots in the parking garage, and $k$, the number of companies using the parking garage.
+
+Next come $k$ descriptions, one for each company.
+The description for each company $i$ starts with a line consisting of two integers $n_i$, the number of parking spots allocated to company $i$, and $m_i$, the number of plates registered to company $i$.
+After that follow $m_i$ lines, each consisting of a single license plate.
+
+Next follows a line consisting of one integer $m$, the number of photos taken by the camera.
+Finally $m$ lines follow, each one representing a photo taken by the camera, in the same order that the photos were taken.
+Each line will consist of a single license plate.
+
+Each license plate in the input consists of two to six symbols, all of which are capital letters in the English alphabet or digits.
+It's guaranteed that $0 \leq n_i \leq n$ for all $i$ and you may assume the total number of parking spots allocated to the companies is not greater than the number of parking spots in the parking garage.
+The number of license plates registered to companies is at most double the number of parking spots.
+You may also assume that a license plate is neither registered to two different companies, nor to the same company twice.
+The total number of license plates in the input is at most $4 \cdot 10^5$.
+
+\section*{Output}
+First output an integer, the number of license plates your program will output.
+Then output all license plates which parked illegally, at least once.
+The license plates should be output in lexicographical order.
+
+\section*{Scoring}
+\begin{tabular}{|l|l|l|}
+\hline
+Group & Points & Constraints \\ \hline
+1     & 10     & $1 \leq n \leq 100$, $1 \leq k \leq 10$, $1 \leq m \leq 200$, all cars are parked in parking spots \\
+      &        & and all companies respect their quotas \\ \hline
+2     & 15     & $1 \leq n \leq 100$, $1 \leq k \leq 10$, $1 \leq m \leq 200$, all cars are parked in parking spots \\ \hline 
+3     & 15     & $1 \leq n \leq 100$, $1 \leq k \leq 10$, $1 \leq m \leq 200$, all companies respect their quotas \\ \hline
+4     & 15     & $1 \leq n \leq 100$, $1 \leq k \leq 10$, $1 \leq m \leq 200$ \\ \hline
+5     & 15     & $1 \leq n \leq 10^5$, $1 \leq k \leq 10^4$, $1 \leq m \leq 2 \cdot 10^5$, all cars are parked in parking spots \\ \hline % O(n + m log m)
+6     & 15     & $1 \leq n \leq 10^5$, $1 \leq k \leq 10^4$, $1 \leq m \leq 2 \cdot 10^5$, all companies respect their quotas  \\ \hline % O(n + m log m)
+7     & 15     & $1 \leq n \leq 10^5$, $1 \leq k \leq 10^4$, $1 \leq m \leq 2 \cdot 10^5$ \\ \hline % O(n + m log m)
+\end{tabular}

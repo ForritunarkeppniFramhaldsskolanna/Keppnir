@@ -1,0 +1,37 @@
+\problemname{Skattmann}
+\illustration{0.3}{taxmanimg}{Mynd fengin af \href{https://commons.wikimedia.org/wiki/File:RISD_Tax_Collectors.jpg}{commons.wikimedia.org}}
+
+Þú varst að fá útborgað, allar tölur frá $1$ og upp í $n$ eru nú í eigu þinni
+eftir strembinn mánuð. En því miður eru hlutir ekki svo einfaldir, því það á
+eftir að borga skatt. Þú sest því niður á móti Skattmann og hefst þá
+leikur. Þú mátt taka eina tölu í einu af tölunum $1$ og upp í $n$ til að
+eiga. En þegar þú tekur töluna $m$ þá tekur Skattmann allar
+tölur $d$ sem ganga upp í $m$, og ef engin slík tala er eftir þá máttu ekki
+taka $m$ því það þarf að taka skatt af öllu. Því má til dæmis ekki byrja á
+að taka $1$. Í lokin tekur svo Skattmann allar tölur sem eftir eru.
+
+Markmið þitt er að borga sem minnstan skatt, alla vega strangt minna en $50\%$.
+Til dæmis ef $n = 13$ getum við byrjað á að taka $13$ og Skattmann tekur
+þá $1$. Ef við tökum næst $9$ tekur Skattmann $3$. Tökum svo $10$ og
+Skattmann tekur bæði $2$ og $5$. Tökum $8$, Skattmann tekur $4$.
+Loks tökum við $12$ og Skattmann tekur $6$. Þá eru $7$ og $11$ eftir,
+en við getum ekki tekið þær, svo skatturinn tekur báðar. Samtals fáum við
+$52$ en skatturinn $39$, svo okkur tókst ætlunarverk okkar.
+
+\section*{Inntak}
+Inntakið inniheldur eina heiltölu $4 \leq n \leq 10\,000$.
+
+\section*{Úttak}
+Skrifið út eina línu með einni heiltölu sem gefur fjölda talna sem þið ætlið að taka.
+Á næstu línu prentið út hvaða tölur þið takið, í þeirri röð sem þið takið þær, með bili á
+milli talna.
+
+\section*{Stigagjöf}
+Lausnin verður keyrð á 100 mismunandi prófunartilfellum. Ef lausnin skilar
+ógildu svari fást engin stig. Ef dómaralausnin fær summuna $s$ og þið skilið summunni
+$x$ fæst $(4x - n(n + 1)) / (4s - n(n + 1))$ stig fyrir það tilfelli, í minnsta lagi $0$
+stig og í mesta lagi $1$ stig samt. Þetta þýðir að fyrir að fá nákvæmlega helminginn fást $0$
+stig, sem hækkar línulega upp í $1$ stig eftir sem þið nálgist dómaralausn.
+
+Prófunartilfellum hefur verið skipt í tvo jafnstóra flokka, $50$ prófunartilfelli í hvorum flokk fyrir sig.
+Um annan flokkinn gildir að $4 \leq n \leq 1\,000$, en um hinn gildir að $1\,000 < n \leq 10\,000$.

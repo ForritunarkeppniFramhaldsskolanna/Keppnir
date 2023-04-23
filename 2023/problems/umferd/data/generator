@@ -1,0 +1,52 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution hannes_100.py
+
+compile random_generator.py
+
+samplegroup
+sample 1
+sample 2
+
+group GA 40
+for i in {01..10}; do
+tc GA-$i random_generator 1 1 500 1 0.5
+done;
+for i in {11..15}; do
+tc GA-$i random_generator 1 1 500 1 0.9
+done;
+for i in {16..20}; do
+tc GA-$i random_generator 1 1 500 1 0.1
+done;
+for i in {21..21}; do
+tc GA-$i random_generator 500 1 500 1 0.7
+done;
+for i in {22..22}; do
+tc GA-$i random_generator 500 1 500 1 0.0
+done;
+for i in {23..23}; do
+tc GA-$i random_generator 500 1 500 1 1.0
+done;
+
+group GB 60
+include_group GA
+for i in {01..10}; do
+tc GB-$i random_generator 1 1 500 500 0.5
+done;
+for i in {11..15}; do
+tc GB-$i random_generator 1 1 500 500 0.9
+done;
+for i in {16..20}; do
+tc GB-$i random_generator 1 1 500 500 0.1
+done;
+for i in {21..21}; do
+tc GB-$i random_generator 500 500 500 500 0.7
+done;
+for i in {22..22}; do
+tc GB-$i random_generator 500 500 500 500 0.0
+done;
+for i in {23..23}; do
+tc GB-$i random_generator 500 500 500 500 1.0
+done;

@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution arnar_100.py
+
+compile random_generator.py
+
+samplegroup
+sample 1
+sample 2
+sample 3
+
+group GA 100
+tc GA-01 random_generator 10**6 10**6 1 1
+tc GA-02 random_generator 10**6 10**6 2 2
+tc GA-03 random_generator 10**6 10**6 3 3
+tc GA-04 random_generator 10**6 10**6 4 4
+tc GA-05 random_generator 10**6 10**6 5 5
+for i in {06..40}; do
+tc GA-$i random_generator 1 10**6 1 10**6
+done;
+

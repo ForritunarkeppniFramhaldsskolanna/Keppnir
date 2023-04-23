@@ -1,0 +1,11 @@
+INT(1, 8, n)
+NEWLINE
+REP(n, NEWLINE)
+    INT(1, 100, m)
+    SPACE
+    REP(m, SPACE)
+        INT(1, 50000)
+    END
+END
+NEWLINE
+EOF

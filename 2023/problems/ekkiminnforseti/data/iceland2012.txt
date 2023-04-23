@@ -1,0 +1,19 @@
+6 3
+Andrea Johanna Olafsdottir
+2867
+1 0 0
+Ari Trausti Gudmundsson
+13764
+-1 0 0
+Hannes Bjarnason
+1556
+0 1 0
+Herdis Thorgeirsdottir
+4189
+0 -1 0
+Olafur Ragnar Grimsson
+84036
+0 0 0
+Thora Arnorsdottir
+52795
+0 0 1

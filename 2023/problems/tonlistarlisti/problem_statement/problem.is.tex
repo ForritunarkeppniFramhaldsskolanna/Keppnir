@@ -1,0 +1,42 @@
+\problemname{Tónlistarlisti}
+\illustration{0.3}{note}{}
+
+Atli er mjög óskipulagður og er aðeins með einn lista af lögum til að hlusta
+á. Öll lög sem honum líkar fara efst í einn sameiginlegan lista af lögum, og
+þegar hann hlustar á tónlist byrjar hann á efsta laginu og hlustar á þau í
+röð. Ef hann er búinn að hlusta á öll lögin byrjar fyrsta lagið að spila aftur.
+
+Einhverra hluta vegna getur forritið sem hann notar til að hlusta á tónlist
+ekki sýnt hvað hann hefur hlustað oft á hvert lag. Því biður hann þig um að
+útbúa forrit sem getur haldið utan um slíkt. Hann telur aðeins með skipti
+þar sem hlustað er á lag frá byrjun til enda án þess að pása. 
+
+\section*{Inntak}
+Fyrsta línan í inntakinu inniheldur eina heiltölu $q$, fjöldi fyrirspurna.
+
+Næst koma $q$ línur, hver með einni fyrirspurn. Þær byrja á einum bókstaf sem gefur
+til kynna tegund fyrirspurnar. Ef línan byrjar á $P$ kemur næst jákvæð heiltala $\leq 10^9$, 
+fjöldi sekúndna sem Atli hlustaði á tónlist. Atli byrjar alltaf efst í listanum og pásar um leið og tíminn er runninn upp.
+Ef línan byrjar á $L$ kemur næst strengur með
+nafni lags og svo heiltala, lengd lagsins í sekúndum. Þetta merkir að Atli bætti þessu lagi efst í tónlistarlistann
+sinn, eða eyddi því út ef það var þegar í listanum. Ef línan byrjar á $Q$ kemur næst
+strengur með nafni lags. Prenta á þá út hversu oft Atli hefur hlustað á lagið. 
+Nöfn laga innihalda einungis enska lágstafi og undirstrik. Samtals lengd nafna allra
+laga í inntaki er mest $2 \cdot 10^6$.
+Tónlistarlistinn er tómur í upphafi, og Atli mun aldrei hlusta á tónlist meðan listinn er tómur. Engin tvö
+ólík lög hafa sama nafn.
+
+\section*{Úttak}
+Fyrir hverja fyrirspurn sem byrjar á $Q$ skal prenta hversu oft Atli hefur hlustað á
+samsvarandi lag.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 20   & $1 \leq q \leq 1\,000$, lög eru aldrei fjarlægð úr lista, sérhvert lag hefur lengd $1$ \\ \hline
+2     & 20   & $1 \leq q \leq 1\,000$, lög eru aldrei fjarlægð úr lista \\ \hline
+3     & 30   & $1 \leq q \leq 5 \cdot 10^5$, lög eru aldrei fjarlægð úr lista \\ \hline
+4     & 30   & $1 \leq q \leq 5 \cdot 10^5$ \\ \hline
+\end{tabular}
+

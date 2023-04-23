@@ -1,0 +1,34 @@
+\problemname{Umferð}
+\illustration{0.3}{umferd.jpg}{Mynd fengin af \href{https://www.flickr.com/photos/seattlecamera/51511583493/}{flickr.com}}
+
+Umferðarteppa er mikið vandamál í stórborgum, eins og til dæmis Njú Jork og Síattúl, sérstaklega á álagstímum.
+
+Í umferðarteppu eru margir bílar með litlu bili milli hvors annars, og ekki mikil hreyfing er á þeim.
+Til að einfalda hlutina, þá skulum við gefa okkur það að umferð myndast á \emph{akrein}, og hver akrein samanstendur
+af $m$ \emph{reitum}, í hverjum reit getur verið að hámarki $1$ bíll, en reitur getur líka verið auður.
+
+Gefin er lengd hraðbrautarinnar $m$, fjölda akreina $n$, og textræn lýsing á hverjum reit, þar sem reitur með bíl
+á er táknaður með \texttt{\#}, og \texttt{.} táknar auðann reit.
+
+Verkefnið er að reikna út hlutfall auðra reita á hraðbrautinni, sem tölu á milli $0$ og $1$.
+
+\section*{Inntak}
+Fyrsta línan inniheldur eina heiltölu, $m$, lengd hraðbrautarinnar.
+Næsta lína inniheldur eina heiltölu, $n$, fjölda akreina á hraðbrautinni.
+Næst fylgja $n$ línur.
+Hver lína inniheldur $m$ stafi, og er sérhver þeirra annaðhvort \texttt{.} eða \texttt{\#}.
+
+\section*{Úttak}
+Skrifið út hlutfall auðra reita á hraðbrautinni.
+
+Úttakið er talið rétt ef annaðhvort hlutfallsleg eða bein skekkja þess er innan við 
+$10^{-5}$. Þetta þýðir að það skiptir ekki máli með hversu margra aukastafa nákvæmni tölurnar eru skrifaðar út, svo lengi sem þær er nógu nákvæmar.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 40   & $n = 1$ og $1 \leq m \leq 500$ \\ \hline
+2     & 60   & $1 \leq n, m \leq 500$ \\ \hline
+\end{tabular}
+

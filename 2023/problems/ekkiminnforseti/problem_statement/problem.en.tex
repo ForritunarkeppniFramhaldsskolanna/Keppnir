@@ -1,0 +1,67 @@
+\problemname{Ekki minn forseti}
+\illustration{0.3}{not_my_president}{Mynd fengin af \href{https://commons.wikimedia.org/wiki/File:Not_My_President_\%2830649025060\%29.jpg}{wikimedia.org}}
+After the 2016 United States Presidential election, a large group of people protested because they felt the president did not have the support of a majority of the population.
+The words ``NOT MY PRESIDENT'' were heard all over the country.
+In the election, Hillary Clinton receieved $48.2\%$ of the votes and Donald Trump received $46.1\%$ of the votes.
+Trump was victorious despite that because of the electoral system in the United States.
+
+In Iceland it is impossible for a candidate with a lower amount of votes to win against the candidate with the most votes.
+Even though our electoral system is not susceptible to this flaw in particular, it is hardly perfect.
+In Iceland's electoral system, a voter simply chooses a single candidate to vote for and the candidate with the highest number of votes wins.
+
+Ólafur Þórður Harðarson, a professor of political science at the University of Iceland, has criticized Iceland's electoral system for decades.
+In an old article, he wrote about one flaw in particular.
+He examined the possibility of an almost even distribution of votes between candidates.
+With two candidates, the winner would have to receive just over half of the votes in order to win, which makes the system seem as fair as it possibly can be.
+However, if there are ten candidates in the race, then it may be sufficient to receive just over $10\%$ of the votes to be elected.
+Since the voters' first choice is the only thing that is taken into account, up to $90\%$ of the nation may be left with the candidate which they like the least as president.
+
+Another flaw of the system, which is often criticized, is known as lost votes.
+It is often clear by the polls before the election, which two candidates are most likely to win.
+The difference between them and the third, fourth or even ninth place candidates can be so large that the poll clearly shows which candidates will be in the top two places.
+A voter may then feel their vote is lost since their vote will not impact the battle between the top two candidates.
+Some voters may even choose to vote for the candidate in the top two which the like the most, even though, in their mind, they may be voting for the lesser of two evils.
+
+One solution to this issue would be to have multiple rounds of the electoral process so ensure each vote has an impact, but for a small nationm like Iceland this can prove financially unviable.
+Luckily, a system exists which only requires one round and is free of the aforementioned flaws.
+The system is based on the voter ordering the candidates by their preference.
+The main flaw of this system then is that the voting process becomes a little more complicated for the voter.
+The first choice of each voter would then determine the initial result of the elections, which would be the same result as we obtain in the current system.
+The difference is that while no voter has a majority of the votes, the candidate with the lowest amount of votes is removed from the election.
+The votes for that candidate are then updated, and each voter's next option receives the vote.
+When some candidate has a majority of the votes, the winner of the election has been determined.
+
+The Competitive Programming Association of Iceland used their time machine to travel back to previous elections, asking every person in the country how they would vote in this new system.
+The association travelled back in time slowly, but surely, and everything went fine and dandy.
+Each voter provided an ordered list with all candidates listed.
+When it was time to travel back to the future, to the year $2023$, it was revealed that the time machine did not work in both directions.
+The members of the association were therefore stuck in the year $1952$, when there were not many computers to be found in Iceland.
+Therefore, they were unable to write a program to simulate the elections with the new votes.
+They decided to freeze themselves in order to reach the year $2023$ once more and Arnar left these instructions in the hope that someone would implement the program for him.
+
+\section*{Input}
+The first line of the input consists of two integers $n$, the number of votes, and $m$, the number of candidates, which are separated by a space.
+
+Next, $m$ lines follow, each of which contains the name of a candidate.
+Names consist entirely of letters from the English alphabet.
+The number of letters in each name is between $1$ and $50$.
+
+Finally, $n$ lines follow, each of which contains a vote.
+Each vote consists of $m$ integers, the numbers from $1$ to $m$, where each number appears exactly once, and describes the order in which the voter prefers the candidates.
+The first number in the line therefore references the voter's first choice candidates, the second number references the second choice and so forth.
+The numbers reference the candidates in the order which they appear in the input.
+
+If two candidates have an equal amount of votes at any point in the process, then the candidate which appear earlier in the input is considered to be placed higher.
+
+\section*{Output}
+Output a single line with the name of the winner of the elections.
+
+\section*{Scoring}
+\begin{tabular}{|l|l|l|}
+\hline
+Group & Points & Constraints \\ \hline
+1     & 25     & $m = 2$, $1 \leq n \leq 2\,000$ \\ \hline
+2     & 25     & $2 \leq m \leq 3$, $1 \leq n \leq 2\,000$ \\ \hline
+3     & 25     & $2 \leq m \leq 9$, $1 \leq n \leq 2\,000$ \\ \hline
+4     & 25     & $2 \leq m \leq 10^5$, $n \cdot m \leq 2 \cdot 10^6$ \\ \hline
+\end{tabular}

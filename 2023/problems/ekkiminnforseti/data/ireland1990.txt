@@ -1,0 +1,10 @@
+3 2
+Austin Currie
+267902
+0.6 0.1
+Brian Lenihan
+694484
+0.45 0.45
+Mary Robinson
+612265
+0.2 -0.1

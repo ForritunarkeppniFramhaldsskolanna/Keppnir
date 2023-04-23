@@ -1,0 +1,59 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution arnar_100.py
+
+compile random_generator.py
+
+samplegroup
+sample 1
+sample 2
+sample 3
+sample 4
+
+group GA 10
+tc 1
+tc GA-01 random_generator 1 1 0 0 uniform
+tc GA-02 random_generator 1 1 1 1 uniform
+
+group GB 30
+include_group GA
+for i in {01..10}; do
+tc GB-$i random_generator 2 99 0 100 uniform
+done
+tc GB-11 random_generator 100 100 0 0 uniform
+tc GB-12 random_generator 100 100 100 100 uniform
+tc GB-13 random_generator 100 100 0 100 uniform
+tc GB-14 random_generator 100 100 0 100 uniform
+tc GB-15 random_generator 100 100 0 100 uniform
+tc GB-16 random_generator 100 100 0 100 streak
+tc GB-17 random_generator 100 100 0 100 streak
+tc GB-18 random_generator 100 100 0 100 streak
+tc GB-reduced-fraction random_generator 10 10 0 100 GGAAGGAAAA
+
+group GC 20
+include_group GB
+for i in {01..05}; do
+tc GC-$i random_generator 101 3*10**5 0 1000 uniform
+done
+for i in {06..08}; do
+tc GC-$i random_generator 3*10**5 3*10**5 1000 1000 uniform
+done
+tc GC-09 random_generator 101 10**5 0 0 uniform
+tc GC-10 random_generator 3*10**5 3*10**5 0 0 uniform
+tc GC-11 random_generator 3*10**5 3*10**5 1000 1000 streak
+tc GC-12 random_generator 3*10**5 3*10**5 1000 1000 streak
+
+group GD 40
+include_group GC
+for i in {01..01}; do
+tc GD-$i random_generator 101 3*10**5 1001 3*10**5 uniform
+done
+for i in {02..05}; do
+tc GD-$i random_generator 3*10**5 3*10**5 3*10**5 3*10**5 uniform
+done
+tc GD-06 random_generator 101 3*10**5 1001 3*10**5 streak
+tc GD-07 random_generator 101 3*10**5 1001 3*10**5 streak
+tc GD-08 random_generator 3*10**5 3*10**5 3*10**5 3*10**5 streak
+tc GD-09 random_generator 3*10**5 3*10**5 3*10**5 3*10**5 streak

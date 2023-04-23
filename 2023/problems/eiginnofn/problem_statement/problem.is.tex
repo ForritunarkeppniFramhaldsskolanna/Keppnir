@@ -1,0 +1,47 @@
+\problemname{Eiginnöfn}
+\illustration{0.3}{doorbell}{Mynd fengin af \href{https://flickr.com/photos/david_e_smith/3616672234/}{flickr.com}}
+
+Flestir Íslendingar eru annaðhvort með eitt eða tvö eiginnöfn.
+Þau sem eru með tvö eiginnöfn eru oftast ávörpuð einungis með fyrra eiginnafninu, en ekki seinna.
+Foreldrar þeirra eiga samt til að bregðast harkalega við þessu.
+Þegar foreldrar Arnars voru spurðir hvort Arnar væri heima var svarið sjaldan einfalt já eða nei.
+Í staðin var svarað: ,,Nei, en Arnar Bjarni er heima.``
+
+Nú er búið að setja upp nýja snjalldyrabjöllu á heimilinu þar sem gestir geta skrifað nafnið á manneskjunni sem verið er að heimsækja.
+Það eru samt áhyggjur yfir því að þetta sé ópersónuleg lausn og er ekki vilji fyrir að missa sjarmann og skemmtunina sem fólk upplifir frá foreldrabröndurum.
+Því geymir dyrabjallan öll eiginnöfn hvers íbúa en í heimsóknarvalmyndinni er aðeins hægt að skrifa inn eitt eiginnafn til að spyrja eftir íbúa.
+Dyrabjallan svarar þá hvort að íbúinn sé heima eins og foreldrar Arnars gerðu.
+Ef íbúinn er með eitt eiginnafn og er heima, þá er svarað játandi.
+Ef íbúinn er með tvö eiginnöfn og er heima, þá er svarað neitandi, en leiðrétt að manneskja með báðum eiginnöfnum íbúans sé heima.
+Ef íbúinn er ekki heima að þá er svarað neitandi.
+
+\section*{Inntak}
+Inntak hefst á línu með einni heiltölu $n$, fjöldi íbúa sem eru heima.
+Næst koma $n$ línur þar sem hver lína er ýmist með eitt eða tvö eiginnöfn sem eru aðskilin með bili.
+
+Svo kemur lína með einni heiltölu $m$, fjöldi fyrispurna til dyrabjöllunnar.
+Næst koma $m$ línur þar sem hver lína inniheldur eitt eiginnafn sem þýðir að spurt sé hvort sá íbúi sé heima.
+
+Gera má ráð fyrir að engir tveir íbúar eigi sama fyrra eiginnafn.
+Sérhvert eiginnafn byrjar á stórum staf og næst fylgja litlir stafir.
+Hver einasti stafur í eiginnöfnunum er í enska stafrófinu.
+Eiginnöfn eru í mesta lagi $10$ stafir á lengd.
+
+\section*{Úttak}
+Svara skal hverri fyrirspurn á eftirfarandi máta í sömu röð og fyrirspurnir koma fyrir í inntaki.
+Ef íbúinn er ekki heima skal skrifa út \texttt{Neibb}.
+Ef íbúinn er heima og hefur ekki seinna eiginnafn skal svara \texttt{Jebb}.
+Ef íbúinn er heima og hefur tvö eiginnöfn skal svara á forminu \texttt{Neibb en <bæði eiginnöfn> er heima}.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 10   & Sérhver íbúi hefur eitt eiginnafn og $1 \leq n, m, \leq 100$ \\ \hline
+2     & 10   & Sérhver íbúi hefur tvö eiginnöfn og $1 \leq n, m \leq 100$ \\ \hline
+3     & 20   & $1 \leq n, m \leq 100$ \\ \hline
+4     & 20   & Sérhver íbúi hefur eitt eiginnafn og $1 \leq n, m, \leq 10^5$ \\ \hline
+5     & 20   & Sérhver íbúi hefur tvö eiginnöfn og $1 \leq n, m \leq 10^5$ \\ \hline
+6     & 20   & $1 \leq n, m \leq 10^5$ \\ \hline
+\end{tabular}
+

@@ -1,0 +1,37 @@
+\problemname{Skattmann}
+\illustration{0.3}{taxmanimg}{Image taken from \href{https://commons.wikimedia.org/wiki/File:RISD_Tax_Collectors.jpg}{commons.wikimedia.org}}
+
+You just got paid, all numbers from $1$ to $n$ are now in your possession after
+a hard month. But unfortunately things aren't quite so simple, because now you
+have to pay tax. You sit down across from the Skattmann, and the game begins. You
+may take one of the numbers from $1$ to $n$ to keep. If you take the number $m$
+the Skattmann takes all numbers $d$ that divide $m$, and if there is no such number
+$d$ you aren't allowed to take $m$ since everything has to be taxed. For example
+you are not allowed to start by taking $1$. At the end the Skattmann takes all remaining
+numbers.
+
+Your goal is to pay the minimum tax possible, at least strictly less than $50\%$.
+For example if $n = 13$ we can start by taking $13$ and the Skattmann takes $1$. If
+we then take $9$ the Skattmann takes $3$. Next we could take $10$ and then the Skattmann
+takes both $2$ and $5$. If we then take $8$ the Skattmann takes $4$. Finally if we
+take $12$ the Skattmann takes $6$, and then both $7$ and $11$ because we can't take
+either of them so the game is over. In total we get $52$ and the Skattmann gets $39$,
+so we got more than half.
+
+\section*{Input}
+The input contains a single integer $4 \leq n \leq 10\,000$.
+
+\section*{Output}
+First print the number of numbers you intend to take on its own line. On the next line print
+the numbers you intend to take, in the order you intend to take them, with a single space
+between numbers.
+
+\section*{Scoring}
+The solution will be run on $100$ different test cases. If if the solution returns
+an invalid answer, no points are given. If the judge solution gets $s$ and you get $x$
+you get $(4x - n(n + 1)) / (4s - n(n + 1))$ points for that test case, at least $0$ points
+and at most $1$ points though. This means that if you pay $50\%$ tax you get $0$ points, increasing
+linearly to $1$ point as you get closer to the judge solution.
+
+The test cases are divided into two $50$ test groups, one has $n \leq 1\,000$ and the other
+has $1\,000 < n \leq 10\,000$.

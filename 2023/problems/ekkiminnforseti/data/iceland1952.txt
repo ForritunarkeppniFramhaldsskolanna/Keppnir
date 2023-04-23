@@ -1,0 +1,10 @@
+3 1
+Asgeir Asgeirsson
+32924
+-1
+Bjarni Jonsson
+31045
+0.4
+Gisli Sveinsson
+4255
+1

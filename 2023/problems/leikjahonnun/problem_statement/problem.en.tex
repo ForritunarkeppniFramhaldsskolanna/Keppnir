@@ -1,0 +1,27 @@
+\problemname{Leikjahönnun}
+\illustration{0.3}{dice}{Image from \href{https://commons.wikimedia.org/wiki/File:Black_Polyhedral_Game_Dice.jpg}{commons.wikimedia.org}}
+
+Gulli is working on a new board game. In the game dice are often rolled to determine what happens next. To have a good idea of how
+the game plays he needs to know how likely each possible outcome is for a particular set of dice. Can you help him? All dice in the
+input are unbiased, or in other words, all sides are equally likely to be the outcome.
+
+\section*{Input}
+The first line of the input contains a single integer $n$, the number of dice. Next there are $n$ lines, each describing a single die.
+The first integer on the $i$-th line, $d_i$, describes the number of sides on the die. Then there are $d_i$ integers $x_{i, j}$ separated
+by spaces describing the number on the $j$-th side of the $i$-th dice.
+
+\section*{Output}
+Print the probabilities of all outcomes when all the dice are rolled and the result is summed up. For each possible outcome $x$ print
+\texttt{x p/q} where $p/q$ is a reduced fraction giving the probability that the outcome is $x$. You should only print outcomes with a positive
+probability and the outcomes should be printed in ascending order.
+
+\section*{Scoring}
+\begin{tabular}{|l|l|l|}
+\hline
+Group & Points & Constraints \\ \hline
+1     & 20   & $n = 1$, $1 \leq d_i, x_{i, j} \leq 100$ \\ \hline
+2     & 30   & $1 \leq n \leq 2$, $1 \leq d_i, x_{i, j} \leq 100$ \\ \hline
+3     & 40   & $1 \leq n \leq 7$, $1 \leq d_i \leq 100$, $1 \leq x_{i,j} \leq 500$ \\ \hline
+4     & 10   & $1 \leq n \leq 7$, $1 \leq d_i \leq 100$, $1 \leq x_{i,j} \leq 30\,000$\\ \hline
+\end{tabular}
+

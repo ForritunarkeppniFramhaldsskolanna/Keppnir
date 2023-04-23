@@ -1,0 +1,59 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+USE_PARALLEL=0
+. ../../../testdata_tools/gen.sh
+
+use_solution arnar_100.py
+
+compile random_generator.py
+
+samplegroup
+sample 1
+sample 2
+
+group GA 10
+for i in {01..10}; do
+tc GA-$i random_generator 1 100 1 10 1 200 good_companies good_parkers
+done
+
+group GB 15
+include_group GA
+for i in {01..10}; do
+tc GB-$i random_generator 1 100 1 10 1 200 bad_companies good_parkers
+done
+
+group GC 15
+include_group GA
+for i in {01..10}; do
+tc GC-$i random_generator 1 100 1 10 1 200 good_companies bad_parkers
+done
+
+group GD 15
+include_group GB
+include_group GC
+for i in {01..10}; do
+tc GD-$i random_generator 1 100 1 10 1 200 bad_companies bad_parkers
+done
+
+group GE 15
+include_group GB
+tc GE-01 random_generator 10**5 10**5 1 1 2*10**5 2*10**5 bad_companies good_parkers
+tc GE-02 random_generator 10**5 10**5 10 10 2*10**5 2*10**5 bad_companies good_parkers
+tc GE-03 random_generator 10**5 10**5 10**3 10**3 2*10**5 2*10**5 bad_companies good_parkers
+tc GE-04 random_generator 10**5 10**5 10**4 10**4 2*10**5 2*10**5 bad_companies good_parkers
+
+group GF 15
+include_group GC
+tc GF-01 random_generator 10**5 10**5 1 1 2*10**5 2*10**5 good_companies bad_parkers
+tc GF-02 random_generator 10**5 10**5 10 10 2*10**5 2*10**5 good_companies bad_parkers
+tc GF-03 random_generator 10**5 10**5 10**3 10**3 2*10**5 2*10**5 good_companies bad_parkers
+tc GF-04 random_generator 10**5 10**5 10**4 10**4 2*10**5 2*10**5 good_companies bad_parkers
+
+group GG 15
+include_group GD
+include_group GE
+include_group GF
+tc GG-01 random_generator 10**5 10**5 1 1 2*10**5 2*10**5 bad_companies bad_parkers
+tc GG-02 random_generator 10**5 10**5 10 10 2*10**5 2*10**5 bad_companies bad_parkers
+tc GG-03 random_generator 10**5 10**5 10**3 10**3 2*10**5 2*10**5 bad_companies bad_parkers
+tc GG-04 random_generator 10**5 10**5 10**4 10**4 2*10**5 2*10**5 bad_companies bad_parkers

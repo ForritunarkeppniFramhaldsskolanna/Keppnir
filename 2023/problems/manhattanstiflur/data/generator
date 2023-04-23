@@ -1,0 +1,45 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution atli_100.cpp opt
+
+compile random_generator.py
+compile overflow_edge_case.py
+
+samplegroup
+sample 1
+sample 2
+
+group GA 20
+for i in {1..5}; do
+tc GA-$i random_generator 500 1
+done;
+
+group GB 20
+for i in {1..5}; do
+tc GB-sparse-$i random_generator 500 500
+done;
+for i in {1..5}; do
+tc GB-dense-$i random_generator 500 23
+done;
+
+group GC 30
+include_group GB
+for i in {1..5}; do
+tc GC-sparse-$i random_generator 5000 5000
+done;
+for i in {1..5}; do
+tc GC-dense-$i random_generator 5000 71
+done;
+
+group GD 30
+include_group GB
+include_group GC
+tc GD-edge-01 overflow_edge_case
+for i in {1..5}; do
+tc GD-sparse-$i random_generator 5*10**5 10**9
+done;
+for i in {1..5}; do
+tc GD-dense-$i random_generator 5*10**5 708
+done;

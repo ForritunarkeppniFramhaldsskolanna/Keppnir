@@ -1,0 +1,58 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution arnar_100.py
+
+compile random_generator.py
+
+samplegroup
+sample 1
+sample 2
+sample 3
+sample 4
+sample 5
+sample 6
+sample 7
+sample 8
+
+imlazy () {
+    tc $1-barely-neibb-01 random_generator $2 100000 100000 1 1 immutable_rests
+    tc $1-barely-neibb-02 random_generator $2 100000 100000 1 1 move_rests
+    tc $1-barely-neibb-03 random_generator $2 100000 100000 1 1 any
+    for i in {04..10}; do
+    tc $1-barely-neibb-$i random_generator $2 1 1000 1 1 any
+    done;
+
+    tc $1-jebb-01 random_generator $2 100000 100000 0 0 any 
+    tc $1-jebb-02 random_generator $2 100000 100000 0 0 any 
+    for i in {03..10}; do
+    tc $1-jebb-$i random_generator $2 1 1000 0 0 any
+    done;
+
+    tc $1-neibb-01 random_generator $2 1 100000 1 1000 any
+    tc $1-neibb-02 random_generator $2 1 100000 1 1000 any
+    for i in {03..10}; do
+    tc $1-neibb-$i random_generator $2 1 1000 1 1000 any
+    done;
+}
+
+group GA 15
+imlazy GA 1
+
+group GB 25
+include_group GA
+imlazy GB 1_2
+
+group GC 15
+include_group GA
+imlazy GC 1_3
+
+group GD 10
+include_group GB
+include_group GC
+imlazy GD 1_2_3
+
+group GE 35
+include_group GD
+imlazy GE 1_2_3_4

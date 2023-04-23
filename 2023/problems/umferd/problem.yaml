@@ -1,0 +1,8 @@
+author: Hannes Kristján Hannesson, Arnar Bjarni Arnarson
+source: Forritunarkeppni Framhaldsskólanna 2023
+rights_owner: Forritunarkeppni Framhaldsskólanna
+license: cc by-sa
+type: scoring
+validator_flags: float_tolerance 1e-5
+grading:
+    show_test_data_groups: true

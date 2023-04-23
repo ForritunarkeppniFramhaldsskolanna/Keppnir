@@ -1,0 +1,50 @@
+\problemname{Þarasöfnun}
+\illustration{0.3}{kelp}{Mynd eftir Peter Southwood, fengin af \href{https://commons.wikimedia.org/wiki/File:Kelp_forest_at_Taranga_pinnacles_Hen_and_Chicken_Islands_PA232359.JPG}{Wikimedia Commons}}
+
+Enn eina ferðina eru tilteknir ónefndir einstaklingar í KFFÍ að reyna að komast
+í auðveldan pening og höfðu þeir heyrt frá verkfræðingavinum sínum að allt
+umhverfisvænt og framtíðarlegt fær næga styrki þessa dagana. Með þetta í
+huga fékk einn þeirra þá hugmynd að smíða þararæktunarvélmenni. Síðar kom
+auðvitað í ljós að það var ekki alveg jafn einfalt og þeir héldu, sérstaklega
+þegar þurfti að smala saman verkfræðingum til að smíða sjálft vélmennið. Svo
+illa gekk þetta að það steingleymdist að forrita vélmennið til að gera það
+sem það á að gera, allur tíminn fór í annað. 
+
+Búið er að koma fyrir mælitækjum í sjónum þar sem þarinn vex, svo eina sem
+þarf að gera er að koma vélmennið á réttan stað til að sækja þarann þegar
+boð berast frá mælitækjunum. Ræktarreitinn má líta á sem $C \times R$ reiti
+með þaraplöntu í hverjum reit. Vélmennið er staðsett í $(0, 0)$ í byrjun og
+lítum svo á að við byrjum á tíma $0$. Vélmennið getur ferðast um einn reit á 
+sekúndu lárétt, lóðrétt eða skáhallt. Þegar þari er tilbúinn til að sækja skal 
+vélmennið ferðast á þann reit með sem stysta hætti og á ávallt að ferðast 
+skáhallt meðan það borgar sig. Hunsa má tímann sem það tekur vélmennið að 
+sækja þarann þegar hann er kominn á réttan stað. Ávallt skal sækja þarann 
+sem kom fyrst fyrir í inntaki ef fleiri en ein fyrirspurn bíður eftir afgreiðslu. 
+Hins vegar, ef farið er á reit með þara sem bíður við það að fara eitthvert 
+annað skal sækja hann í leiðinni. Ef vélmennið hefur ekkert að gera skal það
+einfaldlega halda sér kyrrt.
+
+\section*{Inntak}
+Fyrsta línan í inntakinu inniheldur tvær jákvæðar heiltölur $C, R$,
+fjöldi dálka og raða af reitum á ræktunarsvæðinu. Næsta lína inniheldur eina
+jákvæða heiltölu $q$, fjölda fyrirspurna. Loks koma $q$ línur, hver með
+þremur heiltölum $t$, þar sem $0 \leq t \leq 10^{18}$, $x$, þar sem $0 \leq x < C$,
+ og $y$, þar sem $0 \leq y < R$.
+$t$ er tíminn sem mælingin berst um að þarinn sé tilbúinn og $(x, y)$ er staðsetning
+þarans. Hver staðsetning kemur mest fyrir einu sinni, $(x, y) \neq (0, 0)$ og 
+tími er í veikt vaxandi röð.
+
+\section*{Úttak}
+Skrifið út tíma og staðsetningu á sama formi og í inntaki hvert sinn sem þara er 
+safnað, í þeirri röð sem þeim er safnað. 
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 20   & $q = 1$, $1 \leq R, C \leq 1\,000$ \\ \hline
+2     & 20   & $1 \leq q, R, C \leq 1\,000$, þara er safnað í sömu röð og í inntaki \\ \hline
+3     & 20   & $1 \leq q, R, C, \leq 1\,000$ \\ \hline
+4     & 40   & $1 \leq q \leq 10^5$, $1 \leq r, c \leq 10^{12}$ \\ \hline
+\end{tabular}
+

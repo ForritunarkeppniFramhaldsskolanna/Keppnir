@@ -1,0 +1,73 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+#USE_PARALLEL=0
+. ../../../testdata_tools/gen.sh
+
+use_solution arnar_100.py
+
+compile from_compass.py
+compile random_generator.py
+
+samplegroup
+sample 1
+sample 2
+sample 3
+
+group GA 25
+for i in {01..05}; do
+tc GA-random-$i random_generator uniform 2 1000 2 2
+done;
+for i in {01..05}; do
+tc GA-partition-$i random_generator partition 2 1000 2 2
+done;
+tc GA-equal-01 random_generator equal 2 2 2 2
+tc GA-equal-02 random_generator equal 1000 1000 2 2
+
+group GB 25
+include_group GA
+for i in {01..05}; do
+tc GB-random-$i random_generator uniform 2 1000 3 3
+done;
+for i in {01..05}; do
+tc GB-controversial-$i random_generator one_controversial 2 1000 3 3
+done;
+for i in {01..05}; do
+tc GB-partition-$i random_generator partition 2 1000 3 3
+done;
+tc GB-equal-01 random_generator equal 3 3 3 3
+tc GB-equal-02 random_generator equal 999 999 3 3
+
+group GC 25
+include_group GB
+for i in {01..05}; do
+tc GC-random-$i random_generator uniform 2 1000 4 9
+done;
+for i in {01..05}; do
+tc GC-controversial-$i random_generator one_controversial 2 1000 4 9
+done;
+for i in {01..05}; do
+tc GC-comeback-$i random_generator comeback 2 1000 4 9
+done;
+for i in {01..05}; do
+tc GC-partition-$i random_generator partition 2 1000 4 9
+done;
+tc GC-equal-01 random_generator equal 9 9 9 9
+tc GC-equal-02 random_generator equal 999 999 9 9
+
+group GD 25
+include_group GC
+tc GD-random-01 random_generator uniform 2000 2000 1000 1000
+tc GD-random-02 random_generator uniform 200 200 10000 10000
+tc GD-random-03 random_generator uniform 20 20 100000 100000
+for i in {01..03}; do
+tc GD-controversial-$i random_generator one_controversial 200000 200000 10 10
+done;
+for i in {01..03}; do
+tc GD-partition-$i random_generator partition 200000 200000 10 10
+done;
+tc GD-equal-01 random_generator equal 20000 20000 100 100
+
+#tc GA-iceland-1952 from_compass iceland1952.txt
+#tc GA-iceland-2012 from_compass iceland2012.txt
+#tc GA-iceland-2016 from_compass iceland2016.txt
+#tc GA-ireland-1990 from_compass ireland1990.txt

@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution atli_100.cpp opt
+
+compile random_generator.py
+
+samplegroup
+sample 1
+sample 2
+sample 3
+
+group GA 20
+for i in {0..9}; do
+tc GA-$i random_generator 1 100 100 random
+done;
+
+group GB 30
+include_group GA
+for i in {0..9}; do
+tc GB-$i random_generator 2 100 100 random
+done;
+
+# The reason we choose 7 as the maximum number of dice
+# is so the answer can be accurately computed with 64
+# bit floating point data types
+group GC 40
+include_group GB
+for i in {0..9}; do
+tc GC-$i random_generator 7 100 500 random
+done;
+
+# FFT Group
+# 7 * 30000 = 210000 < 262144 = 2^18
+group GD 10
+include_group GC
+for i in {0..4}; do
+tc GD-$i random_generator 7 100 30000 random
+done;
+tc GD-max random_generator 7 100 30000 max

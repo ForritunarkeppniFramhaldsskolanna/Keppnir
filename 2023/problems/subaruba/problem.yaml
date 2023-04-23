@@ -1,0 +1,9 @@
+author: Arnar Bjarni Arnarson, Hannes Kristján Hannesson, Sara Dögg Sigurðardóttir
+source: Forritunarkeppni Framhaldsskólanna 2023
+rights_owner: Forritunarkeppni Framhaldsskólanna
+license: cc by-sa
+type: scoring
+limits:
+    time_multiplier: 2
+grading:
+    show_test_data_groups: true

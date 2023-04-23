@@ -1,0 +1,67 @@
+\problemname{Ruglaður listi}
+\illustration{0.3}{arcade}{Mynd fengin af \href{https://www.flickr.com/photos/kimli/3942113170}{flickr.com}}
+
+Dag einn þegar Dagur var á rölti í miðbænum rakst hann á spilakassa á miðri götu.
+Þar sem Dagur er mjög forvitinn þá þurfti hann að skoða þennan spilakassa.
+Þegar hann gat loksins séð hvað stóð á spilakassanum, þá trúði hann ekki sínum eigin augum.
+Það var stigatafla á honum! Auðvitað þar sem Dagur er mikill spilakall, þá varð hann að koma sér á töfluna.
+
+Þar sem Dagur var ekki enn viss hvernig leikurinn virkaði, þá byrjaði hann að fikta í spilakassanum
+þangað til að hann komst á skjámynd þar sem leikreglurnar voru sýndar. Á skjámyndinni stóð:
+
+\begin{quote}
+,,Velkominn í nýjustu útgáfu að rugluðum lista. Áður en byrjað er að spila leikinn skal fyrst fara yfir leikreglurnar, þær eru eftirfarandi.
+Ég mun búa til lista af stærð $n$, með stökunum $[1, 2, \dots, n]$ og síðan stokka ég hann.
+Eftir það mun ég skrifa út heiltöluna $n$ á skjáinn. Síðan mátt þú spyrja mig endurtekið um allt að $n$ vísa, eða staðsetningar, í hvert skipti
+og ég mun skrifa út gildin í ruglaða listanum mínum sem eru þar, en þú færð þau hinsvegar líka stokkuð.
+Markmiðið þitt er að finna listann í eins fáum spurningum og þú getur.``
+\end{quote}
+
+Dagur vill núna ná eins háu sæti og hann getur, en veit ekki alveg hvernig hann á að fara að því.
+Hann biður þig því um hjálp við að giska á ruglaða listann í eins fáum giskum og hægt er.
+
+\section*{Gagnvirkni}
+Þetta er gagnvirkt verkefni. Lausnin þín verður keyrð á móti gagnvirkum dómara
+sem les úttakið frá lausninni þinni og skrifar í inntakið á lausninni þinni.
+Þessi gagnvirkni fylgir ákveðnum reglum:
+
+Dómarinn skrifar fyrst út eina línu með heiltölunni $n$, sem er lengdin á ruglaða listanum.
+Í prufutilvikunum er $n$ alltaf $10\,000$, en í sýnidæmum er það minna.
+
+Eftir það mun lausnin þín framkvæma tvær týpur af aðgerðum.
+Fyrri aðgerðin er spurning og má endurtaka hana oft.
+Spurning hefst á tákninu \texttt{?}, næst kemur bil og svo heiltala $k$, sem táknar
+fjölda vísa sem spurt er um. Þar eftir, í sömu línu, skalt þú skrifa út $k$ vísa, á bilinu $1$ upp í $n$,
+aðskilna með bilum, sem þú vilt að dómarinn gefi þér gildin á.
+Dómarinn svarar þá, með einni línu sem samanstendur af $k$ heiltölum aðskilnum
+með bili, sem tákna gildin sem eru á þessum vísum í stokkaðri röð. Hver einasta tala í svari dómarans
+mun vera á bilinu $1$ upp í $n$ og engin tala mun koma fyrir oftar en einu sinni í sama svari.
+
+Ef vísir er ekki á bilinu $1$ upp í $n$ í einhverri spurningu mun lausnin vera dæmd röng.
+Ef $k < 1$ eða $n < k$ í einhverri spurningu mun lausnin vera dæmd röng.
+Ef sami vísir kemur fyrir oftar en einu sinni í sömu spurningu mun lausnin vera dæmd röng.
+
+Þegar þú telur þig vita röðina á ruglaða listanum þá skalt þú
+skrifa \texttt{!} með bili á eftir og svö öll $n$ stökin í ruglaða listanum,
+aðskilin með bilum, í réttri röð. Síðan skal forritið hætta keyrslu.
+Ef þú skrifar rétta röð, þá mun lausnin þín vera samþykkt og þú munt fá stig
+sem eru ákvörðuð út frá fjölda spurninga sem voru spurðar.
+
+\section*{Stigagjöf}
+Lausnin þín verður keyrð á mörgum prufutilvikum og meðaltal stiga yfir
+öll prufutilvik mun gilda til stigagjafar.
+Eftirfarandi eru tryggð stig miðað við fjölda spurninga sem spurt var um.
+Ef fjöldi fyrirspurna lendir á milli tveggja raða í töflunni að þá er
+stigafjöldi ákvarðaður sem línuleg samsetning af stigunum í sömu tveimur röðum.
+
+\begin{tabular}{|l|l|}
+    \hline
+Spurningar & Stig    \\ \hline
+$> 10\,000$  & $0$     \\ \hline
+$10\,000$    & $1$     \\ \hline
+$9\,999$     & $5$     \\ \hline
+$6\,668$     & $25$    \\ \hline
+$3\,334$     & $50$    \\ \hline
+$100$      & $80$    \\ \hline
+$\leq 14$  & $100$ \\ \hline
+\end{tabular}

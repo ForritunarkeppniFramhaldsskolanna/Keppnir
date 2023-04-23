@@ -1,0 +1,28 @@
+9 1
+Andri Snaer Magnason
+26037
+-1.0
+Astthor Magnusson
+615
+-0.8
+David Oddsson
+25108
+-0.6
+Elisabet Kristin Jokulsdottir
+1280
+-0.4
+Gudni Thorlacius Johanesson
+71356
+0.6
+Gudrun Margret Palsdottir
+477
+0.2
+Halla Tomasdottir
+50995
+0.0
+Hildur Thordardottir
+294
+0.8
+Sturla Jonsson
+6446
+1.0

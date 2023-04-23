@@ -1,0 +1,67 @@
+\problemname{Ruglaður listi}
+\illustration{0.3}{arcade}{Picture taken from \href{https://www.flickr.com/photos/kimli/3942113170}{flickr.com}}
+
+Dagur likes taking walks downtown and one day when Dagur was on his daily walk, he bumped into an
+arcade machine in the middle of the street. Since Dagur is very curious, he just had to check this
+machine out. When he finally saw what was on the screen, he could not believe his eyes. It has a scoreboard!
+Since Dagur loves playing games, he really wanted to get his name to the top of the scoreboard.
+
+Since Dagur did not know how this game worked, he decided to start fiddling with the machine.
+Until he finally made it to a screen which displayed the instructions for the game.
+The page read:
+
+\begin{quote}
+``Welcome to the newest version of scrambled list. Before you start playing you'll have
+to get familiar with the rules, they are as follows. I (the arcade machine) will create a list of size $n$
+with the values $[1, 2, \dots, n]$, and then I will shuffle it. Next I will write an integer $n$ to the screen.
+Afterwards you can ask me about up to $n$ indices and I will write the values in my scrambled list, however
+you will get them in some shuffled order. Your goal is to find my list asking the fewest amount of questions.''
+\end{quote}
+
+Dagur really wants to be at the top of the scoreboard, but does not know how to do it.
+So he asks you to help him find the shuffled list in as few guesses as possible.
+
+\section*{Interaction}
+This is an interactive task. Your solution will be tested against a dynamic judge, which reads
+the output from your solution and writes to the input of your solution.
+This interaction follows specific rules, which are the following:
+
+The judge will first write out one line containing an integer $n$, the length of the shuffled list.
+In the test cases, $n$ is always $10\,000$, but in the examples it is less.
+
+Afterwards your solution can perform two types of actions.
+The former is a query, which can be repeated many times.
+A query starts with the symbol \texttt{?}, followed by a space and then an integer $k$, representing the 
+number of indices which will be queried. There after, in the same line, you shall write $k$ indices,
+in the range $1$ to $n$, separated by a space, of which you want the judge to give the values.
+The judge then answers, in one line, containing the $k$ integeres, seperated by a space,
+which represent the values at the indices, in shuffled order. Each number the judge gives
+will be in the range from $1$ to $n$ and no number will appear more than once.
+
+If any index, in any query, is not in the range $1$ to $n$, then your solution will be considered incorrect.
+If $k < 1$ or $n < k$ in any of the queries, then your solution will be considered incorrect.
+If the same index appears more than once in the same query, then your solution will be considered incorrect.
+
+When you think you know what the shuffled list looks like, then you should write \texttt{!}
+with a space followed by all $n$ values of the shuffled list, in the correct order.
+Then your program should terminate.
+If you guess the correct order, then your solution will be accepted and you will score points based on
+the number of queries made.
+
+\section*{Scoring}
+Your solution will be tested on multiple testcases and the average amount of points
+over all testcases will determine the total score.
+In the following table you can see some guarantees regarding scores for individual test cases based on the number of queries made.
+If the number of queries lies between two rows of the table then the score will be a linear combination of the score in the same two rows.
+
+\begin{tabular}{|l|l|}
+\hline
+Queries & Points   \\ \hline
+$> 10\,000$  & $0$     \\ \hline
+$10\,000$    & $1$     \\ \hline
+$9\,999$     & $5$     \\ \hline
+$6\,668$     & $25$    \\ \hline
+$3\,334$     & $50$    \\ \hline
+$100$      & $80$    \\ \hline
+$\leq 14$  & $100$ \\ \hline
+\end{tabular}

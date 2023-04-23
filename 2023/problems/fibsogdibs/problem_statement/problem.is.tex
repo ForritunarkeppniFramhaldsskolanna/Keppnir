@@ -1,0 +1,33 @@
+\problemname{Fibs og Dibs}
+\illustration{0.3}{numbers}{Mynd fengin af \href{https://flickr.com/photos/morebyless/9423385629}{flickr.com}}
+Eins og allir vita eru Dagur og Elvar miklir spilarar og elska að spila langa leiki.
+Þeir vilja núna spila næstuppáhaldsleikinn sinn Fibs og Dibs.
+Hann virkar þannig að fyrst velur Dagur sér eina heiltölu $a$, síðan velur Elvar sér stærri eða jafnstóra heiltölu $b$.
+Að lokum velja þeir $n$, fjölda umferða til að spila.
+
+Í hverri umferð byrjar Dagur á því að segja ,,Fibs``,
+þá leggja þeir tölurnar sínar saman og Dagur skiptir út gömlu tölunni sinni fyrir þessa nýju, þannig $a$ tekur gildi $a + b$.
+Síðan segir Elvar ,,Dibs`` og gera þeir þá sömu skref aftur nema Elvar skiptir út sinni tölu fyrir nýju, þannig $b$ tekur gildi $a + b$.
+
+Þar sem þeir hafa ekki þolinmæðina til að spila $n$ umferðir, því þeir vilja drífa sig í uppáhaldsleikinn sinn Dibs og Fibs,
+þá biðja þeir þig um að hjálpa sér að finna út hvaða tölur þeir enda með eftir $n$ umferðir.
+
+\section*{Inntak}
+Fyrsta línan í inntakinu inniheldur tvær heiltölur, $a$, talan sem Dagur velur, og $b$,
+talan sem Elvar velur, þar sem $1 \leq a \leq b \leq 10^5$.
+Síðan kemur ein heiltala $n$, fjöldi umferða sem þeir munu spila.
+
+\section*{Úttak}
+Skrifið út hvaða tvær tölur þeir enda með eftir $n$ umferðir í leiknum.
+Skrifið út tölurnar tvær á einni línu, fyrst töluna hans Dags og svo töluna hans Elvars, aðskilnar með bili.
+Þar sem tölurnar geta orðið stórar, þá skuluð þið skrifa þær módúlus $10^9 + 7$.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 20   & $0 \leq n \leq 10$ \\ \hline
+2     & 40   & $0 \leq n \leq 10^5$ \\ \hline
+3     & 40   & $0 \leq n \leq 10^{12}$ \\ \hline
+\end{tabular}
+

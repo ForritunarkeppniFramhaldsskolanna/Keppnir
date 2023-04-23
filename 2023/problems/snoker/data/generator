@@ -1,0 +1,74 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+USE_PARALLEL=0 # needed so all images are generated
+. ../../../testdata_tools/gen.sh
+
+use_solution arnar_100.py
+
+compile random_generator.py
+compile edge_case.py
+
+samplegroup
+sample 1
+sample 2
+sample 3
+sample 4
+
+group GA 30
+for i in {01..15}; do
+tc GA-random-$i random_generator random 2 22 axis_aligned no_bounce
+done;
+for i in {01..10}; do
+tc GA-start-$i random_generator snooker_start 22 22 axis_aligned no_bounce
+done;
+tc GA-edge-01 edge_case axis_aligned_distance_hit
+tc GA-edge-02 edge_case axis_aligned_distance_foul
+tc GA-edge-03 edge_case axis_aligned_distance_miss
+
+group GB 20
+include_group GA
+for i in {01..20}; do
+tc GB-random-$i random_generator random 2 22 axis_aligned bounce
+done;
+tc GB-edge-01 edge_case axis_aligned_bounce_distance_hit
+tc GB-edge-02 edge_case axis_aligned_bounce_distance_foul
+tc GB-edge-03 edge_case axis_aligned_bounce_distance_miss
+
+group GC 25
+include_group GA
+for i in {01..10}; do
+tc GC-random-$i random_generator random 2 19 any no_bounce
+done;
+for i in {11..20}; do
+tc GC-random-$i random_generator random 20 22 any no_bounce
+done;
+for i in {01..10}; do
+tc GC-start-$i random_generator snooker_start 22 22 any no_bounce
+done;
+
+group GD 25
+include_group GB
+include_group GC
+for i in {01..10}; do
+tc GD-random-$i random_generator random 2 7 any bounce
+done;
+for i in {11..20}; do
+tc GD-random-$i random_generator random 8 22 any bounce
+done;
+for i in {01..10}; do
+tc GD-start-$i random_generator snooker_start 22 22 any bounce
+done;
+
+/usr/bin/python3 -m pip install Pillow
+for file in $(find . -name *.in | sort); do
+    imgpath="${file%.in}.png"
+    if [[ -L "$file" ]]; then
+        resolvedfile=$(realpath --relative-to $(dirname $file) $(readlink -f "$file"))
+        resolvedpath="${resolvedfile%.in}.png"
+        #echo "Linking $imgpath to $resolvedpath"
+        ln -s "$resolvedpath" "$imgpath"
+    else
+        echo "Generating $imgpath"
+        ./draw_test.py "$imgpath" < "$file"
+    fi
+done;

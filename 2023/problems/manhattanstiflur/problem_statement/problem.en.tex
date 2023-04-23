@@ -1,0 +1,32 @@
+\problemname{Manhattanstíflur}
+\illustration{0.3}{gridlock}{Image from \href{https://commons.wikimedia.org/wiki/File:Gridlock.svg}{commons.wikimedia.org}}
+
+As you probably already know, the streets in Manhattan all lay north to south or east to west. Let us number the streets that go from north
+to south $0, 1, \dots, n$ where the $0$ is the street furthest west. Let us also number the streets going east to west $0, 1, \dots, m$
+where $0$ is the street furthest north. Then we can denote an intersection by the numbers of the streets that make up the intersection,
+from $(0, 0)$ to $(n, m)$. We are interested in being able to get from the north-west corner $(0, 0)$ to the south-east corner $(n, m)$ by
+travelling along the streets.
+The problem is that often sections of road are closed due to construction work or other problems. Can you answer when such closures close
+all routes from $(0, 0)$ to $(n, m)$?
+
+\section*{Input}
+The first line of input contains a single positive integer $q$. Next there is a line with two positive integers $n, m$, the number of streets
+in either direction. Finally there are $q$ lines, each with information about a section of road that gets closed. Each line contains four
+integers $x_1, y_1, x_2, y_2$ satisfying $0 \leq x_1, x_2 \leq n$ and $0 \leq y_1, y_2 \leq m$. This means that the section of road from
+the intersection $(x_1, y_1)$ to the intersection $(y_1, y_2)$ is being closed. These intersections are always adjacent to one another.
+
+\section*{Output}
+If query number $i$ closes all routes from $(0, 0)$ to $(n, m)$, print $i$. If it's still possible to travel from $(0, 0)$ to $(n, m)$ after
+all queries, print $-1$ instead.
+
+\section*{Scoring}
+\begin{tabular}{|l|l|l|}
+\hline
+Group & Points & Constraints \\ \hline
+1     & 10   & $n = 1$, $m, q \leq 500$ \\ \hline
+2     & 10   & $n = 2$, $m, q \leq 500$ \\ \hline
+3     & 20   & $n, m, q \leq 500$ \\ \hline
+4     & 30   & $n, m, q \leq 5\,000$ \\ \hline
+5     & 30   & $n, m \leq 10^9$, $q \leq 5 \cdot 10^5$ \\ \hline
+\end{tabular}
+

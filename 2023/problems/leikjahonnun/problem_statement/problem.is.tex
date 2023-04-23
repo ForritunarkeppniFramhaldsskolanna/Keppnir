@@ -1,0 +1,27 @@
+\problemname{Leikjahönnun}
+\illustration{0.3}{dice}{Mynd fengin af \href{https://commons.wikimedia.org/wiki/File:Black_Polyhedral_Game_Dice.jpg}{commons.wikimedia.org}}
+
+Gulli er að vinna að því að hanna borðspil. Í borðspilinu er teningum oft kastað til að ákvarða hvað gerist næst. Til þess að vera
+með góða hugmynd um hvernig borðspilið spilast, þarf hann að vita hversu líkleg hver niðurstaða er fyrir tiltekna teninga. Getur
+þú aðstoðað? Allir teningar eru óbjagaðir, eða í öðrum orðum, allar hliðar eru jafn líklegar til að koma upp.
+
+\section*{Inntak}
+Fyrsta línan inniheldur eina heiltölu $n$, fjölda teninga. Næst fylgja $n$ línur, hver með einni lýsingu á teningi. Fyrsta heiltala $i$-tu
+línunnar $d_i$ lýsir fjölda hliða teningsins. Síðan koma $d_i$ heiltölur $x_{i,j}$ með bili á milli sem lýsa tölunni á $j$-tu hlið $i$-ta
+tenings.
+
+\section*{Úttak}
+Prentið líkurnar á öllum útkomum þess að kasta öllum teningum inntaksins samtímis og leggja saman niðurstöðuna. Fyrir hverja mögulega
+útkomu $x$ prentið \texttt{x p/q} þar sem $p/q$ er fullstytt brot sem gefur líkurnar á að útkoman sé $x$. Aðeins skal prenta útkomur
+með jákvæðar líkur og prenta skal útkomur í vaxandi röð.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 20   & $n = 1$, $1 \leq d_i, x_{i, j} \leq 100$ \\ \hline
+2     & 30   & $1 \leq n \leq 2$, $1 \leq d_i, x_{i, j} \leq 100$ \\ \hline
+3     & 40   & $1 \leq n \leq 7$, $1 \leq d_i \leq 100$, $1 \leq x_{i,j} \leq 500$ \\ \hline
+4     & 10   & $1 \leq n \leq 7$, $1 \leq d_i \leq 100$, $1 \leq x_{i,j} \leq 30\,000$\\ \hline
+\end{tabular}
+

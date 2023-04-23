@@ -1,0 +1,49 @@
+\problemname{Skotleikur}
+\illustration{0.3}{controller}{Mynd fengin af \href{https://www.flickr.com/photos/anporsche/28698595812/}{flickr.com}}
+
+Elvar hefur verið að spila nýja skotleikinn sem allir eru að spila;
+Medal of Valor: Contemporary Tactics 2.
+
+Elvar er loksins búinn að spila nógu lengi til að opna aðgang að uppáhalds byssunni sinni,
+en þegar hann fer að nota hana þá tekur hann eftir því að hún er ekkert sérstaklega góð,
+og aðrir spilarar ná alltaf drápinu á þeim sem Elvar hefur verið að skjóta á.
+
+Þess vegna hefur Elvar verið mjög hugsi um hvað hann sé í raun með mörg \emph{dráp},
+og margar \emph{aðstoðir}, þegar maður hefur verið að skjóta á einhvern en liðsfélagi nær drápinu,
+á þessum tíma sem hann hefur verið að nota þessa byssu.
+
+Vandamálið er að í MoV: CT2 þá er einungis sýnt hversu mörg stig þú ert með,
+þar sem hvert dráp gefur $a$ stig, og hver aðstoð gefur $b$ stig.
+
+Þig langar að hjálpa Elvari með því að skrifa forrit,
+sem tekur við heildarfjölda stiga $K$ sem Elvar náði í leik,
+hversu mörg stig hvert dráp gefur og hversu mörg stig
+hver aðstoð gefur, og reiknar út allar samsetningar af drápum
+og aðstoðum sem gefa Elvari $K$ stig í heildina.
+
+Gert er ráð fyrir því að Elvar hefur verið að nota uppáhalds byssuna sína allann leikinn.
+
+\section*{Inntak}
+Fyrsta línan í inntakinu inniheldur eina heiltölu $K$, heildarfjölda stiga sem Elvar náði í leiknum.
+Önnur línan í inntakinu inniheldur eina heiltölu $a$, fjöldi stiga sem hvert dráp gefur manni.
+Þriðja og síðasta línan í inntakinu inniheldur eina heiltölu $b$, fjöldi stiga sem hver aðstoð gefur manni.
+
+\section*{Úttak}
+Skrifið út $N$, heildarfjölda samsetninga drápa og aðstoða sem gæfu Elvari $K$ stig í heildina.
+Eftir það, þá skal skrifa út allar $N$ samsetningarnar.
+Hver samsetning samanstendur af tveimur heiltölum $x_i$, $y_i$, sem táknar fjölda drápa fyrir samsetningu númer $i$,
+og $y_i$ táknar fjölda aðstoða fyrir samsetningu númer $i$, þar sem $1 \leq i \leq N$, og skal skrifa þær út aðskilnar með bili.
+
+Röðin á samsetningunum skiptir ekki máli.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+& & \\[-1ex]
+1  & 30 & $a = 100$, $b = 50$, $0 \leq K \leq 1\,000$ \\[1ex] \hline
+& & \\[-1ex]
+2  & 40 & $1 \leq a, b \leq 1\,000$, $0 \leq \frac{K}{a} \leq 500$, $0 \leq \frac{K}{b} \leq 500$ \\[1ex] \hline
+& & \\[-1ex] 
+3  & 30 & $1 \leq a, b \leq 1\,000$, $0 \leq \frac{K}{a} \leq 10^5$, $0 \leq \frac{K}{b} \leq 10^5$ \\[1ex] \hline
+\end{tabular}

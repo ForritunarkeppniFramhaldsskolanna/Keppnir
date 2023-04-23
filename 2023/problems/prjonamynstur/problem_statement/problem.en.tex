@@ -1,0 +1,45 @@
+\problemname{Prjónamynstur}
+\illustration{0.3}{knitting}{Photo from \href{https://www.flickr.com/photos/30478819@N08/50598685068}{flickr.com}}
+
+Heiðrún thoroughly enjoys knitting all sorts of garments for her family members.
+Whenever a new baby arrives in the family, one can expect that a dress, hat or sweater is her next project.
+
+When Heiðrún knits, she often makes use of recipes, also known as knitting patterns, which can be found in books, magazines or even on the internet.
+These recipes are displayed in a graphic manner as tiles in a two dimensional grid.
+There are many different types of knitting loops which affect the appearance of the clothing.
+Therefore, each tile in the recipe is marked with a symbol to indicate what type of loop should be knitted.
+Since the types of loops are different, knitting them requires varying amounts of yarn.
+The amount of yarn used is measured in millimeters and the costs of each type of loop are the following:
+
+\begin{tabular}{|l|l|l|}
+    \hline
+    Type of loop                        & Symbol                  & Yarn in millimeters \\ \hline
+    Garter stitch & \texttt{.}              & $20$ \\ \hline
+    Yarn over                           & \texttt{O}              & $10$ \\ \hline
+    Slip one stitch, knit next stitch and pass slip stitch over knit stitch & \texttt{\textbackslash} & $25$ \\ \hline
+    Knit two stitches together & \texttt{/}              & $25$ \\ \hline
+    Knit three stitches together & \texttt{A}              & $35$ \\ \hline
+    No stitch                            & \texttt{\^{}}           & $5$  \\ \hline
+    Purl on right side, knit on wrong side & \texttt{v}              & $22$ \\ \hline
+\end{tabular}
+
+Now Heiðrún is wondering whether she has enough yarn for her next project.
+If she shows you the recipe she intends to follow, can you tell her how much yarn she will need?
+
+\section*{Input}
+The first line of input consists of two integers $n$, the number of rows in the recipe, and $m$, the number of columns in the recipe.
+Then $n$ lines follow, each consisting of $m$ symbols, where each line represents a row in the recipe.
+You may assume the recipe will only contain symbols from the table above.
+
+\section*{Output}
+Output one integer, the amount of yarn required for the recipe in millimeters.
+
+\section*{Scoring}
+\begin{tabular}{|l|l|l|}
+\hline
+Group & Points & Constraints \\ \hline
+1     & 40     & $1 \leq n, m \leq 50$ \\ \hline
+2     & 40     & $1 \leq n, m \leq 1\,000$ and the recipe consists entirely of garter stitches. \\ \hline
+3     & 20     & $1 \leq n, m \leq 1\,000$ \\ \hline
+\end{tabular}
+

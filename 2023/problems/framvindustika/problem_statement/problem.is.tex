@@ -1,0 +1,41 @@
+\problemname{Framvindustika}
+\illustration{0.3}{estimation}{Mynd fengin af \href{https://xkcd.com/612}{xkcd.com}}
+
+Erla vinnur hjá hugbúnaðarfyrirtæki sem hefur nýlega fengið kvartanir frá notendum.
+Notendurnir eru óánægðir með sérstaka aðgerð í hugbúnaðnum sem er með langan keyrslutíma.
+Notendurnir eru óvissir um hvort forritið sé frosið eða virkt eftir að aðgerðin er hafin.
+Kóðinn fyrir aðgerðina var frumgerð sem átti upprunalega bara að vera notuð innanhús sem sýnidæmi um virknina.
+En þegar yfirmenn Erlu sáu frumgerðinu ákváðu þeir að þetta færi beint í næstu útgáfu.
+
+Erla stingur upp á að endurskoða útfærsluna á aðgerðinni og rannsaka hvort hægt sé að skrifa skilvirkari útgáfu.
+Hún er handviss um að það sé hægt en það gæti reynst tímafrekt.
+Yfirmaður Erlu ákveður að framkvæma könnun sem varðar notendaviðmót og notendareynslu til að ákvarða hvað skal gera.
+
+Eftir einn mánuð af könnunum er niðurstaðan komin.
+Þegar verkefni tekur langan tíma hjálpar það andlegri líðan að upplifa að einhverjum markmiðum sé náð.
+Þetta gildir líka um notendur sem bíða eftir að tölvan klári keyrslu á einhverjum þungum útreikningum.
+Út frá niðurstöðu kannanninnar er því ákveðið að bæta við framvindustiku til þess að sýna notandanum að keyrslan sé í gangi og svo notandinn hafi tilfinningu fyrir hversu langt er þar til aðgerðin klárist.
+
+Erla er mjög ósammála ákvörðuninni og vill frekar einbeita sér að bæta skilvirkni aðgerðarinnar.
+Hún á samt að klára að útfæra framvindustikuna í dag.
+Hún biður þig um hjálp, getur þú útfært framvindustikuna fyrir Erlu svo hún geti sokkið sér í rannsóknina?
+
+\section*{Inntak}
+Inntak er ein lína sem samanstendur af tveimur heiltölum $p$, þar sem $0 \leq p \leq 100$, sem táknar hversu mörg prósent eru búin af aðgerðinni, og $w$, breidd framvindustikunnar.
+
+\section*{Úttak}
+Skrifaðu út framvindustikuna í núverandi stöðu.
+Framvindustikan skal vera í einni línu og byrjar á tákninu \texttt{\lbrack}, svo fylgja $w$ tákn, þar sem fyrstu $p$ prósent þeirra skulu vera \texttt{\#} og restin \texttt{-}, svo fylgir \texttt{\rbrack}.
+Næst kemur bil, táknið \texttt{\textbar}, svo annað bil og að lokum skal skrifa prósentustig við framvindustikuna.
+Prósentuna skal skrifa hliðraða til hægri með pláss fyrir fjögur tákn.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+2     & 10   & $w = 100$ \\ \hline
+1     & 10   & $w = 10$ \\ \hline
+3     & 50   & $1 \leq w \leq 1\,000$ \\ \hline
+4     & 30   & $1 \leq w \leq 10^6$ \\ \hline
+\end{tabular}
+
