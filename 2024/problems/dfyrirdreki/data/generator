@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution samuel_100.py
+
+compile random_generator.py
+
+samplegroup
+limits min_n=-100 max_n=100
+sample 1
+sample 2
+sample 3
+
+group GA 30
+limits min_n=-100 max_n=100
+for i in {1..20}; do
+tc GA-$i random_generator 2_sol
+done;
+tc 1
+
+group GB 30
+limits min_n=-100 max_n=100
+include_group GA
+for i in {1..20}; do
+tc GB-$i random_generator 0_sol
+done;
+tc 2
+
+group GC 40
+limits min_n=-100 max_n=100
+include_group GB
+for i in {1..20}; do
+tc GC-$i random_generator 1_sol
+done;
+tc 3

@@ -1,0 +1,50 @@
+\problemname{Sannvirði}
+\illustration{0.4}{game_show}{}
+
+Dröfn Karen loves the new game show, Sannvirði, in the television programme schedule.
+What she enjoys the most is seeing how happy the winner is once they receive the prize.
+She is thrilled to watch each episode.
+
+Each episode begins with the game show host displaying some item you may find for sale, for example, a refrigerator, an automobile, a carrot, a bottle of perfume, and so forth.
+All the contestants get to view the item for the same amount of time.
+Then the contestants must guess what the real value of the item is.
+The contestant which guesses closest, but not above, the correct answer is the winner.
+Contestants make their guesses simultaneously and cannot see the guesses of other contestants.
+However, the viewers, such as Dröfn, receive all of the information.
+The show cuts to very short interviews with each contestant where they explain their guess.
+
+Of course, we cannot have television content without commercials.
+Before the winner is announced, the show cuts to a commercial break.
+Dröfn is shaking in excitement.
+She has her own ideas of the item's real value and wonders what contestant would win if any of her ideas were the correct answer.
+
+Can you find the winner for each of Dröfn's ideas?
+
+\section*{Input}
+The first line consists of one integer $n$, the number of contestants.
+
+Next, $n$ lines follow, each describing a contestant.
+A contestant's description consists of a name and a guess, separated by a space.
+Each name consists of at least $1$ and at most $10$ English lowercase characters.
+Each guess is an integer between $0$ and $10^9$, inclusive on both ends.
+You may assume that no two contestants guessed the same value.
+
+A line containing one integer $q$, the number of ideas, follows.
+
+Finally, $q$ lines follow, each describing one of Dröfn's ideas.
+Each idea is an integer between $0$ and $10^9$, inclusive on both ends.
+
+\section*{Output}
+For each idea, in the same order they appear in the input, output the name of the contestant which wins if that idea were the correct answer.
+If no contestant wins for the idea, you should output \texttt{:(}, since Dröfn will be sad if nobody wins.
+
+\section*{Scoring}
+\begin{tabular}{|l|l|l|}
+\hline
+Group & Points & Constraints \\ \hline
+1     & 10   & $n = 1$, $q = 1$ \\ \hline
+2     & 15   & $n = 1$, $1 \leq q \leq 1\,000$ \\ \hline
+3     & 20   & $1 \leq n \leq 1\,000$, $q = 1$ \\ \hline
+4     & 25   & $1 \leq n \leq 1\,000$, $1 \leq q \leq 1\,000$ \\ \hline
+5     & 30   & $1 \leq n \leq 200\,000$, $1 \leq q \leq 200\,000$ \\ \hline
+\end{tabular}

@@ -1,0 +1,27 @@
+1 10000
+25
+contain at most 10 symbols
+contain at most 0 symbols from _"&'()*-<>[\]^~!$%/=?`+@#.,;:{}|ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz
+not start with 32
+not start with 33
+not start with 34
+not start with 35
+not start with 36
+not start with 37
+not start with 38
+not start with 39
+not start with 40
+not start with 72
+not start with 73
+not start with 74
+not start with 75
+not start with 76
+not start with 77
+not start with 78
+not start with 79
+not start with 8
+not start with 9
+not start with 00
+end with 0
+end with 9
+contain at least 10 symbols

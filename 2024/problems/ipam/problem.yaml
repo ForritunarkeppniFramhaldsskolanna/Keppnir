@@ -1,0 +1,11 @@
+name: IPAM
+author: Arnar Bjarni Arnarson
+source: Forritunarkeppni Framhaldsskólanna 2024
+rights_owner: Forritunarkeppni Framhaldsskólanna
+license: cc by-sa
+type: scoring
+grading:
+    show_test_data_groups: true
+limits:
+    time_multiplier: 2
+keywords: segment tree, bst, parsing, data structures

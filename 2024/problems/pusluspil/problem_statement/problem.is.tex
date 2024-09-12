@@ -1,0 +1,44 @@
+\problemname{Púsluspil}
+\illustration{0.4}{puzzle}{Mynd fengin af \href{https://flic.kr/p/jagpmg}{flickr.com}}
+
+Davíð hefur mjög gaman af púsluspilum, það vill svo til að hann keypti sér nýlega púsluspil frá Púsluspilabúð Balda.
+Hann fer rakleitt heim og byrjar að púsla.
+Þegar hann er nánast búinn fattar Davíð að það vantar nokkur púsl í nánast kláruðu púsluspilamyndina, en kassinn er tómur!
+Það hefur greinilega vantað nokkur púsl í púsluspilakassann.
+Hann fer til Balda og útskýrir hvað gerðist, og Balda líður svo illa með þetta að hann gefur Davíði annað samskonar púsluspil, en leyfir honum að halda gallaða kassanum.
+Davíð fer heim til að klára púsluðu myndina, og kemst að því að það vantar líka nokkur púsl í nýja kassann. Það vill hins vegar svo til að þetta voru aðrir púslbitar en vantaði úr fyrsta kassanum.
+
+Núna leitar Davíð til þín, til að ákvarða hvort hann geti yfir höfuð klárað púsluspilið.
+
+Davíð hefur þurft að fara $n$ sinnum til Balda að fá púslkassa, og er þar af leiðandi með $n$ kassa sem hann getur nýtt.
+Klárað púsluspil hefur $m$ púslbita og kassi númer $i$ hefur $k_i$ púsl bita.
+
+Púslbitar eru númeraðir með tölunum frá $1$ upp í $m$. Púslbiti $p$ í kassa $a$ er samskonar púslbiti og $p$ í kassa $b$, þar sem $a$ og $b$ eru púslkassar.
+
+Púsl er talið klárað þegar öll púsluspil, $1, 2, \ldots, m$, eru komin saman til að mynda púslmyndina.
+
+Athugaðu að púsluspilin eru ekki endilega í raðaðri röð, nema annað sé tekið fram.
+
+\section*{Inntak}
+Fyrsta línan inniheldur tvær heiltölur $n$ og $m$, aðskildar með bili.
+
+Næstu $n$ línur lýsir hver einum púslkassa.
+Lýsing á púslkassa hefst á heiltölu $k_i$, fjöldi púsla í kassa $i$, þar sem $0 \leq k_i \leq m$. Næst fylgja $k_i$ heiltölur $p_1, p_2, \ldots, p_{k_i}$, sem tákna púslbitana í kassa $i$, þar sem $1 \leq p_i \leq m$.
+Tölurnar eru aðskildar með bilum.
+
+Það mun alltaf gilda að $0 \leq n \cdot m \leq 500\,000$.
+
+\section*{Úttak}
+Skrifaðu út \texttt{"Jebb"} ef Davíð getur klárað púslið, eða \texttt{"Neibb"} ef Davíð getur það ekki.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 10   & $n = 1, 1 \leq m \leq 100$, bitar eru í hækkandi röð, fyrsti bitinn er alltaf $1$ \\ \hline
+2     & 10   & $0 \leq n \leq 100, m = 0$ \\ \hline
+3     & 10   & $n = 0, 0 \leq m \leq 100$ \\ \hline
+4     & 35   & $0 \leq n, m \leq 500$\\ \hline
+5     & 35   & $0 \leq n, m \leq 500\,000$ \\ \hline
+\end{tabular}
+

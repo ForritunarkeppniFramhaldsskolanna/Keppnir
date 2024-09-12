@@ -1,0 +1,64 @@
+\problemname{Golf}
+\illustration{0.5}{golf}{Image from \href{https://commons.wikimedia.org/wiki/File:Bruges\_Public\_Library\_Manuscript\_251\_folio\_149r\_detail\_golf.jpg}{commons.wikimedia.org}}
+
+The members of the Competitive Programming Association of Iceland decided to partake in a Code Golf contest.
+They thought this would be a contest of who can code the shortest solution to competitive programming problems,
+but unfortunately this was not the case!
+This was a golfing contest for programmers!
+Since they had already registered many of the members decided to go anyway.
+They didn't bring paper and pencils to record their scores though,
+as they had been expecting a programming contest.
+But for the same reason they did bring their laptops with them.
+The solution is clear, a program that keeps track of golf scores has to be coded!
+
+All participants start at par, and on each hole each participant is some number of shots over or under par.
+Par is a predetermined number of shots that designers estimate it will take a proficient golfer to complete the hole.
+The scores are always compared to par and are added together.
+This means $0$ denotes par, which does not change a contestant's score.
+Positive numbers denote results over par, 
+so $2$ denotes two over par and increases a participant's score by $2$.
+Negative numbers denote results under par, 
+so $-3$ denotes three under par and decreases a participant's score by $3$.
+If someone is two under par, then one over, and finally on par their total score is then $-1$.
+The goal is to have as few shots as possible, so the lower the score, the better.
+
+\section*{Input}
+The first line of input contains two positive integers $n, q$ where $n$ is the number of participants
+and $q$ is the number of queries.
+Next there is a line with $n$ names, separated by spaces, the names of the participants.
+No two different participants will have the same name.
+Next there are $q$ queries, each on its own line.
+Each query begins with \texttt{!} or \texttt{?}.
+If the line begins with \texttt{?} the name of a contestant will follow.
+Then you are to print two numbers on a single line,
+which place they are in and how far they are from par.
+If the line begins with \texttt{!} the query gives the results of the next hole.
+After the \texttt{!} there is a positive integer $k$,
+the number of contestants who were not on par.
+Then there are $k$ different names of participants along with their scores.
+For example \texttt{! 2 Atli 3 Arnar -3} would mean that everyone but Arnar and Atli were on par,
+and that Atli was three over par and Arnar three under par.
+
+All names only contain English upper and lower case letters.
+Each name is at most $20$ letters
+The total number of letters in the input is at most $1 \, 000 \, 000$.
+All points in the input are at least $-10^9$ and at most $10^9$.
+
+\section*{Output}
+For each line in the input that begins with \texttt{?} print the place of that
+contestant along with how far from par they are.
+If there is more than one contestant with the same score,
+they are all considered to be in the highest place among them.
+For example if second to fifth place all have the same score,
+they are all considered to be in second place.
+
+\section*{Scoring}
+\begin{tabular}{|l|l|l|}
+\hline
+Group & Points & Constraints \\ \hline
+1     & 20   & $1 \leq n, q \leq 100$, everyone is on par. \\ \hline
+2     & 20   & $n = 1$, $1 \leq q \leq 100$. \\ \hline
+3     & 20   & $1 \leq n, q \leq 100$, in all \texttt{?} queries there are no ties. \\ \hline
+4     & 30   & $1 \leq n, q \leq 100$. \\ \hline
+5     & 10   & $1 \leq n, q \leq 100 \, 000$. \\ \hline
+\end{tabular}

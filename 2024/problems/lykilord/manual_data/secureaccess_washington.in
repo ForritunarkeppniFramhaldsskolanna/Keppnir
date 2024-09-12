@@ -1,0 +1,25 @@
+4 100
+5
+contain at least 10 symbols
+contain at most 10 symbols
+contain at least 1 symbols from abcdefghijklmnopqrstuvwxyz
+contain at least 1 symbols from 0123456789
+contain at least 1 symbols from !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
+5
+contain at least 10 symbols
+contain at most 10 symbols
+contain at least 1 symbols from ABCDEFGHIJKLMNOPQRSTUVWXYZ
+contain at least 1 symbols from 0123456789
+contain at least 1 symbols from !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
+5
+contain at least 10 symbols
+contain at most 10 symbols
+contain at least 1 symbols from ABCDEFGHIJKLMNOPQRSTUVWXYZ
+contain at least 1 symbols from abcdefghijklmnopqrstuvwxyz
+contain at least 1 symbols from !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
+5
+contain at least 10 symbols
+contain at most 10 symbols
+contain at least 1 symbols from ABCDEFGHIJKLMNOPQRSTUVWXYZ
+contain at least 1 symbols from abcdefghijklmnopqrstuvwxyz
+contain at least 1 symbols from 0123456789

@@ -1,0 +1,67 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution atli_100.cpp opt
+
+compile random_generator.py
+compile edge_generator.py
+
+samplegroup
+limits max_n=20 max_k=10 max_g=10**9 max_t=5
+sample 1
+sample 2
+
+group GA 20
+limits max_n=10**3 max_k=10**4 max_g=10**9 max_t=1
+for i in {01..10}; do
+tc GA-$i random_generator 10**3 10**3 10**9 1
+done;
+
+group GB 20
+tc 1
+tc 2
+limits max_n=10**3 max_k=10**4 max_g=10**5 max_t=10**3
+for i in {01..10}; do
+tc GB-$i random_generator 10**3 10**3 10**5 10**3
+done;
+tc GB-cheapestbest edge_generator 10**3 cheapestbest
+desc "Test with cheapest components being the best"
+tc GB-longforward edge_generator 10**3 longforward 10**5
+desc "Test where non-binary search solutions have to seek forward a lot"
+tc GB-longbackward edge_generator 10**3 longbackward 10**5
+desc "Test where non-binary search solutions have to seek backward a lot"
+tc GB-typemissing edge_generator 10**3 typemissing
+desc "Test where not all component types are available"
+
+group GC 20
+limits max_n=10**3 max_k=1 max_g=10**9 max_t=10**3
+for i in {01..10}; do
+tc GC-$i random_generator 10**3 1 10**9 10**3
+done;
+
+group GD 20
+limits max_n=10**3 max_k=10**4 max_g=10**9 max_t=10**3
+include_group GA
+include_group GB
+include_group GC
+for i in {01..10}; do
+tc GD-$i random_generator 10**3 10**3 10**9 10**3
+done;
+tc GD-expensivebest edge_generator 1000 expensivebest
+desc "Test where the most expensive component of each type is affordable and the best choice"
+
+group GE 20
+limits max_n=10**5 max_k=10**6 max_g=10**9 max_t=10**5
+include_group GD
+for i in {01..10}; do
+tc GE-$i random_generator 10**5 10**5 10**9 10**5
+done;
+tc GE-cheapestbest edge_generator 10**5 cheapestbest
+desc "Test with cheapest components being the best"
+tc GE-longforward edge_generator 10**5 longforward 10**9
+desc "Test where non-binary search solutions have to seek forward a lot"
+tc GE-longbackward edge_generator 10**5 longbackward 10**9
+desc "Test where non-binary search solutions have to seek backward a lot"
+tc GE-expensivebest edge_generator 10**5 expensivebest
+desc "Test where the most expensive component of each type is affordable and the best choice"

@@ -1,0 +1,59 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution atli_100.cpp opt
+
+compile random_generator.py
+
+samplegroup
+limits max_q=10 cycles=True
+sample 1
+sample 2
+
+group GA 40
+limits max_q=1000 cycles=True
+tc 1
+tc 2
+tc GA-random-1 random_generator 10 1000 random
+desc "Totally random case"
+tc GA-random-2 random_generator 50 1000 random
+desc "Totally random case"
+tc GA-random-3 random_generator 250 1000 random
+desc "Totally random case"
+tc GA-random-4 random_generator 1000 1000 random
+desc "Totally random case"
+tc GA-buckets-1 random_generator 100 1000 buckets 5
+desc "Transitive tournament on smaller random graphs"
+tc GA-buckets-2 random_generator 500 1000 buckets 40
+desc "Transitive tournament on smaller random graphs"
+tc GA-buckets-3 random_generator 500 1000 buckets 250
+desc "Transitive tournament on smaller random graphs"
+tc GA-empty random_generator 500 1000 emptycheck
+desc "Checks for correctness on empty graph"
+
+group GB 30
+limits max_q=500000 cycles=False
+tc GB-empty random_generator 1000 2000 emptycheck
+desc "Checks for correctness on empty graph"
+tc GB-transitive-1 random_generator 1000 500000 transitive
+desc "Checks for correctness on random transitive graph"
+tc GB-transitive-2 random_generator 1000 500000 transitive
+desc "Checks for correctness on random transitive graph"
+tc GB-transitive-3 random_generator 1000 500000 transitive
+desc "Checks for correctness on random transitive graph"
+
+group GC 30
+limits max_q=500000 cycles=True
+include_group GA
+include_group GB
+tc GC-random-1 random_generator 997 49991 random
+desc "Totally random case"
+tc GC-random-2 random_generator 1000 50000 random
+desc "Totally random case"
+tc GC-buckets-1 random_generator 1000 500000 buckets 5
+desc "Transitive tournament on smaller random graphs"
+tc GC-buckets-2 random_generator 1000 500000 buckets 40
+desc "Transitive tournament on smaller random graphs"
+tc GC-buckets-3 random_generator 1000 500000 buckets 250
+desc "Transitive tournament on smaller random graphs"

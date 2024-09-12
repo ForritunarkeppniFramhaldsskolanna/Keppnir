@@ -1,0 +1,7 @@
+Aflmælingar
+nixie
+Nixie
+jpg
+ps
+cout
+endl

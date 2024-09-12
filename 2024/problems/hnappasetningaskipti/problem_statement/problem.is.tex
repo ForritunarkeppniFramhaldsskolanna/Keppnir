@@ -1,0 +1,105 @@
+\problemname{Hnappasetningaskipti}
+\illustration{0.5}{typewriter}{Mynd fengin af \href{https://commons.wikimedia.org/wiki/File:Typewriter-12_hg.jpg}{commons.wikimedia.org}}
+
+Á sínum tíma kepptu Arnar, Bjarki og Unnar saman í keppnisforritun. Á háskólastigi er einnig keppt í þriggja manna
+liðum eins og á framhaldsskólastigi, en hins vegar fær hvert lið aðeins eina tölvu. Því skiptir miklu máli að 
+nota tímann við tölvuna vel meðan hinir tveir liðsfélagarnir reyna að leysa önnur dæmi og undirbúa sig undir það
+að forrita hratt og rétt þegar að þeim kemur.
+
+Til þess að nýta tímann sem best ákvað Bjarki að læra á \emph{dvorak} hnappasetninguna, því hann telur að hún
+geri honum kleift að skrifa hraðar. Arnari fannst þetta góð hugmynd, og bjó því til sína eigin hnappasetningu
+sem hann kallaði \emph{bjarki}, og notar hana. Unnar heldur sig hins vegar enn við \emph{qwerty}, honum finnst þetta ekki
+fyrirhafnarinnar virði. En þetta veldur nú vandræðum. Þegar þeir skiptast á að skrifa við tölvuna eru þeir
+stundum búnir að skrifa heilan helling inn í tölvuna áður en þeir fatta að hún er stillt á vitlausa
+hnappasetningu! Því þarf nú að búa til forrit sem getur tekið það sem búið er að skrifa og breytt því í
+það sem þeir ætluðu að skrifa.
+
+Hér fylgir tafla sem gefur hvað hver hnappur samsvarar í ólíkum hnappasetningum. Bil eru eins í öllum
+hnappasetningum. Töfluna má einnig nálgast á TSV formi sem viðhengi.
+
+\begin{minipage}{0.45\textwidth}
+\begin{tabular}{|l|l|l|} \hline
+\emph{qwerty} & \emph{dvorak} & \emph{bjarki} \\ \hline
+\verb!~! & \verb!~! & \verb!0! \\
+\verb!1! & \verb!1! & \verb!2! \\
+\verb!2! & \verb!2! & \verb!4! \\
+\verb!3! & \verb!3! & \verb!8! \\
+\verb!4! & \verb!4! & \verb!6! \\
+\verb!5! & \verb!5! & \verb!1! \\
+\verb!6! & \verb!6! & \verb!3! \\
+\verb!7! & \verb!7! & \verb!5! \\
+\verb!8! & \verb!8! & \verb!7! \\
+\verb!9! & \verb!9! & \verb!9! \\
+\verb!0! & \verb!0! & \verb!=! \\
+\verb!-! & \verb![! & \verb!-! \\
+\verb!=! & \verb!]! & \verb!/! \\
+\verb!q! & \verb!'! & \verb!b! \\
+\verb!w! & \verb!,! & \verb!j! \\
+\verb!e! & \verb!.! & \verb!a! \\
+\verb!r! & \verb!p! & \verb!r! \\
+\verb!t! & \verb!y! & \verb!k! \\
+\verb!y! & \verb!f! & \verb!i! \\
+\verb!u! & \verb!g! & \verb!g! \\
+\verb!i! & \verb!c! & \verb!u! \\
+\verb!o! & \verb!r! & \verb!s! \\
+\verb!p! & \verb!l! & \verb!t! \\ \hline
+\end{tabular}
+\end{minipage}
+
+\begin{minipage}{0.45\textwidth}
+\begin{tabular}{|l|l|l|} \hline
+\emph{qwerty} & \emph{dvorak} & \emph{bjarki} \\ \hline
+\verb![! & \verb!/! & \verb!.! \\
+\verb!]! & \verb!=! & \verb!,! \\
+\verb!a! & \verb!a! & \verb!l! \\
+\verb!s! & \verb!o! & \verb!o! \\
+\verb!d! & \verb!e! & \verb!e! \\
+\verb!f! & \verb!u! & \verb!m! \\
+\verb!g! & \verb!i! & \verb!p! \\
+\verb!h! & \verb!d! & \verb!d! \\
+\verb!j! & \verb!h! & \verb!c! \\
+\verb!k! & \verb!t! & \verb!n! \\
+\verb!l! & \verb!n! & \verb!v! \\
+\verb!;! & \verb!s! & \verb!q! \\
+\verb!'! & \verb!-! & \verb!;! \\
+\verb!z! & \verb!;! & \verb![! \\
+\verb!x! & \verb!q! & \verb!]! \\
+\verb!c! & \verb!j! & \verb!y! \\
+\verb!v! & \verb!k! & \verb!z! \\
+\verb!b! & \verb!x! & \verb!h! \\
+\verb!n! & \verb!b! & \verb!w! \\
+\verb!m! & \verb!m! & \verb!f! \\
+\verb!,! & \verb!w! & \verb!x! \\
+\verb!.! & \verb!v! & \verb!'! \\
+\verb!/! & \verb!z! & \verb!~! \\ \hline
+\end{tabular}
+\end{minipage}
+
+\section*{Inntak}
+Fyrsta línan er á forminu \texttt{type1 on type2} þar sem \texttt{type1} og \texttt{type2} eru eitt af qwerty, 
+dvorak eða bjarki. \texttt{type2} er hnappasetning lyklaborðsins og \texttt{type1} er hnappasetningin sem sá
+sem situr við tölvuna er vanur.
+Næst kemur ein lína, það sem sá sem situr við tölvuna skrifaði. Þessi texti er ávallt ein lína en getur
+innihaldið alla stafina sem koma fram í töflunni að ofan. Þessi lína inniheldur mest $1\,000$ stafi og að minnsta
+kosti einn staf sem er ekki bilstafur.
+
+\section*{Úttak}
+Prentið það sem sá sem situr við tölvuna ætlaði að skrifa. Úttak verður tekið gilt þó svo að bil séu ekki nákvæmlega eins og
+í inntaki, svo lengi sem orðin séu eins.
+Til dæmis eru tvö samhliða bil og eitt bil talið það sama.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 1    & Inntak er sýniinntak. \\ \hline
+2     & 11   & Inntak byrjar á \texttt{qwerty on qwerty}. \\ \hline
+3     & 11   & Inntak byrjar á \texttt{dvorak on dvorak}. \\ \hline
+4     & 11   & Inntak byrjar á \texttt{bjarki on bjarki}. \\ \hline
+5     & 11   & Inntak byrjar á \texttt{dvorak on qwerty}. \\ \hline
+6     & 11   & Inntak byrjar á \texttt{bjarki on qwerty}. \\ \hline
+7     & 11   & Inntak byrjar á \texttt{qwerty on dvorak}. \\ \hline
+8     & 11   & Inntak byrjar á \texttt{bjarki on dvorak}. \\ \hline
+9     & 11   & Inntak byrjar á \texttt{qwerty on bjarki}. \\ \hline
+10    & 11   & Inntak byrjar á \texttt{dvorak on bjarki}. \\ \hline
+\end{tabular}

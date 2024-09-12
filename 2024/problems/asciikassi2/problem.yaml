@@ -1,0 +1,12 @@
+name: ASCII Kassi 2
+author: Atli Fannar Franklín
+source: Forritunarkeppni Framhaldsskólanna 2024
+rights_owner: Forritunarkeppni Framhaldsskólanna
+license: cc by-sa
+type: scoring
+validator_flags: space_change_sensitive case_sensitive
+grading:
+    show_test_data_groups: true
+limits:
+    time_multiplier: 2
+keywords: format

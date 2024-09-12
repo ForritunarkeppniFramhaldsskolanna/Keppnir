@@ -1,0 +1,50 @@
+\problemname{Bíókort}
+\illustration{0.4}{kort}{Síðasta bíókort Arnars.}
+
+Fyrir mörgum árum síðan var Bíótríóið stofnað.
+Upprunalegu meðlimirnir voru Arnar, Hannes og Sara.
+Markmið hópsins var einfalt: að fara í bíó oft og ódýrt.
+Hópnum tókst að fara hátt í 100 sinnum, eða jafnvel oftar, í bíó hvert ár.
+Nokkrum árum eftir stofnun slóst Halldór í hópinn og nafni hópsins var breytt í Kvikmyndakvartettið.
+
+En hvernig tókst hópnum að fara svona oft í bíó án þess að glata öllum fjármunum sínum?
+Svarið er bíókortið!
+Smárabíó bauð eitt sinn upp á árskort í bíó sem var borgað fyrir í eitt skipti og mátti svo nota á hverja kvikmynd nákvæmlega einu sinni.
+Bíókort var ekki bundið við einstakling, heldur mátti deila einu bíókorti milli margra manneskja.
+Með því að kaupa sér bíókort þegar þau voru á afslætti, tókst hópnum að borga einungis $240$ íslenskar krónur fyrir hvern bíómiða að meðaltali eitt árið.
+Því miður er þetta ekki lengur í boði.
+
+Kvikmyndakvartettið var ekki mikið fyrir að sleppa kvikmyndum en stundum tóku þau gesti með sér.
+Hvert ár skipulögðu þau og rannsökuðu hvaða gesti þau gætu tekið með sér.
+Þau vissu nákvæmlega hversu vinsæl hver kvikmynd yrði, 
+eða í öðrum orðum, hversu margir í hópnum vildu sjá hverja kvikmynd.
+
+Hvernig tókst þeim að lágmarka kostnaðinn fyrir árið?
+
+\section*{Inntak}
+Fyrsta línan inniheldur þrjár heiltölur $n$, fjölda kvikmynda sem eru í sýningu þetta ár, $m$, verð á stökum bíómiða og $k$, verð á bíókorti fyrir árið, bæði í íslenskum krónum.
+Að lokum fylgja $n$ línur sem lýsa einni kvikmynd hver.
+Hverri kvikmynd er lýst með nafni og vinsæld kvikmyndarinnar, aðskilin með bili.
+
+Sérhvert nafn á kvikmynd er einstakt og er minnst $1$ og mest $20$ enskir hástafir, lágstafir eða tölustafir.
+Það mun ávallt gilda að $0 \leq m \leq 100\,000$ og $0 \leq k \leq 10\,000\,000$.
+Sérhver vinsæld er minnst $0$ og mest $10^6$.
+
+\section*{Úttak}
+Skrifaðu út fjölda bíókorta sem skal kaupa og heildarkostnað hópsins yfir allt árið í íslenskum krónum þannig að heildarkostnaður sé lágmarkaður.
+Ef til eru mörg rétt svör máttu skrifa út eitthvert þeirra.
+Athugaðu að það eru mest $10^6$ bíókort búin til hvert ár og því ekki hægt að kaupa fleiri.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 10   & $1 \leq n \leq 1\,000$, $m = 0$, $k = 0$. \\ \hline
+2     & 10   & $1 \leq n \leq 1\,000$, $m = 0$. \\ \hline
+3     & 10   & $1 \leq n \leq 1\,000$, $k = 0$. \\ \hline
+4     & 10   & $1 \leq n \leq 1\,000$. \\ \hline
+5     & 10   & $1 \leq n \leq 200\,000$, allar kvikmyndir eru jafn vinsælar. \\ \hline
+6     & 10   & $1 \leq n \leq 200\,000$, sérhver vinsæld er minnst $0$ og mest $999$. \\ \hline
+7     & 20   & $1 \leq n \leq 200\,000$, mest $1\,000$ mismunandi vinsældir. \\ \hline
+8     & 20   & $1 \leq n \leq 200\,000$. \\ \hline
+\end{tabular}

@@ -1,0 +1,37 @@
+\problemname{Höfundaleit}
+\illustration{0.5}{dewey}{Mynd fengin af \href{https://commons.wikimedia.org/wiki/File:HK\_Wan\_Chai\_Library\_Inside\_Bookcase\_a.jpg}{commons.wikimedia.org}}
+
+Hallgerður Stuttbrók er stödd á bókasafninu á Reyðarfirði. 
+Hún er að leita sér að einhverju skemmtilegu til að lesa, en á erfitt með að finna bókina.
+Þetta er vegna þess að hún man ekki hver höfundur bókarinnar er, en á bókasafninu er bókum raðað eftir höfundi.
+Getur þú hjálpað henni að finna númer bókanna sem hún vill lesa í röðinni?
+
+\section*{Inntak}
+Fyrsta línan inniheldur tvær heiltölur $n$, fjöldi bóka á bókasafninu, og $q$, fjöldi bóka sem Hallgerði langar að lesa.
+Næstu $n$ línur munu hver innihalda lýsingu á einni bók, fyrst titil bókarinnar og svo höfund, aðskilin með kommu.
+Loks koma $q$ línur sem hver innihalda einn bókatitil, hver þeirra lýsir bók sem Hallgerður vill lesa.
+Titlar og höfundanöfn munu bara innihalda enska há- og lágstafi ásamt undirstrikum.
+Engar tvær ólíkar bækur hafa sama titil.
+Sérhver titill og sérhvert höfundarnafn verður mest $25$ stafir að lengd.
+Samtals lengd allra strengja í inntaki verður mest $10^6$ stafir samtals.
+
+\section*{Úttak}
+Fyrir hverja bók sem Hallgerður vill lesa, prentið númer hvað hún er í röðinni ef öllum bókum er raðað eftir höfundanafni.
+Hér lítum við svo á að fyrsta bókin sé númer $1$, næsta númer $2$ og svo framvegis.
+Ef bók er ekki til skal prenta $-1$ í staðinn.
+Ef höfundur er með fleiri en eina bók er bókunum innbyrðis raðað eftir titli.
+Röðin er venjulega stafrófsröð strengja út frá ASCII-gildi.
+Athugið að þetta er sama röð og innbyggða röðunarfall flestra forritunarmála skilar.
+Til dæmis \texttt{sorted} í Python eða \texttt{std::sort} í C++.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 10   & $0 \leq n, q \leq 100$, engin af bókunum sem beðið er um eru til á safninu. \\ \hline
+2     & 10   & $0 \leq n, q \leq 100$, enginn höfundur er með fleiri en eina bók, bókasafnsbókum er raðað eftir höfundi, allar bækur til á safninu. \\ \hline
+3     & 20   & $0 \leq n, q \leq 100$, enginn höfundur er með fleiri en eina bók, allar bækur til á safninu. \\ \hline
+4     & 20   & $0 \leq n, q \leq 100$, enginn höfundur er með fleiri en eina bók. \\ \hline
+5     & 20   & $0 \leq n, q \leq 100$. \\ \hline
+6     & 20   & $0 \leq n, q \leq 100\,000$. \\ \hline
+\end{tabular}

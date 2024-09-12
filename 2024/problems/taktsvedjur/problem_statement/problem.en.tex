@@ -1,0 +1,44 @@
+\problemname{Taktsveðjur}
+\illustration{0.5}{OIG2}{}
+
+Atli plays video games instead of being productive embarrassingly often.
+Often people are trying to reach him but can't due to him being in virtual reality and hearing nothing.
+Almost without fail he is playing his favourite game Taktsveðjur when he is in virtual reality.
+Taktsveðjur revolves around swinging swords and trying to hit all the notes that appear,
+often to the rhythm of some good music.
+A lot of effort goes towards getting as high a score as possible for a given song and beating high scores.
+Since Atli is too busy swinging his arms around and beating high scores,
+someone else has to take care of adding up the score!
+
+In Taktsveðjur you get points for each note hit.
+Each note is worth between $1$ and $115$ points, if you fail to hit the note you get $0$ points.
+On top of this there is a score multiplier that is determined by how many notes you hit in a row.
+At the start the multiplier is $1$, so the note gives you as many points as it is worth.
+If you hit two notes in a row the multiplier goes to $2$ and you get twice as many points as the notes are worth.
+If the multiplier is $2$ and you hit $4$ notes in a row the multiplier goes to $4$.
+Similarly if it is $4$ and you hit $8$ notes in a row the multiplier goes to $8$,
+which is the highest possible multiplier.
+If a note gets you to a new multiplier the new multiplier is applied to that note.
+For example if you hit the first two notes of a song you already get double points for the second one.
+If you miss a note the multiplier lowers by one step,
+going from $8$ to $4$, $4$ to $2$ or $2$ to $1$.
+If the multiplier is $1$ it stays at $1$ if you miss a note.
+
+\section*{Input}
+The first line of input contains a single integer $n$, the number of notes in the song Atli played.
+Next there are $n$ lines, each containing the score for one note in the song.
+Each line therefore contains a single integer $x$ satisfying $0 \leq x \leq 115$.
+
+\section*{Output}
+Print the total score Atli gets for the song.
+
+\section*{Scoring}
+\begin{tabular}{|l|l|l|}
+\hline
+Group & Points & Constraints \\ \hline
+1     & 20   & $1 \leq n \leq 100$, Atli hits no notes. \\ \hline
+2     & 20   & $1 \leq n \leq 100$, Atli never hits two or more notes in a row. \\ \hline
+3     & 20   & $1 \leq n \leq 100$, Atli misses no notes. \\ \hline
+4     & 20   & $1 \leq n \leq 100$. \\ \hline
+5     & 20   & $1 \leq n \leq 100\,000$. \\ \hline
+\end{tabular}

@@ -1,0 +1,11 @@
+name: Rúnnfræði
+author: Atli Fannar Franklín, Dagur Benjamínsson
+source: Forritunarkeppni Framhaldsskólanna 2024
+rights_owner: Forritunarkeppni Framhaldsskólanna
+license: cc by-sa
+type: scoring
+limits:
+    time_multiplier: 2
+grading:
+    show_test_data_groups: true
+keywords: ad hoc, math, edge cases

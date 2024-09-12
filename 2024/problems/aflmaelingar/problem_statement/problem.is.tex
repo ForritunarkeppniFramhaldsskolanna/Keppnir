@@ -1,0 +1,45 @@
+\problemname{Aflmælingar}
+\illustration{0.5}{nixie}{Mynd fengin af \href{https://commons.wikimedia.org/wiki/File:\%D0\%98H-14\_(IN-14)\_Nixie\_Tubes\_Displaying\_\%2225\%22.jpg}{commons.wikimedia.org}}
+
+Hrolleifur er búinn að eignast $300$ aflgjafa og einn aflmæli. Hann getur stillt hvern aflgjafa á $0\%$ til $100\%$ og svo kveikt á kerfinu
+til að fá mælingu á samtals afli. Aflgjafarnir bjóða einungis upp á heiltöluprósentur. Aflmælirinn les svo summu aflsins sem allir aflgjafarnir
+gefa í heild. Hins vegar er mælirinn gamall og notar Nixie túbur, og þú átt aðeins $K$ perur. Svo þú færð aðeins síðustu $K$ tölustafina í svarinu.
+
+Hver aflgjafi $i$ hefur eitthvað grunnafl $s_i$, svo ef hann er stilltur á $p_i$ prósentur er aflið $p_i \cdot s_i$.
+Nánar tiltekið er $s_i$ aflið þegar stillt er á $1$ prósentu.
+Hrolleifur hefur bara visst mikinn tíma, svo nú vill hann komast að því hvað grunnafl hvers aflgjafa er í aðeins $q$ mælingum.
+Þú veist að grunnaflið er einhver heiltala frá og með $0$ til og með $99$.
+Getur þú hjálpað honum?
+
+\section*{Gagnvirkni}
+Þetta er gagnvirkt verkefni. Lausnin þín verður keyrð á móti gagnvirkum dómara
+sem les úttakið frá lausninni þinni og skrifar í inntakið á lausninni þinni.
+Þessi gagnvirkni fylgir ákveðnum reglum:
+
+Fyrst les forritið þitt tvær heiltölur á einni línu $K, q$, þar sem $K$ er fjöldi pera og $q$ er fjöldi mælinga sem þú átt að framkvæma.
+
+Næst skrifar lausnin þín út $n$ heiltölur $p_1, \dots, p_n$, prósentan sem þú stillir hvern aflgjafa á. 
+Eftir það les forritið þitt $K$ stafa tölu, talan sem mælirinn sýnir.
+
+Eftir $q$ slíkar mælingar skal forritið skrifa $n$ tölur $s_1, \dots, s_n$, grunnafl hvers mælis.
+
+Vertu viss um að gera \texttt{flush} eftir hvert gisk, t.d., með
+\begin{itemize}
+    \item \texttt{print(..., flush=True)} í Python,
+    \item \texttt{cout << ... << endl;} í C++,
+    \item \texttt{System.out.flush();} í Java.
+\end{itemize}
+
+Sýniinntakið sýnir dæmi með $n = 4, K = 4, q = 2$.
+Lausnin verður keyrð á þessu sýniinntaki, en niðurstaðan mun ekki hafa áhrif á stigagjöf. Það þýðir að forritið þitt þarf ekki að leysa sýnidæmið rétt til að fá stig.
+
+Með verkefninu fylgir tól sem viðhengi til þess að hjálpa við að prófa lausnina þína.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 30   & $K = 2, q = 300, n = 300$. \\ \hline
+2     & 30   & $K = 4, q = 150, n = 300$. \\ \hline
+3     & 40   & $K = 3, q = 200, n = 300$. \\ \hline
+\end{tabular}

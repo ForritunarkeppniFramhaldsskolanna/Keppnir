@@ -1,0 +1,128 @@
+\problemname{IPAM}
+\illustration{0.4}{MenandMice_Amper}{Micetro is the software Eggert and Indriði develop at Men \& Mice.}
+
+Indriði and Eggert are DNS experts.
+They wrote a piece of software that supports management of Domain Name Servers.
+It can even manage reverse pointer records.
+
+Now they want to design software for IP Address Management.
+Networks make use of IP addresses.
+The network administrators that manage these networks want to categorise IP addresses in many different ways.
+For example, it is common to categorise by physical location, whether it is by country, city, address, room, or coordinates.
+
+The software must be able to attach properties to IP addresses.
+Indriði and Eggert have finalised a design.
+They are both going on a long vacation, but they leave the design document in your hands.
+
+Custom \emph{properties} should be used to categorise.
+Each property is attached to an IP address with the name of the property and the value of the property.
+
+Users should have access to an operation that creates a property definition.
+In that operation the user provides the name of the property and a default value for the property.
+That means if a value has not been set for that particular property on an IP address, the default value will be attached to the address.
+This operation may be called again for an existing property to update the default value.
+
+Similarly, users should have access to an operation that removes a property definition.
+The operation takes as input the name of a property and erases the definition of that property.
+This results in clearing the property away on all IP addresses.
+
+Users should have access to an operation that sets properties on IP addresses.
+The user can provide a contiguous range of IP addresses, the name of a property and the corresponding value for the property.
+This will set the property on each IP address in the range.
+
+Users should have access to an operation that gets all properties of an IP address.
+This operation takes as input a single IP address and fetches all of the properties attached to that particular IP address.
+
+Eggert and Indriði are coming back from their vacation tomorrow,
+which is why you must finish implementing the software before the end of the workday!
+
+\section*{Input}
+The first line of input contains one integer $q$, the number of operations to perform.
+
+Then $q$ operations follow, where each operation is represented by a single line of input.
+The operations are:
+
+\begin{itemize}
+    \item Define, in the format \texttt{"+ k v"},
+        where \texttt{k} represents the name of the property and \texttt{v} represents the associated default value for the property definition.
+    \item Remove, in the format \texttt{"- k"}, where \texttt{k} represents the name of the property being removed.
+    \item Set, in the format \texttt{"= a b k v"}, where \texttt{a} and \texttt{b} represent the start and end IP addresses of the range, respectively,
+        \texttt{k} represents the name of the property and \texttt{v} the value for the property.
+    \item Get, in the format \texttt{"? x"}, where \texttt{x} represents the IP address for which all properties should be fetched.
+\end{itemize}
+
+You may assume the following.
+\begin{itemize}
+    \item Each name of a property is a string of at least $1$ and at most $10$ English letters, digits, underscores or dashes.
+    \item Each value of a property is a string of at least $1$ and at most $10$ English letters, digits, underscores or dashes.
+    \item Only an operation which creates property definitions will reference non-existing property names at the time of the operation.
+    \item Each IP address is either a legal IPv4 address or a legal IPv6 address.
+\end{itemize}
+
+Below you can read further explanations of the format of IP addresses.
+
+\subsection*{IPv4}
+An IPv4 address consists of four parts.
+Each part is an integer from and including $0$ up to and including $255$
+These parts are separated by a single period.
+
+Some examples of valid IPv4 addresses are:
+\begin{itemize}
+	\item \texttt{10.100.80.13}
+	\item \texttt{255.255.255.255}
+	\item \texttt{255.160.134.0}
+\end{itemize}
+
+Some examples of invalid IPv4 addresses are:
+\begin{itemize}
+	\item \texttt{300.1.35.28}
+	\item \texttt{255.255.255.254.1}
+	\item \texttt{127,0,0,1}
+\end{itemize}
+
+\subsection*{IPv6}
+An IPv6 address consists of eight parts.
+Each part is a four digit hexadecimal number.
+These hexadecimal numbers use the digits from $0$ to $9$ and the letters from $a$ to $f$.
+The eight parts are separated by single colons.
+In each part you may omit writing the leading zeros of the number.
+If two or more adjacent parts contain only the number $0$ they may be omitted and in their place you write two colons.
+You are only allowed to do this in one place in the IP address.
+
+Some examples of valid IPv6 addresses are:
+\begin{itemize}
+	\item \texttt{ffff:dead:1337:beef:4321:f33d:2f92:3419}
+	\item \texttt{2001:db8:0:0:0:ff00:42:8329}
+	\item \texttt{::1}
+    \item \texttt{abcd:1234::bad:dad}
+\end{itemize}
+
+Some examples of invalid IPv6 addresses are:
+\begin{itemize}
+	\item \texttt{0123:4567:89ab:cdef:ghij:klmn:opqr:stuv}
+	\item \texttt{ffff:1234::f6b90::abcd}
+	\item \texttt{2001:db8:0:0:0:ff00:42:8329:1234}
+    \item \texttt{1::3::f}
+\end{itemize}
+
+Note that IPv4 addresses may be written as IPv6 addresses.
+This is done by converting the parts of the IPv4 numbers to hexadecimal
+and writing the parts with \texttt{::ffff:} as a prefix.
+For example, \texttt{12.34.56.78} may be written as \texttt{::ffff:c22:384e}.
+
+\section*{Output}
+For each operation that fetches properties, you should first output one line with the integer $k$, the number of properties of the given IP address.
+Then $k$ lines should follow, each of them describing a property by name and value, separated by a space.
+The properties should be output in alphabetical order based on their names.
+You may assume that your program never needs to output more than $300\,000$ properties.
+
+\section*{Scoring}
+\begin{tabular}{|l|l|l|}
+\hline
+Group & Points & Constraints \\ \hline
+1     & 30   & $1 \leq q \leq 1\,000$, only IPv4 numbers starting with \texttt{"10.0.0."}. \\ \hline
+2     & 25   & $1 \leq q \leq 1\,000$, only IPv4 numbers starting with \texttt{"10.0."}. \\ \hline
+3     & 20   & $1 \leq q \leq 1\,000$, only IPv4 numbers starting with \texttt{"10."}. \\ \hline
+4     & 15   & $1 \leq q \leq 1\,000$, only IPv4 numbers. \\ \hline
+5     & 10   & $1 \leq q \leq 10\,000$. \\ \hline
+\end{tabular}

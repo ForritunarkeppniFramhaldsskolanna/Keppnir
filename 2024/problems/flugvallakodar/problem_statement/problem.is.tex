@@ -1,0 +1,49 @@
+\problemname{Flugvallakóðar}
+\illustration{0.5}{airport}{Mynd fengin af \href{https://flic.kr/p/4x29UW}{flickr.com}}
+
+Flugvellir eru þekktir með tveimur gerðum af kóðum: IATA og ICAO.
+Til dæmis hefur flugvöllurinn í Keflavík IATA kóðann KEF og ICAO kóðann BIKF.
+
+Í Absúrdistan, hins vegar, þá eru engir alþjóðlegir staðlar notaðir, allt þarf að vera innlent og upprunið í Absúrdistan til að það megi nota það í Absúrdistan.
+Þannig að þegar fyrsti flugvöllurinn í Absúrdistan var byggður í höfuðborginni, Sillysocks, þá var kóðinn fyrir hann valinn af þingmönnum á þinginu í Absúrdistan sem fylgir eftirfarandi reglum:
+
+\begin{itemize}
+    \item Kóðinn er alltaf 3 stafir.
+    \item Fyrstu 3 stafirnir í nafni borgarinnar eru notaðir, ef enginn annar flugvöllur er með þann kóða.
+    \item Annars eru fremstu þrír stafirnir sem mynda kóða sem er ekki tekinn valdir, þeir þurfa ekki að vera hlið við hlið en þeir þurfa að vera í sömu röð í nafni og í kóða.
+    \item Fremstu þrír merkir hér að fyrsti valdi stafurinn sé eins framarlega og hægt er. 
+    \item Ef tveir valkostir hafa fyrsta valda staf á sama stað er sá kóði valinn sem hefur annann valinn staf framar.
+    \item Loks ef tveir valkostir hafa fyrsta og annann staf á sama stað er sá kóði valinn sem hefur þriðja valinn staf framar.
+\end{itemize}
+
+Þessi staðall ber heitið AANS eða Absúrdistan Airport National Standard.
+Þú færð aðgang að gagnagrunni yfir flugvelli, og þarft að segja til um hvað AANS kóðinn er fyrir hvern flugvöll.
+
+Háir og láir stafir skipta ekki máli í inntaki, þar sem AANS kóðar eru alltaf skrifaðar með hástöfum.
+Hins vegar verður að passa að prenta AANS kóðann í úttakinu með hástöfum.
+
+Til dæmis væri Sillysocks flugvöllurinn í Absúrdistan með AANS kóðann \texttt{SIL}, en ef það væri byggður annar flugvöllur við bæinn Silverstone, þá fengi hann AANS kóðann \texttt{SIV}, þar sem \texttt{SIL} er nú þegar í notkun, og V kemur eftir L í nafninu á Silverstone.
+
+\section*{Inntak}
+Fyrsta línan í inntakinu inniheldur eina jákvæða heiltölu $n$, fjöldi flugvalla í Absúrdistan.
+Næstu $n$ línur innihalda nöfnin á bæjum flugvallanna, hvert nafn er strengur sem inniheldur aðeins enska há- og lágstafi.
+Hvert nafn er minnst $3$ stafir og heildarfjöldi stafa í inntaki er mest $2 \, 000 \, 000$.
+
+Athugið að inntakið kemur í þeirri röð sem flugvellirnir voru byggðir, þannig að því fyrr sem flugvöllurinn er í inntakinu, því hærri forgang hefur hann í vali á kóða.
+
+\section*{Úttak}
+Fyrir hvern flugvöll þá á að skrifa út AANS kóðann fyrir hann.
+Ef enginn gildur AANS kóði er í boði þýðir það að flugvöllurinn var aldrei byggður og því skal prenta \texttt{":("} í staðinn.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 10   & Nafn hvers flugvallar er mest $200$ stafir, $n = 1$. \\ \hline
+2     & 20   & Nafn hvers flugvallar er mest $200$ stafir, $1 \leq n \leq 100$, ef til er kóði notar hann fyrstu þrjá stafi nafnsins. \\ \hline
+3     & 20   & Nafn hvers flugvallar er mest $200$ stafir, $1 \leq n \leq 100$, ef til er kóði notar hann fyrstu tvo stafi nafnsins. \\ \hline
+4     & 20   & Nafn hvers flugvallar er mest $200$ stafir, $1 \leq n \leq 100$, ef til er kóði notar hann fyrsta staf nafnsins. \\ \hline
+5     & 20   & Nafn hvers flugvallar er mest $200$ stafir, $1 \leq n \leq 100$. \\ \hline
+6     & 5    & Nafn hvers flugvallar er mest $200$ stafir, $1 \leq n \leq 10 \, 000$. \\ \hline
+7     & 5    & Engar frekari takmarkanir. \\ \hline
+\end{tabular}

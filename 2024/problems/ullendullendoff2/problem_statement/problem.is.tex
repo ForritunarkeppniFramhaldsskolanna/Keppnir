@@ -1,0 +1,80 @@
+\problemname{Úllen Dúllen Doff 2}
+\illustration{0.4}{point}{Mynd fengin af \href{https://flickr.com/photos/pipstar/75570251}{flickr.com}}
+
+Lárus er millistjórnandi hjá glæsilegu fyrirtæki.
+Undir honum eru $n$ starfsmenn og allir nema einn þeirra eru frændfólk hans.
+
+Þegar nýtt verkefni kemur upp þá sér Lárus um að úthluta því á starfsmann.
+Lárus vill setja sem minnsta vinnu á frændur sínar.
+Hann getur samt ekki bara alltaf valið sama aðilann.
+
+Til að tryggja að fólk gruni Lárus ekki um frændhygli þá notar hann fágaða aðferð til að velja starfsmann af handahófi.
+Hann raðar fólkinu upp í hring og notar þulu til þess að velja af handahófi hver fær verkefnið.
+Hann velur fyrsta starfsmann til að benda á og þylur fyrsta orðið.
+Svo fer hann í gegnum þuluna og bendir á næsta starfsmann til hægri í hringnum fyrir hvert orð sem hann þylur.
+
+Þulan hljómar svo:
+\begin{quote}
+    Úllen dúllen doff kikke lane koff koffe lane bikke bane úllen dúllen doff.
+\end{quote}
+
+Hvernig getur Lárus raðað starfsmönnunum þannig að frændfólk hans fái ekki verkefnið?
+
+\section*{Inntak}
+Fyrsta línan inniheldur eina heiltölu $n$, fjölda starfsmanna.
+Næst fylgja $n$ línur, þar sem hver lína inniheldur eitt nafn.
+Fyrsta nafnið er starfsmaðurinn sem er ekki hluti frændfólksins.
+
+Þú mátt gera ráð fyrir að sérhvert nafn sé einstakt og samanstendur af $1$ til $10$ enskum lágstöfum.
+
+\section*{Úttak}
+Skrifaðu út $n$ línur, þar sem hver lína inniheldur eitt nafn á starfsmanni og skal ekkert nafn vera endurtekið.
+Lárus mun nota röðina sem þú gefur og þylja þuluna til að velja starfsmanninn sem tekur við nýja verkefninu.
+Ef röðin sem þú gefur verður til þess að frændi eða frænka Lárusar verði fyrir valinu þá verður lausnin þín dæmd röng.
+
+\section*{Stigagjöf}
+Fjöldi starfsmanna, $n$, getur verið frá $1$ upp í $20$.
+Til er stigahópur fyrir hvert mögulegt gildi á $n$ og er hver hópur virði $5$ stiga.
+Leysa þarf öll prufutilvikin í hóp til að öðlast stiginn fyrir þann hóp.
+
+\section*{Útskýring á sýnidæmum}
+Í fyrra sýnidæminu má til dæmis nota upprunalegu röðina í inntakinu því þá er farið í gegnum hana á eftirfarandi máta:
+
+\begin{itemize}
+    \item Úllen: Arnar
+    \item dúllen: Atli
+    \item doff: Bjarni
+    \item kikke: Bjarki
+    \item lane: Hannes
+    \item koff: Unnar
+    \item koffe: Arnar
+    \item lane: Atli
+    \item bikke: Bjarni
+    \item bane: Bjarki
+    \item úllen: Hannes
+    \item dúllen: Unnar
+    \item doff: Arnar
+\end{itemize}
+
+Þar sem Arnar verður fyrir valinu að lokum er úttakið talið rétt.
+
+Í seinna sýnidæminu er eitt mögulegt svar að fara í gegnum röðina á eftirfarandi máta:
+\begin{itemize}
+    \item Úllen: v
+    \item dúllen: x
+    \item doff: y
+    \item kikke: a
+    \item lane: b
+    \item koff: c
+    \item koffe: p
+    \item lane: q
+    \item bikke: r
+    \item bane: s
+    \item úllen: t
+    \item dúllen: u
+    \item doff: z
+\end{itemize}
+
+Að lokum verður z fyrir valinu og því er úttakið talið rétt.
+
+Athugið að mörg önnur rétt úttök koma til greina og að í seinna sýnidæminu komumst við ekki að síðustu tveimur gildunum í röðinni.

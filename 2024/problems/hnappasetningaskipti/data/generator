@@ -1,0 +1,62 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution atli_100.py opt
+
+compile random_generator.py
+
+samplegroup
+sample 1
+sample 2
+sample 3
+
+group G0S 1
+tc 1
+tc 2
+tc 3
+
+group G1QQ 11
+for i in {0..9}; do
+tc gqq-$i random_generator "qwerty on qwerty"
+done;
+
+group G2DD 11
+for i in {0..9}; do
+tc gdd-$i random_generator "dvorak on dvorak"
+done;
+
+group G3BB 11
+for i in {0..9}; do
+tc gbb-$i random_generator "bjarki on bjarki"
+done;
+
+group G4DQ 11
+for i in {0..9}; do
+tc gdq-$i random_generator "dvorak on qwerty"
+done;
+
+group G5BQ 11
+for i in {0..9}; do
+tc gbq-$i random_generator "bjarki on qwerty"
+done;
+
+group G6QD 11
+for i in {0..9}; do
+tc gqd-$i random_generator "qwerty on dvorak"
+done;
+
+group G7BD 11
+for i in {0..9}; do
+tc gbd-$i random_generator "bjarki on dvorak"
+done;
+
+group G8QB 11
+for i in {0..9}; do
+tc gqb-$i random_generator "qwerty on bjarki"
+done;
+
+group G9DB 11
+for i in {0..9}; do
+tc gdb-$i random_generator "dvorak on bjarki"
+done;

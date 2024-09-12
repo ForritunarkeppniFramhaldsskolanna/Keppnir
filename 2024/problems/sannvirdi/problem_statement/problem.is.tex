@@ -1,0 +1,51 @@
+\problemname{Sannvirði}
+\illustration{0.4}{game_show}{}
+
+Dröfn Karen hefur rosalega gaman af nýja leikþættinum Sannvirði í sjónvarpsdagskránni.
+Það sem henni finnst skemmtilegast af öllu er að sjá hvað sigurvegarinn er ánægður þegar hann hlýtur verðlaunin.
+Hún horfir æsispennt á hvern einasta þátt.
+
+Hver einasti þáttur hefst á því að dómarar sýna einhvern hlut sem má finna til sölu, til dæmis ísskáp, bíl, gulrót, ilmvatn, og svo framvegis.
+Allir keppendur fá að sjá hlutinn jafn lengi.
+Keppendur eiga svo að giska á hvert sannvirði hlutarins er.
+Sá keppandi sem giskar næst rétta svarinu, en ekki yfir, er sigurvegarinn.
+Keppendurnir senda inn ágiskanirnar sínar samtímis og fá ekki að sjá ágiskanir annarra keppenda,
+en áhorfendur eins og Dröfn fá allar þessar upplýsingar í hendurnar.
+Klippt er yfir í mjög stutt viðtöl við hvern keppanda þar sem keppandinn fær að útskýra ágiskun sína.
+
+Það væri nú ekki sjónvarpsefni án auglýsinga.
+Áður en sigurvegarinn er tilkynntur er klippt yfir í auglýsingahlé.
+Dröfn iðar alveg af spenningi.
+Hún hefur sínar eigin hugmyndir um sannvirðið og hugsar með sér hvaða keppandi myndi sigra ef einhver hugmynd hennar væri rétta svarið.
+
+Geturðu fundið sigurvegarann fyrir sérhverja hugmynd Drafnar?
+
+
+\section*{Inntak}
+Fyrsta línan inniheldur eina heiltölu $n$, fjölda keppenda.
+
+Næst fylgja $n$ línur, hver þeirra lýsir keppanda.
+Lýsing á keppanda samanstendur af nafni og ágiskun, aðskilin með bili.
+Sérhvert nafn samanstendur af minnsta lagi $1$ og mesta lagi $10$ enskum lágstöfum.
+Sérhver ágiskun er heiltala á bilinu $0$ upp í $10^9$, báðar þar með taldar.
+Þú mátt gera ráð fyrir að engir tveir keppendur giskuðu á sama virði.
+
+Næst kemur ein lína sem inniheldur eina heiltölu $q$, fjölda hugmynda.
+
+Að lokum koma $q$ línur, hver þeirra lýsir einni af hugmyndum Drafnar.
+Sérhver hugmynd er heiltala á bilinu $0$ upp í $10^9$, báðar þar með taldar.
+
+\section*{Úttak}
+Fyrir hverja hugmynd, í sömu röð og þær koma í inntaki, skaltu skrifa út nafn keppandans sem sigrar skyldi sú hugmynd Drafnar um sannvirðið reynast rétt.
+Ef enginn keppandi sigrar fyrir þá hugmynd skaltu skrifa út \texttt{:(}, því Dröfn verður leið ef enginn hlýtur verðlaunin.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 10   & $n = 1$, $q = 1$ \\ \hline
+2     & 15   & $n = 1$, $1 \leq q \leq 1\,000$ \\ \hline
+3     & 20   & $1 \leq n \leq 1\,000$, $q = 1$ \\ \hline
+4     & 25   & $1 \leq n \leq 1\,000$, $1 \leq q \leq 1\,000$ \\ \hline
+5     & 30   & $1 \leq n \leq 200\,000$, $1 \leq q \leq 200\,000$ \\ \hline
+\end{tabular}

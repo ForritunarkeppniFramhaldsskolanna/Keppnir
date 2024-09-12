@@ -1,0 +1,8 @@
+1 195686
+6
+contain at least 6 symbols
+contain at most 6 symbols
+contain at most 0 symbols from !"#$%&'()*+,-./:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+not contain 2 consecutive equal symbols
+not contain 2 consecutive incrementing symbols
+not contain 2 consecutive decrementing symbols

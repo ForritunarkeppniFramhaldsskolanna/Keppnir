@@ -1,0 +1,80 @@
+\problemname{Tarot Póker}
+\illustration{0.5}{card}{Mynd fengin af \href{https://commons.wikimedia.org/wiki/File:Tarot\_Card\_-\_The\_High\_Priest.jpg}{commons.wikimedia.org}}
+
+Konráði var boðið að spila póker með KFFÍ (KeppnisForritunar Félagi Íslands), en Atli var löngu búinn að sníkjast til að búa til
+algrím sem spilar póker fullkomlega. Til að reyna koma í veg fyrir svindl þá dró Konráð fram sataníska tarot spilastokk sinn og
+samdi nýja útgáfu af póker á staðnum, til þess að Atli gæti ekki svindlað með gamla forritinu sínu. Þá vaknar spurningin, er
+virkilega siðferðislega rétt að hjálpa Atla að svindla áfram? Því miður þýðir lítið að velta sér upp úr því, Atli var svo
+slunginn að bara það inn í keppnisforritunarverkefni, svo það er ekki annað í boði en að svindla fyrir hans hönd ef menn vilja
+fá stig í keppninni.
+
+Nýju reglurnar eru sem fylgir. Tarot stokkurinn inniheldur 22 háspil, þau eru númeruð frá núll upp í tuttugu-og-einn og táknuð
+með rómverskum stöfum (nema $0$ sem er \texttt{O}). Utan við þetta eru 14 spil til viðbótar í fjórum ólíkum sortum, sem gera
+56 spil samtals og kallast lágspil. Sortirnar eru stafir, bikarar, sverð og mynt. Munum tákna þessar sortir með stöfunum \texttt{S}, \texttt{B},
+\texttt{V} og \texttt{M}. Spilin 14 í hverri sort eru númeruð frá $1$ til $10$ og svo taka við Gosi, Riddari, Drottning og Kóngur. Við munum merkja
+síðustu fjögur með stöfunum \texttt{G}, \texttt{R}, \texttt{D} og \texttt{K}. Sortin verður tekin fram fyrst, svo dæmi um
+nokkur spil eru \texttt{V10}, \texttt{M1}, \texttt{BD} og \texttt{SR}. Loks bara til að gera lífið erfiðara bætið Konráð
+jókerum í stokkinn. Jókerar verða táknaðir með \texttt{J}. Jókerar eru algildisspil, sem merkir að láta má jókerspilið vera
+hvað sem er þegar maður setur fram hendi sína, jafnvel þó það sé jafnt öðru spili í borði. Sérhverjum jóker verður að úthluta
+einu spili öðrum en jóker þegar hendi er spilað.
+
+Þegar verið er að bera saman stök spil þá telst \texttt{XXI} hæst, svo fer það niður í \texttt{O} í þeirri röð. Öll háspilin
+eru sem sagt hærri en öll lágspilin. Meðal lágspilanna telst \texttt{K} hæst, svo \texttt{D}, svo \texttt{R}, svo \texttt{G} og
+loks tölurnar frá $10$ til $1$ í þeirri röð. Í sortum teljast myntir hæst, svo sverð, svo bikarar og svo stafir. Lítum svo á
+að spilin $1$ til $10$ og svo \texttt{G}, \texttt{R}, \texttt{D}, \texttt{K} séu í röð. Eins eru \texttt{O} upp í \texttt{XXI}
+í röð, en ekki má mynda röð með t.d. \texttt{MD}, \texttt{MK}, \texttt{O}, \texttt{I}, \texttt{II}. Raðir mega heldur ekki
+innihalda endurtekin gildi.
+
+Háspilin eru ekki með neina sort, en eru samt með gildi. Því til dæmis ef spilari er með eitt háspil á hendi telst það sjálfkrafa
+sem hæsta spil í hendi. Háspil og jóker geta einnig myndað par sem er hærra en öll pör af lágspilum. Hins vegar er aldrei hægt
+að mynda lit með háspil því háspil teljast ekki vera af neinni sort. En háspil geta myndað pör, fullt hús og allt sem hefur aðeins
+með gildi að gera. Enn fremur ef há- og lágspil eru með sömu tölu á, t.d. \texttt{M4} og \texttt{IV} kallast gildin hliðstæð. 
+Athugum að gosar, riddarar, drottningar og kóngar eru ekki hliðstæð neinum háspilum því þau hafa enga tölu á. 
+Hins vegar er gildið $15$ hliðstætt \texttt{XV}.
+
+Eftirfarandi samsetningar af spilum teljast góðar, með bestu samsetninguna efst og verstu neðst. Jafntefli eru leyst með því að
+bera saman hæsta spil handanna, af þeim sem mynda samsetninguna. Ef þau eru jöfn eru næst hæstu spil hvorrar hendi borin saman af þeim
+sem mynda samsetninguna, og svo framvegis. Ef þau eru öll eins þá eru hæstu spil handarinnar utan samsetningarinnar borin saman. Eins
+ef þau eru eins er næst hæsta spil utan samsetningarinnar skoðað, og þar fram eftir götunum.
+
+\begin{tabular}{|c|c|c|} \hline
+    Sæti & Heiti & Myndun \\ \hline
+    1 & Fimm eins & Fimm spil af sama gildi. \\ \hline
+    2 & Engin lágspil & Fimm háspil. \\ \hline
+    3 & Litaröð & Fimm spil í röð af sömu sort. \\ \hline
+    4 & Fjölbreytni & Fjögur lágspil af ólíkum sortum og eitt háspil. \\ \hline
+    5 & Stórt summuhús & Fjögur lágspil og háspil hliðstætt summu þeirra. \\ \hline 
+    6 & Hliðstætt hús & Fjögur lágspil af sama gildi og hliðstætt háspil. \\ \hline 
+    7 & Summuhús & Þrjú lágspil og háspil hliðstætt summu þeirra. \\ \hline 
+    8 & Töluleysa & Fimm spil án tölu á, þ.e. \texttt{G}, \texttt{R}, \texttt{D}, \texttt{K}. \\ \hline 
+    9 & Ferna & Fjögur spil af sama gildi. \\ \hline
+    10 & Fullt hús & Þrjú spil af sama gildi, og tvö önnur spil af sama gildi. \\ \hline 
+    11 & Litur & Öll fimm spil af sömu sort. \\ \hline
+    12 & Röð & Fimm spil í röð. \\ \hline
+    13 & Tvær hátvennur & Tvö pör af hliðstæðu há- og lágspili. \\ \hline
+    14 & Tvenna og hátvenna & Par með sama gildi og par af hliðstæðu há- og lágspili. \\ \hline
+    15 & Hátvenna & Par af hliðstæðu há- og lágspili. \\ \hline
+    16 & Þrenna & Þrjú spil af sama gildi. \\ \hline
+    17 & Tvær tvennur & Tvö pör af spilum með sama gildi. \\ \hline
+    18 & Tvenna & Par af spilum með sama gildi. \\ \hline
+    19 & Engin háspil & Fimm lágspil. \\ \hline
+    20 & Hátt spil & Hæsta spil á hendi myndar mynstrið. \\ \hline
+\end{tabular}
+
+\section*{Inntak}
+Inntakið mun innihalda tvær línur. Hver lína inniheldur fimm spil, aðskilin með bilum. Fyrri línan gefur spilin hans Konráðs
+og seinni línan gefur spilin hans Atla. Athugið að sama spil getur komið oftar en einu sinni fyrir í inntaki.
+
+\section*{Úttak}
+Prentaðu fyrst tvær tölur, sæti sem hendi Konráðs fær í töflunni að ofan í besta falli og sæti sem hendi Atla fær í töflunni að ofan í besta falli.
+Skrifaðu svo út hvor vinnur á næstu línu, þ.e. prentaðu \texttt{Konrad} ef Konráð vinnur, \texttt{Atli} ef Atli vinnur og \texttt{Jafntefli} annars.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 40   & Engir jókerar, engin háspil. \\ \hline
+2     & 40   & Engir jókerar. \\ \hline
+3     & 20   & Engar frekari takmarkanir. \\ \hline
+\end{tabular}
+

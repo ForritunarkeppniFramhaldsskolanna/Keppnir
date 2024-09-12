@@ -1,0 +1,47 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+USE_PARALLEL=0
+. ../../../testdata_tools/gen.sh
+
+use_solution atli_100.py opt
+
+compile random_generator.py
+
+samplegroup
+limits max_n=10 max_q=10 par=False ties=True 
+sample 1
+
+group GA 20
+limits max_n=100 max_q=100 par=True ties=True
+for i in {0..9}; do
+tc GA-$i random_generator 100 100 True True $i
+done;
+
+group GB 20
+limits max_n=1 max_q=100 par=False ties=True
+for i in {0..9}; do
+tc GB-$i random_generator 1 100 False True $i
+done;
+
+group GC 20
+limits max_n=100 max_q=100 par=False ties=False
+include_group GB
+for i in {0..9}; do
+tc GC-$i random_generator 100 100 False False $i
+done;
+
+group GD 30
+limits max_n=100 max_q=100 par=False ties=True
+include_group GA
+include_group GC
+tc 1
+for i in {0..9}; do
+tc GD-$i random_generator 100 100 False True $i
+done;
+
+group GE 10
+limits max_n=100000 max_q=100000 par=False ties=True
+include_group GD
+for i in {0..2}; do
+tc GE-$i random_generator 100000 100000 False True $i
+done;

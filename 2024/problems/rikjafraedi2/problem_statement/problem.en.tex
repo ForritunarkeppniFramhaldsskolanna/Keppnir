@@ -1,0 +1,34 @@
+\problemname{Ríkjafræði 2}
+\illustration{0.5}{morphism}{Image from \href{https://commons.wikimedia.org/wiki/File:Commutative\_diagram\_for\_morphism.svg}{commons.wikimedia.org}}
+
+Jörmunrekur thought he had achieved a decent understanding of category theory, but suddenly things got more complicated when he
+started looking deeper into things! Category theory often uses diagrams as visual aids for theorems or definitions. The diagrams
+usually represent categories consisting of objects and arrows between them. The thing that has gotten more complicated since last
+time Jörmunrekur looked at categories is that now if there is an arrow from $x$ to $y$, the same might not be true for $y$ to $x$.
+If it is possible to travel both ways, this has to be given as two separate arrows, one going either way. Jörmunrekur continues
+undeterred though and thinks he could gain a better understanding of this phenomenon if he draws some diagrams of his own. The
+diagrams start out containing only some points to denote the objects, but no arrows.
+
+\section*{Input}
+The input begins with one line containing two positive integers $n$ and $q$, where $n$ is the number of objects and $q$ is the
+number of queries in the input. The objects are numbered from $1$ to $n$ and $1 \leq n \leq 1\,000$ will always hold. Next there are $q$
+lines, each with three integers $o, x, y$, separated by spaces. $o$ is always either $0$ or $1$ and $1 \leq x, y \leq n$. If $o = 0$
+the query means that Jörmunrekur draws an arrow from object $x$ to object $y$. If $o = 1$ then Jörmunrekur is wondering whether 
+there is some sequence of arrows starting at $x$ and going to $y$.
+
+\section*{Output}
+Print a single line for each query starting with a $1$. If it's possible to trace some sequence of arrows from $x$ to $y$ print
+\texttt{Jebb}. Otherwise print \texttt{Neibb}.
+
+\section*{Note}
+Inputs and outputs are fairly large. Make sure to use sufficiently fast I/O methods.
+
+\section*{Scoring}
+\begin{tabular}{|l|l|l|}
+\hline
+Group & Points & Constraints \\ \hline
+1     & 40   & $1 \leq q \leq 1\,000$. \\ \hline
+2     & 30   & $1 \leq q \leq 500\,000$, the arrows never form a cycle. \\ \hline
+3     & 30   & $1 \leq q \leq 500\,000$. \\ \hline
+\end{tabular}
+

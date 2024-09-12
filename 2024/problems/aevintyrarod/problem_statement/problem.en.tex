@@ -1,0 +1,36 @@
+\problemname{Ævintýraröð}
+\illustration{0.4}{scroll}{Image taken from \href{https://commons.wikimedia.org/wiki/File:Noun_Scroll_308110.svg}{commons.wikimedia.org}}
+
+Jörmunrekur was looking into his old favourite video game called DeceitfulLOAM and discovered that not only was it considered ancient
+history, but there had been three new versions of it since he played it, two of which are also considered ancient as well, and one of which had even
+risen from the dead! He will accept some changes when moving up to new versions, but there are limits to everything. He decides to play
+the version that comes after DeceitfulLOAM, known as Glyphplane Classic. He reads a bit about the changes and finds out that in this
+version various quests have been added which increase a player's experience points upon completion. Learning this makes his mind
+start grinding away.
+
+The rewards scale with the player's current experience points. More specifically, each quest has some values $a$ and $b$ such that
+if the player currently has $x$ experience points, the quest reward will be $ax + b$ more experience points. 
+This means they have $x + ax + b$ experience points after the quest.
+Naturally, Jörmunrekur wants to increase these values as efficiently as possible, so in what order should he complete the quests?
+
+\section*{Input}
+The first line of input contains two integers $n$ and $x$, the number of quests and Jörmunrekur's initial number of
+experience points, where $0 \leq x \leq 1\,000$. Next there are $n$ lines, each describing one quest. Each line starts with the name of the quest, followed by its
+values of $a$ and $b$, where $0 \leq a, b \leq 1\,000$, all separated by spaces. The names only contain English upper and lower case letters and are at most
+$20$ characters in length. The total length of all names in the input is at most $300\,000$. All quests have different names.
+
+\section*{Output}
+Print the names of the quests in the order Jörmunrekur should finish them, meaning the quest he should complete first should be
+printed first. Print each name on its own line. If there are multiple correct answers, you may print any one of them.
+
+\section*{Scoring}
+\begin{tabular}{|l|l|l|}
+\hline
+Group & Points & Constraints \\ \hline
+1     & 20   & $1 \leq n \leq 2$ \\ \hline
+2     & 20   & $1 \leq n \leq 8$ \\ \hline
+3     & 20   & $1 \leq n \leq 50$ \\ \hline
+4     & 20   & $1 \leq n \leq 500$ \\ \hline
+5     & 20   & $1 \leq n \leq 10^5$ \\ \hline
+\end{tabular}
+

@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution arnar_100.cpp
+
+compile random_generator.py
+
+samplegroup
+limits min_n=6 max_n=15
+sample 1
+sample 2
+
+for npad in {01..20}; do
+    n=${npad#0}
+    group G$npad 5
+    limits min_n=$n max_n=$n
+    if [[ $n == 6 ]]; then
+        tc 1
+    elif [[ $n == 15 ]]; then
+        tc 2
+    fi
+    for i in {01..05}; do
+        tc G$npad-$i random_generator $n $n
+    done;
+done;

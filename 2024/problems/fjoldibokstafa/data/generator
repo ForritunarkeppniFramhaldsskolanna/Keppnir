@@ -1,0 +1,52 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution konni_100.py
+
+compile random_generator.py
+
+samplegroup
+limits min_n=1 max_n=100 upper=1 lower=1 only_valid=0
+sample 1
+sample 2
+
+# only lowercase
+group GA 10
+limits min_n=1 max_n=100 upper=0 lower=1 only_valid=1
+tc 1
+for i in {01..10}; do
+    tc GA-$i random_generator 1 100 0 1 1
+done;
+
+# ONLY UPPERCASE
+group GB 10
+limits min_n=1 max_n=100 upper=1 lower=0 only_valid=1
+for i in {01..10}; do
+    tc GB-$i random_generator 1 100 1 0 1
+done;
+
+# BoTh uPpEr aNd lOwEr cAsE
+group GC 30
+limits min_n=1 max_n=100 upper=1 lower=1 only_valid=1
+for i in {01..20}; do
+    tc GC-$i random_generator 1 100 1 1 1
+done;
+
+
+# UpPeR, lOwEr, AnD PuNcTuAtIoN.
+group GD 50
+limits min_n=1 max_n=100 upper=1 lower=1 only_valid=0
+tc 2
+for i in {01..06}; do
+    tc GD-$i random_generator 1 100 0 0 0
+done;
+for i in {07..08}; do
+    tc GD-$i random_generator 1 100 0 1 0
+done;
+for i in {09..10}; do
+    tc GD-$i random_generator 1 100 1 0 0
+done;
+for i in {11..25}; do
+    tc GD-$i random_generator 1 100 1 1 0
+done;

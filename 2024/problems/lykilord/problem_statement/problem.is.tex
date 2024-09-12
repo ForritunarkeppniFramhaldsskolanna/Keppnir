@@ -1,0 +1,104 @@
+\problemname{Lykilorð}
+\illustration{0.5}{already_used}{Það má alltaf finna verri lykilorðareglur\textellipsis}
+
+Í stafrænum kerfum með auðkenningu er algengt að notendur þurfi að smíða sín eigin lykilorð til að para við notandanafnið sitt.
+Lykilorðin skal ekki geyma í sínu hráa formi, heldur eru þau sett í gegnum tætifall.
+Til einföldunar má segja að tætifallið breyti lykilorðinu úr hráu textaformi yfir í heiltölu.
+Mörg lykilorð geta endað í sömu heiltölu og erfitt er að snúa ferlinu við, sem gerir það öruggt að geyma heiltöluna.
+Ofan á það er þá hægt að tæta lykilorð við innskráningu seinna í framtíðinni og athuga hvort sama tala komi út og er geymd í gagnagrunni kerfisins.
+Ef heiltölurnar passa að þá eru hverfandi líkur á því að lykilorðið sem notað var við innskráningu sé frábrugðið því sem var upprunalega stillt af notandanum.
+
+Mörg þessarra kerfa bera undir notendur reglur sem lykilorð þeirra þurfa að standast.
+Skynsamleg mörk á lágmarkslengd eru sett til að tryggja að lykilorð séu nógu löng til þess að ekki sé hægt að beita ofbeldisaðferðinni.
+Sú aðferð felst í því að prófa öll möguleg lykilorð sem uppfylla reglurnar.
+Þá er oftast byrjað á stystu leyfilegu lykilorðunum og unnið sig upp í lengd.
+Einnig eru til rök fyrir því að takmarka hámarkslengd þar sem sum reiknirit fyrir tætiföll virka bara fyrir texta með mest $64$ tákn.
+Önnur góð regla er að ekki leyfa notkun á algengustu lykilorðum sögunnar.
+Ástæðan fyrir þeirri reglu er að útkomur tætifalla fyrir þau lykilorð eru þekkt og því auðvelt að snúa ferlinu fyrir þær útkomur.
+Í þessu verkefni gerum við ráð fyrir að tætiföllin virki fyrir mest $32$ tákn og því eru það grunn efri mörk á lengd allra lykilorða.
+
+Fyrir mörgum árum datt kerfishönnuðum í hug að með fleiri reglum um lykilorðin myndu þau tryggja að lykilorðin væru öruggari.
+Kröfur voru gerðar á mörgum vefsíðum að lykilorð skuli innihalda hástafi, lágstafi og tölustafi, minnst einn af hverri týpu.
+Önnur kerfi tóku þetta skrefinu lengra og leyfðu ekki endurtekna stafi í röð né hækkandi runur af tölustöfum eða aðliggjandi bókstafi í stafrófsröð.
+Lengi var þetta talið bæta öryggi en gerði illt verra.
+Með því að bæta við þessum reglum varð heildarmengi leyfilegra lykilorða smærra, og því færri lykilorð í boði til að prófa með ofbeldisaðferðinni.
+Einnig urðu lykilorð erfiðari fyrir notendur að muna.
+Því endurnýttu þeir sömu lykilorð milli kerfa eins og þeir gátu og skrifuðu þau jafnvel niður á miða sem þeir límdu við borðin sín.
+Sem betur fer vitum við betur í dag! Eða hvað?
+
+Þú færð gefnar reglur fyrir lykilorðasmíði í mismunandi kerfum og á forritið að smíða lykilorð út frá gefnu reglunum.
+Reglurnar eru gefnar í söfnum.
+Hvert safn getur innihaldið margar reglur.
+Við segjum að lykilorð uppfylli kröfur reglusafns ef það uppfyllir allar reglurnar í reglusafninu.
+Til að lykilorð teljist gilt þarf það að uppfylla að minnsta kosti eitt reglusafn.
+Hins vegar, ef engin reglusöfn eru gefin eru öll lykilorð talin gild.
+
+Það hryggir höfund verkefnisins að segja að stór hluti prufutilvika séu alvöru reglur í alvöru kerfum þann dag sem verkefnið var skrifað.
+
+\section*{Inntak}
+Fyrsta línan inniheldur tvær heiltölur $n$, fjölda reglusafna, og $m$, fjölda lykilorða sem skal skrifa út.
+Þú mátt gera ráð fyrir að $m \leq 2\,000\,000$.
+
+Næst fylgja lýsingar á $n$ reglusöfnum.
+Hver lýsing á reglusafni byrjar á einni línu með einni jákvæðri heiltölu sem táknar fjölda reglna í reglusafninu.
+Næst fylgja reglurnar, ein lína fyrir hverja reglu.
+
+Kerfin eru alþjóðleg og því eru reglurnar gefnar upp á ensku.
+Eftirfarandi reglur eru skilgreindar með forskeytinu \texttt{The password must:}
+\begin{enumerate}
+    \item \texttt{contain at least \{count\} symbols}
+    \item \texttt{contain at most \{count\} symbols}
+    \item \texttt{contain at least \{count\} symbols from \{symbol set\}}
+    \item \texttt{contain at most \{count\} symbols from \{symbol set\}}
+    \item \texttt{contain \{count\} consecutive equal symbols}
+    \item \texttt{contain \{count\} consecutive incrementing symbols}
+    \item \texttt{contain \{count\} consecutive decrementing symbols}
+    \item \texttt{contain an english word}
+    \item \texttt{include \{substring\} as a substring}
+    \item \texttt{start with \{prefix\}}
+    \item \texttt{end with \{suffix\}}
+    \item \texttt{be an english word}
+    \item \texttt{be in top \{count\} most common passwords}
+\end{enumerate}
+
+Það verða minnst $0$ og mest $30$ reglur samanlagt yfir öll reglusöfn.
+Fyrir reglur $5$ til $13$ má rita \texttt{"not "} fyrir framan þær til að fá andstæða virkni.
+Sumar reglurnar taka við breytum og eru full lýsing á skorðunum þar flókin en gera má ráð fyrir að þær séu skynsamlegar.
+Til dæmis ef það eru margar reglur að þá getur breytan \texttt{count} í reglum $1$ og $2$ verið frá $0$ upp í $32$.
+Hins vegar, í reglum $5$ til $7$ er breytan \texttt{count} minnsta lagi $2$ og mesta lagi $5$.
+Athugaðu samt sérstaklega að samanlagt geta reglurnar orðið til þess að engin lykilorð séu gild.
+
+Táknin sem geta komið fyrir í inntaki eru þau sem hafa ASCII gildi á bilinu $33$ upp í $126$.
+Þetta inniheldur enska hástafi, enska lágstafi, tölustafi, greinarmerki og nokkur önnur tákn, til dæmis slaufusviga.
+Athugið sérstaklega að bilstafur getur hvorki komið fyrir í lykilorðum né breytum reglna í inntaki.
+
+Þú færð lista af algengum orðum í ensku til að aðstoða þig við að búa til lykilorð sem uppfylla kröfurnar.
+\footnote{Orðin voru fengin úr listanum \href{https://github.com/tkoop/popular-english-words/}{hér} sem safnaði þeim saman frá Wikipedia.}
+Þú færð einnig einnig lista af lykilorðum sem eru röðuð eftir vinsæld, efsta lykilorðið er algengasta lykilorðið.
+\footnote{Lykilorðin voru fengin úr listanum \href{https://github.com/danielmiessler/SecLists/tree/master/Passwords/Common-Credentials}{hér} sem er byggður á alvöru tölfræði.}
+Þessir listar eru notaðir til að staðfesta að svarið þitt sé talið rétt.
+\footnote{Listarnir er óbreyttir, fyrir utan takmörkun á stærð og eitt lykilorð utan stafamengis verkefnisins var fjarlægt.
+Innihald þeirra táknar ekki skoðanir neins sem kemur að þessu verkefni heldur eru þetta hrá gögn sem hefur verið raðað eftir tíðni.}
+
+\section*{Úttak}
+Ef til eru $m$ eða fleiri mismunandi lykilorð sem uppfylla gefnu reglurnar skaltu fyrst skrifa út línu með textanum \texttt{"Mogulegt!"}.
+Þar á eftir skaltu skrifa út $m$ mismunandi lykilorð þar sem hvert lykilorð uppfyllir allar reglurnar í að minnsta kosti einu reglusafni í inntaki, nema í tilvikinu þar sem engin reglusöfn eru gefin því þá eru öll lykilorð gild.
+Í þessum tilvikum þarf mest að skrifa út $1\,000\,000$ lykilorð og þarf mest $6\,291\,456$ eða $6$ MB til að skrifa út svarið.
+
+Hins vegar, ef fjöldi mismunandi lykilorða sem uppfylla kröfurnar er lægri en $m$, skaltu skrifa út eina línu með textanum \texttt{"Omogulegt!"}.
+
+\section*{Stigagjöf}
+Prufutilvikin eru $100$ samtals og þú færð eitt stig fyrir hvert leyst prufutilvik.
+
+\section*{Fleiri reglur}
+Hér eru nokkrar fleiri reglur sem komust ekki í verkefnið en eru samt til úti í heiminum.
+\begin{itemize}
+    \item \texttt{not be the same as the username}
+    \item \texttt{not be same as previous \{count\} passwords}
+    \item \texttt{not be changed within \{count\} hours of last change}
+    \item \texttt{not be same as other passwords in system}
+    \item \texttt{not contain a reference to a pop culture icon}
+    \item \texttt{not include your social security number or any subset of your social security number that is more than a single number}
+    \item \texttt{not include words that can be found in any dictionary regardless of language}
+    \item \texttt{be your date of birth in format ddmmyyyy}
+\end{itemize}

@@ -1,0 +1,6 @@
+1 10000
+4
+contain at least 4 symbols
+contain at most 30 symbols
+contain at most 0 symbols from "&'()*-<>[\]^~!$%/=?`+@#.,;:{}|
+contain at most 0 symbols from ABCDEFGHIJKLMNOPQRSTUVWXYZ

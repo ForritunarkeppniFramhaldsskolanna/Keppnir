@@ -1,0 +1,17 @@
+3 10000
+7
+contain at least 3 symbols
+contain at most 4 symbols
+contain at least 1 symbols from abcdefklmjiozxv
+contain at most 2 symbols from 20136487
+include += as a substring
+not contain 2 consecutive decrementing symbols
+not contain 2 consecutive incrementing symbols
+2
+start with longstringhereyo!
+end with longstringhereyo!
+4
+be an english word
+contain an english word
+not be in top 1337 most common passwords
+not contain 3 consecutive equal symbols

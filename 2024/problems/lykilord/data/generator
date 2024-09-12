@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+set -e
+PPATH="$(realpath ..)"
+DATA="$PPATH/data"
+MANUAL="$PPATH/manual_data"
+SECRET="$DATA/secret"
+
+# Cleanup
+if [ -d "$SECRET" ]; then
+    rm -r "$SECRET"
+fi
+
+# Prepare inputs
+mkdir secret
+for file in "$MANUAL"/*.in; do
+    cp "$file" "$SECRET/"
+done
+
+# Prepare answers
+pushd ../submissions/partially_accepted/full
+for input in "$SECRET"/*.in; do
+    output=${input%.in}.ans
+    echo "Solving ${input##*/}"
+    time pypy3 main.py < "$input" > "$output"
+done
+popd
+
+# testdata.yaml
+TESTDATA="$SECRET"/testdata.yaml
+echo "on_reject: continue" >> "$TESTDATA"
+echo "range: 0 95" >> "$TESTDATA"
+echo "grader_flags: sum accept_if_any_accepted" >> "$TESTDATA"

@@ -1,0 +1,55 @@
+\problemname{Enn Eitt EEEE Erfiði}
+\illustration{0.5}{ddi}{Image taken from \href{https://en.wikipedia.org/wiki/DDI}{wikipedia.com}}
+
+Arnar is going mad from all these abbreviations and shorthands at his job. Everything from DDI, i13n, o11y to LASIK. He can't read
+half a page without having to stop to look up all kinds of acronyms. Eventually he decides to do something about this and is going
+to collect some info on the complexity of his reading material to show how bad the problem has gotten. He is of course busy doing his
+job, so he gets you to calculate the complexity of all the acronyms in his data set. The complexity of an acronym is the number of acronyms
+you need to define to understand the meaning of the initial acronym. For example, the complexity of LASER (Light Amplified by Stimulated
+Emission of Radiation) has a complexity of $1$, since it does not refer to any further acronyms. The complexity of DDI is $5$ however as it
+refers to DNS, DHCP and IPAM, which in turn refers to IP.
+Note that acronyms can refer to themselves and to each other in a cyclic manner.
+
+\section*{Input}
+The first line of input contains an integer $1 \leq n \leq 30 \, 000$, the number of acronyms defined in the input.
+The next $n$ lines each contain one definition of an acronym. The line starts with the acronym being defined, and then there is a
+number $0 \leq k \leq n$, the number of words it refers to. The $k$ words then follow. Each of the words contains only upper case characters
+or only lower chase characters. The ones with only upper case characters are other acronyms, the others not. 
+All strings in the input are of length at most $20$ and contain only English characters. The total length of all strings in
+the input is at most $2 \, 000 \, 000$. All acronyms referred to in the input are defined somewhere in the input.
+
+\section*{Output}
+For each acronym that appears in the input, print its complexity on its own line, in the same order as the acronyms are defined in
+the input.
+
+\section*{Scoring}
+\begin{tabular}{|l|l|l|}
+\hline
+Group & Points & Constraints \\ \hline
+1     & 10     & Acronyms do not refer to other acronyms, $1 \leq n \leq 1 \, 000$. \\ \hline
+2     & 15     & All acronyms are defined before being referred to and no two different acronyms refer to the same acronym, $1 \leq n \leq 1 \, 000$. \\ \hline
+3     & 10     & All acronyms are defined before being referred to and no two different acronyms refer to the same acronym. \\ \hline
+4     & 40     & $1 \leq n \leq 1 \, 000$.  \\ \hline
+5     & 25     & No further constraints.  \\ \hline
+\end{tabular}
+
+\section*{Explanation of samples}
+
+In the first sample LASER, IP, DNS and DHCP do not refer to any other acronyms, so they only need to define themselves.
+Thus their complexities are all $1$.
+LASIK however refers to LASER, so you need to define both, so it has complexity $2$. 
+The same applies to IPAM referring to IP so its complexity is $2$.
+To understand DDI you need to define DNS, DHCP and IPAM.
+This does however not make the complexity $4$ but $5$ instead as you also need to define IP to understand IPAM.
+
+In the second sample YARA, DB and UNIX all have complexity $1$.
+Now some acronyms refer to themselves however.
+This does not affect their complexity though.
+To define PHP you only need to define PHP, as once its defined that solves the self-reference, so the complexity is $1$.
+Similarly for XAMPP you just need to define DB and PHP additionally, so the complexity is $3$.
+For the same reason GNU has complexity $3$.
+Next we see that HIRD and HURD refer to each other cyclically, so to understand one we need to understand the other.
+Together they refer to UNIX as well, so to understand one of them we need to define HIRD, HURD and UNIX.
+Thus they both have complexity $3$.
+Finally we see that GNULINUX refers to UNIX twice, but that doesn't affect how many definitions need to be made total.
+To define GNULINUX one needs to define GNULINUX, UNIX and GNU which gives a complexity of $3$.

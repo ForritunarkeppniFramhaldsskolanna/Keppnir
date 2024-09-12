@@ -1,0 +1,11 @@
+name: Ríkjafræði 2
+author: Atli Fannar Franklín
+source: Forritunarkeppni Framhaldsskólanna 2024
+rights_owner: Forritunarkeppni Framhaldsskólanna
+license: cc by-sa
+type: scoring
+grading:
+    show_test_data_groups: true
+limits:
+    time_multiplier: 1.5
+keywords: graph, data structures, amortized analysis, reachability, offline algorithm, dijkstra, bitmask

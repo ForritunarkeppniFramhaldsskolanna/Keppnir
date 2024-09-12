@@ -1,0 +1,57 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution bjartur_100.py
+
+compile random_generator.py
+compile edge_generator.py
+
+samplegroup
+limits max_n=100 multirepeat=True
+sample 1
+sample 2
+
+group GA 40
+limits max_n=100 multirepeat=False
+tc 1
+for i in {0..9}; do
+tc GA-$i random_generator 100 False
+done;
+tc GA-test-cyc edge_generator 0 check_cyc
+desc "Tests that first and last letters are not considered adjacent"
+
+group GB 40
+limits max_n=100 multirepeat=True
+include_group GA
+tc 2
+for i in {0..9}; do
+tc GB-$i random_generator 100 True
+done;
+tc GB-allrepeat-1 edge_generator 100 repeat
+desc "Input with a single character repeated"
+tc GB-allrepeat-2 edge_generator 100 repeat
+desc "Input with a single character repeated"
+tc GB-allrepeat-4 edge_generator 100 repeat
+desc "Input with a single character repeated"
+
+group GC 10
+limits max_n=100000 multirepeat=False
+include_group GA
+for i in {0..9}; do
+tc GC-$i random_generator 100000 False
+done;
+
+group GD 10
+limits max_n=100000 multirepeat=True
+include_group GB
+include_group GC
+for i in {0..9}; do
+tc GD-$i random_generator 100000 True
+done;
+tc GD-allrepeat-1 edge_generator 100000 repeat
+desc "Input with a single character repeated"
+tc GD-allrepeat-2 edge_generator 100000 repeat
+desc "Input with a single character repeated"
+tc GD-allrepeat-4 edge_generator 100000 repeat
+desc "Input with a single character repeated"

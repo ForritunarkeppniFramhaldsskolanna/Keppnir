@@ -1,0 +1,81 @@
+\problemname{Úllen Dúllen Doff 2}
+\illustration{0.4}{point}{Photo from \href{https://flickr.com/photos/pipstar/75570251}{flickr.com}}
+
+Lárus is a middle manager at a stellar company,
+He manages $n$ members of the staff, all of which are related to him except for one.
+
+When a new assignment pops up, Lárus is in charge of assigning it to a member of the staff.
+Lárus wants to minimise the work his relatives must do.
+However, he cannot simply pick the same person every time.
+
+To ensure people do not believe Lárus is practising nepotism, 
+He lines the people up in a circle and uses a mantra to pick a person at random for the assignment.
+First he picks a staff member at which to point and recites the first word.
+He then recites the rest of the mantra and points to the next staff member to the right for each word that he recites.
+
+The mantra is as follows:
+
+\begin{quote}
+    Úllen dúllen doff kikke lane koff koffe lane bikke bane úllen dúllen doff.
+\end{quote}
+
+How can Lárus line up the staff members so that his relatives do not get the assignment?
+
+\section*{Input}
+The first line of input contains one integer $n$, the number of staff members.
+Then $n$ lines follow, where each line contains one name.
+The first name is the staff member which is not related to Lárus.
+
+You may assume that each name is unique and consists of $1$ to $10$ lowercase English letters.
+
+\section*{Output}
+Output $n$ lines, where each line contains one name of a staff member and such that no name is repeated.
+Lárus will use the ordering you output to recite the mantra and pick the staff member receiving the assignment.
+If the ordering you output results in one of his relatives being picked, then your solution will be considered wrong.
+
+\section*{Scoring}
+The number of staff members, $n$, can range from $1$ to $20$.
+There exists a test group for each possible value of $n$ and each group is worth $5$ points.
+You must solve all the test cases in a test group to earn the points for that group.
+
+\section*{Explanation of samples}
+In the first sample, one possible solution is to iterate through the same order as the input, resulting in the following steps:
+
+\begin{itemize}
+    \item Úllen: Arnar
+    \item dúllen: Atli
+    \item doff: Bjarni
+    \item kikke: Bjarki
+    \item lane: Hannes
+    \item koff: Unnar
+    \item koffe: Arnar
+    \item lane: Atli
+    \item bikke: Bjarni
+    \item bane: Bjarki
+    \item úllen: Hannes
+    \item dúllen: Unnar
+    \item doff: Arnar
+\end{itemize}
+
+Since Arnar ends up being the final choice, the output is considered correct.
+
+In the second sample, one possible answer is to iterate through the following order:
+\begin{itemize}
+    \item Úllen: v
+    \item dúllen: x
+    \item doff: y
+    \item kikke: a
+    \item lane: b
+    \item koff: c
+    \item koffe: p
+    \item lane: q
+    \item bikke: r
+    \item bane: s
+    \item úllen: t
+    \item dúllen: u
+    \item doff: z
+\end{itemize}
+
+In the end, z is chosen and the output is considered correct.
+
+Note that many other correct outputs exist and that in the second sample we do not reach the final two values in the order given.

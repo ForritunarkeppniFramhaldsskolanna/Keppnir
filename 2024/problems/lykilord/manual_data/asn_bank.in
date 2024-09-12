@@ -1,0 +1,8 @@
+1 1000
+6
+contain at least 8 symbols
+contain at most 20 symbols
+contain at least 1 symbols from !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
+contain at least 1 symbols from abcdefghijklmnopqrstuvwxyz
+contain at least 1 symbols from ABCDEFGHIJKLMNOPQRSTUVWXYZ
+contain at least 1 symbols from 0123456789

@@ -1,0 +1,179 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution atli_100.py opt
+
+compile random_generator.py
+
+samplegroup
+limits joker=True high=True
+sample_manual 1
+sample_manual 2
+sample_manual 3
+
+group GA-lo-no 40
+limits joker=False high=False
+tc 1
+tc_manual ../manual_tests/m_ge_v.in
+desc "Ensures M > V in suits"
+tc_manual ../manual_tests/v_ge_b.in
+desc "Ensures V > B in suits"
+tc_manual ../manual_tests/b_ge_s.in
+desc "Ensures B > S in suits"
+tc_manual ../manual_tests/val_over_suit.in
+desc "Ensures the worst suit beats best suit if value is higher"
+tc_manual ../manual_tests/dupl.in
+desc "Tests handling of duplicate cards"
+tc_manual ../manual_tests/1_ge_3.in
+desc "Tests that rank 1 > rank 3"
+tc_manual ../manual_tests/3_ge_8.in
+desc "Tests that rank 3 > rank 8"
+tc_manual ../manual_tests/8_ge_9.in
+desc "Tests that rank 8 > rank 9"
+tc_manual ../manual_tests/9_ge_10.in
+desc "Tests that rank 9 > rank 10"
+tc_manual ../manual_tests/10_ge_11.in
+desc "Tests that rank 10 > rank 11"
+tc_manual ../manual_tests/11_ge_12.in
+desc "Tests that rank 11 > rank 12"
+tc_manual ../manual_tests/12_ge_16.in
+desc "Tests that rank 12 > rank 16"
+tc_manual ../manual_tests/16_ge_17.in
+desc "Tests that rank 16 > rank 17"
+tc_manual ../manual_tests/17_ge_18.in
+desc "Tests that rank 17 > rank 18"
+tc_manual ../manual_tests/18_ge_19.in
+desc "Tests that rank 18 > rank 19"
+tc_manual ../manual_tests/1_to_10.in
+desc "Tests parsing of low cards 1 to 10"
+tc_manual ../manual_tests/two_pair_ties_1.in
+desc "Tests tie handling edge cases"
+tc_manual ../manual_tests/two_pair_ties_2.in
+desc "Tests tie handling edge cases"
+tc_manual ../manual_tests/order_leftovers_1.in
+desc "Tests tie handling edge cases in non-pattern cards"
+tc_manual ../manual_tests/order_leftovers_2.in
+desc "Tests tie handling edge cases in non-pattern cards"
+tc_manual ../manual_tests/extreme_numberless.in
+desc "Tests that the extreme numberless cards are counted as numberless"
+tc_manual ../manual_tests/medium_numberless.in
+desc "Tests that the in between numberless cards are counted as numberless"
+for i in {01..20}; do
+    tc GA-random-$i random_generator False 0
+    desc "Random case with no high cards or jokers"
+done;
+
+group GB-hi-no 40
+limits joker=False high=True
+tc 2
+include_group GA-lo-no
+tc_manual ../manual_tests/1_ge_2.in
+desc "Tests that rank 1 > rank 2"
+tc_manual ../manual_tests/2_ge_3.in
+desc "Tests that rank 2 > rank 3"
+tc_manual ../manual_tests/3_ge_4.in
+desc "Tests that rank 3 > rank 4"
+tc_manual ../manual_tests/4_ge_5.in
+desc "Tests that rank 4 > rank 5"
+tc_manual ../manual_tests/5_ge_6.in
+desc "Tests that rank 5 > rank 6"
+tc_manual ../manual_tests/6_ge_7.in
+desc "Tests that rank 6 > rank 7"
+tc_manual ../manual_tests/7_ge_8.in
+desc "Tests that rank 7 > rank 8"
+tc_manual ../manual_tests/12_ge_13.in
+desc "Tests that rank 12 > rank 13"
+tc_manual ../manual_tests/13_ge_14.in
+desc "Tests that rank 13 > rank 14"
+tc_manual ../manual_tests/14_ge_15.in
+desc "Tests that rank 14 > rank 15"
+tc_manual ../manual_tests/15_ge_16.in
+desc "Tests that rank 15 > rank 16"
+tc_manual ../manual_tests/19_ge_20.in
+desc "Tests that rank 19 > rank 20"
+tc_manual ../manual_tests/o_to_ix.in
+desc "Tests parsing of high cards O through IX"
+tc_manual ../manual_tests/x_to_xix.in
+desc "Tests parsing of high cards X through XIX"
+tc_manual ../manual_tests/no_hi_to_low_row.in
+desc "Tests that rows can't go from K to O or I"
+tc_manual ../manual_tests/take_best_sum_house_1.in
+desc "Tests tie breaking edge cases"
+tc_manual ../manual_tests/take_best_sum_house_2.in
+desc "Tests tie breaking edge cases"
+tc_manual ../manual_tests/high_row_not_row.in
+desc "Tests that high rows are treated as 5 high, not a row"
+tc_manual ../manual_tests/four_same_high.in
+desc "Tests that highs can create four equal hand"
+tc_manual ../manual_tests/three_same_high.in
+desc "Tests that highs can create three equal hand and full house"
+tc_manual ../manual_tests/kravberg.in
+desc "Tests that high pair + low pair works correctly with face cards"
+for i in {01..20}; do
+    tc GB-random-$i random_generator True 0
+    desc "Random case with high cards but no jokers"
+done;
+
+group GC-hi-jk 20
+limits joker=True high=True
+include_group GB-hi-no
+tc 3
+tc_manual ../manual_tests/max_jokers_1.in
+desc "Tests cases with 4-5 jokers"
+tc_manual ../manual_tests/max_jokers_2.in
+desc "Tests cases with 4-5 jokers"
+tc_manual ../manual_tests/max_jokers_3.in
+desc "Tests cases with 4-5 jokers"
+tc_manual ../manual_tests/max_jokers_4.in
+desc "Tests cases with 4-5 jokers"
+tc_manual ../manual_tests/max_jokers_5.in
+desc "Tests cases with 4-5 jokers"
+tc_manual ../manual_tests/max_jokers_6.in
+desc "Tests cases with 4-5 jokers"
+tc_manual ../manual_tests/max_jokers_7.in
+desc "Tests cases with 4-5 jokers"
+tc_manual ../manual_tests/max_jokers_8.in
+desc "Tests cases with 4-5 jokers"
+tc_manual ../manual_tests/j3_r1_1.in
+desc "Tests rank 1 result with 3 jokers"
+tc_manual ../manual_tests/j3_r1_2.in
+desc "Tests rank 1 result with 3 jokers"
+tc_manual ../manual_tests/j3_r2_1.in
+desc "Tests rank 2 result with 3 jokers"
+tc_manual ../manual_tests/j3_r2_2.in
+desc "Tests rank 2 result with 3 jokers"
+tc_manual ../manual_tests/j3_r2_3.in
+desc "Tests rank 2 result with 3 jokers"
+tc_manual ../manual_tests/j3_r3_1.in
+desc "Tests rank 3 result with 3 jokers"
+tc_manual ../manual_tests/j3_r3_2.in
+desc "Tests rank 3 result with 3 jokers"
+tc_manual ../manual_tests/j3_r3_3.in
+desc "Tests rank 3 result with 3 jokers"
+tc_manual ../manual_tests/j3_r3_4.in
+desc "Tests rank 3 result with 3 jokers"
+tc_manual ../manual_tests/j3_r3_5.in
+desc "Tests rank 3 result with 3 jokers"
+tc_manual ../manual_tests/j3_r3_6.in
+desc "Tests rank 3 result with 3 jokers"
+tc_manual ../manual_tests/j3_r4_1.in
+desc "Tests rank 4 result with 3 jokers"
+tc_manual ../manual_tests/j3_r4_2.in
+desc "Tests rank 4 result with 3 jokers"
+tc_manual ../manual_tests/j3_r5_1.in
+desc "Tests rank 5 result with 3 jokers"
+tc_manual ../manual_tests/j3_r5_2.in
+desc "Tests rank 5 result with 3 jokers"
+tc_manual ../manual_tests/j3_r5_3.in
+desc "Tests rank 5 result with 3 jokers"
+tc_manual ../manual_tests/j2_eq.in
+desc "Tests that program can make two jokers equal"
+for i in {01..10}; do
+    tc GC-random-$i random_generator True 1
+    desc "Random case with high cards and jokers"
+done;
+for i in {11..20}; do
+    tc GC-random-$i random_generator True 2
+    desc "Random case with high cards and jokers"
+done;

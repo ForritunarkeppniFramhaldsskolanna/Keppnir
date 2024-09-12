@@ -1,0 +1,40 @@
+\problemname{Töskuröðun}
+\illustration{0.5}{luggage}{Mynd fengin af \href{https://commons.wikimedia.org/wiki/File:Spiral\_baggage\_claim\_-\_Flickr\_-\_vitroid.jpg}{commons.wikimedia.org}}
+
+Eins og vanalega er Atli að vesenast með að ferðast út á keppni, og er með farangurstösku með sér. Frekar en að ferðast með lítið tekur hann tóma
+tösku bara svo hann geti verslast upp í útlöndum. Oft enda hlutirnir því þannig að hann þurfi að standa og bíða eftir farangrinum sínum þegar út
+er komið, stundum þurfa þá ferðafélagar hans sem eru ekki með innritaðan farangur að bíða eftir honum þar að auki. Til að reyna koma í veg fyrir
+að þetta gerist næst, þá ætlar Atli að innrita farangurinn sinn á sem besta tíma. En hvenær skal innrita töskuna til að hún komi fyrst út á áfangastað?
+
+Fyrst fara töskur úr innritun í stóran stafla þar sem þær eru geymdar þar til þær fara út í vél. Fyrstu töskurnar lenda neðst, svo fyrsta taskan
+fer síðast út og síðasta taskan fer fyrst út. Svona endurraðast töskurnar hvert sinn sem þær eru settar í stafla. 
+
+Næst er þeim hlaðið á kerrur, fyrstu $K_a$ töskurnar eru settar í einn stafla á fyrstu kerruna, næstu $K_a$ í stafla á aðra kerruna og svo framvegis. 
+Ef fjöldi taska er ekki margfeldi af $K_a$ fara einfaldlega aðeins færri töskur á síðustu kerruna. Svona endurraðast töskurnar hvert sinn þegar
+þeim er hlaðið á kerrur, þar sem töskurnar eru teknar frá toppi til botns á fyrstu kerru, svo af næstu kerru og svo framvegis.
+
+Næst er þeim hlaðið í einn stafla í flugvélinni. Ef það eru millilendingar er þeim hlaðið á kerrur með $K_i$ töskur á hverri kerru áður en þeim
+er hlaðið í einn stafla í nýju flugvélinni í $i$-tu millilendingunni. Loks þegar komið er á áfangastað er þeim hlaðið
+á kerrur með $K_b$ töskur á hverri kerru, áður en þeim er hent á færibandið til að farþegar geti sótt þær.
+
+Atli er búinn að rannsaka alla flugvellina fyrirfram, svo hann veit hvað gildin $K_a, K_i, K_b$ eru fyrir öll flugin, ásamt heildarfjölda taska
+$n$. Ef við númerum innritanirnar frá $1$ til $n$, númer hvað ætti hann að vera í röðinni til að taskan hans komi fyrst út á hinum endanum?
+
+\section*{Inntak}
+Fyrsta línan inniheldur tvær heiltölur $n$ og $m$, þar sem $n$ er fjöldi taska og $m$ er fjöldi millilendinga. $n$ er alltaf jákvæð.
+Næsta lína inniheldur tvær heiltölur $K_a$ og $K_b$, með $1 \leq K_a, K_b \leq 10^{18}$, stærð kerranna á upphafs- og lokaflugvelli.
+Loks ef $m \neq 0$ fylgir ein lína með $m$ heiltölum $K_i$, með $1 \leq K_i \leq 10^{18}$, stærð kerranna á hverjum flugvelli þar sem er millilent,
+í þeirri röð sem millilent er á þeim.
+
+\section*{Úttak}
+Prentið númer hvað í röðinni Atli ætti að innrita sig til að taskan komi fyrst á færibandið á áfangastað.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 25   & $m = 0$, $1 \leq n \leq 10$, $K_a = K_b = n$. \\ \hline
+2     & 25   & $m = 0$, $1 \leq n \leq 1\,000$. \\ \hline
+3     & 25   & $0 \leq m \leq 1\,000$, $1 \leq n \leq 1\,000$. \\ \hline
+4     & 25   & $0 \leq m \leq 100\,000$, $1 \leq n \leq 10^{18}$ \\ \hline
+\end{tabular}

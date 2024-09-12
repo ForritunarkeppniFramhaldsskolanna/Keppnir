@@ -1,0 +1,39 @@
+\problemname{Stysti skógarleiðangurinn}
+\illustration{0.4}{map}{Image from \href{https://leagueoflegends.fandom.com/wiki/Jungling?file=Jungle_camps_SR.jpg}{leagueoflegends.fandom.com}}
+
+Arnar and Sammi are avid League of Legends players and they have been playing the game for some time now.
+Though many do not believe it, League of Legends is a team game and thus it is very important to help your teammates.
+Since Sammi plays the role of a jungler, he has the most important job when helping out his team.
+The goal of a jungler is to slay jungle monsters and visiting their teammates' lanes, sending the enemy players back to their fountain.
+Arnar is, on the other hand, an Attack Damage Carry and loves nothing more than to send the enemies back to their fountain, thus he asks Sammi to come visit him as soon as possible.
+Sammi has other priorities though. He prefers slaying all the jungle monsters before visiting a single lane,
+However he does not want them to wait for too long and thus he always takes the fastest path to slay all the jungle monsters.
+
+The developers of the game have made this process more difficult, as they have started changing the jungle paths, and therefore Arnar has no idea how long Sammi will take to clear the jungle of all monsters.
+Now Sammi is too busy taking out all the jungle monsters and Arnar is busy keeping himself out of his own fountain.
+Therefore, Arnar asks you for some help in figuring out how long it will take Sammi to clear all his jungle monsters, so that he knows how long he must wait for Sammi to come help him.
+
+Sammi always gets help with the first jungle monster and thus always starts at the same place.
+In addition, Sammi can sometimes use his summoner spell, smite. When Sammi uses a smite on a jungle monsters he takes it out instantly and thus does not need to stop to take it out with his normal powers.
+
+\section*{Input}
+The first line of the input contains three integers $n, m$ and $s$. Where $n$ is the number of jungle monsters, $m$ the number of paths
+and $s$ the number of smites Sammi can use.
+Next follows one line with $n$ integers, where each integer $1 \leq x_i \leq 10^4$ is the time it takes to take out monster number $i$.
+Lastly $m$ lines follow, where each line contains three integers $u, v$ and $t$. Which means there is a path between monster $u$ and monster $v$ that takes $1\leq t \leq 10^4$ amount of time to traverse.
+
+\section*{Output}
+Write the shortest time that it takes Sammi to take out all the jungle monsters, if he starts at monster number $1$.
+
+\section*{Scoring}
+\begin{tabular}{|l|l|l|}
+\hline
+Group & Points & Constraints \\ \hline
+1     & 15   & $n = 1$, $0 \leq s \leq 1$ \\ \hline
+2     & 15   & $n = 2$, $0 \leq s \leq 2$ \\ \hline
+3     & 20   & $1 \leq n \leq 8$, $s = 0$ \\ \hline
+4     & 20   & $1 \leq n \leq 8$, $1 \leq s \leq n$ \\ \hline
+5     & 15   & $1 \leq n \leq 16$, $s = 0$ \\ \hline
+6     & 15   & $1 \leq n \leq 16$, $1 \leq s \leq n$ \\ \hline
+\end{tabular}
+

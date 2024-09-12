@@ -1,0 +1,127 @@
+\problemname{IPAM}
+\illustration{0.4}{MenandMice_Amper}{Micetro er hugbúnaðurinn sem Eggert og Indriði þróa hjá Men \& Mice.}
+
+Indriði og Eggert eru sérfræðingar í nafnaþjónum.
+Þeir skrifuðu hugbúnað saman sem styður umsjón nafnaþjóna.
+Hugbúnaðurinn getur meira að segja haldið utan um bendilfærslur.
+
+Núna vilja þeir hanna hugbúnað fyrir netkerfaumsjón.
+Í netkerfum er notast við IP tölur.
+Kerfisstjórarnir sem stjórna þessum netkerfum vilja flokka IP tölur á marga mismunandi vegu.
+Til dæmis er frekar algengt að flokka eftir staðsetningu, hvort sem það sé land, borg, heimilisfang, herbergi, eða hnit.
+
+Hugbúnaðurinn þarf því að geta hengt eiginleika við IP tölur.
+Indriði og Eggert komast að niðurstöðu um hönnun.
+Þeir eru báðir á leiðinni í langt frí en skilja hönnunarskjalið eftir í hæfu höndunum þínum.
+
+Til að sjá um flokkun er notast við sérsníðanlega \emph{eiginleika}.
+Eiginleikar eru hengdir á IP tölur með nafni eiginleikans og gildi eiginleikans.
+
+Notendur skulu hafa aðgang að aðgerð til að skapa skilgreiningu á eiginleika.
+Þar geta notendur gefið upp nafn eiginleika og einnig sjálfgefið gildi sem fylgir eiginleikanum.
+Það þýðir að ef ekki hefur verið stillt gildi fyrir þennan eiginleika á IP tölu, mun sjálfgefna gildið vera hengt við hana.
+Kalla má aftur í þessa aðgerð fyrir skilgreinda eiginleika til að uppfæra sjálfgefna gildið.
+
+Á sama hátt hafa notendur aðgang að aðgerð til að eyða skilgreiningu á eiginleika.
+Sú aðgerð tekur nafn eiginleika og hreinsar út skilgreininguna á þeim eiginleika.
+Það verður til þess að allar IP tölur missa eiginleikann með þessu nafni.
+
+Notendur skulu hafa aðgang að aðgerð sem stillir eiginleika á IP tölur.
+Þar gefur notandi samfellt bil af IP tölum, nafn eiginleika og gildi fyrir eiginleikann.
+Eiginleikinn er þá stilltur á sérhverri IP tölu innan bilsins.
+
+Notendur skulu hafa aðgang að aðgerð sem sækir eiginleika á IP tölu.
+Þar geta notendur valið eina IP tölu og fengið alla eiginleika hennar.
+
+Eggert og Indriði koma úr fríinu sínu á morgun.
+Þess vegna þarft þú að klára útfærsluna fyrir lok vinnudagsins í dag!
+
+\section*{Inntak}
+Fyrsta línan af inntaki inniheldur eina heiltölu $q$, fjölda aðgerða sem verða framkvæmdar.
+
+Næst fylgja $q$ aðgerðir þar sem hver aðgerð er ein lína.
+Aðgerðirnar eru:
+\begin{itemize}
+    \item Skilgreina, á forminu \texttt{"+ k v"},
+        þar sem \texttt{k} táknar nafn eiginleikans og \texttt{v} táknar sjálfgefna gildið fyrir skilgreininguna.
+    \item Eyða, á forminu \texttt{"- k"}, þar sem \texttt{k} táknar nafn eiginleikans sem skal eyða.
+    \item Stilla, á forminu \texttt{"= a b k v"}, þar sem \texttt{a} og \texttt{b} tákna upphafs og enda IP tölur bilsins, \texttt{k} táknar nafn eiginleikans og \texttt{v} táknar gildi eiginleikans sem skal stilla.
+    \item Sækja, á forminu \texttt{"? x"}, þar sem \texttt{x} táknar IP töluna sem skal sækja allar upplýsingar fyrir.
+\end{itemize}
+
+Þú mátt gera ráð fyrir eftirfarandi:
+\begin{itemize}
+    \item Sérhvert nafn eiginleika er strengur af minnsta lagi $1$ og mesta lagi $10$ enskum bókstöfum, tölustöfum, niðurstrikum og bandstrikum.
+    \item Sérhvert gildi eiginleika er strengur af minnsta lagi $1$ og mesta lagi $10$ enskum bókstöfum, tölustöfum, niðurstrikum og bandstrikum.
+    \item Einungis aðgerðir sem búa til skilgreiningar á eiginleikum munu vísa í nafn eiginleika sem er ekki þegar skilgreindur á þeim tímapunkti.
+    \item Sérhver IP tala er annaðhvort lögleg IPv4 tala eða lögleg IPv6 tala.
+\end{itemize}
+
+Að neðan má sjá frekari útskýringar á formi IP talna.
+
+\subsection*{IPv4}
+IPv4 tölur samanstanda af fjórum pörtum.
+Hver partur er ein heiltala á bilinu $0$ til $255$.
+Partarnir eru aðskildir með punkti.
+
+Dæmi um gildar IPv4 tölur
+\begin{itemize}
+	\item \texttt{10.100.80.13}
+	\item \texttt{255.255.255.255}
+	\item \texttt{255.160.134.0}
+\end{itemize}
+
+Dæmi um ógildar IPv4 tölur
+\begin{itemize}
+	\item \texttt{300.1.35.28}
+	\item \texttt{255.255.255.254.1}
+	\item \texttt{127,0,0,1}
+\end{itemize}
+
+
+\subsection*{IPv6}
+IPv6 tölur samanstanda af átta pörtum.
+Hver partur er fjögurra stafa sextándakerfistala.
+Sextándakerfistölur eru táknaðar með tölustöfunum $0$ til $9$ og bókstöfunum $a$ til $f$.
+Partarnir eru aðskildir með tvípunkti.
+Í hverjum parti fyrir sig má sleppa að skrifa inn ofauknum núllum framan af tölunni.
+Ef það eru tveir eða fleiri samliggjandi partar sem innihalda bara $0$ þá er hægt að stytta þá út með því að skrifa tvo tvípunkta í staðinn.
+Þetta er einungis hægt að gera á einum stað í IP tölunni.
+
+Dæmi um gildar IPv6 tölur eru:
+\begin{itemize}
+	\item \texttt{ffff:dead:1337:beef:4321:f33d:2f92:3419}
+	\item \texttt{2001:db8:0:0:0:ff00:42:8329}
+	\item \texttt{::1}
+    \item \texttt{abcd:1234::bad:dad}
+\end{itemize}
+
+Dæmi um ógildar IPv6 tölur eru:
+\begin{itemize}
+	\item \texttt{0123:4567:89ab:cdef:ghij:klmn:opqr:stuv}
+	\item \texttt{ffff:1234::f6b90::abcd}
+	\item \texttt{2001:db8:0:0:0:ff00:42:8329:1234}
+    \item \texttt{1::3::f}
+\end{itemize}
+
+Athugið að IPv4 tölur má einnig rita sem IPv6 tölur.
+Það er gert með því að breyta pörtum IPv4 tölunnar í sextándakerfið
+og skrifa partana með \texttt{::ffff:} sem forskeyti.
+Til dæmis má skrifa \texttt{12.34.56.78} sem \texttt{::ffff:c22:384e}.
+
+\section*{Úttak}
+Fyrir hverja aðgerð sem sækir eiginleika skaltu skrifa út fyrst eina línu með einni heiltölu $k$, fjölda eiginleika IP tölunnar.
+Næst skaltu skrifa út $k$ línur, hver þeirra skal lýsa einum eiginleika með nafni og gildi, aðskilin með bili.
+Skrifa skal út eiginleikana í stafrófsröð út frá nöfnum þeirra.
+Gefið er að lausnin muni aldrei þurfa prenta meir en $300 \, 000$ eiginleika.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 30   & $1 \leq q \leq 1\,000$, einungis IPv4 tölur sem byrja á \texttt{"10.0.0."}. \\ \hline
+2     & 25   & $1 \leq q \leq 1\,000$, einungis IPv4 tölur sem byrja á \texttt{"10.0."}. \\ \hline
+3     & 20   & $1 \leq q \leq 1\,000$, einungis IPv4 tölur sem byrja á \texttt{"10."}. \\ \hline
+4     & 15   & $1 \leq q \leq 1\,000$, einungis IPv4 tölur. \\ \hline
+5     & 10   & $1 \leq q \leq 10\,000$. \\ \hline
+\end{tabular}

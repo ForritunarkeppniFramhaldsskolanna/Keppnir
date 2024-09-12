@@ -1,0 +1,41 @@
+\problemname{Töskuröðun}
+\illustration{0.5}{luggage}{Image from \href{https://commons.wikimedia.org/wiki/File:Spiral\_baggage\_claim\_-\_Flickr\_-\_vitroid.jpg}{commons.wikimedia.org}}
+
+As usual, Atli is travelling to yet another contest and has luggage with him. Rather than travelling light, he takes a near empty case with him so he can shop
+cheaply abroad. Often this results in him having to stand and wait for his luggage at the drop off when he is at his destination, so sometimes the
+people travelling with him who only have carry-on have to wait for him as well. In an effort to prevent this Atli intends to check in his luggage
+at the optimal time next time. When should he check in his luggage for it to arrive as soon as possible?
+
+The bags first go from check-in to a large stack where they are stored until they go to the aircraft. The first bags end up at the bottom, so the
+first bag to arrive goes out last and the last bag to arrive goes out first. The bag order rearranges like this each time they are put in a stack.
+
+Next they are put on carts, the first $K_a$ bags are put in a stack on the first cart, the next $K_a$ in a stack on the second cart and so on.
+If the number of bags is not a multiple of $K_a$ there will simply be fewer bags on the last cart. The bag order rearranges like this each time
+they are put on carts, where the bags are then taken top to bottom from the first cart, then from the second and so on when they travel on.
+
+Next the bags are put in a stack in the aircraft. If there are connecting flights the bags are put on carts with $K_i$ bags each and then in 
+a stack in the new aircraft at the $i$-th connection. Finally at the destination they are put on carts with $K_b$ bags each,
+before they are then finally tossed onto the luggage drop off in their current order so the passengers can collect them.
+
+Atli has researched all the airports beforehand, so he knows what the values $K_a, K_i, K_b$ are for all the flights, along with the total
+number of bags $n$. If we number the check-ins from $1$ to $n$, number what should he be in the order to make sure his bag is dropped off
+first at the destination?
+
+\section*{Input}
+The first line contains two integers $n$ and $m$, where $n$ is the number of bags and $m$ is the number of connecting flights.
+$n$ is always positive. The second line contains two integers $K_a$ and $K_b$, with $1 \leq K_a, K_b \leq 10^{18}$, the sizes of the carts
+at the departure and destination airports. Finally, if $m \neq 0$ there will be another line with $m$ integers $K_i$, with $1 \leq K_i \leq 10^{18}$,
+the sizes of the carts on each airport with a connecting flight, given in the order of travel.
+
+\section*{Output}
+Print the number that corresponds to where Atli should be in the check-ins such that his bag is dropped off first at the destination.
+
+\section*{Scoring}
+\begin{tabular}{|l|l|l|}
+\hline
+Group & Points & Constraints \\ \hline
+1     & 25   & $m = 0$, $1 \leq n \leq 10$, $K_a = K_b = n$. \\ \hline
+2     & 25   & $m = 0$, $1 \leq n \leq 1\,000$. \\ \hline
+3     & 25   & $0 \leq m \leq 1\,000$, $1 \leq n \leq 1\,000$. \\ \hline
+4     & 25   & $0 \leq m \leq 100\,000$, $1 \leq n \leq 10^{18}$. \\ \hline
+\end{tabular}

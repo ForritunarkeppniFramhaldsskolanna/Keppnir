@@ -1,0 +1,58 @@
+\problemname{Flugvallakóðar}
+\illustration{0.5}{airport}{Image from \href{https://flic.kr/p/4x29UW}{flickr.com}}
+
+Airports are known by two types of codes: IATA and ICAO.
+As an example the airport in Keflavík has the IATA code KEF and the ICAO code BIKF.
+
+In Absurdistan however there are no international standards in use, 
+everything has to be domestic and be originally made in Absurdistan if it is to be used in Absurdistan.
+
+Thus, when the first airport in Absurdistan was built in the capital city, Sillysocks, 
+the system of codes for airports was decided by the parliament of Absurdistan.
+It consists of the following rules:
+
+\begin{itemize}
+    \item The code is always 3 letters.
+    \item The first 3 letters of the name of the city are used, unless some other airport already has that code.
+    \item If that code is already taken, the available code appearing first in the city name is chosen. 
+        The letters do not have to be adjacent in the name, but they have to be in the same order in the name and in the code.
+    \item If there are several options, the code with the first letter appearing earliest in the city name is chosen.
+    \item If two such options have the first letter in the same place, the one with the second letter appearing earliest is chosen.
+    \item Finally if two such options have the first two letters in the same place, the one with the third letter appearing earliest is chosen.
+\end{itemize}
+
+This standard is called AANS, or Absurdistan Airport National Standard.
+You are given access to a database of airports and need to determine the AANS code for each airport.
+
+Upper and lower case letters are not distinguished as the AANS codes must always be upper case.
+You must make sure to respect this in the output.
+
+As an example the airport at Sillysocks in Absurdistan would have the AANS code \texttt{SIL}. 
+But if they were then to build another airport at the town Silverstone, it would get the AANS code \texttt{SIV},
+as \texttt{SIL} is already in use and V comes after L in Silverstone.
+
+\section*{Input}
+The first line of the input contains a single positive integer $n$, the number of airports in Absurdistan.
+The next $n$ lines each contain the names of the airport towns. 
+The names contain only English lower and upper case letters.
+Each name is at least $3$ letters and the total number of letters in the input is at most $2 \, 000 \, 000$.
+
+Note that the input is given in the order the airports were built,
+so an airport appearing earlier in the input has priority over the later one in choosing a code.
+
+\section*{Output}
+For each airport, print its AANS code.
+If there is no valid AANS code possible, that means the airport was never built, so instead you should print \texttt{":("}.
+
+\section*{Scoring}
+\begin{tabular}{|l|l|l|}
+\hline
+Group & Points & Constraints \\ \hline
+1     & 10   & Each airport name is at most $200$ letters, $n = 1$. \\ \hline
+2     & 20   & Each airport name is at most $200$ letters, $1 \leq n \leq 100$, if a code exists it uses the first 3 letters of the name. \\ \hline
+3     & 20   & Each airport name is at most $200$ letters, $1 \leq n \leq 100$, if a code exists it uses the first 2 letters of the name. \\ \hline
+4     & 20   & Each airport name is at most $200$ letters, $1 \leq n \leq 100$, if a code exists it uses the first letter of the name. \\ \hline
+5     & 20   & Each airport name is at most $200$ letters, $1 \leq n \leq 100$. \\ \hline
+6     & 5    & Each airport name is at most $200$ letters, $1 \leq n \leq 10 \, 000$. \\ \hline
+7     & 5    & No further constraints. \\ \hline
+\end{tabular}

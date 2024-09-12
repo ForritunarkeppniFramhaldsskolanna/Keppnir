@@ -1,0 +1,8 @@
+1 10
+6
+contain at least 3 symbols
+contain at most 6 symbols
+contain at least 1 symbols from .,:;!?
+contain at most 0 symbols from "#$%&'()*+-/<=>@[\]^_`{|}~
+contain at least 2 symbols from ABCDEFGHIJKLMNOPQRSTUVWXYZ
+not contain 2 consecutive equal symbols

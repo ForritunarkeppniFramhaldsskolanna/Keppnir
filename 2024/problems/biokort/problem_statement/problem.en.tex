@@ -1,0 +1,58 @@
+\problemname{Bíókort}
+\illustration{0.4}{kort}{Arnar's last cinema card.}
+
+Many years ago the Bíótríó was founded.
+The original members were Arnar, Hannes and Sara.
+The goal of the group was simple: Go to the cinema frequently and cheaply.
+They managed to go upwards of a hundred times per year, sometimes even more often.
+A few years after the founding Halldór was added to the group, making it The Movie Quartet instead.
+
+But how did they manage to go to the cinema so often without going broke?
+The answer is the cinema card!
+Smárabíó once offered a year long card that you paid for once and could then use on each movie
+exactly once. 
+The card was not bound to a specific individual, you could share a cinema card between many people.
+By buying cinema cards when they were on sale,
+the group managed to pay only $240$ ISK for each ticket on average one year.
+Unfortunately this offer no longer exists.
+
+The Movie Quartet did not like skipping out on movies, but sometimes they brought others with them.
+Each year they looked into what people they could bring with them to the movies.
+They even knew exactly how popular each movie would be, that is to say,
+how many group members would be going to each movie.
+
+How did they minimise the cost of the tickets over the year?
+
+\section*{Input}
+The first line of input contains three integers $n$,
+the number of movies in cinemas this year,
+$m$, the price of a single use ticket and $k$,
+the price of a cinema card for the entire year,
+both given in ISK.
+Finally there are $n$ lines each describing a single movie.
+Each movie is given as its name and its popularity, separated by a space.
+
+Each movie's name is unique and is at least $1$ and at most $20$ English letters or digits.
+It is always guaranteed that $0 \leq m \leq 100\,000$ and $0 \leq k \leq 10\,000\,000$.
+Each popularity is at least $0$ and at most $10^6$.
+
+\section*{Output}
+Print the number of cinema cards they should buy and the total cost of seeing all the movies
+over the course of the year if they choose the number of cards optimally, to minimise cost, in ISK.
+If there are many correct answers you may print any one of them.
+Note that there are only $10^6$ cinema cards minted each year, so that's the maximum amount that
+can be purchased.
+
+\section*{Scoring}
+\begin{tabular}{|l|l|l|}
+\hline
+Group & Points & Constraints \\ \hline
+1     & 10   & $1 \leq n \leq 1\,000$, $m = 0$, $k = 0$. \\ \hline
+2     & 10   & $1 \leq n \leq 1\,000$, $m = 0$. \\ \hline
+3     & 10   & $1 \leq n \leq 1\,000$, $k = 0$. \\ \hline
+4     & 10   & $1 \leq n \leq 1\,000$. \\ \hline
+5     & 10   & $1 \leq n \leq 200\,000$, all movies are equally popular. \\ \hline
+6     & 10   & $1 \leq n \leq 200\,000$, each popularity is at least $0$ and at most $999$. \\ \hline
+7     & 20   & $1 \leq n \leq 200\,000$, at most $1\,000$ different popularities. \\ \hline
+8     & 20   & $1 \leq n \leq 200\,000$. \\ \hline
+\end{tabular}

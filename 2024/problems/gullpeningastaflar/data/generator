@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+mkdir -p secret
+cp sample/testdata.yaml secret/testdata.yaml
+./generator.py

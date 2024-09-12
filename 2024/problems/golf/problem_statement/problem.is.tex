@@ -1,0 +1,59 @@
+\problemname{Golf}
+\illustration{0.5}{golf}{Mynd fengin af \href{https://commons.wikimedia.org/wiki/File:Bruges\_Public\_Library\_Manuscript\_251\_folio\_149r\_detail\_golf.jpg}{commons.wikimedia.org}}
+
+Meðlimir Keppnisforritunarfélags Íslands ákváðu að skrá sig í svokallaða Kóða Golf keppni.
+Þeir héldu að þetta væri keppni þar sem ætti að forrita sem stystar lausnir á keppnisforritunarverkefnum,
+en því miður var sú ekki raunin!
+Þetta var golfmót fyrir forritara í staðinn!
+Fyrst þeir voru þegar skráðir ákváðu meðlimir félagsins margir hverjir að taka samt sem áður þátt.
+En þeir komu ekki með blað og blýant til að halda utan um stigin,
+heldur komu þeir bara með fartölvur til að forrita í.
+Lausnin hlýtur því að vera ljós, það þarf að útbúa forrit sem heldur utan um golfstigin!
+
+Allir þátttakendur byrja á pari og á hverri holu þarf þátttakandi einhvern fjölda högga undir eða yfir pari.
+Par er fyrirfram ákveðinn fjöldi höggva sem skipuleggjendur meta að hæfur leikmaður þurfi til að ljúka holu.
+Stigin eru ávallt miðað við par og eru lögð saman.
+Það þýðir að $0$ táknar par og breytir ekki stigum þátttakanda.
+Jákvæðar tölur eru niðurstöður yfir pari, svo $2$ táknar tveimur yfir pari og hækkar stig þátttakanda um $2$.
+Neikvæðar tölur eru niðurstöður undir pari, svo $-3$ táknar þremur undir pari og lækkar stig þátttakanda um $3$.
+Ef einhver er tveimur undir pari, svo einum yfir og loks á pari eru stigin þeirra $-1$.
+Markmiðið er að vera með sem fæst högg, svo því lægri stig því betra.
+
+\section*{Inntak}
+Fyrsta línan inniheldur tvær jákvæðar heiltölur $n, q$ þar sem $n$ er fjöldi þátttakenda og $q$
+er fjöldi fyrirspurna.
+Næst fylgir ein lína með $n$ nöfnum, aðskildum með bilum, nöfn þátttakendanna. 
+Engir tveir ólíkir þátttakendur hafa sama nafn.
+Næst koma $q$ fyrirspurnir, hver á sinni línu.
+Hver þeirra byrjar á \texttt{!} eða \texttt{?}. 
+Ef línan byrjar á \texttt{?} fylgir næst nafn þátttakanda.
+Þá skal prenta tvær tölur á einni línu,
+hvaða sæti þeir eru í og hvað þeir eru langt frá pari.
+Ef línan byrjar á \texttt{!} er verið að gefa niðurstöður næstu holu.
+Á eftir \texttt{!} kemur jákvæð heiltala $k$, fjöldi þátttakenda sem voru ekki á pari.
+Loks koma svo $k$ ólík nöfn og stig á línunni,
+þeir þátttakendur sem voru ekki á pari og hvað þeir voru langt frá pari.
+Til dæmis myndi \texttt{! 2 Atli 3 Arnar -3} tákna að allir nema Arnar og Atli voru á pari,
+og að Atli var þremur yfir og Arnar þremur undir.
+
+Öll nöfn innihalda bara enska há- og lágstafi. Hvert nafn er mest $20$ stafir.
+Samtals fjöldi stafa í inntaki er mest $1 \, 000 \, 000$.
+Öll stig gefin í inntaki eru minnst $-10^9$ og mest $10^9$.
+
+\section*{Úttak}
+Fyrir hverja línu í inntakinu sem byrjar á \texttt{?} skal prenta hvaða sæti sá
+þátttakandi er í og hvað þeir eru langt frá pari á einni línu.
+Ef það eru fleiri en einn þátttakandi með jafn mörg stig teljast þeir allir vera í efsta
+sameiginlega sætinu.
+Til dæmis ef annað til fimmta sæti er sameiginlegt teljast þeir allir vera í öðru sæti.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 20   & $1 \leq n, q \leq 100$, allir eru á pari. \\ \hline
+2     & 20   & $n = 1$, $1 \leq q \leq 100$. \\ \hline
+3     & 20   & $1 \leq n, q \leq 100$, í öllum \texttt{?} fyrirspurnum eru engin jafntefli. \\ \hline
+4     & 30   & $1 \leq n, q \leq 100$. \\ \hline
+5     & 10   & $1 \leq n, q \leq 100 \, 000$. \\ \hline
+\end{tabular}

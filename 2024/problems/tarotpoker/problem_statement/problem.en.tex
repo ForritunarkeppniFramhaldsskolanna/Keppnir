@@ -1,0 +1,99 @@
+\problemname{Tarot Póker}
+\illustration{0.5}{card}{Image from \href{https://commons.wikimedia.org/wiki/File:Tarot\_Card\_-\_The\_High\_Priest.jpg}{commons.wikimedia.org}}
+
+Konráð was invited to play poker with KFFÍ (Competitive Programming Society of Iceland),
+but Atli had of course long ago made an algorithm that plays poker perfectly and had been abusing that fact thoroughly. 
+To try to prevent cheating Konráð pulled out his satanic tarot playing cards and made up a new version of poker on the spot,
+such that Atli could not use his old program to cheat.
+Thus the question arises, is it really ethical to help Atli keep cheating?
+Unfortunately for you there's little point in pondering that conundrum,
+seeing as Atli was devious enough to make that task a problem on this contest,
+which leaves you little choice if you wish to maximise your winning chances.
+
+The new rules are as follows. The tarot deck contains 22 high cards, 
+numbered from zero to twenty-one and denoted by roman numerals (except $0$ which is \texttt{O}).
+Outside these cards there are fourteen other cards in each of four suits,
+which total 56 cards and they are called the low cards. 
+The suits are wands, cups, swords and pentacles. 
+We will denote these suits by \texttt{S}, \texttt{B}, \texttt{V} and \texttt{M} respectively.
+The fourteen cards in each suit are numbered from $1$ to $10$, with a Jack, Knight, Queen and King following in that order.
+We will denote the last four by the letters \texttt{G}, \texttt{R}, \texttt{D} and \texttt{K} respectively.
+The suit will always be written first,
+so as examples \texttt{V10}, \texttt{M1}, \texttt{BD} and \texttt{SR} are all in the deck.
+Finally to make life harder Konráð also adds jokers to the deck.
+The jokers will be denoted by \texttt{J}. 
+Jokers are wildcards, meaning they can be treated as whichever card the player prefers when the hand is played,
+even if that card is already in play. 
+Each joker must be given the value of one non-joker card when played.
+
+When individual cards are compared, \texttt{XXI} is considered the highest card, with the order going down to \texttt{O},
+in that order. That is to say, any high card is considered higher than any low card.
+Among the low cards \texttt{K} is considered highest, followed by \texttt{D}, then \texttt{R},
+then \texttt{G} and finally the numbers $10$ down to $1$ in decreasing order.
+When cards differ only in suit we consider pentacles highest, then swords, then cups and finally wands.
+We consider the values $1$ through $10$ and then \texttt{G}, \texttt{R}, \texttt{D}, \texttt{K} to be sequential.
+Similarly \texttt{O} through \texttt{XXI} are sequential. A sequence can however not contain high and low cards.
+For example \texttt{MD}, \texttt{MK}, \texttt{O}, \texttt{I}, \texttt{II} does not constitute a sequence.
+Sequences may not contain repeated values.
+
+The high cards have no suit, but still have a value. 
+Thus for example if a player has a single high card in their hand along with a joker, 
+they can make a pair higher than any pair of low cards.
+A player can however never for a flush with a high card as it has no suit.
+High cards can thus form pairs, full houses and all other hands that only depend on value and not suit.
+Furthermore, a high and low card with the same number on it, for example \texttt{M4} and \texttt{IV}, we will call comparable.
+Note that jacks, knights, queens and kings are not comparable to any high card as they don't have a number on them.
+However, we will consider \texttt{XV} to be comparable to the value $15$.
+
+The following combinations of cards are considered to be good, 
+with the best combination at the top and the worst at the bottom. 
+Ties are broken by comparing the highest card in each hand that is part of their best combination.
+If those are equal the second best card in each hand that is part of their best combination is considered.
+This continues until both combinations are exhausted. 
+After that ties are resolved by comparing the highest card in each hand not part of the combination.
+Then the second highest card in each hand not part of the combination is considered, and so on.
+
+\begin{tabular}{|c|c|c|} \hline
+    Rank & Name & Condition \\ \hline
+    1 & Five of a kind & Five cards with the same value. \\ \hline
+    2 & No lows & Five high cards. \\ \hline
+    3 & Straight flush & Five sequential cards of the same suit. \\ \hline
+    4 & Diversity & Four low cards of different suits and a high card. \\ \hline
+    5 & Large sum house & Four low cards and a high card comparable to their sum. \\ \hline 
+    6 & Comparable house & Four low cards and a high card comparable to each of them. \\ \hline 
+    7 & Sum house & Three low cards and a high card comparable to their sum. \\ \hline 
+    8 & Numberless & Five cards without numbers, i.e. \texttt{G}, \texttt{R}, \texttt{D}, \texttt{K}. \\ \hline 
+    9 & Four of a kind & Four cards of the same value. \\ \hline
+    10 & Full house & Three cards of the same value, and two others of the same value. \\ \hline 
+    11 & Flush & Five cards of the same suit. \\ \hline
+    12 & Straight & Five sequential cards. \\ \hline
+    13 & Two comparable pairs & Two pairs of comparable high and low cards. \\ \hline
+    14 & Comparable pair and pair & A pair of comparable high and low cards and a pair of cards with the same value. \\ \hline
+    15 & Comparable pair & A pair of comparable high and low cards. \\ \hline
+    16 & Three of a kind & Three cards with the same value. \\ \hline
+    17 & Two pairs & Two pairs of cards with equal values. \\ \hline
+    18 & Pair & A pair of cards with equal values. \\ \hline
+    19 & No highs & Five low cards. \\ \hline
+    20 & Highest card & The combination consists of the highest card in hand. \\ \hline
+\end{tabular}
+
+\section*{Input}
+The input will contain two lines. Each line will contain five cards, separated by spaces. 
+The first line gives the cards in Konráð's hand and the second gives the cards in Atli's hand.
+Note that the same card can appear multiple times in the input.
+
+\section*{Output}
+First print two integers, 
+the rank of Konráð's hand in the table above in the best case and the rank of Atli's hand in the table above in the best case.
+Then on the next line print who wins.
+I.e. print \texttt{Konrad} if Konráð wins, \texttt{Atli} if Atli wins and \texttt{Jafntefli} otherwise.
+
+\section*{Scoring}
+\begin{tabular}{|l|l|l|}
+\hline
+Group & Points & Constraints \\ \hline
+1     & 40   & No jokers, no high cards. \\ \hline
+2     & 40   & No jokers. \\ \hline
+3     & 20   & No further constraints. \\ \hline
+\end{tabular}
+

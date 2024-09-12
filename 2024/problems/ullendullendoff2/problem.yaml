@@ -1,0 +1,12 @@
+name: Úllen Dúllen Doff 2
+author: Arnar Bjarni Arnarson, Ásdís Thu Minh Huynh
+source: Forritunarkeppni Framhaldsskólanna 2024
+rights_owner: Forritunarkeppni Framhaldsskólanna
+license: cc by-sa
+type: scoring
+validation: custom
+grading:
+    show_test_data_groups: true
+limits:
+  time_multiplier: 2
+keywords: ad hoc

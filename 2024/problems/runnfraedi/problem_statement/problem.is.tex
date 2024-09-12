@@ -1,0 +1,45 @@
+\problemname{Rúnnfræði}
+\illustration{0.5}{rounding}{Mynd fengin af \href{https://commons.wikimedia.org/wiki/File:Comparison\_rounding\_graphs\_SMIL.svg}{commons.wikimedia.org}}
+
+Dagur er að vinna í heimaverkefni fyrir tölfræðiáfangann sem hann er að taka.
+Dagur er hins vegar ekki viss hvort hann eigi að rúnna eða stýfa svarið. 
+% Rétt þýðing á truncate er stýfa skv. Árnastofnun
+Ef svarið hans væri til dæmis $123.456$ þá gæti hann rúnnað að næsta hundraðshluta og fengið $123.46$.
+Ef hann stýfir svarið að næsta hundraði, 
+það er að segja fjarlægir stafi aftan af tölunni þar til rétt nákvæmni fæst,
+þá er svarið $123.45$.
+Nánar tiltekið, til að rúnna byrjum við á að velja veldi af $10$.
+Svo breytum við tölunni okkar í nálægasta heiltölumargfeldi af þessu veldi af $10$,
+þar sem við veljum stærra margfeldið ef það er jafntefli.
+Þegar við stýfum byrjum við líka á að velja veldi af $10$.
+En í staðinn fyrir að velja nálægasta heiltölumargfeldi tökum við stærsta
+heiltölumargfeldið af þessu veldi af $10$ sem er ekki stærri en talan okkar.
+% Það að skýra reglur á fimmum sparar vesen, þetta dæmi þarf ekki meira vesen
+Dagur rúnnar alltaf upp á fimmum, svo $123.45$ rúnnað að næstu tíund væri $123.5$.
+Til að reyna finna út úr því hvort hann eigi að rúnna eða stýfa skoðar Dagur sýnidæmi frá kennara.
+Getur þú hjálpað honum að sjá hvort kennarinn sé að runna eða stýfa?
+
+
+\section*{Inntak}
+Inntakið inniheldur tvær línur, hver með einni kommutölu. 
+Kommutölurnar munu aldrei vera neikvæðar og hafa að minnsta kosti einn staf eftir kommu.
+Síðasti stafurinn eftir kommu mun aldrei vera $0$ ef það er fleiri en einn stafur eftir kommu.
+Sú síðari er ávallt með strangt færri stafi eftir kommu en sú fyrri.
+Hvor tala verður mest með $5$ stafi fyrir kommu.
+Gefið er að fá má síðari kommutöluna með því að rúnna eða stýfa fyrri töluna, eða mögulega bæði.
+
+\section*{Úttak}
+Ef ljóst er að kennarinn sé að rúnna en ekki að stýfa, prentaðu \texttt{Runnun}.
+Ef ljóst er að kennarinn sé að stýfa en ekki að rúnna, prentaðu \texttt{Styfun}.
+Annars prentaðu \texttt{Veit ekki}.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 20   & Báðar tölur eru $< 0.5$, mest $5$ stafir eftir kommu. \\ \hline
+2     & 30   & Mest $5$ stafir eftir kommu, almennt færri jaðartilfelli. \\ \hline
+3     & 30   & Mest $5$ stafir eftir kommu. \\ \hline
+4     & 10   & Mest $500$ stafir eftir kommu. \\ \hline
+5     & 10   & Mest $1\,000\,000$ stafir eftir kommu. \\ \hline
+\end{tabular}

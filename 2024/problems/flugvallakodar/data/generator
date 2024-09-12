@@ -1,0 +1,77 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution atli_100.py opt
+
+compile random_generator.py
+compile edge_generator.py
+
+samplegroup
+limits max_n=10 max_m=200 max_change=3
+sample 1
+sample 2
+sample 3
+
+group GA 10
+limits max_n=1 max_m=200 max_change=0
+for i in {1..10}; do
+tc GA-$i random_generator 1 200 0 $i
+done;
+tc GA-casecheck edge_generator CASECHECK
+desc "Tests that the solution converts lower to upper case"
+
+group GB 20
+limits max_n=100 max_m=200 max_change=0
+include_group GA
+tc 1
+for i in {1..10}; do
+tc GB-$i random_generator 100 200 0 $i
+done;
+tc GB-fail edge_generator GBFAIL
+desc "Tests that the solution can handle no codes being available"
+tc GB-casematch edge_generator CASEMATCH
+desc "Tests that the solution matches upper and lower reserved codes"
+
+group GC 20
+limits max_n=100 max_m=200 max_change=1
+include_group GB
+tc 2
+for i in {1..10}; do
+tc GC-$i random_generator 100 200 1 $i
+done;
+tc GC-shift edge_generator GCSHIFT
+desc "Tests that the solution can handle shifting up the last letter"
+
+group GD 20
+limits max_n=100 max_m=200 max_change=2
+include_group GC
+for i in {1..10}; do
+tc GD-$i random_generator 100 200 2 $i
+done;
+tc GD-shift edge_generator GDSHIFT
+desc "Tests that the solution can handle shifting up the last two letters"
+
+group GE 20
+limits max_n=100 max_m=200 max_change=3
+include_group GD
+tc 3
+for i in {1..10}; do
+tc GE-$i random_generator 100 200 3 $i
+done;
+tc GE-shift edge_generator GESHIFT
+desc "Tests that the solution can handle shifting up all letters"
+
+group GF 5
+limits max_n=10000 max_m=200 max_change=3
+include_group GE
+for i in {1..5}; do
+tc GF-$i random_generator 10000 200 3 $i
+done;
+
+group GG 5
+limits max_n=10000 max_m=10000 max_change=3
+include_group GF
+for i in {1..5}; do
+tc GG-$i random_generator 200 10000 3 $i
+done;

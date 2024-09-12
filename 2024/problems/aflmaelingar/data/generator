@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+REQUIRE_SAMPLE_REUSE=0
+# do not want sample since it as n < 300
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution atli_100.cpp opt
+
+compile random_generator.py
+compile edge_generator.py
+
+samplegroup
+limits K=4 q=2 is_sample=True
+sample_manual 1
+
+group GA 30
+limits K=2 q=300 is_sample=False
+for i in {01..10}; do
+tc GA-$i random_generator 2 300
+done;
+tc GA-min edge_generator min 2 300
+tc GA-max edge_generator max 2 300
+
+group GB 30
+limits K=4 q=150 is_sample=False
+for i in {01..10}; do
+tc GB-$i random_generator 4 150
+done;
+tc GB-min edge_generator min 4 150
+tc GB-max edge_generator max 4 150
+
+
+group GC 40
+limits K=3 q=200 is_sample=False
+for i in {01..10}; do
+tc GC-$i random_generator 3 200
+done;
+tc GC-min edge_generator min 3 200
+tc GC-max edge_generator max 3 200

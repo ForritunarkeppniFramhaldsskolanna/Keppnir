@@ -1,0 +1,38 @@
+\problemname{Tölvuíhlutir}
+\illustration{0.4}{dwave}{Image from \href{https://commons.wikimedia.org/wiki/File:A\_Wafer\_of\_the\_Latest\_D-Wave\_Quantum\_Computers\_(39188583425).jpg}{commons.wikimedia.org}}
+
+Magni is purchasing a new desktop computer, which raises the important question of which components to buy to put into it. He of course doesn't
+have infinite money, so the tricky thing is to get the best possible performance for the money he can spend. In the real world different 
+components of course perform differently well at different tasks, but to simplify we will consider only the average performance of any given
+component. If he buys a very expensive and nice graphics card, but then a very poor CPU the graphics card will be bottlenecked by the poor
+CPU. Thus the computer is only as good as its weakest component. Can you help Magni purchase the best computer he can?
+
+\section*{Input}
+The first line contains three positive integers $n, k$ and $p$, where $n$ is the number of available components, 
+$k$ is the number of types of different components and $p$ is the amount of money Magni can spend on the computer. 
+It is guaranteed that $1 \leq k \leq n$.
+The next line contains $k$ strings, each
+giving the name of a type of component, separated by spaces. The next $n$ lines will each describe one available component. Each such
+line has a string $s$ and two integers $v, g$. The string describes the type of the component and is always one of the $k$ types given
+above in the input. The value $v$ gives the price of the component and satisfies $0 \leq v \leq 10^9$. Finally $g$ describes the performance of
+the component and satisfies $0 \leq g \leq 10^9$. The computer must contain exactly one component of each type and the performance of
+the computer is the minimum of the performance values of its $k$ components.
+
+All strings in the input are at most $10$ letters and contain only English lower and upper case characters. The total length of all
+strings in the input is at most $6 \cdot 10^5$.
+
+\section*{Output}
+Print the best achievable performance Magni can attain for the money he has. If the money is not enough to build any computer, then instead
+print \texttt{O nei!}.
+
+\section*{Scoring}
+\begin{tabular}{|l|l|l|}
+\hline
+Group & Points & Constraints \\ \hline
+1     & 20   & $1 \leq n \leq 1\,000$, no two components are of the same type \\ \hline
+2     & 20   & $1 \leq n \leq 1\,000$, the performance of any component is at most $100\,000$ \\ \hline
+3     & 20   & $1 \leq n \leq 1\,000$, $k = 1$ \\ \hline
+4     & 20   & $1 \leq n \leq 1\,000$ \\ \hline
+5     & 20   & $1 \leq n \leq 100\,000$ \\ \hline
+\end{tabular}
+

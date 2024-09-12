@@ -1,0 +1,33 @@
+4 100000
+7
+contain at least 10 symbols
+contain at least 1 symbols from abcdefghijklmnopqrstuvwxyz
+contain at least 1 symbols from ABCDEFGHIJKLMNOPQRSTUVWXYZ
+contain at least 1 symbols from 0123456789
+not contain 2 consecutive equal symbols
+not contain an english word
+not be in top 10000 most common passwords
+7
+contain at least 10 symbols
+contain at least 1 symbols from abcdefghijklmnopqrstuvwxyz
+contain at least 1 symbols from ABCDEFGHIJKLMNOPQRSTUVWXYZ
+contain at least 1 symbols from !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
+not contain 2 consecutive equal symbols
+not contain an english word
+not be in top 10000 most common passwords
+7
+contain at least 10 symbols
+contain at least 1 symbols from abcdefghijklmnopqrstuvwxyz
+contain at least 1 symbols from 0123456789
+contain at least 1 symbols from !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
+not contain 2 consecutive equal symbols
+not contain an english word
+not be in top 10000 most common passwords
+7
+contain at least 10 symbols
+contain at least 1 symbols from ABCDEFGHIJKLMNOPQRSTUVWXYZ
+contain at least 1 symbols from 0123456789
+contain at least 1 symbols from !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
+not contain 2 consecutive equal symbols
+not contain an english word
+not be in top 10000 most common passwords

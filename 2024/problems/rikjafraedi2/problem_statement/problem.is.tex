@@ -1,0 +1,33 @@
+\problemname{Ríkjafræði 2}
+\illustration{0.5}{morphism}{Mynd fengin af \href{https://commons.wikimedia.org/wiki/File:Commutative\_diagram\_for\_morphism.svg}{commons.wikimedia.org}}
+
+Jörmunrekur hélt hann væri kominn með ágætan skilning á ríkjafræði, en allt í einu flæktust hlutirnir þegar hann kynti sér efnið
+frekar! Ríkjafræði notast mikið við örvarit til að setja hluti fram myndrænt. Myndirnar tákna ríki sem samanstanda af hlutum og
+örvum þess á milli. Það sem er flóknara nú en síðast er að í þessum örvaritum er ekki endilega til ör frá
+$y$ til $x$ þó það sé ör frá $x$ til $y$, svo ef hægt er að fara í báðar áttir er það tekið sérstaklega fram með því
+að gefa ör í báðar áttir í inntakinu. Jörmunrekur heldur samt ótrauður áfram, kannski getur hann lært betur á þetta allt með því að teikna
+sitt eigið örvarit. Örvarit Jörmunreks er einungis með punkta til að tákna hlutina í upphafi, en engar örvar.
+
+\section*{Inntak}
+Inntak byrjar á einni línu með tveimur jákvæðum heiltölum $n$ og $q$, þar sem $n$ er fjöldi hluta og $q$ er fjöldi fyrirspurna í inntaki.
+Hlutirnir eru númeraðir frá $1$ og upp í $n$ og ávallt gildir að $n \leq 10^3$. 
+Næst koma $q$ línur, hver þeirra með þremur heiltölum $o, x, y$ aðskilin með bilum.
+$o$ er ávallt annað hvort $0$ eða $1$ og $1 \leq x, y \leq n$. Ef $o = 0$ merkir þessi lína að Jörmunrekur teikni ör frá hlut $x$
+til hlutar $y$. Ef $o = 1$ er Jörmunrekur að velta fyrir sér hvort sé til runa örva sem byrja í $x$ og leiða til $y$.
+
+\section*{Úttak}
+Prenta skal eina línu fyrir hverja fyrirspurn sem byrjar á $1$. Ef til er runa örva frá $x$ til $y$ skal prenta \texttt{Jebb} 
+en annars \texttt{Neibb}.
+
+\section*{Athugasemd}
+Inntök og úttök eru stór. Passa þarf að vinna með þau með sæmilega hröðum hætti.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 40   & $1 \leq q \leq 1\,000$. \\ \hline
+2     & 30   & $1 \leq q \leq 500\,000$, örvarnar mynda aldrei rás. \\ \hline
+3     & 30   & $1 \leq q \leq 500\,000$. \\ \hline
+\end{tabular}
+

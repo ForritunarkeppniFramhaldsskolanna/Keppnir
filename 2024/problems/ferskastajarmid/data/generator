@@ -1,0 +1,50 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution atli_100.py opt
+
+compile random_generator.py
+compile edge_generator.py
+compile off_by_one_edge_generator.py
+
+samplegroup
+limits coll=False max_n=100
+sample 1
+sample 2
+
+group GA 50
+tc 1
+limits coll=True max_n=100
+for i in {01..10}; do
+tc GA-$i random_generator True 100
+done;
+tc GA-edge-1 edge_generator zero
+desc "Tests an edge case where there is only one meme but both its values are 0."
+tc GA-edge-2 off_by_one_edge_generator -1 -1
+desc "Tests an edge case where solutions that mess with the input numbers will fail."
+tc GA-edge-3 off_by_one_edge_generator -1 0
+desc "Tests an edge case where solutions that mess with the input numbers will fail."
+tc GA-edge-4 off_by_one_edge_generator -1 1
+desc "Tests an edge case where solutions that mess with the input numbers will fail."
+tc GA-edge-5 off_by_one_edge_generator 0 -1
+desc "Tests an edge case where solutions that mess with the input numbers will fail."
+tc GA-edge-6 off_by_one_edge_generator 0 1
+desc "Tests an edge case where solutions that mess with the input numbers will fail."
+tc GA-edge-7 off_by_one_edge_generator 1 -1
+desc "Tests an edge case where solutions that mess with the input numbers will fail."
+tc GA-edge-8 off_by_one_edge_generator 1 0
+desc "Tests an edge case where solutions that mess with the input numbers will fail."
+tc GA-edge-9 off_by_one_edge_generator 1 1
+desc "Tests an edge case where solutions that mess with the input numbers will fail."
+
+group GB 50
+tc 2
+limits coll=False max_n=100
+include_group GA
+for i in {01..10}; do
+tc GB-$i random_generator False 100
+done;
+tc GB-edge edge_generator zero2
+desc "Tests an edge case where there are many memes, each with freshness 0.\nThe test ensures the lexicographically minimum meme is selected, not the first in input."
+

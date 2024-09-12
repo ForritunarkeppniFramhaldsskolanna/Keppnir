@@ -1,0 +1,72 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution atli_100.py
+
+compile random_generator.py
+compile exact_generator.py
+
+samplegroup
+limits max_digs=5 zero_integ=False
+sample 1
+sample 2
+sample 3
+
+group GA 20
+limits max_digs=5 zero_integ=True
+for i in {01..10}; do
+tc GA-$i random_generator 5 zero
+done;
+
+group GB 30
+limits max_digs=5 zero_integ=False
+include_group GA
+tc 1
+tc 3
+for i in {01..10}; do
+tc GB-$i random_generator 5 nice
+done;
+
+group GC 30
+limits max_digs=5 zero_integ=False
+include_group GB
+tc 2
+tc round_up_integer exact_generator 9.51 10.0
+desc "Tests edge case where second string has more digits before the decimal"
+tc round_huge exact_generator 123.456 0.0
+desc "Tests edge case where rough rounding essentially deletes the number"
+tc round_barely exact_generator 5000.00001 10000.0
+desc "Tests edge case where the first number can just barely be rounded up"
+tc unclear_despite_5 exact_generator 1.08705 1.0
+desc "Tests edge case where the answer is veit ekki, despite the relevant digit being >= 5"
+tc zero_result exact_generator 0.67 0.0
+desc "Tests edge case where the output is zero"
+tc kravberg-1 exact_generator 100.61 100.0
+desc "Tests truncation edge case, provided by Kravberg"
+tc kravberg-2 exact_generator 101.61 101.0
+desc "Tests truncation edge case, provided by Kravberg"
+tc prefix-1 exact_generator 101.54 101.5
+desc "Tests case where second number is a prefix of the first"
+tc prefix-2 exact_generator 101.56 101.5
+desc "Tests case where second number is a prefix of the first"
+for i in {01..20}; do
+tc GC-$i random_generator 1
+done;
+for i in {21..40}; do
+tc GC-$i random_generator 5
+done;
+
+group GD 10
+limits max_digs=500 zero_integ=False
+include_group GC
+for i in {01..20}; do
+tc GD-$i random_generator 500
+done;
+
+group GE 10
+limits max_digs=1000000 zero_integ=False
+include_group GD
+for i in {01..06}; do
+tc GE-$i random_generator 1000000
+done;

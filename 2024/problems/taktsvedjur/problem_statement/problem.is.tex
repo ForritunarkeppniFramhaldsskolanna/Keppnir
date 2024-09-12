@@ -1,0 +1,43 @@
+\problemname{Taktsveðjur}
+\illustration{0.5}{OIG2}{}
+
+Atli stundar það alveg vandræðalega mikið að spila tölvuleiki þegar hann ætti að vera að gera eitthvað gáfulegra.
+Oft er fólk að reyna ná á honum en fær ekkert svar því hann er staddur í sínum sýndarveruleika og heyrir ekkert.
+Nánast undantekningalaust er hann að spila uppáhalds leikinn sinn Taktsveðjur þegar hann er í sýndarveruleikanum.
+Taktsveðjur snýst um að sveifla sverðum og reyna að hitta allar nóturnar sem birtast,
+oft í takt við einhverja góða tónlist.
+Mikil orka fer í það að reyna fá sem hæstu stig fyrir gefið lag og alltaf að reyna slá metið sitt.
+Þar sem Atli er of upptekinn við að sveifla höndunum og reyna fá sem flest stig, 
+þá þarf einhver annar að sjá um það að telja saman stigin!
+
+Í Taktsveðjum fást stig fyrir hverja nótu sem maður hittir. 
+Hver nóta getur gefið $1$ til $115$ stig, ef manni mistekst að slá nótuna rétt fást $0$ stig.
+Ofan á þetta bætist svo stigamargfaldari sem er háður hversu mörgum nótum í röð maður nær.
+Í byrjun er margfaldarinn $1$, svo nótan gefur manni jafn mörg stig og hún er virði.
+Ef maður nær að hitta tvær nótur í röð fer margfaldarinn upp í $2$ og þá fær maður tvöföld stig nótnanna.
+Ef margfaldarinn er $2$ og maður nær $4$ í röð fer margfaldarinn upp í $4$.
+Eins ef hann er $4$ og maður nær $8$ í röð fer margfaldarinn upp í $8$, sem er hæsta mögulega gildið.
+Ef nóta færir mann upp í nýjan margfaldara telst nýi margfaldarinn fyrir þá nótu.
+Til dæmis ef maður hittir fyrstu tvær nóturnar í lagi fær maður strax tvöföld stig fyrir þá seinni.
+Ef maður missir af nótu lækkar margfaldarinn um leið um eitt þrep, 
+svo frá $8$ í $4$, $4$ í $2$ eða $2$ í $1$.
+Ef margfaldarinn er $1$ helst hann þar ef maður missir af nótu.
+
+\section*{Inntak}
+Fyrsta línan inniheldur eina heiltölu $n$, fjölda nótna í laginu sem Atli reyndi við.
+Næst koma $n$ línur, hver með stigin fyrir eina nótu í laginu. 
+Hver lína inniheldur sem sagt eina heiltölu $x$ sem uppfyllir $0 \leq x \leq 115$.
+
+\section*{Úttak}
+Prentið samtals stigafjölda Atla fyrir lagið.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 20   & $1 \leq n \leq 100$, Atli hittir engar nótur. \\ \hline
+2     & 20   & $1 \leq n \leq 100$, Atli hittir aldrei tvær eða fleiri nótur í röð. \\ \hline
+3     & 20   & $1 \leq n \leq 100$, Atli missir ekki af neinum nótum. \\ \hline
+4     & 20   & $1 \leq n \leq 100$. \\ \hline
+5     & 20   & $1 \leq n \leq 100\,000$. \\ \hline
+\end{tabular}

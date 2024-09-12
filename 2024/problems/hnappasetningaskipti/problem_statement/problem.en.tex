@@ -1,0 +1,104 @@
+\problemname{Hnappasetningaskipti}
+\illustration{0.5}{typewriter}{Image from \href{https://commons.wikimedia.org/wiki/File:Typewriter-12_hg.jpg}{commons.wikimedia.org}}
+
+A while back Arnar, Bjarki and Unnar competed together in competitive programming. At the university level,
+contestants also compete in three person teams, but each team only gets one computer. Therefore it is very
+important to use the time at the computer well, while the other two contestants try to solve other problems,
+and prepare to program their solutions quickly and correctly when it is their turn.
+
+To make the most of his time, Bjarki decided to learn the \emph{dvorak} keyboard layout, because he believes it
+allows him to type faster. Arnar thought this was a good idea and thus made his own keyboard layout which
+he called \emph{bjarki} and moved onto using it. Unnar has decided to just stick to \emph{qwerty} however, he does not 
+think this is worth the effort. But this is now causing problems! When the three swap turns being at the
+computer, they sometimes start typing a whole bunch of things without realising the computer has the wrong
+keyboard layout active! Thus, they need a program that can take what has already been written and change it
+to what they intended to write.
+
+A table follows that shows which keys correspond to one another in different keyboard layouts. Spaces
+are the same in all keyboard layouts. The table can also be found in the TSV format in the attachments.
+
+\begin{minipage}{0.45\textwidth}
+\begin{tabular}{|l|l|l|} \hline
+\emph{qwerty} & \emph{dvorak} & \emph{bjarki} \\ \hline
+\verb!~! & \verb!~! & \verb!0! \\
+\verb!1! & \verb!1! & \verb!2! \\
+\verb!2! & \verb!2! & \verb!4! \\
+\verb!3! & \verb!3! & \verb!8! \\
+\verb!4! & \verb!4! & \verb!6! \\
+\verb!5! & \verb!5! & \verb!1! \\
+\verb!6! & \verb!6! & \verb!3! \\
+\verb!7! & \verb!7! & \verb!5! \\
+\verb!8! & \verb!8! & \verb!7! \\
+\verb!9! & \verb!9! & \verb!9! \\
+\verb!0! & \verb!0! & \verb!=! \\
+\verb!-! & \verb![! & \verb!-! \\
+\verb!=! & \verb!]! & \verb!/! \\
+\verb!q! & \verb!'! & \verb!b! \\
+\verb!w! & \verb!,! & \verb!j! \\
+\verb!e! & \verb!.! & \verb!a! \\
+\verb!r! & \verb!p! & \verb!r! \\
+\verb!t! & \verb!y! & \verb!k! \\
+\verb!y! & \verb!f! & \verb!i! \\
+\verb!u! & \verb!g! & \verb!g! \\
+\verb!i! & \verb!c! & \verb!u! \\
+\verb!o! & \verb!r! & \verb!s! \\
+\verb!p! & \verb!l! & \verb!t! \\ \hline
+\end{tabular}
+\end{minipage}
+
+\begin{minipage}{0.45\textwidth}
+\begin{tabular}{|l|l|l|} \hline
+\emph{qwerty} & \emph{dvorak} & \emph{bjarki} \\ \hline
+\verb![! & \verb!/! & \verb!.! \\
+\verb!]! & \verb!=! & \verb!,! \\
+\verb!a! & \verb!a! & \verb!l! \\
+\verb!s! & \verb!o! & \verb!o! \\
+\verb!d! & \verb!e! & \verb!e! \\
+\verb!f! & \verb!u! & \verb!m! \\
+\verb!g! & \verb!i! & \verb!p! \\
+\verb!h! & \verb!d! & \verb!d! \\
+\verb!j! & \verb!h! & \verb!c! \\
+\verb!k! & \verb!t! & \verb!n! \\
+\verb!l! & \verb!n! & \verb!v! \\
+\verb!;! & \verb!s! & \verb!q! \\
+\verb!'! & \verb!-! & \verb!;! \\
+\verb!z! & \verb!;! & \verb![! \\
+\verb!x! & \verb!q! & \verb!]! \\
+\verb!c! & \verb!j! & \verb!y! \\
+\verb!v! & \verb!k! & \verb!z! \\
+\verb!b! & \verb!x! & \verb!h! \\
+\verb!n! & \verb!b! & \verb!w! \\
+\verb!m! & \verb!m! & \verb!f! \\
+\verb!,! & \verb!w! & \verb!x! \\
+\verb!.! & \verb!v! & \verb!'! \\
+\verb!/! & \verb!z! & \verb!~! \\ \hline
+\end{tabular}
+\end{minipage}
+
+\section*{Input}
+The first line is of the form \texttt{type1 on type2} where \texttt{type1} and \texttt{type2} are qwerty,
+dvorak or bjarki. \texttt{type2} is the keyboard layout currently active and \texttt{type1} is the layout
+that the person at the computer is used to. Next there is a single line, the text that the person at the
+computer wrote. This text is always a single line but can contain all of the characters in the table above.
+This line will contain at most $1\,000$ letters and at least one letter that is not whitespace.
+
+\section*{Output}
+Print what the person at the computer intended to write. The output will be considered correct even if the
+whitespace is not an exact match, as long as the words match. For example a single space and two consecutive spaces
+will be considered equivalent.
+
+\section*{Scoring}
+\begin{tabular}{|l|l|l|}
+\hline
+Group & Points & Constraints \\ \hline
+1     & 1    & The input is the sample input. \\ \hline
+2     & 11   & The input starts with \texttt{qwerty on qwerty}. \\ \hline
+3     & 11   & The input starts with \texttt{dvorak on dvorak}. \\ \hline
+4     & 11   & The input starts with \texttt{bjarki on bjarki}. \\ \hline
+5     & 11   & The input starts with \texttt{dvorak on qwerty}. \\ \hline
+6     & 11   & The input starts with \texttt{bjarki on qwerty}. \\ \hline
+7     & 11   & The input starts with \texttt{qwerty on dvorak}. \\ \hline
+8     & 11   & The input starts with \texttt{bjarki on dvorak}. \\ \hline
+9     & 11   & The input starts with \texttt{qwerty on bjarki}. \\ \hline
+10    & 11   & The input starts with \texttt{dvorak on bjarki}. \\ \hline
+\end{tabular}

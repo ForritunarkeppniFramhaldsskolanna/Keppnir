@@ -1,0 +1,38 @@
+\problemname{ASCII Kassi 2}
+\illustration{0.4}{fish}{Image from \href{https://commons.wikimedia.org/wiki/File:Fish-shell-logo-ascii.svg}{wikimedia.commons.org}}
+
+Last year we looked back in time and made contestants draw ASCII boxes as a challenge.
+This year we want to look at things from a new perspective!
+Therefore the challenge this year is to draw an ASCII box, but diagonally!
+
+Last time the symbols \texttt{+}, \texttt{-} and \texttt{|} were used to draw the box.
+When this has been rotated by $45^\circ$ you get the symbols \texttt{x}, \texttt{/} and \texttt{\textbackslash}.
+The corners of the box are therefore drawn with a \texttt{x} and the other symbols are used for the sides.
+
+To make sure the box is printed correctly you need to put the right number of spaces before and between the
+symbols on each line. The last non-whitespace character should be immediately followed by a newline character.
+Additionally you must not print any extra spaces after the box on any line.
+The first line of the box is therefore always some number of spaces followed by a single \texttt{x}.
+Next there is a line that has a \texttt{/} below and to the left of the \texttt{x} and
+a \texttt{\textbackslash} below and to the right of the \texttt{x}, unless the side length of the box is $0$.
+This continues until the sides have the correct length.
+Finally there is a line with a \texttt{x} below and to the left of the last \texttt{/} and another
+\texttt{x} below and to the right of the \texttt{\textbackslash}.
+This is then repeated in a mirrored way to make the bottom half of the box.
+
+\section*{Input}
+The first and only line of the input contains a single integer $n$, the side length of the box.
+
+\section*{Output}
+Print a box with side length $n$ as described above.
+Be aware that the output must match exactly, even the whitespace characters.
+
+\section*{Scoring}
+\begin{tabular}{|l|l|l|}
+\hline
+Group & Points & Constraints \\ \hline
+1     & 30   & $0 \leq n \leq 3$. \\ \hline
+2     & 30   & $0 \leq n \leq 10$. \\ \hline
+3     & 20   & $0 \leq n \leq 100$. \\ \hline
+4     & 20   & $0 \leq n \leq 1\,000$. \\ \hline
+\end{tabular}

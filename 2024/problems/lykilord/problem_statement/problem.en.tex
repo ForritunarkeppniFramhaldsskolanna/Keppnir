@@ -1,0 +1,110 @@
+\problemname{Lykilorð}
+\illustration{0.5}{already_used}{You can always find worse password policies\textellipsis}
+
+In digital systems requiring authentication, it is rather common that a user needs to create their own password to pair with their username.
+The passwords should not be stored in plaintext, instead they should be processed by a hash function.
+Simply put, the hash function transforms the password from plaintext to an integer.
+Many passwords can end up as the same integer and the process is difficult to invert which makes storing the integer safe.
+Then the password entered during the login process can be hashed and a check can be made whether the correct integer appears.
+If the integers are equal, then it is astronomically unlikely that the password used in the login attempt is different from the one originally set by the user.
+
+Many of these systems provide the users with rules which their passwords must satisfy.
+A sensible lower bound on length is set to ensure passwords are long enough not to be susceptible to brute force attacks.
+The method in question is based on trying all possible passwords which satisfy the password rules.
+This is usually done by starting at the lowest allowed length and working up to higher length passwords.
+Additionally, there are arguments for an upper bound on a password,
+such as some hash function algorithms only working text containing at most $64$ symbols.
+Another good rule is forbidding the use of common passwords.
+The reason for this rule is that the outputs of the hash functions for those passwords are known,
+thus it is easy to reverse the process for those outputs.
+For the purpose of this task, we assume the hash functions accept at most $32$ symbols,
+setting a base upper bound on the length of all passwords.
+
+Years ago, system developers thought that by imposing more rules on passwords they would improve security.
+Many websites required that passwords must include uppercase letters, lowercase letters and digits, one of each type.
+Other systems took this a step further and forbid the use of consecutive equal symbols or incrementing digits or adjacent letters in the alphabet.
+For a long time this was considered an improvement, but made matters worse.
+By imposing all these rules, the set of valid passwords became much smaller, meaning the brute force attack has fewer passwords to try.
+The passwords also became harder for users to remember.
+Naturally, the users reused passwords between systems as the could, even writing them down on sticky notes stuck to their table.
+Luckily, we know better today! Or do we?
+
+You are given rules for password creation in different systems.
+Your program should create passwords based on the given rules.
+Rules are given in rule sets.
+We say that a password satisfies a rule set if it satisfies all the rules in that rule set.
+A password is considered valid if it satisfies at least one rule set.
+However, if there are no rule sets provided, then all passwords are valid.
+
+It saddens the author profusely that a good portion of the test cases are real rules in real systems which still exist to this day.
+
+\section*{Input}
+The first line of input consist of two integers $n$, the number of rule sets, and $m$, the number of passwords to output.
+You may assume that $1 \leq m \leq 2\,000\,000$.
+
+Then $n$ descriptions of rule sets follow.
+Each description of a rule set starts with one line with a positive integer denoting the number of rules in the rule set.
+Then the rules follow, one line per rule.
+
+The systems are international, therefore the rules are given in English.
+The following rules are defined with the prefix \texttt{The password must:}
+\begin{enumerate}
+    \item \texttt{contain at least \{count\} symbols}
+    \item \texttt{contain at most \{count\} symbols}
+    \item \texttt{contain at least \{count\} symbols from \{symbol set\}}
+    \item \texttt{contain at most \{count\} symbols from \{symbol set\}}
+    \item \texttt{contain \{count\} consecutive equal symbols}
+    \item \texttt{contain \{count\} consecutive incrementing symbols}
+    \item \texttt{contain \{count\} consecutive decrementing symbols}
+    \item \texttt{contain an english word}
+    \item \texttt{include \{substring\} as a substring}
+    \item \texttt{start with \{prefix\}}
+    \item \texttt{end with \{suffix\}}
+    \item \texttt{be an english word}
+    \item \texttt{be in top \{count\} most common passwords}
+\end{enumerate}
+
+There will be at least $0$ and at most $30$ rules in total over all rule sets.
+For rules $5$ to $13$, the prefix \texttt{"not "} may be added to get an opposite effect.
+Some of the rules have variables and the full description of the input constraints is complicated, but you may assume they are reasonable.
+For example, the \texttt{count} in rules $1$ and $2$ can range from $0$ to $32$.
+However, in rules $5$ to $7$, the variable \texttt{count} is at least $2$ and at most $5$.
+Note that collectively, the rules may impose restrictions such that no password is valid.
+
+The symbols appearing in the input are those with ASCII values between $33$ and $126$.
+This includes English uppercase letters, English lowercase letters, digits, punctuation and some other symbols, such as curly braces.
+Note that spaces cannot appear in passwords nor in the variables of rules in the input.
+
+You will receive a list of common words to assist you in creating passwords that satisfy the requirements.
+\footnote{The words were found in the list \href{https://github.com/tkoop/popular-english-words/}{here} which collected them from Wikipedia.}
+You will also receive a list of passwords ordered by popularity, the top password being the most commonly used one.
+\footnote{The passwords were found in the list \href{https://github.com/danielmiessler/SecLists/tree/master/Passwords/Common-Credentials}{here} which is constructed from real world statistical data.}
+These lists will be used to verify the correctness of your output.
+\footnote{The lists are unchanged, except for a limitation on the number of passwords and one password being removed which had symbols outside the symbol set of this task.
+The contents of these lists do not represent the views of anyone associated with the task.
+They are simply raw data ordered by frequency.}
+
+
+\section*{Output}
+If $m$ or more passwords satisfy the given rules, you should first output a line containing the text \texttt{"Mogulegt!"}.
+Then $m$ distinct passwords should follow, where each password satisfies at least one rule set, except in the case of no rule sets.
+In theses cases, you will at most need to output $1\,000\,000$ passwords and at most $6\,291\,456$ bytes, or $6$ MB, are required for a correct output.
+
+However, if the number of distinct passwords satisfying the requirements are lower than $m$,
+you should output one line with the text \texttt{"Omogulegt!"}.
+
+\section*{Scoring}
+There are $100$ test cases in total and you will receive one point for each correctly solved test case.
+
+\section*{More rules}
+A few more rules follow here that are not used in the task but still exist in the real world.
+\begin{itemize}
+    \item \texttt{not be the same as the username}
+    \item \texttt{not be same as previous \{count\} passwords}
+    \item \texttt{not be changed within \{count\} hours of last change}
+    \item \texttt{not be same as other passwords in system}
+    \item \texttt{not contain a reference to a pop culture icon}
+    \item \texttt{not include your social security number or any subset of your social security number that is more than a single number}
+    \item \texttt{not include words that can be found in any dictionary regardless of language}
+    \item \texttt{be your date of birth in format ddmmyyyy}
+\end{itemize}

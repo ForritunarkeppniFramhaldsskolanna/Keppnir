@@ -1,0 +1,37 @@
+\problemname{ASCII Kassi 2}
+\illustration{0.4}{fish}{Mynd fengin af \href{https://commons.wikimedia.org/wiki/File:Fish-shell-logo-ascii.svg}{wikimedia.commons.org}}
+
+Í fyrra litum við aftur í tímann og létum nemendur teikna ASCII kassa sem dæmi.
+Í ár viljum við líta á hlutina frá nýju sjónarhorni!
+Því er dæmið í ár að teikna ASCII kassa, en á ská!
+
+Síðast var notað við táknin \texttt{+}, \texttt{-} og \texttt{|} til að teikna kassann.
+Þegar þessu hefur verið snúið um $45^\circ$ fást þá táknin \texttt{x}, \texttt{/} og \texttt{\textbackslash}.
+Hornin á kassanum verða því táknuð með \texttt{x} en hin tvö táknin notuð til að teikna hliðarnar.
+
+Til að kassinn birtist rétt þarf að passa að setja réttan fjölda bila á undan og milli stafanna í hverri línu.
+Þar að auki má ekki prenta nein auka bil á eftir kassanum í hverri línu, heldur á að koma nýlínustafur beint á eftir
+seinasta tákni kassans í hverri línu.
+Efsta lína kassans er þá ávallt einhver fjöldi bila og svo eitt \texttt{x}.
+Þar næst kemur lína með \texttt{/} vinstra megin fyrir neðan \texttt{x} og
+Þetta heldur svo áfram þar til hliðarnar eru af réttri lengd.
+\texttt{\textbackslash} hægra megin fyrir neðan \texttt{x}, nema hliðarlengd kassans sé $0$.
+Loks kemur svo \texttt{x} vinstra megin fyrir neðan \texttt{/} og hægra megin fyrir neðan \texttt{\textbackslash}.
+Þetta er svo endurtekið með spegluðum hætti til að klára kassann.
+
+\section*{Inntak}
+Fyrsta og eina lína inntaksins inniheldur eina heiltölu $n$, hliðarlengd kassans.
+
+\section*{Úttak}
+Prentið kassa með hliðarlengd $n$ eins og lýst er að ofan.
+Hafðu í huga að úttakið þarf að vera nákvæmlega rétt, meira að segja bilstafirnir.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 30   & $0 \leq n \leq 3$. \\ \hline
+2     & 30   & $0 \leq n \leq 10$. \\ \hline
+3     & 20   & $0 \leq n \leq 100$. \\ \hline
+4     & 20   & $0 \leq n \leq 1\,000$. \\ \hline
+\end{tabular}

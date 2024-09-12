@@ -1,0 +1,15 @@
+name: Lykilorð
+author: Arnar Bjarni Arnarson
+source: Forritunarkeppni Framhaldsskólanna 2024
+rights_owner: Forritunarkeppni Framhaldsskólanna
+license: cc by-sa
+type: scoring
+validation: custom
+limits:
+    time_multiplier: 1.4
+    time_safety_margin: 1.2
+    code: 2048
+    memory: 2048
+grading:
+    show_test_data_groups: true
+keywords: automata, parsing

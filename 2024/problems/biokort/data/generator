@@ -1,0 +1,82 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution arnar_100.cpp opt
+
+compile random_generator.py
+
+MIN_N=1
+SMALL=1000
+LARGE=200000
+
+MAX_M=100000
+MAX_K=10000000
+LOW_POP=$(($SMALL - 1))
+MAX_POP=1000000
+
+
+samplegroup
+limits max_n=$LARGE max_m=$MAX_M max_k=$MAX_K max_popularity=$MAX_POP max_distinct=$LARGE 
+sample 1
+sample 2
+
+group GA-zero 10
+limits max_n=$SMALL max_m=0 max_k=0 max_popularity=$MAX_POP max_distinct=$SMALL
+for i in {01..10}; do
+tc GA-$i random_generator $MIN_N $SMALL 0 0 0 0 0 $MAX_POP 1 $SMALL
+done;
+
+group GB-m-zero 10
+limits max_n=$SMALL max_m=0 max_k=$MAX_K max_popularity=$MAX_POP max_distinct=$SMALL
+include_group GA-zero
+for i in {01..10}; do
+tc GB-$i random_generator $MIN_N $SMALL 0 0 0 $MAX_K 0 $MAX_POP 1 $SMALL
+done;
+
+group GC-k-zero 10
+include_group GA-zero
+limits max_n=$SMALL max_m=$MAX_M max_k=0 max_popularity=$MAX_POP max_distinct=$SMALL
+for i in {01..10}; do
+tc GC-$i random_generator $MIN_N $SMALL 0 $MAX_M 0 0 0 $MAX_POP 1 $SMALL
+done;
+
+group GD-small 10
+limits max_n=$SMALL max_m=$MAX_M max_k=$MAX_K max_popularity=$MAX_POP max_distinct=$SMALL
+include_group GB-m-zero
+include_group GC-k-zero
+tc 1
+tc 2
+for i in {01..10}; do
+tc GD-$i random_generator $MIN_N $SMALL 0 $MAX_M 0 $MAX_K 0 $MAX_POP 1 $SMALL
+done;
+
+group GE-one-distinct 10
+limits max_n=$LARGE max_m=$MAX_M max_k=$MAX_K max_popularity=$MAX_POP max_distinct=1
+for i in {01..05}; do
+tc GE-$i random_generator $SMALL $LARGE 0 $MAX_M 0 $MAX_K 0 $MAX_POP 1 1
+done;
+
+group GF-low-popularity 10
+limits max_n=$LARGE max_m=$MAX_M max_k=$MAX_K max_popularity=$LOW_POP max_distinct=$SMALL
+tc 1
+tc 2
+for i in {01..05}; do
+tc GF-$i random_generator $SMALL $LARGE 0 $MAX_M 0 $MAX_K 0 $LOW_POP 1 $SMALL
+done;
+
+group GG-low-distinct 20
+limits max_n=$LARGE max_m=$MAX_M max_k=$MAX_K max_popularity=$MAX_POP max_distinct=$SMALL
+include_group GD-small
+include_group GE-one-distinct
+include_group GF-low-popularity
+for i in {01..05}; do
+tc GG-$i random_generator $SMALL $LARGE 0 $MAX_M 0 $MAX_K 0 $MAX_POP 1 $SMALL
+done;
+
+group GH-general 20
+include_group GG-low-distinct
+limits max_n=$LARGE max_m=$MAX_M max_k=$MAX_K max_popularity=$MAX_POP max_distinct=$LARGE
+for i in {01..05}; do
+tc GH-$i random_generator $SMALL $LARGE 0 $MAX_M 0 $MAX_K 0 $MAX_POP $SMALL $LARGE
+done;

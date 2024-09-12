@@ -1,0 +1,68 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution arnar_100.cpp
+
+compile random_generator.py
+
+samplegroup
+limits min_n=21 max_n=166
+sample 1
+desc "Originally, there were 17 champions in League of Legends but back then the draft process consisted of 3 bans per team, not 5, resulting in the input being 21 instead of 17 here."
+sample 2
+desc "The number of champions in the game as of 2024-01-01"
+
+group GA 30
+limits min_n=20 max_n=21
+tc 1
+tc GA-fixed-020 random_generator 20 20
+desc "Originally, there were 17 champions in League of Legends but back then the draft process consisted of 3 bans per team, not 5, resulting in the input being 20 instead of 16 here."
+
+group GB 25
+limits min_n=20 max_n=100
+include_group GA
+for i in {022..030}; do
+tc GB-fixed-$i random_generator $i $i
+done;
+for i in {091..100}; do
+tc GB-fixed-$i random_generator $i $i
+done;
+for i in {01..06}; do
+tc GB-random-$i random_generator 31 60
+done;
+for i in {07..12}; do
+tc GB-random-$i random_generator 61 90
+done;
+
+group GC 20
+limits min_n=20 max_n=1000000
+include_group GB
+tc 2
+tc GC-fixed-smallest random_generator 101 101
+tc GC-fixed-small random_generator 102 102
+tc GC-fixed-large random_generator 10**6-1 10**6-1
+tc GC-fixed-largest random_generator 10**6 10**6
+for i in {001..021}; do
+tc GC-random-$i random_generator 103 10**6-2
+done;
+
+group GD 15
+limits min_n=20 max_n=10**9
+include_group GB
+tc GD-fixed-smallest random_generator 10**6+1 10**6+1
+tc GD-fixed-small random_generator 10**6+2 10**6+2
+tc GD-fixed-large random_generator 10**9-1 10**9-1
+tc GD-fixed-largest random_generator 10**9 10**9
+for i in {001..021}; do
+tc GD-random-$i random_generator 10**6+3 10**9-2
+done;
+
+group GE 10
+limits min_n=20 max_n=10**18
+include_group GD
+tc GE-fixed-large random_generator 10**18-1 10**18-1
+tc GE-fixed-largest random_generator 10**18 10**18
+for i in {001..023}; do
+tc GE-random-$i random_generator 101 10**18-2
+done;

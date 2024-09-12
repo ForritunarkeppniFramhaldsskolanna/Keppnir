@@ -1,0 +1,52 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution arnar_100.cpp opt
+
+compile random_generator.py
+
+samplegroup
+limits max_n=10 max_q=10
+sample 1
+sample 2
+
+group GA 10
+limits max_n=1 max_q=1
+tc 1
+for i in {01..10}; do
+tc GA-$i random_generator 1 1 1 1
+done;
+
+group GB 15
+limits max_n=1 max_q=1000
+include_group GA
+for i in {01..10}; do
+tc GB-$i random_generator 1 1 1 1000
+done;
+
+group GC 20
+limits max_n=1000 max_q=1
+include_group GA
+for i in {01..10}; do
+tc GC-$i random_generator 1 1000 1 1
+done;
+
+group GD 25
+limits max_n=1000 max_q=1000
+tc 2
+include_group GB
+include_group GC
+for i in {01..10}; do
+tc GD-$i random_generator 2 1000 2 1000
+done;
+
+group GE 30
+limits max_n=200000 max_q=200000
+include_group GD
+tc GE-01 random_generator 200000 200000 200000 200000
+tc GE-02 random_generator 1 1 200000 200000
+tc GE-03 random_generator 200000 200000 1 1
+for i in {04..06}; do
+tc GE-$i random_generator 1 200000 1 200000
+done;

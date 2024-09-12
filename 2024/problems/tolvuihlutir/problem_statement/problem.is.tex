@@ -1,0 +1,37 @@
+\problemname{Tölvuíhlutir}
+\illustration{0.4}{dwave}{Mynd fengin af \href{https://commons.wikimedia.org/wiki/File:A\_Wafer\_of\_the\_Latest\_D-Wave\_Quantum\_Computers\_(39188583425).jpg}{commons.wikimedia.org}}
+
+Magni er að fjárfesta í nýrri borðtölvu og þá kemur að því mikilvæga atriði að skipuleggja hvaða íhluti ætti að kaupa til að mynda borðtölvuna.
+Hann er auðvitað ekki með óendanlegt fjármagn, svo flækjan felst í því að fá sem bestu tölvuna fyrir þann pening sem hann hefur. Í raunheiminum
+eru auðvitað mismunandi íhlutir misgóðir í ólík verk, en til einföldunar munum við líta á meðalgetu hvers íhluts. Ef hann kaupir mjög dýrt og
+flott skjákort, en mjög slappan örgjörva mun skjákortið ekki geta notið alla sína getu. Heildargeta tölvunnar ákveðst af lélegasta íhlutnum.
+Getur þú hjálpað Magna að eignast sem bestu tölvuna?
+
+\section*{Inntak}
+Fyrsta línan inniheldur þrjár jákvæðar heiltölur $n, k$ og $p$, þar sem $n$ er fjöldi íhluta í boði, $k$ er fjöldi tegunda íhluta og
+Ávallt gildir að $1 \leq k \leq n$.
+Gildið $p$ er hversu mikinn pening Magni hefur til að spreða í borðtölvu, það uppfyllir $0 \leq p \leq 10^9$.
+Næsta lína inniheldur $k$ strengi með nöfnum íhlutategundanna, aðskilin með bilum. Næstu $n$ línur munu hver lýsa einum íhlut. Hver
+slík lína inniheldur streng $s$ og tvær heiltölur $v, g$. Strengurinn lýsir tegund íhlutsins og er ávallt einn þeirra $k$ sem komu fyrir
+ofar í inntaki. $v$ lýsir verði íhlutsins og uppfyllir $0 \leq v \leq 10^9$. Loks lýsir $g$ getu tölvunnar ef þessi íhlutur er settur
+í tölvuna og uppfyllir $0 \leq g \leq 10^9$. Tölvan þarf að innihalda nákvæmlega einn íhlut af hverri tegund og er þá geta tölvunnar lægsta
+geta þessarra $k$ íhluta.
+
+Allir strengir í inntaki eru mest $10$ stafir að lengd og innihalda aðeins enska há- og lágstafi. Heildarlengd allra strengja í inntaki
+verður mest $6 \cdot 10^5$ stafir.
+
+\section*{Úttak}
+Prentaðu getu bestu tölvunnar sem Magni getur eignað sér fyrir peninginn sem hann hefur. Ef peningurinn dugar ekki til að kaupa neina tölvu
+prentaðu í staðinn \texttt{O nei!}.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 20   & $1 \leq n \leq 1\,000$, engir tveir íhlutir eru af sömu gerð \\ \hline
+2     & 20   & $1 \leq n \leq 1\,000$, geta sérhvers íhlutar er mest $100\,000$ \\ \hline
+3     & 20   & $1 \leq n \leq 1\,000$, $k = 1$ \\ \hline
+4     & 20   & $1 \leq n \leq 1\,000$ \\ \hline
+5     & 20   & $1 \leq n \leq 100\,000$ \\ \hline
+\end{tabular}
+

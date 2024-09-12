@@ -1,0 +1,40 @@
+\problemname{Rúnnfræði}
+\illustration{0.5}{rounding}{Image from \href{https://commons.wikimedia.org/wiki/File:Comparison\_rounding\_graphs\_SMIL.svg}{commons.wikimedia.org}}
+
+Dagur is working on the homework he was assigned in the statistics course he is taking.
+Dagur is however not sure whether he should be rounding his answers or truncating them.
+If his answer were $123.456$ then he could round to the next hundredth and get $123.46$. 
+If he however truncates to the same accuracy he gets $123.45$.
+Dagur always rounds up on fives, so $123.45$ rounded to tenths $123.5$.
+More precisely, to round we start by choosing a power of $10$.
+Next we change our number to the closest integer multiple of this power of $10$,
+choosing the larger multiple in case of a tie.
+When we truncate we also start by choosing a power of $10$.
+But instead of choosing the closest integer multiple we choose the largest integer multiple
+of this power of $10$ that is not larger than our number.
+To try to figure out whether he should be rounding or truncating he looks at examples from his teacher.
+Can you help him try to figure out if his teacher is rounding or truncating?
+
+\section*{Input}
+The input contains two lines, each with one real number.
+These values will never be negative and will always have at least one digit after the decimal point.
+The last digit after a decimal point will not be $0$ if there is more than one digit after the decimal point.
+The second value always has strictly fewer digits after the decimal point.
+Each value will have at most $5$ digits before the decimal point.
+It is guaranteed that the second value can be achieved by rounding or truncating the first value, or possibly both.
+
+\section*{Output}
+If the teacher must be rounding and not truncating, print \texttt{Runnun}.
+If the teacher must be truncating and not rounding, print \texttt{Styfun}.
+Otherwise print \texttt{Veit ekki}.
+
+\section*{Scoring}
+\begin{tabular}{|l|l|l|}
+\hline
+Group & Points & Constraints \\ \hline
+1     & 20   & Both values are $< 0.5$, at most $5$ digits after the decimal point. \\ \hline
+2     & 30   & At most $5$ digits after the decimal point, generally easier cases. \\ \hline
+3     & 30   & At most $5$ digits after the decimal point. \\ \hline
+4     & 10   & At most $500$ digits after the decimal point. \\ \hline
+5     & 10   & At most $1\,000\,000$ digits after the decimal point. \\ \hline
+\end{tabular}

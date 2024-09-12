@@ -1,0 +1,17 @@
+16
++ user System
+= 10.0.0.1 10.0.0.1 user Hannes
+= 10.0.0.2 10.0.0.2 user Arnar
++ country IS
++ state -
++ city Reykjavik
+= 10.0.0.2 10.0.0.3 city Kopavogur
+? 10.0.0.2
+= 10.0.0.192 10.0.0.254 country US
+= 10.0.0.192 10.0.0.224 state Texas
+= 10.0.0.192 10.0.0.196 city Waco
+= 10.0.0.194 10.0.0.195 user Fredrik
+? 10.0.0.195
+- state
+? 10.0.0.1
+? 10.0.0.3

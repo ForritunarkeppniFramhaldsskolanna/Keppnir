@@ -1,0 +1,82 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution hannes_100.py
+
+compile random_generator.py
+
+tiny_n=10
+tiny_m=10
+small_n=500
+small_m=500
+nm_bound=500000
+
+
+samplegroup
+limits min_n=0 max_n=$nm_bound min_m=0 max_m=$nm_bound min_nm=0 max_nm=$nm_bound
+sample 1
+sample 2
+sample 3
+sample 4
+
+group GA 10
+limits min_n=1 max_n=1 min_m=1 max_m=$tiny_m min_nm=1 max_nm=$nm_bound
+for i in {1..10}; do
+tc GA-$i random_generator 1 1 $i $i ordered
+done;
+tc GA-edge random_generator 1 1 $tiny_m $tiny_m break_wrong_io
+
+group GB 10
+limits min_n=0 max_n=$tiny_n min_m=0 max_m=0 min_nm=0 max_nm=0
+tc 4
+tc zero random_generator 0 0 0 0
+for i in {01..10}; do
+if [[ $i == 03 ]]; then
+    continue
+fi
+tc GB-$i random_generator $i $i 0 0
+done;
+
+group GC 10
+limits min_n=0 max_n=0 min_m=0 max_m=$small_m min_nm=0 max_nm=$nm_bound
+tc 3
+tc zero
+for i in {01..15}; do
+tc GC-$i random_generator 0 0 0 $small_m
+done;
+
+group GD 35
+limits min_n=0 max_n=$small_n min_m=0 max_m=$small_m min_nm=0 max_nm=$nm_bound
+include_group GA
+include_group GB
+include_group GC
+tc 1
+tc 2
+for i in {01..15}; do
+tc GD-$i random_generator 1 $small_n 1 $small_m
+done;
+
+group GE 35
+limits min_n=0 max_n=$nm_bound min_m=0 max_m=$nm_bound min_nm=0 max_nm=$nm_bound
+include_group GD
+tc GE-01 random_generator 500000 500000 1 1 last_piece_missing_in_all_boxes
+tc GE-02 random_generator 10000 10000 50 50 last_piece_missing_in_all_boxes
+tc GE-03 random_generator 10000 10000 50 50 first_piece_missing_in_all_boxes
+tc GE-04 random_generator 1000 1000 500 500 last_piece_missing_in_all_boxes
+tc GE-05 random_generator 1000 1000 500 500 first_piece_missing_in_all_boxes
+tc GE-06 random_generator 100 100 5000 5000 last_piece_missing_in_all_boxes
+tc GE-07 random_generator 100 100 5000 5000 first_piece_missing_in_all_boxes
+tc GE-08 random_generator 10 10 50000 50000 last_piece_missing_in_all_boxes
+tc GE-09 random_generator 10 10 50000 50000 first_piece_missing_in_all_boxes
+tc GE-10 random_generator 1 1 500000 500000 last_piece_missing_in_all_boxes
+tc GE-11 random_generator 1 1 500000 500000 first_piece_missing_in_all_boxes
+tc GE-12 random_generator 600 700 600 700
+tc GE-13 random_generator 600 700 600 700
+tc GE-14 random_generator 2 3 100000 200000
+tc GE-15 random_generator 4 5 50000 100000
+tc GE-16 random_generator 4 5 50000 100000
+tc GE-17 random_generator 6 10 10000 50000
+tc GE-18 random_generator 6 10 10000 50000
+tc GE-19 random_generator 11 50 1000 10000
+tc GE-20 random_generator 11 50 1000 10000

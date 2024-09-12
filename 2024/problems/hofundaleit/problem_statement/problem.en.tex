@@ -1,0 +1,37 @@
+\problemname{Höfundaleit}
+\illustration{0.5}{dewey}{Image from \href{https://commons.wikimedia.org/wiki/File:HK\_Wan\_Chai\_Library\_Inside\_Bookcase\_a.jpg}{commons.wikimedia.org}}
+
+Hallgerður Stuttbrók is stood in the library in Reyðarfjörður.
+She is looking for something fun to read, but cannot find the book she has in mind.
+This is because she does not remember the name of the author, and at this library the books are ordered by the names of the authors.
+Can you help her find where the books she wants to read are located?
+
+\section*{Input}
+The first line contains two integers $n$, the number of books at the library, and $q$, the number of books Hallgerður wants to read.
+The next $n$ lines each contain the title and author name of one book, separated by a comma.
+Finally there are $q$ lines, each containing one book title, each giving the title of one book Hallgerður wants to read.
+The titles and author names will only contain English lower and upper case letters along with underscores.
+No two different books will have the same title.
+Each title and author name is at most $25$ letters.
+The total length of all strings in the input will be at most $10^6$ letters.
+
+\section*{Output}
+For each book Hallgerður wants to read, print the location of the book in the order of all books at the library.
+We consider the first book to be number $1$, the second number $2$ and so on.
+If the book is not available at the library, print $-1$ instead.
+If an author has more than one book, the internal order of those books is determined by the title.
+The order is the usual alphabetical order of strings with respect to ASCII-values.
+Note that this is the same order as the built-in sorting functionality of most programming languages produces.
+For example \texttt{sorted} in Python or \texttt{std::sort} in C++.
+
+\section*{Scoring}
+\begin{tabular}{|l|l|l|}
+\hline
+Group & Points & Constraints \\ \hline
+1     & 10   & $0 \leq n, q \leq 100$, no requested books are available at the library. \\ \hline
+2     & 10   & $0 \leq n, q \leq 100$, no author has more than one book, the library books are sorted by author, all books are available. \\ \hline
+3     & 20   & $0 \leq n, q \leq 100$, no author has more than one book, all books are available. \\ \hline
+4     & 20   & $0 \leq n, q \leq 100$, no author has more than one book. \\ \hline
+5     & 20   & $0 \leq n, q \leq 100$. \\ \hline
+6     & 20   & $0 \leq n, q \leq 100\,000$. \\ \hline
+\end{tabular}

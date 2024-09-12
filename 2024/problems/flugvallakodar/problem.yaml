@@ -1,0 +1,12 @@
+name: Flugvallakóðar
+author: Arnar Bjarni Arnarson, Atli Fannar Franklín, Hannes Kristján Hannesson
+source: Forritunarkeppni Framhaldsskólanna 2024
+rights_owner: Forritunarkeppni Framhaldsskólanna
+license: cc by-sa
+type: scoring
+validator_flags: case_sensitive
+grading:
+    show_test_data_groups: true
+limits:
+    time_multiplier: 1.25
+keywords: bitset, prefix sum

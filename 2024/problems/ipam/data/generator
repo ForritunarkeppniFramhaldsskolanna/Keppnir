@@ -1,0 +1,87 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+USE_PARALLEL=0
+. ../../../testdata_tools/gen.sh
+
+use_solution atli_port_100.cpp opt
+
+compile random_generator.py
+
+samplegroup
+limits max_q=100 v4zeroes=0 v6=True
+sample 1
+sample 2
+
+LO=900
+HI=1000
+LO_E=9000
+HI_E=10000
+
+GA_START="10.0.0.0"
+GA_END="10.0.0.255"
+GB_START="10.0.0.0"
+GB_END="10.0.255.255"
+GC_START="10.0.0.0"
+GC_END="10.255.255.255"
+GD_START="0.0.0.0"
+GD_END="255.255.255.255"
+GE_START="::"
+GE_END="ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff"
+
+group GA 30
+limits max_q=1000 v4zeroes=3 v6=False
+tc 1
+tc GA-define-get-01 random_generator $HI $HI $GA_START $GA_END define_get 1
+tc GA-define-get-02 random_generator $HI $HI $GA_START $GA_END define_get 500
+tc GA-define-get-03 random_generator $HI $HI $GA_START $GA_END define_get 999
+for i in {01..10}; do
+tc GA-$i random_generator $LO $HI $GA_START $GA_END all
+done;
+
+group GB 25
+limits max_q=1000 v4zeroes=2 v6=False
+include_group GA
+tc GB-define-get-01 random_generator $HI $HI $GB_START $GB_END define_get 1
+tc GB-define-get-02 random_generator $HI $HI $GB_START $GB_END define_get 500
+tc GB-define-get-03 random_generator $HI $HI $GB_START $GB_END define_get 999
+for i in {01..05}; do
+tc GB-$i random_generator $LO $HI $GB_START $GB_END all
+done;
+
+group GC 20
+limits max_q=1000 v4zeroes=1 v6=False
+include_group GB
+tc GC-define-get-01 random_generator $HI $HI $GC_START $GC_END define_get 1
+tc GC-define-get-02 random_generator $HI $HI $GC_START $GC_END define_get 500
+tc GC-define-get-03 random_generator $HI $HI $GC_START $GC_END define_get 999
+for i in {01..05}; do
+tc GC-$i random_generator $LO $HI $GC_START $GC_END all
+done;
+
+group GD 15
+limits max_q=1000 v4zeroes=0 v6=False
+include_group GC
+tc GD-define-get-01 random_generator $HI $HI $GD_START $GD_END define_get 1
+tc GD-define-get-02 random_generator $HI $HI $GD_START $GD_END define_get 500
+tc GD-define-get-03 random_generator $HI $HI $GD_START $GD_END define_get 999
+tc GD-edge-whole-range random_generator $HI $HI $GD_START $GD_END edge_whole_range
+for i in {01..05}; do
+tc GD-$i random_generator $LO $HI $GD_START $GD_END all
+done;
+
+group GE 10
+limits max_q=10000 v4zeroes=0 v6=True
+include_group GD
+tc 2
+tc GE-define-get-01 random_generator $HI_E $HI_E $GE_START $GE_END define_get 1
+tc GE-define-get-02 random_generator 1300 1300 $GE_START $GE_END define_get 300
+tc GE-define-get-03 random_generator 1094 1094 $GE_START $GE_END define_get 547
+tc GE-define-get-04 random_generator 1300 1300 $GE_START $GE_END define_get 1000
+tc GE-define-get-05 random_generator $HI_E $HI_E $GE_START $GE_END define_get 9999
+tc GE-ipv4-fail-01 random_generator $LO_E $HI_E "::fffe:0:fff0" "::ffff:0:f" all
+tc GE-ipv4-fail-02 random_generator $LO_E $HI_E "::ffff:ffff:fff0" "::1:0:0:f" all
+tc GE-edge-whole-range random_generator $HI $HI $GE_START $GE_END edge_whole_range
+tc GE-01 random_generator $LO_E $HI_E "::ffff:0:0" "::ffff:ffff:ffff" all
+for i in {02..06}; do
+tc GE-$i random_generator $LO_E $HI_E $GE_START $GE_END all
+done;

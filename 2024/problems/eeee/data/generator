@@ -1,0 +1,66 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution atli_100.cpp opt
+
+compile random_generator.py
+compile edge_generator.py
+compile chain_generator.py
+compile dupl_generator.py
+
+samplegroup
+limits typ=\"any\" sz=100
+sample 1
+sample 2
+
+group GA 10
+limits typ=\"trivial\" sz=1000
+for i in {01..10}; do
+tc GA-$i random_generator trivial 1000
+done;
+tc GA-edge edge_generator
+desc "Tests full alphabet."
+
+group GB 15
+include_group GA
+tc 1
+limits typ=\"tree\" sz=1000
+for i in {01..20}; do
+tc GB-$i random_generator tree 1000
+done;
+tc GB-chain chain_generator 1000
+desc "Creates a chain of references, maximal nesting"
+tc GB-dupl dupl_generator False 1000
+desc "Tests whether solution handles duplicate references."
+
+group GC 10
+include_group GB
+limits typ=\"tree\" sz=30000
+for i in {01..20}; do
+tc GC-$i random_generator tree 30000
+done;
+tc GC-chain chain_generator 30000
+desc "Creates a chain of references, maximal nesting"
+
+group GD 40
+include_group GB
+limits typ=\"any\" sz=1000
+tc 2
+for i in {01..10}; do
+tc GD-dag-$i random_generator dag 1000
+tc GD-any-$i random_generator any 1000
+done;
+tc GD-dupl dupl_generator True 1000
+desc "Tests whether solution handles duplicate references, with cycles (when ignoring direction)."
+
+group GE 25
+include_group GC
+include_group GD
+limits typ=\"any\" sz=30000
+for i in {01..10}; do
+tc GE-dag-$i random_generator dag 30000
+tc GE-any-$i random_generator any 30000
+done;
+tc GE-dupl dupl_generator True 30000
+desc "Tests whether solution handles duplicate references, with cycles (when ignoring direction)."

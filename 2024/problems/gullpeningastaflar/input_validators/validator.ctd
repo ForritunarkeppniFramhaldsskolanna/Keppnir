@@ -1,0 +1,2 @@
+INT(1, 1024, n) SPACE INT(0, n) NEWLINE
+EOF

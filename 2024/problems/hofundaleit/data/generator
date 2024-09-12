@@ -1,0 +1,59 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution atli_100.py opt
+
+compile random_generator.py
+
+samplegroup
+limits min_n=0 max_n=10 max_q=10 exists=0 unique=False order=False
+sample 1
+sample 2
+
+group GA 10
+limits min_n=0 max_n=100 max_q=100 exists=-1 unique=False order=False
+for i in {01..10}; do
+tc GA-$i random_generator 100 100 -1 False False
+done;
+tc GA-nobooks random_generator 0 100 False False False
+tc GAB-empty random_generator 0 0 False False False
+
+group GB 10
+limits min_n=0 max_n=100 max_q=100 exists=1 unique=True order=True
+tc 1
+tc GAB-empty
+for i in {01..10}; do
+tc GB-$i random_generator 100 100 1 True True
+done;
+
+group GC 20
+limits min_n=0 max_n=100 max_q=100 exists=1 unique=True order=False
+include_group GB
+for i in {01..10}; do
+tc GC-$i random_generator 100 100 1 True False
+done;
+
+group GD 20
+limits min_n=0 max_n=100 max_q=100 exists=0 unique=True order=False
+include_group GC
+for i in {01..10}; do
+tc GD-$i random_generator 100 100 0 True False
+done;
+
+group GE 20
+tc 2
+limits min_n=0 max_n=100 max_q=100 exists=0 unique=False order=False
+include_group GA
+include_group GD
+for i in {01..10}; do
+tc GE-$i random_generator 100 100 0 False False
+done;
+
+group GF 20
+limits min_n=0 max_n=100000 max_q=100000 exists=False unique=False order=False
+include_group GE
+for i in {01..05}; do
+tc GF-$i random_generator 100000 100000 0 False False
+done;
+

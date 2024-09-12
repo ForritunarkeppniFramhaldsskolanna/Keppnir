@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution konrad_100.py
+
+compile random_generator.py
+
+samplegroup
+limits min_y=1993 max_y=2024
+sample 1
+sample 2
+
+group GA 20
+limits min_y=2020 max_y=2020
+tc 1
+
+group GB 20
+limits min_y=2020 max_y=2024
+include_group GA
+tc 2
+for i in {2021..2023}; do
+    tc GB-$(($i-2020)) random_generator $i $i
+done;
+
+group GC 30
+limits min_y=2020 max_y=9999
+include_group GB
+tc GC-01 random_generator 9999 9999
+for i in {02..75}; do
+    tc GC-${i} random_generator 1993 9999
+done;
+
+group GD 30
+limits min_y=1993 max_y=9999
+include_group GC
+for i in {01..27}; do
+    year=$((2020-${i#0}))
+    tc GD-${i} random_generator $year $year
+done;

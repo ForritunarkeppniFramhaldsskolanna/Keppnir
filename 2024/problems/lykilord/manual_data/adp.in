@@ -1,0 +1,19 @@
+2 100
+8
+contain at least 8 symbols
+contain at most 20 symbols
+contain at least 1 symbols from abcdefghijklmnopqrstuvwxyz
+contain at least 1 symbols from ABCDEFGHIJKLMNOPQRSTUVWXYZ
+contain at least 1 symbols from 0123456789
+contain at most 0 symbols from "%&'()*+,./:;<=>?[\]^_`{|}~
+not contain 4 consecutive equal symbols
+not contain 4 consecutive incrementing symbols
+8
+contain at least 8 symbols
+contain at most 20 symbols
+contain at least 1 symbols from abcdefghijklmnopqrstuvwxyz
+contain at least 1 symbols from ABCDEFGHIJKLMNOPQRSTUVWXYZ
+contain at least 1 symbols from -!@#$
+contain at most 0 symbols from "%&'()*+,./:;<=>?[\]^_`{|}~
+not contain 4 consecutive equal symbols
+not contain 4 consecutive incrementing symbols

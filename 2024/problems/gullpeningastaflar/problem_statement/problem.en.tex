@@ -1,0 +1,44 @@
+\problemname{Gullpeningastaflar}
+\illustration{0.4}{stacks}{Photo from \href{https://flickr.com/photos/filterforge/8735533688/}{flickr.com}}
+
+In front of you there are $n$ stacks, each containing $n$ gold coins.
+Only one of these stacks contains real gold coins, the other stacks contain counterfeit coins.
+The counterfeit coins are very well made and are nearly indistinguishable from the real ones.
+The only difference is in their weight and even that one is minute.
+The counterfeit coins weigh $n$ units each and the real gold coins weigh $n+1$ units each.
+
+Your goal is to find the stack of real gold coins,
+so that you may take the coins and leave the worthless counterfeit coins behind.
+Since it is difficult to discern between the coins based on their weights, you have brought a scale.
+You can take as many coins from each stack as you wish and place them on the scale.
+The scale will then show you the total weight of the coins.
+The coins then go to their respective stacks after each use of the scale.
+
+Can you find which stack contains real gold in as few weighings as possible?
+
+\section*{Interactivity}
+This is an interactive problem.
+Your program will be tested against an interactive judge which reads the output of your program and prints the input your program receives.
+This interaction follows certain rules:
+
+Your program should first read one line with one integer $n$.
+In the secret test cases the value of $n$ will always be $1\,024$, but in the samples $n$ is smaller.
+
+Then your program can either make a final guess or ask questions to obtain information.
+
+In order to ask a question, your program must write a line starting with the symbol \texttt{?} and
+then $n$ space separated integers, denoting how many coins from each stack you place on the scale.
+Your program should then read one line with one integer, the total weight of the coins on the scale.
+
+Once your program has determined the answer, it should write out the symbol \texttt{!} followed by a space and an integer denoting the number of the stack.
+The stacks are numbered from $1$ to $n$.
+If the answer is incorrect, the program will receive a Wrong Answer verdict. Otherwise, it will be scored as described below.
+
+The task has a testing tool attached to help test your solution.
+
+\section*{Scoring}
+Your program will be run on many test cases and the worst result over all test cases will be used as the final score.
+Your program is scored by the number of questions it asks.
+If your program asks fewer than $2n$ questions, it will receive a score.
+Fewer questions result in a higher score and the maximum score is $100$.
+If your program asks $2n$ or more questions, it will receive a Wrong Answer verdict.

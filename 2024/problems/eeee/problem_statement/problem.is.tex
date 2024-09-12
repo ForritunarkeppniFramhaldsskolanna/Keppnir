@@ -1,0 +1,55 @@
+\problemname{Enn Eitt EEEE Erfiði}
+\illustration{0.5}{ddi}{Mynd fengin af \href{https://en.wikipedia.org/wiki/DDI}{wikipedia.com}}
+
+Arnar er gersamlega kominn með upp í kok af öllum skammstöfunum og styttingum í vinnunni. Allt frá DDI, i13n, o11y í LASIK.
+Það er ekki hægt að lesa hálfa blaðsíðu án þess að þurfa stoppa til að fletta upp allskyns skammstöfunum. Að lokum ákveður hann
+að fara gera eitthvað í þessu og ætlar að taka saman flækjustigið á gögnunum sínum til að sýna hvað vandinn er orðinn mikill.
+Hann er hins vegar auðvitað upptekinn við að vinna í vinnunni, og fær því þig til að reikna út flækjustig allra skammstafana í
+gögnunum sínum. Flækjustig skammstöfunar er gefið með fjölda skammstafana sem þarf að skilgreina til þess að skilja hvað það merkir.
+Til dæmis er flækjustigið á LASER (Light Amplified by Stimulated Emission of Radiation) aðeins $1$ því það vísar ekki í neinar fleiri
+skammstafanir. Hins vegar er flækjustigið á DDI $5$ því það vísar í DNS, DHCP og IPAM, þar af vísar IPAM sér í lagi í IP.
+Athugið að skammstafanir getað vísað í sjálfa sig og í hvora aðra með rásuðum hætti.
+
+\section*{Inntak}
+Fyrsta línan inniheldur eina heiltölu $1 \leq n \leq 30 \, 000$, fjölda skammstafana sem skilgreind eru í inntaki.
+Næstu $n$ línur innihalda hver eina skilgreiningu á skammstöfun. Línan byrjar á skammstöfuninni sem á að skilgreina og svo kemur
+tala $0 \leq k \leq n$, fjöldi orða sem hún vísar í. Loks koma svo $k$ orð fyrir. Orðin innihalda annað hvort bara litla eða bara stóra
+stafi. Orðin með stórum stöfum eru aðrar skammstafanir, en hin ekki.
+Allir strengir í inntaki eru af lengd mest $20$ og innihalda aðeins enska stafi. Samtals lengd allra strengja í inntaki er
+mest $2 \, 000 \, 000$.
+Allar skammstafanir sem vísað er í inntaki eru skilgreindar einhvers staðar í inntaki.
+
+\section*{Úttak}
+Fyrir hverja skammstöfun sem kemur fyrir í inntaki skal prenta flækjustig hennar á sinni eigin línu, í sömu röð og
+skammstafanirnar eru skilgreindar í inntaki.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 10   & Skammstafanir vísa ekki í aðrar skammstafanir, $1 \leq n \leq 1 \, 000$. \\ \hline
+2     & 15   & Allar skammstafanir eru skilgreindar áður en vísað er í þær og engar tvær skammstafanir vísa í sömu skammstöfunina, $1 \leq n \leq 1 \, 000$. \\ \hline
+3     & 10   & Allar skammstafanir eru skilgreindar áður en vísað er í þær og engar tvær skammstafanir vísa í sömu skammstöfunina. \\ \hline
+4     & 40   & $1 \leq n \leq 1\, 000$.  \\ \hline
+5     & 25   & Engar frekari takmarkanir.  \\ \hline
+\end{tabular}
+
+\section*{Útskýring á sýnidæmum}
+
+Í fyrra sýnidæminu vísa LASER, IP, DNS og DHCP ekki í neinar aðrar skammstafanir, svo aðeins þarf að skilgreina skammstafanirnar sjálfar. 
+Því er flækjustig þeirra $1$. 
+LASIK vísar hins vegar í LASER og er því með flækjustig $2$ frekar en $1$, og eins er $IPAM$ með flækjustig $2$.
+Til að skilja DDI hins vegar þarf að skilgreina DNS, DHCP og IPAM. 
+Hins vegar er flækjustigið $5$ en ekki $4$ því það þarf þar að auki að skilgreina IP til að skilja IPAM.
+
+Í seinna sýnidæmi eru YARA, DB og UNIX með flækjustig $1$. 
+Núna eru hins vegar sumar skammstafanir sem vísa í sjálfa sig.
+Þetta hefur hins vegar ekki áhrif á flækjustig. 
+Til að skilja PHP þarf bara að skilgreina PHP, þó svo að skilgreiningin vísi aftur í PHP, svo flækjustigið er $1$.
+Svipað fyrir XAMPP skiptir bara máli að við þurfum að skilgreina DB og PHP til viðbótar, sem gefur flækjustig $3$.
+Eins er GNU með flækjustig $2$.
+Næst sjáum við að HIRD og HURD vísa í hvort annað, svo til að skilja annað hvort þurfum við að skilja bæði.
+Saman vísa þau bara í UNIX, svo til að skilja annað þurfum við að skilja skammstafanirnar HIRD, HURD og UNIX.
+Því er flækjustig beggja $3$.
+Loks sjáum við að GNULINUX vísar í UNIX tvisvar, en það breytir ekki hvað þarf að skilgreina margar skammstafanir samtals.
+Því þarf bara að skilgreina GNULINUX, UNIX og GNU, sem gefur flækjustig $3$.

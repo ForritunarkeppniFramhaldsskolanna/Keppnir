@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution atli_100.py opt
+
+compile random_generator.py
+
+samplegroup
+limits max_n=2
+sample 1
+sample 2
+sample 3
+
+group GA 30
+limits max_n=3
+tc 1
+tc 2
+tc 3
+tc GA-3 random_generator 3 3
+
+group GB 30
+limits max_n=10
+include_group GA
+for i in {4..10}; do
+tc GB-$i random_generator $i $i
+done;
+
+group GC 20
+limits max_n=100
+include_group GB
+for i in {0..4}; do
+tc GC-$i random_generator 11 99
+done;
+tc GC-max random_generator 100 100
+
+
+group GD 20
+limits max_n=1000
+include_group GC
+for i in {0..4}; do
+tc GD-$i random_generator 101 999
+done;
+tc GD-max random_generator 1000 1000

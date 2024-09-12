@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution hannes_100.py
+
+compile random_generator.py
+
+samplegroup
+limits min_n=1 max_n=100
+sample 1
+sample 2
+
+group GA 100
+limits min_n=1 max_n=100
+tc 1
+tc 2
+for i in {1..10}; do
+tc GA-$i random_generator 1 100
+done;
+tc GA-edge-long random_generator 100 100
+tc GA-edge-short random_generator 1 1
+

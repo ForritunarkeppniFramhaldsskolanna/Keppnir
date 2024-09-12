@@ -1,0 +1,43 @@
+\problemname{Púsluspil}
+\illustration{0.4}{puzzle}{Image from \href{https://flic.kr/p/jagpmg}{flickr.com}}
+
+Davíð really enjoys jigsaw puzzles, so much so that he recently bought one from Baldi's Puzzle Shop.
+He eagerly goes home and starts working on the puzzle. When he's almost done, Davíð realises that there are some puzzle pieces missing in the almost completed puzzle,
+but the box is empty! Clearly, some puzzle pieces are missing from the puzzle box. He goes to Baldi and explains what happened,
+and Baldi feels so bad about it that he gives Davíð another puzzle of the same kind, but allows him to keep the faulty box.
+Davíð goes home to finish the puzzle image and realises that there are also some missing pieces in the new box. However, it turns out that these were different puzzle pieces missing from the first box.
+
+Now Davíð turns to you to determine if he can even finish the puzzle.
+
+Davíð has had to go to Baldi $n$ times to get a puzzle box, thus he has $n$ boxes he can use.
+A completed puzzle has $m$ puzzle pieces, and box number $i$ has $k_i$ puzzle pieces.
+
+Puzzle pieces are numbered with numbers from $1$ to $m$. Puzzle piece $p$ in box $a$ is the same puzzle piece as $p$ in box $b$, where $a$ and $b$ are puzzle boxes.
+
+A puzzle is considered completed when all puzzle pieces, $1, 2, \ldots, m$, come together to form the puzzle image.
+
+Note that the puzzles are not necessarily in sorted order unless otherwise stated.
+
+\section*{Input}
+The first line contains two integers $n$ and $m$, separated by a space.
+
+The next $n$ lines describe each puzzle box.
+A description of a puzzle box starts with an integer $k_i$, the number of puzzles in box $i$, where $0 \leq k_i \leq m$.
+Next follow $k_i$ integers $p_1, p_2, \ldots, p_{k_i}$, representing the puzzle pieces in box $i$, where $1 \leq p_i \leq m$.
+The numbers are separated by spaces.
+
+It is always guaranteed that $0 \leq n \cdot m \leq 500\,000$.
+
+\section*{Output}
+Output \texttt{"Jebb"} if Davíð can complete the puzzle, or \texttt{"Neibb"} if he cannot.
+
+\section*{Scoring}
+\begin{tabular}{|l|l|l|}
+\hline
+Group & Points & Constraints \\ \hline
+1     & 10   & $n = 1, 1 \leq m \leq 100$, pieces are given in ascending order, the first piece is $1$. \\ \hline
+2     & 10   & $0 \leq n \leq 100, m = 0$ \\ \hline
+3     & 10   & $n = 0, 0 \leq m \leq 100$ \\ \hline
+4     & 35   & $1 \leq n, m \leq 500$\\ \hline
+5     & 35   & $1 \leq n, m \leq 500\,000$ \\ \hline
+\end{tabular}

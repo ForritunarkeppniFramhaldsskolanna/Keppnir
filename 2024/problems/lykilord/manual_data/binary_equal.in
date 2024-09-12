@@ -1,0 +1,5 @@
+1 65
+3
+contain at most 0 symbols from !"#$%&'()*+,-./:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~23456789
+not contain 2 consecutive incrementing symbols
+not contain 2 consecutive decrementing symbols

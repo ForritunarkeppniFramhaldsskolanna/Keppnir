@@ -1,0 +1,46 @@
+\problemname{Aflmælingar}
+\illustration{0.5}{nixie}{Image taken from \href{https://commons.wikimedia.org/wiki/File:\%D0\%98H-14\_(IN-14)\_Nixie\_Tubes\_Displaying\_\%2225\%22.jpg}{commons.wikimedia.org}}
+
+Hrolleifur has just gotten his hands on $300$ power generators and one measuring device. He can set each power generator to a value between $0\%$ and $100\%$ and
+then turn them all on to get a measurement of their power. The power generators can only be set to integer percentages. The measuring device then
+reads the sum of all the outputs of the power generators. The measuring device is however very old and uses Nixie tubes, and you only have $K$
+tubes. Thus you only get the last $K$ digits of the answer.
+
+Each power generator $i$ has some base power $s_i$, so if it is set to $p_i$ percent power it outputs $p_i \cdot s_i$.
+In particular, $s_i$ is the power output at $1$ percent.
+Hrolleifur only has so much time, so now he wants to find out the base power of each power generator in only $q$ measurements.
+You know that each base power is some integer between $0$ and $99$, inclusive.
+Can you help him?
+
+\section*{Interactivity}
+This is an interactive problem. Your solution will be tested against an interactive
+judge which reads the output of your solution and prints the input your solution
+receives. This interaction follows certain rules:
+
+The program should read two integers on a single line $K, q$, where $K$ is the number of tubes and $q$ is the number of queries you should perform.
+
+Next your program should print $n$ integers $p_1, \dots, p_n$, the percentage you set each power generator to. 
+After that the program should read a $K$ digit number, the number the measuring device shows.
+
+After $q$ such measurements the submission should print $n$ integers $s_1, \dots, s_n$, the base power of each generator.
+
+Make sure to \texttt{flush} after each guess, for example using
+\begin{itemize}
+    \item \texttt{print(..., flush=True)} in Python,
+    \item \texttt{cout << ... << endl;} in C++,
+    \item \texttt{System.out.flush();} in Java.
+\end{itemize}
+
+The sample input shows an interaction with $n = 4, K = 4, q = 2$. 
+The submissions will be run on this sample, but the result will not be factored into the verdict. This means your submission does not need to solve the sample correctly to receive a score.
+
+The task has a testing tool attached to help test your solution.
+
+\section*{Scoring}
+\begin{tabular}{|l|l|l|}
+\hline
+Group & Points & Constraints \\ \hline
+1     & 30   & $K = 2, q = 300, n = 300$. \\ \hline
+2     & 30   & $K = 4, q = 150, n = 300$. \\ \hline
+3     & 40   & $K = 3, q = 200, n = 300$. \\ \hline
+\end{tabular}

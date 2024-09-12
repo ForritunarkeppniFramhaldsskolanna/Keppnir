@@ -1,0 +1,57 @@
+#!/usr/bin/env bash
+PPATH=$(realpath ..)
+. ../../../testdata_tools/gen.sh
+
+use_solution samuel_100.cpp
+
+compile random_generator.py
+
+samplegroup
+limits min_n=1 max_n=20 smite=1
+sample 1
+sample 2
+
+group GA 15
+limits min_n=1 max_n=1 smite=1
+for i in {1..10}; do
+tc GA-$i random_generator 1 1 1
+done;
+
+group GB 15
+limits min_n=2 max_n=2 smite=1
+for i in {1..10}; do
+tc GB-$i random_generator 2 2 1
+done;
+tc 1
+
+group GC 20
+limits min_n=1 max_n=8 smite=0
+for i in {1..10}; do
+tc GC-$i random_generator 1 8 0
+done;
+
+group GD 20
+limits min_n=1 max_n=8 smite=1
+include_group GA
+include_group GB
+include_group GC
+for i in {1..10}; do
+tc GD-$i random_generator 1 8 1
+done;
+tc 2
+
+group GE 15
+limits min_n=1 max_n=16 smite=0
+include_group GC
+for i in {1..10}; do
+tc GE-$i random_generator 1 16 0
+done;
+
+group GF 15
+limits min_n=1 max_n=16 smite=1
+include_group GD
+include_group GE
+for i in {1..10}; do
+tc GF-$i random_generator 1 16 1
+done;
+
