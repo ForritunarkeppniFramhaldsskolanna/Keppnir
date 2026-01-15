@@ -1,4 +1,4 @@
-# Forritunarkeppni Framhaldsskólanna 2023
+# Forritunarkeppni Framhaldsskólanna 2024
 
 ## Dómaraþjónn
 
