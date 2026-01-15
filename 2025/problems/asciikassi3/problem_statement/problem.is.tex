@@ -1,0 +1,49 @@
+\problemname{ASCII kassi 3}
+\illustration{0.4}{chair}{Mynd fengin af \href{https://commons.wikimedia.org/wiki/File:Chair-ascii.png}{wikimedia.commons.org}}
+
+Önnur forritunarkeppni, annað dæmi um ASCII kassa! 
+Hingað til hefur öllum ASCII kössunum vantað eitthvað.
+Listaspírurnar í keppninni kvörtuðu yfir að það vantaði dýpt í þetta, svo í ár
+þarf að bæta við þriðju víddina í myndirnar.
+
+Til að teikna kassann skal nota táknin \texttt{+}, \texttt{-}, \texttt{|},
+\texttt{/} og \texttt{x}.
+Lóðréttar brúnir eru teiknaðar með \texttt{|} og láréttar brúnir með \texttt{-}.
+Hornpunktar kassans eru teiknaðir með \texttt{+} og \texttt{/} er fyrir brúnir sem
+liggja burt frá sjónarmiði okkar og loks er \texttt{x} notað ef tvær
+ekki samsíða brúnir kassans skarast á myndinni. Ef brún og hornpunktur skarast skal áfram
+tákna það með \texttt{+}.
+
+Til að kassinn birtist rétt þarf að passa að setja réttan fjölda bila á undan og 
+milli stafanna í hverri línu.
+Þar að auki má ekki prenta nein auka bil á eftir kassanum í hverri línu, heldur á að 
+koma nýlínustafur beint á eftir seinasta tákni kassans í hverri línu.
+
+Kassinn hefur einhverja tiltekna hæð $h \geq 1$, breidd $b \geq 1$ og dýpt $d \geq 1$.
+Lóðrétta brúnin eru þá $2$ stykki \texttt{+} og $(h - 2)$ stykki \texttt{|}, nema ef
+$h = 1$ þá er brúnin aðeins eitt \texttt{+}.
+Eins er lárétta brúnin $2$ stykki \texttt{+} og $(b - 2)$ stykki \texttt{-} og eins ef
+$b = 1$ er brúnin í staðinn aðeins eitt \texttt{+}.
+
+Þetta myndar þá fremri hlið kassans, sem er $h \times b$ rétthyrningur. Ef $d > 1$ þarf
+næst að teikna $(d - 2)$ stykki $\texttt{/}$ sem liggja upp og til hægri frá öllum
+hornpunktum fremri hliðarinnar. Svo þarf að teikna aftari hlið kassans með sama hætti
+og fremri hlið við endann á $\texttt{/}$ rununni.
+
+\section*{Inntak}
+Fyrsta og eina lína inntaksins inniheldur þrjár heiltölur $h, b, d$, hliðarlengdir
+kassans eins og lýst er að ofan.
+
+\section*{Úttak}
+Prentið kassa með gefnu hliðarlengdunum, eins og lýst er að ofan.
+Hafið í huga að úttakið þarf að vera nákvæmlega rétt, meira að segja bilstafirnir.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 20   & $1 \leq h, b, d \leq 3$. \\ \hline
+2     & 30   & $2 \leq h, b, d \leq 8$. \\ \hline
+3     & 20   & $d = 1, 1 \leq h, b \leq 100$. \\ \hline
+4     & 30   & $1 \leq h, b, d \leq 100$. \\ \hline
+\end{tabular}

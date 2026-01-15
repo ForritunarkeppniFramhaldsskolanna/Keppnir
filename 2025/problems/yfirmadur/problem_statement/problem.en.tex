@@ -1,0 +1,71 @@
+\problemname{Supervisor}
+\illustration{0.4}{hierarchy}{Image taken from \href{https://www.coursesidekick.com/management/study-guides/wmopen-organizationalbehavior/organizational-structures-and-their-history}{coursesidekick.com}}
+
+At large companies it is often quite a lot of work to keep
+track of who is in charge of what. To try to make things
+easier, it is common to assign everyone to a supervisor, except
+the CEO who is their own supervisor. This works well, but then
+people start quitting their job and others get new jobs
+at the company, so all this planning has to be updated
+accordingly.
+
+To save the day, a program that maintains all of this info
+is needed, something that can tell any given person who
+their supervisor is.
+
+If an employee quits, their supervisor inherits all of their
+subordinates. This means if $x$ is the supervisor of $y$, $y$
+is the supervisor of $z$ and $y$ quits, $x$ will be the supervisor
+of $z$ afterwards. When an employee starts at the company
+they are assigned a supervisor. The CEO of the company will never
+quit or be replaced, because without them the company
+would go bankrupt overnight (according to them anyway).
+
+\section*{Input}
+The first line of input contains two integers $n, q$,
+the number of employees at the start and the number of
+queries that will follow. It will always hold that
+$1 \leq n, q \leq 200\,000$. The employees are numbered
+$1, 2, \dots, n$ where $1$ is the CEO\@.
+Next there is a line with $n$ integers $y_1, y_2, \dots, y_n$.
+Here $y_i$ gives the number of the employee that is the supervisor
+of employee number $i$, so $1 \leq y_i \leq n$.
+
+Next there are $q$ lines, each with one query.
+Each line begins with a \texttt{+}, \texttt{-} or \texttt{?}.
+In all cases an integer $x$ will follow on the same line.
+
+If the line begins with a \texttt{+} this means a new
+employee is starting whose supervisor will be $x$.
+The number of the new employee is the lowest available number.
+At the start this number is $n + 1$, but if some employee
+quits that number becomes available. So if $2, 8$ and $11$
+quit the lowest available number is $2$. But if no one
+quits and $n + 1$ was just taken, the next available number
+is $n + 2$ and so on.
+
+If the line starts with a \texttt{-} it means that
+employee number $x$ just quit.
+
+Finally if the line starts with a \texttt{?} you should
+output the number of the supervisor of employee $x$, where
+$x$ will always be the number of an employee who is currently
+working at the company.
+There will never be anyone who is their own supervisor, directly
+or indirectly, except the CEO\@.
+
+\section*{Output}
+For each query starting with a \texttt{?} print the number
+of the supervisor in question on its own line.
+
+\section*{Scoring}
+\begin{tabular}{|l|l|l|}
+\hline
+Group & Points & Constraints \\ \hline
+1     & 10   & $n, q \leq 10$. \\ \hline
+2     & 15   & $n, q \leq 1\,000$. \\ \hline
+3     & 20   & No \texttt{+} or \texttt{-} queries. \\ \hline
+4     & 20   & No \texttt{-} queries. \\ \hline
+5     & 35   & No further constraints. \\ \hline
+\end{tabular}
+

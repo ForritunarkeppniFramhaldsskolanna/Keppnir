@@ -1,0 +1,51 @@
+#!/usr/bin/env bash
+export PPATH
+PPATH=$(realpath ..)
+# shellcheck source-path=SCRIPTDIR
+. ../../../testdata_tools/gen.sh
+
+use_solution atli.cpp opt
+
+compile echo_generator.py
+
+samplegroup
+limits max_n=200
+sample 1
+sample 2
+sample 3
+
+group GA 20
+limits max_n=1
+tc GA-1 echo_generator 1
+desc "Case n = 1."
+
+group GB 30
+limits max_n=5
+include_group GA
+tc 1
+tc 2
+for i in {4..5}; do
+    tc "GB-$i" echo_generator "$i"
+    desc "Case n = $i."
+done;
+
+group GC 40
+limits max_n=100
+include_group GB
+for i in {006..100}; do
+    tc "GC-$i" echo_generator "$i"
+    desc "Case n = $i."
+done;
+
+group GD 10
+limits max_n=501
+include_group GC
+for i in {101..180}; do
+    tc "GD-$i" echo_generator "$i"
+    desc "Case n = $i."
+done;
+tc 3
+for i in 181 182 183 220 250 300 400 500 501; do
+    tc "GD-$i" echo_generator "$i"
+    desc "Case n = $i."
+done;

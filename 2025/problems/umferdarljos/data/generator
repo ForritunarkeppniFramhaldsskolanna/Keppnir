@@ -1,0 +1,113 @@
+#!/usr/bin/env bash
+export PPATH
+PPATH=$(realpath ..)
+# shellcheck source-path=SCRIPTDIR
+. ../../../testdata_tools/gen.sh
+
+use_solution arnar/arnar_100.cpp opt
+
+compile axis_aligned_generator.py
+compile edge_generator.py
+compile path_generator.py
+compile random_generator.py
+
+samplegroup
+sample_manual 1
+sample 2
+
+wait
+
+#for f in sample/*.in; do
+#    echo "Generating image for $f"
+#    pypy3 drawer.py "${f%.in}.png" < "$f"
+#done
+
+group GA 10
+tc GA-double-stress-01 edge_generator double_stress
+tc GA-double-stress-02 edge_generator double_stress_2
+tc GA-horizontal edge_generator horizontal
+tc GA-vertical edge_generator vertical
+tc GA-north-east edge_generator NE
+tc GA-north-west edge_generator NW
+tc GA-south-east edge_generator SE
+tc GA-south-west edge_generator SW
+for i in {01..30}; do
+    tc "GA-$i" random_generator 2 2
+done;
+
+wait
+
+#for f in secret/GA/*GA*.in; do
+#    echo "Generating image for $f"
+#    pypy3 drawer.py "${f%.in}.png" < "$f"
+#done
+
+group GB 20
+include_group GA
+tc 1
+tc 2
+tc "GB-bounding-box" edge_generator bounding_box
+for i in {01..20}; do
+    tc "GB-$i" random_generator 3 10
+done;
+
+wait
+
+#for f in secret/GB/*GB*.in; do
+#    echo "Generating image for $f"
+#    pypy3 drawer.py "${f%.in}.png" < "$f"
+#done
+
+group GC 20
+include_group GB
+for i in {01..20}; do
+    tc "GC-$i" random_generator 11 1000
+done;
+
+wait
+
+#for f in secret/GC/*GC*.in; do
+#    echo "Generating image for $f"
+#    pypy3 drawer.py "${f%.in}.png" < "$f"
+#done
+
+group GD 20
+tc GA-horizontal
+tc GA-vertical
+tc GA-north-east
+tc GA-north-west
+tc GA-south-east
+tc GA-south-west
+tc GB-bounding-box
+for i in {01..10}; do
+    tc "GD-random-small-$i" axis_aligned_generator 2 100 endpoints
+done;
+for i in {01..05}; do
+    tc "GD-random-large-$i" axis_aligned_generator 4000 5000 endpoints
+done;
+
+for orientation in "horizontal" "vertical"; do
+    tc "GD-$orientation-01" path_generator 90000 100000 1 1 $orientation
+    tc "GD-$orientation-02" path_generator 90000 100000 2 2 $orientation
+    tc "GD-$orientation-03" path_generator 90000 100000 300 350 $orientation
+    tc "GD-$orientation-04" path_generator 90000 100000 45000 45000 $orientation
+    tc "GD-$orientation-05" path_generator 100000 100000 100000 100000 $orientation
+done;
+
+group GE 20
+include_group GD
+for i in {01..10}; do
+    tc "GE-random-small-$i" axis_aligned_generator 2 100 any
+done;
+for i in {01..05}; do
+    tc "GE-random-large-$i" axis_aligned_generator 4000 5000 any
+done;
+
+group GF 10
+include_group GC
+include_group GE
+tc "GF-random-01" random_generator 1001 4999
+tc "GF-random-02" random_generator 1001 4999
+tc "GF-random-03" random_generator 5000 5000
+
+

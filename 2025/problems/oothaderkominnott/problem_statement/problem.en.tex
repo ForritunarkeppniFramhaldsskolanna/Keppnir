@@ -1,0 +1,35 @@
+\problemname{Uh-Oh, It Is Nighttime!}
+\illustration{0.4}{nighttime}{Image from Minecraft}
+
+Alex is playing the famous game Minecraft and has been travelling all day trying to find the \emph{perfect biome} for her base.
+What she does not realise is that in the time she has travelled, nighttime has arrived.
+She only realises once she starts seeing mobs spawning and starts panicking because she has nothing to defend herself with but her bare fists, which is not effective.
+She needs to make a temporary base and quick!
+Help Alex find the amount of dirt blocks she will need for her temporary base.
+
+The temporary base is a cuboid that is empty on the inside so that Alex can stay protected throughout the night.
+All four walls have a thickness of $1$ with the height on the inside as $h-1$.
+Since Alex is $2$ blocks tall and $1$ block wide and deep, the
+house needs to be at least $3$ blocks in each dimension and the ground is already made of dirt blocks.
+
+\section*{Input}
+The first line contains one integer $i$, the total number of side lengths we receive as input.
+Then there are $i$ lines, for however many side lengths we receive we get the following in order:
+\begin{itemize}
+  \item If $i = 1$, we receive only one side that contains one integer $l$, representing the width and the length, in this case the height is always 3.
+  \item If $i = 2$, we receive two sides that contain two integers $w$ and $l$, representing the width and the length respectively, in this case the height is always 3.
+  \item If $i = 3$, we receive three sides that contain three integers $w$, $l$, and $h$, representing the width, the length, and the height respectively.
+\end{itemize}
+
+\section*{Output}
+The total number of dirt blocks Alex will need to survive the night.
+
+\section*{Scoring}
+\begin{tabular}{|l|l|l|}
+\hline
+Groups & Points & Constraints \\ \hline
+1     & 10 & The input corresponds to a $3 \times 3$ house with minimal height.  \\ \hline
+2     & 20 & $i = 1$, and $3 \leq l \leq 100$\\ \hline
+3     & 30 & $i = 2$, and $3 \leq w,l \leq 100$ \\ \hline
+4     & 40 & $i = 3$, and $3 \leq w,l,h \leq 100$ \\ \hline
+\end{tabular}

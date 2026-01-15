@@ -1,0 +1,15 @@
+name:
+    is: Umferðarljós
+    en: Traffic Lights
+author: Arnar Bjarni Arnarson, Atli Fannar Franklín
+source: Forritunarkeppni Framhaldsskólanna 2025
+rights_owner: Forritunarkeppni Framhaldsskólanna
+license: cc by-sa
+type: scoring
+uuid: "3cf81a9a-0e08-48a7-8fbc-86a0f315bfa1"
+validation: custom
+grading:
+    show_test_data_groups: true
+keywords: graph geometry sweep-line colouring greedy line-segment-intersection
+limits:
+    time_multiplier: 2

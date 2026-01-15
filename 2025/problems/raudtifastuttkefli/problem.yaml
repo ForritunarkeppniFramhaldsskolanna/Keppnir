@@ -1,0 +1,14 @@
+name:
+  is: RauðTifa StuttKefli
+  en: RedTok ShortReels
+author: Atli Fannar Franklín
+source: Forritunarkeppni Framhaldsskólanna 2025
+rights_owner: Forritunarkeppni Framhaldsskólanna
+license: cc by-sa
+type: scoring
+uuid: "e4bf09f9-1bdb-49d2-b770-4969e901294d"
+limits:
+  time_multiplier: 2
+grading:
+    show_test_data_groups: true
+keywords: dp knapsack

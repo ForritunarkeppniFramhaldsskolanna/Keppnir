@@ -1,0 +1,9 @@
+STOD	stÃ¶Ã°varnÃºmer
+TIMI	tÃ­mi athugunar
+T	Lofthiti (1 mÃ­n. meÃ°algildi), Â°C
+RH	Rakastig lofts (1 mÃ­n. meÃ°algildi), %	
+D	VindÃ¡tt (10 mÃ­n. meÃ°algildi), grÃ¡Ã°ur	
+F	VindhraÃ°i (10 mÃ­n. meÃ°algildi), m/s	
+FX	Mesti 10 mÃ­n meÃ°alvindhraÃ°i, m/s	
+FG	VindhviÃ°a (hÃ¦sta 3 sek. gildi frÃ¡ sÃ­Ã°ustu skrÃ¡ningu), m/s	
+

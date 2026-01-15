@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+export PPATH
+PPATH=$(realpath ..)
+# shellcheck source-path=SCRIPTDIR
+. ../../../testdata_tools/gen.sh
+
+use_solution atli.py
+
+compile random_generator.py
+
+samplegroup
+sample_manual 1
+sample_manual 2
+sample_manual 3
+
+group GA 100
+tc 1
+tc 2
+tc 3
+
+tc empty random_generator empty
+desc "Edge case with empty string as input."
+hint "What if the string is empty?"
+tc full random_generator full
+desc "Edge case with length 10 string as input."
+hint "What if the string is of length 10?"
+for i in {01..63}; do
+    tc "single-$i" random_generator single "$i"
+    desc "Single letter test case."
+done;
+for i in {01..40}; do
+    tc "special-$i" random_generator special "$i"
+    desc "Hand made test case."
+done;
+

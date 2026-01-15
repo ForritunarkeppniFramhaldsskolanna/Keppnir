@@ -1,0 +1,70 @@
+#!/usr/bin/env bash
+export PPATH
+PPATH=$(realpath ..)
+# shellcheck source-path=SCRIPTDIR
+. ../../../testdata_tools/gen.sh
+
+use_solution atli_100.py
+
+compile random_generator.py
+compile fixed_generator.py
+
+samplegroup
+limits max_n=1000
+sample 1
+sample 2
+sample 3
+
+group GA 25
+limits max_n=50
+tc 1
+tc 2
+for i in {0..4}; do
+    tc "GA-$i" fixed_generator "$i"
+    desc "Case n = $i."
+done;
+for i in {6..10}; do
+    tc "GA-$i" fixed_generator "$i"
+    desc "Case n = $i."
+done;
+for i in {20..50..5}; do
+    tc "GA-$i" fixed_generator "$i"
+    desc "Case n = $i."
+done;
+
+group GB 25
+limits max_n=1000
+include_group GA
+tc 3
+for i in {1..20}; do
+    tc "GB-$i" random_generator 51 1000
+    desc "Random case from 51 to 1000."
+done;
+tc "GB-MAX-1" fixed_generator 999
+desc "Edge case n = 999."
+tc "GB-MAX-2" fixed_generator 1000
+desc "Edge case n = 1000."
+
+group GC 25
+limits max_n=1000000
+include_group GB
+for i in {1..20}; do
+    tc "GC-$i" random_generator 1001 1000000
+    desc "Random case from 1001 to 10^6."
+done;
+tc "GC-MAX-1" fixed_generator 999999
+desc "Edge case n = 10^6-1."
+tc "GC-MAX-2" fixed_generator 1000000
+desc "Edge case n = 10^6."
+
+group GD 25
+limits max_n=1000000000000000000
+include_group GC
+for i in {1..20}; do
+    tc "GD-$i" random_generator 1000001 1000000000000000000
+    desc "Random case from 10^6+1 to 10^18."
+done;
+tc "GD-MAX-1" fixed_generator 999999999999999999
+desc "Edge case n = 10^18-1."
+tc "GD-MAX-2" fixed_generator 1000000000000000000
+desc "Edge case n = 10^18."

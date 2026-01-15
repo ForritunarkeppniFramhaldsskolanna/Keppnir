@@ -1,0 +1,68 @@
+\problemname{Radikalistar}
+\illustration{0.4}{judea}{Skjáskot úr kvikmyndinni Life of Brian}
+
+Ósætti koma stundum upp í keppnisforritunarfélaginu þegar
+verið er að ræða möguleg dæmi fyrir keppnina. Nýlega hafa
+þessi ósætti orðið svo mikil að dæmahöfundar hafa átt það
+til að skipta sér niður í ólíka hópa til að vinna ekki með
+þeim sem þeir eru ósammála.
+
+Til dæmis splundraðist nýlega hópurinn þegar hluti dæmahöfunda
+fékk upp í kok af öllum Deild Goðsagnanna dæmunum og héldu
+því fram að restin af félaginu væri vonlaust háð þessum
+leiðinlega tölvuleik.
+
+Þetta gekk í einhvern tíma þar til aftur kom upp ósætti. Þá
+kvörtuðu bæði stuðningsmenn og andmælendur Deild Goðsagnanna
+yfir því að öll dæmin væru um Rúnaheim sem væri ekki 
+ásættanlegt heldur, svo báðir helmingar félagsins skiptust
+aftur upp og voru þá fjórir hópar talsins.
+
+Þetta var farið að vera erfitt að halda utan um. Því þarf
+nú að útbúa forrit sem heldur utan um hvernig hópar skiptast
+og skiptast eftir því sem nýjir hópar radikalista myndast
+og segja sig frá sínum fyrri hópum.
+
+\section*{Inntak}
+Fyrsta lína inntaksins inniheldur tvær jákvæðar heiltölur
+$n, q$. Hér er $n$ fjöldi meðlima félagins og $q$ er fjöldi
+fyrirspurna sem mun fylgja.
+Næst koma $q$ línur, hver með einni fyrirspurn.
+Hver línanna byrjar á einum af stöfunum \texttt{r}, 
+\texttt{s} eða \texttt{m}. Þessi stafur táknar tegund 
+fyrirspurnarinnar.
+
+Ef línan byrjar á \texttt{r} kemur næst jákvæð heiltala $t$.
+Loks koma svo $t$ jákvæðar heiltölur $x_i$ á sömu línu.
+Þetta táknar að félagsmeðlimir númer $x_1, \dots, x_t$ 
+eru radikalistar og segja sig frá núverandi hópum. 
+Ef $x_i$ og $x_j$ voru í sama hóp verða þeir áfram saman 
+eftirá. Tölurnar uppfylla $1 \leq x_i \leq n$.
+
+Ef línan byrjar á \texttt{s} skal prenta fjölda hópa sem
+félagið samanstendur af að svo stöddu á sinni eigin línu.
+Tómir hópar teljast ekki með.
+
+Loks ef línan byrjar á \texttt{m} fylgir ein jákvæð heiltala
+$u$ á sömu línu, hún uppfyllir $1 \leq u \leq n$. Þá á að
+prenta meðlimi hópsins sem meðlimur númer $u$ er í, allt
+á einni línu með bilum á milli. Prenta má meðlimina í
+hvaða innbyrðis röð sem er.
+Það verða mest $2 \cdot 10^6$ tölur í inntakinu.
+
+\section*{Úttak}
+Fyrir hverja fyrirspurn sem byrjar á \texttt{s} eða 
+\texttt{m} skal prenta eina línu, eins og lýst er að ofan.
+Það verða mest $2 \cdot 10^6$ tölur í úttakinu.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 10   & $n \leq 10, q = 1$ \\ \hline
+2     & 20   & $n, q \leq 1\,000$ \\ \hline
+3     & 30   & $n \leq 100\,000$ \\ \hline
+4     & 20   & $n \leq 10^7, m = 1$ \\ \hline
+5     & 20   & $n \leq 10^7$ \\ \hline
+\end{tabular}
+

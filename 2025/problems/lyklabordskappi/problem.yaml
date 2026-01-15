@@ -1,0 +1,13 @@
+name:
+    is: Lyklaborðskappi
+    en: Keyboard Warrior
+author: Samúel Arnar Hafsteinsson
+source: Forritunarkeppni Framhaldsskólanna 2025
+rights_owner: Forritunarkeppni Framhaldsskólanna
+license: cc by-sa
+type: scoring
+uuid: "a561b339-7c8f-4f04-8544-22dc40615b24"
+validation: custom
+grading:
+    show_test_data_groups: true
+keywords: ad-hoc constructive greedy string

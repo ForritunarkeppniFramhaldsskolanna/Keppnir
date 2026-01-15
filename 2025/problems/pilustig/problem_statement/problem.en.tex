@@ -1,0 +1,50 @@
+\problemname{Darts Scoring}
+\illustration{0.4}{board}{Image taken from \href{https://commons.wikimedia.org/wiki/File:Darts\_in\_board.png}{commons.wikimedia.org}}
+
+Hannes went to a work gathering with his coworkers and like many times before the choice of venue
+was a darts bar, as is very common with Icelandic software development companies. As the game progressed
+it became clear to Hannes that one of the other players was very likely to finish the game on
+his next round. Thus he figures he has to finish the game right now on his round to win. 
+But how can he go about this?
+
+In each round a player can throw up to three darts. For hitting directly in the centre you
+get $50$ points, this is called a \texttt{Bullseye}. For hitting the ring around the centre you
+get $25$ points, this is called a \texttt{Outer bullseye}. Then there are $20$ slices of
+the circle outside this centre. Hitting a given slice gives $1$ to $20$ points depending on
+the slice, so hitting slice $17$ would for example give $17$ points and be called 
+\texttt{Single 17}. On each slice is a narrow strip that gives double points, so hitting
+that strip on slice $8$ would give $16$ points and be called \texttt{Double 8}. Finally
+there is another narrow strip on each slice that gives triple points, so hitting that strip
+on slice $11$ would give $33$ points and be called a \texttt{Triple 11}.
+
+Can you tell Hannes all the ways he could finish the game in at most three throws?
+
+Note that you do not have to end with a specific kind of throw like \texttt{Double} unlike in
+some versions of darts.
+
+\section*{Input}
+The input contains a single positive integer $x$, the number of points Hannes needs to score to
+finish the game. It will always hold that $x \leq 501$.
+
+\section*{Output}
+You should start by printing a single line with an integer $n$ that gives the number of ways
+that Hannes can finish the game on his round in one to three throws. For each such way you
+should print the following. First print an integer $k$ on its own line, the number of throws
+to be made. Then there should follow $k$ lines, the $i$-th of which gives where the $i$-th dart
+should land, using the names given above.
+
+Notice that \texttt{Bullseye}, \texttt{Single 1} and \texttt{Single 1}, \texttt{Bullseye} count as
+different ways to get $51$ points, the order does not matter.
+
+However, the order in which the ways to get $x$ points are printed does not matter. Any ordering is considered correct.
+
+\section*{Scoring}
+\begin{tabular}{|l|l|l|}
+\hline
+Group & Points & Constraints \\ \hline
+1     & 20   & $x = 1$. \\ \hline
+2     & 30   & $x \leq 5$. \\ \hline
+3     & 40   & $x \leq 100$. \\ \hline
+4     & 10   & No further constraints. \\ \hline
+\end{tabular}
+

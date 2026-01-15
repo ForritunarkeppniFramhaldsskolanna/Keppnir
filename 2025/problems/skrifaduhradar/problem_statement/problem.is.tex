@@ -1,0 +1,57 @@
+\problemname{Skrifaðu hraðar}
+\illustration{0.4}{top20}{Mynd fengin af \href{https://2024.nwerc.eu/main/scoreboard/}{2024.nwerc.eu}}
+
+Í forritunarkeppnum getur oft hjálpað að skrifa hratt,
+sérstaklega þegar tímarefsing vegur þungt. Þú veltir nú fyrir
+þér hvað það hefði þurft til að sigra fyrri forritunarkeppni.
+
+Þú ert mjög bjartsýn/n svo þú gerir ráð fyrir að þú munir
+leysa öll dæmi í fyrstu tilraun, svo þú færð bara tímarefsingu
+fyrir fyrstu skil. Besta lið keppninnar leysti öll dæmin,
+svo til að vinna þarftu minni tímarefsingu en það lið.
+Gerum einnig ráð fyrir að þú hafir
+eins mikinn tíma og þú vilt til að leysa keppnina, utan
+við það að þurfa ná lægri tímarefsingu. Það dugar ekki
+að fá sömu tímarefsingu.
+
+Ef þú skilar lausn á verkefni á mínútu $x$ bætist $x$
+við tímarefsingu þína. Það þýðir að lausn sem er skilað eftir
+$1$ mínútu og $59$ sekúndur fær tímarefsingu upp á $1$, en
+skil eftir $2$ mínútur fær tímarefsingu upp á $2$.
+
+Því ef þú getur skrifað $20$ orð á mínútu og lausn tekur
+$100$ orð og þú gerir hana fyrst mun hún gefa tímarefsingu
+upp á $5$, en ef hún væri $99$ orð fengirðu tímarefsingu upp
+á $4$.
+
+Þú ert búin/n að sjá út lausn á öllum verkefnunum, og veist
+hvað lausn þín yrði löng, en veist ekki hvort þú þyrftir
+kannski að þjálfa skrifhraða fyrst til að geta unnið.
+Því er spurningin, hvað þarftu að geta skrifað mörg orð
+á mínútu til að geta unnið?
+
+\section*{Inntak}
+Fyrsta lína inntaksins gefur tvær heiltölur $n, T$. $n$
+er fjöldi dæma í keppninni sem þú þarft að leysa og $T$
+er tímarefsingin sem þú þarft að ná undir. Ávallt gildir
+að $1 \leq n \leq 100\,000$ og $1 \leq T \leq 10^{18}$.
+Önnur og síðasta lína inntaksins inniheldur $n$ heiltölur
+$w_1, w_2, \dots, w_n$. $w_i$ er fjöldi orða sem lausn
+$i$-ta dæmisins samanstendur af. Ávallt gildir að 
+$0 \leq w_i \leq 10^9$ fyrir öll $i$.
+Summa allra $w_i$ verður ekki $0$.
+
+\section*{Úttak}
+Skrifaðu út minnsta fjölda orða á mínútu sem þú þarft að
+geta skrifað til að vinna.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 10   & $n = 1$. \\ \hline
+2     & 15   & $T = 1$. \\ \hline
+3     & 25   & $n \leq 100, \sum_{i=0}^n w_i \leq 1\,000$ \\ \hline
+4     & 50   & Engar frekari takmarkanir. \\ \hline
+\end{tabular}
+

@@ -1,0 +1,50 @@
+\problemname{Weather Forecast}
+\illustration{0.4}{vidvorun}{Image from \href{vedur.is}{Icelandic Met Office}.}
+
+One of the most important things you can do in Iceland is predict the weather.
+The weather in Iceland is difficult for many to endure, as an example Antarctica is
+the only place in the world windier than Iceland.
+The Icelandic Met Office has now sent you their data and your task is to predict
+the weather.
+
+\section*{Input}
+The first line of the input contains two integers $n$, the number of data points,
+and $m$ the number of data points to predict.
+The second line contains extra info about the data set, the latitude, longitude, height
+above sea level, the initial day and initial time of the data set.
+
+Next there are $n$ lines, where each line denotes a measurement.
+Each such line contains temperature, average wind direction, average wind speed and
+humidity, separated by spaces. The measurements are made one hour apart.
+
+The temperatures are real numbers in the range $-50$ to $50$, given with exactly one
+digit after the decimal point, measured in $^{\circ}C$.
+Average wind directions are integers in the range $0$ to $360$, which denote the direction
+of the wind in degrees.
+Average wind speeds are real numbers in the range $0$ to $80$ given with exactly one digit
+after the decimal point, measured in $m/s$.
+Humidities are integers in the range $0$ to $110$, measured in percentages.
+
+Latitude, longitude and height above sea level are real numbers given with up to $6$ digits
+after the decimal point.
+The initial date is in ISO-8601 format.
+The initial time is in ISO-8601 format, but without the trailing \texttt{Z}.
+
+The data is real measurement data from the Icelandic Met Office, taken in different locations
+around the country. It may happen that some measurements failed and then the corresponding
+value is replaced with \texttt{-}, a single dash.
+
+\section*{Output}
+Print $m$ lines, each of them in the same format as the data in the input, which give your
+prediction. The numbers have to satisfy the same constraints as in the input.
+You may also write \texttt{-} to omit values and make no prediction for them.
+
+\section*{Scoring}
+The points are given in accordance with how accurate your prediction is, rounded
+to the nearest integer. There are $50$ test cases and the sum of your score on each
+of those test cases gives your score. Thus each test case can give at most $2$ points,
+with full points given for $99.5\%$ or higher accuracy in the predicted values. Correctness is
+not measured linearly.
+
+If the output is not of the correct format that case gets $0$ points.
+If the total number of points across all test cases is $0$ the solution is deemed incorrect.

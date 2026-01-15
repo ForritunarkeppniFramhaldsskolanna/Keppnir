@@ -1,0 +1,57 @@
+#!/usr/bin/env bash
+export PPATH
+PPATH=$(realpath ..)
+# shellcheck source-path=SCRIPTDIR
+. ../../../testdata_tools/gen.sh
+
+use_solution dagur_100.py
+
+compile random_generator.py
+compile edge_generator.py
+
+samplegroup
+limits upperBound=100000 kdivn=False
+sample 1
+sample 2
+sample 3
+
+group GA 25
+limits upperBound=10 kdivn=True
+tc 1
+tc 2
+tc ord-edge edge_generator ORD
+desc "Edge case that tests print order requirement."
+for i in {01..25}; do
+    tc "GA-$i" random_generator 10 1
+    desc "Random test case with n <= 10 and k dividing n."
+done;
+
+group GB 25
+limits upperBound=10 kdivn=False
+include_group GA
+tc 3 
+tc ceil-edge edge_generator CEIL
+desc "Edge case that tests ceil(n/k) case."
+tc floor-edge edge_generator FLOOR
+desc "Edge case that tests floor(n/k) case."
+for i in {01..25}; do
+    tc "GB-$i" random_generator 10 0
+    desc "Random test case with n <= 10."
+done;
+
+group GC 25
+limits upperBound=100000 kdivn=True
+include_group GA
+for i in {01..10}; do
+    tc "GC-$i" random_generator 100000 1
+    desc "Random large test case with k dividing n."
+done;
+
+group GD 25
+limits upperBound=100000 kdivn=False
+include_group GB
+include_group GC
+for i in {01..10}; do
+    tc "GD-$i" random_generator 100000 0
+    desc "Random large test case."
+done;

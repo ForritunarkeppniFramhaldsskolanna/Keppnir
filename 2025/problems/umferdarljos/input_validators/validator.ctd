@@ -1,0 +1,14 @@
+INT(1, 100000, n)
+NEWLINE
+REP(n, NEWLINE)
+    INT(-1000000, 1000000, a)
+    SPACE
+    INT(-1000000, 1000000, b)
+    SPACE
+    INT(-1000000, 1000000, x)
+    SPACE
+    INT(-1000000, 1000000, y)
+    ASSERT((a != x) || (b != y))
+END
+NEWLINE
+EOF

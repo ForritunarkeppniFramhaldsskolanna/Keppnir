@@ -1,0 +1,13 @@
+name: 
+    is: Grafa holur
+    en: Diggy Hole
+author: Atli Fannar Franklín
+source: Forritunarkeppni Framhaldsskólanna 2025
+rights_owner: Forritunarkeppni Framhaldsskólanna
+license: cc by-sa
+type: scoring
+uuid: "d2dac723-3565-41db-9b92-717a6dac0613"
+validator_flags: float_absolute_tolerance 1e-2
+grading:
+    show_test_data_groups: true
+keywords: arithmetic math

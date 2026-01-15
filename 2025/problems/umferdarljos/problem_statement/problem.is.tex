@@ -1,0 +1,62 @@
+\problemname{Umferðarljós}
+\illustration{0.4}{sample1}{Möguleg lausn á sýnidæmi 1.}
+
+Þú hefur fengið starf hjá Vegagerðinni við að endurstilla
+umferðarljós höfuðborgarsvæðisins. Eins og skylda er í
+öllum ríkisstörfum verður að gera það með sem óskilvirkasta
+hætti.
+
+Því mega engin tvö aðlæg umferðarljós vera á sama lit, því
+þá væri mögulega hægt að keyra beint í gegnum 2 ljós, og það
+væri náttúrulega hættulega skilvirkt!
+
+Einnig þarf að tryggja að engir árekstrar eigi sér stað.
+Því þurfa hver gatnamót að hafa grænt ljós á aðra götuna og rautt ljós á hina
+eða gult ljós á báðar götur.
+Þetta gerir auðvitað ráð fyrir að fólk fylgi umferðarlögunum.
+
+Gatnakerfi höfuðborgarsvæðisins er gefið sem $n$ línustrik
+þar sem engin þrjú línustrik skerast í einum punkti. Það er
+að segja gatnamót eru ávallt þar sem tvær götur mætast, og
+það mætast aldrei þrjár eða fleiri götur á sömu gatnamótunum.
+Einnig skerast götur mest í einum punkti.
+
+Gefðu litaskipan á gatnamótunum sem uppfyllir skilyrðin að
+ofan. Tvö gatnamót teljast aðlæg ef þau liggja á sama vegi
+og það eru engin önnur gatnamót á milli á þeim vegi.
+
+\section*{Inntak}
+Inntak byrjar á línu með einni jákvæðri heiltölu $n$, fjöldi
+vega. Gefið er að $n \leq 100\,000$.
+Næst koma $n$ línur þar sem $i$-ta þeirra gefur
+$i$-ta veginn. $i$-ti vegurinn er gefinn sem fjórar heiltölur
+$x_1, y_1, x_2, y_2$ þar sem vegurinn liggur frá $(x_1, y_1)$
+til $(x_2, y_2)$. Gefið er að $(x_1, y_1) != (x_2, y_2)$.
+Öll hnit eru minnst $-1\,000\,000$ og mest $1\,000\,000$.
+
+\section*{Úttak}
+Prentið fyrst fjölda gatnamóta á sinni eigin línu.
+Svo fyrir hver gatnamót prentið eina línu.
+Prentið \texttt{L1 L2 C1 C2} á hverja línu þar sem $L_1$ og $L_2$
+eru númer veganna sem skerast. Táknar þá $C_1$ litinn á ljósunum
+á þeim mótum fyrir götuna $L_1$ og $C_2$ litinn á ljósunum
+fyrir götuna $L_2$ á þeim mótum.
+Hér eru $C_1$ og $C_2$ hvort tveggja eitt af stöfunum
+\texttt{r}, \texttt{y} eða \texttt{g}. Hér táknar \texttt{r}
+rautt, \texttt{y} gult og \texttt{g} grænt.
+Það verða aldrei fleiri en $200\,000$ gatnamót í úttakinu.
+
+Ef til eru mörg svör máttu skrifa út hvaða rétta svar sem er.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 10   & $n \leq 2$. \\ \hline
+2     & 20   & $n \leq 10$. \\ \hline
+3     & 20   & $n \leq 1\,000$. \\ \hline
+4     & 20   & $n \leq 100\,000$, línustrik skarast einungis á endapunktum. \\ \hline
+5     & 20   & $n \leq 100\,000$, öll línustrik eru samsíða hnitaásum. \\ \hline
+6     & 10   & $n \leq 100\,000$. \\ \hline
+\end{tabular}
+

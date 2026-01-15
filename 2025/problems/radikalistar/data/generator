@@ -1,0 +1,55 @@
+#!/usr/bin/env bash
+export PPATH
+PPATH=$(realpath ..)
+# shellcheck source-path=SCRIPTDIR
+. ../../../testdata_tools/gen.sh
+
+use_solution atli_nlogn.cpp
+
+compile random_generator.py
+compile fixed_generator.py
+
+samplegroup
+limits max_n=1000 max_q=1000 max_m=1000
+sample 1
+
+group GA 10
+limits max_n=10 max_q=1 max_m=10
+for i in {0..7}; do
+    tc "GA-$i" fixed_generator "$i"
+    desc "Hand made small test case."
+done;
+
+group GB 20
+limits max_n=1000 max_q=1000 max_m=1000
+tc 1
+include_group GA
+tc GB-pluck1 random_generator 1000 1000 pluck-1
+desc "Test case plucking out one member groups."
+tc GB-sqrt random_generator 1000 1000 sqrt
+desc "Test case splitting into SQRT sized groups."
+
+group GC 30
+limits max_n=100000 max_q=100000 max_m=100000
+include_group GB
+tc GC-pluck1 random_generator 100000 100000 pluck-1
+desc "Test case plucking out one member groups."
+tc GC-sqrt random_generator 100000 100000 sqrt
+desc "Test case splitting into SQRT sized groups."
+
+group GD 20
+limits max_n=10000000 max_q=1000000 max_m=1
+tc GA-7
+tc GB-pluck1
+tc GC-pluck1
+tc GD-pluck1 random_generator 10000000 1000000 pluck-1
+desc "Test case plucking out one member groups."
+
+group GE 20
+limits max_n=10000000 max_q=1000000 max_m=1000000
+include_group GC
+include_group GD
+tc GE-sqrt random_generator 10000000 1000000 sqrt
+desc "Test case splitting into SQRT sized groups."
+tc GE-orig random_generator 10 10 print-orig
+desc "Test case printing unradicalised members."

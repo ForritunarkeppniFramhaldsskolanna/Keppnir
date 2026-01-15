@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+export PPATH
+PPATH=$(realpath ..)
+# shellcheck source-path=SCRIPTDIR
+. ../../../testdata_tools/gen.sh
+
+use_solution samuel_100.py
+
+compile random_generator.py
+compile always_succeed.py
+
+samplegroup
+limits min_n=1 max_n=3 min_l=4 max_l=20 min_t=1 max_t=5 min_w=1 max_w=20
+
+sample 1
+sample_manual 2
+sample 3
+
+group GA 40
+limits min_n=1 max_n=1000 min_l=4 max_l=5 min_t=1 max_t=1 min_w=4 max_w=4
+tc 1
+
+for i in {01..20}; do
+    tc "GA-$i" random_generator 1 1000 4 5 1 1 4 4
+    desc "Random case satisfying constraints of first group."
+done;
+
+group GB 60
+limits min_n=1 max_n=1000 min_l=4 max_l=20 min_t=1 max_t=5 min_w=1 max_w=20
+
+include_group GA
+tc 2
+tc 3
+
+for i in {01..30}; do
+    tc "GB-$i" random_generator 1 1000 4 10 1 5 1 20
+    desc "Random case satisfying constraints of second group."
+done;
+
+for i in {31..60}; do
+    tc "GB-$i" always_succeed 1 1000 4 10 1 5 1 20
+    desc "Random case satisfying constraints of second group, but making sure the output is not ff."
+done;

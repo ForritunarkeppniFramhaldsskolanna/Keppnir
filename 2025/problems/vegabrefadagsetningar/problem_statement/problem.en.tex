@@ -1,0 +1,71 @@
+\problemname{Passport Dates}
+\illustration{0.4}{vegabref}{An Icelandic passport.}
+
+Konráð has managed to obtain a big pile of Icelandic passports (don't ask, don't tell
+anyone either). Now he has the fun task ahead of him of getting all of the data he wants
+from the passports. He constructed a small robot arm to automatically open each one of
+them and take pictures of the relevant data. Then he threw together some image processing
+code to turn the pictures into the text he wanted from them. This was of course the simple
+part, now comes the tough part. Converting the format of the data to the ISO-8601 standard.
+
+He has lots of lines of text from Icelandic passports of the format
+\texttt{dd ISM /ENM yy} where \texttt{dd} is the day of the month,
+\texttt{ISM} is a three letter abbreviation of a month in Icelandic,
+\texttt{ENM} is a three letter abbreviation of a month in English and
+\texttt{yy} are the last two digits of the year.
+This date says when the passport will expire.
+
+He wants to change this data to the format \texttt{yyyy-mm-dd}
+where \texttt{yyyy} is the full year, \texttt{mm} is the month and
+\texttt{dd} the day of the month. All these numbers, both here and
+above, will have a fixed number of digits, so for example $7$ will
+be formatted as \texttt{07}.
+
+All the passports in the input will expire somewhere in the range
+$2015$ and $2035$. The date when this contest took place is eighth
+of March $2025$.
+
+The Icelandic month name abbreviations are
+\texttt{JAN},
+\texttt{FEB},
+\texttt{MAR},
+\texttt{APR},
+\texttt{MAÍ},
+\texttt{JÚN},
+\texttt{JÚL},
+\texttt{ÁGÚ},
+\texttt{SEP},
+\texttt{OKT},
+\texttt{NÓV},
+\texttt{DES}.
+
+The English month name abbreviations are
+\texttt{JAN},
+\texttt{FEB},
+\texttt{MAR},
+\texttt{APR},
+\texttt{MAY},
+\texttt{JUN},
+\texttt{JUL},
+\texttt{AUG},
+\texttt{SEP},
+\texttt{OCT},
+\texttt{NOV},
+\texttt{DEC}.
+
+\section*{Input}
+One line of text from a passport as described above.
+
+\section*{Output}
+The date from the passport in ISO-8601 format, as described above.
+
+\section*{Scoring}
+\begin{tabular}{|l|l|l|}
+\hline
+Group & Points & Constraints \\ \hline
+1     & 10   & All dates are exactly the day today (day of the contest). \\ \hline
+2     & 25   & All dates are in this month (month of the contest).\\ \hline
+3     & 50   & All dates are in the year $2024$. \\ \hline
+4     & 15   & No further constraints. \\ \hline
+\end{tabular}
+

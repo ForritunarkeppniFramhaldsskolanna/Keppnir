@@ -1,0 +1,12 @@
+name: 
+    is: Armbeygjur
+    en: Press-ups
+author: Atli Fannar Franklín
+source: Forritunarkeppni Framhaldsskólanna 2025
+rights_owner: Forritunarkeppni Framhaldsskólanna
+license: cc by-sa
+type: scoring
+uuid: "58a91b2d-d64b-4ae9-bbfd-d943782a817b"
+grading:
+    show_test_data_groups: true
+keywords: divisors number-theory

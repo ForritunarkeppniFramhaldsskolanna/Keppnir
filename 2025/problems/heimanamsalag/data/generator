@@ -1,0 +1,97 @@
+#!/usr/bin/env bash
+export PPATH
+PPATH=$(realpath ..)
+# shellcheck source-path=SCRIPTDIR
+. ../../../testdata_tools/gen.sh
+
+use_solution atli.py
+
+compile random_generator.py
+compile edge_generator.py
+
+samplegroup
+limits max_n=10 ab_eq=0 max_t=1000000000
+sample 1
+sample 2
+
+group GA 15
+limits max_n=1 ab_eq=0 max_t=1000000000
+tc GA-rand-1 random_generator 1 0 0
+desc "Random case with n = 1 and a, b <= 0."
+tc GA-rand-2 random_generator 1 0 10
+desc "Random case with n = 1 and a, b <= 10."
+tc GA-rand-3 random_generator 1 0 10**2
+desc "Random case with n = 1 and a, b <= 10^2."
+tc GA-rand-4 random_generator 1 0 10**3
+desc "Random case with n = 1 and a, b <= 10^3."
+tc GA-rand-5 random_generator 1 0 10**5
+desc "Random case with n = 1 and a, b <= 10^5."
+tc GA-rand-6 random_generator 1 0 10**9
+desc "Random case with n = 1 and a, b <= 10^9."
+tc GA-zero edge_generator zero1
+desc "Edge case with a single zero-time task."
+tc GA-max edge_generator max1
+desc "Edge case with maximum time needed (for first group)."
+
+group GB 20
+limits max_n=100000 ab_eq=1 max_t=1000000000
+tc GB-rand-1 random_generator 100000 1 10
+desc "Random case with a = b and a, b <= 10."
+tc GB-rand-2 random_generator 100000 1 10**2
+desc "Random case with a = b and a, b <= 10^2."
+tc GB-rand-3 random_generator 100000 1 10**3
+desc "Random case with a = b and a, b <= 10^3."
+tc GB-rand-4 random_generator 100000 1 10**5
+desc "Random case with a = b and a, b <= 10^5."
+tc GB-rand-5 random_generator 100000 1 10**9
+desc "Random case with a = b and a, b <= 10^9."
+tc GB-zero edge_generator zero2
+desc "Edge case with many zero-time tasks."
+tc GB-max edge_generator max2
+desc "Edge case with maximum time needed (for second group)."
+tc GB-empty edge_generator empty
+desc "Edge case with no tasks."
+
+group GC 25
+limits max_n=100 ab_eq=0 max_t=100
+tc GC-rand-1 random_generator 100 0 10 small
+desc "Random case with t <= 100 and a, b <= 10."
+tc GC-rand-2 random_generator 100 0 50 small
+desc "Random case with t <= 100 and a, b <= 50."
+tc GC-rand-3 random_generator 100 0 10**2 small
+desc "Random case with t <= 100 and a, b <= 10^2."
+tc GC-rand-4 random_generator 100 0 10**3 small
+desc "Random case with t <= 100 and a, b <= 10^3."
+tc GC-rand-5 random_generator 100 0 10**4 small
+desc "Random case with t <= 100 and a, b <= 10^4."
+tc GC-rand-6 random_generator 100 0 10**5 small
+desc "Random case with t <= 100 and a, b <= 10^5."
+tc GC-rand-7 random_generator 100 0 10**6 small
+desc "Random case with t <= 100 and a, b <= 10^6."
+tc GC-rand-8 random_generator 100 0 10**9 small
+desc "Random case with t <= 100 and a, b <= 10^9."
+tc GA-zero
+tc GB-zero
+tc GC-max edge_generator max3
+desc "Edge case with maximum time needed (for third group)."
+tc GB-empty
+
+group GD 40
+limits max_n=100000 ab_eq=0 max_t=1000000000
+include_group GA
+include_group GB
+include_group GC
+tc 1
+tc 2
+tc GD-rand-1 random_generator 100000 0 10
+desc "Random case with a,b  <= 10."
+tc GD-rand-2 random_generator 100000 0 10**2
+desc "Random case with a,b  <= 10^2."
+tc GD-rand-3 random_generator 100000 0 10**3
+desc "Random case with a,b  <= 10^3."
+tc GD-rand-4 random_generator 100000 0 10**5
+desc "Random case with a,b  <= 10^5."
+tc GD-rand-5 random_generator 100000 0 10**9
+desc "Random case with a,b  <= 10^9."
+tc GD-stress edge_generator heapstress
+desc "Edge case that fills the heap as much as possible."

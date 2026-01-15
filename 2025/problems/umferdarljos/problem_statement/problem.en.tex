@@ -1,0 +1,65 @@
+\problemname{Traffic Lights}
+\illustration{0.4}{sample1}{Possible solution to sample 1.}
+
+You have landed a job at Vegagerðin (Icelandic Road Administration)
+with the task of recalibrating the traffic lights of Reykjavík.
+As is mandatory in all government positions this
+of course has to be done in the most inefficient manner
+possible.
+
+Thus no two adjacent traffic lights may have the same colour,
+otherwise you could possibly drive right through two of them
+in a row. That would be dangerously efficient!
+
+Furthermore, we cannot have too many traffic accidents, so
+each intersection has to have a green light going one way
+and a red light the other way, or a yellow light both ways.
+This of course assumes that people follow traffic laws.
+
+The road system of Reykjavík is given as $n$ line segments
+where no three line segments intersect at a single point.
+That is to say, intersections are placed at every point where
+two roads meet, and there are never three or more roads that
+intersect at a single point. Furthermore any two roads
+intersect at most at a single point.
+
+Figure out a way to set the lights at the intersections such
+that the conditions given above hold. Two intersections are
+considered adjacent if they are on the same road and there
+are no other intersections between them on that road.
+
+\section*{Input}
+The input begins with a single positive integer $n$, the number
+of roads. You may assume that $n \leq 100\,000$.
+Next there are $n$ lines where the $i$-th line gives the
+$i$-th road. The $i$-th road is given as four integers
+$x_1, y_1, x_2, y_2$ which means the road goes from $(x_1, y_1)$
+to $(x_2, y_2)$. You may assume that $(x_1, y_1) != (x_2, y_2)$.
+All coordinates are at least $-1\,000\,000$ and at most $1\,000\,000$.
+
+\section*{Output}
+First print the number of intersections on its own line.
+Then for each intersection print one line.
+Print \texttt{L1 L2 C1 C2} on each line where $L_1$ and $L_2$
+are the indices of the roads that intersect. $C_1$ denotes the
+colour of the traffic light at that intersection for the road
+$L_1$ and $C_2$ the colour for the road $L_2$.
+Here $C_1$ and $C_2$ are both one of the letters
+\texttt{r}, \texttt{y} or \texttt{g}. Here \texttt{r} denotes
+red, \texttt{y} yellow and \texttt{g} green.
+There will never be more than $200\,000$ intersections in the output.
+
+If there are many possible answers you may print any one of them.
+
+\section*{Scoring}
+\begin{tabular}{|l|l|l|}
+\hline
+Group & Points & Constraints \\ \hline
+1     & 10   & $n \leq 2$. \\ \hline
+2     & 20   & $n \leq 10$. \\ \hline
+3     & 20   & $n \leq 1\,000$. \\ \hline
+4     & 20   & $n \leq 100\,000$, line segments only intersect at their endpoints. \\ \hline
+5     & 20   & $n \leq 100\,000$, all line segments are parallel to the coordinate axes. \\ \hline
+6     & 10   & $n \leq 100\,000$. \\ \hline
+\end{tabular}
+

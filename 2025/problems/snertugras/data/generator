@@ -1,0 +1,76 @@
+#!/usr/bin/env bash
+export PPATH
+PPATH=$(realpath ..)
+# shellcheck source-path=SCRIPTDIR
+. ../../../testdata_tools/gen.sh
+
+use_solution atli.py
+
+compile random_generator.py
+compile edge_generator.py
+compile rough_terrain.py
+compile zigzag.py
+compile branches.py
+
+samplegroup
+limits max_h=10 max_w=10 max_n=100 allow_wall=1
+sample 1
+sample 2
+
+group GA 20
+limits max_h=2 max_w=2 max_n=4 allow_wall=1
+tc GA-plain edge_generator plain
+desc "Edge case of just a single S tile."
+tc GA-adj-1 edge_generator adj1
+desc "Edge case of just a single S and single G tile."
+tc GA-adj-2 edge_generator adj2
+desc "Edge case of just a single S and single G tile."
+tc GA-SE edge_generator se2
+desc "Edge case of just a single S and single empty tile."
+tc GA-block-1 edge_generator block1
+desc "Edge case of blocked off goal within 2x2 board."
+tc GA-block-2 edge_generator block2
+desc "Edge case of blocked off goal within 2x2 board."
+tc GA-empty-block edge_generator emptyblock
+desc "Edge case of no grass."
+tc GA-dist-2 edge_generator dist2
+desc "Case with answer equal to 2."
+
+group GB 40
+limits max_h=100 max_w=100 max_n=100 allow_wall=1
+include_group GA
+tc 1
+tc 2
+for i in {01..10}; do
+    tc "GB-$i" random_generator 100 100 100 1 "$i"
+    desc "Random test case with feature density $i."
+done;
+tc GB-rough rough_terrain 10 10
+desc "Test case with many easy obstacles."
+tc GB-zigzag zigzag 10 10
+desc "Test case with long path to grass due to having to walk back and forth."
+tc GB-branches branches 10 10
+desc "Test case with many long branched paths."
+
+group GC 15
+limits max_h=1000000 max_w=1000000 max_n=1000000 allow_wall=0
+tc GA-plain
+tc GA-adj-1
+tc GA-adj-2
+for i in {01..05}; do
+    tc "GC-$i" random_generator 1000000 1000000 1000000 0 "$i"
+    desc "Random test case with feature density $i and no walls."
+done;
+
+group GD 25
+limits max_h=1000000 max_w=1000000 max_n=1000000 allow_wall=1
+include_group GB
+include_group GC
+tc GD-rand random_generator 1000000 1000000 1000000 1 1
+desc "Random test case with low density."
+tc GD-rough rough_terrain 1000 1000
+desc "Test case with many easy obstacles."
+tc GD-zigzag zigzag 1000 1000
+desc "Test case with long path to grass due to having to walk back and forth."
+tc GD-branches branches 1000 1000
+desc "Test case with many long branched paths."

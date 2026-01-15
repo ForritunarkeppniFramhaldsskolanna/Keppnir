@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+export PPATH
+PPATH=$(realpath ..)
+# shellcheck source-path=SCRIPTDIR
+. ../../../testdata_tools/gen.sh
+
+use_solution atli.cpp
+
+compile random_generator.py
+compile echo_generator.py
+
+samplegroup
+sample 1
+sample 2
+
+group GA 100
+tc 1
+tc 2
+
+tc GA-loop-1 echo_generator 359 0
+desc "Edge case that tests looping around from 359 to 0."
+tc GA-loop-2 echo_generator 359 1
+desc "Edge case that tests looping around from 359 to 0."
+tc GA-equal-1 echo_generator 0 0
+desc "Edge case testing for equal angles."
+tc GA-equal-2 echo_generator 359 359
+desc "Edge case testing for equal angles."
+tc GA-equal-3 echo_generator 173 173
+desc "Edge case testing for equal angles."
+tc GA-opposite-1 echo_generator 0 180
+desc "Edge case testing for opposite angles."
+tc GA-opposite-2 echo_generator 33 213
+desc "Edge case testing for opposite angles."
+tc GA-opposite-3 echo_generator 347 167
+desc "Edge case testing for opposite angles."
+for i in {01..50}; do
+    tc "GA-$i" random_generator
+    desc "Random test case."
+done;

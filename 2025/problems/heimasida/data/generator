@@ -1,0 +1,55 @@
+#!/usr/bin/env bash
+export PPATH
+PPATH=$(realpath ..)
+# shellcheck source-path=SCRIPTDIR
+. ../../../testdata_tools/gen.sh
+
+use_solution atli.cpp
+
+compile random_generator.py
+compile edge_generator.py
+
+samplegroup
+limits level=2
+sample 1
+sample 2
+sample 3
+
+group GA 25
+limits level=0
+tc 1
+for i in {01..30}; do
+    tc "GA-$i" random_generator 0
+    desc "Random case with only ascii letters."
+done;
+tc GA-all edge_generator 0
+desc "Edge case with all ascii letters."
+tc GA-empty edge_generator 3
+desc "Edge case with empty input."
+hint "What if the input is empty?"
+
+group GB 25
+limits level=1
+include_group GA
+tc 2
+for i in {01..30}; do
+    tc "GB-$i" random_generator 1
+    desc "Random case with only printable ascii."
+done;
+tc GB-all edge_generator 1
+desc "Edge case with all ascii printable characters."
+tc GB-whitespace edge_generator 4
+desc "Edge case with only whitespace."
+tc GB-onlysymbol edge_generator 5
+desc "Edge case with only ascii symbols."
+
+group GC 50
+limits level=2
+include_group GB
+tc 3
+for i in {01..30}; do
+    tc "GC-$i" random_generator 2
+    desc "Random case with full character set."
+done;
+tc GC-all edge_generator 2
+desc "Edge case containing all characters in full character set."

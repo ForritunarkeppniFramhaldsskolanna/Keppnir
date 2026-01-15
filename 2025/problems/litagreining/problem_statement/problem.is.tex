@@ -1,0 +1,46 @@
+\problemname{Litagreining}
+\illustration{0.4}{rgb}{Mynd fengin af \href{https://commons.wikimedia.org/wiki/File:RGB\_Color\_Model.png}{commons.wikimedia.org}}
+
+Jón og Gunna rífast stundum um hvaða litur tilteknir hlutir
+eru. Er veggurinn grænn eða grængulur, er kjóllinn blár
+eða gylltur og svo framvegis. Til að leysa þennan
+vanda eru þau búin að útvega sér tæki sem mælir rauða, græna
+og bláa endurspeglaða ljósið, og gefur þrjár tölur.
+Þetta hefur hins vegar ekki leyst vandann því nú eru þau
+ósammála um hvaða gildi svara til hvaða lits. Því þarf nú
+að útbúa forrit sem leysir þann vanda. 
+
+Öll þrjú gildin eru á bilinu $0$ til $255$ og við táknum
+þau með $R$, $G$ og $B$.
+Ef $R$ er strangt hæsta gildið er svarið \texttt{raudur}.
+Ef $G$ er strangt hæsta gildið er svarið \texttt{graenn}.
+Ef $B$ er strangt hæsta gildið er svarið \texttt{blar}.
+Ef $R = G$ og $B$ er strangt minnsta gildið er svarið
+\texttt{gulur}.
+Ef $R = B$ og $G$ er strangt minnsta gildið er svarið
+\texttt{fjolubleikur}.
+Ef $G = B$ og $R$ er strangt minnsta gildið er svarið
+\texttt{blagraenn}.
+Ef öll gildin eru $0$ er svarið \texttt{svartur}.
+Ef öll gildin eru $255$ er svarið \texttt{hvitur}.
+Ef öll gildin eru jöfn, en ekki jöfn $0$ né $255$ er
+svarið \texttt{grar}.
+Annars ef ekkert á við er svarið \texttt{othekkt}.
+
+\section*{Inntak}
+Inntak inniheldur eina línu með þremur heiltölum $R$, $G$,
+$B$ sem eru aðskilin með bili.
+Ávallt gildir að $0 \leq R, G, B \leq 255$.
+
+\section*{Úttak}
+Skrifaðu út litinn sem gildin svara til, eins og lýst er
+að ofan.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 50   & $R, G$ og $B$ eru ólík. \\ \hline
+2     & 50   & Engar frekari takmarkanir. \\ \hline
+\end{tabular}
+

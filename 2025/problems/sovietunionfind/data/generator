@@ -1,0 +1,54 @@
+#!/usr/bin/env bash
+export PPATH
+PPATH=$(realpath ..)
+# shellcheck source-path=SCRIPTDIR
+. ../../../testdata_tools/gen.sh
+
+use_solution atli.cpp
+
+compile random_generator.py
+compile edge_generator.py
+
+samplegroup
+limits min_n=1 max_n=1000 max_q=1000 allow_b=True
+sample 1
+
+group GA 25
+limits min_n=2 max_n=2 max_q=100 allow_b=True
+tc GA-case random_generator GA
+desc "Random n = 2 case."
+tc GA-edge-1 edge_generator 0
+desc "Hand made n = 2 edge case."
+tc GA-edge-2 edge_generator 1
+desc "Hand made n = 2 edge case."
+
+group GB 25
+limits min_n=1 max_n=1000 max_q=1000 allow_b=True
+include_group GA
+tc 1
+tc GB-rand random_generator rand 1000 1000 1
+desc "Random case."
+tc GB-chain random_generator longchain 500
+desc "Random case with long union find parent chains."
+
+group GC 25
+limits min_n=1 max_n=100000 max_q=100000 allow_b=False
+tc GC-rand random_generator rand 100000 100000 0
+desc "Random case."
+tc GC-chain random_generator longchain 50000
+desc "Random case with long union find parent chains."
+tc GA-edge-1
+tc GA-edge-2
+
+group GD 25
+limits min_n=1 max_n=100000 max_q=100000 allow_b=True
+include_group GB
+include_group GC
+tc GD-rand random_generator rand 100000 100000 1
+desc "Random case."
+tc GD-small-b random_generator balkan 100000 100000 5
+desc "Random case balkanising small states."
+tc GD-medium-b random_generator balkan 100000 100000 100
+desc "Random case balkanising medium states."
+tc GD-big-b random_generator balkan 100000 100000 10000
+desc "Random case balkanising large states."

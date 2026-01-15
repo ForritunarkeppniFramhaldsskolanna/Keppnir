@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+
+echo 'on_reject: continue
+range: 0 100
+grader_flags: first_error accept_if_any_accepted' > testdata.yaml
+
+rm -rf sample
+mkdir sample
+
+echo 'on_reject: continue
+range: 0 4
+grader_flags: first_error accept_if_any_accepted' > sample/testdata.yaml
+
+rm -rf secret
+mkdir secret
+
+echo 'on_reject: continue
+range: 0 96
+grader_flags: first_error accept_if_any_accepted' > secret/testdata.yaml
+
+P="stations"
+STATIONS=(1395 1453 1470 1471 1472 1685 1689 1779 1781 1868 2050 2642 3471 3976 5990 6745)
+
+pypy3 make_test.py "$P/1350.txt" 3 day 1 hour input > sample/01.in
+pypy3 make_test.py "$P/1350.txt" 3 day 1 hour answer > sample/01.ans
+pypy3 make_test.py "$P/1361.txt" 3 day 3 hour input > sample/02.in
+pypy3 make_test.py "$P/1361.txt" 3 day 3 hour answer > sample/02.ans
+
+for station in "${STATIONS[@]}"; do
+    pypy3 make_test.py "$P/$station.txt" 1 year 1 day input > secret/"$station"_01year_day.in
+    pypy3 make_test.py "$P/$station.txt" 1 year 1 day answer > secret/"$station"_01year_day.ans
+done
+
+for station in "${STATIONS[@]}"; do
+    pypy3 make_test.py "$P/$station.txt" 1 fouryears 1 week input > secret/"$station"_04years_week.in
+    pypy3 make_test.py "$P/$station.txt" 1 fouryears 1 week answer > secret/"$station"_04years_week.ans
+done
+
+for station in "${STATIONS[@]}"; do
+    pypy3 make_test.py "$P/$station.txt" 5 fouryears 1 year input > secret/"$station"_20years_year.in
+    pypy3 make_test.py "$P/$station.txt" 5 fouryears 1 year answer > secret/"$station"_20years_year.ans
+done

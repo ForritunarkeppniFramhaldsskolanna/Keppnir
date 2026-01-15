@@ -1,0 +1,61 @@
+\problemname{RedTok ShortReels}
+\illustration{0.4}{plus}{Image taken from \href{https://commons.wikimedia.org/wiki/File:Google\_Plus\_logo\_(2011-2015).png}{commons.wikimedia.org}}
+
+Jarmína uses the app Rauðtifa Stuttkefli rather quite a lot.
+It's starting to take up so much of her time and she is
+so hooked on the dopamine that she gets from it that she
+has contacted The Competitive Programming Society of Iceland
+to find a way for her to maximise the dopamine she gets
+from the app.
+
+The program shows her videos in a fixed order, each of
+a particular length $L_i$, given in milliseconds, and some
+dopamine amount $D_i$ that she gets for watching it.
+It takes $k$ milliseconds to skip a video. She gets no
+dopamine for watching part of a video.
+
+She now needs a program that finds her the best way to
+watch the videos so she can maximise the dopamine she gets.
+
+Can you help her?
+
+For each video she either needs to watch it in its entirety
+or use $k$ milliseconds to skip it, unless she runs out of
+time.
+
+\section*{Input}
+The first line of input contains two integers $n, k$,
+the number of videos and the number of milliseconds it
+takes to skip a video.
+It always holds that $1 \leq n \leq 1\,000$ and $0 \leq k
+\leq 10^9$. 
+
+Next there are $n$ lines, the $i$-th of which
+describes the $i$-th video the app shows.
+The $i$-th line contains two integers $L_i, D_i$, the length
+of the $i$-th video in milliseconds and the amount of
+dopamine she gets for watching the entirety of that video.
+It always holds that $0 \leq L_i \leq 100\,000$ and $0 \leq D_i \leq 10^9$.
+
+Finally there is a line with an integer $T$, the total
+amount of time Jarmína has in milliseconds.
+It always holds that $0 \leq T \leq 10^9$. Let $S$
+denote the total length of all videos in milliseconds.
+It always holds that $0 \leq S \leq 100\,000$.
+The videos are given in the order that they appear on
+Jarmína's phone.
+
+\section*{Output}
+Print the maximum amount of dopamine Jarmína can get
+in $T$ milliseconds.
+
+\section*{Scoring}
+\begin{tabular}{|l|l|l|}
+\hline
+Group & Points & Constraints \\ \hline
+1     & 10   & $n = 1$. \\ \hline
+2     & 20   & $n \leq 20$. \\ \hline
+3     & 35   & $k = 0$. \\ \hline
+4     & 35   & No further constraints. \\ \hline
+\end{tabular}
+

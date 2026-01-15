@@ -1,0 +1,49 @@
+\problemname{Electric Torch}
+\illustration{0.5}{flashlights}{Image from \href{https://xkcd.com/1603/}{xkcd.com}}
+
+Hrolleifs' power generators from last year are on the fritz, so he is trying to find his
+electric torch so he can get things fixed. He opens a kitchen drawer and finds his
+collection of batteries. He is not very principled when it comes to sorting things, so
+some of the batteries are dead. In fact he knows that exactly half of the batteries are
+dead and the other half is good. The electric torch needs two good batteries to work, and he
+wants to spend as little time as possible trying pairs of batteries. What's the best
+way to go about this?
+
+\section*{Interactivity}
+This is an interactive problem. Your solution will be tested against an interactive
+judge which reads the output of your solution and prints the input your solution
+receives. This interaction follows certain rules:
+
+First your program should read a positive integer $n$ on its own line, where $n$ is
+the number of batteries in the drawer.
+You may assume that $4 \leq n \leq 50$ and $n$ is an even number.
+
+If your program wants to try battery number $i$ and battery number $j$, it should
+print the numbers $i$ and $j$ on their own line, separated by a space. The same battery
+can not be inserted into two different slots at the same time, so $i \neq j$ must hold.
+
+Your program should then read a string from the input, given on its own line.
+That string will be \texttt{Myrkur!} (Icelandic for dark) if one or both of the batteries
+are dead, or \texttt{Ljos!} (Icelandic for light) if the electric torch turns on.
+If the string was \texttt{Ljos!} your program should exit.
+
+Make sure to \texttt{flush} after each guess, for example using
+\begin{itemize}
+    \item \verb!print(..., flush=True)! in Python,
+    \item \verb!cout << ... << endl;! in C++,
+    \item \verb!System.out.flush();! in Java.
+\end{itemize}
+
+The sample shows an example with $n = 6$.
+
+The task has a testing tool attached to help test your solution.
+
+Note that the judge program \textbf{will} produce the worst possible case for your solution.
+
+\section*{Scoring}
+Your program will be run on many test cases and the worst result over all 
+test cases will be used as the final score.
+Your program is scored by the number of guesses it makes.
+If your program guesses at most $4n^2$ times, it will receive a score.
+Fewer guesses result in a higher score and the maximum score is $100$.
+If your program guesses more than $4n^2$ times, it will receive a Wrong Answer verdict.

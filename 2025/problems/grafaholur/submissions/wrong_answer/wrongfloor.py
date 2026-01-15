@@ -1,0 +1,6 @@
+x = int(input())
+y = int(input())
+z = int(input())
+a = int(input())
+b = int(input())
+print(((y * x) // z) * (b // a))

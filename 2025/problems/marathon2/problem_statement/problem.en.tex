@@ -1,0 +1,44 @@
+\problemname{Marathon}
+\illustration{0.4}{toulouse}{Image taken from \href{https://commons.wikimedia.org/wiki/File:Marathon\_de\_Toulouse\_2014\_-\_3148\_-\_Water\_stop.jpg}{commons.wikimedia.org}}
+
+Konni is just about to run a marathon for the first time. He's well prepared for it and has all 
+the equipment he needs to achieve a good time. Among the things he has prepared is a water pouch
+that will make sure he can drink constantly throughout the run. He wants to achieve the best time
+possible, and thus he needs some help planning on which refilling station he should stop to fill
+his water pouch.
+
+It takes $Y$ seconds to fill his water pouch no matter the amount that is already in
+the pouch, and the pouch can hold at most $X$ ml of liquid. Konni always remembers to fill
+his bag before he starts a marathon and for every metre that he runs, he will drink $1$ml of
+liquid. If Konni has no liquid left, he will need to jog until he gets more water.
+
+Can you help Konni in finding the best time he can run the marathon if he chooses to stop
+at the refilling stations in the most optimal way?
+
+As everyone knows a marathon is $42\,195$ metres.
+
+\section*{Input}
+The first line of input contains three integers, $0 \leq N \leq 1\,000\,000$ the amount of
+refilling stations, $0 \leq X \leq 10\,000$ the size of the water pouch in ml,
+$0 \leq Y \leq 100$ how long it takes to fill the water pouch.
+
+The next line contains two integers $1 \leq H \leq 10$, the speed Konni runs at in metres
+per second and $1 \leq S \leq H$, the speed Konni jogs at in metres per second.
+
+Next will follow $N$ lines, each containing one integer, where line $i$ contains the
+position of refilling station number $i$ given in metres from the start.
+
+\section*{Output}
+Print the shortest time possible for Konni given that he chooses the refilling stations
+in the most optimal way in the format of \href{https://en.wikipedia.org/wiki/ISO\_8601}{$hh:mm:ss$}.
+
+\section*{Scoring}
+\begin{tabular}{|l|l|l|}
+\hline
+Groups & Points & Constraints \\ \hline
+1 & 20 & $H=S$ \\ \hline
+2 & 30 & $N \leq 20$ \\ \hline
+3 & 30 & $N \leq 2\,500, X \leq 1\,000$ \\ \hline
+3 & 50 & No further constraints. \\ \hline
+\end{tabular}
+

@@ -1,0 +1,12 @@
+name:
+    is: Heimasíða
+    en: Web Page
+author: Atli Fannar Franklín
+source: Forritunarkeppni Framhaldsskólanna 2025
+rights_owner: Forritunarkeppni Framhaldsskólanna
+license: cc by-sa
+type: scoring
+uuid: "73ca1d9a-7ea9-4ba4-9369-9be2aece2feb"
+grading:
+    show_test_data_groups: true
+keywords: utf-8 encoding

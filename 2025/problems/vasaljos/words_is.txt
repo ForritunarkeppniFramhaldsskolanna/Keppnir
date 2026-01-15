@@ -1,0 +1,10 @@
+Aflgjafarnir
+Ljos
+True
+com
+cout
+endl
+flush
+print
+xkcd
+rafhlaðanna

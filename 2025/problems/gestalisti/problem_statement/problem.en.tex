@@ -1,0 +1,31 @@
+\problemname{Guest List}
+\illustration{0.4}{guestlist}{Image taken from \href{https://commons.wikimedia.org/wiki/File:Guest\_list\_of\_people\_attending\_Ulysses\_S.\_Grant\%27s\_funeral,\_August\_8,\_1885\_-\_DPLA\_-\_5076ade4d3accf58b0810e7c8483b4d1\_(page\_1).jpg}{commons.wikimedia.org}}
+
+A new hotel has implemented strict entry rules, allowing access only to those on a special guest list. Due to high demand and technical issues with maintaining the list on paper, a command-line program is needed to register, remove, and check names on the list.
+
+\section*{Input}
+\begin{itemize}
+    \item The first line contains the positive integer $N$, representing the number of commands that follow.
+    \item The next $N$ lines contain commands of the following types:
+    \begin{itemize}
+        \item \texttt{+ name} – Adds a name to the guest list.
+        \item \texttt{- name} – Removes a name from the guest list.
+        \item \texttt{? name} – Checks whether a name is on the guest list.
+    \end{itemize}
+\end{itemize}
+
+Names only include the English lowercase letters \texttt{a} to \texttt{z} and names are at most
+$8$ characters in length. A name that's already on the list will never be added again, and no
+name will be removed that's not on the list.
+
+\section*{Output}
+For each \texttt{? name} command, the program should print \texttt{Jebb} if the name is on the list, otherwise \texttt{Neibb}.
+
+\section*{Scoring}
+\begin{tabular}{|l|l|l|}
+\hline
+Group & Score & Constraints \\ \hline
+1     & 20   & Only \texttt{? name} commands and $N \leq 20$. \\ \hline
+2     & 50   & $N \leq 1\,000$. \\ \hline
+3     & 30   & $N \leq 200\,000$. \\ \hline
+\end{tabular}

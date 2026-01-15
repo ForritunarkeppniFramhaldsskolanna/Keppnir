@@ -1,0 +1,40 @@
+\problemname{Veðurspá}
+\illustration{0.4}{vidvorun}{Mynd fengin frá \href{vedur.is}{Veðurstofu Íslands}.}
+
+Eitt mikilvægasta verkefni sem finnst á Íslandi er að spá um veðrið.
+Veðrið á Íslandi getur reynst mörgum erfitt, til dæmis er Suðurskautslandið eini staður heimsins sem er vindasamari en Ísland.
+Veðurstofa Íslands hefur nú sent þér gögnin sín og er þér falið verkefnið að spá um veðrið.
+
+\section*{Inntak}
+Fyrsta línan inniheldur tvær heiltölur $n$, fjölda gagnapunkta í safninu, og $m$ fjölda gagnapunkta sem skal spá um í framtíðina.
+Önnur línan inniheldur aukaupplýsingar um gagnasafnið, eða breiddargráðu, lengdargráðu, hæð yfir sjávarmáli og upphafsdagsetningu og upphafstíma safnsins.
+
+Næst fylgja $n$ línur þar sem hver lína táknar mælingu.
+Hver lína inniheldur hitastig, meðalvindstefnu, meðalvindhraða og rakastig, aðskilin með bilum.
+Mælingar eru teknar á klukkustundar fresti.
+
+Hitastig eru rauntölur á bilinu $-50$ til $50$ gefnar með nákvæmlega einum aukastaf eftir punkt, mælt í $^{\circ}C$.
+Meðalvindstefnur eru heiltölur á bilinu $0$ upp í $360$, sem táknar átt vindsins í gráðum.
+Meðalvindhraðar eru rauntölur á bilinu $0$ upp í $80$ gefnar með nákvæmlega einum aukastaf eftir punkt, mælt í $m/s$.
+Rakastig eru heiltölur á bilinu $0$ upp í $110$, sem er mælt í prósentum.
+
+Breiddargráða, lengdargráða og hæð yfir sjávarmáli eru rauntölur gefnar með allt að $6$ aukastöfum eftir punkti.
+Upphafsdagsetning er á ISO-8601 formi.
+Upphafstími er á ISO-8601 formi, nema án \texttt{Z} aftast.
+
+Gögnin eru alvöru mælingar frá mælitækjum Veðurstofu Íslands frá mismunandi svæðum landsins.
+Það getur komið upp að ekki takist að mæla einhver gildi og kemur þá eitt bandstrik \texttt{-} í staðin fyrir tölu þar.
+
+\section*{Úttak}
+Skrifaðu út $m$ línur, hver þeirra á sama sniði og gagnapunktarnir í inntakinu, sem tákna spánna þína.
+Tölurnar þurfa einnig að uppfylla skorðurnar í inntakinu.
+Þú mátt skrifa \texttt{-} til að sleppa að spá um gildi.
+
+\section*{Stigagjöf}
+Stig eru gefin út frá réttleika veðurspá, námunduð að næstu heiltölu.
+Samtals eru $50$ prufutilvik notuð og summan á niðurstöðum þeirra ákvarðar heildarstig.
+Því er veitt $2$ stig fyrir hvert prufutilvik, þá fullt hús fyrir spá sem nær $99.5\%$ eða betri réttleika.
+Réttleiki er ekki mældur línulega.
+
+Ef úttakið er ekki á réttu sniði er gefið $0$ stig.
+Ef samtals fjöldi stiga yfir öll prufutilvik er $0$ þá er lausnin dæmd röng.

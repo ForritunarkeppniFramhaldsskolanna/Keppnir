@@ -1,0 +1,11 @@
+name: Láki
+author: Arnar Bjarni Arnarson, Atli Fannar Franklín, Bjarki Gunnarsson, Breki Pálsson, Konráð Elí Sigurgeirsson, Magni Steinn Þorbjörnsson
+source: Forritunarkeppni Framhaldsskólanna 2025
+rights_owner: Forritunarkeppni Framhaldsskólanna
+license: cc by-sa
+type: scoring
+validation: custom
+uuid: "b1b4dd7e-ecc0-4714-8021-91690d3fc627"
+grading:
+    show_test_data_groups: true
+keywords: ad-hoc meta

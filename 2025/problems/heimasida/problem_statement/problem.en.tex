@@ -1,0 +1,69 @@
+\problemname{Web Page}
+\illustration{0.4}{flow}{Image taken from \href{https://commons.wikimedia.org/wiki/File:Data\_Flow\_of\_the\_Internet\_Protocol\_Suite.PNG}{commons.wikimedia.org}}
+
+Often there is trouble when Icelandic companies or societies
+need to make a web page. These days the URLs can contain
+Icelandic letters, but the norm is still to omit them.
+Of course all special characters and whitespace needs to
+be omitted as well.
+
+Many of the companies who need to do this are not particularly
+good with technology, so you see this as an opportunity.
+You can offer the service of figuring out a domain name for
+them and charge incredible rates.
+
+The first step is to throw out everything in the input
+that is not a letter or digit. Next all upper case characters
+need to be converted into lower case characters.
+All accented characters lose their accent (for example
+\texttt{á} becomes \texttt{a}). Finally all other Icelandic
+characters need to be changed. The letter \texttt{ö} 
+becomes \texttt{o}, \texttt{æ} becomes
+\texttt{ae}, \texttt{ð} becomes \texttt{d} and finally
+\texttt{þ} becomes \texttt{th}.
+
+\section*{Input}
+The input consists of a single line.
+This line can contain all printable ASCII characters
+along with the characters
+\texttt{Á},
+\texttt{á},
+\texttt{Ð},
+\texttt{ð},
+\texttt{É},
+\texttt{é},
+\texttt{Í},
+\texttt{í},
+\texttt{Ó},
+\texttt{ó},
+\texttt{Ú},
+\texttt{ú},
+\texttt{Ý},
+\texttt{ý},
+\texttt{Þ},
+\texttt{þ},
+\texttt{Æ},
+\texttt{æ},
+\texttt{Ö},
+\texttt{ö}.
+In this list each upper case character is followed by their
+lower case equivalent.
+However, the only whitespace in the input will be spaces
+along with a newline character at the end.
+The line will be at most $100$ characters, along with
+a newline character.
+
+\section*{Output}
+Print the domain name that corresponds to the input,
+based on the rules above. Also add \texttt{.is}
+at the end, and print it all on one line.
+
+\section*{Scoring}
+\begin{tabular}{|l|l|l|}
+\hline
+Group & Points & Constraints \\ \hline
+1     & 25   & Only ASCII letters in the input. \\ \hline
+2     & 25   & Only ASCII characters in the input. \\ \hline
+3     & 50   & No further constraints. \\ \hline
+\end{tabular}
+

@@ -1,0 +1,35 @@
+\problemname{O-ó, það er komin nótt!}
+\illustration{0.4}{nighttime}{Mynd fengin af Minecraft}
+
+Alex er að spila heimsfræga leikinn Minecraft og er búin að vera að ferðast í allan dag að reyna að finna hið \emph{fullkomna landasvæði} fyrir bækistöð sína. 
+Það sem hún gerir sér ekki grein fyrir er að á þeim tíma sem hún hefur ferðast hefur komið nótt, o-ó!
+Hún áttar sig aðeins á því þegar hún byrjar að sjá skrímsli birtast og verður gripin af hræðslu því hún hefur einungis bera hnefa til að verja sig, sem er óskynsamlegt.
+Hún þarf að byggja tímabundna bækistöð og fljótt!
+Hjálpaðu Alex að finna fjölda moldarkubba sem hún mun þurfa fyrir þessa bækistöð sína.
+
+Tímabundna bækistöðin er réttstrendingur sem er tómur að innan svo að Alex geti verið örugg alla nóttina.
+Allir fjórir veggir hafa þykkt $1$ með hæð að innan sem $h-1$.
+Þar sem Alex er $2$ að hæð og $1$ á lengd og breidd þarf húsið
+þá að vera að minnsta kosti $3$ á hvern kant og jörðin er þegar gerð úr moldarkubbum.
+
+\section*{Inntak}
+Fyrsta línan inniheldur eina heiltölu $i$, fjölda hliðarlengdir sem við fáum í inntaki.
+Næst fylgja $i$ línur, fyrir hversu margar hliðarlengdir okkur er gefið fáum við eftirfarandi:
+\begin{itemize}
+  \item Ef $i = 1$, við fáum einungis eina hliðarlengd sem inniheldur eina heiltölu $l$, sem táknar breidd og lengd, og í þessu tilfelli er hæðin alltaf 3.
+  \item Ef $i = 2$, við fáum tvær hliðarlengdir sem innihalda tvær heiltölur $b$ og $l$, sem táknar breidd og lengd í sitt hvoru lagi, og í þessu tilfelli er hæðin alltaf 3.
+  \item Ef $i = 3$, við fáum þrjár hliðarlengdir sem innihalda þrjár heiltölur $b$, $l$, og $h$, sem táknar breidd, lengd, og hæð í sitt hvoru lagi.
+\end{itemize}
+
+\section*{Úttak}
+Heildarfjöldi moldarkubba sem Alex mun þurfa til að lifa af nóttina gegn skrímslunum. 
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 10 & Inntakið samsvarar $3 \times 3$ húsi með lágmarkshæð.  \\ \hline
+2     & 20 & $i = 1$, og $3 \leq l \leq 100$\\ \hline
+3     & 30 & $i = 2$, og $3 \leq b,l \leq 100$ \\ \hline
+4     & 40 & $i = 3$, og $3 \leq b,l,h \leq 100$ \\ \hline
+\end{tabular}

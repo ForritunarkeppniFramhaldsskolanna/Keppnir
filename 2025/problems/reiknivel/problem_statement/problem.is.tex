@@ -1,0 +1,47 @@
+\problemname{Reiknivél}
+\illustration{0.4}{casio}{Mynd eftir Christian Horvat, fengin af \href{https://commons.wikimedia.org/wiki/File:Casio\_fx-85WA\_20050529.jpg}{commons.wikimedia.org}}
+
+Allt var í sómastandi hjá Reiknibílnum þar til allt í einu dóu rafhlöðurnar í reiknivélinni!
+Það var búið að slá mikilvæga tölu inn í reiknivélina sem ekki má gleyma, svo það þarf að
+laga þetta strax. Sem betur fer manstu hver talan var, vandinn er bara að slá töluna aftur
+inn. Reiknivélin er svolítið frumstæð og býður bara upp á nokkrar aðgerðir.
+
+Getur þú fundið út úr því að slá inn töluna að aðgerðunum sem hún styður gefnum?
+Hún hefur aðeins pláss fyrir $8$ tölustafi á skjánum, svo ef búin er til tala sem
+kemst ekki fyrir í $8$ tölustöfum bilar reiknivélin og byrja þarf upp á nýtt! Sama
+gerist ef niðurstaðan er neikvæð, hún styður það ekki heldur. Þegar
+það kviknar fyrst á reiknivélinni er $0$ á skjánum.
+
+Það er ekki mikil rafhleðsla eftir í reiknivélinni, svo við viljum gera þetta með
+sem skilvirkasta hætti. Hvað þarf mikla hleðslu til að slá inn töluna aftur í
+minnsta lagi?
+
+\section*{Inntak}
+Fyrsta lína inntaksins inniheldur tvær heiltölur $A, X$. $A$ er fjöldi aðgerða sem reiknivélin
+styður og $X$ er talan sem þú vilt slá inn í reiknivélina. Ávallt gildir $1 \leq A \leq 5$
+og $0 \leq X < 10^8$.
+Næst fylgja $A$ línur, hver lýsir einni aðgerð. 
+Hver þeirra lína inniheldur \texttt{op}, $y$, $c$ þar sem $y, c$ eru heiltölur og
+\texttt{op} er einn af stöfunum \texttt{+}, \texttt{-}, \texttt{*} eða \texttt{/}.
+Þetta merkir að sú aðgerð beitir \texttt{op} á núverandi gildi reiknivélarinnar
+og $y$, með núverandi gildi sem fyrri tala. \texttt{+} og $y = 5$ bætir þá til dæmis
+$5$ við gildið á reiknivélinni. $c$ gefur hvað það tekur mikla hleðslu að framkvæma
+þessa aðgerð. Ávallt gildir að $0 \leq y \leq 9$ og $0 \leq c \leq 3$.
+Ef aðgerðin er \texttt{/} er $y \neq 0$. Deilingin er ávallt heiltöludeiling,
+svo niðurstaðan er rúnnuð í átt að $0$. 
+
+\section*{Úttak}
+Prentaðu lágmarkshleðslu sem þú þarft að nota til að reiknivélin sýni $X$.
+Ef engin leið er til að fá reiknivélina til að sýna $X$, prentaðu í staðinn
+\texttt{Engin leid!}.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 15   & Einu aðgerðirnar eru \texttt{+} og \texttt{*}, $X \leq 1\,000$. \\ \hline
+2     & 15   & Einu aðgerðirnar eru \texttt{+} og \texttt{*}. \\ \hline
+3     & 40   & $c \leq 1$. \\ \hline
+4     & 30   & Engar frekari takmarkanir. \\ \hline
+\end{tabular}
+

@@ -1,0 +1,13 @@
+name:
+    is: Veðurspá
+    en: Weather Forecast
+author: Arnar Bjarni Arnarson
+source: Forritunarkeppni Framhaldsskólanna 2025
+rights_owner: Forritunarkeppni Framhaldsskólanna
+license: cc by-sa
+type: scoring
+validation: custom score
+uuid: "9d33c489-793d-4af1-83de-a35204c2fdcd"
+grading:
+    show_test_data_groups: true
+keywords: easy arithmetic

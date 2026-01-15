@@ -1,0 +1,15 @@
+name:
+    is: Radikalistar
+    en: Radicalists
+author: Atli Fannar Franklín
+source: Forritunarkeppni Framhaldsskólanna 2025
+rights_owner: Forritunarkeppni Framhaldsskólanna
+license: cc by-sa
+type: scoring
+validation: custom
+uuid: "e158f3a4-219e-4eca-b9a2-20618886505d"
+grading:
+    show_test_data_groups: true
+limits:
+    time_multiplier: 1.3
+keywords: data-structures partition-refinement

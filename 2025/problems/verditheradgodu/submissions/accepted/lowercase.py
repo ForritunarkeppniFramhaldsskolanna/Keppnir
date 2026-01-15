@@ -1,0 +1,1 @@
+print("takk fyrir mig!")

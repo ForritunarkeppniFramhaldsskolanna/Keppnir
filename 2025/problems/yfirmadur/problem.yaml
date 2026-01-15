@@ -1,0 +1,14 @@
+name:
+  is: Yfirmaður
+  en: Supervisor
+author: Arnar Bjarni Arnarson, Atli Fannar Franklín
+source: Forritunarkeppni Framhaldsskólanna 2025
+rights_owner: Forritunarkeppni Framhaldsskólanna
+license: cc by-sa
+type: scoring
+uuid: "5bcc6d90-6951-4b16-ab7f-b5257db8dc13"
+limits:
+  time_multiplier: 2
+grading:
+    show_test_data_groups: true
+keywords: tree graph-theory

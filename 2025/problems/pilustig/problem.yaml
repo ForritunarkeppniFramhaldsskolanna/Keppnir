@@ -1,0 +1,14 @@
+name: 
+  is: Pílustig
+  en: Darts Scoring
+author: Atli Fannar Franklín, Arnar Bjarni Arnarson, Hannes Kristján Hannesson
+source: Forritunarkeppni Framhaldsskólanna 2025
+rights_owner: Forritunarkeppni Framhaldsskólanna
+license: cc by-sa
+type: scoring
+uuid: "4755194a-833d-4338-945d-47581d4adb75"
+validation:
+  custom
+grading:
+    show_test_data_groups: true
+keywords: for-loop brute-force complete-search

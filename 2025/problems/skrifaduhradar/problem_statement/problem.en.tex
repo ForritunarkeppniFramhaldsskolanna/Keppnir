@@ -1,0 +1,60 @@
+\problemname{Type Faster}
+\illustration{0.4}{top20}{Image taken from \href{https://2024.nwerc.eu/main/scoreboard/}{2024.nwerc.eu}}
+
+In programming contests it is often useful to type fast,
+especially when time penalties can swing you up and down
+many places in the scoreboard. You now wonder how much it
+would have taken to win a previous contest.
+
+You are quite optimistic so you assume you will solve all
+problems first try, so you only get time penalties for your
+first submission in each problem. The best team of the contest
+solved every problem, so you need to do the same and beat
+their time penalty. Let us also assume the contest has no
+time limit, outside of having to beat the top team's time
+penalty. It is not sufficient to match their time penalty,
+yours has to be strictly lower.
+
+If you turn in a solution at minute $x$, the value $x$ is
+added to your time penalty. This means that a solution 
+submitted at $1$ minute and $59$ seconds gets a time
+penalty of $1$ but one after $2$ minutes gets a time
+penalty of $2$.
+
+Thus if you can write $20$ words per minute and a solution
+takes $100$ words, and you start by solving that problem,
+you will get a time penalty of $5$. But if it were $99$ words
+you would get a time penalty of $4$.
+
+You have figured out the solution to every problem in your
+head and know exactly how many words each problem would be.
+But you are unsure if you can type fast enough to beat the
+top team. Thus the question is, how many words per minute do
+you need to type to beat the top team?
+
+\section*{Input}
+The first line of input contains two integers $n, T$.
+$n$ is the number of problems on the contest you have to
+solve and $T$ is the time penalty of the top team that you
+have to beat. It will always hold that 
+$1 \leq n \leq 100\,000$ and $1 \leq T \leq 10^{18}$.
+The second and last line of input contains $n$ integers
+$w_1, w_2, \dots, w_n$. $w_i$ is the number of words the
+solution to the $i$-th problem has. It will always hold that
+$0 \leq w_i \leq 10^9$ for all $i$.
+The sum of all $w_i$ will not be $0$.
+
+\section*{Output}
+Print the lowest number of words per minute needed to
+beat the top team.
+
+\section*{Scoring}
+\begin{tabular}{|l|l|l|}
+\hline
+Group & Points & Constraints \\ \hline
+1     & 10   & $n = 1$. \\ \hline
+2     & 15   & $T = 1$. \\ \hline
+3     & 25   & $n \leq 100, \sum_{i=0}^n w_i \leq 1\,000$ \\ \hline
+4     & 50   & No further constraints. \\ \hline
+\end{tabular}
+

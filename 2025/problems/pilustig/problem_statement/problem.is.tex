@@ -1,0 +1,49 @@
+\problemname{Pílustig}
+\illustration{0.4}{board}{Mynd fengin af \href{https://commons.wikimedia.org/wiki/File:Darts\_in\_board.png}{commons.wikimedia.org}}
+
+Hannes mætti í vinnuteiti með vinnufélögum sínum og eins og oft áður varð pílubar fyrir valinu,
+eins og algengt er hjá hugbúnaðarfyrirtækjum á Íslandi. Eftir því sem leið á leikinn varð ljóst
+fyrir Hannesi að einn hinna leikmannanna væri mjög líklegur til að ljúka leiknum á sinni næstu
+umferð. Því hugsar hann sér að hann verði að ljúka leiknum núna á sinni umferð til að tryggja sigurinn.
+En hvernig getur hann gert það?
+
+Í hverri umferð má kasta allt að þremur pílum. Fyrir að hitta beint í miðju fást $50$ stig,
+sem kallast \texttt{Bullseye}. Fyrir að hitta hringinn sem umleikur miðjuna fást $25$ stig, sem 
+kallast \texttt{Outer bullseye}. Svo eru $20$ sneiðar utan þess. Að hitta í sneiðina gefur
+eitt til tuttugu stig eftir sneiðinni, svo að hitta $17$ myndi til dæmis heita 
+\texttt{Single 17}. Á sneiðinni er mjó ræma sem gefur tvöföld stig, svo að hitta þá ræmu
+á sneið $8$ gæfi $16$ stig og myndi heita \texttt{Double 8}. Loks er önnur ræma á hverri
+sneið sem gefur þreföld stig, svo að hitta þá ræmu á sneið $11$ gæfi $33$ stig og myndi
+heita \texttt{Triple 11}.
+
+Getur þú sagt Hannesi frá öllum mögulegum leiðum sem hann getur lokið leik með einu til
+þremur köstum?
+
+Athugið að ekki þarf að ljúka á sérstöku kasti eins og \texttt{Double} annað en í sumum útgáfum af pílu.
+
+\section*{Inntak}
+Inntak inniheldur eina jákvæða heiltölu $x$, fjöldi stiga sem Hannes þarf að fá til að ljúka leik.
+Ávallt gildir að $x \leq 501$.
+
+\section*{Úttak}
+Byrja skal á að prenta eina línu með heiltölu $n$ sem gefur fjölda leiða sem Hannes getur lokið
+leik í einum til þremur pílum. Svo fyrir hverja slíka leið skal prenta eftirfarandi. Fyrst skal
+prenta heiltölu $k$ á eigin línu, fjöldi píla sem skal kasta. Svo skulu fylgja $k$ línur, þar sem
+$i$-ta línan gefur hvar $i$-ta pílan á að lenda, þar sem við miðum við heitin sem gefin eru að ofan.
+
+Athugið að \texttt{Bullseye}, \texttt{Single 1} og \texttt{Single 1}, \texttt{Bullseye} teljast
+ólíkar leiðir til að fá $51$ stig, röð skiptir máli.
+
+Hins vegar skiptir röðin á leiðunum ekki máli. Prenta má leiðirnar í hvaða röð sem er.
+
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 20   & $x = 1$. \\ \hline
+2     & 30   & $x \leq 5$. \\ \hline
+3     & 40   & $x \leq 100$. \\ \hline
+4     & 10   & Engar frekari takmarkanir. \\ \hline
+\end{tabular}
+

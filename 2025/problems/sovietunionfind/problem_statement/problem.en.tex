@@ -1,0 +1,77 @@
+\problemname{Soviet Union-Find}
+\illustration{0.4}{space}{Image by \href{https://www.vezanmatics.com}{Evan Streb, Vezanmatics}. Used with permission.}
+
+Ingfríður was sitting and staring into open air, bored out
+of her mind in history class. The teacher was droning on
+about the Soviet Union and the cold war. She was however
+too busy thinking about programming contests and problems
+she wanted to solve. She was thus not at all focusing on
+what was going on in class
+
+And the end of class the teacher said the students should
+work on a creative assignment related to this piece of 
+history. She thought long and hard what she could do that
+is related to this, but was still stuck thinking about 
+competitive programming. Finally it clicked in her head 
+though. Soviet Union? This must be related to the \emph{Union-Find} data structure!
+Thus she will do an assignment about this. Unfortunately
+she forgot about this idea for quite a while and now the
+deadline is upon her! Can you save her by finishing
+the assignment in time?
+
+\emph{Soviet Union-Find} has to be a program that supports a few
+queries. At the start we divide the land area of the
+world into $n$ pieces, numbering them $1, 2, \dots, n$.
+At the start each piece is independent and rules their
+own area. But then the queries can change this, the first
+type of query being \texttt{a x y}. This means that the
+ruler of area $x$ annexes everything the ruler of area
+$y$ rules over. The ruler of the new area is the ruler of
+area $x$. The second type of query is \texttt{b x} which
+means that everything the ruler of area $x$ rules over
+gets \textit{balkanised}. This means that all the areas
+split up and become independent again, ruling only their
+own area once more, like at the beginning. Finally there
+is the query \texttt{c x} which asks who currently rules
+over area $x$.
+
+\section*{Input}
+The first line of input contains two positive integers
+$n, q$ where $n$ is the number of areas the world is split
+into at the start and $q$ is the number of queries to follow.
+Next there are $q$ lines, each with one query.
+The first character of each such line is then always one
+of \texttt{a}, \texttt{b} or \texttt{c} as described above.
+This letter then gives the type of the query.
+
+If the first letter is \texttt{a} there will be two positive
+integers $x$ and $y$ on the line that satisfy $1 \leq x, y
+\leq n$. If $x$ and $y$ are already have the same ruler this
+query does nothing. This means the annexation operation
+described above should be performed on areas $x$ and $y$.
+
+If the first letter is \texttt{b} then there will be one
+positive integer $x$ on the line satisfying $1 \leq x \leq n$.
+Then the balkanisation operation should be performed on the
+area the ruler of area $x$ rules over, as described above.k
+
+Finally if the first letter was \texttt{c} there will follow
+one positive integer $x$ satisfying $1 \leq x \leq n$.
+It will always hold that $n, q \leq 100\,000$.
+
+\section*{Output}
+For each \texttt{c} query in the input, print the number
+of the ruler of the area given in that query, as described
+above. Print each number on its own line and in the same
+order as the queries are given in the input.
+
+\section*{Scoring}
+\begin{tabular}{|l|l|l|}
+\hline
+Group & Points & Constraints \\ \hline
+1     & 25   & $n = 2, q \leq 100$ \\ \hline
+2     & 25   & $n, q \leq 1\,000$ \\ \hline
+3     & 25   & There are no \texttt{b} queries in the input. \\ \hline
+4     & 25   & No further constraints. \\ \hline
+\end{tabular}
+

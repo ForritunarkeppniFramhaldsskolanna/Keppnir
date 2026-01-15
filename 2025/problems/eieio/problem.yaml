@@ -1,0 +1,12 @@
+name:
+    is: ÍÆÍÆÓ
+    en: EIEIO
+author: Atli Fannar Franklín
+source: Forritunarkeppni Framhaldsskólanna 2025
+rights_owner: Forritunarkeppni Framhaldsskólanna
+license: cc by-sa
+type: scoring
+uuid: "6d860385-a247-44c2-9ef7-e84c1b8187b2"
+grading:
+    show_test_data_groups: true
+keywords: linear-algebra math arithmetic

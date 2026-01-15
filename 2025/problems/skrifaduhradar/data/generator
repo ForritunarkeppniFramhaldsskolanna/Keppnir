@@ -1,0 +1,62 @@
+#!/usr/bin/env bash
+export PPATH
+PPATH=$(realpath ..)
+# shellcheck source-path=SCRIPTDIR
+. ../../../testdata_tools/gen.sh
+
+use_solution atli.py
+
+compile random_generator.py
+compile edge_generator.py
+
+samplegroup
+limits max_n=100 max_t=10000 max_sm=10000
+sample 1
+
+group GA 10
+limits max_n=1 max_t=1000000000000000000 max_sm=100000000000000
+tc GA-max edge_generator maxans 1 1000000000
+desc "Edge case testing maximum answer to stress binary search (within first group)."
+for i in {01..03}; do
+    tc "GA-$i-1" random_generator 1 10**18 10**14
+    desc "Random case with n = 1 and t <= 10^18."
+    tc "GA-$i-2" random_generator 1 10**8 10**14
+    desc "Random case with n = 1 and t <= 10^8."
+    tc "GA-$i-3" random_generator 1 10**2 10**14
+    desc "Random case with n = 1 and t <= 10^2."
+done;
+
+group GB 15
+limits max_n=100000 max_t=1 max_sm=100000000000000
+for i in {01..03}; do
+    tc "GB-$i" random_generator 10**5 1 10**14
+    desc "Random case with n <= 10^5 and t = 1."
+done;
+
+group GC 25
+limits max_n=100 max_t=1000000000000000000 max_sm=1000
+for i in {01..05}; do
+    tc "GC-$i-1" random_generator 10**2 10**7 10**3
+    desc "Random case with n <= 10^2, t <= 10^7 and sum w_i <= 10^3."
+    tc "GC-$i-2" random_generator 10**2 10**3 10**3
+    desc "Random case with n <= 10^2, t <= 10^3 and sum w_i <= 10^3."
+    tc "GC-$i-3" random_generator 10**2 10**1 10**3
+    desc "Random case with n <= 10^2, t <= 10^1 and sum w_i <= 10^3."
+done;
+tc GC-max edge_generator maxans 100 10
+desc "Edge case testing maximum answer to stress binary search (within third group)."
+
+group GD 50
+limits max_n=100000 max_t=1000000000000000000 max_sm=100000000000000
+include_group GA
+include_group GB
+include_group GC
+tc 1
+tc GD-1 random_generator 10**5 10**18 10**14
+desc "Random case with n <= 10^5, t <= 10^18."
+tc GD-2 random_generator 10**5 10**8 10**14
+desc "Random case with n <= 10^5, t <= 10^8."
+tc GD-3 random_generator 10**5 10**2 10**14
+desc "Random case with n <= 10^5, t <= 10^2."
+tc GD-max edge_generator maxans 100000 1000000000
+desc "Edge case testing maximum answer to stress binary search."

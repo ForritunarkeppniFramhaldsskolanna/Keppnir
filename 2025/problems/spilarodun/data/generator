@@ -1,0 +1,82 @@
+#!/usr/bin/env bash
+export PPATH
+PPATH=$(realpath ..)
+# shellcheck source-path=SCRIPTDIR
+. ../../../testdata_tools/gen.sh
+
+use_solution atli.py
+
+compile random_generator.py
+compile edge_generator.py
+
+samplegroup
+limits max_n=1000 'ordfix="????"'
+sample 1
+sample 2
+sample 3
+sample 4
+sample 5
+
+group GA 5
+limits max_n=1 'ordfix="????"'
+for i in {0..9}; do
+    tc "GA-$i" random_generator 1 -1 9198
+    desc "Random n = 1 case."
+done;
+
+group GB 10
+limits max_n=1000 'ordfix="n???"'
+tc 1
+for i in {0..4}; do
+    for j in {0..5}; do
+        tc "GB-$i-$j" random_generator 1000 "$j" 9198
+        desc "Random case sorting by name."
+    done;
+done;
+
+group GC 15
+limits max_n=1000 'ordfix="i???"'
+tc 2
+for i in {0..4}; do
+    for j in {6..11}; do
+        tc "GC-$i-$j" random_generator 1000 "$j" 9198
+        desc "Random case sorting by ID."
+    done;
+done;
+
+group GD 20
+limits max_n=1000 'ordfix="fi??"'
+tc 3
+for i in {0..4}; do
+    for j in 14 15; do
+        tc "GD-$i-$j" random_generator 1000 "$j" 9198
+        desc "Random case sorting by type, then ID."
+    done;
+done;
+
+group GE 20
+limits max_n=1000 'ordfix="dfni"'
+tc 4
+tc GE-edge-1 edge_generator fourkeys1
+desc "Edge case testing all four fields."
+tc GE-edge-2 edge_generator fourkeys2
+desc "Edge case testing all four fields."
+for i in {0..4}; do
+    tc "GE-$i-22" random_generator 1000 22 50
+    desc "Random case sorting by date, then type, then name, then ID."
+done;
+
+group GF 30
+limits max_n=1000 'ordfix="????"'
+include_group GA
+include_group GB
+include_group GC
+include_group GD
+include_group GE
+tc 5
+for i in {0..4}; do
+    for j in 12 13 16 17 18 19 20 21 23; do
+        tc "GF-$i-$j" random_generator 1000 "$j" 50
+        desc "Random case sorting arbitrarily."
+    done;
+done;

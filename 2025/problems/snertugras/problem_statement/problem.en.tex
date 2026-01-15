@@ -1,0 +1,65 @@
+\problemname{Touch Grass}
+\illustration{0.4}{ginyu}{Judges touching grass.}
+
+The contestants at Forritunarkeppni Framhaldsskólanna are
+by and large quite good programmers. But there is something
+that these contestants are certainly below average at
+achieving, and do much less than the average person does.
+They could even do with some training and experience in this
+field. And that is, as the problem title suggests, touching
+grass.
+
+To assist contestants in getting used to the thought of
+touching grass we try to bridge the gap here by making you
+make a program that is about touching grass. You will
+hopefully feel a bit more mentally ready to touch real
+grass afterwards.
+
+You will receive a map of your location, the surrounding
+walls and where there is grass. From this you need to find
+the shortest path to the nearest patch of grass. The map
+is composed of square cells and each step moves you to
+an adjacent cell to the north, south, west or east of your
+current cell. You can not leave the boundary of the map,
+that denotes the boundary of the area it is safe for you
+to visit. Going too far and touching too much grass might
+get you to consider doing something other than programming,
+which would be very bad.
+
+\section*{Input}
+The input starts with two integers $h, w$, the height and
+width of the map. You may assume that $h, w \geq 1$ and
+$h \cdot w \leq 1\,000\,000$.
+Next there are $h$ lines, each with $w$ characters (along
+with a newline character). These characters will all be
+\texttt{S}, \texttt{.}, \texttt{\#} or \texttt{G}.
+\texttt{S} denotes your current location and this letter
+will appear exactly once in the input. Cells with grass
+are denoted with \texttt{G}, cells with walls are denoted
+with \texttt{\#} and empty cells with \texttt{.}. 
+You can move to any cell except those with walls.
+
+\section*{Output}
+If you can reach a cell with grass, print the minimum
+number of steps needed to reach a cell with grass.
+Otherwise print \texttt{thralatlega nettengdur}
+(Icelandic for terminally online).
+
+\section*{Scoring}
+\begin{tabular}{|l|l|l|}
+\hline
+Group & Points & Constraints \\ \hline
+1     & 20   & $h, w \leq 2$. \\ \hline
+2     & 40   & $h \cdot w \leq 100$. \\ \hline
+3     & 15   & There are no \texttt{\#} cells. \\ \hline
+4     & 25   & No further constraints. \\ \hline
+\end{tabular}
+
+\section*{Extra prize}
+At the lunch break of this contest we implore you to go
+touch grass. We are so serious about this that this year
+there will be a bonus prize for the team that sends us the
+best picture of them touching grass while wearing their
+contest shirts. You can send this picture (and your team
+name) to the \texttt{\#jarm} channel on our Discord,
+or to \texttt{keppnisforritun@gmail.com}.

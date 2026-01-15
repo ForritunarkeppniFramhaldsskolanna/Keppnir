@@ -1,0 +1,13 @@
+name: 
+    is: Andmál
+    en: Contrarianism
+author: Arnar Bjarni Arnarson, Atli Fannar Franklín, Samúel Arnar Hafsteinsson
+source: Forritunarkeppni Framhaldsskólanna 2025
+rights_owner: Forritunarkeppni Framhaldsskólanna
+license: cc by-sa
+type: scoring
+uuid: "0599585c-6191-4209-a851-70fb22e52630"
+validation: custom 
+grading:
+    show_test_data_groups: true
+keywords: easy ad-hoc

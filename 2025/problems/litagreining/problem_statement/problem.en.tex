@@ -1,0 +1,50 @@
+\problemname{Colour Analysis}
+\illustration{0.4}{rgb}{Image taken from \href{https://commons.wikimedia.org/wiki/File:RGB\_Color\_Model.png}{commons.wikimedia.org}}
+
+Jón and Gunna argue sometimes about what colour a particular
+thing is. Is the wall green or a yellowish green, is the dress
+blue or gold and so on. To solve this problem they have obtained
+a measuring device that measures the reflecting light in red, green and
+blue and outputs three numbers.
+This has however not solved the problem because now they
+simply disagree on which values correspond to which colour.
+Thus they now need a program which takes care of this issue.
+
+All three values are integers from $0$ to $255$ and we
+denote them by $R$, $G$ and $B$.
+If $R$ is strictly greater than the other values the answer 
+is \texttt{raudur}.
+If $G$ is strictly greater than the other values the answer
+is \texttt{graenn}.
+If $B$ is strictly greater than the other values the answer
+is \texttt{blar}.
+If $R = G$ and $B$ is strictly smaller than the other values
+the answer is \texttt{gulur}.
+If $R = B$ and $G$ is strictly smaller than the other values
+the answer is \texttt{fjolubleikur}.
+If $G = B$ and $R$ is strictly smaller than the other values
+the answer is \texttt{blagraenn}.
+If all values are equal to $0$ the answer is \texttt{svartur}.
+If all values are equal to $255$ the answer is \texttt{hvitur}.
+If all values are equal, but not equal to $0$ nor $255$, the
+answer is \texttt{grar}.
+Otherwise if none of the above applies the answer is
+\texttt{othekkt}.
+
+\section*{Input}
+The input consists of a single line with three integers
+$R$, $G$ and $B$ which are separated by spaces.
+It will hold that $0 \leq R, G, B \leq 255$.
+
+\section*{Output}
+Output the colour that the values correspond to, as
+described above.
+
+\section*{Scoring}
+\begin{tabular}{|l|l|l|}
+\hline
+Group & Points & Constraints \\ \hline
+1     & 50   & $R, G$ and $B$ are different. \\ \hline
+2     & 50   & No further constraints. \\ \hline
+\end{tabular}
+

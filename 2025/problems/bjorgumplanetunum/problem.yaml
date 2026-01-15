@@ -1,0 +1,12 @@
+name: 
+    is: Björgum plánetunum
+    en: Save the Planets
+author: Elvar Árni Bjarnason, Samúel Arnar Hafsteinsson
+source: Forritunarkeppni Framhaldsskólanna 2025
+rights_owner: Forritunarkeppni Framhaldsskólanna
+license: cc by-sa
+type: scoring
+uuid: "0e199b27-c7de-43e5-9cf2-aee6c16d34ac"
+grading:
+    show_test_data_groups: true
+keywords: arithmetic binary-search math

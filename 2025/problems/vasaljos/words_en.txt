@@ -1,0 +1,6 @@
+Myrkur
+Ljos
+Vasaljós
+cout
+endl
+xkcd

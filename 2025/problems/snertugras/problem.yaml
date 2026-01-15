@@ -1,0 +1,12 @@
+name: 
+    is : Snertu gras
+    en : Touch Grass
+author: Arnar Bjarni Arnarson, Atli Fannar Franklín, Dagur Benjamínsson, Eva Natalía Elvarsdóttir, Konráð Elí Sigurgeirsson, Samúel Arnar Hafsteinsson
+source: Forritunarkeppni Framhaldsskólanna 2025
+rights_owner: Forritunarkeppni Framhaldsskólanna
+license: cc by-sa
+type: scoring
+uuid: "793123a7-f3ae-4523-bc15-b628754d8cbe"
+grading:
+    show_test_data_groups: true
+keywords: bfs graph floodfill irl meta

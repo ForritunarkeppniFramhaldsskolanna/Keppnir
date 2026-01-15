@@ -1,0 +1,72 @@
+\problemname{Radicalists}
+\illustration{0.4}{judea}{Screen capture from the movie Life of Brian}
+
+Disagreements sometimes arise in the Icelandic Competitive
+Programming Society when discussing problems for upcoming
+programming contests. Recently these disagreements have
+gotten somewhat out of hand and resulted in the group 
+splitting up when writing problems to avoid confrontation.
+
+As an example recently the group split in two when a portion
+of the problem writers got sick and tired of all the League
+of Legends problems and said that the rest of the society
+was hopelessly addicted to this boring video game.
+
+This worked for some time until disagreements arose again,
+that time some people from both groups complained that the
+addiction to Runescape among some members was no better, so
+both groups split once more and then there were four.
+
+This was starting to get hard to track. Thus we now need a
+program that can maintain the state of things as groups
+keep splintering due to groups of radicalists splitting off
+from any group they are in.
+
+\section*{Input}
+The first line of input contains two positive integers
+$n, q$. Here $n$ denotes the number of members and $q$
+the number of queries to follow.
+Next there are $q$ lines, each containing one query.
+Each line begins with one of the letters \texttt{r}, 
+\texttt{s} or \texttt{m}. This letter denotes the type
+of the query.
+
+If the line starts with a \texttt{r} there will follow a
+positive integer $t$.
+Then there are $t$ positive integers $x_i$, all on the
+same line. This denotes that members number $x_1, \dots,
+x_t$ have become radicalists and split away from their 
+current group. If $x_i$ and $x_j$ were in the same group
+before splitting off they will be in the same group after.
+The numbers satisfy $1 \leq x_i \leq n$.
+
+If the line starts with \texttt{s} the program should print
+the number of groups the society is currently split into,
+printing that number on its own line. Empty groups do not
+count.
+
+Finally if the line starts with \texttt{m} there will follow
+a single positive integer $u$ on the same line, satisfying
+$1 \leq u \leq n$. Then the program should print the members
+which are in the same group as $u$, all on one line with
+numbers separated by spaces. The members may be printed in
+any internal order.
+There are at most $2 \cdot 10^6$ numbers in the input.
+
+\section*{Output}
+For each query starting with \texttt{s} or
+\texttt{m} the program should print one line, as described
+above. There will be at most $2 \cdot 10^6$ integers in
+the output.
+
+\section*{Scoring}
+\begin{tabular}{|l|l|l|}
+\hline
+Group & Points & Constraints \\ \hline
+1     & 10   & $n \leq 10, q = 1$ \\ \hline
+2     & 20   & $n, q \leq 1\,000$ \\ \hline
+3     & 30   & $n \leq 100\,000$ \\ \hline
+4     & 20   & $n \leq 10^7, m = 1$ \\ \hline
+5     & 20   & $n \leq 10^7$ \\ \hline
+\end{tabular}
+

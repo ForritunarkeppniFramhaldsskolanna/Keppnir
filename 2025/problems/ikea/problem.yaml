@@ -1,0 +1,14 @@
+name:
+  is: Hámarks ósanngjörn sanngjörn IKEA ferð
+  en: Maximally Unfair Fair IKEA Trip
+author: Dagur Benjamínsson
+source: Forritunarkeppni Framhaldsskólanna 2025
+rights_owner: Forritunarkeppni Framhaldsskólanna
+license: cc by-sa
+type: scoring
+uuid: "a1694549-3a7a-4eb3-1337-696969696969"
+limits:
+  time_multiplier: 2
+grading:
+    show_test_data_groups: true
+keywords: greedy sorting sort

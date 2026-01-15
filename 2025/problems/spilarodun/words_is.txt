@@ -1,0 +1,16 @@
+ID
+Skrimsli
+Ahrifa
+Bodunar
+Thaeo
+Penduls
+Tengis
+Bunadar
+Svida
+Hradur
+Mot
+Annad
+yyyy
+dd
+ISO
+id

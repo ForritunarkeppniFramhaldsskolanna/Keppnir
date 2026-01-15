@@ -1,0 +1,126 @@
+#!/usr/bin/env bash
+export PPATH
+PPATH=$(realpath ..)
+# shellcheck source-path=SCRIPTDIR
+. ../../../testdata_tools/gen.sh
+
+use_solution atli.py
+
+compile generator_int.py
+compile generator_hex.py
+compile generator_complex.py
+compile generator_string.py
+compile generator_set.py
+compile generator_mayan.py
+compile generator_mod.py
+compile generator_bull.py
+compile generator_element.py
+compile generator_log.py
+compile sample_generator.py
+
+samplegroup
+limits group=\"S\"
+sample 1
+sample 2
+sample 3
+
+# Integer add
+group GA 10
+limits group=\"A\"
+tc 1
+tc GAS sample_generator A
+for i in {00..19}; do
+    tc "GA-$i" generator_int
+    desc "Random case of form a + b where a, b are integers like 123."
+done;
+
+# String add
+group GB 10
+limits group=\"B\"
+include_group GA
+tc 2
+tc GBS sample_generator B
+for i in {00..19}; do
+    tc "GB-$i" generator_string
+    desc "Random case of form a + b where a, b are strings like \"abcdef\"."
+done;
+
+# Hex add
+group GC 10
+limits group=\"C\"
+include_group GB
+tc 3
+tc GCS sample_generator C
+for i in {00..19}; do
+    tc "GC-$i" generator_hex
+    desc "Random case of form a + b where a, b are hex numbers like 0xabc123."
+done;
+
+# Complex add
+group GD 10
+limits group=\"D\"
+include_group GC
+tc GDS sample_generator D
+for i in {00..19}; do
+    tc "GD-$i" generator_complex
+    desc "Random case of form a + b where a, b are complex numbers like 32 + 11i."
+done;
+
+# Log add
+group GE 10
+limits group=\"E\"
+include_group GD
+tc GES sample_generator E
+for i in {00..19}; do
+    tc "GE-$i" generator_log
+    desc "Random case of form a + b where a, b are logarithms like log(22)."
+done;
+
+# Set add
+group GF 10
+limits group=\"F\"
+include_group GE
+tc GFS sample_generator F
+for i in {00..19}; do
+    tc "GF-$i" generator_set
+    desc "Random case of form a + b where a, b are sets like {1, 2, 3}."
+done;
+
+# Element add
+group GG 10
+limits group=\"G\"
+include_group GF
+tc GGS sample_generator G
+for i in {00..19}; do
+    tc "GG-$i" generator_element
+    desc "Random case of form a + b where a, b are chemical elements like Fe."
+done;
+
+# Mayan add
+group GH 10
+limits group=\"H\"
+include_group GG
+tc GHS sample_generator H
+for i in {00..19}; do
+    tc "GH-$i" generator_mayan
+    desc "Random case of form a + b where a, b are mayan numerals like 𝋱."
+done;
+
+# Modulo add
+group GI 10
+limits group=\"I\"
+include_group GH
+tc GIS sample_generator I
+for i in {00..19}; do
+    tc "GI-$i" generator_mod
+    desc "Random case of form a + b where a, b are modulo values like 3 mod 5."
+done;
+
+# Random shit go
+group GJ 10
+limits group=\"J\"
+include_group GI
+for i in {0..9}; do
+    tc "GJ-$i" generator_bull "$i"
+    desc "Random case of form a + b where a, b are arbitrary words."
+done;

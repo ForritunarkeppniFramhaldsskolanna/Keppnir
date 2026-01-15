@@ -1,0 +1,47 @@
+\problemname{Vasaljós}
+\illustration{0.5}{flashlights}{Mynd fengin af \href{https://xkcd.com/1603/}{xkcd.com}}
+
+Aflgjafarnir hans Hrolleifs frá því í fyrra eru bilaðir, svo hann er að reyna finna sér
+rafhlöðuvasaljós til að geta bjargað hlutunum. Hann opnar eldhússkúffu og finnur þar safn
+sitt af rafhlöðum. Hann er hins vegar ekki mjög duglegur að flokka frá notaðar rafhlöður, svo sumar rafhlöðurnar eru
+dauðar. Nánar tiltekið veit hann að helmingur rafhlaðanna er án hleðslu, en hinn helmingurinn er
+enn góður. Vasaljósið þarf tvær góðar rafhlöður til að virka, og hann langar að eyða sem minnstum
+tíma í að prófa rafhlöður. Hvernig er best að fara að þessu?
+
+\section*{Gagnvirkni}
+Þetta er gagnvirkt verkefni. Lausnin þín verður keyrð á móti gagnvirkum dómara
+sem les úttakið frá lausninni þinni og skrifar í inntakið á lausninni þinni.
+Þessi gagnvirkni fylgir ákveðnum reglum:
+
+Fyrst les forritið þitt jákvæða heiltölu $n$ á einni línu, þar sem $n$ er fjöldi rafhlaða í skúffunni.
+Gefið er að $4 \leq n \leq 50$ og að $n$ sé slétt tala.
+
+Svo ef forritið þitt vill prófa rafhlöðu númer $i$ og rafhlöðu númer $j$ þarf hún einfaldlega
+að prenta $i$ og $j$ á einni línu, aðskilin með bili. Ekki er hægt að setja sömu rafhlöðu í
+tvö hólf, svo það þarf að hafa $i \neq j$.
+
+Svo les forrit þitt streng úr inntakinu á sinni eigin línu. Sá strengur er
+\texttt{Myrkur!} ef annað hvort eða bæði
+rafhlaðanna er dautt eða \texttt{Ljos!} ef það kviknar á vasaljósinu.
+Ef strengurinn var \texttt{Ljos!} á forrit þitt að hætta keyrslu.
+
+Vertu viss um að gera \texttt{flush} eftir hvert gisk, t.d., með
+\begin{itemize}
+    \item \verb!print(..., flush=True)! í Python,
+    \item \verb!cout << ... << endl;! í C++,
+    \item \verb!System.out.flush();! í Java.
+\end{itemize}
+
+Sýniinntakið sýnir dæmi með $n = 6$.
+
+Með verkefninu fylgir tól sem viðhengi til þess að hjálpa við að prófa lausnina þína.
+
+Athugaðu að yfirferðarforritið \textbf{mun} athuga hvort lausnin þín standist versta mögulega tilfelli fyrir þína lausn.
+
+\section*{Stigagjöf}
+Lausnin þín verður keyrð á mörgum prufutilvikum og versta niðurstaða yfir
+öll prufutilvik mun gilda til stigagjafar.
+Lausnin þín fær stig út frá fjölda giska.
+Ef lausnin giskar mest $4*n^2$ sinnum fær hún stig.
+Færri gisk gefa fleiri stig og mest er hægt að fá $100$ stig.
+Ef lausnin þín giskar oftar en $4*n^2$ sinnum verður hún dæmd röng.

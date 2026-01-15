@@ -1,0 +1,60 @@
+\problemname{RauðTifa StuttKefli}
+\illustration{0.4}{plus}{Mynd fengin af \href{https://commons.wikimedia.org/wiki/File:Google\_Plus\_logo\_(2011-2015).png}{commons.wikimedia.org}}
+
+Jarmína notar appið Rauðtifa Stuttkefli ansi mikið.
+Þetta er farið að taka svo mikinn tíma og hún er svo háð
+dópamíninu sem því fylgir að hún er nú búin að leita
+til Keppnisforritunarfélagi Íslands til að hámarka dópamín
+sitt á appinu.
+
+Forritið sýnir henni myndbönd í fastri röð, hvert þeirra
+hefur einhverja lengd $L_i$, gefið í millisekúndum, og
+eitthvað ánægjustig $D_i$, gefið í dópamíneiningum.
+Það tekur $k$ millisekúndur að 
+sleppa myndbandi og fara á næsta myndband.
+Ekkert dópamín fæst nema horft sé á heilt myndband.
+
+Henni vantar nú að fá forrit sem segir henni bestu leiðina
+til að horfa á myndböndin svo hún nái sem allra mesta 
+dópamíninu.
+
+Getur þú hjálpað henni?
+
+Fyrir hvert myndband þarf annað hvort að horfa á það
+eða nota $k$ millisekúndur til að sleppa því, nema tíminn
+renni út í miðjum klíðum.
+
+\section*{Inntak}
+Fyrsta lína inntaksins inniheldur tvær heiltölur
+$n, k$, fjöldi myndbanda og fjöldi millisekúndna sem það
+tekur að sleppa myndbandi.
+Ávallt gildir að $1 \leq n \leq 1\,000$ og $0 \leq k \leq 10^9$.
+Næst fylgja $n$ línur, $i$-ta þeirra lýsir $i$-ta myndbandinu
+í röðinni.
+
+Á $i$-tu línu eru tvær heiltölur $L_i, D_i$, lengd
+myndbandsins í millisekúndum og fjöldi eininga af
+dópamíni sem fæst fyrir að horfa á það allt.
+Ávallt gildir að $0 \leq L_i \leq 100\,000$ og $0 \leq D_i \leq 10^9$.
+
+Loks fylgir ein lína með heiltölu $T$, heildarfjöldi
+millisekúndna sem Jarmína hefur. Ávallt gildir að
+$0 \leq T \leq 10^9$. Látum $S$ tákna heildarlengd
+allra myndbanda. Ávallt gildir að $0 \leq S \leq 100\,000$.
+Myndböndin eru gefin í þeirri röð
+sem þau birtast á síma Jarmínar.
+
+\section*{Úttak}
+Skrifaðu hámarksfjölda eininga af dópamíni sem Jarmína
+getur náð á $T$ millisekúndum.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 10   & $n = 1$. \\ \hline
+2     & 20   & $n \leq 20$. \\ \hline
+3     & 35   & $k = 0$. \\ \hline
+4     & 35   & Engar frekari takmarkanir. \\ \hline
+\end{tabular}
+

@@ -1,0 +1,391 @@
+STOD	NAFN	TEG	BREIDD	LENGD	BREIDD_Y	LENGD_X	H_STOD	EIG	UPPHAF	ENDIR
+1350	Keflavíkurflugvöllur	sj	63°58.974'	22°36.031'	63.9829	22.600517	50.9	Veðurstofa Íslands	2008	(null)
+1361	Grindavík	sj	63°50.627'	22°25.023'	63.84378	22.41705	9.3	Veðurstofa Íslands	2008	(null)
+1362	Grindavík	sj	63°50.358'	22°25.653'	63.8393	22.4275	4.0	Grindavíkurhöfn	1995	2008
+1368	Afstapahraun	sj	63°59.449'	22°10.284'	63.99082	22.1714	47.0	Veðurstofa Íslands	2000	2008
+1370	Hvassahraun	sj	64°01.181'	22°05.513'	64.01968	22.09188	41.0	Veðurstofa Íslands	2001	(null)
+1391	Þorlákshöfn	sj	63°51.643'	21°22.420'	63.8607	21.3737	5.0	Þorlákshöfn	1995	2008
+1395	Eyrarbakki	sj	63°52.152'	21°09.611'	63.8692	21.16018	3.0	Veðurstofa Íslands	2005	(null)
+1453	Garðskagaviti	sj	64°04.903'	22°41.359'	64.08172	22.68932	4.0	Vegagerðin	1995	(null)
+1469	Reykjavík Hljómskálagarður	sj	64°08.463'	21°56.618'	64.14105	21.94363	4.5	Veðurstofa Íslands	2022	(null)
+1470	Reykjavík Háahlíð	sj	64°07.730'	21°54.493'	64.12884	21.90822	60.2	Veðurstofa Íslands	2021	(null)
+1471	Seltjarnarnes - Suðurnes	sj	64°09.270'	22°01.951'	64.15451	22.03251	4.5	Veðurstofa Íslands	2019	(null)
+1472	Kópavogur - Fossvogsdalur	sj	64°06.981'	21°51.700'	64.11635	21.86167	19.0	Veðurstofa Íslands	2021	(null)
+1473	Straumsvík	sj	64°02.628'	22°02.427'	64.0438	22.04045	7.0	Veðurstofa Íslands	2001	(null)
+1474	Garðabær - Urriðaholt	sj	64°04.270'	21°54.640'	64.07117	21.910667	37.0	Veðurstofa Íslands	2019	(null)
+1475	Reykjavík	sj	64°07.653'	21°54.120'	64.12755	21.902	52.0	Veðurstofa Íslands	1993	(null)
+1477	Reykjavíkurflugvöllur	sj	64°07.707'	21°56.442'	64.12845	21.9407	12.0	Veðurstofa Íslands	2000	(null)
+1478	Reykjavík Geirsnef	sj	64°07.755'	21°50.351'	64.12925	21.83918	4.0	Veðurstofa Íslands	2019	(null)
+1479	Korpa	sj	64°09.032'	21°45.064'	64.15053	21.75105	35.0	Veðurstofa Íslands	1994	(null)
+1480	Geldinganes	sj	64°10.067'	21°48.228'	64.16778	21.8038	35.0	Veðurstofa Íslands	2004	(null)
+1481	Hólmsheiði	sj	64°06.510'	21°41.182'	64.1085	21.68637	130.0	Veðurstofa Íslands	2006	(null)
+1482	Reykjavík Víðidalur	sj	64°06.208	21°47.825	64.10346	21.79708	71.0	Veðurstofa Íslands	2018	(null)
+1483	Miðdalsheiði	sj	64°06.267'	21°32.688'	64.10445	21.5448	240.0	Veðurstofa Íslands	2001	2011
+1485	Bláfjöll úrkomustöð	sj	63°58.799'	21°39.338'	63.97998	21.65563	500.0	Veðurstofa Íslands	1997	(null)
+1486	Bláfjöll	sj	63°58.140'	21°39.966'	63.969	21.6661	530.0	Veðurstofa Íslands	1997	(null)
+1487	Bláfjallaskáli	sj	63°58.986'	21°38.979'	63.9831	21.64965	530.0	Veðurstofa Íslands	2001	(null)
+1490	Hellisskarð	sj	64°02.000'	21°21.992'	64.03333	21.36653	380.0	Veðurstofa Íslands	2001	(null)
+1493	Ölkelduháls	sj	64°03.317'	21°15.190'	64.05528	21.25317	360.0	Veðurstofa Íslands	2001	(null)
+1494	Kolviðarhóll I	sj	64°02.158'	21°24.028'	64.03597	21.40047	270.0	Veðurstofa Íslands	2003	2004
+1495	Kolviðarhóll II	sj	64°02.340'	21°23.953'	64.039	21.39922	270.0	Veðurstofa Íslands	2003	2004
+1496	Skarðsmýrarfjall	sj	64°03.401'	21°20.816'	64.05668	21.34693	583.5	Veðurstofa Íslands	2006	(null)
+1570	Akranes - Akraneshöfn	sj	64°19'	22°05'	64.317	22.083	5.0	Akraneshöfn	1997	2007
+1578	Skrauthólar	sj	64°13.909'	21°48.278'	64.23182	21.80463	20.0	Veðurstofa Íslands	2001	(null)
+1590	Skálafell	sj	64°14.429'	21°27.798'	64.24048	21.4633	771.0	Veðurstofa Íslands	1995	(null)
+1596	Þingvellir	sj	64°16.842'	21°05.252'	64.2807	21.08753	110.0	Veðurstofa Íslands	1996	(null)
+1672	Ás í Melasveit	sj	64°23.764'	22°00.481'	64.39607	22.00802	40.0	Veðurstofa Íslands	2001	2006
+1673	Hafnarmelar	sj	64°27.884'	21°57.766'	64.46473	21.96277	20.0	Veðurstofa Íslands	1998	2022
+1678	Grundartangi	sj	64°21'	21°47'	64.35	21.783	5.0	Grundartangahöfn	1995	2009
+1679	Skarðsheiði Miðfitjahóll	sj	64°29.411'	21°45.728'	64.49018	21.762133	471.3	Landsnet	2009	(null)
+1685	Þyrill	sj	64°23.264'	21°25.013'	64.38773	21.41688	61.5	Veðurstofa Íslands	2003	(null)
+1689	Botnsheiði	sj	64°27.177'	21°24.205'	64.45295	21.40342	500.5	Landsnet	2001	(null)
+1777	Hvanneyri (búveðurstöð)	sj	64°33.697'	21°46.479'	64.5616	21.7746	11.0	Veðurstofa Íslands	2022	(null)
+1779	Hvanneyri	sj	64°33,732'	21°45,896'	64.5622	21.764933	12.4	Veðurstofa Íslands	1997	(null)
+1781	Stafholtsey	sj	64°38.581'	21°35.358'	64.64302	21.5893	14.0	Veðurstofa Íslands	2018	(null)
+1868	Fíflholt á Mýrum	sj	64°41.659'	22°08.840'	64.69432	22.14733	55.7	Veðurstofa Íslands	2006	(null)
+1881	Litla-Skarð	sj	64°43.608'	21°37.781'	64.7268	21.62968	115.0	Veðurstofa Íslands	2000	2022
+1919	Gufuskálar	sj	64°54.247'	23°55.896'	64.90412	23.9316	7.0	Veðurstofa Íslands	1994	(null)
+1924	Ólafsvík	sj	64°53.741'	23°42.974'	64.895676	23.71624	19.0	Veðurstofa Íslands - Ofanflóð	2000	(null)
+1925	Ólafsvíkurhöfn	sj	64°54'	23°43'	64.9	23.717	4.7	Ólafsvíkurhöfn	1998	2008
+1936	Bláfeldur	sj	64°50.358'	23°18.107'	64.8393	23.301783	17.7	Veðurstofa Íslands	2003	(null)
+1938	Grundarfjörður	sj	64°55.278'	23°15.076'	64.9213	23.25127	17.4	Veðurstofa Íslands	2003	(null)
+2050	Stykkishólmur	sj	65°04.302'	22°43.942'	65.0717	22.73237	12.4	Veðurstofa Íslands	2002	(null)
+2175	Ásgarður	sj	65°13.782'	21°45.256'	65.2297	21.75427	47.9	Veðurstofa Íslands	2003	(null)
+2197	Reykir í Hrútafirði	sj	65°15.257'	21°05.867'	65.25428	21.09778	9.8	Veðurstofa Íslands	2003	(null)
+2266	Reykhólar	sj	65°26.259'	22°12.337'	65.43765	22.20562	6.4	Veðurstofa Íslands - Ofanflóð	2004	(null)
+2304	Bjargtangar	sj	65°30.174'	24°31.870'	65.5029	24.53117	35.0	Vegagerðin	1994	(null)
+2315	Lambavatn	sj	65°29.543'	24°05.551'	65.49238	24.09252	4.0	Veðurstofa Íslands	2006	(null)
+2318	Patrekshöfn	sj	65°36'	24°00'	65.6	24.0	4.0	Patreksfjarðarhöfn	1995	2007
+2319	Patreksfjörður	sj	65°35.704'	23°58.490'	65.59507	23.97483	43.0	Veðurstofa Íslands - Ofanflóð	1996	(null)
+2320	Patreksfjörður - Brellur	sj	65°36.285	23°59.419	65.60475	23.99032	350.0	Veðurstofa Íslands - Ofanflóð	2014	(null)
+2323	Tálknafjörður	sj	65°37.656'	23°49.814'	65.6276	23.83023	8.5	Veðurstofa Íslands - Ofanflóð	2008	(null)
+2370	Arnkatla	sj	65°33.171'	21°49.543'	65.55285	21.825718	377.0	Orkubú Vestfjarða	2013	2022
+2390	Ennishöfði	sj	65°34.691'	21°19.328'	65.57818	21.32213	282.0	Orkubú Vestfjarða	2015	2022
+2428	Bíldudalur	sj	65°40.765'	23°36.730'	65.67942	23.61217	16.0	Veðurstofa Íslands - Ofanflóð	1998	(null)
+2454	Þingmannaheiði	sj	65°39.418'	23°00.171'	65.65697	23.00285	510.0	Landsvirkjun	2000	2004
+2480	Bjarnarfjarðarháls	sj	65°43.703'	21°34.305'	65.728386	21.57175	238.5	Orkubú Vestfjarða	2013	2024
+2481	Hólmavík	sj	65°41.239'	21°40.878'	65.68732	21.6813	10.0	Veðurstofa Íslands	2007	(null)
+2525	Þingeyrarflugvöllur	sj	65°52.002'	23°32.009'	65.87	23.5483	19.8	Flugmálastjórn Íslands	2006	2006
+2530	Hólar í Dýrafirði	sj	65°52.117'	23°33.467'	65.86861	23.55778	16.0	Veðurstofa Íslands	2020	(null)
+2630	Suðureyri	sj	66°07.504'	23°30.464'	66.12507	23.5077	2.0	Veðurstofa Íslands - Ofanflóð	2021	(null)
+2631	Flateyri	sj	66°02.987'	23°30.603'	66.04978	23.51005	3.0	Veðurstofa Íslands - Ofanflóð	1997	(null)
+2636	Þverfjall	sj	66°02.666'	23°18.447'	66.04443	23.30745	741.0	Veðurstofa Íslands - Ofanflóð	1990	(null)
+2640	Seljalandsdalur	sj	66°04.557'	23°11.920'	66.07595	23.19867	550.0	Veðurstofa Íslands - Ofanflóð	1995	(null)
+2641	Seljalandsdalur - skíðaskáli	sj	66°04.124'	23°12.618'	66.06873	23.2103	283.0	Veðurstofa Íslands - Ofanflóð	2005	(null)
+2642	Ísafjörður	sj	66°03.578'	23°10.196'	66.05963	23.16993	2.2	Veðurstofa Íslands - Ofanflóð	1998	(null)
+2643	Hnífsdalur	sj	66°06.395'	23°06.544'	66.10658	23.10907	10.0	ISAVIA	2018	2022
+2644	Ísafjörður - Tungudalur	sj	66°03.616'	23°11.068'	66.060265	23.18447	4.0	Veðurstofa Íslands - Ofanflóð	2023	(null)
+2646	Súðavík	sj	66°02.556'	22°59.163'	66.0426	22.98605	10.9	Veðurstofa Íslands - Ofanflóð	1995	(null)
+2655	Æðey	sj	66°06.039'	22°39.562'	66.10065	22.65937	21.0	Veðurstofa Íslands	2012	(null)
+2691	Litla-Ávík	sj	66°01.266'	21°25.483'	66.02111	21.42471	8.1	Veðurstofa Íslands	2022	(null)
+2692	Gjögurflugvöllur	sj	65°59.705'	21°19.822'	65.99508	21.33037	28.1	Veðurstofa Íslands	1994	(null)
+2693	Gjögur	sj	65°59.806'	21°19.668'	65.996765	21.3278	25.6	Veðurstofa Íslands - Ofanflóð	2016	(null)
+2738	Bolungarvík	sj	66°09.661'	23°15.230'	66.16102	23.25383	27.0	Veðurstofa Íslands - Ofanflóð	1999	(null)
+2841	Sléttunes Jökulfjörðum	sj	66°17.772'	22°57.845'	66.2962	22.96401	0.5	Veðurstofa Íslands	2013	(null)
+2862	Hornbjargsviti	sj	66°24.639'	22°22.734'	66.41065	22.3789	22.0	Vegagerðin	1995	(null)
+2941	Straumnesviti	sj	66°25.831'	23°08.072'	66.43052	23.134533	7.0	Vegagerðin	1995	(null)
+3007	Austurárdalsháls	sj	65°07.380'	20°41.767'	65.123	20.69612	383.0	Landsnet	2009	(null)
+3054	Sáta	sj	65°03.767'	18°50.300'	65.06278	18.83833	785.0	Veðurstofa Íslands	1992	(null)
+3103	Haugur	sj	65°11.034'	20°47.103'	65.1839	20.78505	118.3	Veðurstofa Íslands	2003	(null)
+3122	Grímstunguheiði	sj	65°13.347'	20°03.374'	65.22245	20.05623	509.0	Landsnet	2009	2016
+3128	Auðkúluheiði Friðmundarvötn	sj	65°18.833'	19°50.835'	65.31388	19.84725	490.0	Landsvirkjun	2011	2014
+3223	Brúsastaðir	sj	65°22.702'	20°14.838'	65.37837	20.2473	20.0	Veðurstofa Íslands	2003	(null)
+3225	Kolka	sj	65°13.842'	19°43.062'	65.2307	19.7177	506.0	Landsvirkjun	1993	(null)
+3242	Nautabú	sj	65°27.495'	19°22.147'	65.45825	19.36912	111.5	Veðurstofa Íslands	2004	(null)
+3292	Svartárkot	sj	65°20.514'	17°14.789'	65.3419	17.246487	403.4	Landsnet	2003	(null)
+3317	Blönduós	sj	65°39.480'	20°17.551'	65.658	20.29252	8.0	Veðurstofa Íslands	2003	(null)
+3371	Torfur	sj	65°30.058'	18°09.696'	65.50097	18.1616	25.79	Veðurstofa Íslands	2006	(null)
+3380	Reykir í Fnjóskadal	sj	65°35.107'	17°46.000'	65.58512	17.76667	211.4	Veðurstofa Íslands	2000	(null)
+3433	Sauðárkrókur flugvöllur	sj	65°43.556'	19°34.421'	65.72593	19.57368	0.5	Veðurstofa Íslands	2007	(null)
+3463	Möðruvellir	sj	65°46.239'	18°15.080'	65.77065	18.25133	15.0	Veðurstofa Íslands	1996	(null)
+3470	Akureyri lögreglustöð	sj	65°41.135'	18°06.014'	65.68558	18.10023	23.0	Veðurstofa Íslands	2004	(null)
+3471	Akureyri - Krossanesbraut	sj	65°41.767'	18°06.679'	65.69612	18.11132	31.0	Veðurstofa Íslands	2005	(null)
+3474	Vaðlaheiði	sj	65°44.899'	18°00.127'	65.748314	18.00211	580.0	Veðurstofa Íslands - Ofanflóð	1999	(null)
+3477	Végeirsstaðir í Fnjóskadal	sj	65°49.018'	17°53.142'	65.81697	17.8857	130.3	Veðurstofa Íslands	2001	(null)
+3490	Gæsafjöll	sj	65°47.240'	17°00.209'	65.78733	17.003483	390.0	Landsnet	2010	2021
+3585	Björg í Kinn	sj	65°56.723'	17°35.511'	65.9454	17.59185	4.0	Veðurstofa Íslands - Ofanflóð	2022	(null)
+3591	Staðarhóll	sj	65°49.259'	17°20.675'	65.820984	17.344584	40.0	Veðurstofa Íslands	2012	(null)
+3595	Sóleyjarflatamelar	sj	65°53.484'	17°13.607'	65.8914	17.22678	350.0	Landsnet	2006	2015
+3596	Rauðhálsar	sj	65°51.360'	17°12.092'	65.856	17.20153	390.0	Landsnet	2015	2022
+3658	Ólafsfjörður	sj	66°04.431'	18°39.935'	66.07385	18.66558	5.0	Veðurstofa Íslands - Ofanflóð	1997	(null)
+3662	Dalvík	sj	65°58.437'	18°31.540'	65.97395	18.52567	4.0	Dalvíkurhöfn	1995	2008
+3691	Húsavíkurhöfn	sj	66°02.704'	17°21.248'	66.04507	17.35413	2.5	Húsavíkurhöfn	1997	2008
+3692	Bakkahöfði við Húsavík	sj	66°04.608'	17°21.654'	66.0768	17.3609	14.9	Veðurstofa Íslands	2002	2010
+3693	Gvendarbás við Húsavík	sj	66°01.417'	17°22.767'	66.02362	17.37945	15.9	Veðurstofa Íslands	2002	2005
+3694	Húsavíkurfjall	sj	66°03.236'	17°19.153'	66.05393	17.31922	194.0	Veðurstofa Íslands	2002	2005
+3695	Húsavík Héðinshöfði	sj	66°04.826'	17°19.299'	66.08043	17.32165	30.0	Veðurstofa Íslands	2007	2012
+3696	Húsavík	sj	66°02.509'	17°19.685'	66.04182	17.32808	28.2	Veðurstofa Íslands	2002	(null)
+3720	Skagatá	sj	66°07.153'	20°05.932'	66.11922	20.09887	9.0	Vegagerðin	1996	(null)
+3751	Sauðanesviti	sj	66°11.070'	18°57.202'	66.1845	18.95337	35.0	Veðurstofa Íslands	2020	(null)
+3752	Siglufjörður	sj	66°08.097'	18°55.139'	66.13495	18.91898	6.0	Veðurstofa Íslands - Ofanflóð	1995	(null)
+3754	Siglunes	sj	66°11.626'	18°50.585'	66.19377	18.84308	8.0	Veðurstofa Íslands	1995	2021
+3779	Flatey á Skjálfanda	sj	66°09.789'	17°50.447'	66.16315	17.84078	22.0	Vegagerðin	2005	(null)
+3797	Mánárbakki	sj	66°11.964'	17°06.165'	66.1994	17.10275	17.0	Veðurstofa Íslands	2005	(null)
+3975	Grímsey	sj	66°32'	18°01'	66.533	18.017	16.0	Veðurstofa Íslands	1994	2005
+3976	Grímsey	sj	66°32.627'	18°01.004'	66.54378	18.01673	19.0	Veðurstofa Íslands	2005	(null)
+4019	Upptyppingar	sj	65°03.639'	16°12.624'	65.06065	16.2104	563.0	Veðurstofa Íslands	1999	(null)
+4060	Hallormsstaður	sj	65°05.635'	14°44.693'	65.09392	14.744883	60.0	Veðurstofa Íslands	1992	(null)
+4180	Seyðisfjörður - Vestdalur	sj	65°16.882'	14°00.025'	65.28137	14.00042	92.4	Veðurstofa Íslands - Ofanflóð	1995	(null)
+4181	Seyðisfjörður - Kálfabotnar	sj	65°15.904'	14°01.973'	65.26507	14.03288	400.0	Veðurstofa Íslands - Ofanflóð	2005	(null)
+4182	Seyðisfjörður	sj	65°15.292'	14°00.387'	65.25487	14.00645	37.0	Veðurstofa Íslands - Ofanflóð	2014	(null)
+4183	Seyðisfjörður - Innri-Botnar	sj	65°15.572'	13°59.370'	65.25953	13.9895	136.0	Veðurstofa Íslands - Ofanflóð	2021	(null)
+4193	Dalatangi	sj	65°16.089'	13°34.498'	65.26808	13.575101	10.0	Veðurstofa Íslands	1994	(null)
+4271	Egilsstaðaflugvöllur	sj	65°16.571'	14°24.276'	65.27618	14.4046	23.5	Veðurstofa Íslands	1998	(null)
+4275	Gagnheiði	sj	65°13.408'	14°15.533'	65.22347	14.25888	949.0	Veðurstofa Íslands - Ofanflóð	1993	(null)
+4276	Gagnheiði II	sj	65°13.405'	14°15.537'	65.22341	14.258948	949.0	Veðurstofa Íslands	2022	(null)
+4300	Mývatn	sj	65°37.160'	16°58.610'	65.61933	16.976837	282.3	Veðurstofa Íslands	1996	(null)
+4302	Reykjahlíð	sj	65°38.503'	16°53.505'	65.64171	16.89174	285.0	Landsvirkjun	2013	2013
+4303	Bjarnarflag	sj	65°37.785'	16°50.224'	65.62975	16.83707	347.0	Landsvirkjun	2004	2012
+4304	Vogar	sj	65°37.491'	16°55.341'	65.62486	16.92236	280.0	Landsvirkjun	2013	2013
+4323	Grímsstaðir á Fjöllum	sj	65°38.535'	16°07.702'	65.64225	16.12837	382.3	Veðurstofa Íslands	2012	(null)
+4374	Húsey	sj	65°38.012'	14°16.203'	65.63	14.27	(null)	Landsvirkjun	2013	2013
+4380	Bakkagerði	sj	65°31.412'	13°49.004'	65.52352	13.816731	28.0	Veðurstofa Íslands - Ofanflóð	2017	(null)
+4404	Krókóttuvötn Reykjahlíðarheiði	sj	65°42.609'	16°52.713'	65.71015	16.87855	560.0	Landsnet	2008	2010
+4406	Krafla	sj	65°41.670'	16°46.490'	65.6945	16.77483	455.0	Landsvirkjun	2011	(null)
+4455	Skjaldþingsstaðir	sj	65°42.213'	14°49.247'	65.70355	14.82078	34.8	Veðurstofa Íslands	2006	(null)
+4472	Bjarnarey	sj	65°47.140'	14°18.490'	65.78567	14.308167	20.0	Vegagerðin	1996	(null)
+4500	Þeistareykir	sj	65°54.662'	16°58.574'	65.91103	16.97623	311.0	Landsvirkjun	2005	(null)
+4560	Sandvíkurheiði LV	sj	65°56.339'	14°50.300'	65.93	14.84	(null)	Landsvirkjun	2013	2013
+4614	Ásbyrgi	sj	66°01.797'	16°28.998'	66.02995	16.4833	31.5	Veðurstofa Íslands	1998	(null)
+4652	Miðfjarðarnes	sj	66°04.009'	15°04.796'	66.06682	15.079933	25.0	Veðurstofa Íslands	2008	(null)
+4828	Raufarhöfn	sj	66°27.360'	15°57.162'	66.456	15.9527	4.0	Veðurstofa Íslands	2005	(null)
+4830	Möðrudalur	sj	65°22.522'	15°53.000'	65.37537	15.88333	452.0	Veðurstofa Íslands	2003	(null)
+4832	Landsendi	sj	66°24.049'	15°48.399'	66.4	15.81	(null)	Landsvirkjun	2013	2013
+4867	Fontur	sj	66°22.701'	14°31.955'	66.37835	14.53258	43.0	Veðurstofa Íslands	1994	(null)
+4912	Rauðinúpur	sj	66°30.492'	16°32.663'	66.5082	16.54438	59.3	Veðurstofa Íslands	1997	(null)
+4921	Rif á Melrakkasléttu	sj	66°30.687'	16°08.644'	66.51145	16.144068	10.0	Rannsóknastöðin RIF	2018	(null)
+5208	Leirur á Skeiðarársandi	sj	63°49.470'	16°41.240'	63.82	16.69	(null)	Landsvirkjun	2013	2013
+5210	Ingólfshöfði	sj	63°48.170'	16°39.054'	63.80283	16.6509	57.2	Vegagerðin	2004	(null)
+5309	Fagurhólsmýri	sj	63°52.460'	16°38.186'	63.87433	16.63643	9.3	Veðurstofa Íslands	2003	(null)
+5316	Kvísker	sj	63°58.661'	16°26.193'	63.97768	16.43655	30.0	Veðurstofa Íslands	2008	(null)
+5544	Höfn í Hornafirði	sj	64°16.145'	15°12.811'	64.26908	15.21352	5.0	Veðurstofa Íslands	2007	(null)
+5548	Akurnes	sj	64°18.605'	15°13.255'	64.31008	15.22092	17.0	Veðurstofa Íslands	2003	2007
+5552	Hvanney	sj	64°13.914'	15°12.015'	64.2319	15.20025	4.0	Hornafjörður	1995	2008
+5777	Papey	sj	64°35.469'	14°10.481'	64.59115	14.174688	49.0	Vegagerðin	1998	(null)
+5825	Brúaröræfi	sj	64°49.686'	16°05.380'	64.8281	16.08967	748.2	Landsvirkjun	2006	(null)
+5847	Innri Sauðá	sj	64°46.178'	15°15.262'	64.81611	15.322778	750.0	Landsvirkjun	2014	(null)
+5853	Sauðahnjúkur	sj	64°46.333'	15°03.100'	64.77222	15.05167	855.0	Orkustofnun	1992	2004
+5860	Líkárvatn	sj	64°47.887'	14°47.393'	64.79812	14.78988	590.0	Orkustofnun	1999	2009
+5872	Teigarhorn	sj	64°40.540'	14°20.663'	64.67567	14.34438	20.7	Veðurstofa Íslands	2001	(null)
+5885	Kambanes	sj	64°48.074'	13°50.538'	64.80123	13.8423	29.8	Veðurstofa Íslands	1994	(null)
+5932	Brúarjökull B10	sj	64°43.680'	16°06.704'	64.728	16.11173	845.0	Landsvirkjun	2005	(null)
+5933	Kárahnjúkar	sj	64°55.702'	15°46.627'	64.92837	15.77712	639.0	Landsvirkjun	1998	(null)
+5940	Brú á Jökuldal	sj	65°06.514'	15°31.784'	65.10857	15.52973	373.0	Veðurstofa Íslands	1998	(null)
+5943	Eyjabakkar	sj	64°48.905'	15°25.408'	64.81508	15.42347	655.32	Landsvirkjun	1997	(null)
+5960	Hallormsstaðaháls	sj	65°04.772'	14°40.485'	65.07953	14.67475	573.11	Landsnet	1996	(null)
+5965	Þórudalur	sj	65°02.182'	14°34.266'	65.03637	14.5711	300.0	Landsnet	2017	(null)
+5968	Brúðardalur	sj	64°59.743'	14°30.638'	64.99572	14.51063	300.0	Landsnet	2006	2017
+5969	Þórdalsheiði	sj	65°00.055'	14°27.749'	65.00092	14.46248	500.0	Landsnet	2006	2021
+5970	Hallsteinsdalsvarp	sj	65°01.090'	14°27.209'	65.01817	14.45348	634.0	Landsnet	2007	(null)
+5975	Kollaleira í Reyðarfirði	sj	65°02.203'	14°14.373'	65.03671	14.23955	44.0	Veðurstofa Íslands	2000	(null)
+5977	Ljósá í Reyðarfirði	sj	65°02.595'	14°09.737'	65.04325	14.16228	281.0	Veðurstofa Íslands	2000	2004
+5981	Eskifjörður	sj	65°04.580'	14°02.217'	65.07633	14.03695	2.0	Veðurstofa Íslands - Ofanflóð	1998	(null)
+5982	Fáskrúðsfjörður Ljósaland	sj	64°56.234'	14°02.442'	64.93723	14.0407	8.0	Veðurstofa Íslands - Ofanflóð	2007	(null)
+5988	Vattarnes	sj	64°56.221'	13°41.076'	64.93702	13.6846	5.3	Veðurstofa Íslands	2000	(null)
+5990	Neskaupstaður	sj	65°09.016'	13°40.165'	65.15027	13.66942	49.7	Veðurstofa Íslands - Ofanflóð	1999	(null)
+5992	Neskaupstaður - Drangagil	sj	65°09.706'	13°41.282'	65.16177	13.68803	559.0	Veðurstofa Íslands - Ofanflóð	2005	(null)
+5993	Seley	sj	64°58.669'	13°31.155'	64.97781	13.51925	18.0	Vegagerðin	1996	(null)
+5994	Neskaupstaður - Bakkagil	sj	65°09.876'	13°40.003'	65.1646	13.66672	717.0	Veðurstofa Íslands - Ofanflóð	2023	(null)
+6012	Surtsey	sj	63°17.958'	20°35.968'	63.2993	20.59947	36.0	Veðurstofa Íslands	2009	(null)
+6015	Vestmannaeyjabær	sj	63°26.152'	20°16.547'	63.43587	20.27578	40.4	Veðurstofa Íslands	2002	(null)
+6016	Vestmannaeyjar - hraun	sj	63°26.278'	20°14.599'	63.43797	20.24332	70.0	Veðurstofa Íslands	2002	2009
+6017	Stórhöfði	sj	63°23.974'	20°17.295'	63.39957	20.28825	118.0	Veðurstofa Íslands	1997	(null)
+6045	Vatnsskarðshólar	sj	63°25.416'	19°10.982'	63.4236	19.18303	20.0	Veðurstofa Íslands	2003	(null)
+6049	Vík í Mýrdal	sj	63°25.345'	19°0.113'	63.42242	19.001883	63.0	Veðurstofa Íslands - Ofanflóð	2024	(null)
+6072	Meðallandssandur	sj	63°29.232'	18°07.117'	63.4872	18.1186	(null)	Landsvirkjun	2013	2013
+6121	Bakkaflugvöllur	sj	63°33.5'	20°08.7'	63.55833	20.145	13.7	Flugmálastjórn Íslands	2006	2006
+6134	Önundarhorn	sj	63°31.450'	19°38.140'	63.5242	19.6357	12.0	Veðurstofa Íslands	2010	(null)
+6176	Skarðsfjöruviti	sj	63°31.072'	17°58.711'	63.51787	17.97852	6.0	Vegagerðin	1994	(null)
+6208	Þykkvibær	sj	63°44.865'	20°37.089'	63.74775	20.61815	10.0	Veðurstofa Íslands	1996	(null)
+6222	Sámsstaðir	sj	63°44.122'	20°06.544'	63.73537	20.10907	90.0	Veðurstofa Íslands	2000	(null)
+6235	Tindfjöll	sj	63°46.543'	19°40.639'	63.77572	19.67732	870.0	Veðurstofa Íslands	2005	(null)
+6237	Básar á Goðalandi	sj	63°40.745'	19°28.883'	63.67908	19.48138	239.0	Veðurstofa Íslands	2008	(null)
+6272	Kirkjubæjarklaustur - Stjórnarsandur	sj	63°47.583'	18°00.717'	63.79305	18.01195	22.0	Veðurstofa Íslands	2004	(null)
+6300	Selfoss	sj	63°56.128'	20°58.240'	63.9355	20.97067	20.0	Veðurstofa Íslands	2019	(null)
+6310	Kálfhóll	sj	63°57.767'	20°34.016'	63.96278	20.56693	52.0	Veðurstofa Íslands	2003	(null)
+6315	Hella	sj	63°49.541'	20°21.923'	63.82568	20.36538	20.0	Veðurstofa Íslands	2006	(null)
+6393	Skeiðarársandur	sj	63°54.204'	17°16.440'	63.9034	17.274	0.3	Veðurstofa Íslands	2013	(null)
+6420	Árnes	sj	64°02.432'	20°15.125'	64.04053	20.25208	87.0	Veðurstofa Íslands	2003	(null)
+6424	Mörk á Landi	sj	64°01.755'	20°01.136'	64.02925	20.01893	125.0	Veðurstofa Íslands	2008	(null)
+6429	Þjófafoss	sj	64°02.499'	19°49.852'	64.04	19.83	(null)	Landsvirkjun	2013	2013
+6430	Búrfell	sj	64°07.009'	19°44.692'	64.11682	19.744867	249.0	Landsvirkjun	1993	(null)
+6438	Sultarfit	sj	64°09.558'	19°26.578'	64.16	19.44	(null)	Landsvirkjun	2013	2013
+6459	Lónakvísl	sj	64°05.885'	18°36.844'	64.09808	18.614067	675.0	Landsvirkjun	1999	(null)
+6472	Laufbali	sj	64°01.527'	18°07.185'	64.02545	18.11957	555.6	Veðurstofa Íslands	1993	(null)
+6499	Skaftafell	sj	64°00.862'	16°58.327'	64.014366	16.97212	86.0	Veðurstofa Íslands	1995	(null)
+6515	Hjarðarland	sj	64°15.052'	20°19.990'	64.25088	20.33125	88.0	Veðurstofa Íslands	2004	(null)
+6534	Sandafell	sj	64°11.611'	19°36.062'	64.19	19.6	(null)	Landsvirkjun	2013	2013
+6539	Búðarháls	sj	64°11.363'	19°25.692'	64.19	19.43	(null)	Landsvirkjun	2013	2013
+6544	Þóristungur	sj	64°13.175'	19°12.656'	64.22	19.21	(null)	Landsvirkjun	2013	2013
+6545	Vatnsfell I	sj	64°11.965'	19°01.816'	64.19942	19.03027	555.0	Veðurstofa Íslands	1999	2002
+6546	Vatnsfell	sj	64°11.735'	19°02.800'	64.19558	19.04667	539.5	Landsvirkjun	2004	(null)
+6657	Veiðivatnahraun	sj	64°23.706'	18°30.286'	64.3951	18.50477	647.0	Landsvirkjun	1993	(null)
+6670	Jökulheimar	sj	64°18.977'	18°13.248'	64.316284	18.2208	726.0	Landsvirkjun	1993	(null)
+6745	Kerlingarfjöll - Ásgarðsfjall	sj	64°40.859'	19°16.961'	64.68098	19.28268	925.0	Veðurstofa Íslands	2017	(null)
+6748	Setur	sj	64°36.258'	19°01.116'	64.6043	19.0186	693.0	Landsvirkjun	1997	(null)
+6760	Þúfuver	sj	64°34.914'	18°35.924'	64.5819	18.59874	620.0	Landsvirkjun	1993	(null)
+6776	Hágöngur	sj	64°34.270'	18°06.665'	64.57117	18.11108	819.0	Landsvirkjun	2004	(null)
+6802	Húsafell	sj	64°41.939'	20°52.140'	64.69898	20.869	132.8	Veðurstofa Íslands	1998	(null)
+6935	Hveravellir	sj	64°52.005'	19°33.733'	64.86675	19.56222	641.0	Veðurstofa Íslands	1996	(null)
+6975	Sandbúðir	sj	64°55.985'	17°59.332'	64.93308	17.988867	820.0	Landsvirkjun	1993	(null)
+7001	Fagradagsfjall - Hagafell	sj	63°55.242'	22°14.978'	63.920708	22.249632	270.0	Veðurstofa Íslands	2023	(null)
+7002	Færanleg veðurstöð 2	sj	64°07.740'	21°54.482'	64.12899	21.90803	60.2	Veðurstofa Íslands	2023	(null)
+7078	Sómastaðagerði	sj	65°01.987'	14°06.660'	65.03312	14.111	31.4	Veðurstofa Íslands	1998	2003
+7090	Ísakot	sj	64°07.165'	19°42.284'	64.119415	19.704733	248.0	Landsvirkjun	2011	2013
+7091	Haf við Ísakot	sj	64°08.016'	19°43.519'	64.1336	19.725317	279.0	Landsvirkjun	2011	2013
+7092	Þjórsárdalur	sj	64°06.938'	19°52.799'	64.11563	19.879984	160.0	Landsvirkjun	2011	2013
+7093	Þorlákshöfn - vestur	sj	63°50.496'	21°30.462'	63.8416	21.5077	6.0	Landsvirkjun	2011	2013
+7094	Háfshverfi	sj	63°46.247'	20°41.298'	63.770786	20.6883	4.0	Landsvirkjun	2011	2013
+7272	Kirkjubæjarklaustur - hitamælaskýli	sj	63°47.520'	18°03.060'	63.792	18.051	38.3	Veðurstofa Íslands	2008	2012
+7273	Kirkjubæjarklaustur - nýtt hitamælaskýli	sj	63°47.368'	18°03.256'	63.78947	18.05427	29.5	Veðurstofa Íslands	2009	2012
+7275	Vík í Mýrdal - hitamælaskýli	sj	63°25.211'	19°00.587'	63.42018	19.00978	15.0	Veðurstofa Íslands	2012	2012
+7276	Bergstaðir - hitamælaskýli	sj	65°42.179'	19°36.782'	65.70298	19.61303	43.0	Veðurstofa Íslands	2012	2012
+7365	Fagradalsfjall	sj	63°53.622'	22°17.121'	63.89371	22.28535	320.0	Veðurstofa Íslands	2021	2022
+7366	Langihryggur	sj	63°52.544'	22°15.329'	63.87573	22.25548	262.0	Veðurstofa Íslands	2022	2022
+7370	Hvassahraun - Rjúpnadalshraun	sj	64°01.065'	22°05.988'	64.01775	22.0998	34.0	Veðurstofa Íslands	2020	(null)
+7470	Reykjavík Háahlíð sólgeislun	sj	64°07.734'	21°54.511'	64.1289	21.90852	60.2	Veðurstofa Íslands	2022	(null)
+7472	Vaðlaheiði II	sj	65°44.899'	18°00.127'	65.748314	18.00211	580.0	Veðurstofa Íslands	2022	(null)
+7474	Reykjavík turnþak	sj	64°07.656	21°54.245'	64.1276	21.9041	52.0	Veðurstofa Íslands	2000	(null)
+7475	Reykjavík búveðurstöð	sj	64°07.646'	21°54.146'	64.12743	21.90243	52.0	Veðurstofa Íslands	2000	(null)
+7476	Reykjavík sólgeislun	sj	64°07.656'	21°54.130'	64.1276	21.90217	52.0	Veðurstofa Íslands	2007	(null)
+7477	Reykjavík tilraunarstöð	sj	64°07.744'	21°54.481'	64.12907	21.908012	60.2	Veðurstofa Íslands	2018	2022
+7479	Hamrahlíð	sj	64°08.394'	21°44.628'	64.1399	21.7438	70.0	Veðurstofa Íslands	1994	2001
+7481	Heiðmörk	sj	64°04.558'	21°46.264'	64.07597	21.77107	130.0	Veðurstofa Íslands	2018	(null)
+7601	Auðbjargarstaðabrekka	sj	66°05.977'	16°58.211'	66.09962	16.97018	192.0	Veðurstofa Íslands	1998	2002
+7631	Flateyri Innra Bæjargil	sj	66°03.816'	23°30.120'	66.0636	23.502	590.0	Veðurstofa Íslands - Ofanflóð	2020	(null)
+7632	Flateyri Miðhryggsgil	sj	66°03.709'	23°29.137'	66.06182	23.485613	663.0	Veðurstofa Íslands - Ofanflóð	2020	(null)
+7633	Flateyri - Eyrarfjall	sj	66°04.146'	23°29.679'	66.0691	23.49465	640.0	Veðurstofa Íslands - Ofanflóð	2021	(null)
+7636	Þverfjall II	sj	66°02.686'	23°18.458'	66.04477	23.30764	741.0	Veðurstofa Íslands	2020	(null)
+7659	Ólafsfjörður - Tindaöxl	sj	66°03.782'	18°37.854'	66.06303	18.6309	450.0	Veðurstofa Íslands - Ofanflóð	2006	(null)
+7711	Langjökull - stöð c	sj	64°38.267'	20°33.169'	64.36778	20.552822	858.0	Veðurstofa Íslands	2023	2023
+7712	Langjökull - stöð t	sj	64°38.259'	20°33.178'	64.63765	20.552967	859.0	Veðurstofa Íslands	2023	2023
+7736	Bolungarvík - Traðargil	sj	66°10.105'	23°16.084'	66.16842	23.26807	500.0	Veðurstofa Íslands - Ofanflóð	2006	(null)
+7738	Bolungarvík - Snjóflóðavarnargarður	sj	66°09.633'	23°15.881'	66.16055	23.26468	45.0	Veðurstofa Íslands - Ofanflóð	2016	(null)
+7751	Fífladalir	sj	66°09.141'	18°56.174'	66.15235	18.93623	546.0	Veðurstofa Íslands	1996	2005
+7752	Fífladalir Hvanneyrarskál	sj	66°09.221'	18°56.235'	66.15368	18.93725	600.0	Veðurstofa Íslands	2005	2006
+7753	Siglufjörður - Hafnarfjall	sj	66°09.212'	18°56.112'	66.15353	18.9352	550.0	Veðurstofa Íslands - Ofanflóð	2006	(null)
+7777	Hvanneyri akur	sj	64°34.006'	21°44.470'	64.5676	21.7411	10.0	Veðurstofa Íslands	2023	(null)
+7783	Stafholtsey - hitamælaskýli	sj	64°38.516'	21°35.445'	64.64193	21.59075	14.0	Veðurstofa Íslands	2010	2010
+7790	Dyngjujökull	sj	64°30.235'	17°14.088'	64.5039	17.2348	1689.0	Veðurstofa Íslands	2016	(null)
+31109	Arnarnesvegur	sj	64°05.325'	21°50.194'	64.08875	21.836569	116.4	Vegagerðin	2016	(null)
+31122	Miklidalur	sj	65°34.842'	23°51.312'	65.5807	23.8552	370.0	Vegagerðin	2009	(null)
+31363	Reykjanesbraut	sj	64°00.160'	22°13.774'	64.00267	22.22957	25.0	Vegagerðin	1995	(null)
+31364	Grindavíkurvegur	sj	63°52.100'	22°25.412'	63.868332	22.423532	57.0	Vegagerðin	2012	(null)
+31365	Festarfjall	sj	63°51.569'	22°20.615'	63.85948	22.343582	135.0	Vegagerðin	2012	(null)
+31380	Selvogur	sj	63°50.736'	21°41.751'	63.8456	21.69585	20.0	Vegagerðin	2012	(null)
+31387	Þrengsli	sj	63°59.254'	21°27.797'	63.98757	21.46328	260.0	Vegagerðin	1997	(null)
+31392	Hellisheiði	sj	64°01.127'	21°20.543'	64.01878	21.34238	360.0	Vegagerðin	1992	(null)
+31399	Ingólfsfjall	sj	63°57.444'	21°03.797'	63.9574	21.06328	51.0	Vegagerðin	2006	(null)
+31474	Garðabær - Vífilsstaðavegur	sj	64°05.007'	21°53.777'	64.08345	21.89628	48.0	Vegagerðin	1998	2008
+31475	Garðabær - Kauptún	sj	64°04.779'	21°54.172'	64.07965	21.902866	42.0	Vegagerðin	2017	(null)
+31484	Sandskeið	sj	64°03.566'	21°31.698'	64.05943	21.5283	190.0	Vegagerðin	1999	2012
+31488	Sandskeið	sj	64°03.746'	21°33.462'	64.06243	21.557697	180.0	Vegagerðin	2012	(null)
+31561	Einarsnes í Skerjafirði	sj	64°07.846'	21°57.182'	64.13077	21.95303	10.0	Gatnamálastjórinn í Reykjavík	1998	2011
+31562	Víkurvegur í Grafarvogi	sj	64°08'	21°47'	64.13333	21.78333	40.0	Gatnamálastjórinn í Reykjavík	1998	2011
+31572	Akrafjall	sj	64°18.631'	21°57.963'	64.31052	21.96605	37.0	Vegagerðin	2009	(null)
+31577	Blikdalsá	sj	64°15.984'	21°49.973'	64.266396	21.832878	46.0	Vegagerðin	2012	(null)
+31578	Tíðaskarð	sj	64°17.222'	21°48.719'	64.28703	21.811983	65.0	Vegagerðin	2020	(null)
+31579	Kjalarnes	sj	64°12.639'	21°46.002'	64.21065	21.7667	10.0	Vegagerðin	1998	(null)
+31591	Mosfellsheiði	sj	64°12.842'	21°20.686'	64.214035	21.344767	270.0	Vegagerðin	2012	(null)
+31599	Gjábakki	sj	64°14.887'	21°01.382'	64.248116	21.023033	132.0	Vegagerðin	2012	(null)
+31640	Reykjanesviti	sj	63°48.936'	22°42.259'	63.815605	22.70432	20.0	Vegagerðin	2021	(null)
+31674	Hafnarfjall	sj	64°28.528'	21°57.617'	64.47547	21.96028	25.0	Vegagerðin	1995	(null)
+31840	Hraunsmúli	sj	64°49.324'	23°11.361'	64.82207	23.18935	10.0	Vegagerðin	1999	(null)
+31882	Kolás	sj	64°41.734'	21°38.134'	64.695564	21.6359	66.0	Vegagerðin	2012	(null)
+31931	Fróðárheiði	sj	64°50.872'	23°28.843'	64.84787	23.48072	361.0	Vegagerðin	1995	(null)
+31932	Búlandshöfði	sj	64°56.194'	23°30.201'	64.93657	23.50335	25.0	Vegagerðin	2010	(null)
+31942	Kolgrafafjarðarbrú	sj	64°57.987'	23°07.560'	64.96645	23.126	3.0	Vegagerðin	2005	(null)
+31943	Kolgrafafjörður	sj	64°54.664'	23°05.251'	64.91107	23.08752	20.0	Vegagerðin	1999	2012
+31948	Vatnaleið	sj	64°54.571'	22°51.895'	64.90952	22.86492	226.0	Vegagerðin	2001	(null)
+31950	Stórholt	sj	64°59.154'	22°48.512'	64.9859	22.808533	70.0	Vegagerðin	2012	(null)
+31953	Kerlingarskarð	sj	64°54'	22°48'	64.9	22.8	180.0	Vegagerðin	1996	2001
+31958	Hafursfell	sj	64°49.859'	22°31.969'	64.83098	22.53282	65.0	Vegagerðin	2009	(null)
+31985	Brattabrekka	sj	64°52.298'	21°30.927'	64.87163	21.51545	390.0	Vegagerðin	1998	(null)
+31986	Brattabrekka - suður	sj	64°51.979'	21°31.066'	64.86632	21.517767	400.0	Vegagerðin	2022	2023
+32097	Holtavörðuheiði	sj	64°59.395'	21°03.457'	64.98992	21.05762	370.0	Vegagerðin	1995	(null)
+32179	Svínadalur í Dölum	sj	65°18.351'	21°44.377'	65.30585	21.73962	230.0	Vegagerðin	2002	(null)
+32190	Laxárdalsheiði	sj	65°12.395'	21°19.661'	65.20658	21.32768	200.0	Vegagerðin	2000	(null)
+32224	Kleifaheiði	sj	65°31.030'	23°43.266'	65.51717	23.7211	400.0	Vegagerðin	1996	(null)
+32250	Flatey á Breiðafirði	sj	65°22.314'	22°55.714'	65.371895	22.92856	6.0	Vegagerðin	2023	(null)
+32281	Kleifar í Gilsfirði	sj	65°27.300'	21°39.863'	65.455	21.66438	30.0	Vegagerðin	1994	2002
+32282	Gilsfjörður	sj	65°25.104'	21°54.038'	65.4184	21.90063	20.0	Vegagerðin	1993	2012
+32322	Hálfdán	sj	65°38.667'	23°42.635'	65.64445	23.71058	525.0	Vegagerðin	1995	(null)
+32355	Klettsháls	sj	65°39.298'	22°36.530'	65.65497	22.60883	330.0	Vegagerðin	1999	(null)
+32365	Hjallaháls	sj	65°33.840'	22°14.765'	65.564	22.246082	305.0	Vegagerðin	2012	(null)
+32372	Gillastaðamelar	sj	65°31.663'	22°01.403'	65.52772	22.02338	72.0	Vegagerðin	2009	(null)
+32377	Þröskuldar	sj	65°33.145'	21°49.981'	65.55242	21.83302	370.0	Vegagerðin	2009	(null)
+32390	Ennisháls	sj	65°34.342'	21°19.740'	65.57237	21.329	260.0	Vegagerðin	1998	(null)
+32439	Dynjandisheiði	sj	65°42.612'	23°12.238'	65.7102	23.20397	504.0	Vegagerðin	2001	2012
+32440	Dynjandisheiði II	sj	65°42.953'	23°11.062'	65.71588	23.18437	444.0	Vegagerðin	2001	2012
+32474	Steingrímsfjarðarheiði	sj	65°45.019'	22°07.748'	65.75032	22.12913	440.0	Vegagerðin	1995	(null)
+32533	Gemlufallsheiði	sj	65°56.437'	23°26.184'	65.94	23.4364	250.0	Vegagerðin	2009	(null)
+32635	Botn í Súgandafirði	sj	66°04.850'	23°22.398'	66.08083	23.3733	270.0	Vegagerðin	2012	(null)
+32643	Óshlíð	sj	66°07.679'	23°08.001'	66.12798	23.13335	24.0	Vegagerðin	2006	2012
+32654	Ögur	sj	66°02.693'	22°40.902'	66.04488	22.6817	40.0	Vegagerðin	1997	(null)
+33023	Arnarvatnsheiði - Stórisandur	sj	65°01.017'	20°03.525'	65.01695	20.05875	797.0	Vegagerðin	2004	2008
+33142	Eyvindarstaðaheiði	sj	65°15.148'	19°18.743'	65.25247	19.31238	711.0	Vegagerðin	2004	2012
+33204	Gauksmýri	sj	65°20.665'	20°48.239'	65.34442	20.80398	120.0	Vegagerðin	2006	(null)
+33357	Öxnadalsheiði	sj	65°28.057'	18°41.923'	65.46762	18.69872	540.0	Vegagerðin	1995	(null)
+33394	Mývatnsheiði	sj	65°36.855'	17°13.014'	65.61425	17.2169	350.0	Vegagerðin	1999	(null)
+33419	Blönduós Vegagerðarstöð	sj	65°40.007'	20°14.296'	65.66678	20.23827	40.0	Vegagerðin	1998	(null)
+33424	Þverárfjall	sj	65°46.803'	20°01.113'	65.78005	20.01855	330.0	Vegagerðin	2003	(null)
+33431	Vatnsskarð	sj	65°30.510'	19°41.670'	65.5085	19.6945	420.0	Vegagerðin	1996	(null)
+33451	Miðsitja í Skagafirði	sj	65°29.406'	19°17.177'	65.4901	19.286283	41.0	Vegagerðin	2017	(null)
+33480	Kaldakinn	sj	65°44.557'	17°35.520'	65.742615	17.592	120.0	Vegagerðin	2013	(null)
+33487	Fljótsheiði	sj	65°41.821'	17°30.194'	65.69701	17.503233	238.0	Vegagerðin	2012	(null)
+33495	Hólasandur	sj	65°44.242'	17°06.340'	65.73737	17.10567	350.0	Vegagerðin	1996	(null)
+33563	Hámundarstaðaháls	sj	65°57.105'	18°27.557'	65.95175	18.45928	103.0	Vegagerðin	2008	(null)
+33576	Víkurskarð	sj	65°48.809'	17°59.523'	65.813484	17.99205	325.0	Vegagerðin	1995	(null)
+33643	Stafá	sj	66°04.265'	19°16.707'	66.07108	19.27845	40.0	Vegagerðin	2012	(null)
+33652	Hólshyrna	sj	66°07.901'	18°54.137'	66.13168	18.902283	56.0	Vegagerðin	2020	(null)
+33654	Héðinsfjörður	sj	66°06.134'	18°48.777'	66.102234	18.81295	20.0	Vegagerðin	2010	(null)
+33661	Ólafsfjarðarvegur við Sauðanes	sj	66°02.542'	18°31.246'	66.04235	18.52075	73.0	Vegagerðin	2010	(null)
+33750	Siglufjarðarvegur	sj	66°07.739'	19°04.328'	66.12898	19.07213	20.0	Vegagerðin	1995	(null)
+33751	Siglufjarðarvegur Herkonugil	sj	66°10.702'	18°58.512'	66.17837	18.9752	66.0	Vegagerðin	2010	(null)
+34073	Fagridalur	sj	65°07.585'	14°19.960'	65.12642	14.33267	350.0	Vegagerðin	1996	(null)
+34075	Fáskrúðsfjarðargöng norður	sj	65°00.600'	14°11.880'	65.01	14.198	135.0	Vegagerðin	2007	2012
+34081	Græfur í Fagradal	sj	65°10.030'	14°20.337'	65.16817	14.33895	322.0	Vegagerðin	2017	(null)
+34087	Oddsskarð	sj	65°03.824'	13°55.124'	65.06373	13.91873	520.0	Vegagerðin	1995	(null)
+34148	Jökuldalur	sj	65°18.117'	15°13.424'	65.30195	15.223733	473.0	Vegagerðin	2012	(null)
+34175	Fjarðarheiði	sj	65°15.968'	14°15.538'	65.26613	14.25897	600.0	Vegagerðin	1995	(null)
+34238	Möðrudalsöræfi II	sj	65°27.419'	15°35.130'	65.45698	15.5855	550.0	Vegagerðin	2000	(null)
+34239	Möðrudalsöræfi	sj	65°27.457'	15°24.947'	65.45762	15.41578	558.0	Vegagerðin	2001	2001
+34326	Biskupsháls	sj	65°33.501'	16°00.680'	65.55835	16.01133	521.0	Vegagerðin	2007	(null)
+34346	Vopnafjarðarheiði I	sj	65°29.120'	15°32.774'	65.48533	15.54623	580.0	Vegagerðin	1995	2001
+34347	Vopnafjarðarheiði	sj	65°35.471'	15°17.531'	65.59118	15.29218	484.0	Vegagerðin	2001	2012
+34348	Vopnafjarðarheiði	sj	65°35.679'	15°18.947'	65.59465	15.315783	440.0	Vegagerðin	2012	(null)
+34382	Vatnsskarð eystra	sj	65°33.740'	13°59.384'	65.56233	13.98973	430.0	Vegagerðin	1999	(null)
+34413	Mývatnsöræfi	sj	65°39.454'	16°30.034'	65.65757	16.50057	390.0	Vegagerðin	1998	(null)
+34415	Dettifoss	sj	65°48.897'	16°26.585	65.81495	16.443083	373.0	Vegagerðin	2023	(null)
+34450	Hauksstaðir	sj	65°39.424'	15°09.911'	65.65707	15.165183	212.0	Vegagerðin	2012	(null)
+34559	Sandvíkurheiði	sj	65°53.482'	14°49.519'	65.89137	14.82532	275.0	Vegagerðin	1997	(null)
+34700	Tjörnes - Gerðibrekka	sj	66°08.921'	16°58.514'	66.14868	16.97523	93.0	Vegagerðin	2004	(null)
+34732	Hófaskarð	sj	66°17.906'	15°53.596'	66.29843	15.893267	217.0	Vegagerðin	2010	(null)
+34733	Hálsar	sj	66°15.189'	15°48.968'	66.25315	15.81613	180.0	Vegagerðin	1995	(null)
+35107	Hvaldalsá	sj	64°25.212'	14°32.255'	64.4202	14.537583	110.0	Vegagerðin	2016	(null)
+35116	Borgarhöfn	sj	64°11.090'	15°48.870'	64.18483	15.8145	20.0	Vegagerðin	2019	(null)
+35305	Öræfi	sj	63°56.321'	16°47.751'	63.93868	16.79585	75.0	Vegagerðin	1995	(null)
+35315	Kvísker Vegagerðarstöð	sj	63°57.576'	16°25.465'	63.9596	16.42442	30.0	Vegagerðin	2002	(null)
+35553	Almannaskarð - göng	sj	64°16.980'	15°02.280'	64.283	15.038	(null)	Vegagerðin	2009	2012
+35666	Hvalnes	sj	64°24.445'	14°32.360'	64.40742	14.53933	20.0	Vegagerðin	2000	(null)
+35769	Hamarsfjörður	sj	64°39.349'	14°27.163'	64.655815	14.452717	19.0	Vegagerðin	2010	(null)
+35880	Streiti	sj	64°43.197'	14°02.177'	64.71995	14.03628	10.0	Vegagerðin	2008	(null)
+35884	Kambaskriður	sj	64°47.889'	13°53.407'	64.79815	13.890117	37.0	Vegagerðin	2010	(null)
+35963	Öxi	sj	64°49.544'	14°39.439'	64.82573	14.65732	531.0	Vegagerðin	2006	(null)
+35965	Breiðdalsheiði	sj	64°54.410'	14°36.202'	64.90683	14.60337	480.0	Vegagerðin	1997	(null)
+35978	Fáskrúðsfjarðargöng suður	sj	64°57.720'	14°10.500'	64.962	14.175	135.0	Vegagerðin	2008	2012
+35985	Víkurgerði	sj	64°53.737'	13°51.282'	64.895615	13.854695	40.0	Vegagerðin	2018	(null)
+36049	Reynisfjall	sj	63°27.124'	19°02.265'	63.45207	19.03775	125.0	Vegagerðin	2009	(null)
+36122	Markarfljót	sj	63°37.294'	20°01.711'	63.621567	20.028517	42.0	Vegagerðin	2010	(null)
+36127	Hvammur	sj	63°34.706'	19°54.097'	63.57843	19.90162	20.0	Vegagerðin	2001	(null)
+36132	Steinar	sj	63°32.575'	19°41.434'	63.54292	19.69057	20.0	Vegagerðin	1997	(null)
+36152	Hattgil undir Mýrdalsjökli	sj	63°31.845'	18°53.037'	63.53075	18.88395	170.0	Vegagerðin	2001	2001
+36156	Mýrdalssandur	sj	63°27.969'	18°36.266'	63.46615	18.60443	35.0	Vegagerðin	1995	(null)
+36270	Eldhraun	sj	63°44.015'	18°11.781'	63.73377	18.19772	90.0	Vegagerðin	2014	(null)
+36308	Þjórsárbrú	sj	63°55.837'	20°39.918'	63.93062	20.6653	49.0	Vegagerðin	2004	(null)
+36386	Lómagnúpur	sj	63°57.447'	17°33.302'	63.95745	17.55503	55.0	Vegagerðin	1999	(null)
+36391	Gígjukvísl	sj	63°56.173'	17°21.016'	63.93622	17.35027	58.0	Vegagerðin	2014	(null)
+36411	Skálholt	sj	64°07.937'	20°31.847'	64.13228	20.53078	60.0	Vegagerðin	1998	(null)
+36415	Bræðratunguvegur	sj	64°09.453'	20°22.067'	64.15755	20.367783	66.0	Vegagerðin	2012	(null)
+36504	Lyngdalsheiði	sj	64°12.109'	20°48.372'	64.20182	20.8062	215.0	Vegagerðin	2010	(null)
+36519	Gullfoss	sj	64°18.460'	20°12.714'	64.30767	20.2119	191.0	Vegagerðin	2001	(null)

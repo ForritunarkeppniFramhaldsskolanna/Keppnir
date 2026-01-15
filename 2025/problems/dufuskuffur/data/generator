@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+export PPATH
+PPATH=$(realpath ..)
+# shellcheck source-path=SCRIPTDIR
+. ../../../testdata_tools/gen.sh
+
+use_solution atli.py opt
+
+compile random_generator.py
+compile edge_generator.py
+
+samplegroup
+sample 1
+sample 2
+
+group GA 100
+tc 1
+tc 2
+tc edge-0 edge_generator 0 0
+desc "Edge case 0, 0"
+tc edge-1 edge_generator 0 1
+desc "Edge case 0, 1"
+tc edge-2 edge_generator 1 0
+desc "Edge case 1, 0"
+tc edge-3 edge_generator 1 1
+desc "Edge case 1, 1"
+tc edge-4 edge_generator 1000 999
+desc "Edge case 1000, 999"
+tc edge-5 edge_generator 999 1000
+desc "Edge case 999, 1000"
+tc edge-6 edge_generator 1000 1000
+desc "Edge case 1000, 1000"
+tc edge-7 edge_generator 0 1000
+desc "Edge case 0, 1000"
+tc edge-8 edge_generator 1000 0
+desc "Edge case 1000, 0"
+tc edge-9 edge_generator 999 999
+desc "Edge case 999, 999"
+for i in {00..19}; do
+    tc rand-"$i" random_generator
+    desc "Test with random values 0-1000."
+done;

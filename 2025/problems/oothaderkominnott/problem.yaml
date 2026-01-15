@@ -1,0 +1,14 @@
+name:
+    is: O-ó, það er komin nótt!
+    en: Uh-Oh, It Is Nighttime!
+author: Eva Natalía Elvarsdóttir
+source: Forritunarkeppni Framhaldsskólanna 2025
+rights_owner: Forritunarkeppni Framhaldsskólanna
+license: cc by-sa
+type: scoring
+grading:
+    show_test_data_groups: true
+uuid: "126b40d0-9ae7-49c7-a13d-f8f5da836485"
+limits:
+    time_multiplier: 2
+keywords: arithmetic geometry

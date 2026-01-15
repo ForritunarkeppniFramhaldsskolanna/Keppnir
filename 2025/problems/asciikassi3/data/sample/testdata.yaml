@@ -1,0 +1,5 @@
+on_reject: continue
+range: 0 0
+accept_score: 0
+grader_flags: first_error
+input_validator_flags: max_h=20 max_w=20 max_d=20 min_h=1 min_w=1 min_d=1

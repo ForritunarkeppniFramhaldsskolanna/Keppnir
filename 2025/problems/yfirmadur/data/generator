@@ -1,0 +1,68 @@
+#!/usr/bin/env bash
+export PPATH
+PPATH=$(realpath ..)
+# shellcheck source-path=SCRIPTDIR
+. ../../../testdata_tools/gen.sh
+
+use_solution atli_100.cpp
+
+compile random_generator.py
+compile edge_generator.py
+
+samplegroup
+limits max_n=100 max_q=100 allow_add=True allow_rem=True
+sample 1
+
+group GA 10
+limits max_n=10 max_q=10 allow_add=True allow_rem=True
+tc 1
+for i in {01..30}; do
+    tc "GA-$i" random_generator 10 10 1 1
+    desc "Small random test case."
+done;
+tc GA-clear edge_generator deleteall-s
+desc "Edge case firing everyone but the CEO."
+tc GA-edge edge_generator ordertest-s
+desc "Edge case testing hiring number priority."
+tc GA-edge-2 edge_generator failing
+desc "Handmade edge case."
+
+group GB 15
+limits max_n=1000 max_q=1000 allow_add=True allow_rem=True
+include_group GA
+for i in {01..30}; do
+    tc "GB-$i" random_generator 1000 1000 1 1
+    desc "Random test case."
+done;
+tc GB-clear edge_generator deleteall
+desc "Edge case firing everyone but the CEO."
+tc GB-edge edge_generator ordertest
+desc "Edge case testing hiring number priority."
+
+group GC 20
+limits max_n=200000 max_q=200000 allow_add=False allow_rem=False
+tc GC-rand random_generator 200000 200000 0 0
+desc "Random test case."
+
+group GD 20
+limits max_n=200000 max_q=200000 allow_add=True allow_rem=False
+include_group GC
+tc GD-rand random_generator 200000 200000 1 0
+desc "Random test case."
+tc GD-edge edge_generator maxnumber
+desc "Edge case assigning highest possible employee ID."
+
+group GE 35
+limits max_n=200000 max_q=200000 allow_add=True allow_rem=True
+include_group GB
+include_group GD
+tc GE-rand random_generator 200000 200000 1 1
+desc "Random test case."
+tc GE-slow edge_generator raiseclump
+desc "Edge case firing supervisors with many subordinates repeatedly."
+tc GE-slow-2 edge_generator deadchain
+desc "Edge case querying employees with long chains of fired supervisors above them."
+tc GE-slow-3 edge_generator spreadchain
+desc "Edge case querying employees with long chains of fired supervisors above them."
+tc GD-slow-4 edge_generator repclimb
+desc "Edge case querying employees with long chains of fired supervisors above them."

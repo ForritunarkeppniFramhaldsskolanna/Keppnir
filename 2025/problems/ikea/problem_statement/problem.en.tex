@@ -1,0 +1,52 @@
+\problemname{Maximally Unfair Fair IKEA Trip}
+\illustration{0.4}{ikealogo}{Image from \href{https://commons.wikimedia.org/wiki/File:Ikea\_logo.svg}{Wikimedia.org}}
+
+Dagur and his friends were in IKEA buying furniture for the Faulty Komputerprogram (FK) club, but Dagur is lazy and does not want to carry furniture all the way back.
+But everyone has to carry the same number of items, otherwise it would be unfair. Therefore, Dagur has decided to carry as little weight as possible.
+
+You are given $k$, the number of people carrying stuff (Dagur and his friends), and a list of $n$ furniture items and their weights.
+Find what items Dagur should carry to minimise weight.
+
+Note that the number of people does not necessarily divide 
+the number of goods, so not everyone can carry the same
+number of items. If this is the case Dagur will try to take
+as few items as possible, as long as it does not make it too
+obvious he's trying to get away lightly. 
+
+Dagur will try to get away with taking only $\lfloor n/k
+\rfloor$ items. The only exception is when this would make
+his laziness obvious. This happens when the lightest 
+$\lceil n/k \rceil$ items are strictly lighter than the next 
+$\lfloor n/k \rfloor$ items, when they are ordered by weight.
+In this case Dagur will take $\lceil n/k \rceil$ items to
+make things less obvious.
+
+Let us take an example with $7$ items and $3$ people carrying, that is to say $n = 7$ and
+$k = 3$. Call the items $x_1, x_2, \ldots, x_{7}$ after putting them in increasing weight order,
+so $x_1 < x_2 < \cdots < x_{7}$. Then Dagur will take $2$ items, unless if
+$x_1 + x_2 + x_3 < x_4 + x_5$, then he will take $3$ items instead.
+
+If there are multiple different lightest sets of items that 
+Dagur can take, Dagur breaks ties by taking the items that
+appeared earliest in the list of bought items.
+
+\section*{Input}
+Input consists of multiple lines.
+The first line contains a single integer $k$, the number of people carrying items.
+The next line contains a single integer $n$, the number of products purchased at IKEA\@.
+The next line contains $n$ lines, the list of all bought products, each line containing the name of one product and its weight. Each weight is at most $100\,000$.
+Each name is at most 10 English letters and has no spaces, names are also not empty.
+
+\section*{Output}
+On the first line, write the total weight that Dagur carries on his shoulders.
+The next lines should contain all the items that Dagur carries on his shoulders in alphabetical order, one per line.
+
+\section*{Scoring}
+\begin{tabular}{|l|l|l|}
+\hline
+Groups & Points & Constraints \\ \hline
+1     & 25   & $1 \leq n,k \leq 10$, $k$ divides $n$ \\ \hline
+2     & 25   & $1 \leq n,k \leq 10$\\ \hline
+3     & 25   & $1 \leq n,k \leq 100\,000$, $k$ divides $n$ \\ \hline
+4     & 25   & $1 \leq n,k \leq 100\,000$\\ \hline
+\end{tabular}

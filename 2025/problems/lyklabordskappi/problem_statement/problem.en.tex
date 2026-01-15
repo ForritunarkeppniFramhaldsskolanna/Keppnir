@@ -1,0 +1,29 @@
+\problemname{Keyboard Warrior}
+\illustration{0.4}{speedrunner}{Image from \href{https://i.kym-cdn.com/entries/icons/original/000/036/070/cover5.jpg}{knowyourmeme.com/}}
+
+Everyone knows that League of Legends is a game with a very friendly community.
+Despite that, there are sometimes players that like to complain just a little more than others, especially jungle players.
+The main reason being the amount of free time they have over other players while walking between the jungle monsters.
+Ingvar is one of those jungle players.
+He has the tendency to complain just a little bit, and if he cannot do that, he frankly just gives up.
+
+Since Ingvar is a seasoned player, he knows exactly how many seconds it takes to walk between each set of monsters, thus he can use that time to send a few \emph{playful} messages to the other players.
+He also has been practising typing and thus knows well how many keys he can press per second.
+It is good to remember that Ingvar counts the \texttt{space} and the \texttt{enter} keys in his calculations when counting the amount of keys he can press per second.
+And do not forget that you must press the \texttt{enter} key to send each line.
+
+\section*{Input}
+Input consists of three lines.
+The first line contains three integers $n$, the total number of words Ingvar wants to write, $l$ the number of keys Ingvar can press per second and $t$, the number of seconds Ingvar can type for between each set of monsters.
+The second line contains $n$ words, $w_1, w_2, \dots, w_n$ separated by a space.
+
+\section*{Output}
+If Ingvar can write all the words in the right order and separated by at least one space then you should write them in the fewest amount of lines possible, otherwise you should write one line containing \texttt{/ff}.
+
+\section*{Scoring}
+\begin{tabular}{|l|l|l|}
+\hline
+Groups & Points & Constraints \\ \hline
+1      & 40     & $1 \leq n \leq 1\,000, 4 \leq l \leq 5, t = 1$, length of each word is $4$. \\ \hline
+2      & 60     & $1 \leq n \leq 1\,000, 4 \leq l \leq 10, 1 \leq t \leq 5$, length of words is between $1$ and $20$. \\ \hline
+\end{tabular}

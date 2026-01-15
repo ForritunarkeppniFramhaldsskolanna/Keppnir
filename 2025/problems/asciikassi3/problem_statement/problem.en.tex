@@ -1,0 +1,50 @@
+\problemname{ASCII Box 3}
+\illustration{0.4}{chair}{Image from \href{https://commons.wikimedia.org/wiki/File:Chair-ascii.png}{wikimedia.commons.org}}
+
+Another programming contest, another problem about ASCII boxes!
+So far all the ASCII boxes have been missing something.
+The more artistically inclined contestants of the last years have complained
+the problems lacked depth, so this year we have to add a third dimension to 
+the images.
+
+To draw the box the letters \texttt{+}, \texttt{-}, \texttt{|}, \texttt{/}
+and \texttt{x} should be used.
+The vertical edges are drawn with \texttt{|} and the horizontal edges with \texttt{-}.
+The corners of the box are drawn with \texttt{+} and \texttt{/} is used for edges that
+face away from our perspective. Finally \texttt{x} is used if two 
+non-parallel edges overlap (on the picture). If a corner and edge overlap it should still
+be drawn with a \texttt{+}.
+
+To make sure the box is printed correctly, an appropriate number of spaces has to be placed
+before and between the letters of each line.
+Additionally, do not print any extra spaces after the last letter of a line, just a single
+newline character after the last letter on each line.
+
+The box has some specific height $h \geq 1$, width $w \geq 1$ and depth $d \geq 1$.
+The vertical edges are then composed of $2$ \texttt{+} and $(h - 2)$ \texttt{|}, except
+if $h = 1$ then it's only a single \texttt{+}.
+Similarly the horizontal edge is $2$ \texttt{+} and $(w - 2)$ \texttt{-}, except if
+$b = 1$ then it's only a single \texttt{+}.
+
+This lets us draw the front face of the box, which is a $h \times w$ rectangle. If $d > 1$
+then $(d - 2)$ \texttt{/} need to be drawn from each corner going up and to the right.
+Then the back face of the box needs to be drawn in the same manner as the front one
+at the end of the \texttt{/} sequence.
+
+\section*{Input}
+The first and only line of input contains three integers $h, w, d$, the dimensions of
+the box as described above.
+
+\section*{Output}
+Print a box with the given dimensions, as described above.
+Note that the output must be exactly correct, even up to whitespace.
+
+\section*{Scoring}
+\begin{tabular}{|l|l|l|}
+\hline
+Group & Points & Constraints \\ \hline
+1     & 20   & $1 \leq h, w, d \leq 3$. \\ \hline
+2     & 30   & $2 \leq h, w, d \leq 8$. \\ \hline
+3     & 20   & $d = 1, 1 \leq h, w \leq 100$. \\ \hline
+4     & 30   & $1 \leq h, w, d \leq 100$. \\ \hline
+\end{tabular}

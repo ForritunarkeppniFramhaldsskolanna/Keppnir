@@ -1,0 +1,47 @@
+#!/usr/bin/env bash
+export PPATH
+PPATH=$(realpath ..)
+# shellcheck source-path=SCRIPTDIR
+. ../../../testdata_tools/gen.sh
+
+use_solution atli.py opt
+
+compile random_generator.py
+compile edge_generator.py
+
+samplegroup
+sample 1
+sample 2
+sample 3
+
+group GA 100
+tc 1
+tc 2
+tc 3
+tc edge-0 edge_generator 0 0
+desc "Edge case 0, 0."
+hint "What if no one is around?"
+tc edge-1 edge_generator 1 4
+desc "Edge case 1, 4."
+tc edge-2 edge_generator 1 2
+desc "Edge case 1, 2."
+tc edge-3 edge_generator 1 3
+desc "Edge case 1, 3."
+tc edge-4 edge_generator 0 2
+desc "Edge case 0, 2."
+tc edge-5 edge_generator 2 6
+desc "Edge case 2, 6."
+tc edge-6 edge_generator 2 7
+desc "Edge case 2, 7."
+tc edge-7 edge_generator 2 8
+desc "Edge case 2, 8."
+tc edge-8 edge_generator 250 1000
+desc "Edge case 250, 1000."
+tc edge-9 edge_generator 500 1000
+desc "Edge case 500, 1000."
+for i in {01..10}; do
+    tc "GA-$i-poss" random_generator 1
+    desc "Random test with valid number of legs."
+    tc "GA-$i-rand" random_generator 0
+    desc "Totally random test."
+done;

@@ -1,0 +1,101 @@
+\problemname{Cards Sorting}
+\illustration{0.4}{impact}{Image taken from \href{https://commons.wikimedia.org/wiki/File:Japan\_Impact\_2023\_-\_Yu-Gi-Oh\_(52765156950).jpg}{commons.wikimedia.org}}
+
+Atli owns a terrible amount of cards and sometimes he
+has trouble keeping them all organised. Thus he was thinking
+it might be good to create a digital database to keep track
+of it all.
+
+The database has to offer different ways to sort the cards.
+To do this we should first consider the information that
+each card has.
+
+Each card has a name, for example ``Bláeygður Hvítur Dreki''
+or ``Dimmur Seiðkarl''. The names always contain only English
+letters along with spaces, and have length at most $32$.
+The names do not start or end with spaces and are not empty.
+Each card also has a $8$ digit ID number, for example 
+55144522. No two different cards have the same ID\@. 
+Each card also has a type and possibly a subtype. We
+give the types and subtypes in the order they should be
+sorted here below, they are
+
+\begin{itemize}
+    \item \texttt{Skrimsli}
+    \begin{itemize}
+        \item \texttt{Venjulegt}
+        \item \texttt{Ahrifa}
+        \item \texttt{Bodunar}
+        \item \texttt{Samruna}
+        \item \texttt{Samstillt}
+        \item \texttt{Thaeo}
+        \item \texttt{Penduls}
+        \item \texttt{Tengis}
+    \end{itemize}
+    \item \texttt{Galdur}
+    \begin{itemize}
+        \item \texttt{Venjulegur}
+        \item \texttt{Bunadar}
+        \item \texttt{Svida}
+        \item \texttt{Samfelldur}
+        \item \texttt{Bodunar}
+        \item \texttt{Hradur}
+    \end{itemize}
+    \item \texttt{Gildra}
+    \begin{itemize}
+        \item \texttt{Venjuleg}
+        \item \texttt{Samfelld}
+        \item \texttt{Mot}
+    \end{itemize}
+    \item \texttt{Annad}
+\end{itemize}
+
+This means \texttt{Skrimsli} has the subtype \texttt{Thaeo}, 
+which comes before the subtype \texttt{Tengis} and so on.
+Furthermore \texttt{Gildra} comes after \texttt{Galdur} no
+matter what subtype it is. \texttt{Annad} has no subtype.
+
+Finally each card has a release date, given in the format
+\texttt{yyyy-mm-dd} which gives the year, month and day
+in the \texttt{ISO-8601} format.
+
+\section*{Input}
+The input starts with a line containing a single positive
+integer $1 \leq n \leq 1\,000$.
+Next there are $n$ lines, each with one card.
+That line contains the name, ID, type and release date
+of the card, separated by commas. If the type has a subtype
+it is given in the format \texttt{type {-} subtype}.
+
+Finally there is a line with the words \texttt{nafn},
+\texttt{id}, \texttt{flokkur} and \texttt{dagsetning}
+separated by spaces in some order. The cards should be
+sorted first by the first item on the line, then ties 
+broken by the second item and so on. Here \texttt{nafn}
+means name, \texttt{id} is ID, \texttt{flokkur} is type
+and \texttt{dagsetning} is date.
+
+Names are sorted alphabetically, IDs by ascending value,
+types in the order given above and dates in ascending 
+chronological order. Here alphabetical order means by
+ASCII value, so spaces are first, then upper case letters
+and then lower case letters. This is the default order
+for strings in most programming languages.
+
+\section*{Output}
+After the cards have been sorted into the right order,
+print the name of each card, in that order. Print one
+card name per line.
+
+\section*{Scoring}
+\begin{tabular}{|l|l|l|}
+\hline
+Group & Points & Constraints \\ \hline
+1     & 5   & $n = 1$. \\ \hline
+2     & 10   & Cards are sorted by names first. \\ \hline
+3     & 15   & Cards are sorted by ID first. \\ \hline
+4     & 20   & Cards are sorted by type first, then ID\@. \\ \hline
+5     & 20   & Cards are sorted by date first, then type, then name. \\ \hline
+6     & 30   & No further constraints. \\ \hline
+\end{tabular}
+

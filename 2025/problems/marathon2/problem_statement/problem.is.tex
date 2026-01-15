@@ -1,0 +1,44 @@
+\problemname{Maraþon}
+\illustration{0.4}{toulouse}{Mynd fengin af \href{https://commons.wikimedia.org/wiki/File:Marathon\_de\_Toulouse\_2014\_-\_3148\_-\_Water\_stop.jpg}{commons.wikimedia.org}}
+
+
+Konni ætlar að hlaupa maraþon í fyrsta skipti. Hann er búinn að redda sér öllum helsta búnaði
+sem þarf til að geta náð góðum tíma eins og vökvapoka til að geta stanslaust drukkið á meðan 
+hlaupinu stendur. Honum langar að ná sem bestum tíma og því þarf hann aðstoð við að skipuleggja 
+á hvaða drykkjarstöðum hann á að stoppa á til að fylla á vökvapokann.
+
+Það tekur hann $Y$ sekúndur að fylla á vökvapokann sama hversu mikið vantar upp á og pokinn
+getur mest haldið $X$ml af vökva. Vökvapokinn byrjar fullur en fyrir hvern metra sem Konni
+hleypur þarf hann $1$ml af vökva. Ef Konni á engann vökva eftir þá þarf hann að skokka þangað til hann
+fær meira vatn.
+
+Hjálpaðu Konna að finna út hvað er besti mögulegi tími sem hann getur hlaupið maraþonið á
+ef hann velur drykkjarstöðvarnar til að stoppa á á sem bestan máta.
+
+Eins og flestir vita þá er lengdin á maraþoni $42\,195$ metrar.
+
+\section*{Inntak}
+Fyrsta lína inniheldur þrjár heiltölur, $0 \leq N \leq 1\,000\,000$ fjölda drykkjarstöðva, $0 \leq X \leq 10\,000$ stærð vökvapokans í ml,
+$0 \leq Y \leq 100$ hversu langan tíma það tekur að fylla á vökvapokann.
+
+Næsta lína inniheldur tvær heiltölur $1 \leq H \leq 10$, hraðann sem Konni hleypur á í metrum á sekúndu og $1 \leq S \leq H$,
+hraðann sem Konni skokkar á í metrum á sekúndu.
+
+Næstu koma $N$ línur sem innihalda eina heiltölu, lína númer $i$ inniheldur staðsetningu drykkjarstöð númer $i$ gefið
+í metrum frá byrjunarlínu.
+
+\section*{Úttak}
+
+Ein lína með tímanum sem Konni getur búist við að klára maraþonið gefið að hann velji drykkjarstöðvarnar á sem 
+bestan máta í forminu \href{https://en.wikipedia.org/wiki/ISO\_8601}{$hh:mm:ss$}.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1 & 20 & $H=S$ \\ \hline
+2 & 30 & $N \leq 20$ \\ \hline
+3 & 30 & $N \leq 2\,500, X \leq 1\,000$ \\ \hline
+3 & 20 & Engar frekari takmarkanir. \\ \hline
+\end{tabular}
+

@@ -1,0 +1,12 @@
+Beatrice
+Murch
+nýlínustafanna
+flush
+print
+True
+cout
+endl
+Java
+Wrong
+Answer
+Accepted

@@ -1,0 +1,12 @@
+name: 
+    is: Litagreining
+    en: Colour Analysis
+author: Atli Fannar Franklín
+source: Forritunarkeppni Framhaldsskólanna 2025
+rights_owner: Forritunarkeppni Framhaldsskólanna
+license: cc by-sa
+type: scoring
+uuid: "622b0ce1-d8e3-4a5a-8a8e-bedf0e99d27b"
+grading:
+    show_test_data_groups: true
+keywords: easy if-statements flow-control

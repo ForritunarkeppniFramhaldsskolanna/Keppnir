@@ -1,0 +1,15 @@
+name: 
+    is: Reiknivél
+    en: Calculator
+author: Atli Fannar Franklín
+source: Forritunarkeppni Framhaldsskólanna 2025
+rights_owner: Forritunarkeppni Framhaldsskólanna
+license: cc by-sa
+type: scoring
+uuid: "d5a292fd-9f80-47ea-a5a8-44f783ed0dd0"
+limits:
+    time_multiplier: 1.3
+    memory: 2048
+grading:
+    show_test_data_groups: true
+keywords: dial graph bfs

@@ -1,0 +1,31 @@
+\problemname{Gestalisti}
+\illustration{0.4}{guestlist}{Mynd tekin af \href{https://commons.wikimedia.org/wiki/File:Guest\_list\_of\_people\_attending\_Ulysses\_S.\_Grant\%27s\_funeral,\_August\_8,\_1885\_-\_DPLA\_-\_5076ade4d3accf58b0810e7c8483b4d1\_(page\_1).jpg}{commons.wikimedia.org}}
+
+Nýtt hótel hefur innleitt strangar reglur um aðgang, þar sem aðeins þeir sem eru á sérstökum gestalista fá aðgang.
+Vegna mikillar eftirspurnar og tæknilegra vandamála með að halda utan um listann á pappír, þarf að þróa skipanalínuforrit sem sér um að skrá, eyða og leita að nöfnum á listanum.
+
+\section*{Inntak}
+\begin{itemize}
+    \item Fyrsta línan inniheldur jákvæðu heiltöluna $N$, sem táknar fjölda skipana sem fylgja.
+    \item Næstu $N$ línur innihalda skipanir af eftirfarandi gerðum:
+    \begin{itemize}
+        \item \texttt{+ nafn} – Bætir við nafni á gestalistann.
+        \item \texttt{- nafn} – Fjarlægir nafn af gestalistanum.
+        \item \texttt{? nafn} – Athugar hvort nafn sé á gestalistanum.
+    \end{itemize}
+\end{itemize}
+
+Nöfn innihalda aðeins ensku lágstafina \texttt{a} til \texttt{z} og hámarkslengd nafns eru 8 stafir.
+Aldrei verður beðið um að fjarlægja nafn sem er ekki á gestalista, eða bæta við nafni sem þegar er á gestalista.
+
+\section*{Úttak}
+Fyrir hverja \texttt{? nafn} skipun skal forritið prenta \texttt{Jebb} ef nafnið er á listanum, annars \texttt{Neibb}.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 20   & Eingöngu \texttt{? nafn} skipanir og $N \leq 20$. \\ \hline
+2     & 50   & $N \leq 1\,000$. \\ \hline
+3     & 30   & $N \leq 200\,000$. \\ \hline
+\end{tabular}

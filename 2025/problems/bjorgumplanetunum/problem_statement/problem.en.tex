@@ -1,0 +1,58 @@
+\problemname{Save the Planets}
+\illustration{0.4}{balatro}{Image taken from \href{https://commons.wikimedia.org/wiki/File:The\_Fool\_and\_the\_Lady\_Fool.jpg}{commons.wikimedia.org/}}
+
+Balatro is a game that has attracted many, not least of whom is Elvar.
+Elvar loves to play Balatro and is now in the middle of a game which has a good chance of
+beating his high score. The goal of Balatro is beating blinds by playing poker hands to get
+to a target score $x$. All poker hands have different numbers of chips and multipliers.
+The total score for a poker hand is then calculated as \texttt{chips} $\cdot$ \texttt{multiplier}.
+For example if you have $50$ chips and multiplier $4$ you get $200$ points for that hand.
+After each blind you can then buy jokers, tarot cards and planet cards to make your poker
+hands stronger, with the goal of scoring more points.
+
+This game Elvar is playing with a special deck called \emph{plasma deck}. When playing with this
+deck, instead of multiplying chips and the multiplier, you first average them and then
+multiply. For example if you have $50$ chips and multiplier $4$ like before, they are first
+averaged. Then you have $27$ chips and multiplier $27$, making your score $729$.
+
+Elvar has been quite lucky in this Balatro game and managed to fetch the good old
+\href{https://balatrogame.fandom.com/wiki/Perkeo}{\emph{Perkeo}} early in the game.
+Thus he has decided he will try to collect copies of the planet card 
+\href{https://balatrogame.fandom.com/wiki/Planet\_Cards}{\emph{Neptune}} with the intent
+of finding \href{https://balatrogame.fandom.com/wiki/Vouchers}{\emph{Observatory}}.
+Elvar has managed to arrange his deck such that he always manages to play a \emph{Royal flush}
+which gives him $151$ chips and a multiplier of $8$. He also knows that if he uses a
+\emph{Neptune} card he adds $40$ chips and a multiplier of $4$ to that. For example if
+he uses two \emph{Neptune} cards, a \emph{royal flush} gets him $231$ chips and a multiplier
+of $16$, which after accounting for the \emph{plasma deck} nets $123.5$ chips and a multiplier
+of $123.5$.
+
+But now Elvar is in a bit of a pickle. He was so sure he would find the \emph{Observatory}
+after the last blind that he sold all his jokers. But unfortunately the \emph{Observatory}
+was nowhere to be found.
+Saddened by this he tried to make the best of a bad situation and bought the joker
+\href{https://balatrogame.fandom.com/wiki/Constellation}{\emph{Constellation}}.
+What makes this joker good is that after each hand, before the score is counted, this joker
+multiplies the multiplier by $1 + 0.1 \cdot$ \texttt{number of planet cards used}. So if Elvar
+uses $10$ \emph{Neptune} cards, he gets $551$ chips and a multiplier of $96$, which when accounting
+for the \emph{plasma deck} becomes $323.5$ chips and a multiplier of $323.5$, which gives
+a score of $104,652.25$. Since Elvar is still in a bit of a shock from not finding the
+\emph{Observatory} he doesn't know how many cards he needs to use. Can you help him figure
+out the minimum number of planet cards he needs to use to win the blind?
+
+\section*{Input}
+The input contains a single positive integer $x$, the number of points Elvar has to score
+to win the blind.
+
+\section*{Output}
+Print the smallest number of planet cards Elvar has to use to win the blind.
+
+\section*{Scoring}
+\begin{tabular}{|l|l|l|}
+\hline
+Group & Points & Constraints \\ \hline
+1     & 30   & $0 \leq x \leq 6320$ \\ \hline
+2     & 30   & $0 \leq x \leq 10^{24}$ \\ \hline
+3     & 40   & $0 \leq x \leq 10^{64}$ \\ \hline
+\end{tabular}
+

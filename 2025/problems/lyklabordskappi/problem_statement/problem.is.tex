@@ -1,0 +1,33 @@
+\problemname{Lyklaborðskappi}
+\illustration{0.4}{speedrunner}{Mynd fengin af \href{https://i.kym-cdn.com/entries/icons/original/000/036/070/cover5.jpg}{knowyourmeme.com/}}
+
+Eins og allir vita er Deild Goðsagnanna leikur með mjög vingjarnlegt samfélag.
+Þrátt fyrir það detta stundum inn spilarar sem kvarta aðeins meira en aðrir, sérstaklega skógarspilarar.
+Meginástæðan fyrir því er að skógarspilarar eyða töluverðum tíma að labba á milli skrímsla og hafa því meiri tíma en aðrir til að senda nokkur skilaboð.
+Hann Ingvar er einn þeirra skógarspilara, hann á það til að kvarta örlítið, og ef hann nær því ekki þá gefst hann einfaldlega upp. 
+
+Þar sem Ingvar er vanur spilari þá veit hann nákvæmlega hversu margar sekúndur það tekur hann að labba á milli skrímsla og er það þá tími sem hann getur notað til að skrifa skilaboð.
+Einnig hefur hann æft sig vel að skrifa og heldur hann vel utan um hversu marga takka hann getur ýtt á hverri sekúndu.
+Gott er að muna að Ingvar telur \texttt{bil} og \texttt{enter} takkana með þegar hann telur á hversu marga takka hann getur ýtt á hverri sekúndu.
+Ekki gleyma að það þarf að ýta á \texttt{enter} takkann til að senda hverja línu.
+
+\section*{Inntak}
+Inntak samanstendur af tveimur línum.
+Fyrsta línan inniheldur þrjár heiltölur $n$, fjöldi orða sem Ingvar ætlar sér að skrifa, $l$, hversu marga takka Ingvar getur ýtt á hverri sekúndu og $t$, fjöldi sekúnda sem Ingvar hefur til að skrifa hverju sinni milli skrímsla.
+Önnur línan inniheldur $n$ orð, $w_1, w_2, \dots, w_n$ aðskilin með bilum.
+
+\section*{Úttak}
+Ef Ingvar getur ekki skrifað öll orðin sem hann vill skrifa í réttri röð skal prenta út eina línu sem inniheldur \texttt{/ff}.
+
+Annars skal skrifa út orðin í eins fáum línum og mögulegt er.
+Hver lína skal tákna skilaboð frá honum sem hann sendir meðan hann ferðast milli skrímsla og þurfa þau að uppfylla tímamörkin.
+Sérhvert par af aðliggjandi orðum í skilaboði skal vera aðskilið með að minnsta kosti einu bili.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 40   & $1 \leq n \leq 1\,000, 4 \leq l \leq 5, t = 1$, lengd hvers orðs er $4$. \\ \hline
+2     & 60   & $1 \leq n \leq 1\,000, 4 \leq l \leq 10, 1 \leq t \leq 5$, lengd orða er frá $1$ til $20$. \\ \hline
+\end{tabular}
+

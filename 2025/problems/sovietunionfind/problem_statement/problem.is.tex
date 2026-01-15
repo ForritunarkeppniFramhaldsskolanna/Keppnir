@@ -1,0 +1,76 @@
+\problemname{Sovét Union-Find}
+\illustration{0.4}{space}{Mynd eftir \href{https://www.vezanmatics.com}{Evan Streb, Vezanmatics}. Notuð með leyfi.}
+
+Ingfríður sat og var að leiðast í sögutíma. Kennarinn var
+að tala um sovétríkin og kalda stríðið. Hún var hins vegar
+of upptekin að hugsa um forritunarkeppnir og dæmi sem
+hún vildi leysa. Hún einbeitti sér því ekkert að því sem
+var í gangi.
+
+Hins vegar í lok tímans sagði kennarinn að vinna ætti frjálst
+skapandi verkefni tengt þessu tímabili. Hún hugsaði vel og
+lengi hvað væri hægt að gera tengt þessu, en var ennþá
+föst að hugsa um keppnisforritun. Að lokum small það hjá
+henni, Soviet Union, það hlýtur að tengjast \emph{Union-Find} gagnagrindinni.
+Soviet Union er náttúrulega enska heitið yfir
+Sambandsríki sósíalískra sovétlýðvelda, sem kennarinn var að tala um.
+Því getur hún gert verkefni því tengt. Hins vegar er nú
+komið alveg fram að skilafrest og hún gleymdi að vinna í
+þessu. Getur þú útfært \emph{Sovét Union-Find} til að bjarga
+henni?
+
+\emph{Sovét Union-Find} þarf að geta stutt nokkrar aðgerðir.
+Í byrjun skiptum við landsvæði heimsins niður í $n$ búta og
+númerum þá búta $1, 2, \dots, n$. Í byrjun er hver bútur
+sitt eigið sjálfstæða ríki og er sá bútur stjórnandi þess ríkis.
+En svo geta komið nokkrar aðgerðir í inntakinu, sú fyrsta
+er \texttt{a x y} sem þýðir að ríkið sem inniheldur bút
+$x$ tekur yfir ríkið sem inniheldur bút $y$. Stjórnandi
+nýja sameinaða ríkisins er þá fyrrum stjórnandi $x$.
+Næsta aðgerð er \texttt{b x} sem þýðir að ríkið sem inniheldur
+bút $x$ \textit{balkaniserast}. Það þýðir að allir bútar þess
+skiptast upp og verða sitt eigið ríki aftur, eins og í
+byrjun. Loks er aðgerðin \texttt{c x} sem spyr hver ræður
+yfir bút númer $x$ að svo stöddu.
+
+
+\section*{Inntak}
+Fyrsta lína inntaksins inniheldur tvær jákvæðar heiltölur
+$n, q$ þar sem $n$ er fjöldi búta sem landsvæði heimsins er
+skipt í og $q$ er fjöldi aðgerða. 
+Næst fylgja $q$ línur, hver með einni aðgerð.
+Fyrsti stafur línunnar er þá ávallt \texttt{a}, \texttt{b}
+eða \texttt{c} eins og lýst er að ofan og gefur sá stafur
+tegund aðgerðarinnar.
+
+Ef stafurinn var \texttt{a} koma næst tvær jákvæðar heiltölur
+$x$ og $y$ sem uppfylla $1 \leq x, y \leq n$. Ef $x$ og $y$
+eru þegar hluti af sama ríki gerir aðgerðin ekkert.
+Framkvæma á þá sameiningaraðgerðina á $x$ og $y$ eins
+og lýst er að ofan.
+
+Ef stafurinn var \texttt{b} kemur næst ein jákvæð heiltala
+$x$ sem uppfyllir $1 \leq x \leq n$. Framkvæma á þá
+balkaniseringsaðgerðina á $x$ eins og lýst er að ofan.
+
+Loks ef stafurinn var \texttt{c} kemur næst ein jákvæð
+heiltala $x$ sem uppfyllir $1 \leq x \leq n$. 
+Ávallt gildir að $n, q \leq 100\,000$.
+
+\section*{Úttak}
+Fyrir hverja \texttt{c} aðgerð í inntakinu skal prenta
+númer bútsins sem ræður yfir bútnum sem er gefinn í
+aðgerðinni, eins og lýst er að ofan.
+Prenta skal hverja tölu á eigin línu og í sömu röð og 
+aðgerðirnar eru gefnar í inntakinu.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 25   & $n = 2, q \leq 100$ \\ \hline
+2     & 25   & $n, q \leq 1\,000$ \\ \hline
+3     & 25   & Það eru engar \texttt{b} aðgerðir í inntaki. \\ \hline
+4     & 25   & Engar frekari takmarkanir. \\ \hline
+\end{tabular}
+

@@ -1,0 +1,94 @@
+\problemname{Spilaröðun}
+\illustration{0.4}{impact}{Mynd fengin af \href{https://commons.wikimedia.org/wiki/File:Japan\_Impact\_2023\_-\_Yu-Gi-Oh\_(52765156950).jpg}{commons.wikimedia.org}}
+
+Atli á alveg hrottalegt magn af spilum og lendir stundum
+í vandræðum með að halda þeim skipulögðum. Því hugsaði
+hann að það gæti verið gott að búa til rafrænan
+gagnagrunn fyrir spilin sín.
+
+Gagnagrunnurinn þarf að bjóða upp á að raða á nokkra ólíka
+vegu. Til þess að tala um þær leiðir skulum við fyrst fara
+yfir hvaða upplýsingar eru á einu spili.
+
+Hvert spil hefur nafn, til dæmis ,,Bláeygður hvítur dreki`` % chktex 26 chktex 33
+eða ,,Dimmur Seiðkarl``. Nöfn innihalda ávallt bara enska % chktex 26
+stafi og bil, og eru mest $32$ stafir. Nafn mun hvorki
+byrja né enda á bili og eru ekki tóm.
+Einnig hefur hvert spil átta stafa
+ID tölu, til dæmis 55144522. Engin tvö ólík spil hafa sama ID\@.
+Einnig hefur hvert spil flokk og mögulega undirflokk.
+Við gefum flokkana og undirflokkana í þeirri röð sem á að
+raða þeim. Þeir eru
+
+\begin{itemize}
+    \item \texttt{Skrimsli}
+    \begin{itemize}
+        \item \texttt{Venjulegt}
+        \item \texttt{Ahrifa}
+        \item \texttt{Bodunar}
+        \item \texttt{Samruna}
+        \item \texttt{Samstillt}
+        \item \texttt{Thaeo}
+        \item \texttt{Penduls}
+        \item \texttt{Tengis}
+    \end{itemize}
+    \item \texttt{Galdur}
+    \begin{itemize}
+        \item \texttt{Venjulegur}
+        \item \texttt{Bunadar}
+        \item \texttt{Svida}
+        \item \texttt{Samfelldur}
+        \item \texttt{Bodunar}
+        \item \texttt{Hradur}
+    \end{itemize}
+    \item \texttt{Gildra}
+    \begin{itemize}
+        \item \texttt{Venjuleg}
+        \item \texttt{Samfelld}
+        \item \texttt{Mot}
+    \end{itemize}
+    \item \texttt{Annad}
+\end{itemize}
+
+Þetta þýðir að \texttt{Skrimsli} hefur undirflokkinn \texttt{Thaeo}, sem kemur á undan undirflokknum \texttt{Tengis} og svo framvegis. Einnig er \texttt{Gildra} á eftir \texttt{Galdur} sama hvaða undirflokk er að ræða. \texttt{Annad} hefur enga undirflokka.
+
+Loks hefur hvert spil útgáfudagsetningu, gefið á forminu
+\texttt{yyyy-mm-dd} sem gefur ár, mánuð og dag á
+\texttt{ISO-8601} sniði.
+
+\section*{Inntak}
+Inntak byrjar á línu með heiltölu $1 \leq n \leq 1\,000$.
+Svo fylgja $n$ línur, hver með einu spili. Á þeirri línu
+verður nafn, ID, flokkur og útgáfudagsetning spilsins gefin,
+aðskilin með kommum. Ef flokkurinn hefur undirflokk er það
+gefið á forminu \texttt{flokkur {-} undirflokkur}.
+
+Loks kemur lína með orðunum \texttt{nafn}, \texttt{id},
+\texttt{flokkur} og \texttt{dagsetning} aðskilin með bilum
+í einhverri röð. Raða á spilunum eftir því sem kemur
+fyrst, leysa jafntefli með því sem kemur næst og koll af
+kolli.
+
+Nöfn eru röðuð í stafrófsröð, ID í stærðarröð með minnstu
+fremst, flokkar í röðinni að ofan og dagsetningar í tímaröð
+með elsta fremst. Stafrófsröðin er eftir ASCII gildi sem
+þýðir að bil kemur fremst, svo stórir stafir, svo litlir.
+Flest forritunarmál raða strengjum svona.
+
+\section*{Úttak}
+Eftir að búið er að raða spilunum í rétta röð, prentið
+nafnið á hverju spili í þeirri röð. Prentið eitt spil
+á hverja línu.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 5   & $n = 1$. \\ \hline
+2     & 10   & Raða á eftir nafni fyrst. \\ \hline
+3     & 15   & Raða á eftir ID fyrst. \\ \hline
+4     & 20   & Raða á eftir flokki fyrst og svo ID\@. \\ \hline
+5     & 20   & Raða á eftir dagsetningu fyrst, svo flokki og svo nafni. \\ \hline
+6     & 30   & Engar frekari takmarkanir. \\ \hline
+\end{tabular}
+

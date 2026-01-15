@@ -1,0 +1,15 @@
+name:
+  is: Mögnuð mylla
+  en: Magnificent Noughts & Crosses
+author: Atli Fannar Franklín
+source: Forritunarkeppni Framhaldsskólanna 2025
+rights_owner: Forritunarkeppni Framhaldsskólanna
+license: cc by-sa
+type: scoring
+uuid: "42bf9f60-5b9e-4f47-a7fd-1ef5b5182056"
+validation: custom score interactive
+limits:
+  time_multiplier: 2
+grading:
+    show_test_data_groups: true
+keywords: game-theory interactive tic-tac-toe

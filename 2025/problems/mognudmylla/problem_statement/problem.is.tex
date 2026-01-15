@@ -1,0 +1,84 @@
+\problemname{Mögnuð mylla}
+\illustration{0.4}{berries}{Mynd eftir Beatrice Murch, fengin af \href{https://commons.wikimedia.org/wiki/File:Tic-tac-toe\_berries.jpg}{commons.wikimedia.org}}
+
+Eitthvað þurfa dómarar að gera meðan á keppni stendur, og
+venjuleg mylla er allt of leiðinleg. Fullkomin mylla, sem
+hefur komið fram á fyrri keppni, er líka orðin það gömul
+að allir dómararnir eru löngu búnir að finna út úr því
+hvernig er best að leika. 
+
+Sem betur fer fékk Atli hugljómun og gat bætt ástandið með
+nýrri tegund af myllu. Í þessarri myllu eru báðir leikmenn
+með stóra og litla stafi, svo annar leikmaður er með
+\texttt{x} og \texttt{X} en hinn er með \texttt{o} og
+\texttt{O}. Hver leikmaður byrjar með 4 litla stafi og
+2 stóra stafi.
+
+Ef leikmaður nær þremur stöfum í röð, stórum eða litlum,
+þá vinnur sá leikmaður. Röðin má liggja á ská, svo það eru
+átta ólíkar raðir í boði. En ef leikmaður hefur enga leiki
+þegar að honum kemur þá tapar hann einnig. Því er aldrei
+jafntefli í þessum leik, sem er mun betra en venjuleg mylla
+sem endar alltaf í jafntefli milli reyndra leikmanna.
+
+Þegar leikmaður á að gera er þrennt í boði. Í fyrsta lagi
+getur hann leikið stórum eða litlum staf á auðan reit, og
+á þá einum færri af þeim staf eftir. Ekki er hægt að leika
+staf sem leikmaður á engin eintök eftir af. Í öðru lagi getur
+leikmaður leikið stóran staf ofan á lítinn staf, sem
+fjarlægir litla stafinn (leikmaður fær þann litla staf
+ekki til baka). Loks er þriðji valkosturinn að færa stóran
+staf sem er þegar í borði ofan á lítinn staf sem er þegar
+í borði (leikmaður fær þann litla staf ekki til baka).
+Ekki má færa stóran staf sem tilheyrir andstæðingnum.
+
+Til að hrella dómarana tókst þér að hakka þér inn í
+tölvuna sem þeir eru að nota til að spila hvorn við annann.
+Einnig tókst þér að stilla tækið þannig að þú fengir
+alltaf að leika fyrst, svo nú er bara að útbúa forrit
+sem getur skúrað gólfið með öllum dómurunum.
+Fyrst þú leikur fyrst þá leikur þú \texttt{x} og
+\texttt{X}.
+
+\section*{Gagnvirkni}
+Þetta er gagnvirkt verkefni. Lausnin þín verður keyrð á móti gagnvirkum dómara
+sem les úttakið frá lausninni þinni og skrifar í inntakið á lausninni þinni.
+Þessi gagnvirkni fylgir ákveðnum reglum:
+
+Þitt forrit og dómaraforritið skiptast á að prenta út
+núverandi ástand leikborðs. Leikborðið eru $3 \times 3$
+reitir, gefið sem 3 bókstafir hver á 3 línum, án nokkurra
+bilstafa utan nýlínustafanna. Tómur reitur er táknaður með
+stafnum \texttt{.}.
+
+Forrit þitt byrjar á að prenta leikborðið eins og það
+er eftir fyrsta leik. Svo les forrit þitt inn stöðu borðsins
+eftir leik dómara. Þetta endurtekur sig svo. Ef leikur er
+búinn, það er að segja ef annar leikmaður á engan leik
+eftir eða er með þrjá í röð, prentar dómaraforritið í
+staðinn \texttt{Tap!} eða \texttt{Sigur!} eftir því hvort
+þú tapaðir eða vannst. Eftir þetta á forrit þitt að ljúka
+keyrslu. Dómaraforrit prentar aldrei borð og streng
+sem er \texttt{Tap!} eða \texttt{Sigur!}, aðeins annað hvort.
+
+Vertu viss um að gera \texttt{flush} eftir hvern leik, t.d., með
+\begin{itemize}
+    \item \verb!print(..., flush=True)! í Python,
+    \item \verb!cout << ... << endl;! í C++,
+    \item \verb!System.out.flush();! í Java.
+\end{itemize}
+
+Með verkefninu fylgir tól sem viðhengi til þess að hjálpa við að prófa lausnina þína.
+
+\section*{Stigagjöf}
+Lausnin þín verður keyrð á móti mörgum andstæðingum.
+Margir leikir verða keyrðir á móti hverjum andstæðing.
+Þetta verða samtals $50$ leikir, og fyrir hvern sigur
+fást $2$ stig, fyrir tap fást $0$ stig. Ef forrit þitt
+prentar ógildan leik eða tekst ekki að ljúka
+keyrslu rétt af öðrum ástæðum fást $0$ stig fyrir þann leik, og er
+það merkt \texttt{Wrong Answer} frekar en \texttt{Accepted}.
+Lokadómur er hins vegar \texttt{Accepted} svo lengi sem 
+einhver leikur er \texttt{Accepted}.
+
+

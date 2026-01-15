@@ -1,0 +1,111 @@
+#!/usr/bin/env bash
+export PPATH
+PPATH=$(realpath ..)
+# shellcheck source-path=SCRIPTDIR
+. ../../../testdata_tools/gen.sh
+
+use_solution unnar_100.py
+
+compile random_generator.py
+compile edge_generator.py
+
+samplegroup
+limits hs_eq=0 max_n=10 max_x=1000
+sample 1
+sample 2
+
+group GA 20
+limits hs_eq=1 max_n=1000000 max_x=10000
+for i in {01..20}; do
+    tc "GA-$i" random_generator 0 1000000 0 10000 1
+done;
+
+group GB 30
+limits hs_eq=0 max_n=20 max_x=10000
+tc 1
+tc 2
+for i in {01..15}; do
+    tc "GB-$i" random_generator 0 18 0 10000 0
+done;
+tc "GB-16" random_generator 0 18 0 10000 1
+tc "GB-17" random_generator 0 18 0 10000 1
+tc "GB-18" random_generator 0 18 0 10000 1
+tc "GB-edge-19" edge_generator 18 101 50 2 1 0
+desc "Distance between water stations is exactly x and it is faster to refill than jog"
+tc "GB-edge-20" edge_generator 18 101 49 2 1 -1
+desc "Distance between water stations is x-1 and it is faster to refill than jog"
+tc "GB-edge-21" edge_generator 18 101 50 2 1 1
+desc "Distance between water stations is x+1 and it is faster to refill than jog"
+tc "GB-edge-22" edge_generator 18 101 30 5 2 0
+desc "Distance between water stations is exactly x and it is faster to refill than jog"
+tc "GB-edge-23" edge_generator 18 101 29 5 2 -1
+desc "Distance between water stations is x-1 and it is faster to refill than jog"
+tc "GB-edge-24" edge_generator 18 101 30 5 2 1
+desc "Distance between water stations is x+1 and it is faster to jog"
+tc "GB-edge-25" edge_generator 18 101 6 10 6 0
+desc "Distance between water stations is exactly x and it is faster to refill than jog"
+tc "GB-edge-26" edge_generator 18 101 6 10 6 -1
+desc "Distance between water stations is x-1 and it is faster to refill than jog"
+tc "GB-edge-27" edge_generator 18 101 6 10 6 1
+desc "Distance between water stations is x+1 and it is faster to refill than jog"
+
+
+group GC 30
+limits hs_eq=0 max_n=2500 max_x=1000
+for i in {01..15}; do
+    tc "GC-$i" random_generator 0 2500 0 1000 0
+done;
+tc "GC-16" random_generator 0 2500 0 1000 1
+tc "GC-17" random_generator 0 2500 0 1000 1
+tc "GC-18" random_generator 0 2500 0 1000 1
+tc "GC-edge-19" edge_generator 2500 16 7 2 1 0
+desc "Distance between water stations is exactly x and it is faster to refill than jog"
+tc "GC-edge-20" edge_generator 2500 16 7 2 1 -1
+desc "Distance between water stations is x-1 and it is faster to refill than jog"
+tc "GC-edge-21" edge_generator 2500 16 7 2 1 1
+desc "Distance between water stations is x+1 and it is faster to refill than jog"
+tc "GC-edge-22" edge_generator 2500 16 4 5 2 0
+desc "Distance between water stations is exactly x and it is faster to refill than jog"
+tc "GC-edge-23" edge_generator 2500 16 4 5 2 -1
+desc "Distance between water stations is x-1 and it is faster to refill than jog"
+tc "GC-edge-24" edge_generator 2500 16 5 5 2 1
+desc "Distance between water stations is x+1 and it is faster to jog"
+tc "GC-edge-25" edge_generator 2500 16 1 10 6 0
+desc "Distance between water stations is exactly x and it is faster to refill than jog"
+tc "GC-edge-26" edge_generator 2500 16 1 10 6 -1
+desc "Distance between water stations is x-1 and it is faster to jog"
+tc "GC-edge-27" edge_generator 2500 16 1 10 6 1
+desc "Distance between water stations is x+1 and it is faster to refill than jog"
+
+group GD 20
+limits hs_eq=0 max_n=1000000 max_x=10000
+include_group GA
+include_group GB
+include_group GC
+for i in {01..15}; do
+    tc "GD-$i" random_generator 0 1000000 0 10000 0
+done;
+tc "GD-edge-16" edge_generator 14055 3 1 2 1 0
+desc "Distance between water stations is exactly x and it is faster to refill than jog"
+tc "GD-edge-17" edge_generator 14055 4 1 2 1 -1
+desc "Distance between water stations is x-1 and it is faster to refill than jog"
+tc "GD-edge-18" edge_generator 10541 3 1 2 1 1
+desc "Distance between water stations is x+1 and it is faster to refill than jog"
+tc "GD-edge-19" edge_generator 7027 6 1 5 2 0
+desc "Distance between water stations is exactly x and it is faster to refill than jog"
+tc "GD-edge-20" edge_generator 7027 6 1 5 2 -1
+desc "Distance between water stations is x-1 and it is faster to refill than jog"
+tc "GD-edge-21" edge_generator 7027 6 1 5 2 1
+desc "Distance between water stations is x+1 and it is faster to refill than jog"
+tc "GD-edge-22" edge_generator 3833 11 1 10 6 0
+desc "Distance between water stations is exactly x and it is faster to jog"
+tc "GD-edge-23" edge_generator 3833 11 1 10 6 -1
+desc "Distance between water stations is x-1 and it is faster to jog"
+tc "GD-edge-24" edge_generator 3833 11 1 10 6 1
+desc "Distance between water stations is x+1 and it is faster to jog"
+tc "GD-edge-25" edge_generator 1000000 10 1 2 1 0
+desc "Max water stations and there are always stations spaced 10 apart"
+tc "GD-edge-26" edge_generator 1000000 10 1 5 2 0
+desc "Max water stations and there are always stations spaced 10 apart"
+tc "GD-edge-27" edge_generator 1000000 10 1 10 6 0
+desc "Max water stations and there are always stations spaced 10 apart"

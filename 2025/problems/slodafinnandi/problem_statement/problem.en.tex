@@ -1,0 +1,37 @@
+\problemname{Pathfinder}
+\illustration{0.4}{rogue}{Image owned by Paizo inc.}
+
+Atli is planning to take on the role of the game master
+for a Pathfinder game with the competitive programming
+society. Arnar has prepared a character with the rogue
+class. Atli is trying how Arnar might pathfind during the
+game, so he needs to know how many tiles Arnar can reach
+in one turn.
+
+Pathfinder movement involves the use of tiles, as the play
+area is divided into a square grid of tiles. Moving one
+square up, down, left or right counts as $5$ feet of
+movement. Moving diagonally to another neighbouring
+square works a little differently however. The first time
+a player moves diagonally on their turn it counts as $5$
+feet. Next time it counts as $10$ feet, then the time after
+that as $5$ feet and so on.
+
+\section*{Input}
+The input contains one non-negative integer $n$, the maximum 
+number of feet Arnar can move in a single turn.
+
+\section*{Output}
+Print the number of tiles Arnar can reach.
+The starting tile should be included in the count.
+
+\section*{Scoring}
+\begin{tabular}{|l|l|l|}
+\hline
+Group & Points & Constraints \\ \hline
+1     & 25   & $n \leq 50$\\ \hline
+2     & 25   & $n \leq 1\,000$\\ \hline
+3     & 25   & $n \leq 1\,000\,000$\\ \hline
+4     & 25   & $n \leq 10^{18}$\\ \hline
+\end{tabular}
+

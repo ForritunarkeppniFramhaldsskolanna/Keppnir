@@ -1,0 +1,50 @@
+We start with n vertices, n even
+
+For n = 4 it is clear that if any two
+are not connected by an edge they can
+be an independent set of size 2, so for
+n = 4 we need 6 edges
+
+Now we assume n >= 6
+We want the minimum number of edges such
+that the resulting graph has maximum 
+independent set (MIS) of size < n/2
+Suppose you have some independent set and
+add an edge, by removing either end point
+we still have an independent set, so adding
+an edge decreases it by at most 1
+Thus to get below n/2 we must clearly have
+at least n/2+1 edges
+
+Thus to show the bound n/2+3 we just have to
+show that at least 2 edges will not lower the MIS
+
+Adding an edge to two isolated vertices reduces
+the independent set size by 1
+
+Adding an edge to create a K_2 component lowers the
+MIS, but adding any edge to that K_2 component does
+not lower the MIS. If we create a C_3 component that
+does lower the MIS in the next step, but any other
+move does not. Subsequently if we add any edge to
+the C_3 it does not lower the MIS, so we have wasted
+two edges.
+
+Thus we may assume all components we create are
+K_2, P_3 or C_3. Any C_3 or P_3 component has a
+wasted edge, so if we have two or more of those
+we are already done. Adding an extra edge to turn
+a P_3 into a C_3 can only make the MIS smaller,
+so we may assume we have zero or one C_3 and
+the rest are isolated vertices or K_2.
+But adding an edge to a K_2 component does not
+Thus we either end up making n / 2 K_2 components,
+or fail to decrease the number of independent sets
+at least once. 
+
+Then we have two cases. All K_2 components is not
+enough to solve, as it still has a MIS of size n.
+If we have one C_3 there will be one isolated vertex
+as n is even, so we must have a MIS of size n as well.
+Thus we get a contradiction, so we need at least
+n/2 + 3 edges.

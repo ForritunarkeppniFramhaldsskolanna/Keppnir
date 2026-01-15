@@ -1,0 +1,58 @@
+#!/usr/bin/env bash
+export PPATH
+PPATH=$(realpath ..)
+# shellcheck source-path=SCRIPTDIR
+. ../../../testdata_tools/gen.sh
+
+use_solution atli_100.cpp
+
+compile random_generator.py
+compile edge_generator.py
+
+samplegroup
+limits max_n=10 max_k=1000
+sample 1
+
+group GA 10
+limits max_n=1 max_k=1000000000
+for i in {01..10}; do
+    tc "GA-$i" random_generator rand 1 100000
+    desc "Random case with n = 1."
+done;
+tc GA-zero-k random_generator rand 1 0 
+desc "Edge case with n = 1, k = 0."
+tc GA-big-k random_generator rand 1 1000000000 
+desc "Edge case with n = 1, k = 10^9."
+
+group GB 20
+limits max_n=20 max_k=1000000000
+include_group GA
+tc 1
+for i in {01..10}; do
+    tc "GB-$i" random_generator rand 20 500 
+    desc "Random case with n <= 20."
+done;
+tc GB-zero-k random_generator rand 1 0
+desc "Edge case with n = 1, k = 0."
+tc GB-big-k random_generator rand 1 1000000000
+desc "Edge case with n = 1, k = 10^9."
+tc GB-skip-first edge_generator antiskip 20
+desc "Edge case against heuristic skipping."
+
+group GC 35
+limits max_n=1000 max_k=0
+for i in {01..10}; do
+    tc "GC-$i" random_generator rand 1000 0
+    desc "Random case with n <= 1000, k = 0."
+done;
+
+group GD 35
+limits max_n=1000 max_k=1000000000
+include_group GB
+include_group GC
+for i in {01..10}; do
+    tc "GD-$i" random_generator rand 1000 50
+    desc "Random case with n <= 1000."
+done;
+#tc GD-skip-first edge_generator antiskip 1000
+

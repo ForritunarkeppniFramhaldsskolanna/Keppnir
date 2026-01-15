@@ -1,0 +1,12 @@
+name: 
+    is: Goggi gráðugi
+    en: Gluttonous George
+author: Eva Natalía Elvarsdóttir, Samúel Arnar Hafsteinsson
+source: Forritunarkeppni Framhaldsskólanna 2025
+rights_owner: Forritunarkeppni Framhaldsskólanna
+license: cc by-sa
+type: scoring
+uuid: "0e199b27-c7de-43e5-9cf2-aee6c16d34ad"
+grading:
+    show_test_data_groups: true
+keywords: easy arithmetic

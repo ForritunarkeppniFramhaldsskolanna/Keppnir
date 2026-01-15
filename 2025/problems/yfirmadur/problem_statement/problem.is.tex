@@ -1,0 +1,72 @@
+\problemname{Yfirmaður}
+\illustration{0.4}{hierarchy}{Mynd fengin af \href{https://www.coursesidekick.com/management/study-guides/wmopen-organizationalbehavior/organizational-structures-and-their-history}{coursesidekick.com}}
+
+Í stórum fyrirtækjum er oft mikið vesen að halda utan um
+hver ræður hverju. Til að reyna að gera hlutina skýrari er 
+algengt að úthluta sérhverjum starfsmanni yfirmanni, nema
+stjóra fyrirtækisins sem er sinn eigin yfirmaður. 
+Þetta virkar vel, en svo fer fólk að hætta að vinna hjá
+fyrirtækinu og aðrir hefja störf, svo allt þetta skipulag
+þarf að uppfærast. 
+
+Til að bjarga málunum vantar nú að útfæra forrit sem heldur
+utan um allt þetta vesen og getur sagt til um hver
+er yfirmaður hvers.
+
+Ef starfsmaður hættir þá erfir yfirmaður hans alla undirmenn
+hans. Það er að segja ef $x$ er yfirmaður $y$ og $y$ er
+yfirmaður $z$, og $y$ hættir störfum, þá verður $x$ yfirmaður
+$z$ eftirá. Þegar starfsmaður byrjar að vinna er honum
+úthlutað yfirmanni. Stjóri fyrirtækisins mun aldrei breytast,
+því án hans myndi fyrirtækið náttúrulega leysast upp á einni
+nóttu (samkvæmt stjóranum alla vega).
+
+\section*{Inntak}
+Fyrsta lína inntaksins inniheldur tvær heiltölur $n, q$, 
+fjöldi starfsmanna í upphafi og fjöldi fyrirspurna sem
+mun fylgja. Ávallt gildir að $1 \leq n, q \leq 200\,000$.
+Starfsmennirnir eru númeraðir $1, 2, \dots, n$ og $1$ er
+stjóri fyrirtækisins.
+Næst fylgir lína með $n$ heiltölum $y_1, y_2, \dots, y_n$.
+Hér gefur $y_i$ númer starfsmannsins sem er yfirmaður
+starfsmanns $i$. Því er $1 \leq y_i \leq n$.
+
+Næst fylgja $q$ línur, hver með einni fyrirspurn.
+Hver lína byrjar á \texttt{+}, \texttt{-} eða \texttt{?}.
+Í öllum tilfellum fylgir ein heiltala $x$ á sömu línu.
+
+Ef línan byrjar á \texttt{+} þýðir 
+það að nýr starfsmaður byrjar sem
+hefur starfsmann $x$ sem yfirmann. Númer nýja starfsmannsins
+er lægsta lausa númerið. Í byrjun er það $n + 1$, en ef 
+starfsmaður hætti er það númer laust. Því ef $2, 8$ og $11$
+hætta er lægsta lausa númer $2$ til dæmis. Ef nýr starfsmaður
+fær númerið $n + 1$ og ekkert annað er búið að losna er
+næsta lausa númer $n + 2$ og svo framvegis.
+
+Ef línan byrjar á \texttt{-} þýðir það að
+starfsmaður $x$ hættir störfum.
+
+Loks ef línan byrjar á \texttt{?} þýðir það að
+verið er að biðja um númer starfsmannsins
+sem er yfirmaður starfsmanns númer $x$. 
+$x$ mun vera númer starfsmanns sem er enn starfandi í öllum
+þremur tilfellum.
+Það mun aldrei nokkur starfsmaður vera yfirmaður sjálfs
+síns, beint eða óbeint, nema stjórinn.
+
+\section*{Úttak}
+Fyrir hverja fyrirspurn sem byrjar á \texttt{?}
+skal prenta númer umbeðins starfsmanns á eigin línu.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 10   & $n, q \leq 10$. \\ \hline
+2     & 15   & $n, q \leq 1\,000$. \\ \hline
+3     & 20   & Engar \texttt{+} né \texttt{-} fyrirspurnir. \\ \hline
+4     & 20   & Engar \texttt{-} fyrirspurnir. \\ \hline
+5     & 35   & Engar frekari takmarkanir. \\ \hline
+\end{tabular}
+

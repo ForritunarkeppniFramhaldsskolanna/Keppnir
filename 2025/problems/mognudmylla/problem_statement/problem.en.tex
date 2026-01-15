@@ -1,0 +1,92 @@
+\problemname{Magnificent Noughts \& Crosses}
+%% plainproblemname: Magnificent Noughts & Crosses
+\illustration{0.4}{berries}{Image by Beatrice Murch, taken from \href{https://commons.wikimedia.org/wiki/File:Tic-tac-toe\_berries.jpg}{commons.wikimedia.org}}
+
+The judges have to pass their time in one way or another
+while a contest is ongoing, and the usual distraction of
+tic-tac-toe has gotten rather stale. Perfect tic-tac-toe,
+as covered in an earlier contest, has also become stale
+because all the judges have long figured out how to play
+it optimally.
+
+Luckily Atli suddenly had a burst of inspiration and
+managed to improve the situation by inventing a new type
+of tic-tac-toe. In this version both players have both
+lower and upper case characters, so one player uses
+\texttt{x} and \texttt{X} while the other uses
+\texttt{o} and \texttt{O}. Each player starts with 4 lower
+case letters and 2 upper case letters.
+
+If a player manages to place three of their letter in a
+row, lower or upper case, that player wins. The row
+can be diagonal, so there are $8$ possible rows to win on.
+If a player has no legal moves on their turn, they lose.
+Thus there is never a tie in this game, a great improvement
+over regular tic-tac-toe, which always ends in a tie between
+skilled players.
+
+When a player is to move there are three options. The first
+one is to play a lower or upper case letter on an empty
+space, and then has one less of that letter left.
+A player can not play a letter that they have run out of.
+Secondly the player can play one of their upper case letters
+on top of a lower case letter that's already on the board,
+removing the lower case letter (the corresponding player does
+not get that lower case letter back). Finally the third
+option is to move an upper case letter they have on the board
+on top of a lower case character that is also already on the
+board (the corresponding player does not get that lower case
+letter back either in this case). A player may only move their
+own upper case letters.
+
+To get one over on the judges you have now managed to hack
+into the computer they are using to play against one another.
+You even managed to rig it so that you would always get to
+move first. Thus the only thing left to do is to make a 
+program that can demolish the morale of the judges. Since
+you get the first move you have \texttt{x} and \texttt{X}.
+
+\section*{Interactivity}
+This is an interactive problem. Your solution will be tested against an interactive
+judge which reads the output of your solution and prints the input your solution
+receives. This interaction follows certain rules:
+
+Your program and the judge program will take turns printing
+the current board. The board is $3 \times 3$ squares, given
+as 3 letters each on 3 lines, with no whitespace aside
+from the 3 newline characters. An empty square is denoted
+by \texttt{.}.
+
+Your program starts by printing the board after your first
+move. Then your program should read the board as it is after
+the judge makes its move. This then repeats.
+If the game is over, because someone has three in a
+row or someone has no moves left, the judge program will
+print \texttt{Tap!} (Icelandic for loss) or \texttt{Sigur!}
+(Icelandic for victory) depending on whether you won or lost.
+After this your program should exit. The judge program never
+prints a board and one of the strings \texttt{Tap!} or
+\texttt{Sigur!}.
+
+Make sure to \texttt{flush} after each guess, for example using
+\begin{itemize}
+    \item \verb!print(..., flush=True)! in Python,
+    \item \verb!cout << ... << endl;! in C++,
+    \item \verb!System.out.flush();! in Java.
+\end{itemize}
+
+The task has a testing tool attached to help test your solution.
+
+\section*{Scoring}
+Your program will be played against several opponents.
+It will play several games against each opponent.
+This will be a total of $50$ games, and for each
+victory you get $2$ points, getting $0$ points for a loss.
+If your program prints an illegal move or otherwise fails
+to run correctly you will get $0$ points for that game 
+and it will be marked with \texttt{Wrong Answer} rather than
+\texttt{Accepted}. The final verdict is however
+\texttt{Accepted} as long as some game gets the verdict
+\texttt{Accepted}.
+
+

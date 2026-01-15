@@ -1,0 +1,12 @@
+name: 
+    is: Gufustrókur
+    en: Steam Column
+author: Atli Fannar Franklín, Patricia Fehrentz
+source: Forritunarkeppni Framhaldsskólanna 2025
+rights_owner: Forritunarkeppni Framhaldsskólanna
+license: cc by-sa
+type: scoring
+uuid: "409f6861-1379-434a-82cc-971175470943"
+grading:
+    show_test_data_groups: true
+keywords: easy arithmetic geometry

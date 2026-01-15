@@ -1,0 +1,84 @@
+#!/usr/bin/env bash
+export PPATH
+PPATH=$(realpath ..)
+# shellcheck source-path=SCRIPTDIR
+. ../../../testdata_tools/gen.sh
+
+use_solution staticmem.cpp opt
+
+compile random_generator.py
+compile edge_generator.py
+
+samplegroup
+limits monotone=0 max_x=2000 max_c=3
+sample 1
+sample 2
+sample 3
+
+group GA 15
+limits monotone=1 max_x=1000 max_c=3
+for i in {01..10}; do
+    tc "GA-$i" random_generator 1 1000 3
+    desc "Random case with x <= 1000 and only monotone operations."
+done;
+tc GA-badbfs edge_generator badbfs 1000
+desc "Edge case which breaks improper BFS, x <= 1000."
+tc GA-weirdops edge_generator weirdops
+desc "Edge case which tests strange operations (*1, +0, etc)"
+tc GAC-zero-1 edge_generator zero1
+desc "Edge case where nothing can be done and x = 0."
+tc GAC-zero-2 edge_generator zero2
+desc "Edge case where x = 0."
+
+group GB 15
+limits monotone=1 max_x=99999999 max_c=3
+include_group GA
+for i in {01..10}; do
+    tc "GB-$i" random_generator 1 99999999 3
+    desc "Random case with only monotone operations."
+done;
+tc GB-badbfs edge_generator badbfs 99999998
+desc "Edge case which breaks improper BFS, x <= 10^8."
+tc GB-max edge_generator maxB
+desc "Edge case testing maximum value of x."
+tc GB-antidkstr edge_generator dkstrB
+desc "Edge case which is hard for Dijkstra solutions."
+
+group GC 40
+limits monotone=0 max_x=99999999 max_c=1
+for i in {01..10}; do
+    tc "GC-$i" random_generator 0 99999999 1
+    desc "Random case with only 0/1 weights."
+done;
+tc GC-max edge_generator maxC
+desc "Edge case testing maximum value of x."
+tc GC-weirdops edge_generator weirdops2
+desc "Edge case which tests strange operations (/1, etc)"
+tc GAC-zero-1
+tc GAC-zero-2
+tc GC-antidkstr edge_generator dkstrC
+desc "Edge case which is hard for Dijkstra solutions."
+tc GC-badbfs edge_generator badbfs2 99999998
+desc "Edge case which breaks improper BFS, x <= 10^8."
+tc GC-maxbreak edge_generator maxbreak
+desc "Edge case which tests that upper bound of valid vertices is correct."
+
+group GD 30
+limits monotone=0 max_x=99999999 max_c=3
+include_group GB
+include_group GC
+tc 1
+tc 2
+tc 3
+for i in {01..10}; do
+    tc "GD-$i" random_generator 0 99999999 3
+    desc "Random case."
+done;
+for i in {01..10}; do
+    tc "GD-$i-hi" random_generator 0 99999999 3 2
+    desc "Random case but forcing non 0/1 weights."
+done;
+tc GD-badbfs edge_generator badminus
+desc "Edge case which checks negative number behaviour."
+tc GD-antidkstr edge_generator dkstrD
+desc "Edge case which is hard for Dijkstra solutions."

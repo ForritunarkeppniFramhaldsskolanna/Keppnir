@@ -1,0 +1,56 @@
+#!/usr/bin/env bash
+export PPATH
+PPATH=$(realpath ..)
+# shellcheck source-path=SCRIPTDIR
+. ../../../testdata_tools/gen.sh
+
+use_solution konni_100.py
+
+compile random_generator.py
+compile not_random_generator.py
+
+samplegroup
+sample 1
+sample 2
+
+# works for today
+group GA 10
+tc 1
+
+# works for all days this month
+group GB 25
+include_group GA
+for day in {01..31}; do
+    if [[ $day = 08 ]]; then
+        continue
+    fi
+    tc "GB-2025-03-$day" not_random_generator 2025 03 "$day"
+    desc "Day from contest month (March)."
+done;
+
+# all day every day of a leap year
+group GC 50
+
+for month in {01..12}; do
+    max_day=31
+    if [[ $month = 02 ]]; then
+        max_day=29
+    fi
+    if [[ "04 06 09 11" =~ $month ]]; then
+        max_day=30
+    fi
+    for day in $(seq -w 1 "$max_day"); do
+        tc "GC-2024-$month-$day" not_random_generator 2024 "$month" "$day"
+        desc "Day of 2024 (leap year)."
+    done;
+done;
+
+# and then some random dates sprinkled in for good measure
+group GD 15
+tc 2
+include_group GB
+include_group GC
+for i in {01..60}; do
+    tc "GD-$i" random_generator 2015 2035
+    desc "Random day in 2015 to 2035."
+done;

@@ -1,0 +1,54 @@
+#!/usr/bin/env bash
+export PPATH
+PPATH=$(realpath ..)
+# shellcheck source-path=SCRIPTDIR
+. ../../../testdata_tools/gen.sh
+
+use_solution atli.py
+
+compile random_generator.py
+compile edge_generator.py
+
+samplegroup
+limits minlen=1 maxlen=5 onedot=False
+sample 1
+sample 2
+sample 3
+
+group GA 30
+limits minlen=3 maxlen=3 onedot=False
+tc 1
+tc GA-edge-1 edge_generator "..cpp"
+desc "Edge case of \"..cpp\"."
+tc GA-edge-2 edge_generator "c..cpp"
+desc "Edge case of \"c..cpp\"."
+tc GA-edge-3 edge_generator "c.c.cpp"
+desc "Edge case of \"c.c.cpp\"."
+for i in {0..9}; do
+    tc "GA-$i" random_generator 3 True
+    desc "Random test case with file extension of length 3."
+done;
+
+group GB 40
+limits minlen=1 maxlen=5 onedot=True
+tc 2
+tc GB-edge-1 edge_generator ".c"
+tc GB-edge-2 edge_generator ".0"
+for i in {1..2}; do
+    for j in 1 2 3 4 5; do
+        tc "GB-$i-$j" random_generator "$j" False
+        desc "Random test case with file extension of length $j and only one dot."
+    done;
+done;
+
+group GC 30
+limits minlen=1 maxlen=5 onedot=False
+tc 3
+include_group GA
+include_group GB
+for i in {1..5}; do
+    for j in 1 2 4 5; do
+        tc "GC-$i-$j" random_generator "$j" True
+        desc "Random test case with file extension of length $j."
+    done;
+done;

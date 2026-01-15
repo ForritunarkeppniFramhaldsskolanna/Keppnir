@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+export PPATH
+PPATH=$(realpath ..)
+# shellcheck source-path=SCRIPTDIR
+. ../../../testdata_tools/gen.sh
+
+use_solution samuel_100.py
+
+compile random_generator.py
+compile exponent_generator.py
+
+samplegroup
+sample 1
+sample 2
+sample 3
+
+group GA 30
+tc 1
+
+for i in {01..30}; do
+    tc "GA-$i" random_generator 0 6320
+    desc "Random value from 0 to 6320."
+done;
+
+group GB 30
+include_group GA
+tc 2
+tc 3
+for i in {01..30}; do
+    tc "GB-$i" exponent_generator 10 24
+    desc "Random value around 10^10 to 10^24."
+done;
+
+group GC 40
+include_group GB
+for i in {01..20}; do
+    tc "GC-$i" exponent_generator 10 64
+    desc "Random value around 10^10 to 10^64."
+done;
+
+for i in {21..40}; do
+    tc "GC-$i" exponent_generator 60 64
+    desc "Random value around 10^60 to 10^64."
+done;

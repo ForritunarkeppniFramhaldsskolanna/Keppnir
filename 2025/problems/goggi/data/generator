@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+export PPATH
+PPATH=$(realpath ..)
+# shellcheck source-path=SCRIPTDIR
+. ../../../testdata_tools/gen.sh
+
+use_solution eva_100.py
+
+compile random_generator.py
+compile same_generator.py
+compile zero_generator1.py
+compile zero_generator2.py
+
+samplegroup
+sample 1
+sample 2
+sample 3
+
+group GA 100
+tc 1
+tc 2
+tc 3
+
+for i in {01..30}; do
+    tc "GA-$i" random_generator 0 1000
+    desc "Totally random case."
+done;
+
+for i in {31..60}; do
+    tc "GA-$i" same_generator 0 1000
+    desc "Random case, but with equal values."
+done;
+
+for i in {61..75}; do
+    tc "GA-$i" zero_generator1 0 1000
+    desc "Random case, but second value is 0."
+done;
+
+for i in {76..90}; do
+    tc "GA-$i" zero_generator2 0 1000
+    desc "Random case, but first value is 0."
+done;

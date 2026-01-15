@@ -1,0 +1,6 @@
+INT(4, 50, n)
+ASSERT(n % 2 == 0)
+NEWLINE
+INT(0, 1)
+NEWLINE
+EOF

@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+export PPATH
+PPATH=$(realpath ..)
+# shellcheck source-path=SCRIPTDIR
+. ../../../testdata_tools/gen.sh
+
+use_solution atli.py
+
+compile random_generator.py
+compile echo_generator.py
+
+samplegroup
+limits int_out=0
+sample 1
+sample 2
+
+group GA 50
+limits int_out=1
+tc 1
+tc GA-max echo_generator 100 100 1 1 100
+desc "Case with maximum answer."
+for i in {01..30}; do
+    tc "GA-$i" random_generator 1
+    desc "Random case, but with integer answer."
+done;
+
+group GB 50
+limits int_out=0
+include_group GA
+tc 2
+tc GB-min echo_generator 1 1 100 100 1
+desc "Case with minimum answer."
+for i in {01..30}; do
+    tc "GB-$i" random_generator 0
+    desc "Totally random case."
+done;

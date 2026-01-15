@@ -1,0 +1,48 @@
+\problemname{Calculator}
+\illustration{0.4}{casio}{Image by Christian Horvat, taken from \href{https://commons.wikimedia.org/wiki/File:Casio\_fx-85WA\_20050529.jpg}{commons.wikimedia.org}}
+
+Everything was going swimmingly at Reiknibíllinn until all of a sudden the batteries in
+the calculator died! A very important number had been entered into that calculator that must
+not be forgotten, so this has to be fixed immediately. Luckily you remember the number, the
+main issue is entering that number into the calculator again. The calculator is a bit 
+primitive and only supports a few operations.
+
+Can you figure out entering the number given the operations it supports? It only fits
+$8$ digits, so if the result of an operation does not fit in $8$ digits the calculator
+crashes and everything starts over! Same happens if the result is negative, it does not
+support negative numbers either. When the calculator first turns on it shows the number
+$0$.
+
+The calculator is rather low on charge, so we want to do this as efficiently as possible.
+How much of the charge do you have to expend to enter the number if you do so as efficiently
+as possible?
+
+\section*{Input}
+The first line of the input contains two integers $A, X$. $A$ is the number of operations
+the calculator supports and $X$ is the important number you want to enter into the calculator.
+It will always hold that $1 \leq A \leq 5$ and $0 \leq X < 10^8$.
+Next there are $A$ lines, each describing one operation.
+Each of those lines contains \texttt{op}, $y$, $c$ where $y, c$ are integers and
+\texttt{op} is one of the symbols \texttt{+}, \texttt{-}, \texttt{*} or \texttt{/}.
+This means this operation applies \texttt{op} to the current value in the calculator
+and $y$, with the current value in the calculator as the first number. \texttt{+} and
+$y = 5$ thus adds $5$ to the current value in the calculator. $c$ gives the amount of charge
+it takes to perform this operation. It will always hold that
+$0 \leq y \leq 9$ and $0 \leq c \leq 3$. If the symbol is \texttt{/} then $y \neq 0$.
+The division is integers division, so the result is rounded towards $0$.
+
+\section*{Output}
+Print the minimum charge expenditure to reach the number $X$.
+If there is no way to make the calculator show the number $X$,
+instead print \texttt{Engin leid!}.
+
+\section*{Scoring}
+\begin{tabular}{|l|l|l|}
+\hline
+Group & Points & Constraints \\ \hline
+1     & 15   & The only operations are \texttt{+} and \texttt{*}, $X \leq 1\,000$. \\ \hline
+2     & 15   & The only operations are \texttt{+} and \texttt{*}. \\ \hline
+3     & 40   & $c \leq 1$. \\ \hline
+4     & 30   & No further constraints. \\ \hline
+\end{tabular}
+

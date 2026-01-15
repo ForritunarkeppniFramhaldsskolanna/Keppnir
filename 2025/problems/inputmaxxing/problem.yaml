@@ -1,0 +1,10 @@
+name: Inputmaxxing
+author: Atli Fannar Franklín
+source: Forritunarkeppni Framhaldsskólanna 2025
+rights_owner: Forritunarkeppni Framhaldsskólanna
+license: cc by-sa
+type: scoring
+uuid: "f4dcf6ff-a4c7-4e8e-93b7-e56a259c6bf7"
+grading:
+    show_test_data_groups: true
+keywords: ad-hoc for-loop flow-control

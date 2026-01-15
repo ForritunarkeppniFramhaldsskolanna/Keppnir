@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+export PPATH
+PPATH=$(realpath ..)
+# shellcheck source-path=SCRIPTDIR
+. ../../../testdata_tools/gen.sh
+
+use_solution eva_100.py
+
+compile random_generator.py
+
+samplegroup
+sample 1
+sample 2
+sample 3
+
+group GA 10
+tc "GA-01" random_generator 1 3 3
+desc "Edge i = 1 minimum case."
+tc "GA-02" random_generator 2 3 3
+desc "Edge i = 2 minimum case."
+tc "GA-03" random_generator 3 3 3
+desc "Edge i = 3 minimum case."
+
+group GB 20
+tc 1
+for i in {1..20}; do
+    tc "GB-$i" random_generator 1 3 100
+    desc "Random case with i = 1."
+done;
+
+group GC 30
+tc 2
+for i in {1..20}; do
+    tc "GC-$i" random_generator 2 3 100
+    desc "Random case with i = 2."
+done;
+
+group GD 40
+tc 3
+for i in {1..20}; do
+    tc "GD-$i" random_generator 3 3 100
+    desc "Random case with i = 3."
+done;

@@ -1,0 +1,1 @@
+echo "Takk fyrir mig!"

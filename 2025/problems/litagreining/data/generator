@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+export PPATH
+PPATH=$(realpath ..)
+# shellcheck source-path=SCRIPTDIR
+. ../../../testdata_tools/gen.sh
+
+use_solution atli_100.cpp
+
+compile random_generator.py
+
+samplegroup
+limits unique_vals=0
+sample 1
+sample 2
+sample 3
+
+group GA 50
+limits unique_vals=1
+tc 1
+for i in {01..30}; do
+    tc "GA-$i" random_generator diff
+    desc "Random case with r, g, b pairwise different."
+done;
+
+group GB 50
+limits unique_vals=0
+include_group GA
+tc 2
+tc 3
+for i in {01..10}; do
+    tc "GB-$i-eq12" random_generator eq12
+    desc "Random case with r = g."
+    tc "GB-$i-eq13" random_generator eq13
+    desc "Random case with r = b."
+    tc "GB-$i-eq23" random_generator eq23
+    desc "Random case with g = b."
+    tc "GB-$i-rand" random_generator rand
+    desc "Random case."
+done;
+tc GB-black random_generator black
+desc "Edge case of all 0."
+tc GB-white random_generator white
+desc "Edge case of all 255."
+tc GB-gray-1 random_generator eq123
+desc "Random case with r = g = b."
+tc GB-gray-2 random_generator eq123
+desc "Random case with r = g = b."
+tc GB-gray-3 random_generator eq123
+desc "Random case with r = g = b."

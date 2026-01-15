@@ -1,0 +1,55 @@
+\problemname{Hámarks ósanngjörn sanngjörn IKEA ferð}
+\illustration{0.4}{ikealogo}{Mynd fengin af \href{https://commons.wikimedia.org/wiki/File:Ikea\_logo.svg}{Wikimedia.org}}
+
+Dagur og vinir hans voru í IKEA að kaupa húsgögn fyrir Framkvæmdastöð Keppnisforritunar (FK).
+Dagur er latur og nennir ekki að bera húsgögn alla leiðina til baka.
+Samt þurfa allir að bera jafn margar vörur, annað væri ósanngjarnt.
+Þess vegna hefur Dagur ákveðið að bera eins litla þyngd og hægt er.
+
+Þú færð gefið $k$, fjöldi manns sem eru að bera vörur (Dagur og vinir hans), og lista af $n$ vörum og þyngdum þeirra. Finnið út úr hvaða vörum Dagur ætti að halda á til að lágmarka þyngd hlutanna sem hann þarf að bera.
+
+Athugið að fjöldi fólks deilir ekki nauðsynlega fjölda vara,
+svo það geta ekki alltaf allir tekið nákvæmlega jafn
+margar vörur. Í þessum tilfellum mun Dagur yfirleitt reyna
+að taka færri vörur en hinir. 
+
+Dagur mun reyna
+að komast upp með að taka bara $\lfloor n/k \rfloor$ vörur.
+Það getur hins vegar komið upp sú staða að það yrði allt of
+augljóst að hann sé að sleppa ódýrar en aðrir. Ef það að
+taka $\lceil n/k \rceil$ léttustu vörurnar er strangt
+léttar en að taka næstu $\lfloor n/k \rfloor$ vörur
+í þyngdarröð tekur Dagur $\lceil n/k \rceil$ til að 
+gera hlutina minna augljósa.
+
+Tökum dæmi, ef það eru $7$ hlutir og $3$ að bera, 
+sem sagt $n = 7$ og $k = 3$. Köllum þá vörurnar 
+$v_1, v_2, \dots, v_7$ eftir að raða þeim í þyngdarröð.
+Þá mun Dagur taka $2$ hluti,
+nema ef $v_1 + v_2 + v_3 < v_4 + v_5$, 
+þá tekur hann $3$ hluti í staðinn.
+
+Ef það eru margar mögulegar lausnir, þá gerir Dagur upp
+á milli þeirra með því að taka frekar vörur sem eru ofar
+í gefna listanum.
+
+\section*{Inntak}
+Inntak samanstendur af mörgum línum.
+Fyrsta línan inniheldur eina heiltölu $k$, fjölda einstaklinga að bera vörur.
+Næst kemur ein lína sem inniheldur eina heiltölu $n$, fjöldi vara sem var keypt í IKEA\@.
+Næst koma $n$ línur, listinn af vörum sem voru keyptar, þar sem hver lína inniheldur nafn einnar vöru og þyngd hennar. Hver þyngd er mest $100\,000$.
+Sérhvert nafn er í mesta lagi 10 enskir bókstafir án bila, nöfn eru ekki tóm.
+
+\section*{Úttak}
+Í fyrstu línu skalt þú rita heildarþyngd sem Dagur ber á öxlum sínum.
+Næstu línur skulu innihalda alla hluti sem Dagur ber á öxlum sínum í stafrófsröð, eitt í hverri línu.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 25   & $1 \leq n,k \leq 10$, $k$ deilir $n$ \\ \hline
+2     & 25   & $1 \leq n,k \leq 10$\\ \hline
+3     & 25   & $1 \leq n,k \leq 100\,000$, $k$ deilir $n$ \\ \hline
+4     & 25   & $1 \leq n,k \leq 100\,000$\\ \hline
+\end{tabular}

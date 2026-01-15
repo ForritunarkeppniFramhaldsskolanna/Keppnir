@@ -1,0 +1,12 @@
+name: 
+    is: Skeyta saman
+    en: Concatenate
+author: Arnar Bjarni Arnarson, Atli Fannar Franklín, Einar Darri Sveinbjörnsson, Konráð Elí Sigurgeirsson
+source: Forritunarkeppni Framhaldsskólanna 2025
+rights_owner: Forritunarkeppni Framhaldsskólanna
+license: cc by-sa
+type: scoring
+uuid: "303e7486-d112-4f91-b08e-72bfb6af1d71"
+grading:
+    show_test_data_groups: true
+keywords: easy string

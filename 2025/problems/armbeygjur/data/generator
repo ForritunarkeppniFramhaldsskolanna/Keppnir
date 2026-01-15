@@ -1,0 +1,96 @@
+#!/usr/bin/env bash
+export PPATH
+PPATH=$(realpath ..)
+# shellcheck source-path=SCRIPTDIR
+. ../../../testdata_tools/gen.sh
+
+use_solution atli_100.cpp
+
+compile random_generator.py
+compile fixed_generator.py
+
+samplegroup
+limits max_n=1000
+sample 1
+sample 2
+
+group GA 20
+limits max_n=20
+for i in {1..20}; do
+    tc "GA-$i" fixed_generator "$i"
+    desc "Fixed small input."
+done;
+
+group GB 20
+limits max_n=1000
+include_group GA
+tc 1
+tc 2
+for i in {1..10}; do
+    tc "GB-$i" random_generator 21 1000
+    desc "Random from 21 to 1000".
+done;
+tc GB-2pow fixed_generator 512
+desc "Power of two, 512."
+tc GB-many fixed_generator 945
+desc "Value with many odd divisors, 945."
+tc GB-comp fixed_generator 840
+desc "Highly composite value, 840."
+tc GB-prim fixed_generator 997
+desc "Prime number, 997."
+tc GB-prod fixed_generator 899
+desc "Product of two primes, 899."
+
+group GC 20
+limits max_n=1000000
+include_group GB
+for i in {1..10}; do
+    tc "GC-$i" random_generator 1001 10**6
+    desc "Random from 1001 to 10^6."
+done;
+tc GC-2pow fixed_generator 2**19
+desc "Power of two, 2^19."
+tc GC-many fixed_generator 675675
+desc "Value with many odd divisors, 675675."
+tc GC-comp fixed_generator 720720
+desc "Highly composite value, 720720."
+tc GC-prim fixed_generator 999983
+desc "Prime number, 999983."
+tc GC-prod fixed_generator 974153
+desc "Product of two primes, 974153."
+
+group GD 20
+limits max_n=1000000000000
+include_group GC
+for i in {1..10}; do
+    tc "GD-$i" random_generator 10**6+1 10**12
+    desc "Random from 10^6+1 to 10^12."
+done;
+tc GD-2pow fixed_generator 2**39
+desc "Power of two, 2^39."
+tc GD-many fixed_generator 527056905375
+desc "Value with many odd divisors, 527056905375."
+tc GD-comp fixed_generator 963761198400
+desc "Highly composite value, 963761198400."
+tc GD-prim fixed_generator 999999999989
+desc "Prime number, 999999999989."
+tc GD-prod fixed_generator 999985999949
+desc "Product of two primes, 999985999949."
+
+group GE 20
+limits max_n=1000000000000000000
+include_group GD
+for i in {1..10}; do
+    tc "GE-$i" random_generator 10**12+1 10**18
+    desc "Random from 10^12+1 to 10^18."
+done;
+tc GE-2pow fixed_generator 2**59
+desc "Power of two, 2^59."
+tc GE-many fixed_generator 897612484786617600
+desc "Value with many odd divisors, 897612484786617600."
+tc GE-comp fixed_generator 718791247583033625
+desc "Highly composite value, 718791247583033625."
+tc GE-prim fixed_generator 999999999999999989
+desc "Prime number, 999999999999999989."
+tc GE-prod fixed_generator 999999943999999559
+desc "Product of two primes, 999999943999999559."

@@ -1,0 +1,12 @@
+name:
+    is: Slóðafinnandi
+    en: Pathfinder
+author: Atli Fannar Franklín
+source: Forritunarkeppni Framhaldsskólanna 2025
+rights_owner: Forritunarkeppni Framhaldsskólanna
+license: cc by-sa
+type: scoring
+uuid: "3fe62ec0-9c41-4810-b3e3-2199aa22f539"
+grading:
+    show_test_data_groups: true
+keywords: combinatorics geometry matrix

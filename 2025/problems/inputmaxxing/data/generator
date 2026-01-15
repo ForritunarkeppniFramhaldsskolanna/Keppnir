@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+export PPATH
+PPATH=$(realpath ..)
+# shellcheck source-path=SCRIPTDIR
+. ../../../testdata_tools/gen.sh
+
+use_solution atli.py
+
+compile random_generator.py
+compile edge_generator.py
+
+samplegroup
+limits min_n=1 max_n=10
+sample 1
+sample 2
+
+group GA 50
+limits min_n=2 max_n=2
+tc 1
+tc GA-equal edge_generator equal
+desc "Edge case with equal inputs."
+for i in {01..20}; do
+    tc "GA-$i" random_generator 2 2
+    desc "Random case with n = 2."
+done;
+
+group GB 50
+limits min_n=1 max_n=1000
+include_group GA
+tc 2
+tc nmax edge_generator nmax
+desc "Edge case with n larger than all x."
+tc GB-single random_generator 1 1
+desc "Edge case with n = 1."
+for i in {01..20}; do
+    tc "GB-$i" random_generator 1 1000
+    desc "Random case."
+done;

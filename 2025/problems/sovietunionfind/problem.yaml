@@ -1,0 +1,12 @@
+name: Sovét Union-Find
+author: Arnar Bjarni Arnarson, Atli Fannar Franklín, Dagur Benjamínsson
+source: Forritunarkeppni Framhaldsskólanna 2025
+rights_owner: Forritunarkeppni Framhaldsskólanna
+license: cc by-sa
+type: scoring
+uuid: "72def7a5-a83e-4b01-a20b-039964bda24c"
+limits:
+  time_multiplier: 2
+grading:
+    show_test_data_groups: true
+keywords: union-find data-structures linked-list

@@ -1,0 +1,68 @@
+\problemname{Homework Workload}
+\illustration{0.4}{homework}{Image taken from \href{https://www.publicdomainpictures.net/en/view-image.php?image=132819\&picture=science-homework}{publicdomainpictures.net}}
+
+Some years ago the principal of Menntaskólinn á Akureyri
+said some things at a speech that did not go over so well
+with students. He claimed that if students would just stay
+after school for a single hour each weekday there would be
+no homework to do at home afterwards and that complaints
+about homework were overblown.
+
+Students that have attended, or are attending, Menntaskólinn
+á Akureyri (or other Icelandic high schools for that matter)
+are quite aware that this is utter hogwash. Anyone who has
+had to survive the Íslandsáfangar at Menntaskólinn á Akureyri
+knows it especially well. To show how off the mark this is,
+some data has been collected about assignments and deadlines.
+Here we will then investigate one has to study after school
+per day to finish everything.
+
+Icelandic sagas, atom poets, learning the names of waterfalls
+and whale species, and you better remember the name of
+the teacher's favourite pool to get the bonus question right!
+Utter lunacy, I could keep going all day long! 
+It should all be done away with immediately and everything-
+
+What? No I haven't finished the problem description yet.
+Hey! No- I am not done! Let the keyboard alo-
+
+Sorry for that.
+
+Each assignment is assigned on some particular day
+and has to be finished at the latest on some particular day.
+Additionally each problem takes some number of time units
+to finish. If you intend to always work $x$ time units per day
+(unless you already finished all your homework), what does
+$x$ need to be at minimum to make sure you can finish
+all the assignments in time?
+
+\section*{Input}
+The first line of input contains a single integer $n$,
+the number of assignments. It will always hold that
+$0 \leq n \leq 100\,000$.
+Next there are $n$ lines where the $i$-th line contains
+the details of the $i$-th assignment.
+
+Each such line contains three integers $a_i, b_i, t_i$ where
+$a_i$ is the day the assignment is assigned, $b_i$ is the
+day it is due (the assignment can be turned in at the end
+of that day) and $t_i$ is the number of time units it takes
+to finish the assignment. It will always hold that 
+$0 \leq a_i, b_i, t_i \leq 10^9$ and $a_i \leq b_i$.
+
+Note that the values in the input are large and computations may not fit in $32$ bits.
+
+\section*{Output}
+Print how many time units you have to work per day
+at a minimum to finish all assignments in time.
+
+\section*{Scoring}
+\begin{tabular}{|l|l|l|}
+\hline
+Group & Points & Constraints \\ \hline
+1     & 15   & $n = 1$. \\ \hline
+2     & 20   & $n \leq 100$ and $t_i \leq 100$ for all $i$. \\ \hline
+3     & 25   & $a_i = b_i$ for all $i$. \\ \hline
+4     & 40   & No further constraints. \\ \hline
+\end{tabular}
+

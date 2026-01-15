@@ -1,0 +1,41 @@
+\problemname{Diggy Hole}
+\illustration{0.4}{hole}{Image taken from \href{https://gaming.stackexchange.com/questions/14695/how-do-you-fix-massive-holes-that-appear-in-the-ground/14705}{gaming.stackexchange.com}}
+
+There is an old riddle that is as follows:
+If four workers take four hours to dig four holes,
+how long does it take two workers to dig half a hole?
+
+We see that each worker takes four hours to dig a hole,
+so assuming they can work on the same hole in tandem,
+the answer should be one hour. The answer to the riddle
+is however that there is no such thing as half a hole,
+which is a dumb and stupid answer. Absolute cop out.
+
+Thus, we now solve the actual riddle by giving that $n$
+workers take $h$ hours to dig out $x$ cubic metres. We
+then ask how long it would take $m$ workers to dig out
+$y$ cubic metres. You may assume all workers work equally
+hard, they continue working at the same pace indefinitely
+and that they can work in tandem on the same cubic metres.
+
+\section*{Input}
+The input consists of $5$ lines.
+The lines contain the integers $n, h, x, m, y$ in that
+order. The values are always between $1$ and $100$, inclusive.
+
+\section*{Output}
+Print the answer to the updated riddle. As the answer
+might not be an integer we will consider an answer correct
+if its absolute or relative error from the correct answer
+is at most $1\%$. Thus it does not matter how many digits
+are printed after the decimal point exactly, as long as it
+is accurate enough.
+
+\section*{Scoring}
+\begin{tabular}{|l|l|l|}
+\hline
+Group & Points & Constraints \\ \hline
+1     & 50   & The answer is an integer. \\ \hline
+2     & 50   & No further constraints. \\ \hline
+\end{tabular}
+

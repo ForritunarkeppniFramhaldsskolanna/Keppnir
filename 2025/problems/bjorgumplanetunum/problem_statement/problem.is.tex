@@ -1,0 +1,53 @@
+\problemname{Björgum plánetunum}
+\illustration{0.4}{balatro}{Mynd fengin af \href{https://commons.wikimedia.org/wiki/File:The\_Fool\_and\_the\_Lady\_Fool.jpg}{commons.wikimedia.org/}}
+
+Balatro er leikur sem hefur lokkað marga að sér og ekki þar af síst hann Elvar.
+Elvar er mikill Balatro spilari og er núna í miðri umferð og á góðan möguleika að ná stigameti sínu.
+Markmiðið í Balatro er að vinna blinda með því að spila pókerhendur og ná $x$ mörgum stigum.
+Allar pókerhendur hafa mismunandi magn af spilapeningum og mismunandi margfeldi.
+Heildarstigin fyrir pókerhendina er svo reiknað sem \texttt{spilapeningar} $\cdot$ \texttt{margfeldi}.
+Til dæmis ef þú ert með $50$ spilapeninga og margfeldi $4$, þá færðu $200$ stig fyrir hendina.
+Svo eftir hvern blind er hægt að kaupa jókera, tarot spil og plánetu spil
+til að styrkja pókerhendurnar, með því markmiði að skora fleiri stig.
+
+Í þessari umferð er Elvar hins vegar að spila með sérstökum spilastokk sem kallast \emph{Rafgasstokkur}.
+Þannig að í staðinn fyrir að spilapeningar margfaldist við margfeldið, þá eru spilapeningarnir og margfeldin
+lögð saman, skipt til helminga og svo margfölduð saman. Til dæmis í stað þess að enda með $50$ spilapeninga og margfeldi $4$
+eins og að ofan, þá myndi hann enda með $27$ spilapeninga og margfeldi $27$, sem myndu þá gefa $729$ stig.
+
+Elvar er búinn að vera töluvert heppinn í þessari Balatro umferð og náði að næla sér í gamla góða
+\href{https://balatrogame.fandom.com/wiki/Perkeo}{\emph{Perkeo}} snemma í umferðinni.
+Hann hefur því ákveðið að í þessari umferð ætlar hann að safna saman plánetu spilinu
+\href{https://balatrogame.fandom.com/wiki/Planet\_Cards}{\emph{Neptúnus}} með það markmið
+að finna \href{https://balatrogame.fandom.com/wiki/Vouchers}{\emph{Stjörnustöðina}}.
+Elvar hefur náð að setja spilastokkinn sinn þannig upp að hann nær alltaf að spila \emph{Konunglega litaröð},
+sem gefur honum $151$ spilapeninga og margfeldi $8$. Einnig veit hann að nota \emph{Neptúnus} spil 
+bætir $40$ spilapeningum og margfeldi $4$ við þau stig. Til dæmis ef hann notar tvö \emph{Neptúnus} spil,
+þá gefur \emph{konungleg litaröð} $231$ spilapeninga og margfeldi $16$, sem eftir að reikna með \emph{Rafgasstokknum}
+myndi gefa $123.5$ spilapeninga og margfeldi $123.5$.
+
+En núna er Elvar kominn í smá bobba. Hann var svo viss um að hann myndi finna \emph{Stjörnustöðina} eftir síðasta blind,
+að hann seldi alla jókerana sína. En því miður endaði það svo að \emph{Stjörnustöðina} var hvergi að finna.
+Leiður, þá reyndi hann að gera það besta úr stöðunni og náði hann að næla sér í jókerinn \href{https://balatrogame.fandom.com/wiki/Constellation}{\emph{Stjörnumerki}}.
+En það sem gerir þennan jóker svona góðan er að eftir hverja hendi áður en stigin eru lögð saman þá margfaldar þessi jóker
+$1 + 0.1 \cdot$ \texttt{fjöldi plánetuspila notuð} við margfeldið. Þannig ef Elvar notar $10$ \emph{Neptúnus} spil þá myndi hann fá
+$551$ spilapeninga og margfeldi $96$, sem eftir að reiknað er með \emph{Rafgasstokknum} myndi gefa honum $323.5$ spilapeninga og margfeldi $323.5$
+og þar af leiðandi $104,652.25$ stig. Þar sem Elvar er enn þá í smá áfalli eftir að finna ekki \emph{Stjörnustöðina} þá veit hann ekki alveg hversu mörg
+spil hann þarf að nota. Getur þú hjálpað honum að finna minnsta fjölda plánetu spila sem hann þarf að nota til að vinna blindinn?
+
+
+\section*{Inntak}
+Inntak inniheldur eina jákvæða heiltölu $x$, fjöldi stiga sem Elvar til þarf til að vinna blindinn.
+
+\section*{Úttak}
+Skrifið út minnsta fjölda plánetu spila sem Elvar þarf að nota til að vinna blindinn.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 30   & $0 \leq x \leq 6320$ \\ \hline
+2     & 30   & $0 \leq x \leq 10^{24}$ \\ \hline
+3     & 40   & $0 \leq x \leq 10^{64}$ \\ \hline
+\end{tabular}
+

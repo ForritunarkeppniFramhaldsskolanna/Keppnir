@@ -1,0 +1,70 @@
+\problemname{Vegabréfadagsetningar}
+\illustration{0.4}{vegabref}{Íslenskt vegabréf.}
+
+Hann Konráð er búinn að útvega sér stóran stafla af Íslenskum vegabréfum (ekki spyrja,
+ekki segja frá heldur). Nú er hann kominn með það skemmtilega verk að vinna úr öllum
+þeim gögnum. Hann setti upp lítinn vélmannaarm til að sjá um að taka mynd af mikilvægustu
+síðunni í hverju vegabréfi, og notaði svo myndavinnslu til að fá textann yfir á hreint
+form í tölvunni sinni. Þetta var náttúrulega einfaldi hlutinn, og nú er komið að flókna
+hlutanum. Að breyta sniði gagnanna yfir í ISO-8601 staðalinn.
+
+Hann hefur fullt af línum af texta tekinn úr vegabréfum sem er á forminu
+\texttt{dd ISM /ENM yy} þar sem \texttt{dd} er dagur mánaðarins, 
+\texttt{ISM} er þriggja stafa íslenskt mánaðarheiti, 
+\texttt{ENM} er þriggja stafa enskt mánaðarheiti og
+\texttt{yy} eru síðustu tveir stafirnir í ártalinu.
+Þetta segir sem sagt til um hvenær vegabréfin renna út.
+
+Hann vill fá þetta yfir á formið \texttt{yyyy-mm-dd} þar sem
+\texttt{yyyy} er fullt ár, \texttt{mm} er mánuður og 
+\texttt{dd} er dagur. Allar tölur í þessu og að ofan eru
+með fastan fjölda stafa, svo $7$ verður til dæmis \texttt{07}.
+
+Öll vegabréfin renna út á tímabilinu $2015$ til $2035$.
+Dagsetningin þegar þessi keppni á sér stað er 
+áttundi mars árið $2025$.
+
+Íslensku mánaðarheitin eru
+\texttt{JAN},
+\texttt{FEB},
+\texttt{MAR},
+\texttt{APR},
+\texttt{MAÍ},
+\texttt{JÚN},
+\texttt{JÚL},
+\texttt{ÁGÚ},
+\texttt{SEP},
+\texttt{OKT},
+\texttt{NÓV},
+\texttt{DES}.
+
+Ensku mánaðarheitin eru
+\texttt{JAN},
+\texttt{FEB},
+\texttt{MAR},
+\texttt{APR},
+\texttt{MAY},
+\texttt{JUN},
+\texttt{JUL},
+\texttt{AUG},
+\texttt{SEP},
+\texttt{OCT},
+\texttt{NOV},
+\texttt{DEC}.
+
+\section*{Inntak}
+Ein lína úr vegabréfi eins og lýst er að ofan.
+
+\section*{Úttak}
+Dagsetningin úr vegabréfinu á ISO-8601 formi, eins og lýst er að ofan.
+
+\section*{Stigagjöf}
+\begin{tabular}{|l|l|l|}
+\hline
+Hópur & Stig & Takmarkanir \\ \hline
+1     & 10   & Allar dagsetningar í inntaki eru dagurinn í dag (keppnisdagur). \\ \hline
+2     & 25   & Allar dagsetningar í inntaki eru í þessum mánuði (keppnisdags). \\ \hline
+3     & 50   & Allar dagsetningar eru árið $2024$. \\ \hline
+4     & 15   & Engar frekari takmarkanir. \\ \hline
+\end{tabular}
+

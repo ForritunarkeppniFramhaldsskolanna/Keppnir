@@ -1,0 +1,12 @@
+name:
+    is: Verði þér að góðu!
+    en: Enjoy Your Repast!
+author: Arnar Bjarni Arnarson, Atli Fannar Franklín
+source: Forritunarkeppni Framhaldsskólanna 2025
+rights_owner: Forritunarkeppni Framhaldsskólanna
+license: cc by-sa
+type: scoring
+uuid: "c90a585a-a673-4c27-ac68-0a41b7d3bb31"
+grading:
+    show_test_data_groups: true
+keywords: easy

@@ -1,0 +1,15 @@
+name: 
+    is: ASCII kassi 3
+    en: ASCII Box 3
+author: Atli Fannar Franklín
+source: Forritunarkeppni Framhaldsskólanna 2025
+rights_owner: Forritunarkeppni Framhaldsskólanna
+license: cc by-sa
+type: scoring
+uuid: "e8647927-ec81-4deb-969b-3e1fd00442e1"
+validator_flags: space_change_sensitive case_sensitive
+grading:
+    show_test_data_groups: true
+limits:
+    time_multiplier: 2
+keywords: format string ad-hoc
