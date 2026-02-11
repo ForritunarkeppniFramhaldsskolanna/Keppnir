@@ -2,7 +2,7 @@
 
 ## Dómaraþjónn
 
-Í Delta, Beta og Alfa deildunum var notast við [Kattis](http://www.kattis.com/). Hér er hægt að finna niðurstöður úr [Delta](https://keppnisforritun.is/wp-content/uploads/fk2020/delta2020.html), [Beta](https://keppnisforritun.is/wp-content/uploads/fk2020/beta2020.html) og [Alfa](https://keppnisforritun.is/wp-content/uploads/fk2020/alfa2020.html) deildunum, og [hér](https://iceland.kattis.com/) er hægt að reyna við dæmin sjálf.
+Í Delta, Beta og Alfa deildunum var notast við [Kattis](http://www.kattis.com/). Hér er hægt að finna niðurstöður úr [Delta](https://keppnisforritun.is/fk2021/delta2021.html), [Beta](https://keppnisforritun.is/fk2021/beta2021.html) og [Alfa](https://keppnisforritun.is/fk2021/alfa2021.html) deildunum, og [hér](https://iceland.kattis.com/) er hægt að reyna við dæmin sjálf.
 
 ## Dæmasnið
 
