@@ -1,0 +1,10 @@
+Forritunarkeppni - 2005
+
+Dæmi 2
+Búið til forrit sem spyr um þrjár tölur. Forritið birtir síðan hvaða tala er lægst og
+hvaða tala hæst, lægstu töluna fyrst og hæstu töluna svo. 
+Ef allar tölurnar eru jafn stórar á forritið að birta það.
+Dæmi:
+Slegnar inn tölurnar -1 0 og 3    Forritið á að birta fyrst töluna -1, síðan 3
+Slegnar inn tölurnar 3 0 og 3    Forritið á að birta fyrst töluna 0, síðan 3
+Slegnar inn tölurnar 3 3 og 3    Forritið birtir textann: Allar tölurnar eru eins

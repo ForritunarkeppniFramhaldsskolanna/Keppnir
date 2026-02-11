@@ -1,0 +1,17 @@
+Forritunarkeppni - 2005
+
+
+Dæmi 15
+Búið til forrit sem gefur notanda kost á að slá inn dagsetningu, 
+en birta dagsetningu næsta dags. Gera má ráð fyrir að dagsetningin sé 
+á árunum 2001 – 2009. Gera þarf ráð fyrir að fjórða hvert ár sé hlaupaár 
+(fyrst árið 2004 á þessu árabili)
+Dæmi
+Sláðu inn dagsetningu: 28.2.2004
+Dagsetning næsta dags: 29.2.2004
+Annað dæmi:
+Sláðu inn dagsetningu: 31.12.2004
+Dagsetning næsta dags: 1.1.2005
+Þriðja dæmi:
+Sláðu inn dagsetningu: 29.2.2005
+Rangur innsláttur – dagsetning ekki til

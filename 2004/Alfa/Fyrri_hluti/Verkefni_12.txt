@@ -1,0 +1,17 @@
+Forritunarkeppni 2004
+
+Dæmi 12
+
+Efnafræðingur nokkur er að gera tilraun þar sem hiti í efnablöndu vex nokkurnveginn jafnhratt
+yfir ákveðið tímabil. 
+Hann hann mælir hitann í blöndunni á tveimur tímapunktum en hann ætlar síðan að búa til forrit
+sem reiknar fyrir hann hver hitinn ætti að vera á einhverjum tímapunkti sem notandi tilgreinir: 
+
+Dæmi:
+Fyrsti tímapunktur: 2.5 (t.d sekúntur)
+Hiti á fyrsta tímapunkti: 10 (t.d. gráður celcius)
+Annar tímapunktur: 4.5 (t.d sekúntur)
+Hiti á fyrsta tímapunkti: 15 (t.d. gráður celcius)
+Tímapunktur sem reikna á. 3.5
+(Tölvan reiknar þá hitastig eftir 3.5 sek og svarar)
+Hitinn er þá: 12.5

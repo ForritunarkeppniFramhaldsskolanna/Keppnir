@@ -1,0 +1,16 @@
+Forritunarkeppni - 2005
+
+Dæmi 4
+Búið til forrit sem reiknar útborguð laun. 
+Forrit fær gefið upp heildarlaun. 
+Frá heildarlaunum eiga að dragast frá 6% framlag í lífeyrissjóð og 
+einnig á að draga frá fyrirframgreidd laun. 
+Athugið að úborgun getur aldrei orðið neikvæð tala.
+Dæmi:
+Heildarlaun: 100000
+Fyrirfram greitt: 95000
+Útborguð laun: 0
+Dæmi 2
+Heildarlaun: 100000
+Fyrirfram greitt: 5000
+Útborguð laun: 89000

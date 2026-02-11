@@ -1,0 +1,9 @@
+Forritunarkeppni - 2005
+
+
+Dæmi 2
+Búið til forrit sem les inn tvö orð. Forritið skrifar síðan út hvort orðið 
+er á undan í stafrófsröð. Forritið þarf ekki að ráða við sér íslenska stafi.
+Dæmi
+Lesin eru inn orðin:  barki    og    grallari
+Orðið barki er á undan í stafrófsröð

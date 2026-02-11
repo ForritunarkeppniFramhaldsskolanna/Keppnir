@@ -1,0 +1,10 @@
+Dæmi 5
+
+Búið til forrit sem les inn setningu. Forritið athugar hvort setning er symmetrisk (samhverf). 
+Setning er sögð samhverf ef hún er eins hvort sem lesið er frá hægri til vinstri eða 
+frá vinstri til hægri. Ekki er tekið tillit til bila og há/lágstafa.
+
+Inntak: 
+Raksápupáskar - er samhverf setning
+amma sá afa káfa af ákafa á samma - er samhverf
+Anna má ulla á Manna - ekki samhverf

@@ -1,0 +1,9 @@
+Forritunarkeppni 2004
+
+Dæmi 14
+
+Búið til forrit sem tekur inn segð sem samanstendur af heiltölum ásamt + - * og / reikniaðgerðunum. Forritið á að reikna niðurstöðu úr segðinni. Forritið á að meðhöndla
+reiknivirkjana eins og við erum vön úr hefðbundinni stærðfræði.
+
+Dæmi:
+9+3*4/8-2   gefur niðurstöðuna gefur 8,333

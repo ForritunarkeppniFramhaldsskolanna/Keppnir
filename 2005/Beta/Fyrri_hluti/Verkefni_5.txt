@@ -1,0 +1,14 @@
+Forritunarkeppni - 2005
+
+
+Dæmi 5
+Nota má ítrekunaraðferð til að reikna hver kvaðratrótin af 2 er með mikilli nákvæmni.
+Við gerum það með því að byrja á að setja gildið 1 inn í breytuna x. 
+Síðan reiknum við nýtt gildi á x með jöfnunni:
+    x_nytt = (x_gamalt + 2/x_gamalt) /2
+Þetta getum við endurtekið nokkrum sinnum og í hvert sinn sem við gerum þetta 
+eykst nákvæmnin.
+Búið til forrit þar sem þessi aðgerð er endurtekin þar til að breytingin sem 
+verður á x_nytt og x_gamalt er minni en 0.0001.
+Látið forritið skrifa út kvaðratrótina af 2 skv. þessu.
+

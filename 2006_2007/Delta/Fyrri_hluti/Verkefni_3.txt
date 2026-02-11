@@ -1,0 +1,5 @@
+Forritunarkeppni 2006 - 2007
+
+Dæmi  3 
+Búið til forrit sem reiknar verð vöru fyrir og eftir verðlækkun. Forritið spyr um verð vöru fyrir verðlækkun og um hversu mörg prósent varan á að lækka. Forritið birtir síðan verð vörunnar eftir verðlækkun.
+Forritið á síðan að endurtaka þessa vinnslu þar til að notandi tilgreinir verð vöru sem 0 kr.

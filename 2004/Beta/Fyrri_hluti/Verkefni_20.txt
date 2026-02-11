@@ -1,0 +1,10 @@
+Forritunarkeppni 2004
+
+Dæmi 20 
+
+Lesa inn pósitífa heiltölu. Forritið segir til um hvort kvaðratrót tölunnar sé heiltala. Ekki má nota hjálparföll til
+að reikna þetta dæmi.
+ 
+Dæmi
+64 kvaðratrót tölunnar er heiltala því að 8x8 = 64.
+69 kvaðratrót tölunnar er ekki heiltala.

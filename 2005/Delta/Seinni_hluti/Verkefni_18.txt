@@ -1,0 +1,12 @@
+Forritunarkeppni - 2005
+
+Dæmi 18
+Á taflborði eru 64 reitir þ.e. 8x8 reitir. Reitir eru númeraðiðir eftir röð 
+og dálk t.d. A1, B2 og H8. Annar hver reitur er hvítur en hinn svartur. 
+Reitur A1, A3, A5, B2, B4 o.s.frv eru svartir, en reitir A2 A4 og B1 eru hvítir. 
+Búið til forrit sem spyr um heiti reits, en forritið svarar hvort reiturinn er til 
+og ef reiturinn er til á tilgreinir forritið hvort reiturinn er svartur eða hvítur.
+Dæmi
+J1 er ekki til
+A2 er hvítur
+A5 er svartur

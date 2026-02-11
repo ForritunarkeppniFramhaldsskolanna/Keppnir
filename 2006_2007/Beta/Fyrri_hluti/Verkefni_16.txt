@@ -1,0 +1,41 @@
+Forritunarkeppni 2006 - 2007
+
+Dæmi 16 
+Í sundlaug nokkurri geta viðskiptavinir valið um nokkrar leiðir til að borga sig inn í laugina. Sundlaugin býður upp á að borga fyrir stakar sundferðir, 10 miða kort og árskort. Við eigum að búa til forrit sem reiknar hagkvæmustu leið sem viðskiptavinur getur notað til að  greiða fyrir sundiðkun í eitt ár. Þegar árinu lýkur reiknum við með að afgangs miðar á sundkortinu séu verðlausir. Forritið spyr um:
+Fjölda sundferða á árinu:
+Verð á stakri sundferð:
+Verð á 10 miða kort gildir eitt ár
+Verð á árskorti:
+Dæmi:
+Ef verð á árskorti er 15.000 kr.
+verð á 10 miða korti er 1500 kr.
+verð á stakri ferð er 240 kr.
+fjöldi ferða er: 16
+þá er hagkvæmasta leiðin: eitt 10 miða kort og 5 stakar ferðir
+
+Ef verð á árskorti er 15.000 kr.
+verð á 10 miða korti er 1500 kr.
+verð á stakri ferð er 240 kr.
+fjöldi ferða er: 102
+þá er hagkvæmasta leiðin: árskort
+
+Ef verð á árskorti er 15.000 kr.
+verð á 10 miða korti er 1500 kr.
+verð á stakri ferð er 240 kr.
+fjöldi ferða er: 17
+þá er hagkvæmasta leiðin: tvö 10 miða kort
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

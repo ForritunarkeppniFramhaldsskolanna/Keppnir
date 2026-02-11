@@ -1,0 +1,17 @@
+Forritunarkeppni - 2005
+
+
+Dæmi 17
+Fullt tungl var síðast þann 17. október og nýtt tungl verður næst 2. nóvember. 
+Á því tímabili segjum við að tungl sé minnkandi. Frá 3. nóvember til 15 nóvember 
+segjum við að tungl sé vaxandi en tunglið verður aftur fullt þann 16. nóvember. 
+Nýtt tungl veður síðan 1. desember, fullt tungl: 15. desember og nýtt tungl: 31. janúar.
+Búið til forrit sem les inn dagsetningu á milli 17.október 2005 og 31. janúar 2006. 
+Forritið skrifar út hvort tungl sé vaxandi eða minnkandi, nýtt eða fullt á 
+viðkomandi dagsetningu.
+Dæmi
+Sláið inn dagsetningu: 17.10.2005
+Fullt tungl
+Annað dæmi:
+Sláið inn dagsetningu: 14.11.2005
+Vaxandi tungl

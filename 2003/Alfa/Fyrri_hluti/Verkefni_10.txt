@@ -1,0 +1,15 @@
+Dæmi 10.
+
+
+Flokkun şríhyrninga:
+
+Verkefniğ er ağ skrifa forrit sem kannar hvort ağ inntakiğ, a,b,c 
+sem eru hliğarlengdir í şríhyrningi, og kanna hvort ağ şessar lengdir 
+geti myndağ jafnarma, jafnhliğa eğa şríhyrning meğ 90 gráğu horni eğa ekkert af şessu
+
+Ef inntak er:
+
+2,2,3 => Jafnhliğa
+3,3,3 => Jafnarma
+3,4,5 => 90 gráğur
+3,4,6 => Ekkert af şessu

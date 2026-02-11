@@ -1,0 +1,10 @@
+Númer: A07
+
+
+Evklíðskur algoritmi til að finna stærsta sameiginlega deili tveggja talna er eftirfarandi:
+Gerum ráð fyrir tveimur tölum a og b, og a > b. Deilum í a með b. Ef það er enginn afgangur við deilinguna þá er b lausnin. Ef það er afgangur við deilinguna, köllum hann c, þá er b > c. Þá er gildi b sett í a, og gildi c í b og þessi vinnsla endurtekin þar til afgangurinn er 0. Lokagildið í b er þá stærsti sameiginlegi deilir.
+Dæmi: Finnum stærsta sameiginlega deili fyrir 66 og 27
+     a= 66 deilt með b= 27 gefur c= 12 í afgang
+     a= 27 deilt með b= 12 gefur c= 3 í afgang
+     a= 12 deilt með b= 3 gefur c= 0 í afgang
+     Stærsti sameiginlegi deilir er þá 3

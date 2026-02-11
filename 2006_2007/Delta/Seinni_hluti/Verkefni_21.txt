@@ -1,0 +1,13 @@
+Forritunarkeppni 2006 - 2007
+
+Dæmi 21
+
+Búið til forrit sem spyr um hvaða vikudagur fyrsti dagur ársins er.
+1 – sunnudagur
+2 – mánudagur o.s.frv. til 7 – laugardagur
+Forritið spyr síðan um númer dags innan ársins, og þá svarar forritið hvaða vikudagur það er.
+Dæmi:
+Fyrsti dagur árins er sunnudagur þá er 50 mánudagur. 
+
+
+

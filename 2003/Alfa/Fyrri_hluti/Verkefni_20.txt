@@ -1,0 +1,8 @@
+Dæmi 7
+Búið til forrit sem tekur inn eina heiltölu n. Forritið á að skila til baka tölunni hropmerktri.
+(þ.e. talan er margfölduð með öllum heiltölum sem eru lægri en viðkomandi tala).
+Ekki má nota hjálparföll til að leysa þetta verkefni.
+
+Dæmi 
+1 hrópmerkt er 1
+6 hrópmerkt er 720

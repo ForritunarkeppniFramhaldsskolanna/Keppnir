@@ -1,0 +1,5 @@
+Forritunarkeppni - 2005
+
+Dæmi 29
+Hér á að skrifa fall sem raðar fylki af tíu heiltölum með endurkvæmri aðferð.
+Prófið fallið með aðalforriti.

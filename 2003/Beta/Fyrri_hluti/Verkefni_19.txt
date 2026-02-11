@@ -1,0 +1,32 @@
+Dæmi 18.
+
+Að reikna á annan máta.
+
+Flestir kannast við hvernig reiknivélar starfa til að reikna t.d. 
+9+3*4/8-2 þarf að setja inn sviga til að þetta skiljist og síðan 
+þarf að forgangsraða aðgerðum og til að geta hannað forrit sem 
+reiknar þetta út þarf að lesa allt inn og skima strenginn 
+til að gera þetta rétt. 
+
+En það er til önnur leið sem er einnig notuð á sumum reiknivélum 
+(að vísu ekki algengt í dag) þar er aðgerðin alltaf á eftir þeim 
+tölum sem hún á við
+
+Dæmi
+    Gamla aðferðin 			   Nýja aðferðin
+  -------------------------------------------------------
+	A+B					AB+ 
+	(A*B)+C					AB*C+
+	A+(B*C)					ABC*+
+	A/b-C/D					AB/CD/-
+
+Hver aðgerðalína er þá alltaf ein reiknisegð leyfilegar aðgerðir eru +,-,*,/
+
+
+Dæmi:
+
+ Inntak:		Útttak:
+------------------------------------------------
+11+			2
+24+5*			30	
+525*/			0.5

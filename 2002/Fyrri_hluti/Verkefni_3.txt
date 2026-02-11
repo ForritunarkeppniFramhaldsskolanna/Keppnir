@@ -1,0 +1,15 @@
+Númer: A03
+
+
+Búið til forrit sem spyr um tvær tölur. Forritið birtir síðan hvor talan er lægri og hvor hærri, lægri töluna fyrst og hærri töluna svo. Ef tölurnar eru jafn stórar á forritið að birta það.
+
+Dæmi:
+Fyrri talan? 21.5
+Síðari talan? 1
+Lægri talan er: 1.00
+Hærri talan er: 21.5  
+
+Annað dæmi:
+Fyrri talan? 21.5
+Síðari talan? 21.5
+Tölurnar eru jafnar: 21.5

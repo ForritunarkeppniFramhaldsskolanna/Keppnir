@@ -1,0 +1,7 @@
+Forritunarkeppni 2004
+
+Dæmi 1 
+
+Búið til forrit sem breytir lengdartölu úr metrum og sentimetrum í fet og tommur eða öfugt. 
+Fyrst spyr forritið á hvorn veginn á að umbreyta, spyr síðan um viðkomandi lengd og breytir 
+síðan. Gera má ráð fyrir að í einni tommu séu 2.53 cm en 30.5 cm í feti. 

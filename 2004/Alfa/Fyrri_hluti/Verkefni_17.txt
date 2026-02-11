@@ -1,0 +1,10 @@
+Forritunarkeppni 2004
+
+Dæmi 17
+
+Samstilltir þræðir
+
+Búið til forrit sem ræsir tvo þræði. Báðir þræðirnir hafa mjög einfalda vinnslu þ.e. annar þráðurinn skrifar A1 síðan A2 o.s.frv. upp í A100 en þá byrjar hann aftur frá A1 upp í A100. 
+Hinn þráðurinn skrifar B1, B2, B3 o.s.frv. upp í B100 en þá byrjar hann aftur. Þræðirnir vinna
+óháð hverjir öðrum nema að þegar fyrri þráðurinn hefur talið uppí 100 bíður hann eftir að sá 
+síðari komist í 100 en þá geta báðir byrjað aftur.

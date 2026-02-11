@@ -1,0 +1,24 @@
+Dæmi 17.
+
+
+Nýlega settist geimvera að í fjarlægu landi, geimveran var þannig 
+hönnuð lífeðlisfræðilega að til að geta nýtt sér súrefni jarðarinnar 
+sem orkugjafa þurfti hún að fórna nokkrum skynfærum og getur hún því
+ekki séð, heyrt eða talað. Til að sjá sér farborða ákvað hún (geimveran) 
+að gerast bóndi og keypti landsvæði á góðum kjörum og var ráðlagt 
+að rækta Nautgripi og kjúklinga sem sjá mest um sig sjálfir. 
+En því miður fyrir geimveruna þá var landið sem hún keypti gamalt 
+æfingasvæði fyrir jarðsprengjudeild hersins sem skildi eftir flestar 
+sprengjurnar. Því er það svo að á hverjum degi springa í loft upp hluti af 
+búfénaði geimverunnar. Geimveran skynar sprenginarnar og fer út og 
+safnar saman eftirstöðvum þeirra sem fórust, nánar tiltekið hjörtun 
+og allar lappirnar. Geimveran hefur aldrei séð þessi dýr og getur því 
+ekki greint á milli þess hvort um er að ræða hluti af nautgripum 
+eða kjúklingum. Eina sem hún veit er fjöldi hjarta og fjöldi lappa. 
+Þitt verkefni er að skrifa forrit sem getur sagt geimverunni 
+hversu margir nautgripir og hversu margir kjúklingar fórust í sprengingunni.
+
+Inntak:
+
+10 30   Það fórust 5 nautgripir og 5 kjúklingar
+10 32   það fórust 6 nautgripir og 4 kjúklingar

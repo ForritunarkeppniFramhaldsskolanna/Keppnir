@@ -1,0 +1,5 @@
+Forritunarkeppni 2004
+
+Dæmi 6
+
+Búið til forrit sem spyr um númer mánaðar. Forritið birtir síðan heiti viðkomandi mánaðar. Ef slegin inn tala sem er minni en 1 eða stærri en 12 eiga að birtast villuboð.

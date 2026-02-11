@@ -1,0 +1,15 @@
+
+Heiti: Æfingarverkefni:
+Númer: A0
+
+
+
+
+Búið til forrit sem skrifar eftirfarandi texta út á skjáinn:
+
+Hallo lið xxx er mætt til leiks. 
+
+Skrifið einnig motto liðsins út og sendið það með þegar þið skilið verkefninu samkvæmt leiðbeiningum um skil
+
+
+

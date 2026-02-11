@@ -1,0 +1,13 @@
+Númer: A09
+
+
+
+Fylki inniheldur tölur frá 1 upp í N. Í fylkinu er N+1 stak því að ein tala sem er í fylkinu er endurtekin. Búið til fall (eða stefju, undirforrit) sem tekur inn fylkið og fjölda staka í fylkinu N en skilar til baka tölunni sem er endurtekin. Athugið að tölunum er raðað í hækkandi röð nema tölunni sem er endurtekin er bætt einhvers staðar inn í. 
+
+Dæmi:
+N=15
+1 2 3 4 5 6 7 8 9 10 11 6 12 13 14 15
+
+Fallið á að skila til baka tölunni 6.
+
+Við fyrirgjöf fyrir þetta verkefni er athugað hvort fallið vinnur rétt en einnig á fallið að finna rétta tölu með því að skoða sem fæst stök í fylkinu. 

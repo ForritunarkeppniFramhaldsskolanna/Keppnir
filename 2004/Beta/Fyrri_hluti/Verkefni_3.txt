@@ -1,0 +1,6 @@
+Forritunarkeppni 2004
+
+Dæmi 3 
+
+Búið til forrit sem spyr um lengd í tommum, en skilar til baka hver lengdin er í sentimetrum. Gera má ráð fyrir að í 
+einni tommu séu 2.53 cm. 

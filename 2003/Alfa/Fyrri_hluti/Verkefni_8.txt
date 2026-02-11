@@ -1,0 +1,27 @@
+Dæmi 8 
+
+
+Ef að líkum lætur mun fyrsti jólasveinninn koma til byggða þann 12. desember. 
+Röð jólasveinanna er eftirfarandi: 
+
+1 Stekkjastaur
+2 Giljagaur
+3 Stúfur
+4 Þvörusleikir
+5 Pottaskefill
+6 Askasleikir
+7 Hurðaskellir
+8 Skyrjarmur
+9 Bjúgnakrækir
+10 Gluggagægir
+11 Gáttaþefur
+12 Ketkrókur
+13 Kertasníkir
+
+25. desember mun fyrsti jólasveinninn, Stekkjastaur, halda til baka. 
+Síðan mun hver af öðrum gera slíkt hið sama í sömu röð og þeir komu. 
+Búið til forrit sem spyr um dagsetningu (dag og mánuð). Ef einhver 
+jólasveinn kemur til byggða eða heldur heim þann dag á forritið að 
+skrifa hvaða jólasveinn það er og hvort hann er að koma eða fara. 
+Ef enginn jólasveinn er á ferð þann dag skrifar 
+forritið "Enginn jólasveinn í dag"

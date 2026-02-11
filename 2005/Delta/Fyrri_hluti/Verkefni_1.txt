@@ -1,0 +1,8 @@
+Forritunarkeppni - 2005
+
+Dæmi 1 
+Búið til forrit sem les inn tvær heiltölur. 
+Forritið skrifar hvort seinni talan gangi upp í fyrri tölunni.
+Dæmi:
+3 gengur ekki upp í 8
+4 gengur upp í 12

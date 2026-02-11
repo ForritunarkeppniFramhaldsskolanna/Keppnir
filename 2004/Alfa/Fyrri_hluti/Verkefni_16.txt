@@ -1,0 +1,11 @@
+Forritunarkeppni 2004
+
+Dæmi 16
+
+Þræðir
+
+Búið til forrit sem lætur notanda leggja saman tvær tilviljunarkenndar tölur á bilinu frá 0 til 9.
+Forritið gefur til kynna hvort notandi hafi lagt rétt saman eða ekki. Forritið á einnig að hafa
+teljara sem telur hve lengi notandinn hefur hugsað svarið. Útfærið forritið sem tveggja þráða 
+forrit þar sem annar þráðurinn birtir spurningu og bíður eftir svari en hinn þráðurinn telur 
+hversu langur tími líður.

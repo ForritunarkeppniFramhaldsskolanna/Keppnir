@@ -1,0 +1,13 @@
+Forritunarkeppni - 2005
+
+Dæmi 16
+Búið til forrit sem les inn tölu en forritið segir til um hvort orð sem
+ kemur á eftir tölunni ætti að vera eintala eða fleirtala. Skoðum eftirfarandi:
+1 hestur ( á eftir 1 kemur eintala)
+5 hestar (á eftir 5 kemur fleirtala)
+11 hestar (á eftir 11 kemur fleirtala)
+15 hestar (á eftir 15 kemur fleirtala)
+31 hestur (á eftir 31 kemur eintala)
+Dæmi
+Sláið inn tölu: 5
+Á eftir 5 kemur fleirtala

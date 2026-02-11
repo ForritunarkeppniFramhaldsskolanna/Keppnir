@@ -1,0 +1,8 @@
+Forritunarkeppni - 2005
+
+Dæmi 3
+Búið til forrit sem les inn sex heiltölur. Forritið skrifar út hver er 
+mismunurinn á hæstu og lægstu tölunni.
+Dæmi:
+Lesnar eru inn tölurnar:  8, -1,  9,  25,   31 og    -5 
+Mismunur á hæstu og lægstu tölu er 36  

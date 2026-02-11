@@ -1,0 +1,27 @@
+Forritunarkeppni 2006 - 2007
+
+Dæmi 23
+Skrifið forrit ætlað er til að skrifa út athugasemdir í Java forriti. Forritið á sem sagt að skrifa út það sem er í hverri línu aftan við "//" merkið og á milli "/*" og  "*/" 
+Forritið spyr um skrá sem inniheldur javaforritið.
+
+Dæmi
+Ef skráin inniheldur eftirfarandi kóða:
+
+/* Fyrsta Java forritið
+* Þetta er forrit sem skrifar textann “Hallo heimur” á skjáinn */
+public class Hallo {
+  public static void main(String[] args) {
+    // System.out.println er notað til að skrifa á skjá
+    System.out.println("Hallo heimur");
+  }
+}
+
+þá skrifast á skjáinn
+/* Fyrsta Java forritið
+* Þetta er forrit sem skrifar textann “Hallo heimur” á skjáinn */
+ // System.out.println er notað til að skrifa á skjá
+
+
+
+
+

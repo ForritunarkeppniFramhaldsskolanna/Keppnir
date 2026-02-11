@@ -1,0 +1,10 @@
+Dæmi 10 
+Búið til forrit sem spyr um tvo bókstafi. Forritið skrifar síðan hvor bókstafurinn er á 
+undan í stafrófinu. Ekki þarf að gera ráð fyrir séríslenskum stöfum heldur einungis stöfum 
+í enska stafrófinu
+
+Dæmi 
+a og L  a er á undan
+A og l  A er á undan
+b og q  b er á undan
+B og q  B er á undan 

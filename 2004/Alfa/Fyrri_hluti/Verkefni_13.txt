@@ -1,0 +1,12 @@
+Forritunarkeppni 2004
+
+Dæmi 13
+
+Að útfæra klasann ferhyrning. 
+
+Klasinn ferhyrningur hefur tvo einkagagnaliði, lengd og breidd. Aðgerðir í klasanum eru meðal
+annars "reiknaflatarmal" og "reiknaummal". 
+
+Síðan skal búa til forrit sem notar þennan klasa, býr til hlutinn MinnFerhyrningur sem er tilvik
+af þessum klasa, les inn lengd og breidd fyrir MinnFerhyrningur en notar föllin í klasanum til 
+að skrifa á skjá ummál  og flatarmál ferhyrningsins. 

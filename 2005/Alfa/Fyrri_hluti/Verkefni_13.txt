@@ -1,0 +1,18 @@
+Forritunarkeppni - 2005
+
+Dæmi 13
+Ákveðin tegund litakóða er búinn þannig til að hann inniheldur sex tákn 
+sem túlkaðar eru þrjár tölur í sextándakerfi en tölurnar tákna styrkleika 
+rauðs litar, styrkleika græna litarins og styrkleika bláa litarins. 
+Búið til forrit sem les inn slíkan litakóða og segir til um hver þessara 
+lita er sterkastur.
+Dæmi
+Litakóði: F1AA10
+Styrkleiki rauða litarins er mestur 
+þ.e. F1 er styrkleiki rauða litarins, AA er styrkleiki græna litarins og 10 
+er styrkleiki bláa litarins. 
+(í sextánda kerfi stendur A fyrir 10, B fyrir 11, C fyrir 12, D fyrir 13, E fyrir 14 
+og F fyrir 15.)
+Annað dæmi:
+Litakóði: AAAA10
+Styrkleiki rauða og græna litarins eru jafnir

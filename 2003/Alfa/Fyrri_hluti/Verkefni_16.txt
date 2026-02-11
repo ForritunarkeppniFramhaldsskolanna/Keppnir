@@ -1,0 +1,7 @@
+Dæmi 4 
+Búið til forrit sem spyr um hvað klukkan sé. Notandi á að slá inn eina tölu sem táknar klukkustundina. 
+Ef slegin er inn tala á bilinu 5-8 þá skrifar forritið "Þú vaknar snemma"
+Ef slegin er inn tala á bilinu 9-18 þá skrifar forritið "Góðan dag"
+Ef slegin er inn tala á bilinu 19-24 þá skrifar forritið "Gott kvöld"
+Ef slegin er inn tala á bilinu 0-4 skrifar forritið "Þú átt að vera sofandi"
+Ef slegin er inn tala sem ekki kemur fyrir hér að ofan skrifar forritið "Rangur innsláttur"

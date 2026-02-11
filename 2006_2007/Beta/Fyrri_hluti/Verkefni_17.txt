@@ -1,0 +1,30 @@
+Forritunarkeppni 2006 - 2007
+
+Dæmi 17 
+Í fiskverkun eru framleiddar neytendapakkningar af fiskflökum. Í hverja pakkningu geta farið nokkur flök. Val á flökum í pakkningu fer þannig fram að flök eru sett á sex vigtar. Við eigum að búa til forrit sem spyr um stærð pakkningar sem verið er að vigta (þ.e. grammafjöldi í pakkningu) og hversu þungt flak er á hverri vigt. Forritið velur saman þau flök sem gefa besta nýtingu flakanna. Pakkning má aldrei innihalda minna magn en tilgreint er.
+
+Dæmi:
+Stærð pakkningar: 1000 grömm
+vigt 1:	200
+vigt 2:	204
+vigt 3:	198
+vigt 4:	130
+vigt 5:	211
+vigt 6:	188
+Hagkvæmasta pakkning er af vigtum 1,2,3,5,6 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

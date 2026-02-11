@@ -1,0 +1,6 @@
+Forritunarkeppni 2006 - 2007
+
+Dæmi  2 
+Búið til forrit sem reiknar verð vöru fyrir og eftir verðlækkun. Forritið spyr um verð vöru fyrir verðlækkun og um hversu mörg prósent varan á að lækka. Forritið birtir síðan verð vörunnar eftir verðlækkun.
+Dæmi: Ef verð vöru eru 110 kr. fyrir verðlækkun og verðlækkunin er 10% þá er verð vörunnar 99 krónur eftir verðlækkun.
+Ef verð vöru eru 100 kr. fyrir verðlækkun og verðlækkunin er 6,5% þá er verð vörunnar 93,5 krónur eftir verðlækkun

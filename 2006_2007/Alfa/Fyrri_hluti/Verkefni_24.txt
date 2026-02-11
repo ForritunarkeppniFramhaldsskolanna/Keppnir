@@ -1,0 +1,33 @@
+Forritunarkeppni 2006 - 2007
+
+Dæmi 24 
+Búið til forrit sem les inn allt að 10 heiltölur. Forritið á að skrifa út tölurnar í hækkandi röð.  
+
+Dæmi:
+8 99 -2 9 11 77
+
+Skrifar út:
+-2 8 9 11 77 99
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

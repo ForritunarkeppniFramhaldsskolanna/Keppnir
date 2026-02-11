@@ -1,0 +1,20 @@
+Forritunarkeppni 2006 - 2007
+
+Dæmi 13
+Við höfum textaskránna “leidir.txt” sem inniheldur í hverri línu nöfn á tveimur punktum og fjarlægð á milli þeirra. Búa á til forrit sem spyr um akstursleið. Akstursleið er tilgreind með því að tilgreina staðsetningar sem farið er í gegn um. Forritið leitar í textaskránni að fjarlægð milli sérhverra tveggja staðsetininga sem farið í gegn um en skrifar út heidarfjarlægð sem ekin er. Ef ekki finnst fjarlægð milli einhverra punkta tilgreinir forritið að upplýsingar vanti og jafnframt hvaða upplýsingar vanti. Við gerum gert ráð fyrir að fjarlægð milli tveggja punkta sé tilgreind í báðar áttir í skránni. (þ.e. fjarlægð frá D til B er tilgreind og einnig B til D). 
+
+Dæmi:
+
+A B 12.5
+B C  33.0
+C D 11.8
+B D 26.0
+D B 26.0
+D E 13.1
+A D 17.7
+
+Hvaða leið er farin:
+A D B  eru 43,7 
+
+Hvaða leið er farin:
+A  D C  Upplýsingar vantar 

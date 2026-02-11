@@ -1,0 +1,6 @@
+Forritunarkeppni 2004
+
+Dæmi 7
+
+Búið til forrit sem reiknar laun einstaklings. Látið forritið spyrja um tímakaup, fjölda unninna tíma, bónusupphæð og 
+bónusviðmiðun. Heildarlaun má reikna með því að margfalda saman tímakaup og fjölda unninna tíma og leggja bónusupphæð við ef fjöldi unninna tíma er meiri en bónusviðmiðun.  

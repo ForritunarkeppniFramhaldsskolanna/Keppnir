@@ -1,0 +1,10 @@
+Dæmi 3.
+Búið til forrit sem umreiknar hitastig á milli Farenheit og Celsius skala. 
+Forritið spyr fyrst hvort umbreyta eigi úr Farenheit í Celsius eða öfugt. 
+Forritið spyr síðan um hitastig á öðrum skalanum en birtir hitastigið í hinum skalanum. 
+Ef Tc er hitastig á Celsius skala og Tf er hitastig á Farenheit skala gildir jafnan:
+Tc = (5/9)*(Tf-32). Skila á niðurstöðum með a.m.k. 2 aukastafa nákvæmni.
+
+Dæmi um niðurstöðu
+32,00 á Farenheit er 0,00 á Celsius
+0,00 á Farenheit er -17,78 á Celsius

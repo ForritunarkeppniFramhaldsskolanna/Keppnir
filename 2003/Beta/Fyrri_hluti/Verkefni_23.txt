@@ -1,0 +1,48 @@
+Dæmi 20:
+
+Þetta dæmi verður að leysa í hlutbundu umhverfi.
+
+Búa skal til hlutinn (object,klasa) AlmenntBrot.  
+
+Hluturinn hefur eigindin 
+
+	iNefnari  Heiltala
+	iTeljari  Heiltala
+
+Hluturinn hefur aðgerðirnar
+
+    +   		(plús)
+    -   		(mínus)
+    *   		(sinnum)
+    /   		(deiling)
+   skrifaút		
+
+Hluturinn skal hafa smið (constructor) sem getur tekið tvær 
+færibreytur af taginu heiltala sem skal nota til að frumstilla 
+iNefnara og iTeljara
+
+Hluturinn skal hafa sjálfgefinn smið (default constructor) sem 
+frumstillir iNefnara í 1 og iTeljara í 1
+
+Hluturinn skal alltaf vera með AlmennaBrotið fullstytt
+
+Í forritinu skal vera hægt að framkvæma aðgerðir sem líta svona út
+
+    Búa til breytuna A af Taginu AlmenntBrot
+    Búa til breytuna B af Taginu AlmenntBrot
+    
+A = A+B sem notar plusvirkjann (plusaðgerðina) til að leggja B við A 
+en aðgerðin skal ekki geta breytt B, A skal vera fullstytt eftir aðgerðina
+
+A = B+A sem notar plusvirkjann (plusaðgerðina) til að leggja B við A 
+en aðgerðin skal ekki geta breytt B, A skal vera fullstytt eftir aðgerðina
+
+A = A-B sem notar mínusvirkjann (mínusaðgerðina) til að draga B frá A 
+en aðgerðin skal ekki geta breytt B, A skal vera fullstytt eftir aðgerðina
+
+A = B-A sem notar mínusvirkjann (mínusaðgerðina) til að draga B frá A 
+en aðgerðin skal ekki geta breytt B, A skal vera fullstytt eftir aðgerðina
+
+Síðan skal einnig vera hægt að nota * og / virkjann
+
+Fallið Skrifaút skal skrifa á skjáinn brotið á forminu iNefnari/iTeljari

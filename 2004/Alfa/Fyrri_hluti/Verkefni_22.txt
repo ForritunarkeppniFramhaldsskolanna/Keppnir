@@ -1,0 +1,16 @@
+Forritunarkeppni 2004
+
+Dæmi 22
+
+Á Internetinu hefur verið settur upp miðlari sem sem býður uppá þá þjónustu að leggja saman tvær
+tölur, a og b. Hægt er að tengjast honum með http-samskiptum á eftirfarandi slóð:
+http://netlab.ru.is/misc/add.php
+Þegar hann er notaður sendir maður gildin á a og b sem hluta af slóðinni og miðlarinn svarar með
+summunni.  
+
+Dæmi um þetta er:
+http://netlab.ru.is/misc/add.php?a=2&b=3
+Sem skilar svarinu 5 ef allt er í lagi.
+Skrifið biðlaraforrit fyrir þennan miðlara.  Notandinn gefur upp gildin á a og b, forritið býr
+til rétta http-slóð,sendir yfir netið, tekur við svarinu og birtir notandanum.  Biðlarinn getur
+hvort sem er verið konsól- eða gluggaforrit með formi og hnappi.

@@ -1,0 +1,3 @@
+Númer: A15
+
+ Búið til forrit sem spyr um lengd í sentimetrum en skrifar út lengd í tommum. Í einni tommu eru 2.54 cm.

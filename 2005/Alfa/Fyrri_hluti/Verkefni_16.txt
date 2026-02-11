@@ -1,0 +1,17 @@
+Forritunarkeppni - 2005
+
+
+Dæmi 16
+Búa á til forrit sem raðar lóðum á stöng hjá kraftlyftingamanni. 
+Stöngin sem raðað er á er 5 kg. en lóðin sem nota má til að raða á 
+stöngina eru 1 kg, 2,5 kg, 10 kg og 50 kg.. Gera á ráð fyrir að til séu 4 lóð af 
+hverri þyngd. Forritið spyr um hvaða þyngd er óskað eftir en það skrifar út hvaða 
+lóð má nota til að fá þessa þyngd. Athugið að sama þyngd verður alltaf að vera báðu 
+megin á stönginni. Forritið segir til um ef ekki er mögulegt að ná innsleginni þyngd.
+Dæmi
+Sláðu inn þyngd í kg. 9
+Notaðu 4 stk 1 kg lóð
+Sláðu inn þyngd í kg. 150 
+Notaðu 2 stk 2,5 kg lóð, 2 stk. 50 kg lóð, 4 stk. 10 kg. lóð 
+Sláðu inn þyngd í kg. 11 
+Ekki er mögulegt að ná þessari þyngd 

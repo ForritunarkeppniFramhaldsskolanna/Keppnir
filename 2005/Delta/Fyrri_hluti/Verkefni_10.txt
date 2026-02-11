@@ -1,0 +1,11 @@
+Forritunarkeppni - 2005
+
+Dæmi 10
+Búið til forrit sem skrifar út allar tölur á ákveðnu bili og hvað viðkomandi 
+tala er í þriðja veldi. 
+Dæmi:
+Fyrsta tala:   2
+Síðasta tala:   4
+2         8
+3         27
+4         64

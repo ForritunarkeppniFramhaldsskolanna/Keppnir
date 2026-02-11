@@ -1,0 +1,33 @@
+Dæmi 13.
+
+Forritunarmáliğ IGOR
+
+IGOR er einfalt forritunarmál sem hefur 8 skipanir. Hugmyndafræğin byggist á şví 
+ağ şú ert meğ lista af bókstöfum (ascii röğun bara enska stafrófiğ, lástafir) og 
+hver bókstafur hefur heiltölugildi tengt sér sem í upphafi er 0 (núll) hjá öllum bókstöfum.
+Ofan á şenna lista er sett króna sem hægt er ağ færa til í listanum (upp eğa niğur) 
+og svo er hægt ağ auka eğa minnka tölugildi şess stafs sem er undir krónuni 
+
+
+
+>	--	Færa krónuna upp í listanum.
+<	--	Færa krónuna niğur í listanum.
++	--	Hækka tölgildi bókstafsins sem krónan er á um 1
+-	--	Lækka tölgildi bókstafsins sem krónan er á um 1
+.	--	Skrifa út bókstafinn sem krónan er á.
+,	--	Skrifa út bil
+[	--	Byrjun á lykkju.
+]	--	Endir á lykkju.  ef tölugildi bókstafs sem Krónan er á er núll (0) 
+		şegar komiğ er ağ şessu tákni şá skal enda lykkjuna
+
+
+
+Krónan byrjar alltaf í a og öll tölugildi eru núll, ef staddur í z sem er aftasta stakiğ og skipunin > 
+er gefin er fariğ í a
+
+Ef inntak er:
+                                        
+>++++++[<+++>-]>>++>>>++>.+>.[<++>-]>>>>,.[<++>]>>.<<.
+
+Şá er úttak: hi mom
+

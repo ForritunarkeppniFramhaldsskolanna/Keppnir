@@ -1,0 +1,15 @@
+Forritunarkeppni - 2005
+
+Dæmi 25
+
+Búið til forrit sem reiknar hversu margar hellur þarf til að hylja ákveðið svæði. 
+Hellurnar eru ferningar, þ.e. með fjórar hliðar, allar hliðar jafn langar.
+Gera má ráð fyrir að saga megi hverja hellu t.d. eftir miðjunni, þannig að 
+nýta megi tvo hluta hennar(en aðeins í tvo hluta). 
+
+Dæmi 
+
+Flötur sem hylja á er 8 metrar á lengd og 4,15 metrar á breidd. Hver hella 
+er 0,4 metrar á hverja hlið. Þá þarf 210 hellur til að hylja þennan flöt. 
+(Saga má hverja hellu til að fá tvær 40x15 cm breiðar hellur og henda síðan 10x40 cm 
+bútnum sem eftir er)

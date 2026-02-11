@@ -1,0 +1,11 @@
+Forritunarkeppni - 2005
+
+Dæmi 11
+Búa á til forrit sem biður um tölu á bilinu frá 1-100. 
+Forritið biður aftur um tölu þar til slegin er inn tala á milli 1 og 100 að báðum 
+tölum meðtöldum.
+Dæmi um notkun forritsins
+Sláðu inn tölu á bilinu frá 1 til 100:   101
+Þú átt að slá inn tölu á bilinu frá 1 til 100 !
+Sláðu inn tölu á bilinu frá 1 til 100:   100
+Takk fyrir, bless.

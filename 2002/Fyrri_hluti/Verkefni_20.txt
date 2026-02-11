@@ -1,0 +1,20 @@
+Númer: A20
+
+
+Fullkomnar tölur:
+
+Fullkomin tala er tala sem jöfn summu allra þátta hennar að tölunni sjálfri frátaldri.
+Dæmi: 28 er fullkomin tala þar sem  1+2+4+7+14=28. 
+
+Þáttur eru þær tölur sem margfalda má saman til að fá töluna, hér 1*28, 2*14, 4*7, en talan sjálf er ekki talin með þegar fullkomin tala er reiknuð.
+
+Búið til forrit sem notandi slær inn heiltölu og forritið skrifar út allar fullkomnar tölur minni eða jafnt og sú tala sem slegin var inn
+
+Dæmi um inntak:
+10000
+
+Dæmi um úttak:
+6
+28
+496
+8128

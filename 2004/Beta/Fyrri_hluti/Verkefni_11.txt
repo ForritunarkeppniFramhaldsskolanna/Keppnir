@@ -1,0 +1,9 @@
+Forritunarkeppni 2004
+
+Dæmi 11
+
+Breyta tugakerfistölu í tölu í binary talnakerfinu. 
+Ekki má nota hjálparföll til að leysa þetta verkefni.
+talan 101 í binary er 5 í tugakerfi þ.e. (1x2 í veldinu 0 + 0x2 í velinu 1 + 1x2 í veldinu 2)
+talan 1101 í binary er 13 í tugakerfi þ.e. 
+(1x2 í veldinu 0 + 0x2 í velinu 1 + 1x2 í veldinu 2 + 1x2 í veldinu 3) 

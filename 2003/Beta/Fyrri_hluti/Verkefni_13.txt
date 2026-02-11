@@ -1,0 +1,16 @@
+Dæmi 15.
+
+Taka út þessi óþarfa comment í forritunarkóðanum
+
+Verkefnið er að búa til forrit sem les inn textaskrá sem er 
+forrit (c++ eða java) og hreinsar út öll comment í kóðanum 
+
+Comment eru afmörkuð með
+
+// Allt frá þessum stað til enda línunnar er comment
+/* upphaf á comment sem lýkur ekki fyrr en */ er fundið
+
+úttak forritsins er textaskrá sem heitir hreinsa.txt 
+og skal innihalda allan forritskóða en engin komment.
+
+ATh: það má setja comment inn í comment 

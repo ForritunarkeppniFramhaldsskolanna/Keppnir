@@ -1,0 +1,10 @@
+Forritunarkeppni 2004
+
+Dæmi 3 
+
+Búið til forrit sem les inn tvær pósitífar heiltölur. Forritið segir til um hvort síðari talan 
+gengur upp í þeirri fyrri.
+
+Dæmi
+6 og 3:       3 gengur upp í 6
+112 og 5:     5 gengur ekki upp i 112

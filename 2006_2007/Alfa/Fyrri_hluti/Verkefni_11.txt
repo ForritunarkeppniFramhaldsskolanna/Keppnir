@@ -1,0 +1,16 @@
+Forritunarkeppni 2006 - 2007
+
+Dæmi  11
+Í Yatsy er kastað upp fimm tengingum. Við eigum að búa til forrit sem greinir hvort upp hafi komið  5 eins, 4 eins, 3 eins, 2 eins eða hús (þ.e. 3 eins og 2 eins). Forritið spyr um hvaða tengingar hafi komið upp en skrifar hverning nota megi þessa teninga og stigafjölda fyrir viðkomandi val.
+Dæmi: Teningar 5 3 4 4 2  gefur 2 eins 8 stig (forrit nota hærra parið)
+Dæmi: Teningar 6 5 6 5 5  gefur 3 eins 15 stig, tveir eins 12 stig, hús 27 stig
+
+
+
+
+
+
+
+
+
+

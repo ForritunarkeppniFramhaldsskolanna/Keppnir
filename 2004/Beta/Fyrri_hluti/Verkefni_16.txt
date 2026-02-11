@@ -1,0 +1,11 @@
+Forritunarkeppni 2004
+
+Dæmi 16
+
+Búið til forrit sem tekur inn segð sem samanstendur af tveimur heiltölum ásamt einni reikniaðgerð sem geta verið: 
++ - * eða / reikniaðgerðunum. Forritið á að reikna
+niðurstöðu úr segðinni. 
+
+Dæmi:
+9+3 gefur niðurstöðuna gefur 12
+3*8 gefur niðurstöðuna gefur 24

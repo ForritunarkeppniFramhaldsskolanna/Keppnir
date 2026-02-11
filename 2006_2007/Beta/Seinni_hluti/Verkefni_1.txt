@@ -1,0 +1,10 @@
+Forritunarkeppni 2006 -2007
+
+Verkefni 1
+
+Búið til gagnagrunn fyrir bílaleigu. Gagnagrunnurinn ætti helst að halda utan um:
+•	Bíla sem bílaleigan á, tegund, hvers bíls, gerð, skráningarnúmer o.s.frv.
+•	Útleigu og pantanir. Hvort einstakir bílar eru í útleigu, hvenær þeir eru pantaðir o.fl.
+•	Viðskiptavini sem eru með bíla á leigu eða hafa pantað bíla.
+
+Að sjálfsögðu má síðan bæta við fleiri þáttum ef tími vinnst til, t.d. verðflokkar, afsláttarkjör, tilboð o.s.frv. 

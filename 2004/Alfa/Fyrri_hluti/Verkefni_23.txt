@@ -1,0 +1,10 @@
+Forritunarkeppni 2004
+
+Dæmi 23
+
+Skrifið miðlara sem keyrir á einni tölvu og biðlara sem keyrir á annari.  Miðlarinn á að veita
+samlagningarþjónustu, líkt og í dæminu hér á undan, en þið þurfið ekki að nota http-samskipti,
+frekar en þið viljið.
+Biðlarinn á að taka við tölunum a og b frá notanda, senda þær yfir netið til miðlarans sem 
+leggur þær saman og sendir þær til baka.  Biðlarinn birtir síðan summuna. Biðlarinn má vera 
+hvort sem er konsól- eða gluggaforrit og viðmót miðlarans skiptir heldur ekki máli.

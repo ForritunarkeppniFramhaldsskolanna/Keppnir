@@ -1,0 +1,8 @@
+Forritunarkeppni 2006 - 2007
+
+Dæmi 2 
+
+Búa á til forrit sem nota á sem kennsluforrit í stærðfræði. Forritið á að leggja margföldunardæmi fyrir nemendur, nemandi slær inn svar við dæmi en forritið gefur síðan endurgjöf hvort svarið hafi verið rangt eða ekki.
+Tölurnar sem forritið lætur margfalda saman eru allar á bilinu frá 0 til 9.
+
+

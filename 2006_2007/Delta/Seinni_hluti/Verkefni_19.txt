@@ -1,0 +1,8 @@
+Forritunarkeppni 2006 - 2007
+
+Dæmi 19
+Búa á til forrit sem reiknar bensíneyðslu fyrir ákveðna bifreið. Forritið spyr um akstursvegalengd og bensíneyðslu í lítrum. Forritið reiknar síðan bensíneyðslu í lítrum per 100 kílómetra.
+Ef bíllinn eyðir minna en 9 lítrum per 100 km skrifast úr að þetta sé hagkvæmur bíll
+Ef eyðslan er meiri en 14 lítrar skrifast að bíllinn eyði of miklu.
+
+

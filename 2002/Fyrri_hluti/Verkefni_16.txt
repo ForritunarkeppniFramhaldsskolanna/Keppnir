@@ -1,0 +1,47 @@
+Númer: A16
+
+
+Skrifið forrit sem getur breytt rómverskri tölu í arabíska. Rómverska talan er slegin inn af notendanum og forritið skrifar út arabíska gildi hennar. Dæmi um slíkt er:
+ 
+ V (5), IV (4), VIII (8), MM (2000), MCM (1900), MCMXCIV (1994). 
+
+Gildi rómverskra talna er 
+
+M = 1000 
+D = 500 
+C = 100 
+L = 50 
+X = 10 
+V = 5 
+I = 1 
+
+Ef lægri tala kemur á undan hærri tölu þá skal draga hana frá annars skal leggja hana við eins og dæmið hér fyrir neðan sýnir.
+
+
+ M C M X C V
+           
+        Fyrst er M með C á eftir en M er = 1000
+	1000
+	
+        M C M X C V
+        Síðan er C með sem er minna en M og því dregið frá við
+	   1000-100 = 900
+	   
+        M C M X C V
+        M er næst og X á eftir sem er minn því lagt við
+        
+           900+1000 = 1900
+                  
+        M C M X C V
+        Síðan er X sem er minna en C og því dregið frá
+           1900 - 10   = 1890
+
+        M C M X C V
+        Síðan er C með V á eftir og þvi lagt við
+           1890 + 100   = 1990
+                 
+        M C M X C V
+        Síðast er V og er lagt við
+           1990 + 5   = 1995
+
+Forritið skal gera ráð fyrir að allar innslegnar tölur séu löglegar (réttar) og séu í hástöfum

@@ -1,0 +1,4 @@
+Númer: A08
+
+
+Búið til forrit sem les inn 10 tölur. Forritið á að skrifa tölurnar út í hækkandi röð, þ.e. lægstu töluna fyrst og þá hæstu síðast.

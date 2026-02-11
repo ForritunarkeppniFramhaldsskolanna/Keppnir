@@ -1,0 +1,31 @@
+Forritunarkeppni - 2005
+
+
+Dæmi 20
+Gerum ráð fyrir að við höfum 3x3 reiti (hluti af Sudoku þraut) og við köllum 
+reitina A1,A2,A3, B1,B2,B3, C1, C2 og C3. A, B, og C tákna þá dálkana 
+en 1, 2 og 3 eru línunúmerin. Við viljum raða tölum frá 1 upp í 9 í reitina, 
+en hver tala má aðeins koma fyrir einu sinni. Notandi á að ráða hvaða tölur fara 
+í ákveðna reiti en forritið raðar síðan tölum í hina reitina. 
+Búið til forrit sem spyr um hversu marga reiti notandi vill slá inn. 
+Siðan spyr forritið um heiti reitanna  og tölu sem á að vera í viðkomandi reit. 
+Að lokum raðar forritið tölum í þá reiti sem eftir eru.
+
+Dæmi um notkun forritsins gæti verið:
+Hversu margar tölur vilt þú slá inn: 4
+Heiti reits: B2
+Tala í reit: 3
+Heiti reits: C2
+Tala í reit: 9
+Heiti reits: A1
+Tala í reit: 2
+Heiti reits: C3
+Tala í reit: 4   (hér lýkur innslætti notanda því að búið er að slá inn tölu í 4 reiti)
+
+Forrit setur:
+1 í A2
+5 í A3
+6 í B1
+7 í B3
+8 í C1
+

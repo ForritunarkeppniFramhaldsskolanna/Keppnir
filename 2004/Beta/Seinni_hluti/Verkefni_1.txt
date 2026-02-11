@@ -1,0 +1,9 @@
+Verkefni 2 síðri hluti Beta deild
+
+Búa á til samstæðuspil sem margir þekkja. Spilið má útfæra hvort sem er grafíst eða sem console forrit (þ.e. forrit með textabundnum notendaskilum)
+
+Sé forritið útfært grafíst kemur fram ákveðinn fjöldi mynda sem eru huldar. Myndirnar eru í pörum en verkefni þess sem fer í þennan leik er að finna samstæðurnar með því að velja tvær myndir. Ef myndirnar eru par eru þær úr leik, leikmaðurinn fær stig fyrir að finna parið, og fær þá tækifæri til að finna næsta par. Ef leikmaðurinn velur myndir sem ekki eru par, hyljast þær aftur án þess að leikmaður fái stig fyrir.
+
+Þið ráðið hversu flókin útfærslan er, leikmenn geta verið einn eða fleiri, mismunandi myndefni o.s.frv. Pörin þurfa ekki að samanstanda af eins myndum heldur myndum sem tengjast á einhvern hátt, en slíkt gefur t.d. möguleika i kennslu (t.d. stór bókstafur - lítill bókstafur, land - höfuðborg o.s.frv.)
+
+Sé forritið útfært sem console forrit má t.d. hafa pörin í hólfum 1-20 eða 1-100.

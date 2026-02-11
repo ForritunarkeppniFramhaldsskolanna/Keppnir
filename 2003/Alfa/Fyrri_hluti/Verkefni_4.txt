@@ -1,0 +1,12 @@
+Dæmi 4
+
+Orðakeðja
+
+Við skilgreinum orðakeðju sem runu orða þar sem öll orð byrja á sama staf 
+og næsta orð endaði á. Eftirfarandi runa er dæmi um keðju orða:
+afi imbi ingibjörg gunnar reyndi
+
+
+Skrifið forrit sem les inn runu orða og athugar hvort orðin mynda 
+keðju skv. ofangreindri lýsingu. Til að ljúka innskráningu 
+gerum við ráð fyrir að notandi eigi að slá inn táknið #. 

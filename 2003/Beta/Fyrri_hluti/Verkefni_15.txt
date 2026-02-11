@@ -1,0 +1,30 @@
+Dæmi 16.
+
+Kínin tala
+
+Á plánetunni Malaría er mikið haldið upp á Kínin tölur. 
+Kínin tala er tala sem jöfn summu allra þátta að tölunni sjálfri undanskildri. 
+
+Fyrsta Kínin talan er 6, því þættir hennar eru 1,2,3 en 1+2+3=6. 
+Næsta Kínin tala er 28= 1+2+4+7+14. 
+
+Áður en þið farið að örvænta þá skal bent á að allar Kínin tölur nema 6 
+er hægt að skrifa sem summu þriðja veldis af röð oddatalna.
+
+  28 = 1 í 3javeldi + 3 í 3javeldi (sem er jú 1 + 27)
+
+næsta mögulega Kínin tala er þá
+
+  153 = 1 í 3javeldi + 3 í 3javeldi + 5 í 3javeldi 
+  en 153 er ekki Kínin tala þar sem þættir hennar gefa ekki 153 sem summu
+  en þættir hennar eru 1,3,9,17,51 sem gera 81
+
+Þar sem nú er vitað hvaða tölur koma til greina sem Kínin tölur 
+búið til forrit sem skilar umbeðinni Kínin tölu númer N, þannig
+ef 
+
+  N=1 þá skilar fallið 6
+  N=2 þá skilar fallið 28
+  N=3 þá skilar fallið 496
+
+og svo framvegis

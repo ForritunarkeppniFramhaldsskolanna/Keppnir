@@ -1,0 +1,12 @@
+Forritunarkeppni - 2005
+
+Dæmi 13
+Þetta verkefni gengur út á að finna mögulega reiti fyrir riddara á taflborði.
+Á taflborði eru 64 reitir þ.e. 8x8 reitir. Reitir eru númeraðiðir eftir röð og 
+dálk t.d. A1, B2 og H8. Riddari gengur þannig að hann getur farið einn reit beint 
+áfram og einn reit á ská. Ef riddari er staddur á reit C3 getur hann þannig farið 
+á A2, A4, B1,B5,D1,D5,E2 og E4.
+Búið til forrit sem spyr um staðsetningu riddara, en forritið svarar á hvaða reiti 
+riddarinn getur farið í næsta leik.
+Dæmi:
+Sláið inn reitinn A1. Þá eru mögulegir reitir C2 og B3

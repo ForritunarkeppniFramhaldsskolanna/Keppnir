@@ -1,0 +1,29 @@
+Dæmi 6
+
+Nota á endurkvæma aðferð til að leysa þetta dæmi.
+
+Lesa inn pósitífa heiltölu. Forritið skrifar allar umraðaðanir tölunnar
+þ.e. tölustafirnir sem mynda töluna umraðast. 
+
+Inntak:
+379		
+
+Úttak:
+937
+793
+379
+
+Inntak:
+1298
+
+Úttak:
+8129
+9812
+2981
+1298
+
+Inntak;
+121
+
+Úttak:
+121

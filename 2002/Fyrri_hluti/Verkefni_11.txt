@@ -1,0 +1,16 @@
+Númer: A11
+
+
+Skrifið forrit sem les inn skrá sem heitir PROBLEMX.DAT. Hver lína í skránni inniheldur tvær heiltölur með bili á milli.  Forritið les inn þessa skrá og skrifar út á skjáinn samtölu þeirra tveggja talna sem voru í inntaksskránni.  Fyrir heverja línu í inntaksskránni skal skrifa út eina línu á skjaínn.
+
+
+Dæmi um inntaksskrá
+1 1
+1000000     1000000
+42  56
+
+
+Dæmi um úttak frá forritinu
+2
+2000000
+98

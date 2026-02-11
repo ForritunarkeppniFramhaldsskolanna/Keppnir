@@ -1,0 +1,14 @@
+Númer: A19
+
+
+Keðja orða
+
+Við skilgreinum keðju orða sem runu orða þar sem fjöldi stafa í orði er sá sami, (þ.e. orðin eru jafn löng) og munurinn á sérhverjum tveimur aðliggjandi orðum sé mest einn stafur. Eftirfarandi runa er dæmi um keðju orða: 
+
+JÓN   JÓL   BÓL   SÓL   RÓL   RÓS   RIS   FIS 
+
+Athugið að röð stafanna skiptir máli.  Eftirfarandi væri ekki dæmi um keðju orða:
+
+KAL   LAK
+
+Skrifið forrit sem les inn runu orða og athugar hvort orðin mynda keðju skv. ofangreindri lýsingu. Til að ljúka innskráningu gerum við ráð fyrir að notandi eigi að slá inn táknið #. 

@@ -1,0 +1,12 @@
+Forritunarkeppni - 2005
+
+
+Dæmi 19
+“Oddaorð” Í orði er einhver stafur sem er fremst í stafrófsröð. Ef næst út frá 
+honum koma stafir sem raðast í stafrófsröð segjum við að orðið sé oddaorð. 
+Búið til forrit sem segir til um hvort viðkomandi orð sé oddaorð. 
+Dæmi:
+abcd er oddaorð  ( af þessum stöfum er a fremst í stafrófinu en stafir eftir a koma í 
+stafrófsröð)
+trhbiklm er oddaorð ( af þessum stöfum er b fremst í stafrófinu en stafir 
+eftir b koma í stafrófsröð)

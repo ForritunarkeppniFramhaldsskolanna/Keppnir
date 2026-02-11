@@ -1,0 +1,23 @@
+Gagnagrunnsverkefni: (alfa og beta deild)
+
+Miðasölukerfi fyrir leiksýningu í framhaldsskóla:
+
+Nemendafélag framhaldsskólans þíns ætlar að hafa nemendasýningu. Þar sem þú ert aðaltölvunörd skólans varst þú fengin til að búa til miðasölukerfi fyrir nemendasýninguna. Formaður nemendafélagsins hefur nokkuð ómótaðar hugmyndir um hvernig kerfið á að vinna, en hann hefur samt komið með nokkur atriði til þín sem æskilegt er að uppfylla en hann veit vel að þú hefur ekki mikinn tíma í verkið þannig að þú gerir eins og þú getur en vonlítið er að uppfylla allar hugmyndirnar sem eru:
+  Gera má ráð fyrir nokkrum sýningum á verkinu.
+  Kerfið haldi utan um hvaða sæti er búið að selja á hverja sýningu.
+  Kerfið haldi utan um hversu margir miðar hafa verið seldir á hverja sýningu.
+  Það geta verið boðsmiðar (sætin notuð en engar tekjur)
+  Gjarnan má hafa dýrara í bestu sætin.
+  E.t.v. kemur það fyrir að miðum sé skilað.
+  Að sýningunni kemur ýmislegt starfsfólk og leikarar. (T.d. Leikstjóri, leikarar, farðarar, búningahönnun,
+    ljósamaður, dyraverðir o.s.frv.)
+  Hugsanlegt er að tvær mismunandi sýningar verði í gagni samtímis, þ.e. leikritið og söngleikurinn.
+  
+
+Kerfinu er ætlað að halda utan tekjurnar og hvernig þær koma til og starfsfólk á sýningunu. 
+Kerfið þarf að geta birt lista eins og sýningalista, nafnalista starfsfólks, o.fl.
+
+
+Hópum er bent á að skilgreina fyrst hvað þeir ætla að láta kerfið gera að lágmarki áður en farið er að forrita, síðan má alltaf bæta við. Það er engar sérstakar lágmarkskröfur heldur eru þetta hugmyndir sem þið getið byggt
+á.
+

@@ -1,0 +1,18 @@
+Forritunarkeppni 2004
+
+Dæmi 25
+
+Ağ útfæra stafla í klasanum stafli
+
+Hugtakiğ stafli er gagnagrind şar sem mögulegt er ağ bæta staki ofan á stafla og ef stak er 
+tekiğ úr stafla er şağ einnig tekiğ ofan af staflanum (ş.e. first in - last out regla).  Búa á
+til klasa sem útfærir stafla, en hvert stak í staflanum á ağ geyma eina heiltölu. Til şess ağ 
+búa til şennan klasa skal nota heiltölufylki, en gera má ráğ fyrir ağ í staflanum séu aldrei 
+fleiri en 20 stök.
+Ağgerğir sem stafli leyfir eru "baetavid" og "takaur". baetavid bætir staki á staflann og takaur
+tekur efsta stakiğ af staflanum.  
+
+Síğan skal búa til forrit sem notar şennan klasa, bır til hlutinn MinnStafli sem er tilvik af
+şessum stafla setur şrjár heiltölur í staflann (meğ baetavid ağgerğinni) og skrifar á skjá 
+stökin í staflanum (meğ takaur) ağgerğinni.
+

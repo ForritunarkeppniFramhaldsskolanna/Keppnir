@@ -1,0 +1,10 @@
+Forritunarkeppni 2006 - 2007
+
+Dæmi  14
+Búið til forrit sem spyr um kennitölu. Eins og við þekkjum er kennitala byggð þannig upp að fyrstu sex tölustafir tákna fæðingardag en tölustafur númer 11 táknar öldina (því við gerum ráð fyrir að tákn númer sjö sé - )
+Forritið svarar síðan hversu gamall þú ert í dag. Forritið gerir athugasemd ef viðkomandi er 110 ára eða eldri.
+Dæmi:
+Kennitala 120303-3340 – þriggja ára
+Kennitala 080303-3340 – fjögurra ára
+Kennitala 120303-3349 – 103 ára
+Kennitala 120303-3348 – of gamall

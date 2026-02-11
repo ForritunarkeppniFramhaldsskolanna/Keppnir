@@ -1,0 +1,10 @@
+Dæmi 11. 
+
+Sameiginlegir stafir:
+
+Verkefnið er að finna sameiginlega stafi í 2 orðum og skrifa út 
+orðin með þessum sameiginlegum stöfum í hástöfum.
+
+Ef inntak er:
+
+computer program => cOMPuteR PROgRaM

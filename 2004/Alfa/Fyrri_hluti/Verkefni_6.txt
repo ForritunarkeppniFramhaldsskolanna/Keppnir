@@ -1,0 +1,14 @@
+Forritunarkeppni 2004
+
+Dæmi 6
+
+Endurtekin tákn í textastreng
+
+Skrifið forrit sem les inn textasteng og athugar hvort ákveðin röð tákna (þ.e. minni 
+textastrengur) komi fyrir oftar en einu sinni í textastrengnum (þ.e. tvö eða fleiri tákn). 
+Forritið skrifar textastrenginn aftur út þar sem slíkir 
+hlutastrengir eru skrifaðir í hástöfum en önnur tákn í lágstöfum.
+
+Dæmi 
+Jón Sigurjónsson                skrifast JÓN sigurJÓNsson
+aBqelA                          skrifast abqela

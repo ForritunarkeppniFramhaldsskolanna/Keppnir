@@ -1,0 +1,7 @@
+Dæmi 9
+
+Skrifið forrit sem að skrifar út talnaröðina 1 1 2 3 5 8 13 21 34 55. 
+
+Hver tala í röðinni er samtala næstu tveggja talna á undan. 
+Notandi á að ráða hversu margar tölur í rununni hann skrifar út. 
+Nota á endurkvæmt fall sem reiknar hvert stak í röðinni.

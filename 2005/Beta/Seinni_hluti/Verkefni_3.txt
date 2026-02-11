@@ -1,0 +1,18 @@
+Forritunarkeppni - 2005
+
+Vinsamlega athugið að ef notaður er kóði sem hlaðið er inn af vefnum við lausn þessara 
+verkefna þurfa liðin að gera grein fyrir því þegar farið er yfir tæknilega 
+úrlausn verkefnisins.
+
+Dæmi 3  Othello.
+
+Búið til forrit sem líkir eftir leiknum Othello. Othello er leikinn á leikborði sem 
+er 8x8 reitir. Tveir leikendur eru í leiknum, sem hafa hvor sinn lit af leikplötum. 
+Markmið hvors leikmanns er að ljúka leiknum þannig að hann hafi sem flestar plötur í 
+sínum lit. Í byrjun leiks eru fjórar plötur á miðju borðinu (tvær af hvorum lit sem 
+raðast skáhallt hvor á móti annarri). Leikmenn skiptast á um að setja plötur á borðið 
+þannig að viðkomandi leikmaður nái að setja sína plötu sitt hvoru megin við plötu 
+andstæðingsins en þá skipta þær plötur andstæðingsins um lit. Til að sjá hvernig 
+leikurinn vinnur getum við t.d. skoðað slóðina:
+
+http://www.freegames.ws/games/boardgames/othello/othello.htm   

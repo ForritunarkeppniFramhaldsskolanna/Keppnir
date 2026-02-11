@@ -1,0 +1,8 @@
+Dæmi 15
+Keðja orða
+
+Við skilgreinum keðju orða sem runu orða þar sem öll orð byrja á sama staf og næsta orð endaði á.
+Ekki er gerður greinarmunur á há- og lágstöfum. Eftirfarandi runa er dæmi um keðju orða:
+afi Imbi ingibjörG gunnar reyndi
+Skrifið forrit sem les inn runu orða og athugar hvort orðin mynda keðju skv. ofangreindri lýsingu. 
+Til að ljúka innskráningu gerum við ráð fyrir að notandi eigi að slá inn táknið #.

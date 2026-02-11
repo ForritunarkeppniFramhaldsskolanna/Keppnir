@@ -1,0 +1,26 @@
+Gagnagrunnsverkefni: (alfa deild)
+
+Nemendabókhald fyrir framhaldsskóla:
+
+Kerfinu er ætlað að halda utan um nemendur,fög,einkunnir í fögum og geta birt lista eins og nafnalista,
+lista yfir nemendur í ákveðnu fagi, einkunnalista í ákveðnu fagi, eiknunnalista einstaks nemenda svo nokkur 
+dæmi séu nefnd. Kerfið þarf að geta skráð inn (stofnað) nemendur með nauðsynlegum upplýsingum, 
+stofnað námskeið með nauðsynlegum upplýsingum, skráð nemenda í námskeið, skráð nemenda úr námskeiði. 
+Í hverju námskeiði geta verið fleiri en 1 prof og skal kerfið geta meðhöndlað slíkt. Kerfið skal líka skilgreina
+lágmarkseinkunn í hverju fagi til að geta fengið lista yfir hverjir féllu. Síðan er æskilegt að bjóða upp á 
+einhverskonar tölfræði um nemendur og kennara og námskeið. Nemendandi skal geta fengið einkunnalista sem 
+reiknar aðaleinkunn. Kerfið skal geta skráð kennara í kerfið og þá að tengja 
+kennara við námskeið. Þá er hægt að bjóða kennara að fá lista yfir kennd námskeið, fá heildarlista yfir kennara og fleira.
+
+Ætlast er til að þið þróið kerfið í þá átt sem að ykkur þykir eðlilegust, sem dæmi má bæta við aðgangstakmörkunum 
+ef að nemendur eiga að geta skoðað sínar upplýsingar, útprentun á listum og annað sem til fellur eins og að geta tekið
+sama áfangann 2svar og þá úreldist 
+
+Allar töflur í gagnagrunni skulu vera á 3 Normal Formi ef þess er kostur, nota skal stefjur í grunninum ef það er
+í boði (stored procedure) og birting lista skal fyrst og fremst vera í gegnum skilgreindar sýnir (view) í 
+grunninum. 
+
+Hópar skulu reyna að lagskipta viðmóti eins og eðlilegt þykir miðað við forritunarumhverfi.
+
+Hópum er bent á að skilgreina fyrst hvað þeir ætla að láta kerfið gera að lágmarki áður en farið er að forrita, síðan
+má alltaf bæta við.

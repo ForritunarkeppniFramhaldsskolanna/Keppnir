@@ -1,0 +1,43 @@
+Forritunarkeppni 2006 - 2007
+
+Dæmi 21
+
+Við skilgreinum keðju orða sem runu orða þar sem fyrsti stafur í orði er sá sami og síðasti stafur í næsta orði á undan. Eftirfarandi runa er dæmi um keðju orða: 
+
+JÓN   NJÓLI  ILLIR RUNA ASKUR 
+
+Skrifið forrit sem les inn runu orða og athugar hvort mögulegt er að mynda keðju orða með þessum orðum.
+Dæmi
+JÓN 
+RUNA
+ASKUR 
+ILLIR
+NJÓLI
+geta myndað keðju orða skv. framangreindu.
+
+Dæmi 2
+JÓN 
+RUNA
+ASKUR 
+ILLIR
+geta ekki myndað keðju.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

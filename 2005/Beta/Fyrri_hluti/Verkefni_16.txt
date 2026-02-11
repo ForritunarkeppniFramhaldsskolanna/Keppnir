@@ -1,0 +1,34 @@
+Forritunarkeppni - 2005
+
+Dæmi 16
+Í bæjarfélagi nokkru verða kosningar á næsta ári. 
+Þrír listar bjóða sig fram sem við nefnum D, F og R listar. 
+Kosnir eru 15 bæjarstjórnarfulltrúar. Búið til forrit sem spyr um atkvæðafjölda sem 
+hver listi fær en forritið reiknar síðan hversu marga fulltrúa hver listi fær. 
+Til að ákvarða hversu marga fulltrúa hver listi fær er reiknað hvað hver frambjóðandi
+ hefur mörg atkvæði á bak við sig með því að taka heildaratkvæðafjölda listans og 
+deila með númeri viðkomandi frambjóðanda á listanum. Þeir fimmtán fulltrúar sem 
+hafa flest atkvæði á bak við sig skv. þessu ná kjöri.
+Dæmi
+Gerum ráð fyrir að atkvæði falli á eftirfarandi hátt:
+		D listi	F listi	R listi
+Atkvæði í		44000	8000	45000
+				
+1	sæti	44000	8000	45000
+2	sæti	22000	4000	22500
+3	sæti	14667	2667	15000
+4	sæti	11000	2000	11250
+5	sæti	8800	1600	9000
+6	sæti	7333	1333	7500
+7	sæti	6286	1143	6429
+8	sæti	5500	1000	5625
+9	sæti	4889	889	5000
+10	sæti	4400	800	4500
+11	sæti	4000	727	4091
+12	sæti	3667	667	3750
+13	sæti	3385	615	3462
+14	sæti	3143	571	3214
+15	sæti	2933	533	3000
+
+Þá hefur fulltrúi nr. fimmtán 6286 atkvæði á bak við sig, þannig að D og R listi 
+fá 7 fulltrúa, en F listi fær einn fulltrúa. 

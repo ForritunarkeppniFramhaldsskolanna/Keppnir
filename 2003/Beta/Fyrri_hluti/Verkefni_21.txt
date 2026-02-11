@@ -1,0 +1,43 @@
+Dæmi 19.
+
+Vartöluprófun á ISBN tölum
+
+ISBN tölur eru á öllum bókum og eru 10 stafir, en bara fyrstu 9 
+eru til að auðkenna bókina, 10 stafurinn er til að passa að hinir 
+9 séu réttir nánar tiltekið er reiknuð summa út frá hinum 9 og 10 
+stafurinn er hafður þannig að summan er deilanleg með 11. 
+
+Í raun eru reiknaðar 2 summur s1 og s2. 
+
+Hér er dæmi um útreikninginn
+
+Notum ISBN 0-13-162959-X (Tanenbaum Computer Networks). Reiknum s1: 
+
+
+NB: ef afstasta talan er X þá skal það túlkað sem talan 10
+
+       -----------------------------------------------------------------
+       ISBN 		     0   1   3   1   6   2   9   5   9   10(X)
+       Hlaupandi summa s1    0   1   4   5  11  13  22  27  36   46
+       -----------------------------------------------------------------
+      s1 er sem summa liðanna í ISBN númerinu
+
+
+Summa s2 er reiknuð með því að leggja saman hlaupandi summur s1: 
+
+
+       -----------------------------------------------------------------
+       s2                    0   1   5  10  21  34  56  83  119  165
+       -----------------------------------------------------------------
+
+Nú er hægt að sannreyna ISBN með því að kanna hvort 11 gengur upp í 165 sem er lokastaða s2.
+
+
+Inntak er þá ISBN tala með eða án bandstrikanna
+
+Dæmi:
+
+0-89237-010-6		Lögleg
+0-8306-3637-5		Ekki lögleg
+0-06-017758-6		Lögleg
+0-1315-2447-X		Lögleg

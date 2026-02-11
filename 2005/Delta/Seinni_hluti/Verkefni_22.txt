@@ -1,0 +1,11 @@
+Forritunarkeppni - 2005
+
+
+Dæmi 22
+Búið til forrit sem umbreytir sekúntum í klukkusturndir, mínútur og sekúntur.
+Dæmi
+Sláið inn fjölda sekúntna:    72
+Það eru: 0 klst, 1 mín og 12 sek
+Dæmi 2
+Sláið inn fjölda sekúntna:    3672
+Það eru: 1 klst, 1 mín og 12 sek

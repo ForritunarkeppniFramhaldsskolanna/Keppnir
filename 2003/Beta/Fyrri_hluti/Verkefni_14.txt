@@ -1,0 +1,2 @@
+Dæmi 11
+Búið til forrit sem les inn ótilgreindan fjölda talna. Forritið á að skrifa út meðaltal talnanna. 

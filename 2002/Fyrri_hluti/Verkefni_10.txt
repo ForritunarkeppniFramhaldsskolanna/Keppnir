@@ -1,0 +1,18 @@
+Númer: A10
+
+
+Búið til forrit sem les kennitölu en skilar til baka í hvaða stjörnumerki þessi kennitala er. (Einnig má slá inn fæðingardag og fæðingarmánuð en þá er hámarksstigafjöldi fyrir verkefnið 4 stig).
+
+Tafla með stjörnumerkjum:
+Hrútur (21. mars - 20. apríl)
+Naut (21. apríl - 21. maí)
+Tvíburi (22. maí - 20. júní)
+Krabbi (21. júní - 23. júlí)
+Ljón (24. júlí - 23. ágúst)
+Meyja (24. ágúst - 23. september)
+Vog (24. september - 22. október)
+Sporðdreki (23. október - 21. nóvember)
+Bogmaður (22. nóvember - 21. desember)
+Steingeit (22. desember - 20. janúar)
+Vatnsberi (21. janúar - 19. febrúar)
+Fiskur (20. febrúar - 20. mars)

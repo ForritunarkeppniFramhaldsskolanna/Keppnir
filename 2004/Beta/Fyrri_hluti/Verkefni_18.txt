@@ -1,0 +1,10 @@
+Forritunarkeppni 2004
+
+Dæmi 18
+
+Búið til forrit sem les inn nokkrar heiltölur. (Gera má ráð fyrir hámarki 20 tölum). Forritið birtir þá lista
+yfir allar tölur sem koma fyrir oftar en einu sinni.
+
+Dæmi:
+tölurnar 1 31 21 12 16 31 66 12 eru slegnar inn
+þá birtir forritið tölurnar 31 og 12.

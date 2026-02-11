@@ -1,0 +1,18 @@
+Númer: A14
+
+
+Búið til forrit sem skrifar út ferninga sem eru búnir til úr * tákninu. 
+
+Notandi forritsins á að slá inn tölur sem eru stærri en 0, og birtir þá forritið ferning í viðeigandi stærð. (Athugið að í láréttum línum ferningsins á að vera eitt biltákn á milli * táknanna). Til að ljúka innslætti er slegin inn talan 0.
+
+ 
+      Inntak:               Úttak:
+        3                   * * *
+        5                   *   *
+        0                   * * *
+
+                            * * * * *
+                            *       *
+                            *       *
+                            *       *
+                            * * * * *

@@ -1,0 +1,17 @@
+Forritunarkeppni - 2005
+
+Dæmi 24
+Hlutbundið verkefni
+Að útfæra bidröð í klasanum bidrod
+
+Hugtakið biðröð er gagnagrind þar sem mögulegt er að bæta staki aftan í biðröð 
+og ef stak er tekið úr biðröð er það tekið framan af röðinni. (first in, first out). 
+Búa á til klasa sem útfærir biðröð, en hvert stak í röðinni á að geyma eina heiltölu. 
+Til þess að búa til þennan klasa skal nota tengdan lista (linked list). 
+Aðgerðir sem biðröð leyfir eru "baetavid" og "takaur". baetavid bætir staki í biðröðina 
+og takaur tekur stak úr biðröðinni.
+
+Síðan skal búa til forrit sem notar þennan klasa, býr til hlutinn MinBidrod sem er 
+tilvik af
+þessum klasa setur þrjár heiltölur í röðina (með baetavid aðgerðinni) og skrifar á skjá 
+stökin í biðröðinni (með takaur) aðgerðinni.

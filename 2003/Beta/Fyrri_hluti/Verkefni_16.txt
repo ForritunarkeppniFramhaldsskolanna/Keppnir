@@ -1,0 +1,8 @@
+Dæmi 12
+Búa á til forrit sem les inn bílnúmer. Bílnúmer er samsett úr tveimur bókstöfum og þremur 
+tölustöfum. Forritið biður notanda að slá inn bílnúmer. Ef notandi slær inn bílnúmer sem 
+stenst reglurnar skrifar það "Þetta er löglegt bílnúmer" en annars skrifar það "Þetta er 
+ekki bílnúmer"
+
+HU761 Þetta er löglegt bílnúmer
+R1199 Þetta er ekki bílnúmer

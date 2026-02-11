@@ -1,0 +1,13 @@
+Forritunarkeppni 2006 - 2007
+
+Dæmi 1 
+Skrifið forrit sem spyr notanda að nafni. Forritið svarar Halló og síðan nafnið.
+
+Dæmi
+Hvað heitir þú: Jónas
+Halló Jónas
+
+eða:
+
+Hvað heitir þú: Elísabet Andrea Jónsdóttir
+Halló Elísabet Andrea Jónsdóttir

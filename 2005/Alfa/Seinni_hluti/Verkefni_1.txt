@@ -1,0 +1,13 @@
+Forritunarkeppni - 2005
+
+Vinsamlega athugið að ef notaður er kóði sem hlaðið er inn af vefnum við lausn þessara 
+verkefna þurfa liðin að gera grein fyrir því þegar farið er yfir tæknilega úrlausn 
+verkefnisins.
+
+Dæmi 1
+Gagnagrunns verkefni.
+
+Búið til ættfræðigagnagrunn. Gagnagrunnurinn svipar t.d. til Íslendingabókar fyrir 
+þá sem þekkja hana. Í grunninn má skrá inn einstaklinga, afkomendur þeirra og foreldra. 
+Grunninn má síðan hugsanlega nota til að rekja ættir, bæði forfeður og formæður, 
+sem og afkomendur. Einnig mætti hugsanlega rekja saman ættir tveggja einstaklinga.

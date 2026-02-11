@@ -1,0 +1,23 @@
+Dæmi 14:
+
+Ruglaðir maurar:
+
+Vísindamenn hafa rannsakað hegðun maura, nánar tiltekið hvernig 
+þeir koma upp úr maurabúi sem fall af tíma, sem er mjög
+skrítin hegðun en samt fannst mynstur sem má lýir þessu
+en það er skilgreint með talnarununinni M(i)
+
+M(1) = a
+M(2) = b
+M(n) = 
+ 	ef n er oddatala  þá er M(n) = 2*M(n-1) - M(n-2)
+	ef n er slétttala þá er M(n) = M(n-1) + M(n-2)
+
+þar sem M(n) er fjoldi maura sem koma út úr búinu á tímanum n (mældur í mínútum)
+
+Búið til forrit sem reiknar M(n) ef að a,b og n er inntak
+
+Ef inntak er:
+
+1 1 7   => Eftir 7 mínútur koma 7 maurar út
+1 1 11  => Eftir 11 mínútur koma 41 maurar út

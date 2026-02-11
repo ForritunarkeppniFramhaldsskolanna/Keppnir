@@ -1,0 +1,28 @@
+Forritunarkeppni - 2005
+
+Dæmi 26
+Búa á til forrit sem raðar keppendum í riðla í hlaupakeppni. 
+Forritið raðar hlaupurunum eftir getu, þ.e. í fyrsta riðil fara hlauparar sem 
+eiga bestan tímann, í riðil tvö fara hlauparar sem eiga besta tíma þegar búið er 
+að raða í riðil 1 o.s.frv. Gera má ráð fyrir mest 12 hlaupurum og að í hverjum 
+riðli séu 4 hlauparar. Forritið á að lesa inn besta tíma hvers hlaupara, 
+en tímann á að gefa upp í sekúntum.
+Dæmi:
+Tími á hlaupara 1:   142   (sekúntur)
+Tími á hlaupara 2:   131    
+Tími á hlaupara 3:   139    
+Tími á hlaupara 4:   128    
+Tími á hlaupara 5:   152    
+Tími á hlaupara 6:   141
+
+Niðurstaða:
+Riðill 1:
+Hlaupari  4   
+Hlaupari  2   
+Hlaupari  3   
+Hlaupari  6  
+
+Riðill 2:
+Hlaupari  1
+Hlaupari  5  
+   

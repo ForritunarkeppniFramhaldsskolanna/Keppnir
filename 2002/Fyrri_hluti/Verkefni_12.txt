@@ -1,0 +1,19 @@
+Númer: A12
+
+
+Búiğ til forrit sem less inn nöfn og fjölda şátttakenda úr skránni keppendur.dat og skrifar út persónuleg skilaboğ til şeirra í skránna TilKeppenda.dat
+
+Fyrsta línan í keppendur.dat inniheldur fjölda şáttakenda sem eru í skránni sem er heiltalan n > 0 N næstu línur innihalda nöfn şátttakenda, 1 á hverri línu og hvert nafn er ekki lengra en 20 stafir og ekki eru neinar eyğur í nafninu.
+
+Dæmi um inntak:
+
+3
+Atli
+Siggi
+Magga
+
+
+Dæmi um úttak:
+Velkomin(n), Atli, velkominn í keppnina!
+Velkomin(n), Siggi, velkominn í keppnina!
+Velkomin(n), Magga, velkominn í keppnina!

@@ -1,0 +1,15 @@
+Forritunarkeppni 2006 - 2007
+
+Dæmi 24
+Við geymum tímasetningu innan árs sem fjöldi sekúntna frá áramótum. Búið til forrit sem fær sekúntufjölda frá áramótum en forritið skrifar númer dags frá áramótum og tíma dagsins.
+Dæmi:
+Númer sekúntu 18185
+Dagur 1   kl. 5:03:05
+Númer sekúntu 363785
+Dagur 5   kl. 5:03:05
+
+
+
+
+
+

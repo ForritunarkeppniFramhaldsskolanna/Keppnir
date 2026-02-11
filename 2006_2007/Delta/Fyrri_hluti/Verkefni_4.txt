@@ -1,0 +1,9 @@
+Forritunarkeppni 2006 - 2007
+
+Dæmi 4 
+Búið til forrit sem les inn eitt orð. Forritið greinir síðan hvort einhvers staðar í orðinu séu tveir samliggjandi stafir sem eru eins (þ.e. sami stafurinn komi tvisvar í röð) og merkir það með því að setja * framan og aftan við stafina sem eru eins. Dæmi
+
+Slegið er inn orðið:  forritunarkeppni
+Forrit skrfar: fo*rr*itunarke*pp*ni
+Slegið er inn orðið: Kafaldsbylur
+Forrit skrifar: Kafaldsbylur

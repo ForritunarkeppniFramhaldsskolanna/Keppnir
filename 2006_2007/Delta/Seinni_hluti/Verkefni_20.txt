@@ -1,0 +1,6 @@
+Forritunarkeppni 2006 - 2007
+
+Dæmi 20
+Forritunarnörd sem finnst góðar pizzur vill kaupa pizzur sem eru ódýrastar á flatarmálseiningu. (Flatarmál hrings er radis * radius * 3.1415). Búið til forrit sem spyr um verð á tveimur pizzum og þvermál þeirra, en forritið reiknar síðan hvor pizzan er ódýrari per flatarmálseiningu.
+
+

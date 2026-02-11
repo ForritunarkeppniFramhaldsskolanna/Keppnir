@@ -1,0 +1,12 @@
+Forritunarkeppni - 2005
+
+
+Dæmi 18
+Slá inn tölustaf en forrit skrifar út orð fyrir viðkomandi tölustaf. 
+Gera má ráð fyrir að tölustafurinn sé á milli -100 og +100 að báðum tölum meðtöldum
+Dæmi
+Sláðu inn tölustaf:  54
+fimmtíu og fjórir
+Annað dæmi
+Sláðu inn tölustaf:  -61
+mínus sextíu og einn

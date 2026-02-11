@@ -1,0 +1,4 @@
+
+Gagnagrunnsforrit. 
+
+Búið til forrit til að halda utan um lagasafn/tónlistarsafn. Æskilegir möguleikar eru t.d. að hægt sé að fletta upp lögum eftir mismunandi skilyrðum svo sem flytjendum, tónlistarstefnu, heiti geisladisks o.fl. Forritið má gjarnan halda utan um bæði lög á geisladiskum, og einnig mp3 lög. Að sjálfsögðu má útvíkka grunninn í allar áttir, t.d. halda einnig utan um myndbönd, DVD, gefa kost á að spila lögin, gera bæði vefviðmót og gluggaforritsviðmót. 

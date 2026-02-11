@@ -1,0 +1,14 @@
+Forritunarkeppni - 2005
+
+Dæmi 25
+
+Búið til forrit sem ræsir tvo þræði. Annar þráðurinn skal framreiða  einn af fjórum réttum 
+af handahófi og bíður svo í 1-2 sekúndur (velja  skal tíma af handahófi, minnst 1 sekúnda 
+en mest 2 sekúndur) áður en næsti réttur er framreiddur af handahófi o.s.frv. 
+Réttirnir eru í raun einfaldur strengur og skulu þeir vera: 
+"hafragrautur", "hrútspungar", "soðin ýsa" og "súr hvalur". 
+Hinn þráðurinn "borðar" þá rétti sem framreiddir eru og skrifar út á skjá hvað 
+honum fannst um hvern rétt (t.d. "namm hafragrautur" og "ojj hrútspungar"). 
+Athugið að þráðurinn sem neytir réttarins þarf að bíða eftir að þráðurinn sem 
+framreiðir skili af sér rétti áður en hann borðar hann (þ.e. ekki má borða sama 
+réttin tvisvar og ekki má neyta réttar áður en hann er framreiddur).  

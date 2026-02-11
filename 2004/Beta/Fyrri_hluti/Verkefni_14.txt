@@ -1,0 +1,8 @@
+Forritunarkeppni 2004
+
+Dæmi 14 
+
+Búið til forrit sem les inn aldur og nöfn á 10 strákum og 10 stelpum. Forritið parar síðan sama stráka og stelpur 
+þannig að elsti strákurinn parast með elstu stelpunni, sá næst elsti með næst elstu stelpunni o.s.frv. Hugsanlegt
+er að nokkrir strákar eða nokkrar stelpur séu jafn gamlar en þá má tilviljun ráða hvaða strákur lendir með hvaða
+stelpu 

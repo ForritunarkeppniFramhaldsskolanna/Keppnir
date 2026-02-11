@@ -1,0 +1,17 @@
+Forritunarkeppni 2004
+
+Dæmi 19
+
+Búið til forrit sem les inn tölvupóstfang (t.d. jon@internet.is) Forritið á að athuga hvort 
+póstfangið er á löglegu formi
+skv. eftirfarandi skilgreiningu:
+- fyrst kemur textastrengur sem er án @ merkis
+- síðan kemur @ merki
+- síðan kemur textastrengur
+- síðan kemur punktur (.)
+- síðan textastrengur
+
+Dæmi:
+  jon@internet.is      er löglegt
+  jon@internet         er ólöglegt
+  @internet.is         er ólöglegt

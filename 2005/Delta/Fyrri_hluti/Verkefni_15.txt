@@ -1,0 +1,16 @@
+Forritunarkeppni - 2005
+
+
+Dæmi 15
+Forrit sem les inn lengd tveggja skammhliða í rétthyrndum þríhyrningi 
+en skilar til baka lengd langhliðarinnar. Nota má Pýþagorasarreglu til 
+að reikna lengd langhliðarinnar. 
+l_langhl = kvaðratrót af ( (l_skammhl1) í öðruveldi   +  (l_skammhl2) í öðruveldi ) )
+Hér táknar:
+l_langhl : lengd langhliðar
+l_skammhl1 : lengd skammhliðar 1
+l_skammhl2 : lengd skammhliðar 2
+Dæmi:
+Ef skammhlið 1 er: 4
+og skammhlið 2 er 3
+þá er langhliðin 5

@@ -1,0 +1,5 @@
+Forritunarkeppni 2006 - 2007
+
+Dæmi 17
+Búið til forrit sem umbreytir fjölda metra yfir í fjölda tomma. Forritið spyr um fjölda metra en birtir tommufjöldann. Miða á við að í einni tommu séu 2,53 cm.
+Dæmi: 1,48 metrar eru 58,89 tommur

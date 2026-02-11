@@ -1,0 +1,7 @@
+Forritunarkeppni 2006 - 2007
+
+Dæmi 15
+Búið til forrit sem að reiknar gildi tölu í heiltöluveldi. Forritið má eingöngu nota reikniðagerðirnar samlagning og margföldun og ekki má nota önnur föll eða reikniaðgerðir í því forritunarmáli sem þið eruð að nota..
+Dæmi
+2 í veldinu 3 er 8
+2,5 í veldinu 3 er 15,625

@@ -1,0 +1,6 @@
+Forritunarkeppni 2006 - 2007
+
+Dæmi 1  
+
+Búið til forrit sem skrifar út allar oddatölur á ákveðnu bili. T.d. ef bilið er frá 6 upp í 11 eiga að skrifast út tölurnar 7 9 og 11. Sama myndi skrifast út ef valið er bilið frá 7 upp í 12. Notandinn á að ákveða hvaða bil er valið. 
+

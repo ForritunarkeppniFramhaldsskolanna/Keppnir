@@ -1,0 +1,26 @@
+Forritunarkeppni 2006 - 2007
+
+Dæmi 11
+Búið til forrit sem les inn nokkur orðapör. Þegar búið er að slá inn pörin er spurt um orð en forritið á að birta hitt orðið í parinu. Ef orðið er ekki hluti af orðapari á forritið að gera athugasemd um að þetta orð sé ekki hluti af orðapari. Gera má ráð fyrir að mest séu slegin inn 6 orðapör. Ef henta þykir má slá orðin inn í textaskrá og lesa þau þaðan.
+Dæmi:
+Fjöldi para: 3
+par 1: hvítt svart
+par 2: fugl fiskur
+par 3: upp niður
+Sláðu inn orð: upp  
+Hitt orðið er: niður
+
+Dæmi 2:
+Fjöldi para: 3
+par 1: hvítt svart
+par 2: fugl fiskur
+par 3: upp niður
+Sláðu inn orð: niður  
+Hitt orðið er: upp
+
+Dæmi 3:
+Fjöldi para: 2
+par 1: hvítt svart
+par 2: fugl fiskur
+Sláðu inn orð: hvítur  
+Þetta orð er ekki hluti af orðapari

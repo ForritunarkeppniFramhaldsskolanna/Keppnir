@@ -1,0 +1,22 @@
+Forritunarkeppni - 2005
+
+Dæmi 14
+Búið til forrit sem nota á til að leysa “dulkóða”. Forritið les inn talnarunu, 
+en hver tala í talnarununni táknar í raun ákveðið tákn. 
+Táknið sem talan stendur fyrir getur verið tölustafur, bókstafur eða biltáknið. 
+Notandinn slær inn hvaða tákn hver tala stendur fyrir. 
+Ef notandinn kýs að slá inn minna en 10 tákn getur hann slegið inn $ þegar hætta á 
+innskráningu. Dæmi um keyrslu forrits gæti verið:
+Fyrir hvað stendur talan 0?       (hér slær notandi inn bil táknið)
+Fyrir hvað stendur talan 1? ó
+Fyrir hvað stendur talan 2? æ
+Fyrir hvað stendur talan 3? l
+Fyrir hvað stendur talan 4? m
+Fyrir hvað stendur talan 5? v
+Fyrir hvað stendur talan 6? a
+Fyrir hvað stendur talan 7? þ
+Fyrir hvað stendur talan 8? T
+Fyrir hvað stendur talan 9? $
+
+Sláið inn dulkóða: 81407523 
+Ráðning kóða: Tóm þvæla

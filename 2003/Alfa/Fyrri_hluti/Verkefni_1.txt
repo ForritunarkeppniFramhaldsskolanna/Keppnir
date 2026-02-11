@@ -1,0 +1,2 @@
+Dæmi 1
+Búið til forrit sem tekur inn eina heiltölu n. Forritið skrifar síðan á skjá hvort talan n er prímtala eða ekki. 

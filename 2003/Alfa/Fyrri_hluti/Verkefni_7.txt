@@ -1,0 +1,40 @@
+Dæmi 7 
+
+
+Búið til forrit sem les inn nöfn n knattspyrnuliða. 
+Forritið skrifar út mótaskrá sem inniheldur nægilegar umferðir sem þarf 
+til að öll liðin keppi við hvert annað. Ef liðafjöldi er oddatala situr 
+eitt lið hjá í hverri umferð.
+
+
+Inntak:
+
+a,b,c,d,e,f
+
+úttak
+
+1. umferð
+	a-b
+	c-d
+	e-f
+	
+2. umferð
+	a-c
+	e-d
+	b-f
+	
+3. umferð
+	a-d
+	e-b
+	c-f
+	
+4. umferð
+	a-e
+	c-b
+	d-f
+	
+5. umferð
+	a-f
+	b-d
+	c-e
+	

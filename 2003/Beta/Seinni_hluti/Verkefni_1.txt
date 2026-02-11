@@ -1,0 +1,26 @@
+Dæmi 1 - síðari hluti
+
+Athugið að í síðari hluta á aðeins að velja eitt dæmi, þ.e. dæmi 1 eða dæmi 2.
+
+Mastermind
+ 
+Búið til forrit sem líkja á eftir því að við séum að spila leikinn mastermind í/við tölvuna. 
+Leikurinn fer þannig fram að tölvan velur liti á nokkra pinna. Sá sem leikur við tölvuna á 
+að reyna að giska á hvaða liti tölvan valdi. Í grunnútgáfu forritsins má reikna með ákveðnum 
+fjölda lita og ákveðnum fjölda pinna. Flækjustig forritsins getur verið breytilegt eftir
+getu hvers og eins. 
+
+Þannig getur fjöldi pinna verið fastur eða breytilegur eftir því hversu flókinn þið viljið hafa 
+leikinn. Fjöldi lita getur einnig verið breytilegur en miða skal við a.m.k. gulan, rauðan, grænan 
+og bláan. Leikurinn getur einnig verið stillanlegur hvað varðar fjölda tilrauna notandans til að 
+leysa þrautina
+
+Tölvan svarar leikmanninum hversu marga rétta liti á réttum stað tölvan valdi og hversu marga 
+rétta liti en á röngum stað tölvan valdi.
+
+Að sjálfsögðu má endurbæta forritið enn frekar.
+
+Í mastermind forritinu má ekki nota kóða sem fenginn er af netinu til að útfæra lógík í leiknum.
+
+Þennan leik má hvort heldur útfæra með textabundnum notendskilum eða grafískum notendaskilum.
+

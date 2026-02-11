@@ -1,0 +1,19 @@
+Númer: A06
+
+
+Búið til forrit sem skrifar út á skjáinn talnaröð sem er í 3 dálkum og 15 línum
+
+
+Dálkur 1: Línunúmer í talanröðinn sem byrjar á 1, svo 2, 3, 4, .... 
+Dálkur 2: Fyrsti lína inniheldur oddatöluna 1, næsta lína 3, svo 5, svo 7, .... 
+Dálkur 2: Summu talna í dálki 2 til og með tölunnar sem er í sömu röð Fyrst er því 1, svo 1+3, svo 1+3+5, ... 
+
+
+Dæmi um útttak
+   1    1    1     
+   2    3    4   
+   3    5    9   
+   4    7    ?   
+   5    9    ?   
+   6   11    ?   
+   7   13    ?   . . .

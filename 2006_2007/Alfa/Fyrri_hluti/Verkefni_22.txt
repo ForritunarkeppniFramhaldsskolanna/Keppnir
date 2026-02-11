@@ -1,0 +1,32 @@
+Forritunarkeppni 2006 - 2007
+
+Dæmi 22 
+Búið til forrit sem spyr um tvær heiltölur. Forritið leggur tölurnar saman og birtir summu talnanna og síðan umraðar forritið summunni þannig að aftasti tölustafur í summunni verður fremsti tölustafurinn, næst aftasti verði sá næst fremsti o.s.frv.
+
+Dæmi:
+59 og 23
+Summan verður 82 en umröðuð summa verður 28
+
+771 og 222
+summan verður 993 en umröðuð summa verður 399
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

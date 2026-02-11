@@ -1,0 +1,19 @@
+Númer: A04
+
+
+Búið til fall sem tekur inn tvær heiltölur  a og n. Fallið á að skila til baka tölunni a sem búið er að hefja í veldið n. Ekki má nota hjálparföll til að leysa þetta verkefni. Búið einnig til forrit sem notar þetta fall. 
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+

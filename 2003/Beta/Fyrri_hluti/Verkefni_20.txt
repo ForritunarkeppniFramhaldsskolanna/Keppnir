@@ -1,0 +1,2 @@
+Dæmi 14
+Búið til forrit sem raðar ótilgreindum fjölda af heiltölum í vaxandi röð. Gera má ráð fyrir að hámarksfjöldi talna sem raða á sé 20

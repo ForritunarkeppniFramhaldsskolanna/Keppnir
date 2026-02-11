@@ -1,0 +1,7 @@
+Forritunarkeppni 2006 - 2007
+
+Dæmi 5.  
+
+Búið til forrit sem skrifar út allar tölur á ákveðnu bili frá byrjunartölu að lokatölu.
+T.d. ef bilið er frá 6 upp í 11 eiga að skrifast út tölurnar 6 7 8 9  10 11. í þessari röð
+Ef valin er valið er bilið frá 11 til 6 á að skrifast 11 10 9 8 7 6 í þessari röð. Notandinn á að ákveða hvaða bil er valið. 

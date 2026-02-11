@@ -1,0 +1,15 @@
+Forritunarkeppni 2004
+
+Dæmi 10
+
+Lotubundinn textastrengur
+
+Við skilgreinum lotubundinn textastreng sem textastreng þar sem sömu stafir koma fyrir aftur og aftur í sömu röð 
+(a.m.k. tvisvar sinnum). Ekki er gerður greinarmunur á há- og lágstöfum og biltákn skipta ekki máli. Skoðum nokkur 
+dæmi:
+abca bcab c          er lotubundinn textastrengur þar sem lotan er abc og kemur fyrir þrisvar sinnum.
+amma má fara í MA    er ekki lotubundinn textastengur
+Nammi nammi          er lotubundinn textastrengur.
+
+Skrifið forrit sem les inn textasteng og athugar hvort viðkomandi stengur er lotubundinn strengur. Forritið segir
+til um hvort strengurinn sé lotubundinn eða ekki. 

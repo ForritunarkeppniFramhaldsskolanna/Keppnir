@@ -1,0 +1,10 @@
+Forritunarkeppni - 2005
+
+
+Dæmi 1
+
+Búið til forrit sem les inn eitt orð. Forritið skrifar síðan hvað eru
+ margir stafir í orðinu.
+Dæmi
+Slegið er inn orðið:  forritunarkeppni
+Orðið er 16 stafir

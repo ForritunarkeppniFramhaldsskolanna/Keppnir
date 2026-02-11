@@ -1,0 +1,5 @@
+Dæmi 2
+Búið til forrit sem spyr um hitastig í gráðum á Farenheit
+skala, en skilar til baka hvert hitastigið er í gráðum á Celsius. Ef Tc er
+hitastig á Celsius skala og Tf er hitastig á Farenheit skala gildir jafnan:
+Tc = (5/9)*(Tf-32). Skila á niðurstöðum með a.m.k. 2 aukastafa nákvæmni.

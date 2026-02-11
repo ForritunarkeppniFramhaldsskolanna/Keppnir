@@ -1,0 +1,7 @@
+Forritunarkeppni - 2005
+
+Dæmi 28
+Búið til tvö forrit, annað forritið heitir forritA en hitt forritið heitir forritB. 
+Við byrjum á að keyra upp forritA. Það forrit ræsir forritB en stöðvar síðan keyrslu 
+forritsB eftir hálfa mínútu. ForritB á að skrifa textann “ForritB í gangi” með u.þ.b
+ einnar sekúntu millibili.

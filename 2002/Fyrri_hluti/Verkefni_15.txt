@@ -1,0 +1,23 @@
+Númer: A99
+
+
+Fareþgar sem fljúga með flugfélaginu Loftköst hafa tekið eftir því að í hvert sinn sem flugvélin dettur niður þá tapast 20% af vatninu í vatnsglasinu sem farþeginn heldur á og í hvert sinn sem flugvélin hoppar upp þá tapast 10% af vatninu.
+
+Búið til forrit sem les inn hversu mikið er eftir í glasinu og finnur út hveru oft flugvélin hefur farið upp og/eða niður og skrifar það út á skjáinn.
+
+Inntaksskráin er PROBLEMB.DAT, sem er textaskrá sem inniheldur í hverri línu tölu <1 með 6 aukastöfum fyrir aftan kommuna sem táknar magnið sem eftir er í glasinu. Talan mun alltaf svara til magns sem hægt er að fá með einhverri samsetningu af upp og niður sveiflum fluvélarinnar og mun rétt samsetning skila nákvæmlega þessari tölu með 6 aukastöfum.
+
+
+Forritið skal skrifa út á skjá fjölda upp og niðursveilfna sem þarf fyrir hverja tölu í inntaksskránni
+
+
+Dæmi um inntak:
+0.720000
+0.414720
+
+
+Dæmi um úttak
+Thad voru 1 niðursveifla og 1 uppsveifla
+Thad voru 3 niðursveiflur og 2 uppsveiflur
+
+

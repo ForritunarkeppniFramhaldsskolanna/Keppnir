@@ -1,0 +1,34 @@
+Forritunarkeppni - 2005
+
+Dæmi 30
+
+Flugfélag hefur óskað eftir að við búum til forrit sem segir til um 
+hvort við getum notað leiðakerfi flugfélagsins til að til að fljúa á milli tveggja borga. 
+Inntak í forritið er textaskrá (við megum einnig láta slá inn inntakið af lyklaborði) sem 
+inniheldur lista af flugleiðum sem flugfélagið flýgur á. Hver lína í listanum inniheldur 
+eftirfarandi
+- heiti borgar sem flogið er frá 
+- heiti borgar sem flogið er til.
+Skráin gæti þá litið þannig út:
+A B
+B A
+A C
+C D
+D A
+D E
+
+Í þessu tilviki flýgur flugfélagið frá borg A til borgar B og einnig öfuga leið 
+þ.e. frá borg B til borgar A. Flugfélagið flýgur frá borg A til borgar C 
+(en ekki öfuga leið frá C til A) frá C til D, frá D til A og frá D til E.
+
+Notandi forritsins getur nú spurt um leið milli tveggja borga t.d.:
+frá A til C (svar A-C)
+frá C til A (svar C-D og D-A)
+frá A til E (svar A-C og C-D og D-E)
+frá E til A (svar: ekki mögulegt)
+
+Forritið þarf sem sagt að segja til um hvort mögulegt sé að nota leiðakerfi 
+flugfélagsins til að fljúga milli þessara staða, og ef það er mögulegt þarf forritið 
+að gefa upp að minnsta kosti eina flugleið (Ef margir möguleikar er nóg að gefa upp 
+einn möguleika sem virkar).
+

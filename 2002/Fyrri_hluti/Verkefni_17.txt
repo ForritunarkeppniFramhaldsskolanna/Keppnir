@@ -1,0 +1,9 @@
+Númer A17
+
+
+Dulkóðun:
+
+Skrifið forrit sem tekur textastreng sem inniheldur bókstafi og/eða tölur en engin bil og dulkóðar strenginn með dulkóðunaraðferð að eigin vali, forritið skal einnig geta afkóðað strengi til baka í upprunalaget form.  Notandi skal geta slegið inn streng og séð hvernig hann er dulkóðaður.  Notandi skal líka geta slegið inn dulkóðaðan streng og fengið hann afkóðaðann til baka.
+
+
+Ekki má nota innbyggð dulkóðunarföll heldur skal hanna eigin dulkóðunaraðferð.

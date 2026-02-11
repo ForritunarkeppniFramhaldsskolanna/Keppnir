@@ -1,0 +1,8 @@
+Forritunarkeppni 2004
+
+Dæmi 15
+
+Tengdur listi sem inniheldur heiltölur er með tilvísun sem vísar á fyrsta stakið (hnút) í 
+listanum. Búið til forrit sem býr til tengdan lista, spyr um heiltölu og setur heiltöluna aftast
+í listann. Forritið spyr síðan um nýja tölu sem sett er aftast í listann þar til talan -1 er 
+slegin inn þá hættir forritið. 

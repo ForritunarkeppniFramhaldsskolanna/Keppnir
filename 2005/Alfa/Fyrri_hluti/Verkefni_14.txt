@@ -1,0 +1,31 @@
+Forritunarkeppni - 2005
+
+
+Dæmi 14
+Ekki á að nota forrit sem hefur fleiri en einn þráð til að leysa þetta verkefni. 
+(annars staðar í þessum verkefnum er slíkt dæmi)
+Við eigum að búa til forrit sem líkir eftir blikkandi baujum sem eru á sundunum 
+úti fyrir Reykjavík. Ein af þessum baujum blikkar með gulu ljósi á þriggja sekúntna 
+millibili. Önnur þessara bauja blikkar með grænu ljósi á fimm sekúntna millibili. 
+Við eigum að skrifa forrit sem byrjar á því að spyrja hversu lengi það eigi að “blikka”.
+ Síðan skrifar forritið með þriggja sekúntna millibili orðið “Gult” og síðan hversu 
+margar sekúntur eru síðan það var ræst og með fimm sekúntna millibili á forritið að 
+skrifa orðið “Grænt” og síðan hversu margar sekúntur eru síðan það var ræst. 
+Dæmi:
+Í hversu margar sekúntur á forritið að vinna: 30
+Gult 3
+Grænt 5
+Gult 6
+Gult 9
+Grænt 10
+Gult 12
+Gult 15
+Grænt 15       (hér skiptir ekki máli hvort kemur á undan)
+Gult 18
+Grænt 20
+Gult 21
+Gult 24
+Grænt 25
+Gult 27
+Grænt 30      (hér skiptir ekki máli hvort kemur á undan)
+Gult 30

@@ -1,0 +1,8 @@
+Dæmi 8
+Búið forrit sem spyr notanda hvaða margföldunartöflu á að birta, síðan birtir forritið
+viðkomandi margföldunartöflu. Ef t.d er beðið um 5 sinnum töfluna á að skrifast:
+1 x 5 = 5
+2 x 5 = 10
+.....
+.....
+10 x 5 = 50

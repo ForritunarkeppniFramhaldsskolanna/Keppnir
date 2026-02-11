@@ -1,0 +1,6 @@
+Forritunarkeppni 2004
+
+Dæmi 4 
+
+Búið til forrit sem spyr um lengd í fetum og tommum, en skilar til baka hver lengdin er í metrum og sentimetrum. 
+Gera má ráð fyrir að í einni tommu séu 2.53 cm og að í einu feti séu 30.5 cm.

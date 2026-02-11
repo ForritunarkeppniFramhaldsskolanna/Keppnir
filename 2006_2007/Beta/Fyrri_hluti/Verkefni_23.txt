@@ -1,0 +1,26 @@
+Forritunarkeppni 2006 - 2007
+
+Dæmi 23
+Búa á til forrit sem á að reikna pí. Aðferðin gengur út á að finna slembitölur (slembitala = random tala) fyrir x og y hnit á bilinu frá -1 til +1. Forritið athugar síðan hvort viðkomandi hnit eru inni í hring með radius 1. (hnitin eru innan hrings ef x2 + y2 < 1 ). Forritið endurtekur þessa vinnslu síðan mjög oft en hlutfall punkta sem lenda innan hringsins má síðan nota til að reikna pí.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

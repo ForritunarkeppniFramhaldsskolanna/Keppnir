@@ -1,0 +1,33 @@
+Forritunarkeppni - 2005
+
+Vinsamlega athugið að ef notaður er kóði sem hlaðið er inn af vefnum við lausn þessara 
+verkefna þurfa liðin að gera grein fyrir því þegar farið er yfir tæknilega 
+úrlausn verkefnisins.
+
+Dæmi 2.
+Búið til forrit sem líkir eftir myllu leiknum. Flestir þekkja mylluna gamalkunnu. 
+Hún er leikin á mylluborði svipuðu því sem við sjáum hér að neðan.
+
+0--------0--------0
+|        |        |
+|        |        |
+|  0-----0-----0  |
+|  |     |     |  |
+|  |  0--0--0  |  |
+0—-0--0     0--0--0
+|  |  0--0--0  |  |
+|  |     |     |  |
+|  0-----0-----0  |
+|        |        |
+|        |        |
+0--------0--------0
+
+Tveir leikmenn taka þátt í leiknum annar með svartar og hinn hvítar plötur 
+(eða peð) sem settar eru á horn línanna eða þar sem línurnar skarast 
+(þ.e. þar sem við höfum merkt 0) Hvor leikmaður hefur 9 plötur sem þeir skiptast á að 
+leggja á borðið. Nái annar hvor leikmaðurinn að leggja þrjár plötur í röð fær hann myllu, 
+en þá má hann fjarlægja eina plötu andstæðingsins (þó ekki plötu sem er myllu). 
+Þegar allar plötur hafa verið lagðar á borðið skiptast leikmennirnir á um að færa til 
+eigin plötu um eitt sæti eftir línunum. Nái hann að búa til myllu, má hann áfram 
+fjarlægja eina plötu frá andstæðingnum. 
+Leikmaður sem nær fyrr að fjarlægja allar nema tvær plötur andstæðingsins vinnur leikinn

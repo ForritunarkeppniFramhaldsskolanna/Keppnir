@@ -1,0 +1,11 @@
+Forritunarkeppni 2004
+
+Dæmi 1
+
+Búið til forrit sem spyr um nafn notandans. Forritið skrifar síðan:
+"Velkomin í forritunarkeppnina 2004", síðan nafnið sem slegið var inn, og síðan textann ". Þetta verður örugglega 
+skemmtilegur dagur"
+
+Dæmi um keyrslu forrits:
+Hvað heitir þú? Jónas
+Velkomin í forritunarkeppnina 2004 Jónas. Þetta verður örugglega skemmtilegur dagur

@@ -1,0 +1,5 @@
+Forritunarkeppni 2004
+
+Dæmi 5 
+
+Búið til forrit sem er eins og næsta forrit á undan nema að í þessu dæmi getur notandinn valið hvort færa á úr fetum og tommum í metra og sentimetra eða öfugt.

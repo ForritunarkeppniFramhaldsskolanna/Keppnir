@@ -1,0 +1,22 @@
+Dæmi 12.
+
+Er þetta þríhyrningur:
+
+Verkefnið er að kanna hvort uppgefin 3 hnit á forminu (x,y) geta myndað þríhyrning. 
+
+
+Ef inntak er:
+
+0,0
+4,1
+3,9
+
+Úttak: Getur myndað þríhyrning
+
+Ef inntak er:
+
+0,-4
+2,2
+1,-1
+
+Úttak: Getur ekki myndað þríhyrning

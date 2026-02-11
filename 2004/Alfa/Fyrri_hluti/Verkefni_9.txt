@@ -1,0 +1,11 @@
+Forritunarkeppni 2004
+
+Dæmi 9 
+
+Lesa inn pósitífa heiltölu. Forritið breytir tölunni þannig að fremsti stafur tölunnar verður sá
+ aftasti en aðrir stafir eru óbreyttir.  
+
+Dæmi
+378 verður 783
+1998 verður 9981
+121 verður 211

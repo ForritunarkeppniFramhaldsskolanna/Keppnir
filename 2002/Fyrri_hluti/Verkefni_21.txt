@@ -1,0 +1,12 @@
+Númer: A21
+
+Gefin er runa af heiltölum sem eru bæði plús og mínus tölur. Skrifið forrit sem finnur stærstu mögulegu summu samliggjandi talna í röðinni. 
+
+
+Tölur geta verið jákvæðar eða neikvæðar
+
+Dæmi:
+
+-2, 11, -4, 13, -4, 2 Stærsta summa er 11+(-4)+13 = 20
+
+1, -3, 4, -2, -1, 6   Stærsta summa er 4+(-2)+(-1)+6 = 7

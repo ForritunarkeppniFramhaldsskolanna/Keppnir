@@ -1,0 +1,8 @@
+Forritunarkeppni 2004
+
+Dæmi 24
+
+Skrifið forrit til þess að spjalla við annan notanda á netinu.  Forritið er í senn bæði miðlari
+og biðlari því það sem þið skrifið á lyklaborðið þarf að senda til mótaðilans og einnig þarf að taka við því sem hann hefur skrifað og birta það.
+Forritið má vera konsól-forrit, en þá þarf að huga vel að skjástýringum, svo texti mótaðilans 
+blandist ekki saman við þann sem verið er senda.  Útfærsla í gluggaumhverfi gæti verið með tvö aðskilin skjásvæði, t.d. eins og gert er í MSN-Messenger. 

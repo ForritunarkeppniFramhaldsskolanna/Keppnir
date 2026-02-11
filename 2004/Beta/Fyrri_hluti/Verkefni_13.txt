@@ -1,0 +1,11 @@
+Forritunarkeppni 2004
+
+Dæmi 13
+
+Búið til forrit sem les inn þrjár heiltölur sem tákna dag mánuð og ár. Forritið skilar til baka hvort dagsetningin
+sé lögleg. Forrit má gera ráð fyrir að dagsetningin sé á bilinu frá 1.1.1900 til 1.1.2010. 
+ 
+Dæmi
+dagsetningin 1.1.1999 er lögleg dagsetning
+dagsetningin 29.2.1999 er ólögleg dagsetning
+dagsetningin 29.2.1960 er lögleg dagsetning

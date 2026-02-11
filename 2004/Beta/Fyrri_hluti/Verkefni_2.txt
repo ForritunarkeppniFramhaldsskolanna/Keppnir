@@ -1,0 +1,8 @@
+Forritunarkeppni 2004
+
+Dæmi 2 
+
+Búið til forrit sem spyr um tvær tölur. Forritið margfaldar tölurnar saman og skrifar hver niðurstaðan er.
+
+Dæmi:
+Notandi slær inn tölurnar 2.1 og 3.3 en forritið skilar niðurstöðunni 6.93

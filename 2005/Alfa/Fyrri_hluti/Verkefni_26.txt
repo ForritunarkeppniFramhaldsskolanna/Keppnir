@@ -1,0 +1,15 @@
+Forritunarkeppni - 2005
+
+
+Dæmi 26
+Búið til tvö forrit (client og server) sem tala saman með netsamskiptum. 
+Hægt á að vera að ræsa þjóninn þannig að hann fari í biðstöðu eftir fyrirspurn 
+frá biðlara. Biðlarinn skal virka þannig að hann taki við tveimur færibreytum. 
+Sú fyrsta er vistfang miðlara (IP tala) og sú seinni er slóð á því formi sem 
+skráarkerfi miðlarans styður (t.d. “c:\temp” ef um er að ræða Windows tölvu). 
+Biðlarinn sendir strenginn sem inniheldur slóðina yfir á miðlarann. 
+Miðlarinn tekur við strengnum og athugar hvort slóðin sem hann hefur að geyma 
+sé til á tölvunni sem hann keyrir á. Ef slóðin er til svarar miðlarinn með því 
+að senda textastrenginn “slóð er til” á biðlarann en ef slóðin er ekki til svarar 
+miðlarinn með “slóð er ekki til”. Biðlarinn tekur við þessum skilaboðum, birtir þau á 
+skjánum og hættir keyrslu.

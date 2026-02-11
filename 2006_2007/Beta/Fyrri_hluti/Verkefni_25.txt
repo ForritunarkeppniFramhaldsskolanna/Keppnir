@@ -1,0 +1,42 @@
+Forritunarkeppni 2006 - 2007
+
+Dæmi 25 
+Búið til forrit sem les inn fornöfn og aldur allt að 10 einstaklinga. Forritið á að skrifa út nöfn og aldur allra einstaklinganna raðað í yfirröð á nafn einstaklings og undirröð á aldur einstaklings. 
+
+Dæmi:
+Einar 13
+Karl 21
+Hallur 71
+Gunna 31
+Einar 2
+
+Skrifar út:
+Einar 2
+Einar 13
+Gunna 31
+Hallur 71
+Karl 21
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,4 @@
+Kennsluforrit
+
+Búið til forrit sem ætlað er til að æfa börn og hugsanlega unglinga í reikningi/stærðfræði. Forritið á að leggja fyrir reikningsdæmi og gefa notendum endurgjöf eftir því hvort svör eru rétt eða röng. Gjarnan má forritið bjóða upp á að velja ákveðnar tegundir dæma og/eða misjafnlega erfið dæmi.
+

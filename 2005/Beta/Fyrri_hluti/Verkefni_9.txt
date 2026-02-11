@@ -1,0 +1,12 @@
+Forritunarkeppni - 2005
+
+
+Dæmi 9
+Búið til forrit sem spyr notanda að fullu nafni sem á að enda á dóttir eða son. 
+Forritið svarar síðan hvort viðkomandi er karl eða kona.
+Dæmi:
+Hvað heitir þú?  Jón Jónsson
+Þú ert karl
+Annað dæmi:
+Hvað heitir þú? Sigríður Margrét Jónsdóttir
+Þú ert kona

@@ -1,0 +1,8 @@
+Númer: A01
+
+Búið til forrit sem spyr um tvær tölur. Forritið birtir síðan meðaltal talnanna:
+
+Dæmi:
+Fyrri talan? 21.5
+Síðari talan? 1
+Meðaltal talnanna er: 11.25  

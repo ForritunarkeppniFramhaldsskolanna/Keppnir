@@ -1,0 +1,10 @@
+Forritunarkeppni 2006 - 2007
+
+Dæmi 4 
+Búið til forrit sem spyr um heiltölu. Forritið birtir hver þversumma tölunnar er. Ef þversumma tölunnar er stærri en 9 þá er einnig birt þversumma þeirrar tölu.
+Dæmi:
+Þversumma tölunnar 9681 er 24 sem hefur þversummuna 6. (vegna þess að 9+6+8+1 = 24 og 2+4=6)
+
+
+
+

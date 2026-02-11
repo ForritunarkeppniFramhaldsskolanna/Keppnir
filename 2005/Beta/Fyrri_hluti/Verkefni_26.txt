@@ -1,0 +1,18 @@
+Forritunarkeppni - 2005
+
+Dæmi 9
+Búa á til forrit sem les inn 14 stafa textastreng. 
+Textastrengurinn á að tákna reikningsnúmer á bankareikningi með númeri bankaútibús 
+og höfuðbókartegund. Fyrst kemur númer bankaútibús sem er 4 tölustafir, 
+þá kemur bandstrik, síðan tveir tölustafir sem tákna höfuðbókarnúmer, 
+þá aftur bandstrik og að síðustu sex tölustafa reikningsnúmer.
+
+Dæmi
+Dæmi um réttan innslátt er því;
+0922-26-007788    og
+1122-99-114476
+
+Dæmi um rangan innslátt:
+922-26-7788
+0922-2A-007788
+0922 26-007788

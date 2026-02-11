@@ -1,0 +1,15 @@
+Forritunarkeppni - 2005
+
+
+
+Dæmi 19
+
+Búið til forrit sem teiknar ferning með því að nota bókstafinn x. 
+Forritið spyr um hversu mörg x eru í hverri hlið og tekinar síðan ferninginn skv. því. 
+Dæmi. Ef notandi slær inn að 4 x séu í hverri hlið teiknar forritið eftirfarandi ferning:
+
+       x x x x
+       x     x
+       x     x
+       x x x x
+

@@ -1,0 +1,24 @@
+Forritið 21 
+ 
+
+Búið til forrit sem líkja á eftir því að við séum að spila 21 í/við tölvuna. Leikurinn fer þannig fram að tölvan gefur spil frá 1 fyrir ás upp í 13 fyrir kóng. Síðan spyr forritið hvort leikmaður vilji fá annað spil. Forritið leggur saman gildin á spilunum og ef heildarsumman er stærri en 21 hefur leikmaður tapað spilinu en tölvan unnið. Ef leikmaður stoppar án þess að hafa sprungið gefur tölvan sjálfri sér spil. Tölvan notar þær reglur að hún stoppar ef heildarstigafjöldi er 16 eða meira en heldur annars áfram.
+
+Í grunnútgáfu forritsins má reikna með að hvert spil gildi frá einum upp í 13, en endurbæta má forritið t.d. með því að láta mannspil gilda 10 og ás gildi 1 eða 11. 
+
+Einföld útgáfa er þannig að notandinn spilar á móti tölvuninni og tölvan er alltaf "dealer"
+    a) Með engum veðmálum
+    b) Með veðmálum
+    c) Með veðmálum og spilari hefur takmarkaða upphæð til að spila fyrir, spili lýkur þegar sú upphæð er búin
+    
+Milli útgáfa er þannig að notandinn getur valið hvort hann er spilari eða "dealer"
+    a) Með engum veðmálum
+    b) Með veðmálum
+    c) Með veðmálum og spilari hefur takmarkaða upphæð til að spila fyrir, bæði sem dealer og sem spilari, spili lýkur þegar sú upphæð er búin
+	
+Flókna útgáfan er þannig að spilarar geta verið allt að 4 auk "dealers" og með veðmálum og tölvan spilar fyrir þá sem notandinn er ekki að spila fyrir.
+	a) Notandi getur ekki valið að vera annað en spilari
+	b) Notandi getur valið að vera spilari eða "dealer"
+	
+Að sjálfsögðu má endurbæta forritið enn frekar.
+	
+	

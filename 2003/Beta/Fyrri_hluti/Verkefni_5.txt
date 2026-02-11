@@ -1,0 +1,12 @@
+Dæmi 5
+Búið til forrit sem reiknar staðgreiðslu skatts. Látið forritið spyrja um álagningarprósentu, 
+persónuafslátt og laun. Staðgreiðslu má reikna með því að taka álagningarprósentu af launaupphæð 
+og draga síðan persónuafslátt frá.
+Forritið á að birta hver staðgreiðslan er og upphæð ónýtts persónuafslátts ef það á við. 
+Skekkja í reikningum má vera allt að 1. kr.
+
+Dæmi um niðurstöður:
+laun	prósenta	persónuafsl	skattur	ónýttur persónuafsl.
+
+200000	33	        33000	        33000	      0
+75000	34	        33000	            0	   7500

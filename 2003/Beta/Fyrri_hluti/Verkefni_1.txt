@@ -1,0 +1,4 @@
+Dæmi 1
+Búið til forrit sem spyr um tvær tölur. Forritið leggur tölurnar saman og skrifar hver niðurstaðan er.
+Dæmi:
+Notandi slær inn tölurnar 2.5 og 3.6 en forritið skilar niðurstöðunni 6.1

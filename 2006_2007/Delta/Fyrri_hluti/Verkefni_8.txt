@@ -1,0 +1,13 @@
+Forritunarkeppni 2006 - 2007
+
+Dæmi  8
+Búið til forrit sem spyr notanda að nafni. Forritið svarar síðan notandanum en gætir þess að fyrsti stafur í hverju nafni sé hástafur en aðrir stafir lágstafir.
+Dæmi:
+HALLUR KARLSSON 
+verður Hallur Karlsson
+og
+hallur karlsson
+verður Hallur Karlsson
+og
+haLLur einar KArlsson
+veður Hallur Einar Karlsson

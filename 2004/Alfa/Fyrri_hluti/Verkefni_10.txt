@@ -1,0 +1,13 @@
+Forritunarkeppni 2004
+
+Dæmi 10
+
+Búið til forrit sem les kennitölu en skilar til baka hvort dagsetningin í kennitölunni sé 
+lögleg. Kennitölu á að lesa inn án . eða - 
+Forrit má gera ráð fyrir að handhafi kennitölu sé fæddur og yngri en 100 ára. Gera þarf ráð
+ fyrir hlaupaárum.
+ 
+Dæmi
+kennitala 0101993499 inniheldur löglega dagsetningu
+kennitala 2902993499 inniheldur ólöglega dagsetningu
+kennitala 2902603499 inniheldur löglega dagsetningu

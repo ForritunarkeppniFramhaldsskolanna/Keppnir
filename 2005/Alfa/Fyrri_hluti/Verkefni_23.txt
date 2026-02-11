@@ -1,0 +1,11 @@
+Forritunarkeppni - 2005
+
+Dæmi 23
+
+Skrifið endurkvæmt fall sem tekur á móti heiltölu (integer, ekki textastreng sem 
+inniheldur heiltölu) og skrifar hana út á skjáinn afturábak. 
+Dæmi: Ef talan 12345 er send inn í fallið þá prentast út 54321.
+Ábending: Í þessu dæmi má notfæra sér eiginleika heiltöludeilingar og modulus 
+aðgerðarinnar.
+
+

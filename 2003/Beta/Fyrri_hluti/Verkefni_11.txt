@@ -1,0 +1,5 @@
+Dæmi 9
+Búið til forrit sem tekur inn eina heiltölu n. Forritið skrifar síðan á skjá hvort talan n er prímtala eða ekki.
+
+8 er ekki primtala
+13 er primtala

@@ -1,0 +1,6 @@
+Forritunarkeppni 2004
+
+Dæmi 9 
+
+Búið til forrit sem tekur inn tvær tölur, x og n. Forritið á að skila til baka tölunni x í veldinu n.  
+Ekki má nota hjálparföll til að leysa þetta verkefni.

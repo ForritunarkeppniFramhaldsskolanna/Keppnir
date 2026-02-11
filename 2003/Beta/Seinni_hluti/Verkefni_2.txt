@@ -1,0 +1,15 @@
+Gagnagrunnsverkefni: (beta deild)
+
+Nemendabókhald fyrir framhaldsskóla:
+
+Kerfinu er ætlað að halda utan um nemendur,fög,einkunnir í fögum og geta birt lista eins og nafnalista,
+lista yfir nemendur í ákveðnu fagi, einkunnalista í ákveðnu fagi, eiknunnalista einstaks nemenda svo nokkur 
+dæmi séu nefnd. Kerfið þarf að geta skráð inn (stofnað) nemendur með nauðsynlegum upplýsingum, 
+stofnað námskeið með nauðsynlegum upplýsingum, skráð nemenda í námskeið, skráð nemenda úr námskeiði. 
+
+Ætlast er til að þið þróið kerfið í þá átt sem að ykkur þykir eðlilegust, sem dæmi má bæta við aðgangstakmörkunum 
+ef að nemendur eiga að geta skoðað sínar upplýsingar, útprentun á listum, skráning kennara í kerfið og þá að tengja 
+kennara við námskeið. Þá er hægt að bjóða kennara að fá lista yfir kennd námskeið, fá heildarlista yfir kennara og fleira.
+
+Hópum er bent á að skilgreina fyrst hvað þeir ætla að láta kerfið gera að lágmarki áður en farið er að forrita, síðan
+má alltaf bæta við. Það er engar sérstakar lágmarkskröfur heldur eru þetta hugmyndir sem þið getið byggt á.

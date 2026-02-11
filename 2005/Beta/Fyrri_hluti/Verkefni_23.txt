@@ -1,0 +1,12 @@
+Forritunarkeppni - 2005
+
+Dæmi 6
+
+Teikna má jafnarma þríhyrning með x-um eins og sést á eftirfarandi mynd.
+       x
+      x x
+     x x x
+    x x x x
+   x x x x x
+búið til forrit sem spyr um fjölda x-a á einni hlið en forritið svarar 
+hversu mörg x eru í þríhyrningnum.

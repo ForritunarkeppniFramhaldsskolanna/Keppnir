@@ -1,0 +1,3 @@
+Númer: A05
+
+Búið til forrit sem les inn 10 tölur. Forritið á að skrifa út hvaða tala er hæst og hvaða tala er lægst.

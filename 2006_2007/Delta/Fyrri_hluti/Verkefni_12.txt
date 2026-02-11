@@ -1,0 +1,22 @@
+Forritunarkeppni 2006 - 2007
+
+Dæmi  12
+Búið til forrit sem spyr til skiftis um tölu og reikniaðgerð. Reikniaðgerðir sem notandi getur slegið inn eru +  -  og =. Forritið heldur áfram að spyrja um tölur og reikniaðgerðir þar til notandi slær inn aðgerðina =. Þá birtir forritið niðurstöðu. 
+
+Dæmi:
+tala: 21
+aðgerð: +
+tala 31
+aðgerð =
+Niðurstaða 52
+
+Dæmi 2:
+tala: 21
+aðgerð: +
+tala 31
+aðgerð: -
+tala 15
+aðgerð: +
+tala 17
+aðgerð =
+Niðurstaða 54

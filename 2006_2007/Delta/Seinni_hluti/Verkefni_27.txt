@@ -1,0 +1,12 @@
+Forritunarkeppni 2006 - 2007
+
+Dæmi 27
+Búa á til forrit sem á að reikna líkurnar á að fá hús í fyrsta kasti í Yatsy spilinu. (þ.e. þrjá teninga eins og tvo teninga eins. Fimm eins er ekki hús). Aðferðin gengur út á að láta forritið finna fimm slembitölur sem hver er heiltala á bilinu frá 1 til 6. Forritið athugar síðan hvort viðkomandi tölur eru hús. Forritið endurtekur þessa vinnslu síðan mjög oft til að finna líkurnar á að fá hús í fyrsta kasti. 
+
+
+
+
+
+
+
+

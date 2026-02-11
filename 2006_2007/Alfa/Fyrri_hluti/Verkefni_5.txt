@@ -1,0 +1,23 @@
+Forritunarkeppni 2006 - 2007
+
+Dæmi 5
+Reglulegt karlkyns nafnorð beygist þannig að aftan við stofn orðsins bætist við endingin 
+ur     í nefnifalli
+engin viðbót í þolfalli
+i       í þágufalli
+s      í eignafalli
+
+Dæmi:
+Ef orðstofn er hest 
+veður:
+nefnifall: hestur
+þolfall: hest
+þágufall: hesti
+eignafall: hests
+
+Búið til forrit sem spyr um orð í nefnifalli, þolfalli, þágufalli og eignafalli, en forritið á að greina hvort orðið er reglulegt karlkynsorð eða ekki. 
+
+
+
+
+

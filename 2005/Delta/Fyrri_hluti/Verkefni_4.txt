@@ -1,0 +1,12 @@
+Forritunarkeppni - 2005
+
+Dæmi 4
+
+Skrifið forrit sem spyr notanda að nafni og síðan um aldur. 
+Forritið ávarpar síðan notandann með nafni og segir honum hversu gamall hann verður 
+um næstu aldamót, miðað við að notandinn sé búinn að eiga afmæli á árinu.
+
+Dæmi
+Hvað heitir þú: Jónas
+Hver er aldur þinn Jónas:  36
+Jónas, um næstu aldamót verður þú 131 árs !

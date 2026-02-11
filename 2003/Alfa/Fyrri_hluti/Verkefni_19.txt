@@ -1,0 +1,10 @@
+Dæmi 6
+Búið til forrit sem spyr um ártal en forritið svarar til baka hvort
+viðkomandi ár er hlaupaár eða ekki. Ár er hlaupaár ef talan 4 gengur upp í árinu,
+nema ef 100 gengur upp og ekki 400. t.d. 2000 er hlaupaár en ekki 1900.
+
+Dæmi
+1900 ekki hlaupaár
+1996 hlaupaár
+1997 ekki hlaupaár
+2000 hlaupaár

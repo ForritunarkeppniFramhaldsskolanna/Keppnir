@@ -1,0 +1,6 @@
+Dæmi 3
+
+
+Búið til forrit sem raðar ótilgreindum fjölda af heiltölum í vaxandi röð. 
+Gera má ráð fyrir að hámarksfjöldi talna sem raða á sé undir 50. Ekki má nota röðunarföll úr söfnum sem fylgja viðkomandi forritunarmáli.
+

@@ -1,0 +1,12 @@
+Forritunarkeppni - 2005
+
+Dæmi 9
+Búið til forrit sem skrifar út allar tölur frá 1 upp í 10 og hvað talan er í 
+þriðja veldi. Athugið að þið verðið að búa til forrit sem reiknar töluna í þriðja veldi, 
+en ekki bara skrifa út þessar línur.
+Dæmi:
+1         1
+2         8
+3         27
+   upp í
+10        1000

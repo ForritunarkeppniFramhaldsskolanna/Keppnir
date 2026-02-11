@@ -1,0 +1,7 @@
+Forritunarkeppni - 2005
+
+Dæmi 5
+Forrit sem les inn 6 heiltölur og segir hvaða tala er minnst.
+Dæmi
+Lesnar eru inn tölurnar:  8, -1,  9,  25,   31 og    -5 
+Minnsta talan er -5  

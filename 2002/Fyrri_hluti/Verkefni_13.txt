@@ -1,0 +1,20 @@
+Númer: A13
+
+
+Búa á til forrit sem les textaskrá og telur fjölda orða í hverri línu í skránni. Við skilgreinum orð sem nokkur samliggjandi textatákn sem innihalda ekki eyðu. Skráin sem lesin er inn á að heita “texti.txt”. 
+
+Forritið á að skrifa út á skjá eina lína fyrir hverja línu í skránni “texti.txt”. Í línunni sem skrifuð er út á að standa:
+Lína N inniheldur M orð
+þar sem N er númer línunnar en M er fjöldi orða í viðkomandi línu.
+
+Dæmi:
+Dæmi um inntaksskrá:
+Afi minn fór á honum Rauð,
+Eitthvað suður á bæi
+
+Nei
+Dæmi um texta sem skrifast á skjáinn
+Lína 1 inniheldur 6 orð
+Lína 2 inniheldur 4 orð
+Lína 3 inniheldur 0 orð
+Lína 4 inniheldur 1 orð

@@ -1,0 +1,12 @@
+Forritunarkeppni 2004
+
+Dæmi 18
+
+Við viljum búa til forrit sem reiknar nálgun á fallið: e í veldinu x. Hér táknum við e í veldinu x sem e pow x. 
+Ef x er á bilinu frá -1 til 1 má gera ráð fyrir að eftirfarandi nálgun sé þokkalega góð:
+e pow x = 1 + x + (x pow 2) / 2! + (x pow 3) / 3! + (x pow 4) / 4! + (x pow 5) / 5! o.s.frv. 
+Hér táknar ! töluna hropmerkta. (þ.e. talan er margfölduð með öllum heiltölum sem eru lægri en
+viðkomandi tala þannig er 1 hrópmerkt 1 en 6 hrópmerkt er 720). Forritið ákvarðar hversu marga
+liði í röðinni á að nota þannig að ef liður sem bætt er við er minni en 0,001 þá eru ekki bætt 
+við fleiri liðum.( Hér er t.d. (x pow 4) / 4!) einn liður.
+Ekki má nota hjálparföll til að leysa þetta verkefni.

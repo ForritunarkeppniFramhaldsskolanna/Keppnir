@@ -1,0 +1,6 @@
+Forritunarkeppni 2006 - 2007
+
+Dæmi 18
+Búa á til forrit sem reiknar bensínkostnað á aksturseiningu fyrir ákveðna bifreið. Forritið spyr um akstursvegalengd, bensíneyðslu í lítrum, og bensínverð í krónum á líter. Forritið reiknar síðan bensínkostnað per 100 km. akstur. 
+Dæmi: Ef ekin vegalengd er 210 km, bensíneyðslan 20, bensínverðið 107 kr. þá verður kostnaðurinn 1019,05 per 100 km.
+

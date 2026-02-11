@@ -1,0 +1,9 @@
+Númer: A18
+
+
+Skrifið forrit sem getur breytt arabískri tölu í rómverska. Arabíska talan er slegin inn af notendanum og forritið skrifar út rómverkst gildi hennar. Dæmi um slíkt er:
+ 
+5 V, 4 IV, 8 VIII, 2000 MM,  1900 MCM,  1994 MCMXCIV. 
+
+
+Forritið skal einungis vinna með arbískar tölur < 4000

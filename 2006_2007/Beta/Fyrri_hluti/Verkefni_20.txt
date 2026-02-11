@@ -1,0 +1,45 @@
+Forritunarkeppni 2006 - 2007
+
+Dæmi 20
+
+Í  sextánda talnakerfinu eru fimmtán grunntölur þ.e. tölurnar 0 upp í F, en í binary talnakerfinu eru tvær grunntölur þ.e. tölurnar 0 og 1. Til að tákna eina tölu í sextánda kerfinu þarf fjórar tölur í binary kerfinu, sjá töflu hér að neðan:
+
+0  0000
+1  0001
+2  0010
+3  0011
+4  0100
+5  0101
+6  0110
+7  0111
+8  1000
+9  1001
+A 1010
+B  1011
+C  1100
+D  1101
+E  1110
+F  1111
+Búið til forrit sem breytir tölu í sextánda (hexadecimal) kerfi yfir í tölu í tvíundakerfi (binary) 
+
+Dæmi
+F0A verður 111100001010
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

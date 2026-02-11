@@ -1,0 +1,25 @@
+Forritunarkeppni 2004
+
+Dæmi 8 
+
+Ef að líkum lætur mun fyrsti jólasveinninn koma til byggða þann 12. desember. 
+Röð jólasveinanna er eftirfarandi: 
+1 Stekkjastaur
+2 Giljagaur
+3 Stúfur
+4 Þvörusleikir
+5 Pottaskefill
+6 Askasleikir
+7 Hurðaskellir
+8 Skyrjarmur
+9 Bjúgnakrækir
+10 Gluggagægir
+11 Gáttaþefur
+12 Ketkrókur
+13 Kertasníkir
+
+Búið til forrit sem spyr um nafn jólasveins. Forritið leitar síðan að viðkomandi jólasveini í 
+listanum hér að ofan. Ef jólasveinninn er ekki til birtast skilaboðin: "Þessi jólasveinn er ekki
+ til" annars birtast skilaboðin:
+"Þá kemur xxx á morgun" þar sem "xxx" er nafn næsta jólasveins. Ef um er að ræða síðasta 
+jólasveininn á forritið að skrifa að það sé síðasti jólasveinninn.

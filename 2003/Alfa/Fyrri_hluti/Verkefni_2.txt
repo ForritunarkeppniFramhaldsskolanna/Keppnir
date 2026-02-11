@@ -1,0 +1,14 @@
+Dæmi 2
+
+Að breyta binary tölu í tugakerfistölu.
+
+Ekki má nota hjálparföll úr math söfnum til að leysa þetta verkefni.
+talan 101 í binary er 5 í tugakerfi
+  (1x2 í veldinu 0 + 0x2 í velinu 1 + 1x2 í veldinu 2)
+talan 1101 í binary er 13 í tugakerfi 
+  (1x2 í veldinu 0 + 0x2 í velinu 1 + 1x2 í veldinu 2 + 1x2 í veldinu 3) 
+  
+  Inntak er Binary tala á forminu XXXXXXXXX þar sem X er 0 eða 1
+  
+  Dæmi : 1111101 er 125
+  	 1000110011 er 563
